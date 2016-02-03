@@ -178,9 +178,11 @@ struct _EogScrollViewPrivate {
 
 	cairo_surface_t *background_surface;
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 	GtkGesture *pan_gesture;
 	GtkGesture *zoom_gesture;
 	GtkGesture *rotate_gesture;
+#endif
 	gdouble initial_zoom;
 	EogRotationState rotate_state;
 	EogPanAction pan_action;
@@ -1204,10 +1206,15 @@ scroll_to (EogScrollView *view, int x, int y, gboolean change_adjustments)
 #endif
 	/* Scroll the window area and process exposure synchronously. */
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 	if (!gtk_gesture_is_recognized (priv->zoom_gesture)) {
 		gdk_window_scroll (window, -xofs, -yofs);
 		gdk_window_process_updates (window, TRUE);
 	}
+#else
+	gdk_window_scroll (window, -xofs, -yofs);
+	gdk_window_process_updates (window, TRUE);
+#endif
 
  out:
 	if (!change_adjustments)
@@ -1720,8 +1727,10 @@ eog_scroll_view_motion_event (GtkWidget *widget, GdkEventMotion *event, gpointer
 	view = EOG_SCROLL_VIEW (data);
 	priv = view->priv;
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 	if (gtk_gesture_is_recognized (priv->zoom_gesture))
 		return TRUE;
+#endif
 
 	if (!priv->dragging)
 		return FALSE;
@@ -1934,6 +1943,7 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 	return TRUE;
 }
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 static void
 zoom_gesture_begin_cb (GtkGestureZoom   *gesture,
 		       GdkEventSequence *sequence,
@@ -2047,6 +2057,7 @@ pan_gesture_end_cb (GtkGesture       *gesture,
 
 	priv->pan_action = EOG_PAN_ACTION_NONE;
 }
+#endif
 
 static gboolean
 scroll_view_check_angle (gdouble angle,
@@ -2109,6 +2120,7 @@ scroll_view_get_rotate_state (EogScrollView *view,
 	return EOG_ROTATION_0;
 }
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 static void
 rotate_gesture_angle_changed_cb (GtkGestureRotate *rotate,
 				 gdouble           angle,
@@ -2135,6 +2147,7 @@ rotate_gesture_angle_changed_cb (GtkGestureRotate *rotate,
 	g_signal_emit (view, view_signals [SIGNAL_ROTATION_CHANGED], 0, (gdouble) rotate_angle);
 	priv->rotate_state = rotate_state;
 }
+#endif
 
 /*==================================
 
@@ -2789,6 +2802,7 @@ eog_scroll_view_init (EogScrollView *view)
 
 	g_object_unref (settings);
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 	priv->zoom_gesture = gtk_gesture_zoom_new (GTK_WIDGET (view));
 	g_signal_connect (priv->zoom_gesture, "begin",
 			  G_CALLBACK (zoom_gesture_begin_cb), view);
@@ -2820,6 +2834,7 @@ eog_scroll_view_init (EogScrollView *view)
 					   TRUE);
 	gtk_event_controller_set_propagation_phase (GTK_EVENT_CONTROLLER (priv->pan_gesture),
 						    GTK_PHASE_CAPTURE);
+#endif
 }
 
 static void
@@ -2862,6 +2877,7 @@ eog_scroll_view_dispose (GObject *object)
 
 	free_image_resources (view);
 
+#if GTK_CHECK_VERSION (3, 14, 0)
 	if (priv->zoom_gesture) {
 		g_object_unref (priv->zoom_gesture);
 		priv->zoom_gesture = NULL;
@@ -2876,6 +2892,7 @@ eog_scroll_view_dispose (GObject *object)
 		g_object_unref (priv->pan_gesture);
 		priv->pan_gesture = NULL;
 	}
+#endif
 
 	G_OBJECT_CLASS (eog_scroll_view_parent_class)->dispose (object);
 }
