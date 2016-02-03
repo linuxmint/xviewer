@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="rename-multiple" xml:lang="ja"> 
+ 
+  <info> 
+    <link type="guide" xref="index#edit"/>
+    <link type="seealso" xref="format-change#multiple"/> 
+    <desc>画像の一群に対し自動的にファイル名を変更し番号を付けます。</desc> 
+ 
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/> 
+    <credit type="author"> 
+      <name>Tiffany Antopolski</name> 
+      <email>tiffany@antopolski.com</email> 
+    </credit> 
+    <license> 
+      <p>Creative Commons Share Alike 3.0</p> 
+    </license> 
+ 
+  </info> 
+ 
+<title>たくさんの画像のファイル名を一度に変更する</title>
+
+<p>名前を変更したい画像がたくさんある場合、標準的な番号付けられた書式の名前にするとよいでしょう。</p>
+
+<steps>
+ <item>
+  <p><key>F9</key> キーを押して<link xref="view#image-gallery">画像ギャラリー</link>を開きます。</p>
+ </item>
+ <item>
+  <p>画像ギャラリーから名前を変更したい画像すべてを <key>Ctrl</key> キーを押したままクリックして選択します。</p>
+ <p>あるいは、すべての画像を選択するには <keyseq><key>Ctrl</key><key>A</key></keyseq> を押します。</p>
+ </item>
+ <item>
+  <p><guiseq><gui>画像</gui><gui>名前を付けて保存</gui></guiseq>をクリックします。いくつかファイル名に関するオプションがあるウィンドウが表示されます (下図のようなウィンドウ)。</p>
+ </item>
+ <item>
+  <p>デフォルトでは、名前を変更した画像は現在のフォルダーに保存されます。他の場所に保存するには、<gui>保存先のフォルダー</gui>を変更します。</p>
+ </item>
+ <item>
+  <p><gui>ファイル名の書式</gui>という欄を利用して画像の名付け形式を選択します。<gui>ファイル名のプレビュー</gui>に新しいファイル名がどのように見えるか表示されます。ファイル名の変更方法を決めるにあたっては、下記の <link xref="#filename-format"/> という節を参照してください。</p>
+ </item>
+ <item>
+  <p><link xref="format-change#multiple">異なるファイル形式への画像の変換</link>をしたくない場合は、<gui>ファイル形式</gui>のドロップダウンリストが<gui>変更しない</gui>になっていることを確かめます。</p>
+ </item>
+ <item>
+  <p><gui>名前を付けて保存</gui>をクリックすると画像の名前が変更されます。</p>
+ </item>
+</steps>
+
+<media type="image" src="figures/multiple-rename-count.png" width="300"/>
+
+<section id="filename-format">
+ <title>ファイル名の書式の選択</title>
+ <p>名前を変更するファイルの名前は、<gui>ファイル名の書式</gui>という欄によって決定されます。</p>
+ <list>
+  <item>
+   <p>この欄に <input>%f</input> を残すことにより、新しいファイル名の一部に元のファイル名を保持させることができます。</p>
+   <p>たとえば、<gui>ファイル名の書式</gui>という欄に <input>paris_%f</input> と入力すると <file>flower.jpg</file>、 <file>house.jpg</file> および <file>cat.jpg</file> という画像は、<file>paris_flower.jpg</file>、<file>paris_house.jpg</file> および <file>paris_cat.jpg</file> という名前に変更されます。</p>
+  </item>
+  <item>
+   <p><input>%n</input> を付加すると<gui>オプション</gui>の下にある欄で選択した番号から始まる連続的な番号が画像に振られます。</p>
+  <p>たとえば、<gui>ファイル名の書式</gui>という欄に <input>sunshine_%n</input> と入力すると <file>flower.jpg</file>、 <file>house.jpg</file> および <file>cat.jpg</file> という画像は、<file>sunshine_2.jpg</file>、<file>sunshine_3.jpg</file> および <file>sunshine_1.jpg</file> という名前に変更されます。(元のファイル名のアルファベット順に番号が振られます。)</p>
+  </item>
+ </list>
+</section>
+
+</page>

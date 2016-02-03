@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-python-console" xml:lang="de">
+
+  <info>
+   <link type="guide" xref="index#advanced"/>
+   <desc>Die Python-Konsole kann zum Hinzufügen von zusätzlichen Funktionen und Ausführen von Skripten im Bildbetrachter verwendet werden.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Python-Konsole</title>
+
+<p>Der Bildbetrachter verfügt über ein Plugin-System, welches auf der Skriptsprache Python basiert. Durch Aktivierung der <em>Python-Konsole</em> erhalten Sie direkten Zugriff auf einen Python-Interpreter innerhalb des Bildbetrachters, den Sie dann beispielsweise zum Schreiben von Skripten und Bearbeiten von Bildern einsetzen können.</p>
+
+<steps>
+ <item>
+  <p>Bevor Sie die Python-Konsole aktivieren können, müssen Sie die <link xref="plugins">eog-plugins</link> installieren.</p>
+ </item>
+ <item>
+  <p>Sobald <sys>eog-plugins</sys> installiert ist, wählen Sie <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und öffnen Sie den Reiter <gui>Plugins</gui>.</p>
+ </item>
+ <item>
+  <p>Aktivieren Sie <gui>Python-Konsole</gui> und klicken Sie auf <gui>Schließen</gui>.</p>
+ </item>
+ <item>
+  <p>Klicken Sie auf <guiseq><gui>Werkzeuge</gui><gui>Python-Konsole</gui></guiseq>, um die Konsole zu öffnen.</p>
+ </item>
+</steps>
+
+</page>

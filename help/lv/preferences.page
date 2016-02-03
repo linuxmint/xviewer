@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="lv">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Attēla skats</link>, <link xref="preferences#slideshow">slīdrāde</link> un <link xref="preferences#plugins">spraudņi</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0 licence.</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Viesturs Ružāns</mal:name>
+      <mal:email>viesty@exs.lv</mal:email>
+      <mal:years>2011.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Iestatījumi</title>
+<p>Šī sadaļa apraksta visus iestatījumus, kurus var uzstādīt attēlu skatītājā. Spied <guiseq><gui>Rediģēt</gui><gui>Iestatījumi</gui></guiseq>, lai sāktu mainīt iestatījumus.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Attēla skata iestatījumi</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Attēla uzlabojumi</title>
+    <p>Izvēlies <gui>Nogludināt attēlus samazinot</gui>, lai uzlabotu <em>attēlu nogludināšanu</em>, kad tu pietuvini vai attālini attēlu. Tas uzlabo zemas rezolūcijas (pikseļainu) attēlu izskatu, nogludinot asās šķautnes.</p>
+    <p>Ja tu iespējo <gui>Automātiski pagriezt</gui>, attēli tiks pagriezti atkarībā no to <em>Exif metadatiem</em> automātiski. Exif metadatus attēlam automātiski pievieno digitālā fotokamera un var saturēt informāciju par to, kā kamera tika turēta, kad fotogrāfija uzņemta. Piemēram, kad automātiskā pagriešana ir iespējota, portretu fotogrāfijas automātiski tiek rotētas otrādāk. Rotācija netiek saglabāka failā, kamēr tu <link xref="flip-rotate#rotate">nesaglabā pagriezto attēlu</link>.</p> 
+    <p>Automātiskā pagriešana nedarbojas ar visiem attēliem; tikai fotogrāfijas, uzņemtas ar kameru, kura saglabā Exif orientācijas metadatus, tiks rotētas.</p>
+  </item>
+  <item>
+    <title>Caurspīdīgās daļas</title>
+     <p>Izvēlies vienu no opcijām, lai noteiktu kā atainot caurspīdīgas attēla daļas, ja tam tādas ir:</p>
+    <list>
+      <item>
+       <p><gui>Rādīt rūtiņrakstu:</gui></p>
+       <p>Parāda caurspīdīgās attēla daļas kā rūtiņrakstu.</p>
+      </item>
+      <item>
+       <p><gui>Rādīt šo krāsu:</gui></p>
+       <p>Jebkuru caurspīdīgo attēla daļu attēlo kā krāsu, ko norāda, nospiežot krāsas izvēles pogu.</p>
+      </item>
+      <item>
+       <p><gui>Rādīt fonu:</gui></p>
+       <p>Jebkuru caurspīdīgo attēla daļu parāda <gui>Fons</gui> krāsā, ja <gui>Rādīt šo krāsu</gui> zem <gui>Fons</gui> izvēlnes ir atzīmēta. Citādāk tiek izmantota noklusētā fona krāsa.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Slīdrādes iestatījumi</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>Lai pielāgotu slīdrādes iestatījumus:</p>
+<list>
+ <item>
+  <p><gui>Attēla palielinājums</gui> izvēlnē tu vari izvēlēties, vai attēlus, kuri ir mazāki par ekrāna izmēriem, vēlies palielināt tā, lai tie aizpildītu ekrānu.</p>
+ </item>
+ <item>
+  <p><gui>Secība</gui> izvēlnē, tu vari norādīt, cik ilgi (1-100 sekundes) katram attēlam būtu jātiek parādītai pirms to aizvieto nākamais attēls.</p>
+ </item>
+ <item>
+  <p>Atzīmē <gui>Automātiski atkārtot</gui>, ja tu vēlies, lai slīdrāde automātisku visu laiku tiktu atkārtota. Ja šī opcija nav atzīmēta, tad slīdrāde sāksies ar attēlu pēc tavas izvēles un beigsies ar pēdējo attēlu mapē.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Spraudņu iestatījumi</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Šeit tu vari konfigurēt jebkuru papildiespēju, kuru vēlies aktivizēt vai atslēgt. Attēlā pa kreisi ir spraudņi, kas ir pieejami pēc noklusējuma.</p>
+
+<p>Tev varētu būt nepieciešamība ieinstalēt  <link xref="plugins">eog-plugins paku</link>, kura satur spraudņus, kas sniedz vairākas papildiespējas. Pēc tā ieinstalēšanas, tu varēsi aktivizēt <link xref="index#plugins">papildus spraudņus</link>, tādus, kā tos, kuri parādīti attēlā pa labi.</p>
+</section>
+
+</page>

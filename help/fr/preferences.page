@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="fr">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Vue image</link>, <link xref="preferences#slideshow">Diaporama</link> et <link xref="preferences#plugins">Greffons</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Préférences</title>
+<p>Cette rubrique explique tous les paramètres que vous pouvez modifier dans le visionneur d'images. Cliquez sur <guiseq><gui>Édition</gui><gui>Préférences</gui></guiseq> pour pouvoir modifier les préférences.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Préférences de la vue image</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Améliorations de l'image</title>
+    <p>Sélectionnez <gui>Lisser l'image lors du zoom arrière</gui> pour activer le <em>lissage de l'image</em> quand vous zoomez en avant ou en arrière. Cela rend les images basse résolution (pixelisées) meilleur en adoucissant les bords dentelés.</p>
+    <p>Si vous activez l'<gui>Orientation automatique</gui> les images sont automatiquement pivotées en fonction de leurs <em>métadonnées Exif</em>. Il s'agit d'informations à propos de l'image qui sont insérées automatiquement par un appareil photo numérique et qui incluent des détails sur la façon dont l'appareil était pris en main lorsque la photo a été prise. Par exemple, quand l'orientation automatique est activée, les photos de portrait sont automatiquement tournées dans le bon sens. La rotation n'est pas sauvegardée tant que vous n'avez pas <link xref="flip-rotate#rotate">enregistré l'image pivotée</link>.</p> 
+    <p>L'orientation automatique ne fonctionne pas pour toutes les images ; seules les images prises avec un appareil qui enregistre les métadonnées d'information de l'image seront pivotées.</p>
+  </item>
+  <item>
+    <title>Parties transparentes</title>
+     <p>Sélectionnez une des options suivantes pour déterminer comment apparaîtront les zones transparentes d'une image, s'il y en a :</p>
+    <list>
+      <item>
+       <p><gui>Comme un damier :</gui></p>
+       <p>Affiche toute partie transparente d'une image comme un damier.</p>
+      </item>
+      <item>
+       <p><gui>Couleur personnalisée :</gui></p>
+       <p>Affiche toute partie transparente d'une image dans une couleur unie de votre choix. Cliquez sur le bouton du sélecteur de couleur pour choisir la couleur.</p>
+      </item>
+      <item>
+       <p><gui>Comme l'arrière-plan :</gui></p>
+       <p>Affiche toute partie transparente de l'image de la même couleur que celle de l'<gui>arrière-plan</gui>, si <gui>Couleur personnalisée</gui> dans la partie <gui>Arrière-plan</gui> est cochée sinon la couleur par défaut de l'arrière-plan est utilisée.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Préférences du diaporama</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>Pour personnaliser les réglages du diaporama :</p>
+<list>
+ <item>
+  <p>Dans <gui>Zoom de l'image</gui> vous pouvez choisir que les images qui sont plus petites que l'écran soient agrandies afin qu'elles remplissent l'écran.</p>
+ </item>
+ <item>
+  <p>Dans <gui>Suite</gui> vous pouvez choisir la durée d'affichage de chaque image (entre 1 et 100 secondes) avant le passage à la suivante.</p>
+ </item>
+ <item>
+  <p>cochez <gui>Suite en boucle</gui> si vous désirez que le diaporama se répète continuellement. Si la case n'est pas cochée, le diaporama démarre à l'image sélectionnée et se termine sur la dernière image du dossier.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Préférences des greffons</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Cet onglet vous permet de sélectionner les greffons que vous souhaitez activer ou désactiver. L'image de gauche vous montre les greffons disponibles par défaut.</p>
+
+<p>Vous pouvez aussi installer le <link xref="plugins">paquet eog-plugins</link> qui contient un grand nombre de greffons fournissant des fonctionnalités supplémentaires. Après son installation, il vous sera possible d'activer des <link xref="index#plugins">greffons additionnels</link> tels que ceux affichés sur la figure de droite.</p>
+</section>
+
+</page>

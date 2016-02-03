@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Eye of GNOME Reference Manual: EogApplication</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Eye of GNOME Reference Manual">
+<link rel="up" href="ch04.html" title="Application and configuration">
+<link rel="prev" href="ch04.html" title="Application and configuration">
+<link rel="next" href="eog-eog-session.html" title="eog-session">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#eog-eog-application.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#eog-eog-application.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#eog-eog-application.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch04.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="eog-eog-session.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="eog-eog-application"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="eog-eog-application.top_of_page"></a>EogApplication</span></h2>
+<p>EogApplication</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="eog-eog-application.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="eog-eog-application.html#EogApplication"><span class="returnvalue">EogApplication</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-get-instance" title="eog_application_get_instance ()">eog_application_get_instance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-open-window" title="eog_application_open_window ()">eog_application_open_window</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-open-uri-list" title="eog_application_open_uri_list ()">eog_application_open_uri_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-open-file-list" title="eog_application_open_file_list ()">eog_application_open_file_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-open-uris" title="eog_application_open_uris ()">eog_application_open_uris</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">EggToolbarsModel</span> *
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-get-toolbars-model" title="eog_application_get_toolbars_model ()">eog_application_get_toolbars_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-save-toolbars-model" title="eog_application_save_toolbars_model ()">eog_application_save_toolbars_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-reset-toolbars-model" title="eog_application_reset_toolbars_model ()">eog_application_reset_toolbars_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-screensaver-enable" title="eog_application_screensaver_enable ()">eog_application_screensaver_enable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="eog-eog-application.html#eog-application-screensaver-disable" title="eog_application_screensaver_disable ()">eog_application_screensaver_disable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="EogApplication"></a><div class="refsect1">
+<a name="eog-eog-application.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="eog-eog-application.html#EOG-APP:CAPS" title="EOG_APP">EOG_APP</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="eog-eog-application.html#EogApplication-struct" title="struct EogApplication">EogApplication</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="eog-eog-application.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GApplication
+        <span class="lineart">╰──</span> GtkApplication
+            <span class="lineart">╰──</span> EogApplication
+</pre>
+</div>
+<div class="refsect1">
+<a name="eog-eog-application.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+EogApplication implements
+ GActionGroup and  GActionMap.</p>
+</div>
+<div class="refsect1">
+<a name="eog-eog-application.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="eog-eog-application.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="eog-application-get-instance"></a><h3>eog_application_get_instance ()</h3>
+<pre class="programlisting"><a class="link" href="eog-eog-application.html#EogApplication"><span class="returnvalue">EogApplication</span></a> *
+eog_application_get_instance (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns a singleton instance of <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> currently running.
+If not running yet, it will create one.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.2.5"></a><h4>Returns</h4>
+<p> a running <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-open-window"></a><h3>eog_application_open_window ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+eog_application_open_window (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>,
+                             <em class="parameter"><code><span class="type">guint</span> timestamp</code></em>,
+                             <em class="parameter"><code><a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> flags</code></em>,
+                             <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Opens and presents an empty <a class="link" href="eog-eog-window.html#EogWindow"><span class="type">EogWindow</span></a> to the user. If there is
+an empty window already open, this will be used. Otherwise, a
+new one will be instantiated.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>application</p></td>
+<td class="parameter_description"><p>An <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timestamp</p></td>
+<td class="parameter_description"><p>The timestamp of the user interaction which triggered this call
+(see <code class="function">gtk_window_present_with_time()</code>).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>A set of <a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> influencing a new windows' state.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for a <span class="type">GError</span>, or NULL to ignore errors.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.3.6"></a><h4>Returns</h4>
+<p> <code class="literal">FALSE</code> if <em class="parameter"><code>application</code></em>
+is invalid, <code class="literal">TRUE</code> otherwise</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-open-uri-list"></a><h3>eog_application_open_uri_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+eog_application_open_uri_list (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>,
+                               <em class="parameter"><code><span class="type">GSList</span> *uri_list</code></em>,
+                               <em class="parameter"><code><span class="type">guint</span> timestamp</code></em>,
+                               <em class="parameter"><code><a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> flags</code></em>,
+                               <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Opens a list of images, from a list of URIs. See
+<a class="link" href="eog-eog-application.html#eog-application-open-file-list" title="eog_application_open_file_list ()"><code class="function">eog_application_open_file_list()</code></a> for details.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>application</p></td>
+<td class="parameter_description"><p>An <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri_list</p></td>
+<td class="parameter_description"><p> A list of URIs. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timestamp</p></td>
+<td class="parameter_description"><p>The timestamp of the user interaction which triggered this call
+(see <code class="function">gtk_window_present_with_time()</code>).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>A set of <a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> influencing a new windows' state.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for a <span class="type">GError</span>, or NULL to ignore errors.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.4.6"></a><h4>Returns</h4>
+<p> Currently always <code class="literal">TRUE</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-open-file-list"></a><h3>eog_application_open_file_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+eog_application_open_file_list (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>,
+                                <em class="parameter"><code><span class="type">GSList</span> *file_list</code></em>,
+                                <em class="parameter"><code><span class="type">guint</span> timestamp</code></em>,
+                                <em class="parameter"><code><a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> flags</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Opens a list of files in a <a class="link" href="eog-eog-window.html#EogWindow"><span class="type">EogWindow</span></a>. If an <a class="link" href="eog-eog-window.html#EogWindow"><span class="type">EogWindow</span></a> displaying the first
+image in the list is already open, this will be used. Otherwise, an empty
+<a class="link" href="eog-eog-window.html#EogWindow"><span class="type">EogWindow</span></a> is used, either already existing or newly created.
+If the EOG_STARTUP_SINGLE_WINDOW flag is set, the files are opened in the
+first <a class="link" href="eog-eog-window.html#EogWindow"><span class="type">EogWindow</span></a> and no new one is opened.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>application</p></td>
+<td class="parameter_description"><p>An <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_list</p></td>
+<td class="parameter_description"><p> A list of <span class="type">GFile</span>s. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timestamp</p></td>
+<td class="parameter_description"><p>The timestamp of the user interaction which triggered this call
+(see <code class="function">gtk_window_present_with_time()</code>).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>A set of <a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> influencing a new windows' state.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for a <span class="type">GError</span>, or NULL to ignore errors.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.5.6"></a><h4>Returns</h4>
+<p> Currently always <code class="literal">TRUE</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-open-uris"></a><h3>eog_application_open_uris ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+eog_application_open_uris (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>,
+                           <em class="parameter"><code><span class="type">gchar</span> **uris</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> timestamp</code></em>,
+                           <em class="parameter"><code><a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> flags</code></em>,
+                           <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Opens a list of images, from a list of URI strings. See
+<a class="link" href="eog-eog-application.html#eog-application-open-file-list" title="eog_application_open_file_list ()"><code class="function">eog_application_open_file_list()</code></a> for details.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>application</p></td>
+<td class="parameter_description"><p>an <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uris</p></td>
+<td class="parameter_description"><p>A <span class="type">GList</span> of URI strings.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timestamp</p></td>
+<td class="parameter_description"><p>The timestamp of the user interaction which triggered this call
+(see <code class="function">gtk_window_present_with_time()</code>).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>A set of <a class="link" href="eog-eog-window.html#EogStartupFlags" title="enum EogStartupFlags"><span class="type">EogStartupFlags</span></a> influencing a new windows' state.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for a <span class="type">GError</span>, or NULL to ignore errors.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.6.6"></a><h4>Returns</h4>
+<p> Currently always <code class="literal">TRUE</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-get-toolbars-model"></a><h3>eog_application_get_toolbars_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">EggToolbarsModel</span> *
+eog_application_get_toolbars_model (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>);</pre>
+<p>Retrieves the <span class="type">EggToolbarsModel</span> for the toolbar in <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>application</p></td>
+<td class="parameter_description"><p>An <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.7.6"></a><h4>Returns</h4>
+<p> An <span class="type">EggToolbarsModel</span>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-save-toolbars-model"></a><h3>eog_application_save_toolbars_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+eog_application_save_toolbars_model (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>);</pre>
+<p>Causes the saving of the model of the toolbar in <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> to a file.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>application</p></td>
+<td class="parameter_description"><p>An <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-reset-toolbars-model"></a><h3>eog_application_reset_toolbars_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+eog_application_reset_toolbars_model (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *app</code></em>);</pre>
+<p>Restores the toolbars model to the defaults.</p>
+<div class="refsect3">
+<a name="id-1.2.5.2.9.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>app</p></td>
+<td class="parameter_description"><p>an <a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-screensaver-enable"></a><h3>eog_application_screensaver_enable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+eog_application_screensaver_enable (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="eog-application-screensaver-disable"></a><h3>eog_application_screensaver_disable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+eog_application_screensaver_disable (<em class="parameter"><code><a class="link" href="eog-eog-application.html#EogApplication"><span class="type">EogApplication</span></a> *application</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="eog-eog-application.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="EOG-APP:CAPS"></a><h3>EOG_APP</h3>
+<pre class="programlisting">#define EOG_APP				(eog_application_get_instance ())
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="EogApplication-struct"></a><h3>struct EogApplication</h3>
+<pre class="programlisting">struct EogApplication;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="es">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Ver información como la configuración de la cámara y el histograma, la ubicación geográfica y la fecha.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Compartir Igual 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2011, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jorge González</mal:name>
+      <mal:email>jorgegonz@svn.gnome.org</mal:email>
+      <mal:years>2008-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Francisco Javier F. Serrador</mal:name>
+      <mal:email>serrador@openshine.com</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Ver información detallada acerca de la foto</title>
+
+<p>Las imágenes tomadas con una cámara digital se almacenan con información adicional empotrada en ellas, tal como la fecha en la que se tomaron, la configuración de exposición usada en la cámara y, en algunos casos, incluso dónde se tomó la foto.</p>
+
+<p>Este tema le muestra cómo puede acceder a esta información.</p>
+
+<section id="date">
+<title>Mostrar la fecha en la barra de estado</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Puede mostrar la fecha en la que se tomó una fotografía en la barra de estado, en la parte inferior de la ventana.</p>
+  <p>Para ello, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</gui>. Después, marque <gui>Fecha en la barra de estado</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Datos Exif detallados</title>
+  <p>La información detallada almacenada en las fotos digitales se llama <em>Datos Exif</em>. Puede verla instalando un complemento para el Visor de imágenes.</p>
+
+  <steps>
+   <item>
+    <p>Para poder ver los datos Exif empotrados en sus fotos, primero debe instalar el paquete <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Si <sys>eog-plugins</sys> está instalado, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</gui>. Después, marque <gui>Pantalla Exif</gui> y pulse <gui>Cerrar</gui>.</p>
+   </item>
+   <item>
+    <p>Pulse <guiseq><gui>Ver</gui><gui>Panel lateral</gui></guiseq> para ver la configuración de la cámara usada para hacer la foto. Para ver también el histograma mostrando el balance de colores y de luces y sombras de la foto, seleccione <gui>Mostrar Exif</gui> en la pestaña <gui>Complementos</gui> y pulse <gui>Preferencias</gui>. compruebe los histogramas que quiere ver, listados en <gui>Histograma</gui>.</p>
+   </item>
+   <item>
+    <p>También puede ver la configuración de la cámara usada para tomar la foto en la barra de estado. Seleccione <gui>Mostrar Exif</gui> en la pestaña <gui>Complementos</gui> y pulse <gui>Preferencias</gui>. Marque <gui>Mostrar la configuración de la cámara en la barra de estado</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Mostrar un mapa con la ubicación de la foto</title>
+  <p>Algunas cámaras son capaces de adjuntar información de <em>geolocalización</em> (geo-etiquetas) a las fotos digitales. Generalmente, las geo-etiquetas son coordenadas GPS (latitud y longitud) del lugar donde se tomó la foto.</p>
+
+  <steps>
+   <item>
+    <p>Para poder ver un mapa de dónde se tomaron sus fotos, primero debe instalar el paquete <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Si <sys>eog-plugins</sys> está instalado, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</gui>. Después, marque <gui>Mapa</gui> y pulse <gui>Cerrar</gui>.</p>
+   </item>
+   <item>
+    <p>Para mostrar el mapa, pulse <guiseq><gui>Ver</gui><gui>Panel lateral</gui></guiseq>.</p>
+   </item>
+  </steps>
+  <p>El mapa sólo mostrará la ubicación donde se tomó la imágen si existe información de geolocalización adjunta en la foto. Muchas cámaras no adjuntan la información de geolocalización a las fotos.</p>
+</section>
+
+
+</page>

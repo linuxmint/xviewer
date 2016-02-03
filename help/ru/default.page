@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="default" xml:lang="ru">
+
+  <info>
+    <link type="guide" xref="index#faq"/>
+    <desc>Сделайте «Глаз GNOME» приложением для просмотра изображений по умолчанию.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Василий Фаронов &lt;qvvx@yandex.ru&gt;, 2007Алексей Кабанов</mal:name>
+      <mal:email>ak099@mail.ru</mal:email>
+      <mal:years>2012</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Открытие изображений в программе просмотра по умолчанию</title>
+<p>Если вы хотите сделать Программу просмотра изображений приложением, в котором по умолчанию должны открываться некоторые типы файлов с изображениями:</p>
+
+<steps>
+ <item>
+  <p>Щёлкните в <app>файловом менеджере Наутилус</app> правой кнопкой мыши по файлу изображения и выберите <gui>Свойства</gui>.</p>
+ </item>
+ <item>
+  <p>Перейдите на вкладку <gui>Открыть с помощью</gui>. Появится список <gui>Рекомендуемые приложения</gui>.</p>
+ </item>
+ <item>
+  <p>Выберите <gui>Просмотр изображений</gui> и нажмите <gui>Установить по умолчанию</gui>.</p>
+  <p>Если пункт <app>Просмотр изображений</app> отсутствует в списке <gui>Рекомендуемые приложения</gui>, нажмите <gui>Показать другие приложения</gui>. В появившемся списке выберите <gui>Просмотр изображений</gui> и нажмите <gui>Установить по умолчанию</gui>.</p>
+ </item>
+ <item>
+  <p>Нажмите <gui>Закрыть</gui>.</p>
+ </item>
+</steps>
+
+<p>В дальнейшем двойной щелчок на файле этого типа будет открывать файл в программе просмотра изображений.</p>
+
+</page>

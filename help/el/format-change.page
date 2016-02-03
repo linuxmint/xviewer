@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="el">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Μπορείτε να μετατρέψετε εικόνες από μια μορφή εικόνας σε άλλη. Μπορείτε να το κάνετε σε μια δέσμη για πολλές εικόνες.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Φώτης Τσάμης</mal:name>
+      <mal:email>ftsamis@gmail.com</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Μάριος Ζηντίλης</mal:name>
+      <mal:email>m.zindilis@dmajor.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2012, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Μετατροπή σε διαφορετική μορφή αρχείου</title>
+
+<p>Οι εικόνες αποθηκεύονται σε μια ειδική μορφή αρχείου, όπως JPEG ή PNG. Μπορείτε να τις μετατρέψετε από μια μορφή αρχείου σε μια άλλη.</p>
+
+<section id="single">
+ <title>Μετατροπή μιας μονής εικόνας σε διαφορετική μορφή αρχείου</title>
+ <list type="numbered">
+  <item>
+   <p>Κλικ στο <guiseq><gui>εικόνα</gui><gui>αποθήκευση ως</gui></guiseq>. Το παράθυρο <gui>αποθήκευση εικόνας</gui> θα αναδυθεί.</p>
+  </item>
+  <item>
+   <p>Στο πεδίο ονόματος, αλλάξτε την <em>επέκταση αρχείου</em> στην επιθυμητή μορφή αρχείου μετατροπής της εικόνας σας. Η επέκταση αρχείου είναι μέρος του ονόματος αρχείου μετά την τελεία.</p>
+   <p>Για παράδειγμα, για μετατροπή ενός αρχείου JPEG (<file>.jpg</file>) σε αρχείο Bitmap (<file>.bmp</file>):</p>
+   <p><em>αρχικό αρχείο:</em> <file>εικόνα.jpg</file></p>
+   <p><em>νέο αρχείο:</em> <file>εικόνα.bmp</file></p>
+  </item>
+  <item>
+   <p>Κλικ στο <gui>αποθήκευση</gui> και ένα νέο αρχείο θα αποθηκευτεί στη νέα μορφή. Το παλιό αρχείο (στην παλιά μορφή) θα παραμείνει όπου ήταν και δεν θα διαγραφεί.</p>
+  </item>
+</list>
+
+<p>Ο προβολέας εικόνας προσπαθεί να μαντέψει σε ποια μορφή αρχείου να αποθηκεύσει μια εικόνα με βάση την επέκταση του αρχείου που διαλέξατε. Εάν δεν αναγνωρίσει την επέκταση αρχείου που πληκτρολογείτε, ή δεν ξέρετε ποια να χρησιμοποιήσετε, κλικ στο <gui>υποστηριζόμενα αρχεία εικόνας</gui> στο παράθυρο <gui>αποθήκευση εικόνας</gui>. Αυτό θα επιτρέψει την επιλογή της μορφής αρχείου από το πτυσσόμενο πλαίσιο.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Μετατροπή πολλών εικόνων σε διαφορετική μορφή</title>
+ <p>Μπορείτε να μετατρέψετε έναν αριθμό εικόνων από μια μορφή αρχείου σε μια άλλη μονομιάς. Αυτό είναι χρήσιμο εάν έχετε πολλές εικόνες που χρειάζονται μετατροπή.</p>
+ <list style="numbered">
+  <item>
+   <p>Στη <link xref="view#image-gallery">συλλογή εικόνων</link>, πατήστε και κρατήστε κάτω το πλήκτρο <key>Ctrl</key> και επιλέξτε τις επιθυμητές εικόνες για μετατροπή μια-μια. Εναλλακτικά, πατήστε <keyseq><key>Ctrl</key><key>A</key></keyseq> για επιλογή όλων των εικόνων.</p>
+  </item>
+  <item>
+   <p>Κλικ στο <guiseq><gui>εικόνα</gui><gui>αποθήκευση ως</gui></guiseq>. Ένα παράθυρο θα εμφανιστεί (εμφανιζόμενο παρακάτω).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Οι μετατρεπόμενες εικόνες θα αποθηκευτούν στον τρέχοντα φάκελο από προεπιλογή. Για αποθήκευσή τους κάπου αλλού, αλλάξτε τον <gui>φάκελο προορισμού</gui>.</p>
+  </item>
+  <item>
+   <p>Επιλέξτε την επιθυμητή μορφή αρχείου για μετατροπή των εικόνων από την πτυσσόμενη λίστα στα δεξιά του πλαισίου <gui>μορφή ονόματος αρχείου</gui>.</p>
+  </item>
+  <item>
+   <p>Κλικ στο <gui>αποθήκευση</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

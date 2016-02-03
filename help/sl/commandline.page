@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="sl">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Ukazna vrstica</title>
+    <desc>Ukaz <cmd>eog</cmd> lahko odpre številne slike v različnih načinih.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Dovoljenje Creative Commons - deljenje pod istimi pogoji 3.0</p>
+    </license>
+
+  </info>
+
+<title>Ukazna vrstica</title>
+
+<p>Za zagon <app>Pregledovalnika slik</app> iz <app>Terminala</app> vnesite <cmd>eog</cmd>.</p>
+<p>Določeno datoteko lahko odprete z vnosom imena datoteke za ukaz <cmd>eog</cmd>:</p>
+<screen>eog slika.jpeg</screen>
+<p>Določeno mapo lahko odprete z vnosom imena mape za ukazom <cmd>eog</cmd>:</p>
+<screen>Mapa eog</screen>
+<p>Za ogled vseh slik v mapi naenkrat boste morda želeli <link xref="view#image-gallery">brskati po galeriji slik</link>.</p>
+
+<section id="fullscreen">
+    <title>Odpri sliko v celozaslonskem načinu</title>
+    <screen>eog --fullscreen slika.jpeg</screen>
+</section>
+<section id="disable-gallery">
+    <title>Odpri sliko z onemogočeno galerijo</title>
+    <screen>eog --disable-gallery slika.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Odprtje slike v novem oknu</title>
+    <screen>eog --new-instance slika.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Odpiranje mape v načinu predstavitve</title>
+    <screen>eog --slide-show Slike/</screen>
+</section>
+</page>

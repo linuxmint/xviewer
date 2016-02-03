@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="ca">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Podeu convertir les imatges d'un format a un altre. També ho podeu fer per a múltiples imatges alhora.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+<title>Convert to a different file format</title>
+
+<p>Les imatges es desen un format de fitxer específic, com el JPEG o el PNG. Podeu convertir d'un format de fitxer a un altre.</p>
+
+<section id="single">
+ <title>Convert a single picture to a different file format</title>
+ <list type="numbered">
+  <item>
+   <p>Feu clic a <guiseq><gui>Imatge</gui><gui>Anomena i desa</gui></guiseq>. Apareixerà la finestra <gui>Desa la imatge</gui>.</p>
+  </item>
+  <item>
+   <p>In the name field, change the <em>file extension</em> to the file format you want to
+convert your image to. The file extension is the part of the file name after the period.</p>
+   <p>Per exemple, per convertir un fitxer JPEG (<file>.jpg</file>) a un fitxer Bitmap (<file>.bmp</file>):</p>
+   <p><em>original file:</em> <file>image.jpg</file></p>
+   <p><em>new file:</em> <file>image.bmp</file></p>
+  </item>
+  <item>
+   <p>Feu clic a <gui>Desa</gui> i creareu un fitxer nou amb el format nou. El fitxer antic (amb el format vell) es mantindrà a la mateixa ubicació i no se suprimirà.</p>
+  </item>
+</list>
+
+<p>The image viewer tries to guess which file format to save a picture in
+based on the file extension you choose. If it doesn't recognize the file
+extension you type, or if you don't know which one to use, click
+<gui>Supported image files</gui> in the <gui>Save Image</gui> window. This will allow you to choose the file format from the drop down box.
+</p>
+
+</section>
+
+<section id="multiple">
+ <title>Conversió de múltiples imatges a un format diferent</title>
+ <p>Podeu convertir conjuntament múltiples imatges d'un format de fitxer a un altre. És molt útil si heu de convertir moltes imatges.</p>
+ <list style="numbered">
+  <item>
+   <p>A la <link xref="view#image-gallery">galeria d'imatges</link> mantingueu premuda la tecla <key>Ctrl</key> i seleccioneu les imatges que voleu convertir una a una. Per seleccionar totes les imatges premeu <keyseq><key>Ctrl</key><key>A</key></keyseq>.</p>
+  </item>
+  <item>
+   <p>Feu clic a <guiseq><gui>Imatge</gui><gui>Anomena i desa</gui></guiseq>. Apareixerà una finestra (es mostra a sota).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Les imatges convertides es desaran, per defecte, a la carpeta actual. Si les voleu desar en alguna altra ubicació canvieu la <gui>Carpeta de destinació</gui>.</p>
+  </item>
+  <item>
+   <p>Seleccioneu el format de fitxer al qual voleu convertir les imatges a la llista desplegable a la dreta del quadre <gui>Format del nom de fitxer</gui>.</p>
+  </item>
+  <item>
+   <p>Feu clic a <gui>Desa</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

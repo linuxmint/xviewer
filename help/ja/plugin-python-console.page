@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-python-console" xml:lang="ja">
+
+  <info>
+   <link type="guide" xref="index#advanced"/>
+   <desc>Python 端末を使えば、拡張機能を追加したり、画像ビューアー内でスクリプトを実行できます。</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  </info>
+
+<title>Python 端末</title>
+
+<p>画像ビューアーは、Python スクリプト言語を利用したプラグインシステムを備えています。<em>Python 端末</em>を有効にすれば、画像ビューアー内から Python インタープリターへ直接アクセスできます。たとえば、スクリプトを記述したり、プログラムによって画像を操作できます。</p>
+
+<steps>
+ <item>
+  <p>Python 端末を有効にできるようにするには、 <link xref="plugins">eog-plugins</link> をインストールする必要があります。</p>
+ </item>
+ <item>
+  <p><sys>eog-plugins</sys> をインストールしたら、<guiseq><gui>編集</gui><gui>設定</gui></guiseq>をクリックして<gui>プラグイン</gui>タブを開きます。</p>
+ </item>
+ <item>
+  <p><gui>Python 端末</gui>にチェックをいれて<gui>閉じる</gui>をクリックします。</p>
+ </item>
+ <item>
+  <p><guiseq><gui>ツール</gui><gui>Python 端末</gui></guiseq>をクリックすると Python 端末が起動します。</p>
+ </item>
+</steps>
+
+</page>

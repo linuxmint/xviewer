@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="el">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Προβολή εικόνας</link>, <link xref="preferences#slideshow">προβολή σε αλληλουχία</link> και <link xref="preferences#plugins">πρόσθετα</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Φώτης Τσάμης</mal:name>
+      <mal:email>ftsamis@gmail.com</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Μάριος Ζηντίλης</mal:name>
+      <mal:email>m.zindilis@dmajor.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2012, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Προτιμήσεις</title>
+<p>Αυτό το θέμα εξηγεί όλες τις ρυθμίσεις που μπορείτε να αλλάξετε στον προβολέα εικόνας. Κλικ στο <guiseq><gui>επεξεργασία</gui><gui>προτιμήσεις</gui></guiseq> για να ξεκινήσετε την αλλαγή των προτιμήσεων.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Προτιμήσεις προβολής εικόνας</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Βελτιώσεις εικόνας</title>
+    <p>Επιλέξτε <gui>ομαλές εικόνες όταν σμικρύνετε</gui> για να ενεργοποιήσετε την <em>εξομάλυνση εικόνας</em> όταν μεγεθύνετε ή σμικρύνετε. Αυτό κάνει τις εικόνες χαμηλής ανάλυσης (με δόντια) να φαίνονται καλύτερες με εξομάλυνση των οδοντωτών άκρων.</p>
+    <p>Εάν ενεργοποιήσετε <gui>αυτόματος προσανατολισμός</gui>, οι εικόνες θα περιστρέφονται αυτόματα σύμφωνα με τα <em>μεταδεδομένα τους Exif</em>. Αυτά είναι πληροφορίες για μια εικόνα που εισάγεται αυτόματα από ψηφιακή κάμερα και μπορεί να συμπεριλάβει λεπτομέρειες με ποιο τρόπο η κάμερα κρατήθηκε όταν παιρνόταν η φωτογραφία. Για παράδειγμα, όταν ενεργοποιηθεί ο αυτόματος προσανατολισμός, οι φωτογραφίες πορτρέτου περιστρέφονται αυτόματα όρθια. Η περιστροφή δεν αποθηκεύεται μέχρι να <link xref="flip-rotate#rotate">αποθηκεύσετε την περιστραμμένη εικόνα</link>.</p> 
+    <p>Ο αυτόματος προσανατολισμός δεν δουλεύει με όλες τις εικόνες· μόνο εικόνες που πάρθηκαν χρησιμοποιώντας μια κάμερα που αποθηκεύει μεταδεδομένα προσανατολισμού Exif θα περιστραφεί.</p>
+  </item>
+  <item>
+    <title>Διαφανή μέρη</title>
+     <p>Επιλέξτε μια από τις παρακάτω επιλογές για να καθορίσετε το πώς τα διαφανή μέρη μιας εικόνας θα εμφανίζονται, εάν έχει διαφανή μέρη:</p>
+    <list>
+      <item>
+       <p><gui>Ως μοτίβο τετραγωνιδίων:</gui></p>
+       <p>Εμφανίζει όλα τα διαφανή μέρη της εικόνας σε ένα μοτίβο τετραγωνιδίων.</p>
+      </item>
+      <item>
+       <p><gui>Ως προσαρμοσμένο χρώμα:</gui></p>
+       <p>Εμφανίζει όλα τα διαφανή μέρη της εικόνας σε ένα συμπαγές χρώμα που ορίζετε, με κλικ στο κουμπί επιλογέα χρώματος.</p>
+      </item>
+      <item>
+       <p><gui>Ως παρασκήνιο:</gui></p>
+       <p>Εμφανίζει οποιοδήποτε διαφανή μέρη της εικόνας στο χρώμα <gui>παρασκηνίου</gui>, εάν το <gui>ως προσαρμοσμένο χρώμα</gui> στο <gui>παρασκήνιο</gui> σημειωθεί. Αλλιώς, το προεπιλεγμένο χρώμα παρασκηνίου χρησιμοποιείται.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Προτιμήσεις προβολής διαφανειών</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>Για προσαρμογή των ρυθμίσεων της προβολής σε αλληλουχία:</p>
+<list>
+ <item>
+  <p>Στο <gui>εστίαση εικόνας</gui> μπορείτε να επιλέξετε εάν θα θέλατε οι εικόνες που είναι μικρότερες από την οθόνη να επεκταθούν έτσι ώστε να προσαρμόζονται στην οθόνη.</p>
+ </item>
+ <item>
+  <p>Στο <gui>σειρά</gui> μπορείτε να επιλέξετε πόσα δευτερόλεπτα κάθε εικόνα θα εμφανίζεται (μεταξύ 1 και 100) πριν να προβληθεί η επόμενη εικόνα.</p>
+ </item>
+ <item>
+  <p>Σημειώστε <gui>κυκλική σειρά</gui> εάν θέλετε η προβολή σε αλληλουχία να επαναλαμβάνεται συνεχώς. Εάν αποσημειωθεί, η προβολή σε αλληλουχία θα ξεκινήσει από την επιλεγμένη εικόνα και θα τελειώσει με την τελευταία εικόνα του φακέλου.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Προτιμήσεις προσθέτου</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Εδώ μπορείτε να σημειώσετε/αποσημειώσετε οποιαδήποτε πρόσθετα γνωρίσματα που θα θέλατε να ενεργοποιήσετε ή να απενεργοποιήσετε. Η εικόνα στα αριστερά δείχνει τα διαθέσιμα από προεπιλογή πρόσθετα.</p>
+
+<p>Μπορείτε επίσης να θέλετε να εγκαταστήσετε το <link xref="plugins">πακέτο προσθέτων eog</link>, που περιέχει πρόσθετα που δίνουν έναν αριθμό πρόσθετων γνωρισμάτων. Μετά την εγκατάσταση του, θα μπορείτε να ενεργοποιήσετε τα <link xref="index#plugins">επιπλέον πρόσθετα</link>, όπως αυτά εμφανίζονται στην εικόνα στα δεξιά.</p>
+</section>
+
+</page>

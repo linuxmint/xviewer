@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="rename-multiple" xml:lang="es"> 
+ 
+  <info> 
+    <link type="guide" xref="index#edit"/>
+    <link type="seealso" xref="format-change#multiple"/> 
+    <desc>Renombrar y enumerar automáticamente lotes de fotografías.</desc> 
+ 
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/> 
+    <credit type="author"> 
+      <name>Tiffany Antopolski</name> 
+      <email>tiffany@antopolski.com</email> 
+    </credit> 
+    <license> 
+      <p>Creative Commons Compartir Igual 3.0</p> 
+    </license> 
+ 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2011, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jorge González</mal:name>
+      <mal:email>jorgegonz@svn.gnome.org</mal:email>
+      <mal:years>2008-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Francisco Javier F. Serrador</mal:name>
+      <mal:email>serrador@openshine.com</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  </info> 
+ 
+<title>Renombrar varias imágenes a la vez</title>
+
+<p>Si tiene muchas imágenes que quiere renombrar, quizá tenga su propio estándar, o un formato de nombre numerado:</p>
+
+<steps>
+ <item>
+  <p>Abra la <link xref="view#image-gallery">colección de imágenes</link> pulsando <key>F9</key>.</p>
+ </item>
+ <item>
+  <p>Seleccione todas las imágenes que quiere renombrar de la colección de imágenes manteniendo pulsada la tecla <key>Ctrl</key> y pulsando sobre las imágenes una a una.</p>
+ <p>También puede pulsar <keyseq><key>Ctrl</key><key>A</key></keyseq> para seleccionar todas las imágenes en la carpeta.</p>
+ </item>
+ <item>
+  <p>Pulse <guiseq><gui>Imagen</gui><gui>Guardar como</gui></guiseq>. Aparecerá una ventana con algunas opciones sobre el nombre de archivo la imagen de debajo muestra la ventana).</p>
+ </item>
+ <item>
+  <p>De forma predeterminada, las imágenes se guardarán en la carpeta actual. Para guardarlas en otro lugar, cambie la <gui>Carpeta de destino</gui>.</p>
+ </item>
+ <item>
+  <p>Use la caja <gui>Formato del nombre de archivo</gui> para escoger escojer el formato para el nombre de las imágenes. La <gui>Vista previa del nombre de archivo</gui> le muestra cómo serán los nombres de archivo nuevos. Consulte debajo la sección <link xref="#filename-format"/> para obtener consejos sobre cómo renombrar archivos.</p>
+ </item>
+ <item>
+  <p>Asegúrese que el desplegable <gui>Formato del nombre de archivo</gui> diga <gui>tal cual</gui>, a menos que esté <link xref="format-change#multiple">convirtiendo las imágenes a un formato de archivo diferente</link>.</p>
+ </item>
+ <item>
+  <p>Pulse <gui>Guardar como</gui> y se renombrarán las imágenes.</p>
+ </item>
+</steps>
+
+<media type="image" src="figures/multiple-rename-count.png" width="300"/>
+
+<section id="filename-format">
+ <title>Elija un formato de nombre de archivo</title>
+ <p>El nombre de archivo de los archivos renombrados lo determina lo que escribe en la caja <gui>Formato del nombre de archivo</gui>.</p>
+ <list>
+  <item>
+   <p>Puede mantener el nombre de archivo original dejando <input>%f</input> en la caja.</p>
+   <p>Por ejemplo, si escribe <input>londres_%f</input> en la caja <gui>Formato del nombre de archivo</gui>, las imágenes <file>flor.jpg</file>, <file>casa.jpg</file> y <file>gato.jpg</file> serán renombradas a <file>londres_flor.jpg</file>, <file>londres_casa.jpg</file> y <file>londres_gato.jpg</file>.</p>
+  </item>
+  <item>
+   <p>Añadir un <input>%n</input> numerará las imágenes consecutivamente, comenzando por el número que elija bajo <gui>Opciones</gui>.</p>
+  <p>Por ejemplo, si escribe <input>hacienda_%n</input> en la caja <gui>Formato del nombre de archivo</gui>, las imágenes <file>flor.jpg</file>, <file>casa.jpg</file> y <file>gato.jpg</file> serán renombradas a <file>hacienda_2.jpg</file>, <file>hacienda_3.jpg</file> y <file>hacienda_4.jpg</file>. (Se numerarán por orden alfabético según el orden original de sus nombres de archivo.)</p>
+  </item>
+ </list>
+</section>
+
+</page>

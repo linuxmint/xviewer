@@ -1,0 +1,48 @@
+<interface>
+  <menu id="app-menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_View</attribute>
+        <link name="submenu">
+          <item>
+            <attribute name="action">app.toolbar</attribute>
+            <attribute name="label" translatable="yes">_Toolbar</attribute>
+          </item>
+          <item>
+            <attribute name="action">app.view-statusbar</attribute>
+            <attribute name="label" translatable="yes">_Statusbar</attribute>
+          </item>
+          <item>
+            <attribute name="action">app.view-gallery</attribute>
+            <attribute name="label" translatable="yes">_Image Gallery</attribute>
+          </item>
+          <item>
+            <attribute name="action">app.view-sidebar</attribute>
+            <attribute name="label" translatable="yes">Side _Pane</attribute>
+          </item>
+        </link>
+      </item>
+    </section>
+    <section>
+      <item>
+	<attribute name="action">app.preferences</attribute>
+	<attribute name="label" translatable="yes">Prefere_nces</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+	<attribute name="action">app.help</attribute>
+	<attribute name="label" translatable="yes">_Help</attribute>
+      </item>
+      <item>
+	<attribute name="action">app.about</attribute>
+	<attribute name="label" translatable="yes">_About</attribute>
+      </item>
+      <item>
+	<attribute name="action">app.quit</attribute>
+	<attribute name="label" translatable="yes">_Quit</attribute>
+        <attribute name="accel">&lt;Primary&gt;q</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="fi">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Lisätietojen, kuten kameran asetusten, tilastojen, kuvauspaikan ja -päivän tarkasteleminen.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sami Jaktholm</mal:name>
+      <mal:email>sjakthol@outlook.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jukka Heikkilä</mal:name>
+      <mal:email>jutsco@gmail.com</mal:email>
+      <mal:years>2010</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Tarkastele kuvan yksityiskohtaisia tietoja</title>
+
+<p>Digitaalisilla kameroilla otettujen valokuvien yhteyteen tallennetaan paljon lisätietoja kuvasta ja kuvaustilanteesta. Yleisiä lisätietoja ovat kuvauspäivä, kameran valotusasetukset ja joissain tapauksessa jopa kuvauspaikan koordinaatit.</p>
+
+<p>Tämä sivu selittää, miten näihin tietoihin päästään käsiksi.</p>
+
+<section id="date">
+<title>Näytä päivämäärä tilapalkissa</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Valokuvan kuvauspäivän saa näkyviin ikkunan alareunassa olevaan tilapalkkiin.</p>
+  <p>Tämä onnistuu valitsemalla <guiseq><gui>Muokkaa</gui><gui>Asetukset</gui></guiseq>, siirtymällä <gui>Lisäosat</gui>-välilehdelle ja valitsemalla <gui>Päiväys tilarivillä</gui> valintaruutu.</p>
+</section>
+
+<section id="exif">
+ <title>Yksityiskohtaiset Exif-tiedot</title>
+  <p>Valokuviin tallennettua lisätietoa kutsutaan nimellä <em>Exif-data</em>. Tätä dataa voi tutkia kuvakatselimeen asennettavalla lisäosalla.</p>
+
+  <steps>
+   <item>
+    <p>Kuviin tallennetun Exif-datan lukemista varten täytyy asentaa <link xref="plugins">eog-plugins</link> -paketti.</p>
+   </item>
+   <item>
+    <p>Jos <sys>eog-plugins</sys> on asennettu, valitse <guiseq><gui>Muokkaa</gui><gui>Asetukset</gui></guiseq>, siirry <gui>Lisäosat</gui>-välilehdelle, valitse <gui>Exif-näkymä</gui> -valintaruutu ja sulje ikkuna.</p>
+   </item>
+   <item>
+    <p>Valitse <guiseq><gui>Näytä</gui><gui>Sivupaneeli</gui></guiseq> tutkiaksesi valokuvan ottamiseen käytettyjä asetuksia. Kuvan väritasapainoa ja valoisuuden määrää esittäviä kuvaajia saa näkyviin valitsemalla <gui>Exif-näkymä</gui> <gui>Lisäosat</gui>-välilehdeltä ja napsauttamalla <gui>Asetukset</gui>-painiketta. Valitse haluamasi kuvaajat <gui>Histogrammi</gui>-otsikon alta.</p>
+   </item>
+   <item>
+    <p>Valokuvan ottamiseen käytetyt kamera-asetukset saa näkyviin myös tilapalkkiin. Valitse <gui>Exif-näkymä</gui> <gui>Lisäosat</gui>-välilehdeltä, napsauta <gui>Asetukset</gui> ja valitse <gui>Näytä kamera-asetukset tilapalkissa</gui> -valintaruutu.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Kuvauspaikan sijainti kartalla</title>
+  <p>Jotkut kamerat kykenevät lisäämään <em>sijaintitietoja</em> (geotageja) digitaalisiin kuviin. Geotagit ovat yleensä kuvauspaikan GPS-koordinaatteja (pituus- ja leveyspiiri).</p>
+
+  <steps>
+   <item>
+    <p>Kuvauspaikkojen kartalle sijoittamista varten täytyy asentaa <link xref="plugins">eog-plugins</link> -paketti.</p>
+   </item>
+   <item>
+    <p>Jos <sys>eog-plugins</sys> on asennettu, valitse <guiseq><gui>Muokkaa</gui><gui>Asetukset</gui></guiseq>, siirry <gui>Lisäosat</gui>-välilehdelle, valitse <gui>Kartta</gui> -valintaruutu ja sulje ikkuna.</p>
+   </item>
+   <item>
+    <p>Kartan saa näkyviin valitsemalla <guiseq><gui>Näytä</gui><gui>Sivupaneeli</gui></guiseq>.</p>
+   </item>
+  </steps>
+  <p>Kuvauspaikka lisätään kartalle vain, jos kuvaan on liitetty sijaintitietoja. Kaikki kamerat eivät liitä sijaintitietoja valokuviin.</p>
+</section>
+
+
+</page>

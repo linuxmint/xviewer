@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="view" xml:lang="ko">
+
+  <info>
+    <link type="guide" xref="index#viewing"/>
+    <desc><key>왼쪽 화살표</key> 및 <key>오른쪽 화살표</key>를 눌러 사진을 넘어가십시오. 아니면 이미지 모음에서 사진을 한 눈에 볼 수도 있습니다.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+  <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany.antopolski@gmail.com</email>
+  </credit>
+  <license>
+   <p>Creative Commons Share Alike 3.0</p>
+  </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>류창우</mal:name>
+      <mal:email>cwryu@debian.org</mal:email>
+      <mal:years>2007-2008, 2011, 2014.</mal:years>
+    </mal:credit>
+  </info>
+<title>폴더의 전체 사진 보기</title>
+
+<p>폴더의 모든 사진을 빠르게 둘러 보려면, 사진 중 하나를 연 다음 <gui>다음</gui> 및 <gui>이전</gui>을 누릅니다. <em>이미지 모음</em>을 볼 수도 있습니다. 이미지 모음에서는 폴더의 사진 모두를 작은 미리 보기 형태로 한 번에 표시합니다.</p>
+
+<section id="browse">
+ <title>폴더에 들어 있는 사진 둘러보기</title>
+ <p>사진 여러 장이 들어 있는 폴더가 있으면, 사진을 하나하나 열 필요 없이 전체 사진을 편리하게 둘러 볼 수 있습니다.</p>
+ <steps>
+  <item>
+   <p>폴더 안의 사진 중의 하나를 <link xref="open">엽니다</link>.</p>
+  </item>
+  <item>
+   <p>다른 사진으로 넘어가려면 <link xref="toolbar">도구 모음</link>의 <gui>다음</gui> 및 <gui>이전</gui>을 누르십시오. 아니면 <key>오른쪽 화살표</key> 및 <key>왼쪽 화살표</key>를 누르십시오.</p>
+   <p>다른 방법으로, <key>위 화살표</key> 및 <key>아래 화살표</key> 키를 사용할 수도 있고, <key>스페이스 바</key> 및 <key>백스페이스</key> 키를 사용할 수도 있습니다. <guiseq><gui>이동</gui><gui>이전 이미지</gui></guiseq> 및 <guiseq><gui>Go</gui><gui>다음 이미지</gui></guiseq>를 사용할 수도 있습니다.</p>
+  </item>
+  <item>
+   <p>사진을 전체 화면으로 보려면 <guiseq><gui>보기</gui><gui>전체 화면</gui></guiseq>을 누르거나 또는 <key>F11</key> 키를 누르십시오. 전체 화면 모드에서 다른 사진으로 넘어가려면 키보드 키를 사용하십시오.</p>
+ <p>일반 모드로 돌아가려면, <key>Esc</key> 또는 <key>F11</key> 키를 누르십시오.</p>
+  </item>
+ </steps>
+</section>
+
+
+<section id="image-gallery"><title>이미지 모음을 보려면:</title>
+ <p><em>이미지 모음</em>에서 폴더의 모든 사진을 한 번에 미리 볼 수 있습니다. 이 기능을 이용해 사진이 아주 많을 때 빠르게 사진을 둘러 볼 수 있습니다.</p>
+ 
+ <steps>
+  <item> 
+   <p>그림 모음을 보려면, <guiseq><gui>보기</gui><gui>그림 모음</gui></guiseq>을 누르거나 <key>F9</key> 키를 누르십시오.</p>
+  </item>
+  <item>
+   <p>사진 모음에 있는 이미지를 누르면 전체 크기로 표시합니다.</p>
+   <p>그림 모음 안에서 이전/다음 이미지로 넘어가려면 <key>왼쪽 화살표</key> 및 <key>오른쪽 화살표</key> 키를 누르면 됩니다.</p>
+  </item>
+  <item>
+   <p>사진 모음을 감추려면 <guiseq><gui>보기</gui><gui>이미지 모음</gui></guiseq>을 다시 누르거나, <key>F9</key> 키를 누르십시오.</p>
+  </item>
+ </steps>
+ </section>
+</page>

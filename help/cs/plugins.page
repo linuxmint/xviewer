@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="cs">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Nainstalováním zásuvným modulům získáte přístup k rozšiřujícím funkcím.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Marek Černocký</mal:name>
+      <mal:email>marek@manet.cz</mal:email>
+      <mal:years>2009, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Zásuvné moduly</title>
+
+<p>Můžete si nainstalovat balíček <sys>eog-plugins</sys>, abyste si do prohlížeče obrázků doplnili další zásuvné moduly. Zásuvné moduly přidávají další funkce, jako jsou ty uvedené v seznamu níže.</p>
+
+<note style="info package">
+  <p>Balíček <sys>eog-plugins</sys> může nainstalovat pomocí <em>správce balíčků</em> své linuxové distribuce.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">instalovat balíček eog-plugins</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>Součástí balíčku <sys>eog-plugins</sys> jsou následující funkce:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">Datum ve stavové liště</link>: Zobrazuje ve stavové liště okna datum vytvoření obrázku.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Zobrazení informací Exif</link>: Zobrazuje pro fotografie nastavení fotoaparátu a histogramy.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">Pozadí celé obrazovky</link>: Umožňuje změnit pozadí v režimu celé obrazovky.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">Celá obrazovka dvojklikem</link>: Aktivujte režim celé obrazovky pomocí dvojitého kliknutí.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Mapa</link>: Zobrazuje na mapě geolokační informace o fotografii.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">Odesílání na PicasaWeb</link>: Odesílejte své fotografie na PicasaWeb.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Konzola jazyka Python</link>: Konzola pro skriptovaní v jazyce Python pro prohlížeč obrázků.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">Poslat e-mailem</link>: Posílejte přátelům obrázky přiložené v e-mailu.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Náhodné promítání snímků</link>: Promíchá obrázky v režimu promítání snímků.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Přizpůsobit přiblížení šířce obrázku</link>: Přizpůsobí přiblížení tak, aby obrázek na šířku využil celé okno.</p>
+ </item>
+</list>
+
+<note>
+ <p>Zásuvné moduly můžete spravovat na <link xref="preferences#plugins">kartě Zásuvné moduly</link> v okně s předvolbami.</p>
+</note>
+
+</page>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="toolbar" xml:lang="ja">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc>ツールバーを<link xref="toolbar#view">表示、非表示</link>あるいは編集します。</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>ツールバー</title>
+<p>ツールバーは、拡大・縮小や回転といった機能への簡単なアクセスを提供します。しかしながら、ボタンが見つけにくかったり、多くの場所を取るようであれば、ツールバーやツールを隠せます。</p>
+
+<section id="view">
+<title>ツールバーを表示または非表示にする</title>
+  <p>ツールバーを表示するか否かを切り替えるには、<guiseq><gui>表示</gui><gui>ツールバー</gui></guiseq>をクリックします。</p>
+</section>
+
+<section id="modify">
+ <title>ツールバーのツールを追加、削除あるいは再整理する</title>
+ <p>デフォルトでは、ツールバーは基本的なツールの組み合わせのみを含んでいます。ツールバーを編集することにより、便利な拡張ツールを追加できます。</p>
+ <steps>
+ <item>
+  <p>ツールバーが隠れていないことを確認します。</p>
+ </item>
+ <item>
+  <p><guiseq><gui>編集</gui><gui>ツールバー</gui></guiseq>をクリックします。</p>
+  <p><gui>ツールバーエディター</gui>には、ツールバーにないツールが含まれています (下図参照)。ツールバーのツールをグループ化するのに使えるセパレーターも含まれています。</p>
+ </item>
+ <item>
+  <p>ツールバーに新しいツールを<em>追加</em>するには、ツールバーエディターからツールバーへツールをドラッグします。</p>
+  <p>ツールバー上のツールを<em>再整理</em>するには、ツールを新しい位置へドラッグします。</p>
+  <p>ツールバーからツールバーエディターへツールをドラッグすることによって、ツールを<em>削除</em>できます。</p>
+ </item>
+ <item>
+  <p>ツールバーの編集が完了したら、ツールバーエディターというウィンドウの<gui>閉じる</gui>をクリックします。</p>
+ </item>
+</steps>
+
+<p>デフォルトの設定にツールバーを戻したい場合は、ツールバーエディターというウィンドウの<gui>デフォルトに戻す</gui>をクリックします。</p>
+
+<media type="image" src="figures/eog-toolbar-editor.png" width="480"/>
+
+</section>
+
+</page>

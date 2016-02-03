@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="lv">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Instalē spraudņus, lai pievienotu papildus funkcionalitāti.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0 licence.</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Viesturs Ružāns</mal:name>
+      <mal:email>viesty@exs.lv</mal:email>
+      <mal:years>2011.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Spraudņi</title>
+
+<p>Tu vari ieinstalēt <sys>eog-plugins</sys> paku, lai iegūtu papildus spraudņus attēlu skatītājam. Spraudņi pievieno papildus funkcionalitāti. Daži no spraudņiem aprakstīti zemāk.</p>
+
+<note style="info package">
+  <p>Tu vari instalēt <sys>eog-plugins</sys> paku, izmantojot savas Linux distribūcijas <em>paku pārvaldnieku</em>.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">instalēt eog spraudņus</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>Šādas iespējas ir iekļautas <sys>eog-plugins</sys> pakā:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">Datuma statusjosla</link>: rāda attēla datumu loga statusjoslā.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Exif attēlošana</link>: Parāda kameras iestatījumus un digitālu fotogrāfiju histogrammas.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">Pilnekrāna fons</link>: Aktivē fona mainīšanu pilnekrāna režīmā.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">Pilnekrāns ar dubultklikšķi</link>:Ieslēgt pilnekrāna režīmu ar dubultklikšķi.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Karte</link>: Parāda digitālās fotogrāfijas ģeogrāfisko atrašanās vietu kartē.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">PicasaWeb augšupielādētājs</link>: augšupielādē savus attēlus uz PicasaWeb servera.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Python konsole</link>: Python skriptēšanas konsole attēlu skatītājam.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">Sūtīt vēstuli</link>: Sūti attēlu- draugiem, pievienojot to jaunam epastam.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Slīdrādes maisītājs</link>: Maini attēlu secību slīdrādes režīmā.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Pielāgot attēla platumam</link>: Uzstāda tālummaiņu, lai ietilpinātu attēlu tā pilnā platumā lietotnes logā.</p>
+ </item>
+</list>
+
+<note>
+ <p>Tu vari pārvaldīt spraudņus, izmantojot <link xref="preferences#plugins">Spraudņu cilni</link>, Iestatījumu logā.</p>
+</note>
+
+</page>

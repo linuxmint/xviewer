@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="flip-rotate" xml:lang="hu">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Vízszintesen és függőlegesen, óra járása szerint és azzal ellentétesen</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Kelemen Gábor</mal:name>
+      <mal:email>kelemeng at gnome dot hu</mal:email>
+      <mal:years>2011, 2012, 2013, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Képek tükrözése vagy forgatása</title>
+
+<p>Ha képeinek nem a megfelelő oldala van felfelé, vagy az oldalait fel szeretné cserélni, akkor tükrözheti vagy elforgathatja azokat.</p>
+
+<section id="flip">
+<title>Kép tükrözése</title>
+<steps>
+ <item><p>Válassza a <gui>Szerkesztés</gui> menüt.</p></item>
+ <item><p>Válassza a <gui>Vízszintes tükrözés</gui> vagy a <gui>Függőleges tükrözés</gui> menüpontot.</p></item>
+ <item>
+  <p>Ha a kép tükrözött állapotát szeretné megtartani, akkor válassza a <guiseq><gui>Kép</gui><gui>Mentés</gui></guiseq> menüpontot.</p>
+  <p>Ellenkező esetben ne mentse a képet, ekkor az a következő megnyitásakor visszaáll az eredeti tájolásába.</p>
+ </item>
+</steps>
+</section>
+
+<section id="rotate">
+<title>Kép forgatása</title>
+<steps>
+ <item><p>Válassza a <gui>Szerkesztés</gui> menüt.</p></item>
+ <item><p>Válassza a <gui>Forgatás az óramutató irányába</gui> vagy a <gui>Forgatás az óramutatóval ellentétesen</gui> menüpontot. </p></item>
+ <item>
+  <p>Ha a kép elforgatott állapotát szeretné megtartani, akkor válassza a <guiseq><gui>Kép</gui><gui>Mentés</gui></guiseq> menüpontot.</p>
+  <p>Ellenkező esetben ne mentse a képet, ekkor az a következő megnyitásakor visszaáll az eredeti tájolásába.</p>
+ </item>
+</steps>
+
+<p>Ezt az <link xref="toolbar">eszköztár</link> gombjaival is elvégezheti. Használhat gyorsbillentyűket is:</p>
+
+<table>
+  <tr>
+    <td><p>Forgatás az órajárással egyező irányba</p></td>
+    <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
+  </tr>
+  <tr>
+    <td><p>Forgatás az órajárással ellentétes irányba</p></td>
+    <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>R</key></keyseq></p></td>
+  </tr>
+</table>
+
+</section>
+</page>

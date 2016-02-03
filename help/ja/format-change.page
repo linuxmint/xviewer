@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="ja">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>ある画像形式から他の画像形式へ画像を変換できます。複数の画像に対して一度に変換を行えます。</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+<title>異なるファイル形式への変換</title>
+
+<p>画像は、JPEG や PNG といった特定のファイル形式で保存されています。ある画像形式を他の画像形式に変換できます。</p>
+
+<section id="single">
+ <title>単一の画像を異なるファイル形式に変換する方法は次のとおりです。</title>
+ <list type="numbered">
+  <item>
+   <p><guiseq><gui>画像</gui><gui>名前を付けて保存</gui></guiseq>をクリックします。<gui>画像の保存</gui>というウィンドウがポップアップします。</p>
+  </item>
+  <item>
+   <p>名前欄で<em>ファイルの拡張子</em>を変換したいと思う画像形式のものに変更します。ファイルの拡張子は、ファイル名のピリオド (.) より後ろの部分です。</p>
+   <p>JPEG ファイル (<file>.jpg</file>) をビットマップファイル (<file>.bmp</file>) に変換する例</p>
+   <p><em>元のファイル:</em> <file>image.jpg</file></p>
+   <p><em>新しいファイル:</em> <file>image.bmp</file></p>
+  </item>
+  <item>
+   <p><gui>保存</gui>をクリックすると新しいファイルが新しい形式で保存されます。古いファイル (古い形式) は削除されずにそのまま残ります。</p>
+  </item>
+</list>
+
+<p>画像ビューアーは、あなたが選択したファイルの拡張子に基づいて画像を保存するファイル形式を推測しようとします。入力したファイル形式が認識されない場合や使用したいファイル形式の拡張子を知らない場合、<gui>画像を保存</gui>というウィンドウにある<gui>サポートしている画像ファイル</gui>をクリックします。するとドロップダウンボックスから、ファイル形式を選択できます。</p>
+
+</section>
+
+<section id="multiple">
+ <title>複数の画像を異なるファイル形式に変換する方法は次のとおりです。</title>
+ <p>多くの画像を 1 つのファイル形式から他のファイル形式へ変換できます。これは、変換を必要とする画像がたくさんある場合に便利です。</p>
+ <list style="numbered">
+  <item>
+   <p><link xref="view#image-gallery">画像ギャラリー</link>で <key>Ctrl</key> キーを押したままファイル形式を変換したい画像を選択します。あるいは、<keyseq><key>Ctrl</key><key>A</key></keyseq> を押して、すべての画像を選択します。</p>
+  </item>
+  <item>
+   <p><guiseq><gui>画像</gui><gui>名前を付けて保存</gui></guiseq>をクリックします。下図のようなウィンドウが表示されます。</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>デフォルトでは、変換した画像は現在のフォルダーに保存されます。他の場所に保存したい場合は、<gui>保存先のフォルダー</gui>を変更します。</p>
+  </item>
+  <item>
+   <p><gui>ファイル名の書式</gui>という入力欄の右にあるドロップダウンリストから、変換したい画像形式を選択します。</p>
+  </item>
+  <item>
+   <p><gui>名前を付けて保存</gui>をクリックします。</p>
+  </item>
+ </list>
+</section>
+
+</page>

@@ -1,0 +1,1615 @@
+# Irish translations for eog package.
+# Copyright (C) 2000-2013 Free Software Foundation, Inc.
+# Alastair McKinstry <mckinstry@computer.org>, 2000.
+# Paul Duffy <dubhthach@frink.nuigalway.ie>, 2003.
+# Seán de Búrca <leftmostcat@gmail.com>, 2007-2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-30 21:56-0600\n"
+"PO-Revision-Date: 2013-08-30 22:14-0600\n"
+"Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
+"4;\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "Taispeáin \"_%s\""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_Bog ar Bharra Uirlisí"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "Bog an mhír roghnaithe ar an mbarra uirlisí"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "_Bain ón mBarra Uirlisí"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "Bain an mhír roghnaithe ón mbarra uirlisí"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "_Scrios Barra Uirlisí"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "Bain an barra uirlisí roghnaithe"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "Deighilteoir"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4030
+msgid "_View"
+msgstr "_Amharc"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4056
+msgid "_Toolbar"
+msgstr "_Barra Uirlisí"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4059
+msgid "_Statusbar"
+msgstr "Barra _Stádais"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4062
+msgid "_Image Gallery"
+msgstr "_Gailearaí Íomhánna"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4065
+msgid "Side _Pane"
+msgstr "_Pána Taoibh"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4044
+msgid "Prefere_nces"
+msgstr "_Sainroghanna"
+
+#: ../data/eog-app-menu.xml.h:7 ../src/eog-window.c:4033
+msgid "_Help"
+msgstr "Cab_hair"
+
+#: ../data/eog-app-menu.xml.h:8
+msgid "_About Image Viewer"
+msgstr "_Maidir le hAmharcán Íomhánna"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "_Scoir"
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-window.c:5992 ../src/main.c:173
+msgid "Image Viewer"
+msgstr "Amharcán Íomhánna"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Brabhsáil agus rothlaigh íomhánna"
+
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr ""
+
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:4876
+msgid "Image Properties"
+msgstr "Airíonna Íomhá"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_Siar"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "Ar _Aghaidh"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../src/eog-metadata-sidebar.c:498
+msgid "Name:"
+msgstr "Ainm:"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:500
+msgid "Width:"
+msgstr "Leithead:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:502
+msgid "Height:"
+msgstr "Airde:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:504
+msgid "Type:"
+msgstr "Cineál:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+msgid "Bytes:"
+msgstr "Bearta:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+#: ../src/eog-metadata-sidebar.c:508
+msgid "Folder:"
+msgstr "Fillteán:"
+
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:496
+msgid "General"
+msgstr "Ginearálta"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:528
+msgid "Aperture Value:"
+msgstr "Luach Cró:"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:531
+msgid "Exposure Time:"
+msgstr "Am Nochta:"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:534
+msgid "Focal Length:"
+msgstr "Fad Fócasach:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:536
+msgid "Flash:"
+msgstr "Splanc:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:540
+msgid "ISO Speed Rating:"
+msgstr "Rátáil Luais ISO:"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:543
+msgid "Metering Mode:"
+msgstr "Mód Méadraithe:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:546
+msgid "Camera Model:"
+msgstr "Samhail an Cheamara:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:548
+msgid "Date/Time:"
+msgstr "Dáta/Am:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:553
+msgid "Description:"
+msgstr "Cur Síos:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:556
+msgid "Location:"
+msgstr "Suíomh:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:559
+msgid "Keywords:"
+msgstr "Lorgfhocail:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:561
+msgid "Author:"
+msgstr "Údar:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:564
+msgid "Copyright:"
+msgstr "Cóipcheart:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:567
+msgid "Details"
+msgstr "Mionsonraí"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:524
+msgid "Metadata"
+msgstr "Meiteashonraí"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Sábháil Mar"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#, fuzzy, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<small><i><b>%f:</b> bunainm comhaid</i></small>"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, fuzzy, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<small><i><b>%n:</b> áiritheoir</i></small>"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:6
+msgid "Filename format:"
+msgstr "Formáid ainm comhaid:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+msgid "Choose a folder"
+msgstr "Roghnaigh fillteán"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "Destination folder:"
+msgstr "Sprioc-fhillteán:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+#, fuzzy
+msgid "File Path Specifications"
+msgstr "<b>Sonraíochtaí Chonair Chomhad</b>"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "Start counter at:"
+msgstr "Tosaigh áiritheoir ag:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "Replace spaces with underscores"
+msgstr "Ionadaigh spásanna le fostríoca"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "Options"
+msgstr "Roghanna"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "Rename from:"
+msgstr "Athainmnigh ó:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "To:"
+msgstr "Chuig:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+#, fuzzy
+msgid "File Name Preview"
+msgstr "<b>Réamhamharc Ainm Comhaid</b>"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Sainroghanna"
+
+#: ../data/eog-preferences-dialog.ui.h:2
+#, fuzzy
+msgid "Image Enhancements"
+msgstr "<b>Feabhsúcháin Íomhá</b>"
+
+#: ../data/eog-preferences-dialog.ui.h:3
+#, fuzzy
+msgid "Smooth images when zoomed _out"
+msgstr "Smúdáil íomhánna agus súmáilte _amach"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+#, fuzzy
+msgid "Smooth images when zoomed _in"
+msgstr "Smúdáil íomhánna agus súmáilte _isteach"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "_Automatic orientation"
+msgstr "Treoshuíomh _uathoibríoch"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Background"
+msgstr "Cúlra"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+#, fuzzy
+msgid "As custom color:"
+msgstr "Mar _dhath saincheaptha:"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:3
+#, fuzzy
+msgid "Background Color"
+msgstr "Mar _chúlra"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+#, fuzzy
+msgid "Transparent Parts"
+msgstr "<b>Limistéir Trédhearcacha</b>"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+msgid "As check _pattern"
+msgstr "Mar _phatrún táiplise"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "As custom c_olor:"
+msgstr "Mar _dhath saincheaptha:"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "Color for Transparent Areas"
+msgstr "Dath do Limistéir Trédhearcacha"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As _background"
+msgstr "Mar _chúlra"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Image View"
+msgstr "Amharc Íomhánna"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+#, fuzzy
+msgid "Image Zoom"
+msgstr "<b>Súmáil Íomhá</b>"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "E_xpand images to fit screen"
+msgstr "_Leathnaigh íomhánna chun scáileán a oiriúnú"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+#, fuzzy
+msgid "Sequence"
+msgstr "<b>Seicheamh</b>"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "_Time between images:"
+msgstr ""
+
+#: ../data/eog-preferences-dialog.ui.h:20
+msgid "_Loop sequence"
+msgstr "Lúb _seicheamh"
+
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "Slideshow"
+msgstr "Taispeántas Sleamhnán"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "Plugins"
+msgstr "Breiseáin"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:1
+msgid "Automatic orientation"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:5
+msgid "Interpolate Image"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:7
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:9
+msgid "Transparency indicator"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:11
+msgid "Scroll wheel zoom"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:13
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:16
+msgid "Transparency color"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:18
+#, fuzzy
+msgid "Use a custom background color"
+msgstr "Socraigh mar Chúlra na _Deisce"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:20
+msgid "Loop through the image sequence"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:27
+#, fuzzy
+msgid "Show/Hide the window toolbar."
+msgstr "Taispeáin/folaigh barra uirlisí na fuinneoige."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:28
+#, fuzzy
+msgid "Show/Hide the window statusbar."
+msgstr "Taispeáin/folaigh barra stádais na fuinneoige."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:29
+#, fuzzy
+msgid "Show/Hide the image gallery pane."
+msgstr "Taispeáin/folaigh an pána bhailiúchán íomhánna."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:32
+#, fuzzy
+msgid "Show/Hide the window side pane."
+msgstr "Taispeáin/folaigh pána taoibh na fuinneoige."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:33
+#, fuzzy
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "Taispeáin/folaigh an pána bhailiúchán íomhánna."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:35
+msgid "Trash images without asking"
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:41
+#, fuzzy
+msgid "External program to use for editing images"
+msgstr "Earráid agus íomhá %s á scriosadh"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:43
+msgid "Active plugins"
+msgstr "Breiseáin gníomhacha"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Lánscáileán le déchliceáil"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Gníomhachtaigh mód lánscáileáin le déchliceáil"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Athluchtaigh Íomhá"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Athluchtaigh íomhá reatha"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Dáta sa bharra stádais"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Taispeánann sé seo dáta na híomhá i mbarra stádais na fuinneoige"
+
+#: ../src/eog-close-confirmation-dialog.c:171
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eog-close-confirmation-dialog.c:217
+msgid "Question"
+msgstr ""
+
+#: ../src/eog-close-confirmation-dialog.c:398
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eog-close-confirmation-dialog.c:435
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/eog-close-confirmation-dialog.c:642
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#: ../src/eog-close-confirmation-dialog.c:659
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:678
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
+
+#: ../src/eog-error-message-area.c:119
+msgid "_Cancel"
+msgstr "_Cealaigh"
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:841
+msgid "_Reload"
+msgstr "_Athluchtaigh"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4077
+msgid "Save _As…"
+msgstr "Sábháil _Mar…"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "Níorbh fhéidir íomhá '%s' a luchtú."
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "Níorbh fhéidir íomhá '%s' a shábháil."
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "Níor aimsíodh aon íomhá i '%s'."
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/eog-exif-details.c:69
+msgid "Camera"
+msgstr "Ceamara"
+
+#: ../src/eog-exif-details.c:70
+msgid "Image Data"
+msgstr "Sonraí Íomhá"
+
+#: ../src/eog-exif-details.c:71
+msgid "Image Taking Conditions"
+msgstr "Coinníollacha Thógáil Íomhánna"
+
+#: ../src/eog-exif-details.c:72
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/eog-exif-details.c:73
+msgid "Maker Note"
+msgstr "Nóta Déantóra"
+
+#: ../src/eog-exif-details.c:74
+msgid "Other"
+msgstr "Eile"
+
+#: ../src/eog-exif-details.c:76
+msgid "XMP Exif"
+msgstr "Exif XMP"
+
+#: ../src/eog-exif-details.c:77
+msgid "XMP IPTC"
+msgstr "IPTC XMP"
+
+#: ../src/eog-exif-details.c:78
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/eog-exif-details.c:79
+msgid "XMP Other"
+msgstr "Eile XMP"
+
+#: ../src/eog-exif-details.c:253
+msgid "Tag"
+msgstr "Clib"
+
+#: ../src/eog-exif-details.c:260
+msgid "Value"
+msgstr "Luach"
+
+#: ../src/eog-exif-details.c:422
+msgid "North"
+msgstr ""
+
+#: ../src/eog-exif-details.c:425
+msgid "East"
+msgstr ""
+
+#: ../src/eog-exif-details.c:428
+msgid "West"
+msgstr ""
+
+#: ../src/eog-exif-details.c:431
+msgid "South"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %B %d %Y  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %B %d %Y"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (lionsa)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (scannán 35mm)"
+
+#: ../src/eog-file-chooser.c:126
+msgid "File format is unknown or unsupported"
+msgstr ""
+
+#: ../src/eog-file-chooser.c:131
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/eog-file-chooser.c:132
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:167
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:219
+msgid "All files"
+msgstr "Gach comhad"
+
+#: ../src/eog-file-chooser.c:224
+msgid "Supported image files"
+msgstr ""
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:296 ../src/eog-metadata-sidebar.c:235
+#: ../src/eog-metadata-sidebar.c:239 ../src/eog-properties-dialog.c:138
+#: ../src/eog-properties-dialog.c:140 ../src/eog-thumb-view.c:519
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "phicteilín"
+msgstr[1] "phicteilín"
+msgstr[2] "phicteilín"
+msgstr[3] "bpicteilín"
+msgstr[4] "picteilín"
+
+#: ../src/eog-file-chooser.c:466
+msgid "Open Image"
+msgstr "Oscail Íomhá"
+
+#: ../src/eog-file-chooser.c:474
+msgid "Save Image"
+msgstr "Sábháil Íomhá"
+
+#: ../src/eog-file-chooser.c:482
+msgid "Open Folder"
+msgstr "Oscail Fillteán"
+
+#: ../src/eog-image.c:619
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr ""
+
+#: ../src/eog-image.c:647
+#, c-format
+msgid "Transformation failed."
+msgstr "Theip ar thrasfhoirmiú."
+
+#: ../src/eog-image.c:1116
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr ""
+
+#: ../src/eog-image.c:1265
+#, c-format
+msgid "Image loading failed."
+msgstr "Theip ar luchtú íomhá."
+
+#: ../src/eog-image.c:1846 ../src/eog-image.c:1966
+#, c-format
+msgid "No image loaded."
+msgstr "Níor luchtaíodh aon íomhá."
+
+#: ../src/eog-image.c:1854 ../src/eog-image.c:1975
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr ""
+
+#: ../src/eog-image.c:1864 ../src/eog-image.c:1986
+#, c-format
+msgid "Temporary file creation failed."
+msgstr ""
+
+#: ../src/eog-image-jpeg.c:375
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr ""
+
+#: ../src/eog-image-jpeg.c:394
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr ""
+
+#: ../src/eog-metadata-sidebar.c:248 ../src/eog-properties-dialog.c:155
+msgid "Unknown"
+msgstr "Anaithnid"
+
+#: ../src/eog-metadata-sidebar.c:506
+msgid "File size:"
+msgstr ""
+
+#: ../src/eog-metadata-sidebar.c:517 ../src/eog-properties-dialog.c:674
+#: ../src/eog-window.c:4081
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+
+#: ../src/eog-preferences-dialog.c:114
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu soicind"
+msgstr[1] "%lu shoicind"
+msgstr[2] "%lu shoicind"
+msgstr[3] "%lu soicind"
+msgstr[4] "%lu soicind"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "Socruithe Íomhá"
+
+#: ../src/eog-print-image-setup.c:906
+msgid "Image"
+msgstr "Íomhá"
+
+#: ../src/eog-print-image-setup.c:907
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/eog-print-image-setup.c:913
+msgid "Page Setup"
+msgstr "Socrú Leathanaigh"
+
+#: ../src/eog-print-image-setup.c:914
+msgid "The information for the page where the image will be printed"
+msgstr ""
+
+#: ../src/eog-print-image-setup.c:942
+msgid "Position"
+msgstr ""
+
+#: ../src/eog-print-image-setup.c:946
+msgid "_Left:"
+msgstr "Ar _chlé:"
+
+#: ../src/eog-print-image-setup.c:948
+msgid "_Right:"
+msgstr "Ar _dheis:"
+
+#: ../src/eog-print-image-setup.c:949
+msgid "_Top:"
+msgstr "Ag ba_rr:"
+
+#: ../src/eog-print-image-setup.c:950
+msgid "_Bottom:"
+msgstr "Ag _bun:"
+
+#: ../src/eog-print-image-setup.c:953
+msgid "C_enter:"
+msgstr "Lár_nach:"
+
+#: ../src/eog-print-image-setup.c:958
+msgid "None"
+msgstr "Neamhní"
+
+#: ../src/eog-print-image-setup.c:960
+msgid "Horizontal"
+msgstr "Cothrománach"
+
+#: ../src/eog-print-image-setup.c:962
+msgid "Vertical"
+msgstr "Ingearach"
+
+#: ../src/eog-print-image-setup.c:964
+msgid "Both"
+msgstr "Araon"
+
+#: ../src/eog-print-image-setup.c:980
+msgid "Size"
+msgstr "Méid"
+
+#: ../src/eog-print-image-setup.c:983
+msgid "_Width:"
+msgstr "_Leithead:"
+
+#: ../src/eog-print-image-setup.c:985
+msgid "_Height:"
+msgstr "A_irde:"
+
+#: ../src/eog-print-image-setup.c:988
+msgid "_Scaling:"
+msgstr "_Scálú:"
+
+#: ../src/eog-print-image-setup.c:999
+msgid "_Unit:"
+msgstr "A_onad:"
+
+#: ../src/eog-print-image-setup.c:1004
+msgid "Millimeters"
+msgstr "Milliméadair"
+
+#: ../src/eog-print-image-setup.c:1006
+msgid "Inches"
+msgstr "Orlaí"
+
+#: ../src/eog-print-image-setup.c:1035
+msgid "Preview"
+msgstr "Reámhamharc"
+
+#: ../src/eog-save-as-dialog-helper.c:162
+msgid "as is"
+msgstr "mar atá"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:131
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
+
+#: ../src/eog-thumb-view.c:547
+msgid "Taken on"
+msgstr "Tógtha ar"
+
+#: ../src/eog-uri-converter.c:985
+#, c-format
+msgid "At least two file names are equal."
+msgstr ""
+
+#: ../src/eog-util.c:68
+#, fuzzy
+msgid "Could not display help for Image Viewer"
+msgstr "Níorbh fhéidir cabhair a thaispeáint le Eye of GNOME"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (Unicode neamhbhailí)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:535
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i phicteilín  %s    %i%%"
+msgstr[1] "%i × %i phicteilín  %s    %i%%"
+msgstr[2] "%i × %i phicteilín  %s    %i%%"
+msgstr[3] "%i × %i bpicteilín  %s    %i%%"
+msgstr[4] "%i × %i picteilín  %s    %i%%"
+
+#: ../src/eog-window.c:843 ../src/eog-window.c:2778
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "_Folaigh"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:853
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eog-window.c:1017
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "Úsáid \"%s\" chun an íomhá roghnaithe a oscailt"
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1173
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "Íomhá \"%s\" á shábháil (%u/%u)"
+
+#: ../src/eog-window.c:1553
+#, fuzzy, c-format
+msgid "Opening image \"%s\""
+msgstr "Íomhá \"%s\" á luchtú"
+
+#: ../src/eog-window.c:2037
+#, fuzzy
+msgid "Viewing a slideshow"
+msgstr "Oscail i mód thaispeántas sleamhnán"
+
+#: ../src/eog-window.c:2262
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"Earráid agus comhad á phriontáil:\n"
+"%s"
+
+#: ../src/eog-window.c:2561
+msgid "Toolbar Editor"
+msgstr "Eagarthóir Bharra Uirlisí"
+
+#: ../src/eog-window.c:2564
+msgid "_Reset to Default"
+msgstr "_Athshocraigh go Réamhshocraithe"
+
+#: ../src/eog-window.c:2725 ../src/eog-window.c:2740
+msgid "Error launching System Settings: "
+msgstr ""
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2776
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2792
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+
+#: ../src/eog-window.c:3257
+msgid "Saving image locally…"
+msgstr ""
+
+#: ../src/eog-window.c:3335
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+
+#: ../src/eog-window.c:3338
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#. add 'dont ask again' button
+#: ../src/eog-window.c:3367 ../src/eog-window.c:3618
+msgid "_Do not ask again during this session"
+msgstr ""
+
+#: ../src/eog-window.c:3411
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/eog-window.c:3427
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/eog-window.c:3443 ../src/eog-window.c:3685
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#. set dialog error message
+#: ../src/eog-window.c:3493 ../src/eog-window.c:3781
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Earráid agus íomhá %s á scriosadh"
+
+#: ../src/eog-window.c:3586
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+
+#: ../src/eog-window.c:3589
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
+#: ../src/eog-window.c:3594
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eog-window.c:3599
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+
+#: ../src/eog-window.c:3616 ../src/eog-window.c:4107 ../src/eog-window.c:4134
+msgid "Move to _Trash"
+msgstr "Bog go _Bruscar"
+
+#: ../src/eog-window.c:3663 ../src/eog-window.c:3677
+#, c-format
+msgid "Couldn't access trash."
+msgstr "Níorbh fhéidir bruscar a rochtain."
+
+#: ../src/eog-window.c:4028
+msgid "_Image"
+msgstr "Í_omhá"
+
+#: ../src/eog-window.c:4029
+msgid "_Edit"
+msgstr "_Eagar"
+
+#: ../src/eog-window.c:4031
+msgid "_Go"
+msgstr "_Téigh"
+
+#: ../src/eog-window.c:4032
+msgid "_Tools"
+msgstr "_Uirlisí"
+
+#: ../src/eog-window.c:4035
+msgid "_Open…"
+msgstr "_Oscail…"
+
+#: ../src/eog-window.c:4036
+msgid "Open a file"
+msgstr "Oscail comhad"
+
+#: ../src/eog-window.c:4038
+msgid "_Close"
+msgstr "_Dún"
+
+#: ../src/eog-window.c:4039
+msgid "Close window"
+msgstr "Dún fuinneog"
+
+#: ../src/eog-window.c:4041
+msgid "T_oolbar"
+msgstr "Barra _Uirlisí"
+
+#: ../src/eog-window.c:4042
+msgid "Edit the application toolbar"
+msgstr "Cuir barra uirlisí an fheidhmchláir in eagar"
+
+#: ../src/eog-window.c:4045
+#, fuzzy
+msgid "Preferences for Image Viewer"
+msgstr "Sainroghanna le Eye of GNOME"
+
+#: ../src/eog-window.c:4047
+msgid "_Contents"
+msgstr "_Inneachar"
+
+#: ../src/eog-window.c:4048
+msgid "Help on this application"
+msgstr "Cabhair leis an feidhmchlár seo"
+
+#: ../src/eog-window.c:4050
+msgid "_About"
+msgstr "_Maidir Leis Seo"
+
+#: ../src/eog-window.c:4051
+msgid "About this application"
+msgstr "Maidir leis an feidhmchlár seo"
+
+#: ../src/eog-window.c:4057
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr ""
+
+#: ../src/eog-window.c:4060
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr ""
+
+#: ../src/eog-window.c:4063
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr ""
+
+#: ../src/eog-window.c:4066
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/eog-window.c:4071
+msgid "_Save"
+msgstr "_Sábháil"
+
+#: ../src/eog-window.c:4072
+msgid "Save changes in currently selected images"
+msgstr "Sábháil athruithe in íomhánna atá roghnaithe faoi láthair"
+
+#: ../src/eog-window.c:4074
+msgid "Open _with"
+msgstr "Oscail _le"
+
+#: ../src/eog-window.c:4075
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/eog-window.c:4078
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/eog-window.c:4080
+msgid "Show Containing _Folder"
+msgstr ""
+
+#: ../src/eog-window.c:4083
+msgid "_Print…"
+msgstr "_Priontáil…"
+
+#: ../src/eog-window.c:4084
+msgid "Print the selected image"
+msgstr "Priontáil an íomhá roghnaithe"
+
+#: ../src/eog-window.c:4086
+msgid "Prope_rties"
+msgstr "_Airíonna"
+
+#: ../src/eog-window.c:4087
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/eog-window.c:4089
+msgid "_Undo"
+msgstr "Cea_laigh"
+
+#: ../src/eog-window.c:4090
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/eog-window.c:4092
+msgid "Flip _Horizontal"
+msgstr "Smeach go _Cothrománach"
+
+#: ../src/eog-window.c:4093
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/eog-window.c:4095
+msgid "Flip _Vertical"
+msgstr "Smeach go h_Ingearach"
+
+#: ../src/eog-window.c:4096
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/eog-window.c:4098
+msgid "_Rotate Clockwise"
+msgstr "_Rothlaigh go Deisealach"
+
+#: ../src/eog-window.c:4099
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
+
+#: ../src/eog-window.c:4101
+msgid "Rotate Counterc_lockwise"
+msgstr "Rothlaigh go _Tuathalach"
+
+#: ../src/eog-window.c:4102
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
+
+#: ../src/eog-window.c:4104
+msgid "Set as Wa_llpaper"
+msgstr "Socraigh mar _Chúlbhrat"
+
+#: ../src/eog-window.c:4105
+#, fuzzy
+msgid "Set the selected image as the wallpaper"
+msgstr "Socraigh an íomhá roghnaithe mar chúlra na deisce"
+
+#: ../src/eog-window.c:4108
+msgid "Move the selected image to the trash folder"
+msgstr "Bog an íomhá roghnaithe go dtí an fillteán bruscair"
+
+#: ../src/eog-window.c:4110
+msgid "_Delete Image"
+msgstr "_Scrios Íomhá"
+
+#: ../src/eog-window.c:4111
+#, fuzzy
+msgid "Delete the selected image"
+msgstr "Priontáil an íomhá roghnaithe"
+
+#: ../src/eog-window.c:4113
+msgid "_Copy"
+msgstr "_Cóipeáil"
+
+#: ../src/eog-window.c:4114
+#, fuzzy
+msgid "Copy the selected image to the clipboard"
+msgstr "Bog an mhír roghnaithe ar an mbarra uirlisí"
+
+#: ../src/eog-window.c:4116 ../src/eog-window.c:4125 ../src/eog-window.c:4128
+msgid "_Zoom In"
+msgstr "Súmáil _Isteach"
+
+#: ../src/eog-window.c:4117 ../src/eog-window.c:4126
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/eog-window.c:4119 ../src/eog-window.c:4131
+msgid "Zoom _Out"
+msgstr "Súmáil _Amach"
+
+#: ../src/eog-window.c:4120 ../src/eog-window.c:4129 ../src/eog-window.c:4132
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/eog-window.c:4122
+msgid "_Normal Size"
+msgstr "_Gnáthmhéid"
+
+#: ../src/eog-window.c:4123
+msgid "Show the image at its normal size"
+msgstr ""
+
+#: ../src/eog-window.c:4140
+#, fuzzy
+msgid "_Fullscreen"
+msgstr "_Lánscáileán"
+
+#: ../src/eog-window.c:4141
+msgid "Show the current image in fullscreen mode"
+msgstr "Taispeáin an íomhá reatha i mód lánscáileáin"
+
+#: ../src/eog-window.c:4143
+#, fuzzy
+msgid "Pause Slideshow"
+msgstr "Taispeántas Sleamhnán"
+
+#: ../src/eog-window.c:4144
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eog-window.c:4146
+#, fuzzy
+msgid "_Best Fit"
+msgstr "S_cothoiriúint"
+
+#: ../src/eog-window.c:4147
+msgid "Fit the image to the window"
+msgstr ""
+
+#: ../src/eog-window.c:4152 ../src/eog-window.c:4167
+msgid "_Previous Image"
+msgstr "An Íomhá _Roimhe Seo"
+
+#: ../src/eog-window.c:4153
+#, fuzzy
+msgid "Go to the previous image of the gallery"
+msgstr "Téigh go dtí chéad íomhá an bhailiúcháin"
+
+#: ../src/eog-window.c:4155
+msgid "_Next Image"
+msgstr "An Chéad Íomhá _Eile"
+
+#: ../src/eog-window.c:4156
+#, fuzzy
+msgid "Go to the next image of the gallery"
+msgstr "Téigh go dtí íomhá dheiridh an bhailiúcháin"
+
+#: ../src/eog-window.c:4158 ../src/eog-window.c:4170
+msgid "_First Image"
+msgstr "An _Chéad Íomhá"
+
+#: ../src/eog-window.c:4159
+#, fuzzy
+msgid "Go to the first image of the gallery"
+msgstr "Téigh go dtí chéad íomhá an bhailiúcháin"
+
+#: ../src/eog-window.c:4161 ../src/eog-window.c:4173
+msgid "_Last Image"
+msgstr "An Íomhá _Dheiridh"
+
+#: ../src/eog-window.c:4162
+#, fuzzy
+msgid "Go to the last image of the gallery"
+msgstr "Téigh go dtí íomhá dheiridh an bhailiúcháin"
+
+#: ../src/eog-window.c:4164
+#, fuzzy
+msgid "_Random Image"
+msgstr "Athluchtaigh Íomhá"
+
+#: ../src/eog-window.c:4165
+#, fuzzy
+msgid "Go to a random image of the gallery"
+msgstr "Téigh go dtí íomhá dheiridh an bhailiúcháin"
+
+#: ../src/eog-window.c:4179
+#, fuzzy
+msgid "S_lideshow"
+msgstr "Taispeántas Sleamhnán"
+
+#: ../src/eog-window.c:4180
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/eog-window.c:4248
+msgid "Previous"
+msgstr "Siar"
+
+#: ../src/eog-window.c:4252
+msgid "Next"
+msgstr "Ar Aghaidh"
+
+#: ../src/eog-window.c:4256
+msgid "Right"
+msgstr "Go Deisealach"
+
+#: ../src/eog-window.c:4259
+msgid "Left"
+msgstr "Go Tuathalach"
+
+#: ../src/eog-window.c:4262
+msgid "Show Folder"
+msgstr "Taispeáin Fillteán"
+
+#: ../src/eog-window.c:4265
+msgid "In"
+msgstr "Isteach"
+
+#: ../src/eog-window.c:4268
+msgid "Out"
+msgstr "Amach"
+
+#: ../src/eog-window.c:4271
+msgid "Normal"
+msgstr "Gnáthmhéid"
+
+#: ../src/eog-window.c:4274
+msgid "Fit"
+msgstr "Oiriúnaigh"
+
+#: ../src/eog-window.c:4277
+msgid "Gallery"
+msgstr "Gailearaí"
+
+#: ../src/eog-window.c:4294
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "Bog go Bruscar"
+
+#: ../src/eog-window.c:4660
+#, fuzzy, c-format
+msgid "Edit the current image using %s"
+msgstr "Taispeáin an íomhá reatha i mód lánscáileáin"
+
+#: ../src/eog-window.c:4662
+#, fuzzy
+msgid "Edit Image"
+msgstr "An _Chéad Íomhá"
+
+#: ../src/eog-window.c:5995
+msgid "The GNOME image viewer."
+msgstr "An t-amharcán íomhánna GNOME."
+
+#: ../src/eog-window.c:5998
+msgid "translator-credits"
+msgstr ""
+"Alastair McKinstry <mckinstry@computer.org>\n"
+"Paul Duffy <dubhthach@frink.nuigalway.ie>\n"
+"Seán de Búrca <leftmostcat@gmail.com>"
+
+#: ../src/main.c:71
+msgid "GNOME Image Viewer"
+msgstr "Amharcán Íomhánna GNOME"
+
+#: ../src/main.c:78
+msgid "Open in fullscreen mode"
+msgstr "Oscail i mód lánscáileán"
+
+#: ../src/main.c:79
+#, fuzzy
+msgid "Disable image gallery"
+msgstr "Díchumasaigh bailiúchán íomhánna"
+
+#: ../src/main.c:80
+#, fuzzy
+msgid "Open in slideshow mode"
+msgstr "Oscail i mód thaispeántas sleamhnán"
+
+#: ../src/main.c:81
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:82
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+
+#: ../src/main.c:84
+#, fuzzy
+msgid "Show the application's version"
+msgstr "Cuir barra uirlisí an fheidhmchláir in eagar"
+
+#: ../src/main.c:116
+msgid "[FILE…]"
+msgstr "[COMHAD…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:129
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

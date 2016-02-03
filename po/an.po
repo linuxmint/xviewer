@@ -1,0 +1,1692 @@
+# Aragonese translation for eog.
+# Copyright (C) 2014 eog's COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Daniel Martinez <entaltoaragon@gmail.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-11-09 16:29+0000\n"
+"PO-Revision-Date: 2014-11-09 21:19+0100\n"
+"Last-Translator: Daniel Martinez <entaltoaragon@gmail.com>\n"
+"Language-Team: Aragonés <softaragones@googlegroups.com>\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "Amostrar \"_%s\""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_Mover en a barra de ferramientas"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "Mover l'elemento seleccionau en a barra de ferramientas"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "_Sacar d'a barra de ferramientas"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "Sacar l'elemento seleccionau d'a barra de ferramientas"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "_Eliminar barra de ferramientas"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "Sacar a barra de ferramientas seleccionada"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "Separador"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4038
+msgid "_View"
+msgstr "_Veyer"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4064
+msgid "_Toolbar"
+msgstr "Barra de _ferramientas"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4067
+msgid "_Statusbar"
+msgstr "Barra d'_estau"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4070
+msgid "_Image Gallery"
+msgstr "Colección de _imachens"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4073
+msgid "Side _Pane"
+msgstr "Panel _lateral"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4052
+msgid "Prefere_nces"
+msgstr "Prefere_ncias"
+
+#: ../data/eog-app-menu.xml.h:7 ../data/eog-preferences-dialog.ui.h:2
+#: ../src/eog-window.c:2565 ../src/eog-window.c:4041
+msgid "_Help"
+msgstr "Ad_uya"
+
+#: ../data/eog-app-menu.xml.h:8 ../src/eog-window.c:4058
+msgid "_About"
+msgstr "Arredol _de"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "_Zarrar"
+
+#: ../data/eog.appdata.xml.in.h:1
+msgid ""
+"The Eye of GNOME is the official image viewer for the GNOME desktop. It "
+"integrates with the GTK+ look and feel of GNOME, and supports many image "
+"formats for viewing single images or images in a collection."
+msgstr ""
+"O Visor d'imachens ye o visor d'imachens oficial ta o escritorio GNOME. "
+"S'integra con l'aspecto de GTK+ y de GNOME y suporta muitos formatos "
+"d'imachen ta veyer imachens solas u coleccions d'imachens."
+
+#: ../data/eog.appdata.xml.in.h:2
+msgid ""
+"The Eye of GNOME also allows to view the images in a fullscreen slideshow "
+"mode or set an image as the desktop wallpaper. It reads the camera tags to "
+"automatically rotate your images in the correct portrait or landscape "
+"orientation."
+msgstr ""
+"O Visor d'imachens tamién le permite veyer imachens en modo de presentación "
+"a pantalla completa u configurar una imachen como fondo d'o escritorio. Leye "
+"as etiquetas d'a camera ta rotar as imachens automaticament, amostrando-las "
+"con a orientación correcta."
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-application.c:291
+#: ../src/eog-window.c:6197
+msgid "Image Viewer"
+msgstr "Visor d'imachens"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Examine y rote imachens"
+
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "Foto;Diapositivas;Graficos;"
+
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:5073
+msgid "Image Properties"
+msgstr "Propiedatz d'a imachen"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_Anterior"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_Siguient"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../data/eog-preferences-dialog.ui.h:3 ../src/eog-window.c:2563
+#: ../src/eog-window.c:4046
+msgid "_Close"
+msgstr "_Zarrar"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:496
+msgid "Name:"
+msgstr "Nombre:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:498
+msgid "Width:"
+msgstr "Amplaria:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:500
+msgid "Height:"
+msgstr "Altura:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+#: ../src/eog-metadata-sidebar.c:502
+msgid "Type:"
+msgstr "Tipo:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "Bytes:"
+
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:506
+msgid "Folder:"
+msgstr "Carpeta:"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:494
+msgid "General"
+msgstr "Cheneral"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:531
+msgid "Aperture Value:"
+msgstr "Valor d'obridura:"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:534
+msgid "Exposure Time:"
+msgstr "Tiempo d'exposición:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:537
+msgid "Focal Length:"
+msgstr "Distancia focal:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:539
+msgid "Flash:"
+msgstr "Flash:"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:543
+msgid "ISO Speed Rating:"
+msgstr "Taxa de velocidat ISO:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:546
+msgid "Metering Mode:"
+msgstr "Modo de medida:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:549
+msgid "Camera Model:"
+msgstr "Modelo d'a camera:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:551
+msgid "Date/Time:"
+msgstr "Calendata/Hora:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:556
+msgid "Description:"
+msgstr "Descripción:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:559
+msgid "Location:"
+msgstr "Ubicación:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:562
+msgid "Keywords:"
+msgstr "Parolas clau:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:564
+msgid "Author:"
+msgstr "Autor:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:567
+msgid "Copyright:"
+msgstr "Dreitos d'autor:"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:570
+msgid "Details"
+msgstr "Detalles"
+
+#: ../data/eog-image-properties-dialog.ui.h:26
+#: ../src/eog-metadata-sidebar.c:527
+msgid "Metadata"
+msgstr "Metadatos"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Alzar como"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:2
+#: ../src/eog-close-confirmation-dialog.c:172
+#: ../src/eog-error-message-area.c:119 ../src/eog-file-chooser.c:456
+#: ../src/eog-file-chooser.c:464 ../src/eog-file-chooser.c:472
+#: ../src/eog-window.c:3367 ../src/eog-window.c:3370 ../src/eog-window.c:3621
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#: ../src/eog-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "Alzar _como"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> nombre orichinal d'o fichero"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> contador"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr "_Formato d'o nombre de fichero:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr "Carpeta de _destín:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "Trigue una carpeta"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr "Especificacions d'a rota de fichero"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr "_Encetar contador en:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr "_Reemplazar espacios por guión baixo"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr "Opcions"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr "Renombrar de:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:16
+msgid "To:"
+msgstr "A:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "Vista previa d'o nombre de fichero"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr "Milloras d'imachen"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr "Suavezar imachens en reducir"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr "Suavezar imachens en enamplar"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+msgid "_Automatic orientation"
+msgstr "Orientación _automatica"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "Fondo"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr "Como color personalizada:"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+#: ../data/org.gnome.eog.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Color de fondo"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr "Partes transparents"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Como _patrón de quadricula"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Como c_olor personalizada:"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Color ta arias transparents"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Como _fondo"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Vista d'imachens"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "Ampliación d'imachen"
+
+#: ../data/eog-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "E_namplar imachens dica achustar a la pantalla"
+
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "Seqüencia"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr "_Tiempo entre imachens:"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "_Loop sequence"
+msgstr "Seqüencia en _bucle"
+
+#: ../data/eog-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Diapositivas"
+
+#: ../data/eog-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Complementos"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr "Orientación automatica"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+"Indica si a imachen se debe rotar automaticament basando-se en a orientación "
+"EXIF."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+"A color usada ta replenar l'aria detrás d'a imachen. Si a clau \"use-"
+"background-color\" no istá establida, a color lo determina o tema GTK+ "
+"activo."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Interpolar imachen"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Indica si a imachen se debe interpolar en reducir-la. Produz millor calidat "
+"pero ye bella cosa más lento que as imachens no interpoladas."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Extrapolar imachen"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Indica si a imachen se debe extrapolar en enamplar-la. Produz millor calidat "
+"pero ye bella cosa mas lento que as imachens no extrapoladas."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Indicador de transparencia"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"Determina cómo habría d'indicar-se a transparencia. As valors válidos son "
+"CHECK_PATTERN, COLOR y NONE. Si se triga COLOR, alavez a clau \"trans_color"
+"\" determina a valor d'a color usada."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "Ampliación d'a rueda d'o churi"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "Indica si a rueda d'o churi se debe usar ta enamplar."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Multiplicador d'ampliación"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"O multiplicador a aplicar quan s'use o rato ta enamplar. Ista valor define o "
+"paso de l'ampliación usada ta cada evento de desplazamiento. Por eixemplo, "
+"0.05 resulta en un incremento d'o 5% ta cada evento de desplazamiento y 1.00 "
+"resulta en un incremento d'ampliación d'o 100%."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "Color de transparencia"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"Si a clau de transparencia tiene una valor COLOR, alavez, ista clau "
+"determina a color que s'usa ta indicar a transparencia."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "Usar una color de fondo personalizau"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"Si istá activau a color establida por a clau \"background-color\" s'usasé ta "
+"replenar l'a2́rea detrás d'a imachen. Si no istá establiu, o tema actual de "
+"GTK+ determinasé a color de farciu."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Ciclar a traviés d'a seqüencia d'imachens"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+"Indica si a seqüencia d'imachens debe amostrar-se en un bucle infinito."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Permite una ampliación mayor que o 100% inicialment"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Si isto s'estableix a FALSE as imachens chicotas no serán estiradas dica "
+"cubrir toda a pantalla inicialment."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Retardo en segundos dica que s'amuestra a siguient imachen"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Una valor mayor que 0 determina os segundos que una imachen remaneix en a "
+"pantalla dica que a siguient s'amuestra automaticament. Zero desactiva a "
+"visualización automatica."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Amostrar/amagar a barra de ferramientas d'a finestra."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Amostrar/amagar a barra d'estau d'a finestra."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "Amostrar/amagar o panel de colección d'imachens."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"Posición d'o panel de colección d'imachens. Estableixca 0 ta abaixo; 1 ta "
+"cucha; 2 ta alto; 3 ta dreita."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr ""
+"Indica si o panel de colección d'imachens habría d'estar redimensionable."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Amostrar/amagar o panel lateral d'a finestra."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+"Amostrar/amagar os botons de desplazamiento d'o panel de colección "
+"d'imachens."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "Zarrar a finestra prencipal sin preguntar si alzar os cambeos."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "Ninviar imachens a la papelera sin preguntar"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+"Si istá activau o Visor d'imachens no pedirá confirmación en mover imachens "
+"a la papelera. Preguntasé si belún d'os fichers no se puede mover a la "
+"papelera y deberá eliminar-se en o suyo puesto."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+"Indica si o selector de fichers debe amostrar a carpeta d'imachens de "
+"l'usuario si no i hai garra imachen cargada."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"Si istá activau y no i hai garra imachen cargada en a finestra activa, o "
+"selector de fichers amostrasé as imachens d'a carpeta de l'usuario usando as "
+"carpetas especials d'usuario XDG. Si istá desactivau u a carpeta d'imachens "
+"no s'ha configurau, amostrasé a carpeta de treballo."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+"Indica si a lista de metadatos en o dialogo de propiedatz debe tener a suya "
+"propia pachina."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"Si istá activau a lista de metadatos detallaus en o diálogo de propiedatz se "
+"moverá a la suya propia página en o diálogo. Isto hará o diálogo más usable "
+"en pantallas pequeñas, como as d'os \"netbooks\". Si istá desactivau o "
+"widget s'empotrará en a página \"Metadatos\"."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Programa externo que usar ta editar imachens"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"O nombre d'o fichero d'escritorio (incluindo \".desktop\") de l'aplicación "
+"que usar ta editar imachens (en pretar o botón d'a barra de ferramientas "
+"\"Editar imachen\"). Deixar vueda ta desactivar ista caracteristica."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Complementos activaus"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+"Lista d'os complementos activaus. No contiene a \"Ubicación\" d'os "
+"complementos activaus. Veiga o fichero .eog-plugin ta obtener a \"Ubicación"
+"\" ta un complemento determinau."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Pantalla completa con dople pulsación"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Activar o modo a pantalla completa con una dople pulsación"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Recargar imachen"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Recargar a imachen actual"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Calendata en a barra d'estau"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Amuestra a calendata d'a imachen en a barra d'estau d'a finestra"
+
+#: ../src/eog-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr "Zarrar _sin alzar"
+
+#: ../src/eog-close-confirmation-dialog.c:178 ../src/eog-file-chooser.c:465
+#: ../src/eog-window.c:4079
+msgid "_Save"
+msgstr "_Alzar"
+
+#: ../src/eog-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr "Pregunta"
+
+#: ../src/eog-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr "Se perderán os suyos cambeos si no la alza."
+
+#: ../src/eog-close-confirmation-dialog.c:437
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "Alzar os cambeos en a imachen \"%s\" antes de zarrar?"
+
+#: ../src/eog-close-confirmation-dialog.c:652
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"Existe %d imachen con cambeos sin alzar. Alzar os cambeos antes de zarrar?"
+msgstr[1] ""
+"Existen %d imachens con cambeos sin alzar. Alzar os cambeos antes de zarrar?"
+
+#: ../src/eog-close-confirmation-dialog.c:669
+msgid "S_elect the images you want to save:"
+msgstr "S_eleccionar as imachens que quiere alzar:"
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:688
+msgid "If you don't save, all your changes will be lost."
+msgstr "Se perderán totz os suyos cambeos si no la alza."
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:847
+msgid "_Reload"
+msgstr "_Recargar"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4085
+msgid "Save _As…"
+msgstr "Alzar co_mo…"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "No se podió cargar a imachen \"%s\"."
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "No se podió alzar a imachen \"%s\"."
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "No se troboron imachens en \"%s\"."
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "As ubicacions proporcionadas no contienen imachens."
+
+#: ../src/eog-metadata-details.c:65
+msgid "Camera"
+msgstr "Camera"
+
+#: ../src/eog-metadata-details.c:66
+msgid "Image Data"
+msgstr "Datos d'a imachen"
+
+#: ../src/eog-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Condicions en que se quitó a imachen"
+
+#: ../src/eog-metadata-details.c:68
+msgid "GPS Data"
+msgstr "Datos de GPS"
+
+#: ../src/eog-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Nota de marcador"
+
+#: ../src/eog-metadata-details.c:70
+msgid "Other"
+msgstr "Unatro"
+
+#: ../src/eog-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "EXIF XMP"
+
+#: ../src/eog-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "IPTC XMP"
+
+#: ../src/eog-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "Chestión de dreitos XMP"
+
+#: ../src/eog-metadata-details.c:75
+msgid "XMP Other"
+msgstr "Unatro XMP"
+
+#: ../src/eog-metadata-details.c:251
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: ../src/eog-metadata-details.c:258
+msgid "Value"
+msgstr "Valor"
+
+#: ../src/eog-metadata-details.c:436
+msgid "North"
+msgstr "Norte"
+
+#: ../src/eog-metadata-details.c:439
+msgid "East"
+msgstr "Este"
+
+#: ../src/eog-metadata-details.c:442
+msgid "West"
+msgstr "Ueste"
+
+#: ../src/eog-metadata-details.c:445
+msgid "South"
+msgstr "Sud"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a2, %d %B %Y  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a2, %d %B %Y"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (long. focal)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (cinta de 35mm)"
+
+#: ../src/eog-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Formato de fichero desconoixiu u no suportau"
+
+#: ../src/eog-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"O Visor d'imachens no podió determinar un formato de fichero escribible "
+"suportau basando-se en o nombre d'o fichero."
+
+#: ../src/eog-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "lo Intente con una extensión de fichero diferent como .png u .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:212
+msgid "All files"
+msgstr "Totz os fichers"
+
+#: ../src/eog-file-chooser.c:217
+msgid "Supported image files"
+msgstr "Fichers d'imachen suportaus"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:289 ../src/eog-metadata-sidebar.c:233
+#: ../src/eog-metadata-sidebar.c:237 ../src/eog-properties-dialog.c:139
+#: ../src/eog-properties-dialog.c:141 ../src/eog-thumb-view.c:515
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "pixel"
+msgstr[1] "pixels"
+
+#: ../src/eog-file-chooser.c:457 ../src/eog-file-chooser.c:473
+msgid "_Open"
+msgstr "_Ubrir"
+
+#: ../src/eog-file-chooser.c:459
+msgid "Open Image"
+msgstr "Ubrir imachen"
+
+#: ../src/eog-file-chooser.c:467
+msgid "Save Image"
+msgstr "Alzar imachen"
+
+#: ../src/eog-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Ubrir carpeta"
+
+#: ../src/eog-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Transformación en una imachen no cargada."
+
+#: ../src/eog-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Falló a transformación."
+
+#: ../src/eog-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF no suportau ta iste formato de fichero."
+
+#: ../src/eog-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Fallo en cargar a imachen."
+
+#: ../src/eog-image.c:1868 ../src/eog-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "No s'ha cargau garra imachen."
+
+#: ../src/eog-image.c:1876 ../src/eog-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "No tiene os permisos necesarios ta alzar o fichero."
+
+#: ../src/eog-image.c:1886 ../src/eog-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "A creyación d'o fichero temporal ha fallau."
+
+#: ../src/eog-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "No se podió creyar o fichero temporal ta alzar: %s"
+
+#: ../src/eog-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr " No se puede asignar memoria ta cargar o fichero JPG"
+
+#: ../src/eog-metadata-sidebar.c:246 ../src/eog-properties-dialog.c:156
+msgid "Unknown"
+msgstr "Desconoixiu"
+
+#: ../src/eog-metadata-sidebar.c:504
+msgid "File size:"
+msgstr "Grandaria d'o fichero:"
+
+#: ../src/eog-metadata-sidebar.c:520 ../src/eog-properties-dialog.c:737
+#: ../src/eog-window.c:4089
+msgid "Show the folder which contains this file in the file manager"
+msgstr "Amostrar en o chestor de fichers a carpeta que contiene iste fichero"
+
+#: ../src/eog-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu segundo"
+msgstr[1] "%lu segundos"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "Achustes d'imachen"
+
+#: ../src/eog-print-image-setup.c:897
+msgid "Image"
+msgstr "Imachen"
+
+#: ../src/eog-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr "A imachen que as suyas propiedatz d'impresión se definirán"
+
+#: ../src/eog-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Configuración de pachina"
+
+#: ../src/eog-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Información d'a pachina an a imachen s'imprentará"
+
+#: ../src/eog-print-image-setup.c:931
+msgid "Position"
+msgstr "Posición"
+
+#: ../src/eog-print-image-setup.c:935
+msgid "_Left:"
+msgstr "_Cucha:"
+
+#: ../src/eog-print-image-setup.c:937
+msgid "_Right:"
+msgstr "_Dreita:"
+
+#: ../src/eog-print-image-setup.c:938
+msgid "_Top:"
+msgstr "_Alto:"
+
+#: ../src/eog-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "A_baixo:"
+
+#: ../src/eog-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "C_dentrau:"
+
+#: ../src/eog-print-image-setup.c:947
+msgid "None"
+msgstr "Garra"
+
+#: ../src/eog-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../src/eog-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../src/eog-print-image-setup.c:953
+msgid "Both"
+msgstr "Totz dos"
+
+#: ../src/eog-print-image-setup.c:969
+msgid "Size"
+msgstr "Grandaria"
+
+#: ../src/eog-print-image-setup.c:972
+msgid "_Width:"
+msgstr "A_nchura:"
+
+#: ../src/eog-print-image-setup.c:974
+msgid "_Height:"
+msgstr "A_ltura:"
+
+#: ../src/eog-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "E_scalau:"
+
+#: ../src/eog-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_Unidat:"
+
+#: ../src/eog-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "Milímetros"
+
+#: ../src/eog-print-image-setup.c:995
+msgid "Inches"
+msgstr "Pulgadas"
+
+#: ../src/eog-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Vista preliminar"
+
+#: ../src/eog-save-as-dialog-helper.c:162
+msgid "as is"
+msgstr "tal como"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr "%Id / %Id"
+
+#: ../src/eog-thumb-view.c:543
+msgid "Taken on"
+msgstr "Presa en"
+
+#: ../src/eog-uri-converter.c:980
+#, c-format
+msgid "At least two file names are equal."
+msgstr "A lo menos dos nombres de fichero son iguals."
+
+#: ../src/eog-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "No se podió amostrar la aduya ta o Visor d'imachens"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (Unicode no valido)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixels  %s    %i%%"
+
+#: ../src/eog-window.c:849 ../src/eog-window.c:2784
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "_Amagar"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"S'ha modificau a imachen \"%s\" con una aplicación externa.\n"
+"Quiere actualizar-la?"
+
+#: ../src/eog-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "Usar \"%s\" ta ubrir a imachen seleccionada"
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "Alzando imachen \"%s\" (%u/%u)"
+
+#: ../src/eog-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "Ubrindo imachen \"%s\""
+
+#: ../src/eog-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "_Salir d'o modo a pantalla completa"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/eog-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "Veyer en modo diapositivas"
+
+#: ../src/eog-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"Error en imprentar o fichero:\n"
+"%s"
+
+#: ../src/eog-window.c:2558
+msgid "Toolbar Editor"
+msgstr " Editor d'a barra de ferramientas"
+
+#: ../src/eog-window.c:2561
+msgid "_Reset to Default"
+msgstr "_Restablir predeterminaus"
+
+#: ../src/eog-window.c:2731 ../src/eog-window.c:2746
+msgid "Error launching System Settings: "
+msgstr "Error en lanzar a configuración d'o sistema:"
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2782
+msgid "_Open Background Preferences"
+msgstr "_Ubrir as preferencias d'o fondo"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2798
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+"S'ha establiu a imachen \"%s\" como fondo d'o Escritorio.\n"
+"Quiere modificar a suya apariencia?"
+
+#: ../src/eog-window.c:3265
+msgid "Saving image locally…"
+msgstr "Alzando a imachen localment…"
+
+#: ../src/eog-window.c:3343
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+"Seguro que quiere eliminar\n"
+"\"%s\" permanentment?"
+
+#: ../src/eog-window.c:3346
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"Seguro que quiere eliminar a imachen\n"
+"seleccionada permanentment?"
+msgstr[1] ""
+"Seguro que quiere eliminar as %d\n"
+"imachens seleccionadas permanentment?"
+
+#: ../src/eog-window.c:3368 ../src/eog-window.c:3632
+msgid "_Delete"
+msgstr "_Eliminar"
+
+#: ../src/eog-window.c:3371 ../src/eog-window.c:3634
+msgid "_Yes"
+msgstr "_Sí"
+
+#. add 'dont ask again' button
+#: ../src/eog-window.c:3375 ../src/eog-window.c:3626
+msgid "Do _not ask again during this session"
+msgstr "_No preguntar de nuevo entre ista sesión"
+
+#: ../src/eog-window.c:3419
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "No se podió obtener o fichero d'imachen"
+
+#: ../src/eog-window.c:3435
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "No se podió obtener a información d'o fichero d'imachen"
+
+#: ../src/eog-window.c:3451 ../src/eog-window.c:3693
+#, c-format
+msgid "Couldn't delete file"
+msgstr "No se podió eliminar o fichero"
+
+#. set dialog error message
+#: ../src/eog-window.c:3501 ../src/eog-window.c:3789
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Error en eliminar a imachen %s"
+
+#: ../src/eog-window.c:3594
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+" Seguro que quiere mover\n"
+"\"%s\" a la papelera?"
+
+#: ../src/eog-window.c:3597
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+"No se podió trobar a papelera ta \"%s\". Quiere eliminar ista imachen "
+"permanentment?"
+
+#: ../src/eog-window.c:3602
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+"Seguro que quiere mover a imachen\n"
+"seleccionada a la papelera?"
+msgstr[1] ""
+"Seguro que quiere mover as %d\n"
+"imachens seleccionadas a la papelera?"
+
+#: ../src/eog-window.c:3607
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"Qualques d'as imachens seleccionadas no se pueden mover a la papelera y "
+"s'eliminarán permanentment. Ye seguro que quiere seguir abance?"
+
+#: ../src/eog-window.c:3624 ../src/eog-window.c:4115 ../src/eog-window.c:4142
+msgid "Move to _Trash"
+msgstr "Mo_ver a la papelera"
+
+#: ../src/eog-window.c:3671 ../src/eog-window.c:3685
+#, c-format
+msgid "Couldn't access trash."
+msgstr "No se podió accedir a la papelera."
+
+#: ../src/eog-window.c:4036
+msgid "_Image"
+msgstr "_Imachen"
+
+#: ../src/eog-window.c:4037
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/eog-window.c:4039
+msgid "_Go"
+msgstr "_Ir"
+
+#: ../src/eog-window.c:4040
+msgid "_Tools"
+msgstr "_Ferramientas"
+
+#: ../src/eog-window.c:4043
+msgid "_Open…"
+msgstr "_Ubrir…"
+
+#: ../src/eog-window.c:4044
+msgid "Open a file"
+msgstr "Ubrir un fichero"
+
+#: ../src/eog-window.c:4047
+msgid "Close window"
+msgstr "Zarrar finestra"
+
+#: ../src/eog-window.c:4049
+msgid "T_oolbar"
+msgstr "Barra de _ferramientas"
+
+#: ../src/eog-window.c:4050
+msgid "Edit the application toolbar"
+msgstr "Editar a barra de ferramientas de l'aplicación"
+
+#: ../src/eog-window.c:4053
+msgid "Preferences for Image Viewer"
+msgstr "Preferencias d'o Visor d'imachens"
+
+#: ../src/eog-window.c:4055
+msgid "_Contents"
+msgstr "End_iz"
+
+#: ../src/eog-window.c:4056
+msgid "Help on this application"
+msgstr "Aduya sobre ista aplicación"
+
+#: ../src/eog-window.c:4059
+msgid "About this application"
+msgstr "Sobre ista aplicación"
+
+#: ../src/eog-window.c:4065
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "Cambeya a visibilidat d'a barra de ferramientas en a finestra actual"
+
+#: ../src/eog-window.c:4068
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "Cambeya a visibilidat d'a barra d'estau en a finestra actual"
+
+#: ../src/eog-window.c:4071
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr ""
+"Cambeya a visibilidat d'a colección d'imachens d'o panel en a finestra actual"
+
+#: ../src/eog-window.c:4074
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "Cambeya a visibilidat d'o panel lateral en a finestra actual"
+
+#: ../src/eog-window.c:4080
+msgid "Save changes in currently selected images"
+msgstr "Alzar os cambeos en as imachens actualment seleccionadas"
+
+#: ../src/eog-window.c:4082
+msgid "Open _with"
+msgstr "Ubrir c_on"
+
+#: ../src/eog-window.c:4083
+msgid "Open the selected image with a different application"
+msgstr "Ubrir a imachen seleccionada con una aplicación diferent"
+
+#: ../src/eog-window.c:4086
+msgid "Save the selected images with a different name"
+msgstr "Alzar as imachens seleccionadas con un nombre diferent"
+
+#: ../src/eog-window.c:4088
+msgid "Show Containing _Folder"
+msgstr "Mos_trar a carpeta contenedora"
+
+#: ../src/eog-window.c:4091
+msgid "_Print…"
+msgstr "_Imprentar…"
+
+#: ../src/eog-window.c:4092
+msgid "Print the selected image"
+msgstr "Imprentar a imachen seleccionada"
+
+#: ../src/eog-window.c:4094
+msgid "Prope_rties"
+msgstr "_Propiedatz"
+
+#: ../src/eog-window.c:4095
+msgid "Show the properties and metadata of the selected image"
+msgstr "Amostrar as propiedatz y os metadatos d'a imachen seleccionada"
+
+#: ../src/eog-window.c:4097
+msgid "_Undo"
+msgstr "_Desfer"
+
+#: ../src/eog-window.c:4098
+msgid "Undo the last change in the image"
+msgstr "Desfer o zaguer cambeo en a imachen"
+
+#: ../src/eog-window.c:4100
+msgid "Flip _Horizontal"
+msgstr "Voltear _horizontalment"
+
+#: ../src/eog-window.c:4101
+msgid "Mirror the image horizontally"
+msgstr "Espejar a imachen horizontalment"
+
+#: ../src/eog-window.c:4103
+msgid "Flip _Vertical"
+msgstr "Voltear _verticalment"
+
+#: ../src/eog-window.c:4104
+msgid "Mirror the image vertically"
+msgstr "Espejar a imachen verticalment"
+
+#: ../src/eog-window.c:4106
+msgid "_Rotate Clockwise"
+msgstr "_Rotar en sentiu horario"
+
+#: ../src/eog-window.c:4107
+msgid "Rotate the image 90 degrees to the right"
+msgstr "Rotar a imachen 90 graus a la dreita"
+
+#: ../src/eog-window.c:4109
+msgid "Rotate Counterc_lockwise"
+msgstr "Rotar en sentiu _antihorario"
+
+#: ../src/eog-window.c:4110
+msgid "Rotate the image 90 degrees to the left"
+msgstr "Rotar a imachen 90 graus a la cucha"
+
+#: ../src/eog-window.c:4112
+msgid "Set as Wa_llpaper"
+msgstr "Establir como _fondo"
+
+#: ../src/eog-window.c:4113
+msgid "Set the selected image as the wallpaper"
+msgstr "Establir a imachen seleccionada como o fondo d'o escritorio"
+
+#: ../src/eog-window.c:4116
+msgid "Move the selected image to the trash folder"
+msgstr "Mover a imachen seleccionada a la papelera"
+
+#: ../src/eog-window.c:4118
+msgid "_Delete Image"
+msgstr "_Eliminar imachen"
+
+#: ../src/eog-window.c:4119
+msgid "Delete the selected image"
+msgstr "Eliminar a imachen seleccionada"
+
+#: ../src/eog-window.c:4121
+msgid "_Copy"
+msgstr "_Copiar"
+
+#: ../src/eog-window.c:4122
+msgid "Copy the selected image to the clipboard"
+msgstr "Copiar a imachen seleccionada a o portafuellas"
+
+#: ../src/eog-window.c:4124 ../src/eog-window.c:4133 ../src/eog-window.c:4136
+msgid "_Zoom In"
+msgstr "_Enamplar"
+
+#: ../src/eog-window.c:4125 ../src/eog-window.c:4134
+msgid "Enlarge the image"
+msgstr "Agrandir a imachen"
+
+#: ../src/eog-window.c:4127 ../src/eog-window.c:4139
+msgid "Zoom _Out"
+msgstr "_Reducir"
+
+#: ../src/eog-window.c:4128 ../src/eog-window.c:4137 ../src/eog-window.c:4140
+msgid "Shrink the image"
+msgstr "Atapizar a imachen"
+
+#: ../src/eog-window.c:4130
+msgid "_Normal Size"
+msgstr "Grandaria _normal"
+
+#: ../src/eog-window.c:4131
+msgid "Show the image at its normal size"
+msgstr "Amostrar a imachen en a suya grandaria normal"
+
+#: ../src/eog-window.c:4148
+msgid "_Fullscreen"
+msgstr "_Pantalla completa"
+
+#: ../src/eog-window.c:4149
+msgid "Show the current image in fullscreen mode"
+msgstr "Amostrar a imachen actual en modo a pantalla completa"
+
+#: ../src/eog-window.c:4151
+msgid "Pause Slideshow"
+msgstr "Aturar diapositivas"
+
+#: ../src/eog-window.c:4152
+msgid "Pause or resume the slideshow"
+msgstr "Pausar u resumir o pase de diapositivas"
+
+#: ../src/eog-window.c:4154
+msgid "_Best Fit"
+msgstr "Achuste óptim_u"
+
+#: ../src/eog-window.c:4155
+msgid "Fit the image to the window"
+msgstr "Achustar a imachen a la finestra"
+
+#: ../src/eog-window.c:4160 ../src/eog-window.c:4175
+msgid "_Previous Image"
+msgstr "Imachen _anterior"
+
+#: ../src/eog-window.c:4161
+msgid "Go to the previous image of the gallery"
+msgstr "Ir a la imachen anterior d'a colección"
+
+#: ../src/eog-window.c:4163
+msgid "_Next Image"
+msgstr "Siguient _imachen"
+
+#: ../src/eog-window.c:4164
+msgid "Go to the next image of the gallery"
+msgstr "Ir a la siguient imachen d'a colección"
+
+#: ../src/eog-window.c:4166 ../src/eog-window.c:4178
+msgid "_First Image"
+msgstr "_Primera imachen"
+
+#: ../src/eog-window.c:4167
+msgid "Go to the first image of the gallery"
+msgstr "Ir a la primera imachen d'a colección"
+
+#: ../src/eog-window.c:4169 ../src/eog-window.c:4181
+msgid "_Last Image"
+msgstr "_Zaguera imachen"
+
+#: ../src/eog-window.c:4170
+msgid "Go to the last image of the gallery"
+msgstr "Ir a la zaguera imachen d'a colección"
+
+#: ../src/eog-window.c:4172
+msgid "_Random Image"
+msgstr "Imachen al_eatoria"
+
+#: ../src/eog-window.c:4173
+msgid "Go to a random image of the gallery"
+msgstr "Ir a una imachen aleatoria d'a colección"
+
+#: ../src/eog-window.c:4331
+msgid "S_lideshow"
+msgstr "_Diapositivas"
+
+#: ../src/eog-window.c:4332
+msgid "Start a slideshow view of the images"
+msgstr "Encetar a muestra d'as imachens como diapositivas"
+
+#: ../src/eog-window.c:4404
+msgid "Previous"
+msgstr "Anterior"
+
+#: ../src/eog-window.c:4409
+msgid "Next"
+msgstr "Siguient"
+
+#: ../src/eog-window.c:4416
+msgid "Right"
+msgstr "Dreita"
+
+#: ../src/eog-window.c:4419
+msgid "Left"
+msgstr "Cucha"
+
+#: ../src/eog-window.c:4422
+msgid "Show Folder"
+msgstr "Amostrar a carpeta"
+
+#: ../src/eog-window.c:4425
+msgid "In"
+msgstr "Enamplar"
+
+#: ../src/eog-window.c:4428
+msgid "Out"
+msgstr "Reducir"
+
+#: ../src/eog-window.c:4431
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/eog-window.c:4434
+msgid "Fit"
+msgstr "Achustar"
+
+#: ../src/eog-window.c:4437
+msgid "Gallery"
+msgstr "Colección"
+
+#: ../src/eog-window.c:4454
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "Mover a la papelera"
+
+#: ../src/eog-window.c:4820
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "Editar a imachen actual usando %s"
+
+#: ../src/eog-window.c:4822
+msgid "Edit Image"
+msgstr " Editar imachen"
+
+#: ../src/eog-window.c:6200
+msgid "The GNOME image viewer."
+msgstr "O visor d'imachens de GNOME."
+
+#: ../src/eog-window.c:6203
+msgid "translator-credits"
+msgstr "Daniel Martinez <dmartinez@src.gnome.org>, 2014"
+
+#: ../src/main.c:56
+msgid "GNOME Image Viewer"
+msgstr "Visor d'imachens de GNOME"
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "Ubrir en modo pantalla completa"
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr "Desactivar a colección d'imachens"
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr "Ubrir en modo diapositivas"
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "Encetar una nueva instancia en cuenta de reusar a ya existent"
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+"Ubrir en una sola finestra; si i hai quantas finestras ubiertas, s'usa a "
+"primera"
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr "Amostrar a versión de l'aplicación"
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr "[FICHERO…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Execute \"%s --help\" ta veyer una lista completa d'as opcions comandos de "
+"linia disponibles."

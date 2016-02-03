@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="fr">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Afficher des informations comme les réglages et l'histogramme de l'appareil photo, la géolocalisation et la date.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Affichage d'informations détaillées à propos d'une image</title>
+
+<p>Un grand nombre d'informations supplémentaires sont incluses aux photos prises avec un appareil numérique lors de leur enregistrement, telles que la date de prise, les réglages d'exposition utilisés par l'appareil et même dans certains cas, l'emplacement où a été prise la photo.</p>
+
+<p>Cette rubrique vous montre comment accéder à ces informations.</p>
+
+<section id="date">
+<title>Affichage de la date dans la barre d'état</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Vous pouvez afficher la date de prise de l'image dans la barre d'état en bas de la fenêtre.</p>
+  <p>Pour faire cela, cliquez sur <guiseq><gui>Édition</gui><gui>Préférences</gui></guiseq> et allez dans l'onglet <gui>Greffons</gui>. Cochez ensuite <gui>Date dans la barre d'état</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Données Exif détaillées</title>
+  <p>Les informations détaillées enregistrées avec les photos numériques sont appelées les <em>données Exif</em>. Vous pouvez les afficher en installant un greffon du visionneur d'images.</p>
+
+  <steps>
+   <item>
+    <p>Pour pouvoir consulter les données Exif incorporées dans vos photos, vous devez d'abord installer le paquet <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Si le paquet <sys>eog-plugins</sys> est installé, cliquez sur <guiseq><gui>Édition</gui><gui>Préférences</gui></guiseq> et allez dans l'onglet <gui>Greffons</gui>. Cochez ensuite <gui>Affichage Exif</gui> puis cliquez sur <gui>Fermer</gui>.</p>
+   </item>
+   <item>
+    <p>Cliquez sur <guiseq><gui>Affichage</gui><gui>Panneau latéral</gui></guiseq> pour afficher les réglages de l'appareil photo utilisés pour prendre la photo. Pour également voir un histogramme affichant l'équilibre des couleurs et des zones claires/sombres de la photo, choisissez <gui>Affichage Exif</gui> dans l'onglet <gui>Greffons</gui> et cliquez sur <gui>Préférences</gui>. Sélectionnez les histogrammes que vous voulez voir, dans la liste sous <gui>Histogramme</gui>.</p>
+   </item>
+   <item>
+    <p>Vous pouvez également voir les réglages de l'appareil photo utilisés pour prendre la photo dans la barre d'état. Sélectionnez l'option <gui>Affichage Exif</gui> dans l'onglet <gui>Greffons</gui> et cliquez sur <gui>Préférences</gui>. Cochez <gui>Afficher les paramètres de l'appareil dans la barre d'état</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Affichage de la carte de localisation de la photo</title>
+  <p>Certains appareils sont capables d'attacher des informations de <em>géolocalisation</em> (geotags) aux photos numériques. Les geotags ne contiennent normalement que les coordonnées GPS (latitude et longitude) du lieu où a été prise la photo.</p>
+
+  <steps>
+   <item>
+    <p>Pour pouvoir afficher une carte indiquant l'emplacement où vos photos ont été prises, vous devez d'abord installer le paquet <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Si le paquet <sys>eog-plugins</sys> est installé, cliquez sur <guiseq><gui>Édition</gui><gui>Préférences</gui></guiseq> et allez dans l'onglet <gui>Greffons</gui>. Cochez ensuite <gui>Carte</gui> puis cliquez sur <gui>Fermer</gui>.</p>
+   </item>
+   <item>
+    <p>Cliquez sur <guiseq><gui>Affichage</gui><gui>Panneau latéral</gui></guiseq> pour afficher la carte.</p>
+   </item>
+  </steps>
+  <p>La carte affiche l'emplacement où une photo a été prise uniquement si des informations de géolocalisation sont attachées à la photo. De nombreux appareils photo n'attachent pas d'informations de géolocalisation à leurs photos.</p>
+</section>
+
+
+</page>

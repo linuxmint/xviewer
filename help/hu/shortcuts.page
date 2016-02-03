@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shortcuts" xml:lang="hu">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <desc>Az összes gyorsbillentyű listája.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+       <name>Tiffany Antopolski</name>
+       <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Kelemen Gábor</mal:name>
+      <mal:email>kelemeng at gnome dot hu</mal:email>
+      <mal:years>2011, 2012, 2013, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Gyorsbillentyűk</title>
+
+<p>A képmegjelenítőben használható összes gyorsbillentyű listája a következő:</p>
+
+<section id="open-close-save-print">
+  <title>Megnyitás, bezárás, mentés és nyomtatás</title>
+  <table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Képfájl megnyitása</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>O</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>A kép mentése ugyanazzal a fájlnévvel</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>S</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>A jelenlegi kép másolatának mentése másik fájlnévvel</p></td>
+        <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>S</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>A jelenlegi kép nyomtatása</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>P</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>A jelenlegi ablak bezárása</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>W</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>A kép beállítása az asztal háttereként</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>F8</key></keyseq></p></td>
+    </tr>
+  </table>
+</section>
+
+<section id="viewing">
+    <title>Képek megjelenítése</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Ugrás a mappa előző képére</p></td>
+        <td><p><key>Backspace</key> / <key>Balra</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Ugrás a mappa következő képére</p></td>
+        <td><p><key>Szóköz</key> / <key>Jobbra</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Ugrás a mappa első képére</p></td>
+        <td><p><keyseq><key>Alt</key><key>Home</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Ugrás a mappa utolsó képére</p></td>
+         <td><p><keyseq><key>Alt</key><key>End</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Véletlen kép választása a mappából</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>M</key></keyseq></p></td>
+    </tr>
+    <tr>
+    	<td><p>A képgaléria megjelenítése</p></td>
+        <td><p><key>F9</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Teljes képernyő</p></td>
+         <td><p><key>F11</key></p></td>
+    </tr>
+
+    <tr>
+    	<td><p>Diavetítés</p></td>
+         <td><p><key>F5</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Tényleges méret</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq> (nulla)</p></td>
+    </tr>
+    <tr>
+    	<td><p>Teljes oldal</p></td>
+         <td><p><key>F</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Nagy kép mozgatása az ablakban</p></td>
+         <td><p><keyseq><key>Alt</key><key>Nyílbillentyűk</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="copy">
+    <title>Kép másolása másik alkalmazásba való beillesztéshez</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Másolás</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="zoom-rotate">
+    <title>Nagyítás és forgatás</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+    	<td><p>Nagyítás</p></td>
+         <td><p><key>+</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Kicsinyítés</p></td>
+         <td><p><key>-</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Forgatás az órajárással egyező irányba</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
+    </tr>
+    <tr>
+    	<td><p>Forgatás az órajárással ellentétes irányba</p></td>
+         <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>R</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="other">
+    <title>Egyéb</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Oldalsáv megjelenítése</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>F9</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Képtulajdonságok megjelenítése</p></td>
+        <td><p><keyseq><key>Alt</key><key>Enter</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Visszavonás</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Z</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Súgó</p></td>
+        <td><p><key>F1</key></p></td>
+    </tr>
+</table>
+</section>
+</page>

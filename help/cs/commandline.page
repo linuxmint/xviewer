@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="cs">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Příkazový řádek</title>
+    <desc>Příkaz <cmd>eog</cmd> umí otevřít libovolný počet obrázků v různých režimech.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Marek Černocký</mal:name>
+      <mal:email>marek@manet.cz</mal:email>
+      <mal:years>2009, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Příkazový řádek</title>
+
+<p>Když chcete spustit <app>prohlížeč obrázků</app> z <app>terminálu</app>, napište <cmd>eog</cmd>.</p>
+<p>Můžete určit konkrétní soubor zadáním názvu souboru za příkaz <cmd>eog</cmd>:</p>
+<screen>eog obrázek.jpeg</screen>
+<p>Můžete určit konkrétní složku zadání názvu složky za příkaz <cmd>eog</cmd>:</p>
+<screen>eog složka</screen>
+<p>Abyste viděli všechny obrázky ve složce naráz, můžete chtít použít <link xref="view#image-gallery">procházení galerie obrázků</link>.</p>
+
+<section id="fullscreen">
+    <title>Otevřít obrázek v režimu celé obrazovky</title>
+    <screen>eog --fullscreen obrazek.jpeg</screen>
+</section>
+<section id="disable-gallery">
+    <title>Otevřít obrázek s vypnutou galerií</title>
+    <screen>eog --disable-gallery obrazek.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Otevřít obrázek v nové instanci prohlížeče</title>
+    <screen>eog --new-instance obrazek.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Otevřít složku v režimu promítání</title>
+    <screen>eog --slide-show Obrázky/</screen>
+</section>
+</page>

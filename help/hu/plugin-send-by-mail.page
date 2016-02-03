@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-send-by-mail" xml:lang="hu">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Képek küldése e-mail mellékleteként.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Kelemen Gábor</mal:name>
+      <mal:email>kelemeng at gnome dot hu</mal:email>
+      <mal:years>2011, 2012, 2013, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Küldés e-mailben</title>
+
+<p>Felvehet egy gombot, amely kényelmes lehetőséget biztosít a képek e-mailben való elküldésére.</p>
+
+<p>Ehhez válassza a <guiseq><gui>Szerkesztés</gui><gui>Beállítások</gui></guiseq> menüpontot, majd lépjen a <gui>Bővítmények</gui> lapra. Jelölje be a <gui>Küldés e-mailben</gui> bővítményt, majd nyomja meg a <gui>Bezárás</gui> gombot. Ezután megjelenik az <guiseq><gui>Eszközök</gui><gui>Küldés e-mailben</gui></guiseq> menüpont.</p>
+
+<p>A funkció használatához telepítenie kell az <link xref="plugins">eog-plugins</link> csomagot.</p>
+
+<note>
+ <p>Ennek működéséhez az <app>Evolution levelezőt</app> be kell állítania postafiókja kezelésére.</p>
+</note>
+
+<media type="image" src="figures/plugin-send-by-mail.png" style="floatend"/>
+
+</page>

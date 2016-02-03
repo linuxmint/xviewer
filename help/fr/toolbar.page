@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="toolbar" xml:lang="fr">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="toolbar#view">Montrer, cacher</link> ou <link xref="toolbar#modify">modifier</link> la barre d'outils.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Barre d'outils</title>
+<p>La barre d'outils permet un accès facile aux fonctionnalités telles que le zoom et la rotation. Vous pouvez cependant la masquer si elle vous perturbe ou si elle prend trop de place.</p>
+
+<section id="view">
+<title>Affichage ou masquage de la barre d'outils</title>
+  <p>Pour afficher ou masquer la barre d'outils, cliquez sur <guiseq><gui>Affichage</gui><gui>Barre d'outils</gui></guiseq>.</p>
+</section>
+
+<section id="modify">
+ <title>Ajout, modification et réarrangement des outils de la barre d'outils.</title>
+ <p>Par défaut, la barre d'outils contient seulement un ensemble d'outils de base. Vous pouvez en ajouter quelques autres bien utiles en modifiant la barre d'outils :</p>
+ <steps>
+ <item>
+  <p>Vérifiez que la barre d'outils n'est pas masquée.</p>
+ </item>
+ <item>
+  <p>Cliquez sur <guiseq><gui>Édition</gui><gui>Barre d'outils</gui></guiseq>.</p>
+  <p>L'<gui>éditeur de barre d'outils</gui> contient les objets qui ne sont pas présents dans la barre d'outils (voir la figure ci-dessous). Il y a aussi un élément séparateur qui vous permet de regrouper les outils ensemble.</p>
+ </item>
+ <item>
+  <p>Pour <em>ajouter</em> de nouveaux éléments à la barre d'outils, faites-les glisser de l'éditeur de barre d'outils vers la barre d'outils.</p>
+  <p>Pour <em>réarranger</em> les éléments de la barre d'outils, déplacez-les à un autre emplacement.</p>
+  <p>Vous pouvez <em>supprimer</em> des éléments de la barre d'outils en les faisant glisser de la barre d'outils vers l'éditeur de barre d'outils.</p>
+ </item>
+ <item>
+  <p>Cliquez sur <gui>Fermer</gui> dans la fenêtre de l'éditeur de barre d'outils lorsque vous avez fini.</p>
+ </item>
+</steps>
+
+<p>Cliquez sur <gui>Réinitialiser aux valeurs par défaut</gui> pour restaurer les paramètres par défaut de la barre d'outils.</p>
+
+<media type="image" src="figures/eog-toolbar-editor.png" width="480"/>
+
+</section>
+
+</page>

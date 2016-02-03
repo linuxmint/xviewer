@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-python-console" xml:lang="es">
+
+  <info>
+   <link type="guide" xref="index#advanced"/>
+   <desc>La Consola de Python se puede usar para añadir funciones adicionales y ejecutar scripts en el Visor de imágenes.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Compartir Igual 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2011, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jorge González</mal:name>
+      <mal:email>jorgegonz@svn.gnome.org</mal:email>
+      <mal:years>2008-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Francisco Javier F. Serrador</mal:name>
+      <mal:email>serrador@openshine.com</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Consola de Python</title>
+
+<p>El Visor de imágenes tiene un sistema de complementos que usa el lenguaje de «scripting» Python. Si activa la <em>Consola de Python</em> puede obtener acceso al intérprete de Python dentro del Visor de imágenes, que puede usar para escribir «scripts» o manipular imágenes programando.</p>
+
+<steps>
+ <item>
+  <p>Antes de que pueda activar la Consola de Python deberá instalar <link xref="plugins">eog-plugins</link>.</p>
+ </item>
+ <item>
+  <p>Una vez que haya instalado <sys>eog-plugins</sys>, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</gui>.</p>
+ </item>
+ <item>
+  <p>Marque <gui>Consola de Python</gui> y pulse <gui>Cerrar</gui>.</p>
+ </item>
+ <item>
+  <p>Pulse <guiseq><gui>Herramientas</gui><gui>Consola de Python</gui></guiseq> para mostrar la consola.</p>
+ </item>
+</steps>
+
+</page>

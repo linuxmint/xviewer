@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="hu">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Telepítsen bővítményeket további szolgáltatások eléréséhez.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Kelemen Gábor</mal:name>
+      <mal:email>kelemeng at gnome dot hu</mal:email>
+      <mal:years>2011, 2012, 2013, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Bővítmények</title>
+
+<p>A képmegjelenítő további bővítményeinek eléréséhez telepítse az <sys>eog-plugins</sys> csomagot. A bővítmények olyan extra szolgáltatásokat biztosítanak, mint az alábbiak.</p>
+
+<note style="info package">
+  <p>Az <sys>eog-plugins</sys> csomagot a disztribúciója <em>csomagkezelőjével</em> telepítheti.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">Az eog-plugins telepítése</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>Az <sys>eog-plugins</sys> a következő szolgáltatásokat biztosítja:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">Dátum az állapotsoron</link>: megjeleníti a kép dátumát az ablak állapotsorában.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Exif adatok megjelenítés</link>: digitális fényképek fényképezőgép-beállításainak és hisztogramjainak megjelenítése.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">Teljes képernyős háttér</link>: Lehetővé teszi a teljes képernyős módban használt háttér megváltoztatását.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">Teljes képernyő dupla kattintásra</link>: Teljes képernyős mód aktiválása dupla kattintással.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Térkép</link>: megjeleníti egy digitális fénykép földrajzi helyét a térképen.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">PicasaWeb feltöltő</link>: Képek feltöltése a PicasaWebre.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Python konzol</link>: Python parancskonzol a képmegjelenítőben.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">Küldés e-mailben</link>: kép küldése e-mail mellékletként.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Diavetítés véletlenszerűen</link>: összekeveri a képeket diavetítés módban.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Illesztés a kép szélességéhez</link>: úgy módosítja a nagyítást, hogy a kép teljes szélessége elférjen az ablakban.</p>
+ </item>
+</list>
+
+<note>
+ <p>A bővítményeket a Beállítások ablak <link xref="preferences#plugins">Bővítmények</link> lapján kezelheti.</p>
+</note>
+
+</page>

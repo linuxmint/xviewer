@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-python-console" xml:lang="hu">
+
+  <info>
+   <link type="guide" xref="index#advanced"/>
+   <desc>A Python konzol kiegészítő funkciók hozzáadására és parancsfájlok futtatására használható a képmegjelenítőben.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Kelemen Gábor</mal:name>
+      <mal:email>kelemeng at gnome dot hu</mal:email>
+      <mal:years>2011, 2012, 2013, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Python konzol</title>
+
+<p>A képmegjelenítő rendelkezik egy, a Python parancsnyelvet használó bővítményrendszerrel. Ha aktiválja a <em>Python konzolt</em>, akkor közvetlenül hozzáférhet a Python értelmezőhöz a képmegjelenítőből, amellyel például parancsfájlokat írhat vagy programozói eszközökkel manipulálhatja a képeket.</p>
+
+<steps>
+ <item>
+  <p>A Python konzol aktiválása előtt telepítenie kell az <link xref="plugins">eog-plugins</link> csomagot.</p>
+ </item>
+ <item>
+  <p>Az <sys>eog-plugins</sys> telepítése után válassza a <guiseq><gui>Szerkesztés</gui><gui>Beállítások</gui></guiseq> menüpontot, és lépjen a <gui>Bővítmények</gui> lapra.</p>
+ </item>
+ <item>
+  <p>Jelölje be a <gui>Python konzol</gui> jelölőnégyzetet, és nyomja meg a <gui>Bezárás</gui> gombot.</p>
+ </item>
+ <item>
+  <p>Válassza az <guiseq><gui>Eszközök</gui><gui>Python konzol</gui></guiseq> menüpontot a konzol megjelenítéséhez.</p>
+ </item>
+</steps>
+
+</page>

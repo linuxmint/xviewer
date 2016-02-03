@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="rename-multiple" xml:lang="el"> 
+ 
+  <info> 
+    <link type="guide" xref="index#edit"/>
+    <link type="seealso" xref="format-change#multiple"/> 
+    <desc>Αυτόματη μετονομασία και αριθμός δεσμών εικόνων.</desc> 
+ 
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/> 
+    <credit type="author"> 
+      <name>Tiffany Antopolski</name> 
+      <email>tiffany@antopolski.com</email> 
+    </credit> 
+    <license> 
+      <p>Creative Commons Share Alike 3.0</p> 
+    </license> 
+ 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Φώτης Τσάμης</mal:name>
+      <mal:email>ftsamis@gmail.com</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Μάριος Ζηντίλης</mal:name>
+      <mal:email>m.zindilis@dmajor.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2012, 2013</mal:years>
+    </mal:credit>
+  </info> 
+ 
+<title>Μετονομασία πολλών εικόνων μονομιάς</title>
+
+<p>Εάν έχετε πολλές εικόνες που θέλετε να μετονομάσετε, ίσως για να έχουν μια τυπική αριθμημένη μορφή ονόματος:</p>
+
+<steps>
+ <item>
+  <p>Ανοίξτε την <link xref="view#image-gallery">συλλογή εικόνων</link> πατώντας <key>F9</key>.</p>
+ </item>
+ <item>
+  <p>Επιλογή όλων των εικόνων που θέλετε να μετονομάσετε από τη συλλογή εικόνων κρατώντας πατημένο το <key>Ctrl</key> και πατώντας τες μία προς μία.</p>
+ <p>Εναλλακτικά, πατήστε <keyseq><key>Ctrl</key><key>A</key></keyseq> για επιλογή όλων των εικόνων.</p>
+ </item>
+ <item>
+  <p>Κλικ στο <guiseq><gui>εικόνα</gui><gui>αποθήκευση ως</gui></guiseq>. Ένα παράθυρο με κάποιες επιλογές ονόματος αρχείου θα εμφανιστούν (η εικόνα, παρακάτω, εμφανίζει πώς φαίνεται αυτή η εικόνα).</p>
+ </item>
+ <item>
+  <p>Οι μετονομασμένες εικόνες θα αποθηκευτούν στον τρέχοντα φάκελο από προεπιλογή. Για αποθήκευσή τους κάπου αλλού, αλλάξτε τον <gui>φάκελο προορισμού</gui>.</p>
+ </item>
+ <item>
+  <p>Χρησιμοποιήστε το πλαίσιο <gui>μορφή ονόματος αρχείου</gui> για επιλογή μορφής ονομασίας για τις εικόνες. Η <gui>προεπισκόπηση ονόματος αρχείου</gui> εμφανίζει πώς θα φαίνονται τα ονόματα των αρχείων. Δείτε την <link xref="#filename-format"/>ενότητα, παρακάτω, για συμβουλές στην επιλογή μετονομασίας των αρχείων.</p>
+ </item>
+ <item>
+  <p>Βεβαιωθείτε ότι η πτυσσόμενη λίστα <gui>μορφή ονόματος αρχείου</gui> λέει <gui>όπως είναι</gui>, εκτός και θέλετενα <link xref="format-change#multiple">μετατρέψετε τις εικόνες σε διαφορετική μορφή αρχείου</link>.</p>
+ </item>
+ <item>
+  <p>Κλικ στο <gui>αποθήκευση ως</gui> και οι εικόνες θα μετονομαστούν.</p>
+ </item>
+</steps>
+
+<media type="image" src="figures/multiple-rename-count.png" width="300"/>
+
+<section id="filename-format">
+ <title>Επιλογή μορφής ονόματος αρχείου</title>
+ <p>Τα ονόματα αρχείου των μετονομασμένων αρχείων προσδιορίζονται από το τι βάζετε στο πλαίσιο <gui>μορφή ονόματος αρχείου</gui>.</p>
+ <list>
+  <item>
+   <p>Μπορείτε να κρατήσετε το αρχικό όνομα αρχείου ως μέρος του νέου ονόματος αρχείου αφήνοντας το <input>%f</input> στο πλαίσιο.</p>
+   <p>Για παράδειγμα, εάν πληκτρολογήσετε <input>paris_%f</input> στο πλαίσιο <gui>μορφή ονόματος αρχείου</gui>, οι εικόνες που λέγονται <file>flower.jpg</file>, <file>house.jpg</file> και <file>cat.jpg</file> θα μετονομαστούν σε <file>paris_flower.jpg</file>, <file>paris_house.jpg</file> και <file>paris_cat.jpg</file>.</p>
+  </item>
+  <item>
+   <p>Η προσθήκη ενός <input>%n</input> θα αριθμήσει τις εικόνες διαδιχικά, αρχίζοντας από τον αριθμό μέτρησης που διαλέξατε στο <gui>επιλογές</gui>.</p>
+  <p>Για παράδειγμα, εάν πληκτρολογήσετε <input>sunshine_%n</input> στο πλαίσιο <gui>μορφή ονόματος αρχείου</gui>, οι εικόνες που λέγονται <file>flower.jpg</file>, <file>house.jpg</file> και <file>cat.jpg</file> θα μετονομαστούν σε <file>sunshine_2.jpg</file>, <file>sunshine_3.jpg</file> και <file>sunshine_1.jpg</file>. (θα αριθμηθούν κατά αλφαβητική σειρά των αρχικών ονομάτων αρχείων.)</p>
+  </item>
+ </list>
+</section>
+
+</page>

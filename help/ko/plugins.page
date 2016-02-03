@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="ko">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>플러그인 설치해 추가 기능 이용하기.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>류창우</mal:name>
+      <mal:email>cwryu@debian.org</mal:email>
+      <mal:years>2007-2008, 2011, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>플러그인</title>
+
+<p><sys>eog-plugins</sys> 패키지에 이미지 보기의 추가 플러그인이 들어 있습니다. 플러그인을 사용하면 아래와 같은 확장된 기능을 추가합니다.</p>
+
+<note style="info package">
+  <p>리눅스 배포판의 <app>패키지 관리 프로그램</app>에서 <sys>eog-plugins</sys>를 설치할 수 있습니다.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">eog-plugins 설치</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>다음 기능이 <sys>eog-plugins</sys>에 들어 있습니다:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">상태 표시줄에 시각</link>: 창의 상태 표시줄에 이미지 시각을 표시합니다.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">EXIF 표시</link>: 디지털 사진의 카메라 설정 및 히스토그램을 표시합니다.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">전체 화면 배경</link>: 전체 화면 모드의 배경을 바꿀 수 있습니다.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">두 번 눌러 전체 화면</link>: 두 번 눌러 전체 화면 모드로 들어갑니다.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">지도</link>: 지도에서 디지털 사진의 지리적 위치를 표시합니다.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">피카사웹 업로드</link>: 사진을 피카사웹에 업로드합니다.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">파이썬 콘솔</link>: 이미지 보기 파이썬 콘솔.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">메일로 보내기</link>: 사진을 메일에 첨부해서 친구에게 보냅니다.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">슬라이드 쇼 임의 모드</link>: 슬라이드쇼 모드에서 임의 이미지를 엽니다.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">이미지 너비에 맞춰 확대/축소</link>: 이미지 폭이 창 크기에 맞도록 확대/축소 수준을 조절합니다.</p>
+ </item>
+</list>
+
+<note>
+ <p>기본 설정 창의 <link xref="preferences#plugins">플러그인 탭</link>을 사용해 플러그인을 관리할 수 있습니다.</p>
+</note>
+
+</page>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="ru">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Параметры просмотра</link>, <link xref="preferences#slideshow">слайд-шоу</link> и <link xref="preferences#plugins">модулей</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Василий Фаронов &lt;qvvx@yandex.ru&gt;, 2007Алексей Кабанов</mal:name>
+      <mal:email>ak099@mail.ru</mal:email>
+      <mal:years>2012</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Параметры</title>
+<p>В этой теме описаны все параметры, которые можно настроить в программе просмотра изображений. Чтобы изменить параметры программы, нажмите <guiseq><gui>Правка</gui><gui>Параметры</gui></guiseq>.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Параметры просмотра изображений</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Улучшение изображения</title>
+    <p>Select <gui>Smooth images when zoomed out</gui> to enable <em>image 
+    smoothing</em> when you zoom in and out. This makes low-resolution 
+    (pixelated) pictures look better by smoothing out jagged edges.</p>
+    <p>Если включен флажок <gui>Автоматическая ориентация</gui>, изображения будут автоматически поворачиваться в соответствии с <em>метаданными Exif</em>. Это информация об изображении, автоматически добавляемая цифровой фотокамерой, в том числе сведения об ориентации фотокамеры при выполнении снимка. Например, если автоматическая ориентация включена, портретные фотографии автоматически будут повёрнуты вертикально. Поворот не будет сохранён, если вы не <link xref="flip-rotate#rotate">сохраните повёрнутое изображение</link>.</p> 
+    <p>Автоматическая ориентация работает не со всеми изображениями. Автоматически могут быть повёрнуты только изображения, сделанные с помощью фотокамеры, добавляющей метаданные Exif с информацией об ориентации снимка.</p>
+  </item>
+  <item>
+    <title>Прозрачные области</title>
+     <p>Выберите один из следующих параметров, чтобы определить, как должны отображаться прозрачные области изображения , если они есть:</p>
+    <list>
+      <item>
+       <p><gui>В виде клетчатого поля:</gui></p>
+       <p>Показывать все прозрачные части изображения в виде клетчатого узора.</p>
+      </item>
+      <item>
+       <p><gui>Выбранным цветом:</gui></p>
+       <p>Показывает все прозрачные части изображения выбранным цветом. Чтобы выбрать цвет, нажмите кнопку выбора цвета.</p>
+      </item>
+      <item>
+       <p><gui>Как фон:</gui></p>
+       <p>Показывает прозрачные части изображения, используя цвет <gui>фона</gui>, если в разеде <gui>Фон</gui> выбран цвет. Иначе будет использоваться цвет фона по умолчанию.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Параметры слайд-шоу</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>Настройка параметров слайд-шоу:</p>
+<list>
+ <item>
+  <p><gui>Масштабирование изображения</gui> — здесь можно выбрать, следует ли увеличивать изображения, размер которых меньше экрана так, чтобы они заполняли собой экран.</p>
+ </item>
+ <item>
+  <p><gui>Последовательность</gui> позволяет выбрать длительность показа каждого изображения (от 1 до 100 секунд) до того, как его сменит следующее изображение.</p>
+ </item>
+ <item>
+  <p>Включите <gui>Зациклить последовательность</gui>, если хотите, чтобы слайд-шоу повторялось бесконечно. Если эта опция отключена, слайд-шоу начнётся с выбранного вами изображения и закончится последним изображением в папке.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Параметры модулей</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Здесь вы можете выбрать любые дополнительные возможности. Изображение слева показывает модули, которые доступны по умолчанию.</p>
+
+<p>Вы можете также установить пакет <link xref="plugins">eog-plugins</link>, содержащий модули, предоставляющие некоторые дополнительные возможности. После его установки можно будет активировать <link xref="index#plugins">дополнительные модули</link>, подобные показанным на иллюстрации справа.</p>
+</section>
+
+</page>

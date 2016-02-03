@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="fr">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Installer des greffons pour accéder à des fonctionnalités supplémentaires.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Greffons</title>
+
+<p>Vous pouvez installer le paquet <sys>eog-plugins</sys> pour obtenir des greffons supplémentaires pour le visionneur d'image. Les greffons apportent de nouvelles fonctionnalités comme celles énumérées ci-dessous.</p>
+
+<note style="info package">
+  <p>Vous pouvez installer le paquet <sys>eog-plugins</sys> en utilisant le <em>gestionnaire de paquets</em> de votre distribution Linux.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">installer eog-plugins</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>Les fonctionnalités suivantes sont incluses dans <sys>eog-plugins</sys> :</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">Date dans la barre d'état</link> : afficher la date de l'image dans la barre d'état de la fenêtre.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Affichage Exif</link> : afficher les réglages de l'appareil photo et les histogrammes pour les appareils photo numériques.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">Arrière-plan du mode plein écran</link>: autoriser la modification de l'arrière-plan en mode plein écran.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">Plein écran sur double-clic</link>: passer en mode plein écran avec un double-clic.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Carte</link> : afficher la géolocalisation d'une photo numérique sur une carte.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">Mise en ligne sur PicasaWeb</link> : envoyer vos phots sur PicasaWeb.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Console Python</link> : une console script Python pour le visionneur d'images.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">Envoi par courriel</link> : envoyer une image à un ami en l'attachant à un nouveau courriel.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Diaporama aléatoire</link> : mélanger les images en mode diaporama.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Zoom en fonction de la largeur de l'image</link> : régler le zoom pour ajuster la largeur complète de l'image à celle de la fenêtre.</p>
+ </item>
+</list>
+
+<note>
+ <p>Vous pouvez gérer les greffons dans l'<link xref="preferences#plugins">onglet Greffons</link> de la fenêtre des préférences.</p>
+</note>
+
+</page>

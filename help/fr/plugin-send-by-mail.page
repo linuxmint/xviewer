@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-send-by-mail" xml:lang="fr">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Envoyer facilement des images en les attachant à un nouveau courriel.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Envoi d'images par courriel</title>
+
+<p>Vous pouvez ajouter un bouton qui vous permet d'envoyer en tout commodité des images à des personnes par courriel.</p>
+
+<p>Pour cela, cliquez sur <guiseq><gui>Édition</gui><gui>Préférences</gui></guiseq> et allez dans l'onglet <gui>Greffons</gui>. Cochez ensuite <gui>Envoi par courriel</gui> et cliquez sur <gui>Fermer</gui>. Cela crée un élément de menu <guiseq><gui>Outils</gui><gui>Envoyer par courriel</gui></guiseq>.</p>
+
+<p>Pour ajouter cette fonctionnalité, vous devez avoir installé le paquet <link xref="plugins">eog-plugins</link>.</p>
+
+<note>
+ <p>Pour que cela fonctionne, la <app>messagerie d'Evolution</app> doit être paramétrée de façon à pouvoir se connecter à votre compte de messagerie électronique.</p>
+</note>
+
+<media type="image" src="figures/plugin-send-by-mail.png" style="floatend"/>
+
+</page>

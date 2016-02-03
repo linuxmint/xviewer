@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Befehlszeile</title>
+    <desc>Der Befehl <cmd>eog</cmd> kann eine beliebige Anzahl von Bildern in verschiedenen Modi öffnen.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Die Befehlszeile</title>
+
+<p>Um den <app>Bildbetrachter</app> in einem <app>Terminal</app> zu starten, geben Sie den Befehl <cmd>eog</cmd> ein.</p>
+<p>Sie können eine bestimmte Datei öffnen, indem Sie den Dateinamen nach dem <cmd>eog</cmd>-Befehl eingeben:</p>
+<screen>eog bild.jpeg</screen>
+<p>Sie können einen bestimmten Ordner öffnen, indem Sie den Ordnernamen nach dem <cmd>eog</cmd>-Befehl eingeben:</p>
+<screen>eog Ordner</screen>
+<p>Um alle Bilder in einem Ordner auf einmal anzuzeigen, können Sie <link xref="view#image-gallery">die Bildersammlung durchsuchen</link>.</p>
+
+<section id="fullscreen">
+    <title>Öffnen eines Bildes im Vollbildmodus</title>
+    <screen>eog --fullscreen bild.jpeg</screen>
+</section>
+<section id="disable-gallery">
+    <title>Bild ohne Anzeige der Bildersammlung öffnen</title>
+    <screen>eog --disable-gallery bild.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Bild in einer neuen Instanz öffnen</title>
+    <screen>eog --new-instance bild.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Einen Ordner im Diaschau-Modus öffnen</title>
+    <screen>eog --slide-show Bilder/</screen>
+</section>
+</page>

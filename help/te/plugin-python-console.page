@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-python-console" xml:lang="te">
+
+  <info>
+   <link type="guide" xref="index#advanced"/>
+   <desc>The Python console can be used to add extra functions and run scripts in the image viewer.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  </info>
+
+<title>Python console</title>
+
+<p>The image viewer has a plugin system which uses the Python scripting 
+ language. If you activate the <em>Python console</em>, you can gain direct 
+ access to a Python interpreter from inside the image viewer, which you can 
+ then use to write scripts or programmatically manipulate images, for example.</p>
+
+<steps>
+ <item>
+  <p>Before you can activate the Python console, you will need to install <link xref="plugins">eog-plugins</link>.</p>
+ </item>
+ <item>
+  <p>Once <sys>eog-plugins</sys> is installed, click <guiseq><gui>Edit</gui>
+ <gui>Preferences</gui></guiseq> and go to the <gui>Plugins</gui> tab.</p>
+ </item>
+ <item>
+  <p>Check <gui>Python Console</gui> and click <gui>Close</gui>.</p>
+ </item>
+ <item>
+  <p>Click <guiseq><gui>Tools</gui><gui>Python Console</gui></guiseq> to 
+  bring up the console.</p>
+ </item>
+</steps>
+
+</page>

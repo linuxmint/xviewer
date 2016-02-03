@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="gl">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Liña de ordes</title>
+    <desc>A orde <cmd>eog</cmd> pode abrir calquera número de imaxes en varios modos.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Fran Dieguez</mal:name>
+      <mal:email>frandieguez@gnome.org</mal:email>
+      <mal:years>2011-2012.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>A liña de ordes</title>
+
+<p>Para iniciar o <app>Visor de imaxes</app> desde un <app>Terminal</app>, escriba <cmd>eog</cmd>.</p>
+<p>Para abrir un ficheiro en concreto escribindo o nome do ficheiro despois da orde <cmd>eog</cmd>:</p>
+<screen>eog imaxe.jpeg</screen>
+<p>Para abrir un ficheiro en concreto escribindo o nome do ficheiro despois da orde <cmd>eog</cmd>:</p>
+<screen>cartafol de eog</screen>
+<p>Para ver toda as imaxes nun cartafol á vez, pode querer <link xref="view#image-gallery">examinar a galería de imaxes</link>.</p>
+
+<section id="fullscreen">
+    <title>Abrir unha imaxe en modo a pantalla completa</title>
+    <screen>eog --fullscreen imaxe.jpeg</screen>
+</section>
+<section id="disable-gallery">
+    <title>Abrir imaxes coa colección desativada</title>
+    <screen>eog --disable-gallery imaxe.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Abrir imaxe nunha instancia nova</title>
+    <screen>eog --new-instance imaxe.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Abrir un cartafol en modo diaporama</title>
+    <screen>eog --slide-show Imaxes/</screen>
+</section>
+</page>

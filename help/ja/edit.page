@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="edit" xml:lang="ja">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>外部の画像エディターを利用して画像を編集するには、<guiseq><gui>画像</gui><gui>次で開く</gui></guiseq>をクリックします。</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+<title>画像の編集や削除</title>
+
+<section id="edit"><title>画像の編集</title>
+<p>画像ビューアーは画像を閲覧することのみに使用できます。画像の編集はできません。画像を編集するには、GIMP 画像エディターのような画像編集用のアプリケーションを使用してください。画像を編集するために他のアプリケーションで開く手順は、次のとおりです。</p>
+<steps>
+ <item>
+  <p><guiseq><gui>画像</gui><gui>次で開く</gui></guiseq>をクリックするか、画像を右クリックします。</p>
+ </item>
+ <item>
+  <p>使用する画像編集アプリケーションを選択します。</p>
+ </item>
+ <item>
+  <p>編集が完了すれば、画像を保存して、編集に使用したアプリケーションを閉じます。</p>
+ </item>
+ <item>
+  <p><app>画像ビューアー</app>は画像が変更されたことを検出し、再読み込みします。</p>
+ </item>
+</steps>
+</section>
+
+<section id="delete">
+<title>画像の削除</title>
+<p>もう必要のない画像を削除するには、<guiseq><gui>編集</gui><gui>ゴミ箱へ移動する</gui></guiseq>をクリックするか、画像を右クリックして<gui>ゴミ箱へ移動する</gui>を選択します。</p>
+</section>
+
+</page>

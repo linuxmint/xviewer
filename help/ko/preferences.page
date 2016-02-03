@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="ko">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">이미지 보기</link>, <link xref="preferences#slideshow">슬라이드 쇼</link>, <link xref="preferences#plugins">플러그인</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>류창우</mal:name>
+      <mal:email>cwryu@debian.org</mal:email>
+      <mal:years>2007-2008, 2011, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>기본 설정</title>
+<p>여기서는 이미지 보기에서 할 수 있는 설정 전체를 설명합니다. 기본 설정을 바꾸려면 먼저 <guiseq><gui>편집</gui><gui>기본 설정</gui></guiseq>을 누르십시오.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>이미지 보기 기본 설정</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>이미지 개선</title>
+    <p><gui>확대할 때 이미지 부드럽게</gui> 옵션을 사용하면 확대나 축소할 때 <em>이미지를 부드럽게</em> 만듭니다. 이 옵션을 사용하면 해상도가 낮아 픽셀이 보이는 사진에서 울퉁불퉁한 경계선을 부드럽게 만들어 보기 좋아집니다.</p>
+    <p><gui>자동 방향</gui>을 사용하면, <em>EXIF 메타데이터</em>에 따라 자동으로 사진을 회전합니다. EXIF 메타데이터는 디지털 카메라가 자동으로 넣는 정보로, 사진을 찍을 때 카메라를 어떤 방향으로 잡았는지 정보가 들어 있을 수도 있습니다. 예를 들어, 자동 방향을 사용하면 세로 방향 사진은 자동으로 위로 긴 방향으로 회전됩니다. <link xref="flip-rotate#rotate">회전된 이미지를 저장</link>하지 않으면 회전 내용은 저장하지 않습니다.</p> 
+    <p>자동 방향은 일부 사진에 대해서만 동작합니다. EXIF 방향 메타데이터를 저장하는 카메라에서 찍은 사진만 회전됩니다.</p>
+  </item>
+  <item>
+    <title>투명한 부분</title>
+     <p>다음 옵션 중의 하나를 선택해 투명 부분을(투명 부분이 있으면) 어떻게 표시할 지 설정합니다:</p>
+    <list>
+      <item>
+       <p><gui>체크무늬로:</gui></p>
+       <p>이미지의 투명한 부분을 체크무늬로 표시합니다.</p>
+      </item>
+      <item>
+       <p><gui>지정한 색으로:</gui></p>
+       <p>이미지의 투명한 부분을 지정한 한 가지 색으로 표시합니다. 색 선택 단추를 색을 눌러 지정합니다.</p>
+      </item>
+      <item>
+       <p><gui>배경으로:</gui></p>
+       <p><gui>배경</gui>의 <gui>지정한 색으로</gui> 설정했으면, 이미지의 투명한 부분을 <gui>배경</gui> 색으로 표시합니다. 아니면 기본 배경 색을 사용합니다.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>슬라이드 쇼 기본 설정</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>슬라이드 쇼 설정을 바꾸려면:</p>
+<list>
+ <item>
+  <p><gui>이미지 확대/축소</gui>에서 화면보다 작은 사진을 화면 크기에 맞게 조정할지 지정합니다.</p>
+ </item>
+ <item>
+  <p><gui>차례</gui>에서 사진 한 장마다 몇 초 동안 표시할 지 지정합니다(1에서 100까지).</p>
+ </item>
+ <item>
+  <p>슬라이드 쇼를 계속 반복하려면 <gui>반복</gui> 확인란을 누르십시오. 이 확인란이 꺼져 있으면 슬라이드 쇼가 선택한 사진부터 시작해서 폴더의 마지막 사진에서 끝납니다.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>플러그인 기본 설정</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>여기에서 추가 기능을 원하는대로 활성화하거나 해제할 수 있습니다. 왼쪽의 사진은 기본으로 사용 가능한 플러그인을 말합니다.</p>
+
+<p><link xref="plugins">eog-plugins</link> 패키지를 설치해야 할 수도 있습니다. 이 패키지에는 추가 기능을 제공하는 플러그인이 들어 있습니다. 이 패키지를 설치한 다음, 오른쪽의 그림과 같이 <link xref="index#plugins">추가 플러그인</link>을 활성화해야 할 수 있습니다.</p>
+</section>
+
+</page>

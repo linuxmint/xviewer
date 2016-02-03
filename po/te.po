@@ -1,0 +1,1691 @@
+# translation of te.po to Telugu
+# Telugu translation of eog.
+# Copyright (C) 2007,2011, 2012 Swecha Telugu Localisation Team <localization@swecha.net>.
+# This file is distributed under the same license as the eog package.
+#
+# Bharat Kumar <jonnalagaddabharat@gmail.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2009, 2010, 2012.
+# Hari Krishna <hari@swecha.net>, 2011.
+# Krishnababu Krothapalli <kkrothap@redhat.com>, 2011.
+# Sasi Bhushan Boddepalli <sasi@swecha.net>, 2012
+# Praveen Illa <mail2ipn@gmail.com>, 2011, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog.master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-03-26 10:23+0000\n"
+"PO-Revision-Date: 2013-03-26 19:54+0530\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu <indlinux-telugu@lists.sourceforge.net>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "“_%s” ని చూపించు"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "సాధనపట్టీ మీదకి తరలించు (_M)"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "ఎంచుకున్న అంశమును సాధనపట్టీ మీదకి తరలించు"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "సాధనపట్టీ నుండి తొలగించు (_R)"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "ఎంచుకున్న అంశమును సాధనపట్టీ నుండి తీసివేయి"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "సాధనపట్టీని తొలగించు (_D)"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "ఎంచుకున్న సాధనపట్టీని తీసివేయి"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "విచ్ఛేదకం"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:3785
+msgid "_View"
+msgstr "వీక్షణం (_V)"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:3811
+msgid "_Toolbar"
+msgstr "సాధనపట్టీ (_T)"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:3814
+msgid "_Statusbar"
+msgstr "స్థితిపట్టీ (_S)"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:3817
+msgid "_Image Gallery"
+msgstr "బొమ్మల సేకరణ (_I)"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:3820
+msgid "Side _Pane"
+msgstr "పక్కపట్టీ (_P)"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:3799
+msgid "Prefere_nces"
+msgstr "ప్రాధాన్యతలు (_n)"
+
+#: ../data/eog-app-menu.xml.h:7 ../src/eog-window.c:3788
+msgid "_Help"
+msgstr "సహాయం (_H)"
+
+#: ../data/eog-app-menu.xml.h:8
+msgid "_About Image Viewer"
+msgstr "బొమ్మ వీక్షకము గురించి (_A)"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "నిష్క్రమించు (_Q)"
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-window.c:5744 ../src/main.c:173
+msgid "Image Viewer"
+msgstr "బొమ్మ వీక్షకము"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "బొమ్మలను విహరించు మరియు తిప్పు"
+
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "చిత్రం;పలకప్రదర్శన;చిత్రరూపాలు;"
+
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:4628
+msgid "Image Properties"
+msgstr "బొమ్మ లక్షణాలు"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "మునుపటి (_P)"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "తరువాత (_N)"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../src/eog-metadata-sidebar.c:498
+msgid "Name:"
+msgstr "పేరు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:500
+msgid "Width:"
+msgstr "వెడల్పు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:502
+msgid "Height:"
+msgstr "ఎత్తు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:504
+msgid "Type:"
+msgstr "రకము:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+msgid "Bytes:"
+msgstr "బైట్లు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+#: ../src/eog-metadata-sidebar.c:508
+msgid "Folder:"
+msgstr "సంచయము:"
+
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:496
+msgid "General"
+msgstr "సాధారణం"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:528
+msgid "Aperture Value:"
+msgstr "అపెర్ట్యుర్ విలువ:"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:531
+msgid "Exposure Time:"
+msgstr "ఎక్స్‍పోజర్ కాలం:"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:534
+msgid "Focal Length:"
+msgstr "నాభ్యంతర పొడవు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:536
+msgid "Flash:"
+msgstr "ఫ్లాష్:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:540
+msgid "ISO Speed Rating:"
+msgstr "ISO వేగము రేటింగు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:543
+msgid "Metering Mode:"
+msgstr "కొలమాన విధము:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:546
+msgid "Camera Model:"
+msgstr "కెమేరా మోడల్:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:548
+msgid "Date/Time:"
+msgstr "తేదీ/సమయం:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:553
+msgid "Description:"
+msgstr "వివరణ:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:556
+msgid "Location:"
+msgstr "స్థానము:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:559
+msgid "Keywords:"
+msgstr "కీలకపదాలు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:561
+msgid "Author:"
+msgstr "మూలకర్త:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:564
+msgid "Copyright:"
+msgstr "నకలుహక్కు:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:567
+msgid "Details"
+msgstr "వివరాలు"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:524
+msgid "Metadata"
+msgstr "మెటాడేటా"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "ఇలా భద్రపరుచు"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> అసలు దస్త్రము పేరు"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> కౌంటర్"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:6
+msgid "Filename format:"
+msgstr "దస్త్రం పేరు ఆకృతి:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+msgid "Choose a folder"
+msgstr "ఒక సంచయమును ఎంచుకొను"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "Destination folder:"
+msgstr "గమ్య సంచయం:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+msgid "File Path Specifications"
+msgstr "దస్త్ర బాట వివరములు"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "Start counter at:"
+msgstr "దీనివద్ద కౌంటరును ప్రారంభించు:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "Replace spaces with underscores"
+msgstr "ఖాళీలను కింద గీతలతో పునఃస్థాపించు"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "Options"
+msgstr "ఐచ్చికములు"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "Rename from:"
+msgstr "దీని నుండి పేరుమార్చు:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "To:"
+msgstr "ఇచటకు:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+msgid "File Name Preview"
+msgstr "దస్త్రం పేరు మునుజూపు"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "ప్రాధాన్యతలు "
+
+#: ../data/eog-preferences-dialog.ui.h:2
+msgid "Image Enhancements"
+msgstr "బొమ్మను మెరుగుపరుచునవి"
+
+#: ../data/eog-preferences-dialog.ui.h:3
+msgid "Smooth images when zoomed-_out"
+msgstr "బొమ్మనుచిన్నదిగా చేసినప్పుడు మృదువుగా చేయి (_o)"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+msgid "Smooth images when zoomed-_in"
+msgstr "బొమ్మను పెద్దదిగా చేసినప్పుడు మృదువుగా చేయి (_i)"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "_Automatic orientation"
+msgstr "స్వయం చాలక పునశ్ఛరణ (_A)"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Background"
+msgstr "నేపథ్యం"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+msgid "As custom color:"
+msgstr "మలచుకున్న రంగు:"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:3
+msgid "Background Color"
+msgstr "నేపథ్యము రంగు"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+msgid "Transparent Parts"
+msgstr "పారదర్శక భాగాలు"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+msgid "As check _pattern"
+msgstr "క్రమంపద్దతిగా తనిఖీ (_p)"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "As custom c_olor:"
+msgstr "మలచిన వర్ణమువలె (_o):"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "Color for Transparent Areas"
+msgstr "పారదర్శకప్రదేశాల కొరకు రంగు"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As _background"
+msgstr "నేపథ్యం వలె (_b)"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Image View"
+msgstr "బొమ్మ వీక్షణం"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+msgid "Image Zoom"
+msgstr "బొమ్మ జూమ్"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "E_xpand images to fit screen"
+msgstr "తెరకు అమరేటట్టు బొమ్మలను విస్తరించు (_x)"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+msgid "Sequence"
+msgstr "వరుస"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "_Time between images:"
+msgstr "బొమ్మల మధ్య సమయం (_T):"
+
+#: ../data/eog-preferences-dialog.ui.h:20
+msgid "_Loop sequence"
+msgstr "ఆవృత క్రమము (_L)"
+
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "Slideshow"
+msgstr "పలకప్రదర్శన"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "Plugins"
+msgstr "చొప్పింతలు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:1
+msgid "Automatic orientation"
+msgstr "స్వయం చాలక పునశ్ఛరణ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "బొమ్మ స్వయంచాలకంగా భ్రమణం చెందాలా లేదా అన్నది EXIF సర్దుబాటుపై ఆధారపడివుంటుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+"బొమ్మ వెనుకనున్న ప్రదేశములో నింపుటకు వాడబడే రంగు. ఒకవేళ నేపథ్య-రంగు కీ అమర్చబడకపోతే, క్రియాశీల GTK"
+"+ థీముచే రంగు నిర్ణయించబడుతుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:5
+msgid "Interpolate Image"
+msgstr "అంతరనిక్షేప్త బొమ్మ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"జూమ్ తగ్గింపు నందు బొమ్మను అంతరనిక్షిప్తముగా ఉండవలెనా లేదా. ఇది నాణ్యతను సమకూర్చుతుంది కాని సాధారణ "
+"బొమ్మ కంటే ఎంతో కొంత నెమ్మదిగా ఉంటుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:7
+msgid "Extrapolate Image"
+msgstr "బాహ్యనిక్షేప్త బొమ్మ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"జూమ్‌నందు బొమ్మను బాహ్యనిక్షిప్తముగా ఉండవలెనా లేదా. ఇది నాణ్యతా లోపమునకు దారితీస్తుంది మరియు సాధారణ బొమ్మ "
+"కంటే నెమ్మదిగా ఉంటుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:9
+msgid "Transparency indicator"
+msgstr "పారదర్శక సూచిక"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"పారదర్శకత ఎలా సూచించబడాలో నిర్ణయిస్తుంది. చెల్లునటువంటి విలువలు CHECK_PATTERN, COLOR మరియు "
+"NONE. ఒకవేళ COLOR ఎంచుకోబడినట్లయితే, అప్పుడు trans-color కీ వాడబడిన రంగు విలువను "
+"నిర్ణయిస్తుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "చక్రపు జూమ్‌ను జరుపు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "పెద్దదిగా చేయుట కొరకు స్క్రాల్ చక్రాన్ని ఉపయోగించాలా వద్దా."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:13
+msgid "Zoom multiplier"
+msgstr "జూమ్‌ను గుణించునది"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"జూమ్‌చేయుటకు మౌస్ స్క్రాల్ చక్రాన్ని ఉపయోగిస్తున్నప్పుడు గుణిజము ఆనువర్తించబడుతుంది. ప్రతి స్క్రాల్ "
+"ఘటనకు ఉపయోగించబడు పెద్దదిగాచేయు మెట్టుకు వాడబడుటకు ఈ విలువ నిర్ణయిస్తుంది. ఉదాహరణకు, 0.05 "
+"అనునది ప్రతి స్క్రాల్ ఘటనకు 5% జూమ్‌ను పెంచుతుంది మరియు 1.00 అనునది 100% జూమ్ పెంచుతుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:16
+msgid "Transparency color"
+msgstr "పారదర్శక రంగు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"ఒకవేళ పారదర్శక కీ రంగు విలువను కలిగివుంటే, అప్పుడు పారదర్శకతను సూచించుటకు ఉపయోగించే రంగును "
+"ఈ కీ నిర్ణయిస్తుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:18
+msgid "Use a custom background color"
+msgstr "మలచుకున్న నేపథ్యము రంగును వాడు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"ఒకవేళ ఇది క్రియాశీలమైతే, బొమ్మ వెనుక ఉన్న ప్రదేశమును నింపుటకు నేపథ్య రంగు కీ వాడబడుతుంది. ఒకవేళ "
+"అది అమర్చబడకపోతే, నింపు రంగుని ప్రస్తుత GTK+ థీము నిర్ణయిస్తుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:20
+msgid "Loop through the image sequence"
+msgstr "బొమ్మల వరుస ద్వారా ఆవృతం అవ్వు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "అంతములేని ఆవృతములో వరుస బొమ్మలు చూపించవలెనా లేదా."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "ప్రారంభంలో 100% కంటే ఎక్కువ జూమ్‌ను అనుమతించు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"ఒకవేళ ఇది అసత్యమునకు అమర్చితే ప్రారంభములోనే తెరకు సరిపోయేటట్లు అమర్చుటకు చిన్న బొమ్మలు సాగదీయబడవు."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "తరువాత బొమ్మను చూపించేవరకూ కొన్ని సెకనులలో జాప్యము చేయి"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"0 కన్నా పెద్ద విలువ అనునది తెర పైన బొమ్మ తరువాయి బొమ్మ వచ్చులోపల ఎన్ని సెకనులుపాటు ఉండాలి అనునది "
+"నిర్ణయిస్తుంది. సున్నా స్వయంచాలక అన్వేషణను అచేతనముచేస్తుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "కిటికీ సాధనపట్టీని చూపించు/దాయి."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "కిటికీ స్థితిపట్టీని చూపించు/దాయి."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "చిత్రశాల పట్టీని చూపించు/దాయి."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"చిత్రశాల పట్టీ స్థానము. క్రిందకు అయితే 0; ఎడమకు అయితే 1; పైకి అయితే 2; కుడివైపు అయితే 3 అమర్చుము."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "చిత్రశాల ప్యాన్ పరిమాణం మార్చే విధముగా ఉండాలా లేదా."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "కిటికీ ప్రక్క పట్టీని చూపించు/దాయి."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "చిత్రశాలప్యాన్ స్క్రాల్ బటన్‌లను చూపించు/దాయి."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "మార్పులను భద్రపరుచమని అడగకుండా ప్రధాన కిటికీని మూసివేయి."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:35
+msgid "Trash images without asking"
+msgstr "అడగకుండానే బొమ్మలను చెత్తకు పంపండి"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+"ఒకవేళ క్రియాత్మకం చేసినట్టయితే, Eye of GNOME బొమ్మలను చెత్తబుట్టకు తరలించునప్పుడు నిర్ధారణ కోసం "
+"అడగదు, ఒకవేళ ఏదైనా ఫైళ్ళను చెత్తబుట్టకు తరలించలేకపోయినప్పుడు దానికి బదులుగా తొలగించవలసి వస్తే "
+"అప్పుడు అడుగుతుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr "ఏ బొమ్మ లోడవకపోతే దస్త్ర ఎంపికరి ద్వారా వాడుకరి యొక్క చిత్రముల సంచయమును చూపించాలా వద్దా."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"ఒకవేళ క్రియాశీలపరచి వుండి కూడా క్రియాశీల విండోనందు ఏ బొమ్మ లోడుకాకపోతే, దస్త్ర ఎంపికరి వాడుకరి చిత్రముల "
+"సంచయమును XDG ప్రత్యేక వాడుకరి డైరెక్టరీలను ఉపయోగించి ప్రదర్శిస్తుంది. క్రియాహీనపరచినా లేక చిత్రముల "
+"సంచయమును ఇంకా అమర్చకపోయినా ఇది ప్రస్తుతం పనిచేస్తున్న డైరెక్టరీని చూపిస్తుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr "లక్షణముల డైలాగునందలి మెటాడాటా జాబితా దాని స్వంత పేజీను కలిగివుండాలా."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"ఒకవేళ క్రియాత్మకం చేసినట్టయితే, లక్షణముల డైలాగునందు విశదీకృత మెటాడేటా జాబితాను డైలాగునందు దాని స్వంత "
+"పేజీకు తరలించబడుతుంది. ఇది డైలాగును చిన్న తెరల పై మరింత ఉపయోగకరంగా ఉండేటట్లు చేస్తుంది, ఉదా. "
+"నెట్‌బుక్‌ల ద్వారా వాడటం. ఒకవేళ అచేతనపరిచినట్లయితే, విడ్జట్‌ను \"మెటాడాటా\" పేజీనందు చేర్చబడుతుంది."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:41
+msgid "External program to use for editing images"
+msgstr "బొమ్మలను సవరించుటకు వాడే బాహ్య కార్యక్రమం"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"బొమ్మలను సవరించుటకు (ఎప్పుడైతే \"బొమ్మని సవరించు\" సాధనపట్టీని నొక్కినప్పుడు) అనువర్తనము యొక్క "
+"డెస్క్‍టాప్ దస్త్రం పేరు (\".desktop\" తో పాటుగా) వాడుకొను. ఈ విశిష్ట లక్షణాన్ని అచేతనపరుచుటకు ఖాళీ "
+"పదానికి అమర్చు."
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:43
+msgid "Active plugins"
+msgstr "క్రియాశీలక చొప్పింతలు"
+
+#: ../data/org.gnome.eog.gschema.xml.in.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+"క్రియాశీల ప్లగిన్‌ల జాబితా. ఇది క్రియాశీల చొప్పింతల \"Location\"ను కలిగివుండదు. ఇవ్వబడిన చొప్పింత యొక్క "
+"\"Location\"ను పొందుటకు .eog-plugin దస్త్రాన్ని చూడండి."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "రెండు-క్లిక్కులతో పూర్తి తెర"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "రెండు-క్లిక్కులతో పూర్తితెర విధమును క్రియాత్మకముచేయి"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "బొమ్మని తిరిగిలోడుచేయి"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "ప్రస్తుత బొమ్మను తిరిగి లోడుచేయి"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "స్థితిపట్టీ నందు తేది"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "కిటికీ స్థితిపట్టీ నందు బొమ్మ తేదీని చూపిస్తుంది"
+
+#: ../src/eog-close-confirmation-dialog.c:171
+msgid "Close _without Saving"
+msgstr "అడగకుండానే బొమ్మని మూసివేయి (_w)"
+
+#: ../src/eog-close-confirmation-dialog.c:217
+msgid "Question"
+msgstr "ప్రశ్న"
+
+#: ../src/eog-close-confirmation-dialog.c:398
+msgid "If you don't save, your changes will be lost."
+msgstr "ఒకవేళ మీరు భద్రపరచకపోతే, మీరు చేసిన మార్పులు పోతాయి."
+
+#: ../src/eog-close-confirmation-dialog.c:435
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "మూసివేయుటకు ముందుగా \"%s\" బొమ్మకు చేసిన  మార్పులను భద్రపరచమంటారా?"
+
+#: ../src/eog-close-confirmation-dialog.c:642
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] "%d బొమ్మ భద్రపరుచని మార్పులతో ఉన్నది. మూసివేయుటకు ముందుగా మార్పులను భద్రపరచమంటారా?"
+msgstr[1] "%d బొమ్మలు భద్రపరుచని మార్పులతో ఉన్నాయి. మూసివేయుటకు ముందుగా మార్పులను భద్రపరచమంటారా?"
+
+#: ../src/eog-close-confirmation-dialog.c:659
+msgid "S_elect the images you want to save:"
+msgstr "మీరు భద్రపరచాలనుకుంటున్న బొమ్మలను ఎంచుకోండి (_e) :"
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:678
+msgid "If you don't save, all your changes will be lost."
+msgstr "ఒకవేళ మీరు భద్రపరచకపోతే, మీరు చేసిన అన్ని మార్పులు పోతాయి."
+
+#: ../src/eog-error-message-area.c:119
+msgid "_Cancel"
+msgstr "రద్దుచేయి (_C)"
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:841
+msgid "_Reload"
+msgstr "తిరిగిలోడుచేయి (_R)"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:3832
+msgid "Save _As…"
+msgstr "ఇలా భద్రపరుచు...(_A)"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "'%s' బొమ్మను లోడుచేయలేకపోయింది."
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "'%s' బొమ్మను దాచలేకపోయింది."
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "'%s' నందు ఏ బొమ్మలు కనుబడలేదు."
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "ఇచ్చిన స్థానాలలో ఏ బొమ్మలను కలిగిలేవు"
+
+#: ../src/eog-exif-details.c:69
+msgid "Camera"
+msgstr "కెమేరా"
+
+#: ../src/eog-exif-details.c:70
+msgid "Image Data"
+msgstr "బొమ్మ డేటా"
+
+#: ../src/eog-exif-details.c:71
+msgid "Image Taking Conditions"
+msgstr "బొమ్మను తీయు నిబంధనలు"
+
+#: ../src/eog-exif-details.c:72
+msgid "GPS Data"
+msgstr "GPS దత్తాంశం"
+
+#: ../src/eog-exif-details.c:73
+msgid "Maker Note"
+msgstr "రూపకర్త సూచన"
+
+#: ../src/eog-exif-details.c:74
+msgid "Other"
+msgstr "ఇతర"
+
+#: ../src/eog-exif-details.c:76
+msgid "XMP Exif"
+msgstr "XMP Exif"
+
+#: ../src/eog-exif-details.c:77
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
+
+#: ../src/eog-exif-details.c:78
+msgid "XMP Rights Management"
+msgstr "XMP Rights Management"
+
+#: ../src/eog-exif-details.c:79
+msgid "XMP Other"
+msgstr "XMP Other"
+
+#: ../src/eog-exif-details.c:253
+msgid "Tag"
+msgstr "కొస"
+
+#: ../src/eog-exif-details.c:260
+msgid "Value"
+msgstr "విలువ"
+
+#: ../src/eog-exif-details.c:422
+msgid "North"
+msgstr "ఉత్తరం "
+
+#: ../src/eog-exif-details.c:425
+msgid "East"
+msgstr "తూర్పు "
+
+#: ../src/eog-exif-details.c:428
+msgid "West"
+msgstr "పడమర "
+
+#: ../src/eog-exif-details.c:431
+msgid "South"
+msgstr "దక్షిణం"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (lens)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (35mm film)"
+
+#: ../src/eog-file-chooser.c:126
+msgid "File format is unknown or unsupported"
+msgstr "దస్త్ర ఆకృతి తెలియనిది లేదా సహకారములేనిది"
+
+#: ../src/eog-file-chooser.c:131
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"దస్త్రం పేరు పై ఆధారపడి సహకారము ఉన్నటువంటి వ్రాయదగిన దస్త్ర ఆకృతిని Image Viewer "
+"నిర్ణయించలేకపోయింది."
+
+#: ../src/eog-file-chooser.c:132
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "దయచేసి .png లేదా .jpg వంటి ఇతర దస్త్ర పొడిగింతను ప్రయత్నించండి."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:167
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:219
+msgid "All files"
+msgstr "అన్ని దస్త్రాలు"
+
+#: ../src/eog-file-chooser.c:224
+msgid "Supported image files"
+msgstr "సహకారం ఉన్న బొమ్మ దస్త్రాలు"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:296 ../src/eog-metadata-sidebar.c:235
+#: ../src/eog-metadata-sidebar.c:239 ../src/eog-properties-dialog.c:138
+#: ../src/eog-properties-dialog.c:140 ../src/eog-thumb-view.c:519
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "చిణువు"
+msgstr[1] "చిణువులు"
+
+#: ../src/eog-file-chooser.c:466
+msgid "Open Image"
+msgstr "బొమ్మని తెరువు"
+
+#: ../src/eog-file-chooser.c:474
+msgid "Save Image"
+msgstr "బొమ్మను భద్రపరుచు"
+
+#: ../src/eog-file-chooser.c:482
+msgid "Open Folder"
+msgstr "సంచయమును తెరువు"
+
+#: ../src/eog-image.c:615
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "లోడవ్వని బొమ్మ పై రూపాంతరము."
+
+#: ../src/eog-image.c:643
+#, c-format
+msgid "Transformation failed."
+msgstr "రూపాంతరం విఫలమైనది."
+
+#: ../src/eog-image.c:1104
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "ఈ దస్త్ర ఆకృతికి EXIF సహకారం లేదు."
+
+#: ../src/eog-image.c:1253
+#, c-format
+msgid "Image loading failed."
+msgstr "బొమ్మను నింపుటలో విఫలమైనది."
+
+#: ../src/eog-image.c:1834 ../src/eog-image.c:1954
+#, c-format
+msgid "No image loaded."
+msgstr "ఎటువంటి బొమ్మ లోడవ్వలేదు."
+
+#: ../src/eog-image.c:1842 ../src/eog-image.c:1963
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "మీకు దస్త్రమును దాచుటకు అవసరమైన అనుమతులు లేవు"
+
+#: ../src/eog-image.c:1852 ../src/eog-image.c:1974
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "తాత్కాలిక దస్త్రాన్ని సృష్టించుటలో విఫలమైనది."
+
+#: ../src/eog-image-jpeg.c:375
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "దీనిని భద్రపరుచుటకు తాత్కాలిక దస్త్రాన్ని సృష్టించుట సాధ్యముకాలేదు:%s"
+
+#: ../src/eog-image-jpeg.c:394
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "JPEG దస్త్రం లోడుచేయుటకు మెమొరీను కేటాయించలేకపోయింది"
+
+#: ../src/eog-metadata-sidebar.c:248 ../src/eog-properties-dialog.c:155
+msgid "Unknown"
+msgstr "తెలియదు"
+
+#: ../src/eog-metadata-sidebar.c:506
+msgid "File size:"
+msgstr "దస్త్ర పరిమాణం:"
+
+#: ../src/eog-metadata-sidebar.c:517 ../src/eog-properties-dialog.c:674
+#: ../src/eog-window.c:3836
+msgid "Show the folder which contains this file in the file manager"
+msgstr "దస్త్ర నిర్వాహకంలో ఉన్న దస్త్రము కలిగిఉన్న సంచయమును చూపించు"
+
+#: ../src/eog-preferences-dialog.c:114
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu క్షణం"
+msgstr[1] "%lu క్షణాలు"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "బొమ్మ అమరికలు"
+
+#: ../src/eog-print-image-setup.c:906
+msgid "Image"
+msgstr "బొమ్మ"
+
+#: ../src/eog-print-image-setup.c:907
+msgid "The image whose printing properties will be set up"
+msgstr "బొమ్మను ముద్రించే లక్షణాలు అమర్చబడతాయి"
+
+#: ../src/eog-print-image-setup.c:913
+msgid "Page Setup"
+msgstr "పేజీ అమరిక"
+
+#: ../src/eog-print-image-setup.c:914
+msgid "The information for the page where the image will be printed"
+msgstr "బొమ్మ ముద్రించబడే పేజీ కొరకు సమాచారం"
+
+#: ../src/eog-print-image-setup.c:942
+msgid "Position"
+msgstr "స్థానము"
+
+#: ../src/eog-print-image-setup.c:946
+msgid "_Left:"
+msgstr "ఎడమ (_L):"
+
+#: ../src/eog-print-image-setup.c:948
+msgid "_Right:"
+msgstr "కుడి (_R):"
+
+#: ../src/eog-print-image-setup.c:949
+msgid "_Top:"
+msgstr "పైన (_T):"
+
+#: ../src/eog-print-image-setup.c:950
+msgid "_Bottom:"
+msgstr "కింద (_B):"
+
+#: ../src/eog-print-image-setup.c:953
+msgid "C_enter:"
+msgstr "మధ్యన (_e):"
+
+#: ../src/eog-print-image-setup.c:958
+msgid "None"
+msgstr "ఏదీకాదు"
+
+#: ../src/eog-print-image-setup.c:960
+msgid "Horizontal"
+msgstr "అడ్డము"
+
+#: ../src/eog-print-image-setup.c:962
+msgid "Vertical"
+msgstr "నిలువు"
+
+#: ../src/eog-print-image-setup.c:964
+msgid "Both"
+msgstr "రెండియు"
+
+#: ../src/eog-print-image-setup.c:980
+msgid "Size"
+msgstr "పరిమాణము"
+
+#: ../src/eog-print-image-setup.c:983
+msgid "_Width:"
+msgstr "వెడల్పు (_W):"
+
+#: ../src/eog-print-image-setup.c:985
+msgid "_Height:"
+msgstr "ఎత్తు (_H):"
+
+#: ../src/eog-print-image-setup.c:988
+msgid "_Scaling:"
+msgstr "కొలమానము (_S):"
+
+#: ../src/eog-print-image-setup.c:999
+msgid "_Unit:"
+msgstr "యూనిట్ (_U):"
+
+#: ../src/eog-print-image-setup.c:1004
+msgid "Millimeters"
+msgstr "మిల్లీమీటర్లు"
+
+#: ../src/eog-print-image-setup.c:1006
+msgid "Inches"
+msgstr "అంగుళాలు"
+
+#: ../src/eog-print-image-setup.c:1035
+msgid "Preview"
+msgstr "మునుజూపు"
+
+#: ../src/eog-save-as-dialog-helper.c:161
+msgid "as is"
+msgstr "వలె ఉన్నది"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:131
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
+
+#: ../src/eog-thumb-view.c:547
+msgid "Taken on"
+msgstr "తీసుకోబడినది"
+
+#: ../src/eog-uri-converter.c:984
+#, c-format
+msgid "At least two file names are equal."
+msgstr "కనీసం రెండు దస్త్రాల పేర్లు సమంగా ఉండాలి."
+
+#: ../src/eog-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "Image Viewer సహాయమును  ప్రదర్శించలేదు"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (చెల్లని యూనికోడ్)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:535
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i పిక్సెల్  %s    %i%%"
+msgstr[1] "%i × %i పిక్సెళ్ళు  %s    %i%%"
+
+#: ../src/eog-window.c:843 ../src/eog-window.c:2780
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "దాయి (_d)"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:853
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"\"%s\" బొమ్మ బాహ్య అనువర్తనముచే సవరించబడింది.\n"
+"మీరు దానిని తిరిగిలోడుచేయాలనుకుంటున్నారా?"
+
+#: ../src/eog-window.c:1017
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "ఎంచుకున్న బొమ్మని తెరుచుటకు \"%s\"ని వినియోగించు"
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1173
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "\"%s\" బొమ్మను భద్రపరుస్తున్నది (%u/%u)"
+
+#: ../src/eog-window.c:1555
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "\"%s\" బొమ్మని తెరుస్తున్నది"
+
+#: ../src/eog-window.c:2039
+msgid "Viewing a slideshow"
+msgstr "పలకప్రదర్శనను వీక్షించుట"
+
+#: ../src/eog-window.c:2264
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"దస్త్రం ముద్రించుటలో దోషం:\n"
+"%s"
+
+#: ../src/eog-window.c:2563
+msgid "Toolbar Editor"
+msgstr "సాధనపట్టీ కూర్పకము"
+
+#: ../src/eog-window.c:2566
+msgid "_Reset to Default"
+msgstr "అప్రమేయమునకు తిరిగి అమర్చు (_R)"
+
+#: ../src/eog-window.c:2727 ../src/eog-window.c:2742
+msgid "Error launching System Settings: "
+msgstr "వ్యవస్థ అమరికలను ప్రారంభించుటలో దోషము: "
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2778
+msgid "_Open Background Preferences"
+msgstr "నేపథ్య ప్రాధాన్యతలను తెరువు (_O)"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2794
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+"\"%s\" బొమ్మ డెస్క్‍టాప్ నేపథ్యము వలె అమర్చబడింది.\n"
+"అది కనిపించువిధమును సవరించాలనుకుంటున్నారా?"
+
+#: ../src/eog-window.c:3261
+msgid "Saving image locally…"
+msgstr "బొమ్మను స్థానికంగా భద్రపరుస్తున్నది..."
+
+#: ../src/eog-window.c:3341
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+"\"%s\" ని ఖచ్చితముగా చెత్తబుట్టకి\n"
+"తరలించాలనుకుంటున్నారా?"
+
+#: ../src/eog-window.c:3344
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr "\"%s\" కొరకు చెత్తబుట్ట కనుగొనబడలేదు. మీరు ఈ బొమ్మను శాశ్వతముగా తీసివేద్దామనుకుంటున్నారా?"
+
+#: ../src/eog-window.c:3349
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+"ఎంచుకున్న బొమ్మని చెత్తబుట్టకి \n"
+"తరలించాలనుకుంటున్నారా?"
+msgstr[1] ""
+"ఎంచుకున్న %d బొమ్మలను చెత్తబుట్టలోకి\n"
+"తరలించాలనుకుంటున్నారా?"
+
+#: ../src/eog-window.c:3354
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"ఎంచుకున్న వాటిలో కొన్ని బొమ్మలు చెత్తబుట్టకు తరలించబడవు మరియు శాశ్వతముగా తొలగించబడతాయి. మీరు "
+"ఖచ్చితముగా కొనసాగాలనుకుంటున్నారా?"
+
+#: ../src/eog-window.c:3371 ../src/eog-window.c:3862 ../src/eog-window.c:3886
+msgid "Move to _Trash"
+msgstr "చెత్తబుట్టకు తరలించు (_T)"
+
+#: ../src/eog-window.c:3373
+msgid "_Do not ask again during this session"
+msgstr "ఈ చర్యాకాలములో మరలా అడుగవద్దు (_D)"
+
+#: ../src/eog-window.c:3418 ../src/eog-window.c:3432
+#, c-format
+msgid "Couldn't access trash."
+msgstr "చెత్తబుట్టకు ప్రవేశ సౌలభ్యత కుదురుటలేదు."
+
+#: ../src/eog-window.c:3440
+#, c-format
+msgid "Couldn't delete file"
+msgstr "దస్త్రాన్ని తొలగించలేకపోతుంది"
+
+#: ../src/eog-window.c:3536
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "%s బొమ్మని తొలగించుటలో దోషం"
+
+#: ../src/eog-window.c:3783
+msgid "_Image"
+msgstr "బొమ్మ (_I)"
+
+#: ../src/eog-window.c:3784
+msgid "_Edit"
+msgstr "సవరణ (_E)"
+
+#: ../src/eog-window.c:3786
+msgid "_Go"
+msgstr "వెళ్ళు (_G)"
+
+#: ../src/eog-window.c:3787
+msgid "_Tools"
+msgstr "సాధనాలు (_T)"
+
+#: ../src/eog-window.c:3790
+msgid "_Open…"
+msgstr "తెరువు...(_O)"
+
+#: ../src/eog-window.c:3791
+msgid "Open a file"
+msgstr "ఒక దస్త్రం తెరువు"
+
+#: ../src/eog-window.c:3793
+msgid "_Close"
+msgstr "మూసివేయి (_C)"
+
+#: ../src/eog-window.c:3794
+msgid "Close window"
+msgstr "కిటికీని మూసివేయి"
+
+#: ../src/eog-window.c:3796
+msgid "T_oolbar"
+msgstr "సాధనపట్టీ (_o)"
+
+#: ../src/eog-window.c:3797
+msgid "Edit the application toolbar"
+msgstr "అనువర్తనము సాధనపట్టీని సవరించు"
+
+#: ../src/eog-window.c:3800
+msgid "Preferences for Image Viewer"
+msgstr "బొమ్మ వీక్షకం కొరకు ప్రాధాన్యతలు"
+
+#: ../src/eog-window.c:3802
+msgid "_Contents"
+msgstr "విషయసూచిక (_C)"
+
+#: ../src/eog-window.c:3803
+msgid "Help on this application"
+msgstr "ఈ అనువర్తనమునకై సహాయం"
+
+#: ../src/eog-window.c:3805
+msgid "_About"
+msgstr "గురించి (_A)"
+
+#: ../src/eog-window.c:3806
+msgid "About this application"
+msgstr "ఈ అనువర్తనము గురించి"
+
+#: ../src/eog-window.c:3812
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "ప్రస్థుత కిటికీలో సాధనపట్టీ యొక్క కనిపించువిధమును మార్చుతుంది"
+
+#: ../src/eog-window.c:3815
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "ప్రస్థుత కిటికీలో స్థితిపట్టీ యొక్క కనిపించువిధమును మార్చుతుంది"
+
+#: ../src/eog-window.c:3818
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr "ప్రస్థుత కిటికీలో చిత్రశాల పట్టీ కనిపించువిధమును మార్చుతుంది"
+
+#: ../src/eog-window.c:3821
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "ప్రస్థుత కిటికీలో పక్కపట్టీ యొక్క కనిపించువిధమును మార్చుతుంది"
+
+#: ../src/eog-window.c:3826
+msgid "_Save"
+msgstr "భద్రపరుచు (_S)"
+
+#: ../src/eog-window.c:3827
+msgid "Save changes in currently selected images"
+msgstr "ప్రస్తుతం ఎంచుకున్న బొమ్మలలో మార్పులను భద్రపరుచు"
+
+#: ../src/eog-window.c:3829
+msgid "Open _with"
+msgstr "దీనితో తెరువు (_w)"
+
+#: ../src/eog-window.c:3830
+msgid "Open the selected image with a different application"
+msgstr "ఎంచుకున్న బొమ్మని వేరొక అనువర్తనముతో తెరువు"
+
+#: ../src/eog-window.c:3833
+msgid "Save the selected images with a different name"
+msgstr "ఎంచుకున్న బొమ్మలను వేరొక పేరుతో భద్రపరుచు"
+
+#: ../src/eog-window.c:3835
+msgid "Show Containing _Folder"
+msgstr "కలిగి ఉన్న సంచయమును చూపుము (_F)"
+
+#: ../src/eog-window.c:3838
+msgid "_Print…"
+msgstr "ముద్రించు...(_P)"
+
+#: ../src/eog-window.c:3839
+msgid "Print the selected image"
+msgstr "ఎంచుకున్న బొమ్మనుముద్రించు"
+
+#: ../src/eog-window.c:3841
+msgid "Prope_rties"
+msgstr "లక్షణాలు (_r)"
+
+#: ../src/eog-window.c:3842
+msgid "Show the properties and metadata of the selected image"
+msgstr "ఎంచుకున్న బొమ్మ యొక్క లక్షణములను మరియు మెటాడేటాను చూపించు"
+
+#: ../src/eog-window.c:3844
+msgid "_Undo"
+msgstr "రద్దుచేయి (_U)"
+
+#: ../src/eog-window.c:3845
+msgid "Undo the last change in the image"
+msgstr "బొమ్మలో ఆఖరుగా చేసిన మార్పును రద్దుచేయి"
+
+#: ../src/eog-window.c:3847
+msgid "Flip _Horizontal"
+msgstr "అడ్డముగా తిప్పు (_H)"
+
+#: ../src/eog-window.c:3848
+msgid "Mirror the image horizontally"
+msgstr "బొమ్మను అడ్డముగా అద్దములో చూపు"
+
+#: ../src/eog-window.c:3850
+msgid "Flip _Vertical"
+msgstr "నిలువుగా తిప్పు (_V)"
+
+#: ../src/eog-window.c:3851
+msgid "Mirror the image vertically"
+msgstr "బొమ్మను నిలువుగా అద్దములో చూపు"
+
+#: ../src/eog-window.c:3853
+msgid "_Rotate Clockwise"
+msgstr "సవ్యదిశలో తిప్పు (_R)"
+
+#: ../src/eog-window.c:3854
+msgid "Rotate the image 90 degrees to the right"
+msgstr "బొమ్మను 90 డిగ్రీలలో కుడివైపునకు తిప్పు"
+
+#: ../src/eog-window.c:3856
+msgid "Rotate Counterc_lockwise"
+msgstr "అపసవ్యదిశలో తిప్పు (_l)"
+
+#: ../src/eog-window.c:3857
+msgid "Rotate the image 90 degrees to the left"
+msgstr "బొమ్మను 90 డిగ్రీలలో ఎడమవైపునకు తిప్పు"
+
+#: ../src/eog-window.c:3859
+msgid "Set as Wa_llpaper"
+msgstr "నేపథ్యచిత్రం వలె అమర్చు (_l)"
+
+#: ../src/eog-window.c:3860
+msgid "Set the selected image as the wallpaper"
+msgstr "ఎంచుకున్న బొమ్మని నేపథ్యచిత్రముగా అమర్చు"
+
+#: ../src/eog-window.c:3863
+msgid "Move the selected image to the trash folder"
+msgstr "ఎంచుకున్న బొమ్మని చెత్తబుట్ట సంచయానికి తరలించు"
+
+#: ../src/eog-window.c:3865
+msgid "_Copy"
+msgstr "నకలుతీయి (_C)"
+
+#: ../src/eog-window.c:3866
+msgid "Copy the selected image to the clipboard"
+msgstr "ఎంచుకున్న బొమ్మని క్లిప్‌బోర్డునకు నకలుతీయి"
+
+#: ../src/eog-window.c:3868 ../src/eog-window.c:3877 ../src/eog-window.c:3880
+msgid "_Zoom In"
+msgstr "పెద్దగాచేయి (_Z)"
+
+#: ../src/eog-window.c:3869 ../src/eog-window.c:3878
+msgid "Enlarge the image"
+msgstr "బొమ్మను పెద్దది చేయి"
+
+#: ../src/eog-window.c:3871 ../src/eog-window.c:3883
+msgid "Zoom _Out"
+msgstr "చిన్నగాచేయి (_O)"
+
+#: ../src/eog-window.c:3872 ../src/eog-window.c:3881 ../src/eog-window.c:3884
+msgid "Shrink the image"
+msgstr "బొమ్మను కుదించు"
+
+#: ../src/eog-window.c:3874
+msgid "_Normal Size"
+msgstr "సాధారణ పరిమాణం (_N)"
+
+#: ../src/eog-window.c:3875
+msgid "Show the image at its normal size"
+msgstr "బొమ్మను దాని సాధారణ పరిమాణం వద్ద చూపించు"
+
+#: ../src/eog-window.c:3892
+msgid "_Fullscreen"
+msgstr "పూర్తితెర (_F)"
+
+#: ../src/eog-window.c:3893
+msgid "Show the current image in fullscreen mode"
+msgstr "ప్రస్తుతపు బొమ్మని పూర్తితెర విధములో చూపించు"
+
+#: ../src/eog-window.c:3895
+msgid "Pause Slideshow"
+msgstr "పలకప్రదర్శనను నిలిపివేయి"
+
+#: ../src/eog-window.c:3896
+msgid "Pause or resume the slideshow"
+msgstr "పలకప్రదర్శనను నిలిపివేయి లేదా పునఃప్రారంభించు"
+
+#: ../src/eog-window.c:3898
+msgid "_Best Fit"
+msgstr "ఉత్తమ అమరిక (_B)"
+
+#: ../src/eog-window.c:3899
+msgid "Fit the image to the window"
+msgstr "బొమ్మను కిటికీకి సరిపోయేటట్లు అమర్చు"
+
+#: ../src/eog-window.c:3904 ../src/eog-window.c:3919
+msgid "_Previous Image"
+msgstr "మునుపటి బొమ్మ (_P)"
+
+#: ../src/eog-window.c:3905
+msgid "Go to the previous image of the gallery"
+msgstr "చిత్రశాల నందు మునుపటి బొమ్మకు వెళ్ళు"
+
+#: ../src/eog-window.c:3907
+msgid "_Next Image"
+msgstr "తరువాత బొమ్మ (_N)"
+
+#: ../src/eog-window.c:3908
+msgid "Go to the next image of the gallery"
+msgstr "చిత్రశాల నందు తదుపరి బొమ్మకు వెళ్ళు"
+
+#: ../src/eog-window.c:3910 ../src/eog-window.c:3922
+msgid "_First Image"
+msgstr "మొదటి బొమ్మ (_F)"
+
+#: ../src/eog-window.c:3911
+msgid "Go to the first image of the gallery"
+msgstr "చిత్రశాల నందు మొదటి బొమ్మకు వెళ్ళు"
+
+#: ../src/eog-window.c:3913 ../src/eog-window.c:3925
+msgid "_Last Image"
+msgstr "చివరి బొమ్మ (_L)"
+
+#: ../src/eog-window.c:3914
+msgid "Go to the last image of the gallery"
+msgstr "చిత్రశాల నందు చివరి బొమ్మకు వెళ్ళు"
+
+#: ../src/eog-window.c:3916
+msgid "_Random Image"
+msgstr "యాదృచ్ఛిక బొమ్మ (_R)"
+
+#: ../src/eog-window.c:3917
+msgid "Go to a random image of the gallery"
+msgstr "చిత్రశాల నందు యాదృచ్ఛిక బొమ్మకు వెళ్ళు"
+
+#: ../src/eog-window.c:3931
+msgid "S_lideshow"
+msgstr "పలకప్రదర్శన(_l)"
+
+#: ../src/eog-window.c:3932
+msgid "Start a slideshow view of the images"
+msgstr "బొమ్మల యొక్క పలకప్రదర్శన వీక్షణాన్ని ప్రారంభించు"
+
+#: ../src/eog-window.c:4000
+msgid "Previous"
+msgstr "మునుపటి"
+
+#: ../src/eog-window.c:4004
+msgid "Next"
+msgstr "తరువాత"
+
+#: ../src/eog-window.c:4008
+msgid "Right"
+msgstr "కుడి"
+
+#: ../src/eog-window.c:4011
+msgid "Left"
+msgstr "ఎడమ"
+
+#: ../src/eog-window.c:4014
+msgid "Show Folder"
+msgstr "సంచయమును చూపించు"
+
+#: ../src/eog-window.c:4017
+msgid "In"
+msgstr "లోపలికి"
+
+#: ../src/eog-window.c:4020
+msgid "Out"
+msgstr "బయటికి"
+
+#: ../src/eog-window.c:4023
+msgid "Normal"
+msgstr "సాధారణ"
+
+#: ../src/eog-window.c:4026
+msgid "Fit"
+msgstr "తగిన"
+
+#: ../src/eog-window.c:4029
+msgid "Gallery"
+msgstr "చిత్రశాల"
+
+#: ../src/eog-window.c:4046
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "చెత్తబుట్ట"
+
+#: ../src/eog-window.c:4412
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "%s వాడి ప్రస్తుత బొమ్మను సవరించు"
+
+#: ../src/eog-window.c:4414
+msgid "Edit Image"
+msgstr "బొమ్మను సవరించు"
+
+#: ../src/eog-window.c:5747
+msgid "The GNOME image viewer."
+msgstr "గ్నోమ్ బొమ్మ వీక్షకము."
+
+#: ../src/eog-window.c:5750
+msgid "translator-credits"
+msgstr ""
+"Bharat Kumar <jonnalagaddabharat@gmail.com>,\n"
+"కృష్ణబాబు కె <kkrothap@redhat.com> 2009, 2010,\n"
+"Praveen Illa <mail2ipn@gmail.com>, 2011-13."
+
+#: ../src/main.c:71
+msgid "GNOME Image Viewer"
+msgstr "గ్నోమ్ బొమ్మ వీక్షకం"
+
+#: ../src/main.c:78
+msgid "Open in fullscreen mode"
+msgstr "పూర్తితెర విధములో తెరువు"
+
+#: ../src/main.c:79
+msgid "Disable image gallery"
+msgstr "చిత్రశాలని అచేతనపరుచు"
+
+#: ../src/main.c:80
+msgid "Open in slideshow mode"
+msgstr "పలకప్రదర్శన విధములో తెరువు"
+
+#: ../src/main.c:81
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "ఉన్నదానిని తిరిగి ఉపయోగించుటకు బదులుగా కొత్త ప్రక్రియను ప్రారంభించు"
+
+#: ../src/main.c:82
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr "ఒక కిటికీ నందు తెరుచును, వొకవేళ బహుళ కిటికీలు తెరువబడితే మొదటిది ఉపయోగించబడును"
+
+#: ../src/main.c:84
+msgid "Show the application's version"
+msgstr "అనువర్తనము యొక్క రూపాంతరాన్ని చూపించు"
+
+#: ../src/main.c:116
+msgid "[FILE…]"
+msgstr "[FILE…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:129
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "అందుబాటులో వున్న అదేశ వరుస ఐచ్చికముల కొరకు '%s --help' నడుపు."
+
+#~ msgid "Set as _Desktop Background"
+#~ msgstr "డెస్క్‍టాప్ నేపథ్యముగా అమర్చు (_D)"
+
+#~ msgctxt "PrefDlgSlideSwitchPrefix"
+#~ msgid "_Switch image after:"
+#~ msgstr "తరువాత బొమ్మను మార్చు (_S):"
+
+#~ msgid "Eye of GNOME Preferences"
+#~ msgstr "Eye of GNOME ప్రాధాన్యతలు"
+
+#~ msgid "Running in fullscreen mode"
+#~ msgstr "పూర్తితెర విధములో నడుస్తున్నది"
+
+#~ msgid "_Retry"
+#~ msgstr "మళ్ళీ ప్రయత్నించు (_R)"
+
+#~ msgid "Eye of GNOME"
+#~ msgstr "Eye of GNOME"
+
+#~ msgid "_Slideshow"
+#~ msgstr "పలకప్రదర్శన (_S)"
+
+#~ msgid "All Images"
+#~ msgstr "అన్ని ప్రతిబింబములు"
+
+#~ msgid "Load Image"
+#~ msgstr "ప్రతిమను నింపుము"
+
+#~ msgid ""
+#~ "This program is free software; you can redistribute it and/or modify it "
+#~ "under the terms of the GNU General Public License as published by the "
+#~ "Free Software Foundation; either version 2 of the License, or (at your "
+#~ "option) any later version.\n"
+#~ msgstr ""
+#~ "ఈ ప్రోగ్రామ్ స్వతంత్ర సాఫ్ట్వేర్; నీవు దానిని మరలపంచవచ్చు స్వతంత్ర సాఫ్ట్వేర్ సంస్థ వెలువరిచిన GNU "
+#~ "సర్వసామన్యమైన ప్రజా లైసెన్సు వివరణం 2లైసెన్సు లేదా వేరే (మీ ఐచ్చికం వద్ద) వివరణల ప్రకారం "
+#~ "మార్చవచ్చు.\n"
+
+#~ msgid ""
+#~ "This program is distributed in the hope that it will be useful, but "
+#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
+#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+#~ "Public License for more details.\n"
+#~ msgstr ""
+#~ "ఈ ప్రోగ్రామ్ ఉపయోగపడుతుందనే నమ్మకంతో పంపిణీచేయబడుతోంది, అయితే ఏ హామీ లేకుండా; వ్యాపారసంబందంగా కాని "
+#~ "లేదా ఒక నిర్దిష్ట అవసరానికిచెందినదని కాని హామీ లేదు. ఎక్కువ సమాచారం కొరకు GNU జనరల్ పబ్లిక్ లైసెన్స్  "
+#~ "ను చూడండి.\n"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program; if not, write to the Free Software Foundation, Inc., "
+#~ "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+#~ msgstr ""
+#~ "మీరు ఈ ప్రోగ్రామ్ నకలు తోటి ఒక GNU జనరల్ పబ్లిక్ లైసెన్స్  నకలుగూడా పొందిఉంటారు; పొందక పోతే,  "
+#~ "Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA "
+#~ "02111-1307, USA.కు వ్రాయండి."
+
+#~ msgid "_File"
+#~ msgstr "దస్త్రం (_F)"
+
+#, fuzzy
+#~ msgid "Set up the page properties for printing"
+#~ msgstr "ముద్రణ కొరకు పుట లక్షణములను అమర్చుము"
+
+#~ msgid "Collection"
+#~ msgstr "సంపుటము"
+
+#~ msgid "Plugin"
+#~ msgstr "ప్లగ్ ఇన్"
+
+#~ msgid "Enabled"
+#~ msgstr "ఉపయోగించబడిన"
+
+#~ msgid "C_onfigure"
+#~ msgstr "ఆకృతీకరించుము (_o)"
+
+#~ msgid "A_ctivate"
+#~ msgstr "క్రియాశీలముచేయి (_c)"
+
+#~ msgid "Ac_tivate All"
+#~ msgstr "అన్నిటిని క్రియాశీలముచేయి (_t)"
+
+#~ msgid "_Deactivate All"
+#~ msgstr "అన్నిటిని క్రియాహీనపరచు (_D)"
+
+#~ msgid "Active _Plugins:"
+#~ msgstr "క్రియాశీలమైన ప్లగ్ఇన్స్ (_P):"
+
+#~ msgid "_About Plugin"
+#~ msgstr "ప్లగ్ ఇన్ గురించి (_A)"
+
+#~ msgid "C_onfigure Plugin"
+#~ msgstr "ప్లగ్ ఇన్ ఆకృతీకరణ (_o)"
+
+#~ msgid "<b>Details</b>"
+#~ msgstr "<b>వివరాలు</b>"
+
+#~ msgid "<b>Height:</b>"
+#~ msgstr "<b>పొడవు :</b>"
+
+#~ msgid "<b>Name:</b>"
+#~ msgstr "<b> నామము:</b>"
+
+#~ msgid "<b>Type:</b>"
+#~ msgstr "<b> రకం:</b>"
+
+#~ msgid "<b>Width:</b>"
+#~ msgstr "<b>వెడెల్పు :</b>"
+
+#~ msgid "Save _As..."
+#~ msgstr "ఇలా దాచు (_A)..."

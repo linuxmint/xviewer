@@ -1,0 +1,1735 @@
+# Translation of Eye of GNOME Documentation to Greek
+# Initial translation by Simos.
+# kostas: 29Oct2003, first update for Gnome 2.6
+# kostas: 25Jan2004, update
+# kostas: 22feb2004, update
+# kostas: 164 messages, 04Nov2002, compelted translation.
+# simos: 164 messages, 04Nov2002, full review of translation.
+# kostas: updated th translation, 03Dec2002, for Gnome 2.1x.
+# kostas: updated translation, 25May2003, for Gnome 2.4x.
+# kostas: updated translation, 18Jul2003.
+# Simos Xenitellis <simos@hellug.gr>, 2000, 2001, 2002.2003.
+# Kostas Papadimas <pkst@gnome.org>, 2002,2003, 2004, 2005, 2006, 2007, 2008.
+# Nikos Charonitakis <charosn@her.forthnet.gr>, 2005.
+# Pierros Papadeas <ppapadeas@gmail.com>, 2008.
+# Michael Kotsarinis <mk73628@gmail.com>, 2011.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2012, 2013, 2014.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013.
+# Vangelis Skarmoutsos <skarmoutsosv@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-HEAD-po-el-4121\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-08-10 15:23+0000\n"
+"PO-Revision-Date: 2014-08-13 16:08+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Project-Style: gnome\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "Εμφάνιση “_%s”"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_Μετακίνηση στην εργαλειοθήκη"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "Μετακίνηση του επιλεγμένου αντικειμένου στην εργαλειοθήκη"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "Α_φαίρεση από την εργαλειοθήκη"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "Αφαίρεση του επιλεγμένου αντικειμένου από την εργαλειοθήκη"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "_Διαγραφή εργαλειοθήκης"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "Αφαίρεση της επιλεγμένης εργαλειοθήκης"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "Διαχωριστικό"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4038
+msgid "_View"
+msgstr "_Προβολή"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4064
+msgid "_Toolbar"
+msgstr "Ερ_γαλειοθήκη"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4067
+msgid "_Statusbar"
+msgstr "_Γραμμή κατάστασης"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4070
+msgid "_Image Gallery"
+msgstr "Συ_λλογή εικόνων"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4073
+msgid "Side _Pane"
+msgstr "Πλευρικός _πίνακας"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4052
+msgid "Prefere_nces"
+msgstr "_Προτιμήσεις"
+
+#: ../data/eog-app-menu.xml.h:7 ../data/eog-preferences-dialog.ui.h:2
+#: ../src/eog-window.c:2565 ../src/eog-window.c:4041
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../data/eog-app-menu.xml.h:8 ../src/eog-window.c:4058
+msgid "_About"
+msgstr "Π_ερί"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "Έ_ξοδος"
+
+#: ../data/eog.appdata.xml.in.h:1
+msgid ""
+"The Eye of GNOME is the official image viewer for the GNOME desktop. It "
+"integrates with the GTK+ look and feel of GNOME, and supports many image "
+"formats for viewing single images or images in a collection."
+msgstr ""
+"Το Μάτι του GNOME είναι η επίσημη εφαρμογή προβολής εικόνων για το GNOME. "
+"Ενσωματώνεται με την εμφάνιση και αίσθηση του GTK+ του GNOME, και "
+"υποστηρίζει πολλούς τύπους εικόνων για προβολή ως απλές εικόνες ή εικόνες σε "
+"μια συλλογή."
+
+#: ../data/eog.appdata.xml.in.h:2
+msgid ""
+"The Eye of GNOME also allows to view the images in a fullscreen slideshow "
+"mode or set an image as the desktop wallpaper. It reads the camera tags to "
+"automatically rotate your images in the correct portrait or landscape "
+"orientation."
+msgstr ""
+"Το Μάτι του GNOME επιτρέπει επίσης την προβολή αλληλουχίας εικόνων σε πλήρη "
+"οθόνη ή τον ορισμό μιας εικόνας ως ταπετσαρία της επιφάνειας εργασίας. "
+"Αναγνωρίζει τις ετικέτες από τη φωτογραφική μηχανή και περιστρέφει αυτόματα "
+"τις εικόνες σε κατακόρυφο ή οριζόντιο προσανατολισμό."
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-application.c:291
+#: ../src/eog-window.c:6163
+msgid "Image Viewer"
+msgstr "Εφαρμογή προβολής εικόνων"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Περιηγηθείτε και περιστρέψτε εικόνες"
+
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "Εικόνα;Αλληλουχία εικόνων;Γραφικά;Picture;Slideshow;Graphics;"
+
+#
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:5039
+msgid "Image Properties"
+msgstr "Ιδιότητες εικόνας"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_Προηγούμενο"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "Επόμε_νο"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../data/eog-preferences-dialog.ui.h:3 ../src/eog-window.c:2563
+#: ../src/eog-window.c:4046
+msgid "_Close"
+msgstr "_Κλείσιμο"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:496
+msgid "Name:"
+msgstr "Όνομα:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:498
+msgid "Width:"
+msgstr "Πλάτος:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:500
+msgid "Height:"
+msgstr "Ύψος:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+#: ../src/eog-metadata-sidebar.c:502
+msgid "Type:"
+msgstr "Τύπος:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "Bytes:"
+
+#
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:506
+msgid "Folder:"
+msgstr "Φάκελος:"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:494
+msgid "General"
+msgstr "Γενικά"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:531
+msgid "Aperture Value:"
+msgstr "Τιμή διαφράγματος"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:534
+msgid "Exposure Time:"
+msgstr "Χρόνος έκθεσης:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:537
+msgid "Focal Length:"
+msgstr "Εστιακή απόσταση:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:539
+msgid "Flash:"
+msgstr "Φλας:"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:543
+msgid "ISO Speed Rating:"
+msgstr "Ταχύτητα ISO:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:546
+msgid "Metering Mode:"
+msgstr "Λειτουργία μέτρησης:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:549
+msgid "Camera Model:"
+msgstr "Μοντέλο κάμερας:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:551
+msgid "Date/Time:"
+msgstr "Ημερομηνία/Ώρα:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:556
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:559
+msgid "Location:"
+msgstr "Τοποθεσία:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:562
+msgid "Keywords:"
+msgstr "Λέξεις κλειδιά:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:564
+msgid "Author:"
+msgstr "Δημιουργός:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:567
+msgid "Copyright:"
+msgstr "Πνευματικά δικαιώματα:"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:570
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: ../data/eog-image-properties-dialog.ui.h:26
+#: ../src/eog-metadata-sidebar.c:527
+msgid "Metadata"
+msgstr "Μεταδεδομένα"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Αποθήκευση ως"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:2
+#: ../src/eog-close-confirmation-dialog.c:172
+#: ../src/eog-error-message-area.c:119 ../src/eog-file-chooser.c:456
+#: ../src/eog-file-chooser.c:464 ../src/eog-file-chooser.c:472
+#: ../src/eog-window.c:3367 ../src/eog-window.c:3370 ../src/eog-window.c:3621
+msgid "_Cancel"
+msgstr "_Ακύρωση"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#: ../src/eog-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "Αποθήκευση _ως"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> αρχικό όνομα αρχείου"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> μετρητής"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr "_Μορφή ονόματος αρχείου:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr "Φάκελος _προορισμού:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "Επιλογή φακέλου"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr "Χαρακτηριστικά διαδρομής αρχείου"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr "Έ_ναρξη μετρητή σε:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr "Αν_τικατάσταση διαστημάτων με υπογραμμίσεις"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr "Επιλογές"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr "Μετονομασία από:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:16
+msgid "To:"
+msgstr "Σε:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "Προεπισκόπηση ονόματος αρχείου"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr "Βελτιώσεις εικόνας"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr "Εξομάλυνση εικόνων κατά τη σ_μίκρυνση"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr "Εξομάλυνση εικόνων κατά τη μεγέ_θυνση"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+msgid "_Automatic orientation"
+msgstr "_Αυτόματος προσανατολισμός"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "Παρασκήνιο"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr "Ως προσαρμοσμένο χρώμα:"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+#: ../data/org.gnome.eog.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Χρώμα παρασκηνίου"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr "Διαφανή τμήματα"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Ως _μοτίβο ελέγχου"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Ως προσαρμοσμένο χ_ρώμα:"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Χρώμα για διαφανείς περιοχές"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Ως _παρασκήνιο"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Προβολή εικόνας"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "Εστίαση εικόνας"
+
+#: ../data/eog-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "Ανάπτυ_ξη εικόνων ώστε να ταιριάζουν στην οθόνη"
+
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "Σειρά"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr "Χ_ρόνος μεταξύ των εικόνων:"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "_Loop sequence"
+msgstr "_Κυκλική επανάληψη"
+
+#: ../data/eog-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Αλληλουχία εικόνων"
+
+#: ../data/eog-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Πρόσθετα"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr "Αυτόματος προσανατολισμός"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+"Αν η εικόνα θα πρέπει να περιστρέφεται αυτόματα σύμφωνα με τον "
+"προσανατολισμό EXIF."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+"Το χρώμα που χρησιμοποιείται για να γεμίσει η περιοχή πίσω από την εικόνα. "
+"Αν το κλειδί use-background-color δεν έχει καθορισθεί, το χρώμα καθορίζεται "
+"από το ενεργό θέμα GTK+."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Παρεμβολή εικόνας"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Αν η εικόνα θα σμικρύνεται με παρεμβολή. Αυτό οδηγεί σε καλύτερη ποιότητα "
+"αλλά είναι πιο αργό σε σχέση με τις μη-παρεμβαλλόμενες εικόνες."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Προεκβολή εικόνας"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Αν η εικόνα θα μεγεθύνεται με προεκβολή. Αυτό οδηγεί σε πιο θολή ποιότητα "
+"και είναι λίγο πιο αργό σε σχέση με τις μη-προεκβαλόμενες εικόνες."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Ένδειξη διαφάνειας"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"Καθορίζει τον τρόπο που ενδεικνύεται η διαφάνεια. Οι έγκυρες τιμές είναι "
+"CHECK_PATTERN, COLOR και NONE. Αν επιλεχθεί το COLOR τότε το κλειδί trans-"
+"color καθορίζει την τιμή του χρώματος που χρησιμοποιείται."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "Μεγέθυνση με τον τροχό κύλισης"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "Αν ο τροχός κύλισης θα χρησιμοποιείται για μεγέθυνση."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Πολλαπλασιαστής μεγέθυνσης"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"Ο πολλαπλασιαστής μεγέθυνσης που θα χρησιμοποιείται με την χρήση του τροχού "
+"κύλισης. Η τιμή καθορίζει το βήμα μεγέθυνσης για κάθε γεγονός κύλισης. Για "
+"παράδειγμα το 0.05 έχει σαν αποτέλεσμα την μεγέθυνση 5%, ενώ η τιμή 1.00 "
+"έχει σαν αποτέλεσμα μεγέθυνση 100%."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "Χρώμα διαφάνειας"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"Αν το κλειδί διαφάνειας έχει τη τιμή COLOR, τότε το κλειδί καθορίζει το "
+"χρώμα το οποίο θα χρησιμοποιείται για την ένδειξη διαφάνειας."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "Χρήση προσαρμοσμένου χρώματος παρασκηνίου"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"Αν αυτό είναι ενεργό, θα χρησιμοποιηθεί το χρώμα που ορίζεται από το κλειδί "
+"background-color για να γεμίσει την περιοχή πίσω από την εικόνα. Αν δεν έχει "
+"καθορισθεί, το χρώμα θα καθορισθεί από το τρέχον θέμα GTK+."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Κυκλική εμφάνιση της σειράς εικόνων"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "Αν η σειρά των εικόνων θα εμφανίζεται σε κυκλική επανάληψη."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Να επιτρέπεται αρχική εστίαση μεγαλύτερη από 100%"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Αν αυτό ορισθεί σε FALSE οι μικρές εικόνες δεν θα επεκτείνονται αρχικά ώστε "
+"να ταιριάζουν στην οθόνη."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Καθυστέρηση σε δευτερόλεπτα μέχρι την εμφάνιση της επόμενης εικόνας"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Μια τιμή μεγαλύτερη του 0 καθορίζει τα δευτερόλεπτα που μια εικόνα παραμένει "
+"στην οθόνη μέχρι την αυτόματη εμφάνιση της επόμενης. Το μηδέν απενεργοποιεί "
+"την αυτόματη περιήγηση."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Εμφάνιση/απόκρυψη της εργαλειοθήκης του παραθύρου."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Εμφάνιση/απόκρυψη της γραμμής κατάστασης του παραθύρου."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "Εμφάνιση/απόκρυψη του πλαισίου συλλογής εικόνων."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"Θέση πλαισίου συλλογής εικόνων. Ορισμός σε 0 για κάτω, 1 για αριστερά, 2 για "
+"πάνω, 3 για δεξιά."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "Αν το πλαίσιο συλλογής εικόνων θα μπορεί να αλλάζει μέγεθος."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Προβολή/απόκρυψη του πλευρικού πλαισίου του παραθύρου."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "Εμφάνιση/απόκρυψη των κουμπιών κύλισης του πλαισίου συλλογής εικόνων."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "Κλείσιμο του κύριου παραθύρου χωρίς ερώτημα για αποθήκευση αλλαγών."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "Διαγραφή εικόνων χωρίς προειδοποίηση"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+"Αν είναι ενεργοποιημένο, το Μάτι του GNOME δεν θα σας ζητήσει επιβεβαίωση "
+"για τη μετακίνηση εικόνων στα απορρίμματα. Θα σας ζητήσει όμως, αν κάποια "
+"από τα αρχεία δεν μπορούν να μετακινηθούν στα απορρίμματα και θα διαγραφούν "
+"μόνιμα."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+"Αν ο επιλογέας αρχείων θα εμφανίζει τον φάκελο εικόνων του χρήστη όταν δεν "
+"έχουν φορτωθεί εικόνες."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"Αν είναι ενεργό και δεν έχει φορτωθεί εικόνα στο ενεργό παράθυρο, ο "
+"επιλογέας αρχείων θα εμφανίσει τον κατάλογο εικόνων του χρήστη "
+"χρησιμοποιώντας τους ειδικούς φακέλους χρήστη XDG. Αν είναι ανενεργό ή αν ο "
+"κατάλογος εικόνων δεν έχει οριστεί, θα εμφανίσει τον τρέχοντα κατάλογο "
+"εργασίας."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+"Αν η λίστα μεταδεδομένων στον διάλογο ιδιοτήτων θα έχει δική της σελίδα."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"Αν ενεργοποιηθεί η λεπτομερής λίστα μεταδεδομένων στον διάλογο ιδιοτήτων θα "
+"μεταφερθεί σε δική της σελίδα στον διάλογο. Αυτό θα κάνει τον διάλογο πιο "
+"χρηστικό σε μικρές οθόνες π.χ. σε φορητούς υπολογιστές. Αν απενεργοποιηθεί, "
+"η προβολή θα ενσωματωθεί μέσα στην σελίδα \"Μεταδεδομένα\"."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Εξωτερικό πρόγραμμα για επεξεργασία εικόνων"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"Το όνομα αρχείου της επιφάνειας εργασίας (συμπεριλαμβανομένου του \".desktop"
+"\") της εφαρμογής που θα χρησιμοποιηθεί για την επεξεργασία εικόνων (όταν το "
+"κουμπί της εργαλειοθήκης \"Επεξεργασία εικόνας\" είναι πατημένο). Ορίστε το "
+"σε κενό αλφαριθμητικό για να το απενεργοποιήσετε."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Ενεργά πρόσθετα"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+"Λίστα των ενεργών προσθέτων. Δεν περιέχει τις \"Τοποθεσίες\" των ενεργών "
+"προσθέτων. Δείτε το αρχείο .eog-plugin για να μάθετε την \"Τοποθεσία\" ενός "
+"προσθέτου."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Πλήρης οθόνη με διπλό-κλικ"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Ενεργοποίηση πλήρους οθόνης με διπλό-κλικ"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Επαναφόρτωση της εικόνας"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Επαναφόρτωση τρέχουσας εικόνας"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Ημερομηνία στη γραμμή κατάστασης"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Εμφανίζει την ημερομηνία της εικόνας στη γραμμή κατάστασης"
+
+#: ../src/eog-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr "_Κλείσιμο χωρίς αποθήκευση"
+
+#: ../src/eog-close-confirmation-dialog.c:178 ../src/eog-file-chooser.c:465
+#: ../src/eog-window.c:4079
+msgid "_Save"
+msgstr "Απο_θήκευση"
+
+#: ../src/eog-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr "Ερώτηση"
+
+#: ../src/eog-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr "Αν δεν αποθηκεύσετε, οι αλλαγές σας θα χαθούν."
+
+#: ../src/eog-close-confirmation-dialog.c:428
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "Να αποθηκευτούν οι αλλαγές στην εικόνα \"%s\" πριν το κλείσιμο;"
+
+#: ../src/eog-close-confirmation-dialog.c:635
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"Υπάρχει %d εικόνα με μη αποθηκευμένες αλλαγές. Να αποθηκευτούν οι αλλαγές "
+"πριν το κλείσιμο;"
+msgstr[1] ""
+"Υπάρχουν %d εικόνες με μη αποθηκευμένες αλλαγές. Να αποθηκευτούν οι αλλαγές "
+"πριν το κλείσιμο;"
+
+#: ../src/eog-close-confirmation-dialog.c:652
+msgid "S_elect the images you want to save:"
+msgstr "_Επιλέξτε τις εικόνες που θέλετε να αποθηκεύσετε:"
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:671
+msgid "If you don't save, all your changes will be lost."
+msgstr "Αν δεν αποθηκεύσετε, όλες οι αλλαγές σας θα χαθούν."
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:847
+msgid "_Reload"
+msgstr "Επανα_φόρτωση"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4085
+msgid "Save _As…"
+msgstr "Αποθήκευση _ως…"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "Αδυναμία φόρτωσης της εικόνας '%s'."
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "Αδυναμία αποθήκευσης της εικόνας '%s'."
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "Δεν βρέθηκαν εικόνες σε '%s'."
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "Οι δοθείσες τοποθεσίες δεν περιέχουν εικόνες."
+
+#: ../src/eog-metadata-details.c:65
+msgid "Camera"
+msgstr "Κάμερα"
+
+#: ../src/eog-metadata-details.c:66
+msgid "Image Data"
+msgstr "Δεδομένα εικόνας"
+
+#
+#: ../src/eog-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Συνθήκες λήψης εικόνας"
+
+#: ../src/eog-metadata-details.c:68
+msgid "GPS Data"
+msgstr "Δεδομένα GPS"
+
+#: ../src/eog-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Σημείωση κατασκευαστή"
+
+#: ../src/eog-metadata-details.c:70
+msgid "Other"
+msgstr "Άλλο"
+
+#: ../src/eog-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP Exif"
+
+#: ../src/eog-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
+
+#: ../src/eog-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "Διαχείριση δικαιωμάτων XMP"
+
+#: ../src/eog-metadata-details.c:75
+msgid "XMP Other"
+msgstr "Άλλο XMP"
+
+#: ../src/eog-metadata-details.c:251
+msgid "Tag"
+msgstr "Ετικέτα"
+
+#: ../src/eog-metadata-details.c:258
+msgid "Value"
+msgstr "Τιμή"
+
+#: ../src/eog-metadata-details.c:436
+msgid "North"
+msgstr "Βόρεια"
+
+#: ../src/eog-metadata-details.c:439
+msgid "East"
+msgstr "Ανατολικά"
+
+#: ../src/eog-metadata-details.c:442
+msgid "West"
+msgstr "Δυτικά"
+
+#: ../src/eog-metadata-details.c:445
+msgid "South"
+msgstr "Νότια"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (φακός)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (φιλμ 35mm)"
+
+#: ../src/eog-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Ο τύπος αρχείου είναι άγνωστος ή δεν υποστηρίζεται"
+
+#: ../src/eog-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Η εφαρμογή προβολής εικόνων δεν μπορεί να καθορίσει ένα εγγράψιμο τύπο "
+"αρχείου με βάση το όνομα αρχείου."
+
+#: ../src/eog-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
+"Παρακαλούμε δοκιμάστε μια διαφορετική επέκταση αρχείου όπως .png ή .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:212
+msgid "All files"
+msgstr "Όλα τα αρχεία"
+
+#: ../src/eog-file-chooser.c:217
+msgid "Supported image files"
+msgstr "Υποστηριζόμενα αρχεία εικόνας"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:289 ../src/eog-metadata-sidebar.c:233
+#: ../src/eog-metadata-sidebar.c:237 ../src/eog-properties-dialog.c:136
+#: ../src/eog-properties-dialog.c:138 ../src/eog-thumb-view.c:515
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "εικονοστοιχείο"
+msgstr[1] "εικονοστοιχεία"
+
+#: ../src/eog-file-chooser.c:457 ../src/eog-file-chooser.c:473
+msgid "_Open"
+msgstr "Άν_οιγμα"
+
+#
+#: ../src/eog-file-chooser.c:459
+msgid "Open Image"
+msgstr "Άνοιγμα εικόνας"
+
+#
+#: ../src/eog-file-chooser.c:467
+msgid "Save Image"
+msgstr "Αποθήκευση εικόνας"
+
+#
+#: ../src/eog-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Άνοιγμα φακέλου"
+
+#: ../src/eog-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Μετατροπή σε μια μη φορτωμένη εικόνα."
+
+#: ../src/eog-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Αποτυχία μετατροπής."
+
+#: ../src/eog-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "Δεν υποστηρίζεται το EXIF σε αυτό τον τύπο αρχείου."
+
+#: ../src/eog-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Αποτυχία φόρτωσης εικόνας."
+
+#: ../src/eog-image.c:1868 ../src/eog-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Δεν φορτώθηκε εικόνα."
+
+#: ../src/eog-image.c:1876 ../src/eog-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "Δεν έχετε τα κατάλληλα δικαιώματα για να αποθηκεύσετε το αρχείο."
+
+#: ../src/eog-image.c:1886 ../src/eog-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Απέτυχε η δημιουργία προσωρινού αρχείου."
+
+#: ../src/eog-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου για την αποθήκευση: %s"
+
+#: ../src/eog-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "Αδυναμία εκχώρησης μνήμης για τη φόρτωση αρχείου JPEG"
+
+#: ../src/eog-metadata-sidebar.c:246 ../src/eog-properties-dialog.c:153
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: ../src/eog-metadata-sidebar.c:504
+msgid "File size:"
+msgstr "Μέγεθος αρχείου:"
+
+#: ../src/eog-metadata-sidebar.c:520 ../src/eog-properties-dialog.c:737
+#: ../src/eog-window.c:4089
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+"Εμφάνιση του φακέλου που περιέχει αυτό το αρχείο στο διαχειριστή αρχείων"
+
+#: ../src/eog-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu δευτερόλεπτο"
+msgstr[1] "%lu δευτερόλεπτα"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "Ρυθμίσεις εικόνας"
+
+#: ../src/eog-print-image-setup.c:897
+msgid "Image"
+msgstr "Εικόνα"
+
+#: ../src/eog-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr "Η εικόνα για την οποία θα γίνει ρύθμιση των ιδιοτήτων εκτύπωσης"
+
+#: ../src/eog-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Ρύθμιση σελίδας"
+
+#: ../src/eog-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Οι πληροφορίες για τη σελίδα στην οποία θα εκτυπωθεί η εικόνα"
+
+#: ../src/eog-print-image-setup.c:931
+msgid "Position"
+msgstr "Θέση"
+
+#: ../src/eog-print-image-setup.c:935
+msgid "_Left:"
+msgstr "_Αριστερά:"
+
+#: ../src/eog-print-image-setup.c:937
+msgid "_Right:"
+msgstr "_Δεξιά:"
+
+#: ../src/eog-print-image-setup.c:938
+msgid "_Top:"
+msgstr "_Πάνω:"
+
+#: ../src/eog-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "_Κάτω:"
+
+#: ../src/eog-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "Κέ_ντρο:"
+
+#: ../src/eog-print-image-setup.c:947
+msgid "None"
+msgstr "Καμμία"
+
+#: ../src/eog-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Οριζόντια"
+
+#: ../src/eog-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Κάθετα"
+
+#: ../src/eog-print-image-setup.c:953
+msgid "Both"
+msgstr "Και τα δύο"
+
+#: ../src/eog-print-image-setup.c:969
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: ../src/eog-print-image-setup.c:972
+msgid "_Width:"
+msgstr "_Πλάτος:"
+
+#: ../src/eog-print-image-setup.c:974
+msgid "_Height:"
+msgstr "Ύ_ψος:"
+
+#: ../src/eog-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "_Κλιμάκωση:"
+
+#: ../src/eog-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_Μονάδα:"
+
+#: ../src/eog-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "Χιλιοστά"
+
+#: ../src/eog-print-image-setup.c:995
+msgid "Inches"
+msgstr "Ίντσες"
+
+#: ../src/eog-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: ../src/eog-save-as-dialog-helper.c:162
+msgid "as is"
+msgstr "όπως είναι"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
+
+#: ../src/eog-thumb-view.c:543
+msgid "Taken on"
+msgstr "Λήφθηκε"
+
+#: ../src/eog-uri-converter.c:980
+#, c-format
+msgid "At least two file names are equal."
+msgstr "Τουλάχιστον δύο ονόματα αρχείων είναι όμοια."
+
+#: ../src/eog-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "Δεν είναι δυνατή η εμφάνιση βοήθειας για την εφαρμογή προβολής εικόνων"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (άκυρο Unicode)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i εικονοστοιχείο  %s    %i%%"
+msgstr[1] "%i × %i εικονοστοιχεία  %s    %i%%"
+
+#: ../src/eog-window.c:849 ../src/eog-window.c:2784
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "Από_κρυψη"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"Η εικόνα \"%s\" τροποποιήθηκε από μια εξωτερική εφαρμογή.\n"
+"Θα θέλατε να τη επαναφορτώσετε;"
+
+#: ../src/eog-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "Χρήση \"%s\" για άνοιγμα της επιλεγμένης εικόνας"
+
+#
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "Αποθήκευση εικόνας \"%s\" (%u/%u)"
+
+#
+#: ../src/eog-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "Άνοιγμα εικόνας \"%s\""
+
+#: ../src/eog-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "Έ_ξοδος από πλήρη οθόνη"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/eog-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "Εμφάνιση αλληλουχίας εικόνων"
+
+#: ../src/eog-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"Σφάλμα κατά την εκτύπωση αρχείου:\n"
+"%s"
+
+#: ../src/eog-window.c:2558
+msgid "Toolbar Editor"
+msgstr "Επεξεργαστής εργαλειοθήκης"
+
+#: ../src/eog-window.c:2561
+msgid "_Reset to Default"
+msgstr "_Επαναφορά στις προεπιλογές"
+
+#: ../src/eog-window.c:2731 ../src/eog-window.c:2746
+msgid "Error launching System Settings: "
+msgstr "Σφάλμα κατά την εκκίνηση των ρυθμίσεων συστήματος: "
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2782
+msgid "_Open Background Preferences"
+msgstr "Άνοι_γμα προτιμήσεων παρασκηνίου"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2798
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+"Η εικόνα \"%s\" ορίστηκε ως παρασκήνιο επιφάνειας εργασίας.\n"
+"Θα θέλατε να τροποποιήσετε την εμφάνισή της;"
+
+#: ../src/eog-window.c:3265
+msgid "Saving image locally…"
+msgstr "Αποθήκευση εικόνας τοπικά…"
+
+#: ../src/eog-window.c:3343
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να διαγράψετε\n"
+"το \"%s\" μόνιμα;"
+
+#: ../src/eog-window.c:3346
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"Είστε σίγουροι ότι θέλετε να διαγράψετε\n"
+"την επιλεγμένη εικόνα μόνιμα;"
+msgstr[1] ""
+"Είστε σίγουροι ότι θέλετε να διαγράψετε\n"
+"τις %d επιλεγμένες εικόνες μόνιμα;"
+
+#: ../src/eog-window.c:3368 ../src/eog-window.c:3632
+msgid "_Delete"
+msgstr "_Διαγραφή"
+
+#: ../src/eog-window.c:3371 ../src/eog-window.c:3634
+msgid "_Yes"
+msgstr "_Ναι"
+
+#. add 'dont ask again' button
+#: ../src/eog-window.c:3375 ../src/eog-window.c:3626
+msgid "Do _not ask again during this session"
+msgstr "Να _μη γίνει ερώτηση ξανά, κατά τη διάρκεια αυτής της συνεδρίας"
+
+#: ../src/eog-window.c:3419
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "Αδύνατη η ανάκτηση του αρχείου εικόνας"
+
+#: ../src/eog-window.c:3435
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "Αδύνατη η ανάκτηση πληροφοριών του αρχείου εικόνας"
+
+#: ../src/eog-window.c:3451 ../src/eog-window.c:3693
+#, c-format
+msgid "Couldn't delete file"
+msgstr "Αδυναμία διαγραφής αρχείου"
+
+#. set dialog error message
+#: ../src/eog-window.c:3501 ../src/eog-window.c:3789
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Σφάλμα κατά τη διαγραφή της εικόνας %s"
+
+#: ../src/eog-window.c:3594
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+"Θέλετε να μετακινήσετε το\n"
+" \"%s\" στα απορρίμματα;"
+
+#: ../src/eog-window.c:3597
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+"Δε βρέθηκαν τα απόρριμματα για το \"%s\". Θέλετε να διαγράψετε μόνιμα αυτή "
+"την εικόνα;"
+
+#: ../src/eog-window.c:3602
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+"Είστε σίγουροι για την μεταφορά της επιλεγμένης\n"
+"εικόνας στα απορρίμματα;"
+msgstr[1] ""
+"Είστε σίγουροι για την μεταφορά των επιλεγμένων\n"
+"%d εικόνων στα απορρίμματα;"
+
+#: ../src/eog-window.c:3607
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"Μερικές από τις επιλεγμένες εικόνες δε μπορούν να μετακινηθούν στα "
+"απορρίμματα και θα διαγραφούν μόνιμα. Σίγουρα θέλετε να προχωρήσετε;"
+
+#: ../src/eog-window.c:3624 ../src/eog-window.c:4115 ../src/eog-window.c:4142
+msgid "Move to _Trash"
+msgstr "Μετακίνηση στα α_πορρίμματα"
+
+#: ../src/eog-window.c:3671 ../src/eog-window.c:3685
+#, c-format
+msgid "Couldn't access trash."
+msgstr "Αδυναμία πρόσβασης στα απορρίμματα."
+
+#: ../src/eog-window.c:4036
+msgid "_Image"
+msgstr "Ει_κόνα"
+
+#: ../src/eog-window.c:4037
+msgid "_Edit"
+msgstr "_Επεξεργασία"
+
+#: ../src/eog-window.c:4039
+msgid "_Go"
+msgstr "_Μετάβαση"
+
+#: ../src/eog-window.c:4040
+msgid "_Tools"
+msgstr "Εργα_λεία"
+
+#: ../src/eog-window.c:4043
+msgid "_Open…"
+msgstr "Άν_οιγμα…"
+
+#: ../src/eog-window.c:4044
+msgid "Open a file"
+msgstr "Άνοιγμα αρχείου"
+
+#: ../src/eog-window.c:4047
+msgid "Close window"
+msgstr "Κλείσιμο παραθύρου"
+
+#: ../src/eog-window.c:4049
+msgid "T_oolbar"
+msgstr "Ερ_γαλειοθήκη"
+
+#: ../src/eog-window.c:4050
+msgid "Edit the application toolbar"
+msgstr "Επεξεργασία εργαλειοθήκης της εφαρμογής"
+
+#: ../src/eog-window.c:4053
+msgid "Preferences for Image Viewer"
+msgstr "Προτιμήσεις για την εφαρμογή προβολής εικόνων"
+
+#: ../src/eog-window.c:4055
+msgid "_Contents"
+msgstr "_Περιεχόμενα"
+
+#: ../src/eog-window.c:4056
+msgid "Help on this application"
+msgstr "Βοήθεια για αυτήν την εφαρμογή"
+
+#: ../src/eog-window.c:4059
+msgid "About this application"
+msgstr "Περί αυτής της εφαρμογής"
+
+#: ../src/eog-window.c:4065
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "Αλλάζει την ορατότητα της εργαλειοθήκης στο τρέχον παράθυρο"
+
+#: ../src/eog-window.c:4068
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "Αλλάζει την ορατότητα της γραμμής κατάστασης στο τρέχον παράθυρο"
+
+#: ../src/eog-window.c:4071
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr ""
+"Αλλάζει την ορατότητα του πλαισίου συλλογής εικόνων στο τρέχον παράθυρο"
+
+#: ../src/eog-window.c:4074
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "Αλλάζει την ορατότητα του πλευρικού πλαισίου στο τρέχον παράθυρο"
+
+#: ../src/eog-window.c:4080
+msgid "Save changes in currently selected images"
+msgstr "Αποθήκευση αλλαγών στις επιλεγμένες εικόνες"
+
+#: ../src/eog-window.c:4082
+msgid "Open _with"
+msgstr "Άνοιγμα _με"
+
+#: ../src/eog-window.c:4083
+msgid "Open the selected image with a different application"
+msgstr "Άνοιγμα της επιλεγμένης εικόνας με διαφορετική εφαρμογή"
+
+#: ../src/eog-window.c:4086
+msgid "Save the selected images with a different name"
+msgstr "Αποθήκευση των επιλεγμένων εικόνων με διαφορετικό όνομα"
+
+#: ../src/eog-window.c:4088
+msgid "Show Containing _Folder"
+msgstr "Άνοιγμα _φακέλου που το περιέχει"
+
+#: ../src/eog-window.c:4091
+msgid "_Print…"
+msgstr "Εκτύ_πωση…"
+
+#: ../src/eog-window.c:4092
+msgid "Print the selected image"
+msgstr "Εκτύπωση της επιλεγμένης εικόνας"
+
+#: ../src/eog-window.c:4094
+msgid "Prope_rties"
+msgstr "Ι_διότητες"
+
+#: ../src/eog-window.c:4095
+msgid "Show the properties and metadata of the selected image"
+msgstr "Προβολή των ιδιοτήτων και των μεταδεδομένων της επιλεγμένης εικόνας"
+
+#: ../src/eog-window.c:4097
+msgid "_Undo"
+msgstr "Α_ναίρεση"
+
+#: ../src/eog-window.c:4098
+msgid "Undo the last change in the image"
+msgstr "Αναίρεση της τελευταίας αλλαγής στην εικόνα"
+
+#: ../src/eog-window.c:4100
+msgid "Flip _Horizontal"
+msgstr "Ορι_ζόντια αναστροφή"
+
+#: ../src/eog-window.c:4101
+msgid "Mirror the image horizontally"
+msgstr "Καθρεπτισμός της εικόνας οριζόντια"
+
+#: ../src/eog-window.c:4103
+msgid "Flip _Vertical"
+msgstr "Κά_θετη αναστροφή"
+
+#: ../src/eog-window.c:4104
+msgid "Mirror the image vertically"
+msgstr "Καθρεπτισμός της εικόνας κάθετα"
+
+#: ../src/eog-window.c:4106
+msgid "_Rotate Clockwise"
+msgstr "Περιστροφή δε_ξιόστροφα"
+
+#: ../src/eog-window.c:4107
+msgid "Rotate the image 90 degrees to the right"
+msgstr "Περιστροφή εικόνας 90 μοίρες δεξιά"
+
+#: ../src/eog-window.c:4109
+msgid "Rotate Counterc_lockwise"
+msgstr "Π_εριστροφή αριστερόστροφα"
+
+#: ../src/eog-window.c:4110
+msgid "Rotate the image 90 degrees to the left"
+msgstr "Περιστροφή εικόνας 90 μοίρες αριστερά"
+
+#: ../src/eog-window.c:4112
+msgid "Set as Wa_llpaper"
+msgstr "Ορισμός ως τα_πετσαρίας"
+
+#: ../src/eog-window.c:4113
+msgid "Set the selected image as the wallpaper"
+msgstr "Ορισμός της επιλεγμένης εικόνας ως ταπετσαρίας"
+
+#: ../src/eog-window.c:4116
+msgid "Move the selected image to the trash folder"
+msgstr "Μετακίνηση της επιλεγμένης εικόνας στα απορρίμματα"
+
+#: ../src/eog-window.c:4118
+msgid "_Delete Image"
+msgstr "_Διαγραφή εικόνας"
+
+#: ../src/eog-window.c:4119
+msgid "Delete the selected image"
+msgstr "Διαγραφή της επιλεγμένης εικόνας"
+
+#: ../src/eog-window.c:4121
+msgid "_Copy"
+msgstr "_Αντιγραφή"
+
+#: ../src/eog-window.c:4122
+msgid "Copy the selected image to the clipboard"
+msgstr "Αντιγραφή της επιλεγμένης εικόνας στο πρόχειρο"
+
+#: ../src/eog-window.c:4124 ../src/eog-window.c:4133 ../src/eog-window.c:4136
+msgid "_Zoom In"
+msgstr "Μεγέ_θυνση"
+
+#: ../src/eog-window.c:4125 ../src/eog-window.c:4134
+msgid "Enlarge the image"
+msgstr "Μεγέθυνση εικόνας"
+
+#: ../src/eog-window.c:4127 ../src/eog-window.c:4139
+msgid "Zoom _Out"
+msgstr "Σ_μίκρυνση"
+
+#: ../src/eog-window.c:4128 ../src/eog-window.c:4137 ../src/eog-window.c:4140
+msgid "Shrink the image"
+msgstr "Σμίκρυνση εικόνας"
+
+#: ../src/eog-window.c:4130
+msgid "_Normal Size"
+msgstr "Κα_νονικό μέγεθος"
+
+#: ../src/eog-window.c:4131
+msgid "Show the image at its normal size"
+msgstr "Εμφάνιση εικόνας στο κανονικό της μέγεθος"
+
+#: ../src/eog-window.c:4148
+msgid "_Fullscreen"
+msgstr "_Πλήρης οθόνη"
+
+#: ../src/eog-window.c:4149
+msgid "Show the current image in fullscreen mode"
+msgstr "Εμφάνιση της τρέχουσας εικόνας σε λειτουργία πλήρους οθόνης"
+
+#: ../src/eog-window.c:4151
+msgid "Pause Slideshow"
+msgstr "Παύση αλληλουχίας εικόνων"
+
+#: ../src/eog-window.c:4152
+msgid "Pause or resume the slideshow"
+msgstr "Παύση ή συνέχιση της αλληλουχίας εικόνων"
+
+#: ../src/eog-window.c:4154
+msgid "_Best Fit"
+msgstr "_Καλύτερο ταίριασμα"
+
+#: ../src/eog-window.c:4155
+msgid "Fit the image to the window"
+msgstr "Ταίριασμα της εικόνας στο παράθυρο"
+
+#: ../src/eog-window.c:4160 ../src/eog-window.c:4175
+msgid "_Previous Image"
+msgstr "_Προηγούμενη εικόνα"
+
+#: ../src/eog-window.c:4161
+msgid "Go to the previous image of the gallery"
+msgstr "Μετάβαση στην προηγούμενη εικόνα της συλλογής"
+
+#: ../src/eog-window.c:4163
+msgid "_Next Image"
+msgstr "Επόμε_νη εικόνα"
+
+#: ../src/eog-window.c:4164
+msgid "Go to the next image of the gallery"
+msgstr "Μετάβαση στην επόμενη εικόνα της συλλογής"
+
+#: ../src/eog-window.c:4166 ../src/eog-window.c:4178
+msgid "_First Image"
+msgstr "Πρώ_τη εικόνα"
+
+#: ../src/eog-window.c:4167
+msgid "Go to the first image of the gallery"
+msgstr "Μετάβαση στην πρώτη εικόνα της συλλογής"
+
+#: ../src/eog-window.c:4169 ../src/eog-window.c:4181
+msgid "_Last Image"
+msgstr "Τε_λευταία εικόνα"
+
+#: ../src/eog-window.c:4170
+msgid "Go to the last image of the gallery"
+msgstr "Μετάβαση στην τελευταία εικόνα της συλλογής"
+
+#: ../src/eog-window.c:4172
+msgid "_Random Image"
+msgstr "_Τυχαία εικόνα"
+
+#: ../src/eog-window.c:4173
+msgid "Go to a random image of the gallery"
+msgstr "Μετάβαση σε μια τυχαία εικόνα της συλλογής"
+
+#: ../src/eog-window.c:4331
+msgid "S_lideshow"
+msgstr "_Αλληλουχία εικόνων"
+
+#: ../src/eog-window.c:4332
+msgid "Start a slideshow view of the images"
+msgstr "Εκκίνηση προβολής των εικόνων σε αλληλουχία"
+
+#: ../src/eog-window.c:4404
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: ../src/eog-window.c:4409
+msgid "Next"
+msgstr "Επόμενο"
+
+#: ../src/eog-window.c:4416
+msgid "Right"
+msgstr "Δεξιά"
+
+#: ../src/eog-window.c:4419
+msgid "Left"
+msgstr "Αριστερά"
+
+#
+#: ../src/eog-window.c:4422
+msgid "Show Folder"
+msgstr "Εμφάνιση φακέλου"
+
+#: ../src/eog-window.c:4425
+msgid "In"
+msgstr "Μέσα"
+
+#: ../src/eog-window.c:4428
+msgid "Out"
+msgstr "Έξω"
+
+#: ../src/eog-window.c:4431
+msgid "Normal"
+msgstr "Κανονικό"
+
+#: ../src/eog-window.c:4434
+msgid "Fit"
+msgstr "Ταίριασμα"
+
+#: ../src/eog-window.c:4437
+msgid "Gallery"
+msgstr "Συλλογή"
+
+#: ../src/eog-window.c:4454
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "Απορρίμματα"
+
+#: ../src/eog-window.c:4820
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "Επεξεργασία της τρέχουσας εικόνας με %s"
+
+#: ../src/eog-window.c:4822
+msgid "Edit Image"
+msgstr "Επεξεργασία εικόνας"
+
+#: ../src/eog-window.c:6166
+msgid "The GNOME image viewer."
+msgstr "Η εφαρμογή προβολής εικόνων εικόνων του GNOME."
+
+#: ../src/eog-window.c:6169
+msgid "translator-credits"
+msgstr ""
+"Ελληνική μεταφραστική ομάδα GNOME\n"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>\n"
+" Σίμος Ξενιτέλλης <simos@gnome.org>\n"
+" Κώστας Παπαδήμας <pkst@gnome.org>\n"
+" Πιερρός Παπαδέας <ppapadeas@gmail.com>\n"
+" Μιχάλης Κοτσαρίνης <mk73628@gmail.com>\n"
+" Ευστάθιος Ιωσηφίδης <iosifidis@opensuse.org>\n"
+" Ευάγγελος Σκαρμούτσος <skarmoutsosv@gmail.com>\n"
+" Μαρία Μαυρίδου <mavridou@gmail.com>\n"
+"\n"
+"Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
+"http://gnome.gr/"
+
+#
+#: ../src/main.c:56
+msgid "GNOME Image Viewer"
+msgstr "Εφαρμογή προβολής εικόνων του GNOME"
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "Άνοιγμα σε κατάσταση πλήρους οθόνης"
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr "Απενεργοποίηση συλλογής εικόνων"
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr "Άνοιγμα σε κατάσταση αλληλουχίας εικόνων"
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "Εκκίνηση νέας συνεδρίας αντί χρήσης της υπάρχουσας"
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+"Άνοιγμα σε ένα μόνο παράθυρο, αν πολλαπλά παράθυρα είναι ανοιχτά "
+"χρησιμοποιείται το πρώτο από αυτά"
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr "Εμφάνιση έκδοσης της εφαρμογής"
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr "[ΑΡΧΕΙΟ…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Εκτελέστε '%s --help' για να δείτε την πλήρη λίστα των διαθέσιμων εντολών."
+
+#~ msgid "_About Image Viewer"
+#~ msgstr "Π_ερί της Εφαρμογής προβολής εικόνων"
+
+#~ msgid "Set as _Desktop Background"
+#~ msgstr "Ως _παρασκήνιο επιφάνειας εργασίας"

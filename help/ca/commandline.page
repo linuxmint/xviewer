@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="ca">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Command Line</title>
+    <desc>L'ordre <cmd>eog</cmd> pot obrir múltiples imatges en diferents modes.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>La línia d'ordres</title>
+
+<p>
+To start the <app>Image Viewer</app> from the
+<app>Terminal</app>, type
+<cmd>eog</cmd>.</p>
+<p>Podeu obrir un fitxer específic introduint el nom de fitxer després de l'ordre <cmd>eog</cmd>:</p>
+<screen>eog imatge.jpeg</screen>
+<p>
+You can open a specific folder by typing the folder name after the <cmd>eog</cmd> command:
+</p>
+<screen>eog folder</screen>
+<p>To see all the images in a folder at once, you may wish to <link xref="view#image-gallery">browse
+the image gallery</link>.</p>
+
+<section id="fullscreen">
+    <title>Obertura d'una imatge a pantalla completa</title>
+    <screen>eog --fullscreen imatge.jpeg</screen>
+</section>
+<section id="disable-gallery">
+    <title>Obertura d'una imatge amb la galeria inhabilitada</title>
+    <screen>eog --disable-gallery imatge.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Open image in a new instance</title>
+    <screen>eog --new-instance imatge.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Open a folder in slideshow mode</title>
+    <screen>eog --slide-show Imatges/</screen>
+</section>
+</page>

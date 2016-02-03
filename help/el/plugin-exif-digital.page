@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="el">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Προβολή πληροφοριών όπως ρυθμίσεις κάμερας και ιστόγραμμα, γεωτοποθεσία και ημερομηνία.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Φώτης Τσάμης</mal:name>
+      <mal:email>ftsamis@gmail.com</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Μάριος Ζηντίλης</mal:name>
+      <mal:email>m.zindilis@dmajor.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2012, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Προβολή λεπτομερών πληροφοριών για μια εικόνα</title>
+
+<p>Εικόνες που πάρθηκαν με ψηφιακές κάμερες αποθηκεύονται με έναν οικοδεσπότη πρόσθετων πληροφοριών ενσωματωμένο σε αυτές, όπως ημερομηνία λήψης, ρυθμίσεις έκθεσης και σε κάποιες περιπτώσεις, ακόμα και τοποθεσία λήψης.</p>
+
+<p>Αυτό το θέμα εμφανίζει πώς θα προσπελάσετε αυτές τις πληροφορίες.</p>
+
+<section id="date">
+<title>Προβολή της ημερομηνίας στη γραμμή κατάστασης</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Μπορείτε να εμφανίσετε την ημερομηνία λήψης της εικόνας στη γραμμή κατάστασης στον πυθμένα του παραθύρου.</p>
+  <p>Για να το κάνετε αυτό, κλικ στο <guiseq><gui>επεξεργασία</gui><gui>προτιμήσεις</gui></guiseq> και μετάβαση στην καρτέλα <gui>πρόσθετα</gui>. Έπειτα, σημειώστε <gui>ημερομηνία στη γραμμή κατάστασης</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Λεπτομερή δεδομένα Exif</title>
+  <p>Οι λεπτομερείς αποθηκευμένες πληροφορίες με ψηφιακές φωτογραφίες λέγονται <em>δεδομένα Exif</em>. Μπορείτε να τις προβάλετε εγκαθιστώντας ένα πρόσθετο για τον προβολέα εικόνας.</p>
+
+  <steps>
+   <item>
+    <p>Για να μπορείτε να δείτε τα ενσωματωμένα δεδομένα Exif στις φωτογραφίες σας, πρέπει πρώτα να εγκαταστήσετε το πακέτο <link xref="plugins">πρόσθετα eog</link>.</p>
+   </item>
+   <item>
+    <p>Εάν το <sys>πρόσθετα eog</sys> είναι εγκατεστημένο, κλικ στο <guiseq><gui>επεξεργασία</gui><gui>προτιμήσεις</gui></guiseq> και μετάβαση στην καρτέλα <gui>πρόσθετα</gui>. Έπειτα, σημειώστε <gui>προβολή Exif</gui> και κλικ στο <gui>κλείσιμο</gui>.</p>
+   </item>
+   <item>
+    <p>Κλικ στο <guiseq><gui>προβολή</gui><gui>πλευρική στήλη</gui></guiseq> για προβολή των χρησιμοποιούμενων ρυθμίσεων κάμερας για τη λήψη φωτογραφιών. Για δείτε επίσης τα ιστογράμματα που εμφανίζουν την ισορροπία των χρωμάτων και του φωτός/σκιάς στην εικόνα, επιλέξτε <gui>προβολή Exif</gui> στην καρτέλα <gui>πρόσθετα</gui> και κάντε κλικ στις <gui>προτιμήσεις</gui>. Επιλέξτε τα ιστογράμματα που θέλετε να δείτε, που βρίσκονται στο <gui>ιστόγραμμα</gui>.</p>
+   </item>
+   <item>
+    <p>Μπορείτε επίσης να δείτε τις ρυθμίσεις της κάμερας που χρησιμοποιούνται για τη λήψη μιας φωτογραφίας στη μπάρα κατάστασης. Επιλέξτε <gui>προβολή Exif</gui> στη καρτέλα <gui>πρόσθετα</gui> και κάντε κλικ στις <gui>προτιμήσεις</gui>. Επιλέξτε <gui>προβολή ρυθμίσεων κάμερας στη μπάρα κατάστασης</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Εμφάνιση ενός χάρτη τοποθεσίας φωτογραφίας</title>
+  <p>Μερικές κάμερες μπορούν να επισυνάψουν πληροφορίες <em>γεωτοποθεσίας</em> (γεωετικέτες) σε ψηφιακές φωτογραφίες. Οι γεωετικέτες είναι συνήθως απλώς οι συντεταγμένες GPS (γεωγραφικό πλάτος και μήκος) για την τοποθεσία λήψης μιας φωτογραφίας.</p>
+
+  <steps>
+   <item>
+    <p>Για να μπορείτε να δείτε έναν χάρτη λήψης των φωτογραφιών σας, πρέπει πρώτα να εγκαταστήσετε το πακέτο <link xref="plugins">πρόσθετα eog</link>.</p>
+   </item>
+   <item>
+    <p>Εάν το <sys>πρόσθετα eog</sys> είναι εγκατεστημένο, κλικ στο <guiseq><gui>επεξεργασία</gui><gui>προτιμήσεις</gui></guiseq> και μετάβαση στην καρτέλα <gui>πρόσθετα</gui>. Έπειτα, σημειώστε <gui>χάρτης</gui> και κλικ στο <gui>κλείσιμο</gui>.</p>
+   </item>
+   <item>
+    <p>Κλικ στο <guiseq><gui>προβολή</gui><gui>πλευρική στήλη</gui></guiseq> για προβολή του χάρτη.</p>
+   </item>
+  </steps>
+  <p>Ο χάρτης θα εμφανίσει την τοποθεσία λήψης της εικόνας μόνο εάν υπάρχουν πληροφορίες γεωτοποθεσίας προσαρτημένες στη φωτογραφία. Πολλές κάμερες δεν επισυνάπτουν πληροφορίες γεωτοποθεσίας στις εικόνες.</p>
+</section>
+
+
+</page>

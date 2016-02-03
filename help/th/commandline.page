@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="th">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Command Line</title>
+    <desc>The <cmd>eog</cmd> command can open any number of images in various modes.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>The command line</title>
+
+<p>
+To start the <app>Image Viewer</app> from the
+<app>Terminal</app>, type
+<cmd>eog</cmd>.</p>
+<p>
+You can open a specific file by typing the filename after the <cmd>eog</cmd> command:
+</p>
+<screen>eog image.jpeg</screen>
+<p>
+You can open a specific folder by typing the folder name after the <cmd>eog</cmd> command:
+</p>
+<screen>eog folder</screen>
+<p>To see all the images in a folder at once, you may wish to <link xref="view#image-gallery">browse
+the image gallery</link>.</p>
+
+<section id="fullscreen">
+    <title>Open an image in fullscreen mode</title>
+    <screen>eog --fullscreen image.jpeg</screen>
+</section>
+<section id="disable-gallery">
+    <title>Open image with gallery disabled</title>
+    <screen>eog --disable-gallery image.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Open image in a new instance</title>
+    <screen>eog --new-instance image.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Open a folder in slideshow mode</title>
+    <screen>eog --slide-show Pictures/</screen>
+</section>
+</page>

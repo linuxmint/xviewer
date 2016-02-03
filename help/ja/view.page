@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="view" xml:lang="ja">
+
+  <info>
+    <link type="guide" xref="index#viewing"/>
+    <desc>カーソルキーの <key>←</key> または <key>→</key> を押すと画像を瞬時に切り替えることができます。また、画像ギャラリーを使えば、すべての画像が表示されます。</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+  <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany.antopolski@gmail.com</email>
+  </credit>
+  <license>
+   <p>Creative Commons Share Alike 3.0</p>
+  </license>
+  </info>
+<title>フォルダー内のすべての画像を表示</title>
+
+<p>たとえば、1 枚の画像を開き、<gui>次へ</gui>や<gui>前へ</gui>をクリックすることでフォルダー内のすべての画像を素早く閲覧できます。また、一度にフォルダー内のすべての画像の小さなプレビューを表示する<em>画像ギャラリー</em>を表示できます。</p>
+
+<section id="browse">
+ <title>フォルダー内のすべての画像を一通り閲覧する</title>
+ <p>さまざまな画像が含まれているフォルダーがあれば、個別に開くことなくすべての画像を一通り閲覧できます。</p>
+ <steps>
+  <item>
+   <p>一通り閲覧したいフォルダーから、いずれかの画像を<link xref="open">開きます</link>。</p>
+  </item>
+  <item>
+   <p><link xref="toolbar">ツールバー</link>の<gui>次へ</gui>や<gui>前へ</gui>をクリックするか、カーソルキーの<key>→</key>や<key>←</key>を押すと画像が瞬時に切り替わります。</p>
+   <p>他には、 <key>↑</key> キーと <key>↓</key>キー、または<key>スペースバー</key>と <key>Backspace</key> キーも使えます。また、<guiseq><gui>ジャンプ</gui><gui>前の画像へ</gui></guiseq>や<guiseq><gui>ジャンプ</gui><gui>次の画像へ</gui></guiseq>というメニューをクリックしてもよいです。</p>
+  </item>
+  <item>
+   <p><guiseq><gui>表示</gui><gui>フルスクリーン</gui></guiseq>というメニューをクリックするか、<key>F11</key> を押すことにより、フルスクリーンモードで画像を一通り閲覧できます。フルスクリーンモードでは、キーボードのキーを使って画像を切り替えます。</p>
+ <p>通常の表示に戻るには、<key>Esc</key> か <key>F11</key> を押します。</p>
+  </item>
+ </steps>
+</section>
+
+
+<section id="image-gallery"><title>画像ギャラリーを閲覧する</title>
+ <p><em>画像ギャラリー</em>は、一度にフォルダー内のすべての画像の小さなプレビュー (サムネイル) を表示します。これは、大量の画像コレクションを素早く一通り閲覧するのを簡単にします。</p>
+ 
+ <steps>
+  <item> 
+   <p>画像ギャラリーを表示するには、<guiseq><gui>表示</gui><gui>画像ギャラリー</gui></guiseq>というメニューをクリックするか、<key>F9</key> を押します。</p>
+  </item>
+  <item>
+   <p>ギャラリー内の画像をクリックするとフルサイズで表示します。</p>
+   <p><key>←</key> キーと <key>→</key>キーを使って、ギャラリー内の画像を移動することもできます。</p>
+  </item>
+  <item>
+   <p>ギャラリーを隠すには、再度、<guiseq><gui>表示</gui><gui>画像ギャラリー</gui></guiseq>というメニューをクリックするか、<key>F9</key> を押します。</p>
+  </item>
+ </steps>
+ </section>
+</page>

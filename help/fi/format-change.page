@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="fi">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Kuvia voi muuntaa muodosta toiseen. Tämän voi suorittaa myös usealle kuvalle.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sami Jaktholm</mal:name>
+      <mal:email>sjakthol@outlook.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jukka Heikkilä</mal:name>
+      <mal:email>jutsco@gmail.com</mal:email>
+      <mal:years>2010</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Muunna kuvan tiedostotyyppiä</title>
+
+<p>Kuvat tallennetaan erityisiä tiedostomuotoja, kuten JPEG:iä tai PNG:tä, käyttäen. Kuvia voi muuntaa tiedostomuodosta toiseen.</p>
+
+<section id="single">
+ <title>Muunna yhden kuvan tiedostotyyppiä</title>
+ <list type="numbered">
+  <item>
+   <p>Valitse <guiseq><gui>Kuva</gui><gui>Tallenna nimellä</gui></guiseq>. <gui>Tallenna kuva</gui> ikkuna avautuu.</p>
+  </item>
+  <item>
+   <p>Muuta tiedoston nimikentässä tiedoston <em>tiedostopäätettä</em> uutta tiedostomuotoa vastaavaksi. Tiedostopääte on tiedostonimen pisteen jälkeinen osa.</p>
+   <p>Esimerkiksi JPEG-kuvan (<file>.jpg</file>) muuntaminen bittikartaksi (<file>.bmp</file>):</p>
+   <p><em>alkuperäinen tiedosto:</em> <file>kuva.jpg</file></p>
+   <p><em>uusi tiedosto:</em> <file>kuva.bmp</file></p>
+  </item>
+  <item>
+   <p>Napsauta <gui>Tallenna</gui> ja kuva tallennetaan muunnetussa muodossa uuteen tiedostoon. Vanha tiedosto (vanhassa muodossa) säilyy muuttumattomana eikä sitä poisteta.</p>
+  </item>
+</list>
+
+<p>Kuvakatselin pyrkii päättelemään kuvan tallennusmuodon tiedostopäätteen perusteella. Jos päätettä ei tunnisteta tai et tiedä päätettä, napsauta <gui>Tuetut kuvatiedostot</gui> kuvan tallennusikkunasta. Tiedostomuodon voi nyt valita avautuvasta pudotusvalikosta.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Muunna usean kuvan tiedostotyyppiä</title>
+ <p>Usean kuvan tiedostomuodon samanaikainen muuntaminen on myös mahdollista ja huomattavasti tehokkaampaa kuin kuvien muuntaminen yksi kerrallaan.</p>
+ <list style="numbered">
+  <item>
+   <p>Valitse muunnettavat kuvat <link xref="view#image-gallery">kuvakokoelmasta</link> yksi kerrallaan <key>Ctrl</key>-näppäin pohjassa. Kaikki kokoelman kuvat voi valita näppäinkomennolla <keyseq><key>Ctrl</key><key>A</key></keyseq>.</p>
+  </item>
+  <item>
+   <p>Valitse <guiseq><gui>Kuva</gui><gui>Tallenna nimellä</gui></guiseq>. Uusi ikkuna avautuu (kuva alapuolella).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Muunnetut kuvat tallennetaan oletuksena nykyiseen kansioon. Tallennuskansion voi vaihtaa <gui>Kohdekansio</gui>-pudotusvalikosta.</p>
+  </item>
+  <item>
+   <p>Valitse uusi tiedostomuoto <gui>Tiedostonimen muoto</gui>-kentän oikealla puolella olevasta pudotusvalikosta.</p>
+  </item>
+  <item>
+   <p>Paina <gui>Tallenna</gui></p>
+  </item>
+ </list>
+</section>
+
+</page>

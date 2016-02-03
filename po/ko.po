@@ -1,0 +1,1631 @@
+# eog ko.po
+# This file is distributed under the same license as the eog package.
+#
+# Sung-Hyun Nam <namsh@kldp.org>, 1999
+# Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2006
+# Changwoo Ryu  <cwryu@debian.org>, 2002-2014.
+#
+# 새로 번역하시는 분은 아래 "tranalstor-credits"에 추가하세요.
+#
+# 주의
+# - eog-plugins와 같이 번역해 주세요. 일관성이 있어야 합니다.
+# - 카메라 관련 전문 용어가 많으므로 기존에 쓰이는 용어를 찾아서 사용한다.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-05 04:32+0000\n"
+"PO-Revision-Date: 2014-09-14 02:23+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"Language: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "“_%s” 보이기"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "도구 모음에서 옮기기(_M)"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "도구 모음에서 선택한 항목을 옮깁니다"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "도구 모음에서 제거(_R)"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "도구 모음에서 선택한 항목을 제거합니다"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "도구 모음 삭제(_D)"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "선택한 도구 모음을 제거합니다"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "구분선"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4036
+msgid "_View"
+msgstr "보기(_V)"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4062
+msgid "_Toolbar"
+msgstr "도구 모음(_T)"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4065
+msgid "_Statusbar"
+msgstr "상태 표시줄(_S)"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4068
+msgid "_Image Gallery"
+msgstr "이미지 모음(_I)"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4071
+msgid "Side _Pane"
+msgstr "가장자리 창(_P)"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4050
+msgid "Prefere_nces"
+msgstr "기본 설정(_N)"
+
+#: ../data/eog-app-menu.xml.h:7 ../src/eog-window.c:2565
+#: ../src/eog-window.c:4039
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: ../data/eog-app-menu.xml.h:8 ../src/eog-window.c:4056
+msgid "_About"
+msgstr "정보(_A)"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+# NOTE: 프로그램 설명이니 자유로운 형식으로.
+#: ../data/eog.appdata.xml.in.h:1
+msgid ""
+"The Eye of GNOME is the official image viewer for the GNOME desktop. It "
+"integrates with the GTK+ look and feel of GNOME, and supports many image "
+"formats for viewing single images or images in a collection."
+msgstr "\"그놈의 눈\"은 그놈 데스크톱의 공식 이미지 보기 프로그램입니다. 그놈 데스크톱의 GTK+ 룩앤필을 가지고, 여러가지 이미지 형식을 지원하고, 단일 파일이나 여러 이미지 파일의 모음을 볼 수 있습니다."
+
+# NOTE: 프로그램 설명이니 자유로운 형식으로.
+#: ../data/eog.appdata.xml.in.h:2
+msgid ""
+"The Eye of GNOME also allows to view the images in a fullscreen slideshow "
+"mode or set an image as the desktop wallpaper. It reads the camera tags to "
+"automatically rotate your images in the correct portrait or landscape "
+"orientation."
+msgstr "또 전체 화면 슬라이드쇼 모드에서 볼 수도 있고, 이미지를 데스크톱 배경으로 사용할 수도 있습니다. 또 카메라 태그를 자동으로 읽어서 가로나 세로 모드로 적절히 회전합니다."
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-application.c:269
+#: ../src/eog-window.c:6161
+msgid "Image Viewer"
+msgstr "이미지 보기"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "이미지 살펴보기 및 회전"
+
+# 주의: 검색 키워드이므로 원문을 유지한다
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "Picture;그림;사진;이미지;Slideshow;슬라이드쇼;Graphics;그래픽;"
+
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:5037
+msgid "Image Properties"
+msgstr "이미지 등록정보"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "이전(_P)"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "다음(_N)"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../src/eog-metadata-sidebar.c:495
+msgid "Name:"
+msgstr "이름:"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:497
+msgid "Width:"
+msgstr "너비:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:499
+msgid "Height:"
+msgstr "높이:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:501
+msgid "Type:"
+msgstr "종류:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+msgid "Bytes:"
+msgstr "바이트:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+#: ../src/eog-metadata-sidebar.c:505
+msgid "Folder:"
+msgstr "폴더:"
+
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:493
+msgid "General"
+msgstr "일반"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:530
+msgid "Aperture Value:"
+msgstr "조리개 값:"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:533
+msgid "Exposure Time:"
+msgstr "노출 시간:"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:536
+msgid "Focal Length:"
+msgstr "초점 거리:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:538
+msgid "Flash:"
+msgstr "플래시:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:542
+msgid "ISO Speed Rating:"
+msgstr "ISO 감광도:"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:545
+msgid "Metering Mode:"
+msgstr "측광 방식:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:548
+msgid "Camera Model:"
+msgstr "카메라 모델:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:550
+msgid "Date/Time:"
+msgstr "날짜/시간:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:555
+msgid "Description:"
+msgstr "설명:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:558
+msgid "Location:"
+msgstr "장소:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:561
+msgid "Keywords:"
+msgstr "검색단어:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:563
+msgid "Author:"
+msgstr "촬영자:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:566
+msgid "Copyright:"
+msgstr "저작권:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:569
+msgid "Details"
+msgstr "자세히"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:526
+msgid "Metadata"
+msgstr "메타데이터"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "다른 이름으로 저장"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> 원래 파일 이름"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> 일련번호"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:6
+msgid "_Filename format:"
+msgstr "파일 이름 형식(_F):"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+msgid "_Destination folder:"
+msgstr "저장할 폴더(_D):"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "Choose a folder"
+msgstr "폴더 선택"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+msgid "File Path Specifications"
+msgstr "파일 경로 지정"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "_Start counter at:"
+msgstr "일련번호 시작(_S):"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "_Replace spaces with underscores"
+msgstr "공백을 밑줄로 바꾸기(_R)"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "Options"
+msgstr "옵션"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "Rename from:"
+msgstr "원래 이름:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "To:"
+msgstr "바꿀 이름:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+msgid "File Name Preview"
+msgstr "파일 이름 미리 보기"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "기본 설정"
+
+#: ../data/eog-preferences-dialog.ui.h:2
+msgid "Image Enhancements"
+msgstr "이미지 개선"
+
+#: ../data/eog-preferences-dialog.ui.h:3
+msgid "Smooth images when zoomed _out"
+msgstr "이미지 축소할 때 부드럽게(_O)"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+msgid "Smooth images when zoomed _in"
+msgstr "이미지 확대할 때 부드럽게(_I)"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "_Automatic orientation"
+msgstr "자동 방향(_A)"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Background"
+msgstr "배경"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+msgid "As custom color:"
+msgstr "지정한 색으로:"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+#: ../data/org.gnome.eog.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "배경색"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+msgid "Transparent Parts"
+msgstr "투명한 부분"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+msgid "As check _pattern"
+msgstr "체크무늬로(_P)"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "As custom c_olor:"
+msgstr "지정한 색으로(_O):"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "Color for Transparent Areas"
+msgstr "투명한 부분의 색"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As _background"
+msgstr "배경으로(_B)"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Image View"
+msgstr "이미지 보기"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+msgid "Image Zoom"
+msgstr "이미지 확대/축소"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "E_xpand images to fit screen"
+msgstr "화면에 맞게 이미지 크기 조정(_X)"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+msgid "Sequence"
+msgstr "차례"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "_Time between images:"
+msgstr "이미지 사이의 시간 간격(_T):"
+
+#: ../data/eog-preferences-dialog.ui.h:20
+msgid "_Loop sequence"
+msgstr "반복(_L)"
+
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "Slideshow"
+msgstr "슬라이드 쇼"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "Plugins"
+msgstr "플러그인"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr "자동 방향"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "EXIF 방향 정보에 따라 이미지를 자동으로 회전할 지 여부."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr "이미지 뒤의 영역을 채우는데 사용할 색. use-background-color 키를 설정하지 않으면 GTK+ 테마에 따라 해당 영역을 채웁니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "이미지 인터폴레이션"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr "확대에서 이미지에 인터폴레이션을 할지 여부. 인터폴레이션을 하면 화질이 좋아지지만, 인터폴레이션을 하지 않는 경우보다 느립니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "이미지 엑스트라폴레이션"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr "축소에서 이미지에 엑스트라폴레이션을 할지 여부. 엑스트라폴레이션을 하면 이미지가 흐릿해지고, 엑스트라폴레이션을 하지 않는 경우보다 약간 느립니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "투명한 부분 나타내기"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"투명한 부분을 어떻게 나타낼 지 지정합니다. 가능한 값은 CHECK_PATTERN, COLOR, "
+"그리고 NONE입니다. COLOR의 경우 trans-color 키에서 어떤 색을 쓸 지 지정합니"
+"다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "휠로 확대/축소"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "스크롤 휠로 확대/축소를 할지 여부."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "확대 비율"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"스크롤 휠로 확대/축소를 사용할 때 적용되는 비율. 각각의 스크롤 이벤트가 생길 "
+"때 적용되는 확대/축소 비율입니다. 0.05로 설정되면 각각의 스크롤 이벤트가 발생"
+"될 때 5%씩 확대증가가 되고, 1.00이면 100% 확대증가가 됩니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "투명 색"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"transparency 키 값이 COLOR일 경우, 이 키 값이 투명한 부분에 사용될 색이 됩니"
+"다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "지정한 배경색을 사용합니다"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr "참이면 background-color 키에서 설정한 색을 이미지 뒤의 영역을 채우는데 사용합니다. 거짓이면 현재 GTK+ 테마에 따라 색을 채웁니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "이미지 순서를 반복합니다"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "무한 루프에서 이미지 시퀀스를 반복해서 표시할 지 여부."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "최초에 100%보다 크게 허용합니다"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr "거짓이면, 최초의 작은 이미지를 화면에 맞게 늘리지 않습니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "다음 이미지를 표시할 때까지의 지연 시간(초 단위)"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "0보다 큰 값이면 다음 이미지로 자동으로 넘어갈 때까지 유지할 시간입니다. 0이면 자동 넘어가기를 끕니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "창 도구 모음을 보이거나 감춥니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "창 상태 표시줄을 보이거나 감춥니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "이미지 모음창을 보입니다/감춥니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr "이미지 모음 창의 위치. 0은 아래, 1은 왼쪽, 2는 위, 3은 오른쪽입니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "이미지 모음 창의 크기를 조절할 수 있는지 여부."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "창 가장자리 창을 보이거나 감춥니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "이미지 모음창의 스크롤 단추를 보입니다/감춥니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "바뀐 사항의 저장 여부를 확인하지 않고 창을 닫습니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "물어보지 않고 휴지통에 이미지 버리기"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr "참이면 이미지를 휴지통에 옮길 때 확인 질문을 하지 않습니다. 참일 경우에도 파일 중에 휴지통에 옮기지 못하고 삭제하는 파일이 있으면 확인 질문을 합니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr "이미지를 읽어들이지 않았을 때 파일 선택 창에서 사용자의 이미지 폴더를 표시할 지 여부."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr "참이고 창에서 이미지를 읽어들이지 않은 경우, 파일 선택 창에서 해당 XDG 사용자 디렉터리를 사용해 사용자의 이미지 폴더를 표시합니다. 거짓이거나 이미지 폴더를 설정하지 않은 경우에는 현재 디렉터리를 표시합니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr "속성 창의 메타데이터 목록을 별도 페이지에 표시할지 여부."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"참이면 속성 창에서 자세한 메타데이터 목록을 별도 페이지에 표시합니다. 이렇게 "
+"하면 넷북처럼 화면이 작은 경우에 속성 창 크기가 잘 맞습니다. 거짓이면 위젯이 "
+"\"메타데이터\" 페이지에 포함됩니다."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "이미지를 편집하는데 사용하는 외부 프로그램"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr "이미지 편집에 사용할(\"이미지 편집\" 도구 모음 단추를 눌렀을 때) 응용 프로그램의 desktop 파일 이름(\".desktop\" 포함). 이미지 편집 기능을 사용하지 않으려면 빈 문자열로 설정하십시오."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "사용중인 플러그인"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+"사용중인 플러그인 목록. 사용중인 플러그인의 \"위치\"는 포함하지 않습니다. 주"
+"어진 플러그인의 \"위치\"는 .eog-plugin 파일을 참고하십시오."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "두 번 눌러서 전체 화면"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "두 번 눌러서 전체 화면 모드로 바꿉니다"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "이미지 다시 읽기"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "현재 이미지를 다시 읽습니다"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "상태 표시줄에 시각"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "창의 상태 표시줄에 이미지의 시각을 표시합니다"
+
+#: ../src/eog-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr "저장하지 않고 닫기(_W)"
+
+#: ../src/eog-close-confirmation-dialog.c:172
+#: ../src/eog-error-message-area.c:119 ../src/eog-file-chooser.c:456
+#: ../src/eog-file-chooser.c:464 ../src/eog-file-chooser.c:472
+#: ../src/eog-window.c:3365 ../src/eog-window.c:3368 ../src/eog-window.c:3619
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: ../src/eog-close-confirmation-dialog.c:178 ../src/eog-file-chooser.c:465
+#: ../src/eog-window.c:4077
+msgid "_Save"
+msgstr "저장(_S)"
+
+#: ../src/eog-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "다른 이름으로 저장(_A)"
+
+#: ../src/eog-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr "물음"
+
+#: ../src/eog-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
+
+#: ../src/eog-close-confirmation-dialog.c:428
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "바뀐 사항을 \"%s\" 이미지에 닫기 전에 저장하시겠습니까?"
+
+#: ../src/eog-close-confirmation-dialog.c:635
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] "바뀐 사항을 저장하지 않은 이미지가 %d개 있습니다. 닫기 전에 저장하시겠습니까?"
+
+#: ../src/eog-close-confirmation-dialog.c:652
+msgid "S_elect the images you want to save:"
+msgstr "저장하려는 이미지 선택(_E):"
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:671
+msgid "If you don't save, all your changes will be lost."
+msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:847
+msgid "_Reload"
+msgstr "다시 읽기(_R)"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4083
+msgid "Save _As…"
+msgstr "다른 이름으로 저장(_A)…"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "'%s' 이미지를 읽어들일 수 없습니다."
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "'%s' 이미지를 저장할 수 없습니다."
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "'%s'에서 이미지를 찾을 수 없습니다."
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "주어진 위치에 아무 이미지가 없습니다."
+
+#: ../src/eog-metadata-details.c:65
+msgid "Camera"
+msgstr "카메라"
+
+#: ../src/eog-metadata-details.c:66
+msgid "Image Data"
+msgstr "이미지 데이터"
+
+#: ../src/eog-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "사진 찍을 때 조건"
+
+#: ../src/eog-metadata-details.c:68
+msgid "GPS Data"
+msgstr "GPS 데이터"
+
+#: ../src/eog-metadata-details.c:69
+msgid "Maker Note"
+msgstr "만든 사람 메모"
+
+#: ../src/eog-metadata-details.c:70
+msgid "Other"
+msgstr "기타"
+
+#: ../src/eog-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP Exif"
+
+#: ../src/eog-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
+
+#: ../src/eog-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "XMP 권한 관리"
+
+#: ../src/eog-metadata-details.c:75
+msgid "XMP Other"
+msgstr "XMP 기타"
+
+#: ../src/eog-metadata-details.c:251
+msgid "Tag"
+msgstr "태그"
+
+#: ../src/eog-metadata-details.c:258
+msgid "Value"
+msgstr "값"
+
+#: ../src/eog-metadata-details.c:436
+msgid "North"
+msgstr "북"
+
+#: ../src/eog-metadata-details.c:439
+msgid "East"
+msgstr "동"
+
+#: ../src/eog-metadata-details.c:442
+msgid "West"
+msgstr "서"
+
+#: ../src/eog-metadata-details.c:445
+msgid "South"
+msgstr "남"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%Y년 %B %d일 %a  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%Y년 %B %d일 %a"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (렌즈)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (35mm 필름)"
+
+#: ../src/eog-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "파일 형식이 알 수 없거나 지원하지 않습니다"
+
+#: ../src/eog-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr "이미지 보기에서 이 파일 이름으로 저장할 수 있는 파일 형식을 알아낼 수 없습니다."
+
+#: ../src/eog-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ".png나 .jpg같은 파일 확장자로 다시 시도하십시오."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:212
+msgid "All files"
+msgstr "모든 파일"
+
+#: ../src/eog-file-chooser.c:217
+msgid "Supported image files"
+msgstr "지원하는 이미지 파일"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:289 ../src/eog-metadata-sidebar.c:232
+#: ../src/eog-metadata-sidebar.c:236 ../src/eog-properties-dialog.c:135
+#: ../src/eog-properties-dialog.c:137 ../src/eog-thumb-view.c:515
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "픽셀"
+
+#: ../src/eog-file-chooser.c:457 ../src/eog-file-chooser.c:473
+msgid "_Open"
+msgstr "열기(_O)"
+
+#: ../src/eog-file-chooser.c:459
+msgid "Open Image"
+msgstr "이미지 열기"
+
+#: ../src/eog-file-chooser.c:467
+msgid "Save Image"
+msgstr "이미지 저장"
+
+#: ../src/eog-file-chooser.c:475
+msgid "Open Folder"
+msgstr "폴더 열기"
+
+#: ../src/eog-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "읽지 않은 이미지 변환."
+
+#: ../src/eog-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "이미지 변환 실패."
+
+#: ../src/eog-image.c:1116
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "이 파일형식은 EXIF를 지원하지 않습니다."
+
+#: ../src/eog-image.c:1265
+#, c-format
+msgid "Image loading failed."
+msgstr "이미지를 읽는데 실패했습니다."
+
+#: ../src/eog-image.c:1846 ../src/eog-image.c:1966
+#, c-format
+msgid "No image loaded."
+msgstr "읽어 온 이미지가 없습니다."
+
+#: ../src/eog-image.c:1854 ../src/eog-image.c:1975
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "파일을 저장하는데 필요한 권한이 없습니다."
+
+#: ../src/eog-image.c:1864 ../src/eog-image.c:1986
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "임시 파일 만들기가 실패했습니다."
+
+#: ../src/eog-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "저장할 때 쓸 임시 파일을 만들지 못했습니다: %s"
+
+#: ../src/eog-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "JPEG 파일을 읽어들일 때 필요한 메모리를 할당하지 못했습니다"
+
+#: ../src/eog-metadata-sidebar.c:245 ../src/eog-properties-dialog.c:152
+msgid "Unknown"
+msgstr "알 수 없음"
+
+#: ../src/eog-metadata-sidebar.c:503
+msgid "File size:"
+msgstr "파일 크기:"
+
+#: ../src/eog-metadata-sidebar.c:519 ../src/eog-properties-dialog.c:669
+#: ../src/eog-window.c:4087
+msgid "Show the folder which contains this file in the file manager"
+msgstr "이 파일이 들어 있는 폴더를 파일 관리자에서 표시합니다"
+
+#: ../src/eog-preferences-dialog.c:109
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu초"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "이미지 설정"
+
+#: ../src/eog-print-image-setup.c:902
+msgid "Image"
+msgstr "이미지"
+
+#: ../src/eog-print-image-setup.c:903
+msgid "The image whose printing properties will be set up"
+msgstr "인쇄 속성을 설정할 이미지"
+
+#: ../src/eog-print-image-setup.c:909
+msgid "Page Setup"
+msgstr "페이지 설정"
+
+#: ../src/eog-print-image-setup.c:910
+msgid "The information for the page where the image will be printed"
+msgstr "이미지를 인쇄할 페이지의 정보"
+
+#: ../src/eog-print-image-setup.c:936
+msgid "Position"
+msgstr "위치"
+
+#: ../src/eog-print-image-setup.c:940
+msgid "_Left:"
+msgstr "왼쪽(_L):"
+
+#: ../src/eog-print-image-setup.c:942
+msgid "_Right:"
+msgstr "오른쪽(_R):"
+
+#: ../src/eog-print-image-setup.c:943
+msgid "_Top:"
+msgstr "위(_T):"
+
+#: ../src/eog-print-image-setup.c:944
+msgid "_Bottom:"
+msgstr "아래(_B):"
+
+#: ../src/eog-print-image-setup.c:947
+msgid "C_enter:"
+msgstr "가운데(_E):"
+
+#: ../src/eog-print-image-setup.c:952
+msgid "None"
+msgstr "없음"
+
+#: ../src/eog-print-image-setup.c:954
+msgid "Horizontal"
+msgstr "가로 방향"
+
+#: ../src/eog-print-image-setup.c:956
+msgid "Vertical"
+msgstr "세로 방향"
+
+#: ../src/eog-print-image-setup.c:958
+msgid "Both"
+msgstr "양쪽"
+
+#: ../src/eog-print-image-setup.c:974
+msgid "Size"
+msgstr "크기"
+
+#: ../src/eog-print-image-setup.c:977
+msgid "_Width:"
+msgstr "너비(_W):"
+
+#: ../src/eog-print-image-setup.c:979
+msgid "_Height:"
+msgstr "높이(_H):"
+
+#: ../src/eog-print-image-setup.c:982
+msgid "_Scaling:"
+msgstr "크기 조정(_S):"
+
+#: ../src/eog-print-image-setup.c:993
+msgid "_Unit:"
+msgstr "단위(_U):"
+
+#: ../src/eog-print-image-setup.c:998
+msgid "Millimeters"
+msgstr "밀리미터"
+
+#: ../src/eog-print-image-setup.c:1000
+msgid "Inches"
+msgstr "인치"
+
+#: ../src/eog-print-image-setup.c:1029
+msgid "Preview"
+msgstr "미리 보기"
+
+#: ../src/eog-save-as-dialog-helper.c:162
+msgid "as is"
+msgstr "그대로"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
+
+#: ../src/eog-thumb-view.c:543
+msgid "Taken on"
+msgstr "가져오기"
+
+#: ../src/eog-uri-converter.c:980
+#, c-format
+msgid "At least two file names are equal."
+msgstr "두 파일의 이름이 같습니다."
+
+#: ../src/eog-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "이미지 보기에 대한 도움말을 표시할 수 없습니다"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (잘못된 유니코드)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i 픽셀  %s    %i%%"
+
+#: ../src/eog-window.c:849 ../src/eog-window.c:2784
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "숨기기(_D)"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"\"%s\" 이미지를 외부 프로그램이 수정했습니다.\n"
+"다시 읽어들이시겠습니까?"
+
+#: ../src/eog-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "선택한 이미지를 열기위해 \"%s\"(을)를 사용합니다"
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "\"%s\" 이미지를 저장하는 중(%u/%u)"
+
+#: ../src/eog-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "\"%s\" 이미지를 여는 중"
+
+#: ../src/eog-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "전체 화면 나가기(_L)"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/eog-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "슬라이드쇼 보기"
+
+#: ../src/eog-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"파일을 인쇄하는데 오류가 발생했습니다:\n"
+"%s"
+
+#: ../src/eog-window.c:2558
+msgid "Toolbar Editor"
+msgstr "도구 모음 편집"
+
+#: ../src/eog-window.c:2561
+msgid "_Reset to Default"
+msgstr "기본값으로 돌아가기(_R)"
+
+#: ../src/eog-window.c:2563 ../src/eog-window.c:4044
+msgid "_Close"
+msgstr "닫기(_C)"
+
+#: ../src/eog-window.c:2731 ../src/eog-window.c:2746
+msgid "Error launching System Settings: "
+msgstr "시스템 설정 실행에 오류: "
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2782
+msgid "_Open Background Preferences"
+msgstr "배경 기본 설정 열기(_O)"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2798
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+"\"%s\" 이미지를 데스크톱 배경으로 지정했습니다.\n"
+"모양을 수정하시겠습니까?"
+
+#: ../src/eog-window.c:3263
+msgid "Saving image locally…"
+msgstr "이미지를 로컬에 저장하는 중입니다…"
+
+#: ../src/eog-window.c:3341
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+"정말로 \"%s\"(을)를 \n"
+"완전히 제거하시겠습니까?"
+
+#: ../src/eog-window.c:3344
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"정말로 선택한 이미지 %d개를\n"
+"완전히 제거하시겠습니까?"
+
+#: ../src/eog-window.c:3366 ../src/eog-window.c:3630
+msgid "_Delete"
+msgstr "삭제(_D)"
+
+#: ../src/eog-window.c:3369 ../src/eog-window.c:3632
+msgid "_Yes"
+msgstr "예(_Y)"
+
+#. add 'dont ask again' button
+#: ../src/eog-window.c:3373 ../src/eog-window.c:3624
+msgid "Do _not ask again during this session"
+msgstr "이 세션에서 다시 묻지 않기(_N)"
+
+#: ../src/eog-window.c:3417
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "이미지 파일을 가져올 수 없습니다"
+
+#: ../src/eog-window.c:3433
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "이미지 파일 정보를 가져올 수 없습니다"
+
+#: ../src/eog-window.c:3449 ../src/eog-window.c:3691
+#, c-format
+msgid "Couldn't delete file"
+msgstr "파일을 삭제할 수 없습니다"
+
+#. set dialog error message
+#: ../src/eog-window.c:3499 ../src/eog-window.c:3787
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "%s 이미지를 삭제하는데 오류가 발생했습니다"
+
+#: ../src/eog-window.c:3592
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+"정말로 \"%s\"(을)를 \n"
+"휴지통에 옮기시겠습니까?"
+
+#: ../src/eog-window.c:3595
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr "\"%s\"에 대한 휴지통이 없습니다. 이 이미지를 완전히 제거하시겠습니까?"
+
+#: ../src/eog-window.c:3600
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+"정말로 선택한 이미지 %d개를\n"
+"휴지통에 옮기시겠습니까?"
+
+#: ../src/eog-window.c:3605
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr "선택한 이미지 중에 휴지통으로 옮기지 못해서 완전히 제거할 파일이 있습니다. 계속 하시겠습니까?"
+
+#: ../src/eog-window.c:3622 ../src/eog-window.c:4113 ../src/eog-window.c:4140
+msgid "Move to _Trash"
+msgstr "휴지통으로 옮기기(_T)"
+
+#: ../src/eog-window.c:3669 ../src/eog-window.c:3683
+#, c-format
+msgid "Couldn't access trash."
+msgstr "휴지통에 접근할 수 없습니다."
+
+#: ../src/eog-window.c:4034
+msgid "_Image"
+msgstr "이미지(_I)"
+
+#: ../src/eog-window.c:4035
+msgid "_Edit"
+msgstr "편집(_E)"
+
+#: ../src/eog-window.c:4037
+msgid "_Go"
+msgstr "이동(_G)"
+
+#: ../src/eog-window.c:4038
+msgid "_Tools"
+msgstr "도구(_T)"
+
+#: ../src/eog-window.c:4041
+msgid "_Open…"
+msgstr "열기(_O)…"
+
+#: ../src/eog-window.c:4042
+msgid "Open a file"
+msgstr "파일을 엽니다"
+
+#: ../src/eog-window.c:4045
+msgid "Close window"
+msgstr "창 닫기"
+
+#: ../src/eog-window.c:4047
+msgid "T_oolbar"
+msgstr "도구 모음(_O)"
+
+#: ../src/eog-window.c:4048
+msgid "Edit the application toolbar"
+msgstr "도구 모음을 고칩니다"
+
+#: ../src/eog-window.c:4051
+msgid "Preferences for Image Viewer"
+msgstr "이미지 보기 기본 설정"
+
+#: ../src/eog-window.c:4053
+msgid "_Contents"
+msgstr "차례(_C)"
+
+#: ../src/eog-window.c:4054
+msgid "Help on this application"
+msgstr "이 프로그램에 대한 정보"
+
+#: ../src/eog-window.c:4057
+msgid "About this application"
+msgstr "이 프로그램 정보"
+
+#: ../src/eog-window.c:4063
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "현재 창의 도구 모음 표시 여부를 바꿉니다"
+
+#: ../src/eog-window.c:4066
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "현재 창의 상태 표시줄 표시 여부를 바꿉니다"
+
+#: ../src/eog-window.c:4069
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr "현재 창의 이미지 모음 창 보기 여부를 바꿉니다"
+
+#: ../src/eog-window.c:4072
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "현재 창에서 가장자리 창을 보기 여부를 바꿉니다"
+
+#: ../src/eog-window.c:4078
+msgid "Save changes in currently selected images"
+msgstr "현재 선택한 이미지의 바뀐 사항을 저장합니다"
+
+#: ../src/eog-window.c:4080
+msgid "Open _with"
+msgstr "다른 프로그램으로 열기(_W)"
+
+#: ../src/eog-window.c:4081
+msgid "Open the selected image with a different application"
+msgstr "선택한 이미지를 다른 프로그램에서 엽니다"
+
+#: ../src/eog-window.c:4084
+msgid "Save the selected images with a different name"
+msgstr "선택한 이미지를 다른 이름으로 저장합니다"
+
+#: ../src/eog-window.c:4086
+msgid "Show Containing _Folder"
+msgstr "들어 있는 폴더 표시(_F)"
+
+#: ../src/eog-window.c:4089
+msgid "_Print…"
+msgstr "인쇄(_P)…"
+
+#: ../src/eog-window.c:4090
+msgid "Print the selected image"
+msgstr "선택한 이미지를 인쇄합니다"
+
+#: ../src/eog-window.c:4092
+msgid "Prope_rties"
+msgstr "속성(_R)"
+
+#: ../src/eog-window.c:4093
+msgid "Show the properties and metadata of the selected image"
+msgstr "선택한 이미지의 속성과 메타데이터를 봅니다"
+
+#: ../src/eog-window.c:4095
+msgid "_Undo"
+msgstr "실행 취소(_U)"
+
+#: ../src/eog-window.c:4096
+msgid "Undo the last change in the image"
+msgstr "이미지에서 마지막에 바꾼 사항을 실행 취소합니다"
+
+#: ../src/eog-window.c:4098
+msgid "Flip _Horizontal"
+msgstr "가로 방향으로 뒤집기(_H)"
+
+#: ../src/eog-window.c:4099
+msgid "Mirror the image horizontally"
+msgstr "이미지를 가로 방향으로 뒤바꿉니다"
+
+#: ../src/eog-window.c:4101
+msgid "Flip _Vertical"
+msgstr "세로 방향으로 뒤집기(_V)"
+
+#: ../src/eog-window.c:4102
+msgid "Mirror the image vertically"
+msgstr "이미지를 세로 방향으로 뒤바꿉니다"
+
+#: ../src/eog-window.c:4104
+msgid "_Rotate Clockwise"
+msgstr "시계 방향 회전(_R)"
+
+#: ../src/eog-window.c:4105
+msgid "Rotate the image 90 degrees to the right"
+msgstr "이미지를 오른쪽 90도만큼 회전합니다"
+
+#: ../src/eog-window.c:4107
+msgid "Rotate Counterc_lockwise"
+msgstr "시계 반대 방향 회전(_L)"
+
+#: ../src/eog-window.c:4108
+msgid "Rotate the image 90 degrees to the left"
+msgstr "이미지를 왼쪽 90도만큼 회전합니다"
+
+#: ../src/eog-window.c:4110
+msgid "Set as Wa_llpaper"
+msgstr "배경으로 지정(_L)"
+
+#: ../src/eog-window.c:4111
+msgid "Set the selected image as the wallpaper"
+msgstr "선택한 이미지를 배경으로 설정합니다"
+
+#: ../src/eog-window.c:4114
+msgid "Move the selected image to the trash folder"
+msgstr "선택한 이미지를 휴지통 폴더로 옮깁니다"
+
+#: ../src/eog-window.c:4116
+msgid "_Delete Image"
+msgstr "이미지 삭제(_D)"
+
+#: ../src/eog-window.c:4117
+msgid "Delete the selected image"
+msgstr "선택한 이미지를 삭제합니다"
+
+#: ../src/eog-window.c:4119
+msgid "_Copy"
+msgstr "복사(_C)"
+
+#: ../src/eog-window.c:4120
+msgid "Copy the selected image to the clipboard"
+msgstr "선택한 이미지를 클립보드에 복사합니다"
+
+#: ../src/eog-window.c:4122 ../src/eog-window.c:4131 ../src/eog-window.c:4134
+msgid "_Zoom In"
+msgstr "확대(_Z)"
+
+#: ../src/eog-window.c:4123 ../src/eog-window.c:4132
+msgid "Enlarge the image"
+msgstr "이미지를 크게 확대해서 봅니다"
+
+#: ../src/eog-window.c:4125 ../src/eog-window.c:4137
+msgid "Zoom _Out"
+msgstr "축소(_O)"
+
+#: ../src/eog-window.c:4126 ../src/eog-window.c:4135 ../src/eog-window.c:4138
+msgid "Shrink the image"
+msgstr "이미지를 작게 축소해서 봅니다"
+
+#: ../src/eog-window.c:4128
+msgid "_Normal Size"
+msgstr "보통 크기(_N)"
+
+#: ../src/eog-window.c:4129
+msgid "Show the image at its normal size"
+msgstr "이미지를 원래 크기로 봅니다"
+
+#: ../src/eog-window.c:4146
+msgid "_Fullscreen"
+msgstr "전체 화면(_F)"
+
+#: ../src/eog-window.c:4147
+msgid "Show the current image in fullscreen mode"
+msgstr "현재 이미지를 전체화면 모드에서 봅니다"
+
+#: ../src/eog-window.c:4149
+msgid "Pause Slideshow"
+msgstr "슬라이드 쇼 일시 중지"
+
+#: ../src/eog-window.c:4150
+msgid "Pause or resume the slideshow"
+msgstr "슬라이드 쇼를 일시 중지하거나 다시 시작합니다"
+
+#: ../src/eog-window.c:4152
+msgid "_Best Fit"
+msgstr "창에 맞게(_B)"
+
+#: ../src/eog-window.c:4153
+msgid "Fit the image to the window"
+msgstr "이미지를 창 크기에 맞춥니다"
+
+#: ../src/eog-window.c:4158 ../src/eog-window.c:4173
+msgid "_Previous Image"
+msgstr "이전 이미지(_P)"
+
+#: ../src/eog-window.c:4159
+msgid "Go to the previous image of the gallery"
+msgstr "이미지 모음의 이전 이미지로 이동합니다"
+
+#: ../src/eog-window.c:4161
+msgid "_Next Image"
+msgstr "다음 이미지(_N)"
+
+#: ../src/eog-window.c:4162
+msgid "Go to the next image of the gallery"
+msgstr "이미지 모음의 다음 이미지로 이동합니다"
+
+#: ../src/eog-window.c:4164 ../src/eog-window.c:4176
+msgid "_First Image"
+msgstr "처음 이미지(_F)"
+
+#: ../src/eog-window.c:4165
+msgid "Go to the first image of the gallery"
+msgstr "이미지 모음의 처음 이미지로 이동합니다"
+
+#: ../src/eog-window.c:4167 ../src/eog-window.c:4179
+msgid "_Last Image"
+msgstr "마지막 이미지(_L)"
+
+#: ../src/eog-window.c:4168
+msgid "Go to the last image of the gallery"
+msgstr "이미지 모음의 마지막 이미지로 이동합니다"
+
+#: ../src/eog-window.c:4170
+msgid "_Random Image"
+msgstr "임의의 이미지(_R)"
+
+#: ../src/eog-window.c:4171
+msgid "Go to a random image of the gallery"
+msgstr "이미지 모음에서 임의의 이미지로 이동합니다"
+
+#: ../src/eog-window.c:4329
+msgid "S_lideshow"
+msgstr "슬라이드 쇼(_L)"
+
+#: ../src/eog-window.c:4330
+msgid "Start a slideshow view of the images"
+msgstr "이미지로 슬라이드 쇼를 시작합니다."
+
+#: ../src/eog-window.c:4402
+msgid "Previous"
+msgstr "이전"
+
+#: ../src/eog-window.c:4407
+msgid "Next"
+msgstr "다음"
+
+#: ../src/eog-window.c:4414
+msgid "Right"
+msgstr "오른쪽"
+
+#: ../src/eog-window.c:4417
+msgid "Left"
+msgstr "왼쪽"
+
+#: ../src/eog-window.c:4420
+msgid "Show Folder"
+msgstr "폴더 표시"
+
+#: ../src/eog-window.c:4423
+msgid "In"
+msgstr "확대"
+
+#: ../src/eog-window.c:4426
+msgid "Out"
+msgstr "축소"
+
+#: ../src/eog-window.c:4429
+msgid "Normal"
+msgstr "보통"
+
+#: ../src/eog-window.c:4432
+msgid "Fit"
+msgstr "맞추기"
+
+#: ../src/eog-window.c:4435
+msgid "Gallery"
+msgstr "이미지 모음"
+
+#: ../src/eog-window.c:4452
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "휴지통"
+
+# tooltip
+#: ../src/eog-window.c:4818
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "현재 이미지를 %s 프로그램을 사용해 편집합니다"
+
+#: ../src/eog-window.c:4820
+msgid "Edit Image"
+msgstr "이미지 편집"
+
+#: ../src/eog-window.c:6164
+msgid "The GNOME image viewer."
+msgstr "그놈 이미지 보기."
+
+#: ../src/eog-window.c:6167
+msgid "translator-credits"
+msgstr ""
+"남성현 <namsh@kldp.org>\n"
+"차영호 <ganadist@chollian.net>\n"
+"류창우 <cwryu@debian.org>"
+
+#: ../src/main.c:56
+msgid "GNOME Image Viewer"
+msgstr "그놈 이미지 보기"
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "전체화면 모드로 열기"
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr "이미지 모음 사용하지 않음"
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr "슬라이드쇼 모드로 열기"
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "현재 실행 중인 창을 사용하지 않고 새로 시작합니다"
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr "창 1개에서 엽니다. 여러 창이 열려 있으면 첫번째 창을 사용합니다"
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr "프로그램의 버전을 표시합니다"
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr "[파일…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "전체 명령어 옵션 목록을 보려면 '%s --help' 명령을 실행하십시오."

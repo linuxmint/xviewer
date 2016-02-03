@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="ca">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>View information such as camera settings and histogram, geolocation, and date.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  </info>
+
+<title>Visualització de la informació d'una imatge</title>
+
+<p>Les fotografies fetes amb una càmera digital es desen amb tot un seguit d'informació addicional incrustada, com per exemple la data que es van fer, els paràmetres d'exposició que es van utilitzar i, en alguns casos, fins hi tot a on es va fer la fotografia.</p>
+
+<p>Aquest tema us mostra com accedir a aquesta informació.</p>
+
+<section id="date">
+<title>Mostra la data a la barra d'estat</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Podeu visualitzar la data que es va fer la fotografia a la barra d'estat de la part inferior de la finestra.</p>
+  <p>Per fer-ho, feu clic a <guiseq><gui>Edita</gui><gui>Preferències</gui></guiseq> i aneu a la pestanya <gui>Connectors</gui>. A continuació, seleccioneu <gui>Data a la barra d'estat</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Dades detallades de l'EXIF</title>
+  <p>La informació detallada que es desa a les fotografies digitals s'anomena <em>Dades EXIF</em>. La podeu visualitzar instal·lant un connector del visualitzador d'imatges.</p>
+
+  <steps>
+   <item>
+    <p>Per poder veure les dades EXIF incrustades a les fotografies heu d'instal·lar el paquet informàtic <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Si l'<sys>eog-plugins</sys> està instal·lat, feu clic a <guiseq><gui>Edita</gui><gui>Preferències</gui></guiseq> i aneu a la pestanya <gui>Connectors</gui>. A continuació, seleccioneu <gui>Visualitza l'EXIF</gui> i feu clic a <gui>Tanca</gui>.</p>
+   </item>
+   <item>
+    <p>Click <guiseq><gui>View</gui><gui>Side Pane</gui></guiseq> to view the
+    camera settings used to take the photo. To also view histograms showing the balance
+    of colors and light/shade in the picture, select <gui>Exif display</gui> in the
+    <gui>Plugins</gui> tab and click <gui>Preferences</gui>. Check the histograms you    
+    want to view, listed under <gui>Histogram</gui>.</p>
+   </item>
+   <item>
+    <p>You can also view the camera settings used to take the photo in the statusbar. 
+    Select <gui>Exif display</gui> in the <gui>Plugins</gui> tab and click 
+    <gui>Preferences</gui>. Check <gui>Display camera settings in statusbar</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Visualització d'un mapa de localització de la fotografia</title>
+  <p>Algunes càmeres poden adjuntar la informació de <em>geolocalització</em> (etiquetes geogràfiques) a les fotos digitals. Les etiquetes geogràfiques són coordenades GPS (latitud i longitud) del lloc on es va fer la fotografia.</p>
+
+  <steps>
+   <item>
+    <p>Per poder veure un mapa dels llocs on es van fer les fotografies heu d'instal·lar el paquet informàtic <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Si l'<sys>eog-plugins</sys> està instal·lat, feu clic a <guiseq><gui>Edita</gui><gui>Preferències</gui></guiseq> i aneu a la pestanya <gui>Connectors</gui>. A continuació, seleccioneu <gui>Mapa</gui> i feu clic a <gui>Tanca</gui>.</p>
+   </item>
+   <item>
+    <p>Per visualitzar el mapa feu clic a <guiseq><gui>Visualitza</gui><gui>Subfinestra lateral</gui></guiseq>.</p>
+   </item>
+  </steps>
+  <p>El mapa mostrarà la ubicació de la imatge si adjunta la informació de geolocalització. Moltes càmeres no l'adjunten.</p>
+</section>
+
+
+</page>

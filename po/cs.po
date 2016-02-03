@@ -1,0 +1,1706 @@
+# Czech translation of Eye Of Gnome.
+# Copyright (C) 2002, 2006, 2007, 2008 the author(s) of Eye Of Gnome.
+# Copyright (C) 2003, 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
+# Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>.
+# This file is distributed under the same license as the eog package.
+#
+# George Lebl <jirka@5z.com>, 2000.
+# Michal Bukovjan <michal.bukovjan@openone.cz>, 2002.
+# Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005.
+# Petr Tomeš <ptomes@gmail.com>, 2006.
+# Lukas Novotny <lukasnov@cvs.gnome.org>, 2006.
+# Jakub Friedl <jfriedl@suse.cz>, 2006, 2007.
+# Kamil Páral <ripper42@gmail.com>, 2008.
+# Petr Kovar <pknbe@volny.cz>, 2008, 2009.
+# Lucas Lommer <llommer@svn.gnome.org>, 2008.
+# Adrian Guniš <andygun696@gmail.com>, 2008, 2009.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-12-18 16:18+0000\n"
+"PO-Revision-Date: 2014-01-16 20:49+0100\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "Zobrazit „_%s“"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_Přesunout na nástrojovou lištu"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "Přesunout vybranou položku na nástrojovou lištu"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "_Odstranit z nástrojové lišty"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "Odstranit vybranou položku z nástrojové lišty"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "_Smazat nástrojovou lištu"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "Odstranit vybranou nástrojovou lištu"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "Oddělovač"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4027
+msgid "_View"
+msgstr "_Zobrazit"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4053
+msgid "_Toolbar"
+msgstr "Nás_trojová lišta"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4056
+msgid "_Statusbar"
+msgstr "_Stavová lišta"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4059
+msgid "_Image Gallery"
+msgstr "Galer_ie obrázků"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4062
+msgid "Side _Pane"
+msgstr "Postranní _panel"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4041
+msgid "Prefere_nces"
+msgstr "_Předvolby"
+
+#: ../data/eog-app-menu.xml.h:7 ../src/eog-window.c:2565
+#: ../src/eog-window.c:4030
+msgid "_Help"
+msgstr "Nápo_věda"
+
+#: ../data/eog-app-menu.xml.h:8 ../src/eog-window.c:4047
+msgid "_About"
+msgstr "O _aplikaci"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "U_končit"
+
+#: ../data/eog.appdata.xml.in.h:1
+msgid ""
+"The Eye of GNOME is the official image viewer for the GNOME desktop. It "
+"integrates with the GTK+ look and feel of GNOME, and supports many image "
+"formats for viewing single images or images in a collection."
+msgstr ""
+"Eye of GNOME je oficiální prohlížeč obrázků pro pracovní prostředí GNOME. "
+"Spojuje v sobě vzhled GTK+ a chování GNOME a podporuje řadu formátů obrázků, "
+"které lze prohlížet jednotlivě i jako kolekce."
+
+#: ../data/eog.appdata.xml.in.h:2
+msgid ""
+"The Eye of GNOME also allows to view the images in a fullscreen slideshow "
+"mode or set an image as the desktop wallpaper. It reads the camera tags to "
+"automatically rotate your images in the correct portrait or landscape "
+"orientation."
+msgstr ""
+"Eye of GNOME umí obrázky zobrazit také v režimu promítání přes celou "
+"obrazovku nebo nastavit obrázek jako tapetu pracovní plochy. Čte štítky "
+"zapsané fotoaparátem a automaticky podle nich mění otočení obrázku na šířku "
+"nebo na výšku."
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-application.c:269
+#: ../src/eog-window.c:6144
+msgid "Image Viewer"
+msgstr "Prohlížeč obrázků"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Procházení a otáčení obrázků"
+
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "obrázek;fotka;promítání snímků;prezentace snímků;grafika;"
+
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:5020
+msgid "Image Properties"
+msgstr "Vlastnosti obrázku"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_Předchozí"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_Následující"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../src/eog-metadata-sidebar.c:495
+msgid "Name:"
+msgstr "Název:"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:497
+msgid "Width:"
+msgstr "Šířka:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:499
+msgid "Height:"
+msgstr "Výška:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:501
+msgid "Type:"
+msgstr "Typ:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+msgid "Bytes:"
+msgstr "Bajty:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+#: ../src/eog-metadata-sidebar.c:505
+msgid "Folder:"
+msgstr "Složka:"
+
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:493
+msgid "General"
+msgstr "Obecné"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:530
+msgid "Aperture Value:"
+msgstr "Hodnota clony:"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:533
+msgid "Exposure Time:"
+msgstr "Čas expozice:"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:536
+msgid "Focal Length:"
+msgstr "Ohnisková vzdálenost:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:538
+msgid "Flash:"
+msgstr "Blesk:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:542
+msgid "ISO Speed Rating:"
+msgstr "Citlivost ISO:"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:545
+msgid "Metering Mode:"
+msgstr "Režim měření:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:548
+msgid "Camera Model:"
+msgstr "Typ fotoaparátu:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:550
+msgid "Date/Time:"
+msgstr "Datum a čas:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:555
+msgid "Description:"
+msgstr "Popis:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:558
+msgid "Location:"
+msgstr "Místo:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:561
+msgid "Keywords:"
+msgstr "Klíčová slova:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:563
+msgid "Author:"
+msgstr "Autor:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:566
+msgid "Copyright:"
+msgstr "Autorská práva:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:569
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:526
+msgid "Metadata"
+msgstr "Metadata"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Uložit jako"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> původní název souboru"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> čítač"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:6
+msgid "_Filename format:"
+msgstr "_Formát názvu souboru:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+msgid "_Destination folder:"
+msgstr "_Cílová složka:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "Choose a folder"
+msgstr "Zvolte složku"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+msgid "File Path Specifications"
+msgstr "Specifikace cesty k souboru"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "_Start counter at:"
+msgstr "_Spustit čítač od:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "_Replace spaces with underscores"
+msgstr "Nah_radit mezery podtržítky"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "Options"
+msgstr "Možnosti"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "Rename from:"
+msgstr "Přejmenovat z:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "To:"
+msgstr "Na:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+msgid "File Name Preview"
+msgstr "Náhled názvu souboru"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: ../data/eog-preferences-dialog.ui.h:2
+msgid "Image Enhancements"
+msgstr "Vylepšení obrázku"
+
+#: ../data/eog-preferences-dialog.ui.h:3
+msgid "Smooth images when zoomed _out"
+msgstr "Vyhlazovat obrázky při _oddálení"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+msgid "Smooth images when zoomed _in"
+msgstr "Vyhlazovat obrázky při př_iblížení"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "_Automatic orientation"
+msgstr "_Automatické otočení"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Background"
+msgstr "Pozadí"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+msgid "As custom color:"
+msgstr "Jako vlastní barvu:"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+#: ../data/org.gnome.eog.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Barva pozadí"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+msgid "Transparent Parts"
+msgstr "Průhledné části"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+msgid "As check _pattern"
+msgstr "Jako _vzor čtverců"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "As custom c_olor:"
+msgstr "Jako vlastní _barvu:"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "Color for Transparent Areas"
+msgstr "Barva průhledných oblastí"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As _background"
+msgstr "Jako _pozadí"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Image View"
+msgstr "Zobrazení obrázku"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+msgid "Image Zoom"
+msgstr "Přiblížení obrázku"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "E_xpand images to fit screen"
+msgstr "_Roztáhnout obrázky podle obrazovky"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+msgid "Sequence"
+msgstr "Posloupnost"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "_Time between images:"
+msgstr "Pro_dleva mezi obrázky:"
+
+#: ../data/eog-preferences-dialog.ui.h:20
+msgid "_Loop sequence"
+msgstr "Opa_kovat posloupnost ve smyčce"
+
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "Slideshow"
+msgstr "Promítání snímků"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "Plugins"
+msgstr "Zásuvné moduly"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr "Automatické otočení"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "Zda má být obrázek automaticky otočen dle údajů EXIF."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+"Barva, která je použita pro vyplnění oblasti za obrázkem. Pokud není klíč "
+"use-background-color nastaven, je místo toho použita barva dle aktivního "
+"motivu GTK+."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Interpolace obrázku"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Zda se má oddálený obrázek interpolovat. To zvyšuje kvalitu, ale je "
+"pomalejší než obrázky bez interpolace."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Extrapolace obrázku"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Zda se má přiblížený obrázek extrapolovat. To vede k rozmazání a je "
+"pomalejší než obrázky bez extrapolace."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Indikátor průhlednosti"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"Určuje, jak má být průhlednost indikována. Platné hodnoty jsou "
+"CHECK_PATTERN, COLOR a NONE. Pokud je zvolena hodnota COLOR, pak hodnotu "
+"použité barvy určuje klíč trans-color."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "Přibližování rolovacím kolečkem"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "Zda má být rolovací kolečko používáno pro změnu přiblížení."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Násobič přiblížení"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"Násobič použitý při přibližování kolečkem myši. Hodnota definuje velikost "
+"kroku přiblížení při každé události. Například hodnota 0,05 znamená 5% "
+"nárůst přiblížení při každém otočení kolečka a hodnota 1,00 znamená 100% "
+"nárůst přiblížení."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "Barva průhlednosti"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"Pokud má klíč průhlednosti hodnotu COLOR, pak tento klíč určuje barvu, která "
+"se použije pro indikaci průhlednosti."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "Použít vlastní barvu pozadí"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"Pokud je toto aktivní, barva nastavená v klíči background-color bude použita "
+"pro vyplnění oblasti za obrázkem. Pokud není nastaven, určí barvu výplně "
+"aktuální motiv GTK+."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Opakovat sekvenci obrázků"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "Zda má být sekvence obrázků zobrazována v nekonečné smyčce."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Povolit počáteční přiblížení větší než 100%"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Pokud je toto nastaveno na „FALSE“, malé obrázky nebudou automaticky "
+"roztaženy, aby se přizpůsobily obrazovce."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Zpoždění v sekundách do zobrazení dalšího obrázku"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Hodnota větší než 0 určuje počet sekund, po který zůstane obrázek na "
+"obrazovce, než je automaticky zobrazen další. Nula zakazuje automatické "
+"procházení."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Zobrazit/skrýt nástrojovou lištu okna."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Zobrazit/skrýt stavovou lištu okna."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "Zobrazit/skrýt panel s galerií obrázků."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"Umístění panelu s galerií obrázků. 0 - dole, 1 - vlevo, 2 - nahoře, 3 - "
+"vpravo."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "Zda lze měnit velikost panelu s galerií obrázků."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Zobrazovat/skrývat postranní panel okna."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "Zobrazovat/skrývat tlačítka posuvu panelu s galerií obrázků."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "Zavřít hlavní okno bez dotazu na uložení změn."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "Přesunout obrázky do koše bez výzvy"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+"Pokud je aktivováno, prohlížeč obrázků Eye of GNOME nebude žádat o potvrzení "
+"při přesouvání obrázků do koše. Bude se ale stále ptát, když některé soubory "
+"nebude možné přesunout do koše a byly by místo toho smazány."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+"Zda má okno s výběrem souborů zobrazovat uživatelovu složku obrázků, pokud "
+"nejsou načteny žádné obrázky."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"Pokud je aktivováno a v aktivním okně není načten žádný obrázek, okno s "
+"výběrem souborů zobrazí uživatelovu složku obrázků pomocí speciálních složek "
+"uživatele XDG. Pokud je deaktivováno nebo nebyla nastavena složka obrázků, "
+"zobrazí se aktuální pracovní složka."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr "Zda má mít seznam metadat v okně Vlastnosti svoji vlastní stránku."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"Pokud je aktivováno, přesune se podrobný seznam metadat v okně Vlastnosti na "
+"jeho vlastní stránku v okně. Tak by mělo být toto okno více použitelné na "
+"menších obrazovkách, např. na netboocích. Pokud je vypnuto, widget se vloží "
+"na stránku „Metadata“."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Externí program na úpravu obrázků"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"Název souboru s položkou pracovní plochy (včetně přípony „.desktop“) od "
+"aplikace, která se má použít pro úpravu obrázků (když se klikne na "
+"nástrojové liště na tlačítko „Upravit obrázek“). Natavením na prázdný "
+"řetězec tuto funkci vypnete."
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Aktivní moduly"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+"Seznam aktivních modulů. Neobsahuje umístění aktivních modulů. Umístění "
+"modulu naleznete v souboru .eog-plugin."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Celá obrazovka dvojklikem"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Aktivuje dvojklikem režim celé obrazovky"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Znovu načíst obrázek"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Znovu načte aktuální obrázek"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Datum ve stavové liště"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Zobrazuje datum obrázku ve stavové liště okna"
+
+#: ../src/eog-close-confirmation-dialog.c:167
+msgid "Close _without Saving"
+msgstr "Zavřít _bez uložení"
+
+#: ../src/eog-close-confirmation-dialog.c:173
+#: ../src/eog-error-message-area.c:119 ../src/eog-file-chooser.c:457
+#: ../src/eog-file-chooser.c:465 ../src/eog-file-chooser.c:473
+#: ../src/eog-window.c:3356 ../src/eog-window.c:3359 ../src/eog-window.c:3610
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+#: ../src/eog-close-confirmation-dialog.c:179 ../src/eog-file-chooser.c:466
+#: ../src/eog-window.c:4068
+msgid "_Save"
+msgstr "_Uložit"
+
+#: ../src/eog-close-confirmation-dialog.c:185
+msgid "Save _As"
+msgstr "Uložit j_ako"
+
+#: ../src/eog-close-confirmation-dialog.c:213
+msgid "Question"
+msgstr "Dotaz"
+
+#: ../src/eog-close-confirmation-dialog.c:392
+msgid "If you don't save, your changes will be lost."
+msgstr "Bez uložení budou vaše změny ztraceny."
+
+#: ../src/eog-close-confirmation-dialog.c:429
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "Uložit změny v obrázku „%s“ před zavřením?"
+
+#: ../src/eog-close-confirmation-dialog.c:636
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] "V %d obrázku nejsou uloženy změny. Uložit změny před zavřením?"
+msgstr[1] "Ve %d obrázcích nejsou uloženy změny. Uložit změny před zavřením?"
+msgstr[2] "V %d obrázcích nejsou uloženy změny. Uložit změny před zavřením?"
+
+#: ../src/eog-close-confirmation-dialog.c:653
+msgid "S_elect the images you want to save:"
+msgstr "_Vyberte obrázky, které chcete uložit:"
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:672
+msgid "If you don't save, all your changes will be lost."
+msgstr "Bez uložení budou všechny vaše změny ztraceny."
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:847
+msgid "_Reload"
+msgstr "_Znovu načíst"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4074
+msgid "Save _As…"
+msgstr "Uložit _jako…"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "Nelze načíst obrázek „%s“."
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "Nelze uložit obrázek „%s“."
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "V „%s“ nebyly nalezeny žádné obrázky."
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "Zadaná umístění neobsahují žádné obrázky."
+
+#: ../src/eog-metadata-details.c:64
+msgid "Camera"
+msgstr "Fotoaparát"
+
+#: ../src/eog-metadata-details.c:65
+msgid "Image Data"
+msgstr "Údaje o obrázku"
+
+#: ../src/eog-metadata-details.c:66
+msgid "Image Taking Conditions"
+msgstr "Údaje o snímku"
+
+#: ../src/eog-metadata-details.c:67
+msgid "GPS Data"
+msgstr "Údaje GPS"
+
+#: ../src/eog-metadata-details.c:68
+msgid "Maker Note"
+msgstr "Poznámka výrobce"
+
+#: ../src/eog-metadata-details.c:69
+msgid "Other"
+msgstr "Ostatní"
+
+#: ../src/eog-metadata-details.c:71
+msgid "XMP Exif"
+msgstr "XMP Exif"
+
+#: ../src/eog-metadata-details.c:72
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
+
+#: ../src/eog-metadata-details.c:73
+msgid "XMP Rights Management"
+msgstr "XMP - správa práv"
+
+#: ../src/eog-metadata-details.c:74
+msgid "XMP Other"
+msgstr "XMP - ostatní"
+
+#: ../src/eog-metadata-details.c:250
+msgid "Tag"
+msgstr "Symbol"
+
+#: ../src/eog-metadata-details.c:257
+msgid "Value"
+msgstr "Hodnota"
+
+#: ../src/eog-metadata-details.c:417
+msgid "North"
+msgstr "Sever"
+
+#: ../src/eog-metadata-details.c:420
+msgid "East"
+msgstr "Východ"
+
+#: ../src/eog-metadata-details.c:423
+msgid "West"
+msgstr "Západ"
+
+#: ../src/eog-metadata-details.c:426
+msgid "South"
+msgstr "Jih"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %e. %B %Y  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %e. %B %Y"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (objektiv)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (35mm film)"
+
+#: ../src/eog-file-chooser.c:120
+msgid "File format is unknown or unsupported"
+msgstr "Formát souboru je neznámý nebo nepodporovaný"
+
+#: ../src/eog-file-chooser.c:125
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Prohlížeč obrázků nemohl podle názvu souboru určit podporovaný formát "
+"souboru pro zápis."
+
+#: ../src/eog-file-chooser.c:126
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "Zkuste prosím odlišnou příponu souboru, jako .png nebo .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:161
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:213
+msgid "All files"
+msgstr "Všechny soubory"
+
+#: ../src/eog-file-chooser.c:218
+msgid "Supported image files"
+msgstr "Podporované formáty obrázků"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:290 ../src/eog-metadata-sidebar.c:232
+#: ../src/eog-metadata-sidebar.c:236 ../src/eog-properties-dialog.c:135
+#: ../src/eog-properties-dialog.c:137 ../src/eog-thumb-view.c:515
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "bod"
+msgstr[1] "body"
+msgstr[2] "bodů"
+
+#: ../src/eog-file-chooser.c:458 ../src/eog-file-chooser.c:474
+msgid "_Open"
+msgstr "_Otevřít"
+
+#: ../src/eog-file-chooser.c:460
+msgid "Open Image"
+msgstr "Otevřít obrázek"
+
+#: ../src/eog-file-chooser.c:468
+msgid "Save Image"
+msgstr "Uložit obrázek"
+
+#: ../src/eog-file-chooser.c:476
+msgid "Open Folder"
+msgstr "Otevřít složku"
+
+#: ../src/eog-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Transformace nenačteného obrázku."
+
+#: ../src/eog-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Transformace selhala."
+
+#: ../src/eog-image.c:1110
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF není pro tento formát souboru podporován."
+
+#: ../src/eog-image.c:1259
+#, c-format
+msgid "Image loading failed."
+msgstr "Nahrávání obrázku selhalo."
+
+#: ../src/eog-image.c:1840 ../src/eog-image.c:1960
+#, c-format
+msgid "No image loaded."
+msgstr "Nenačten žádný obrázek."
+
+#: ../src/eog-image.c:1848 ../src/eog-image.c:1969
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "Nemáte oprávnění potřebná k uložení souboru."
+
+#: ../src/eog-image.c:1858 ../src/eog-image.c:1980
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Vytvoření dočasného souboru selhala."
+
+#: ../src/eog-image-jpeg.c:375
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Nelze vytvořit dočasný soubor pro ukládání: %s"
+
+#: ../src/eog-image-jpeg.c:394
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "Nelze alokovat paměť pro načtení JPEG souboru"
+
+#: ../src/eog-metadata-sidebar.c:245 ../src/eog-properties-dialog.c:152
+msgid "Unknown"
+msgstr "Neznámý"
+
+#: ../src/eog-metadata-sidebar.c:503
+msgid "File size:"
+msgstr "Velikost souboru:"
+
+#: ../src/eog-metadata-sidebar.c:519 ../src/eog-properties-dialog.c:669
+#: ../src/eog-window.c:4078
+msgid "Show the folder which contains this file in the file manager"
+msgstr "Složku, která obsahuje tento soubor, otevřít ve správci souborů"
+
+#: ../src/eog-preferences-dialog.c:109
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu sekunda"
+msgstr[1] "%lu sekundy"
+msgstr[2] "%lu sekund"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "Nastavení obrázků"
+
+#: ../src/eog-print-image-setup.c:902
+msgid "Image"
+msgstr "Obrázek"
+
+#: ../src/eog-print-image-setup.c:903
+msgid "The image whose printing properties will be set up"
+msgstr "Obrázek, jehož vlastnosti tisku budou nastaveny"
+
+#: ../src/eog-print-image-setup.c:909
+msgid "Page Setup"
+msgstr "Vzhled stránky"
+
+#: ../src/eog-print-image-setup.c:910
+msgid "The information for the page where the image will be printed"
+msgstr "Informace o stránce, na které bude obrázek vytištěn"
+
+#: ../src/eog-print-image-setup.c:936
+msgid "Position"
+msgstr "Poloha"
+
+#: ../src/eog-print-image-setup.c:940
+msgid "_Left:"
+msgstr "V_levo:"
+
+#: ../src/eog-print-image-setup.c:942
+msgid "_Right:"
+msgstr "Vp_ravo:"
+
+#: ../src/eog-print-image-setup.c:943
+msgid "_Top:"
+msgstr "_Nahoře:"
+
+#: ../src/eog-print-image-setup.c:944
+msgid "_Bottom:"
+msgstr "_Dole:"
+
+#: ../src/eog-print-image-setup.c:947
+msgid "C_enter:"
+msgstr "Uprostř_ed:"
+
+#: ../src/eog-print-image-setup.c:952
+msgid "None"
+msgstr "Nic"
+
+#: ../src/eog-print-image-setup.c:954
+msgid "Horizontal"
+msgstr "Vodorovně"
+
+#: ../src/eog-print-image-setup.c:956
+msgid "Vertical"
+msgstr "Svisle"
+
+#: ../src/eog-print-image-setup.c:958
+msgid "Both"
+msgstr "Obojí"
+
+#: ../src/eog-print-image-setup.c:974
+msgid "Size"
+msgstr "Velikost"
+
+#: ../src/eog-print-image-setup.c:977
+msgid "_Width:"
+msgstr "Šířk_a:"
+
+#: ../src/eog-print-image-setup.c:979
+msgid "_Height:"
+msgstr "_Výška:"
+
+#: ../src/eog-print-image-setup.c:982
+msgid "_Scaling:"
+msgstr "Š_kálování:"
+
+#: ../src/eog-print-image-setup.c:993
+msgid "_Unit:"
+msgstr "_Jednotka:"
+
+#: ../src/eog-print-image-setup.c:998
+msgid "Millimeters"
+msgstr "Milimetry"
+
+#: ../src/eog-print-image-setup.c:1000
+msgid "Inches"
+msgstr "Palce"
+
+#: ../src/eog-print-image-setup.c:1029
+msgid "Preview"
+msgstr "Náhled"
+
+#: ../src/eog-save-as-dialog-helper.c:162
+msgid "as is"
+msgstr "beze změny"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
+
+#: ../src/eog-thumb-view.c:543
+msgid "Taken on"
+msgstr "Vyfotografováno"
+
+#: ../src/eog-uri-converter.c:980
+#, c-format
+msgid "At least two file names are equal."
+msgstr "Názvy alespoň dvou souborů jsou stejné."
+
+#: ../src/eog-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "Nelze zobrazit nápovědu pro prohlížeč obrázků"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (neplatný Unicode)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i bod  %s    %i%%"
+msgstr[1] "%i × %i body  %s    %i%%"
+msgstr[2] "%i × %i bodů  %s    %i%%"
+
+#: ../src/eog-window.c:849 ../src/eog-window.c:2775
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "_Skrýt"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"Obrázek „%s“ byl změněn externí aplikací.\n"
+"Přejete si jej znovu načíst?"
+
+#: ../src/eog-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "Otevřít vybraný obrázek pomocí „%s“"
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "Ukládání obrázku „%s“ (%u/%u)"
+
+#: ../src/eog-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "Otevírá se obrázek „%s“"
+
+#: ../src/eog-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "Opustit ce_lou obrazovku"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/eog-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "Probíhá promítání snímků"
+
+#: ../src/eog-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"Chyba během tisku souboru:\n"
+"%s"
+
+#: ../src/eog-window.c:2558
+msgid "Toolbar Editor"
+msgstr "Editor nástrojové lišty"
+
+#: ../src/eog-window.c:2561
+msgid "_Reset to Default"
+msgstr "O_bnovit na výchozí"
+
+#: ../src/eog-window.c:2563 ../src/eog-window.c:4035
+msgid "_Close"
+msgstr "_Zavřít"
+
+#: ../src/eog-window.c:2722 ../src/eog-window.c:2737
+msgid "Error launching System Settings: "
+msgstr "Chyba spouštění Nastavení systému: "
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2773
+msgid "_Open Background Preferences"
+msgstr "_Otevřít předvolby pozadí"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2789
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+"Obrázek „%s“ byl nastaven jako pozadí plochy.\n"
+"Přejete si upravit její vzhled?"
+
+#: ../src/eog-window.c:3254
+msgid "Saving image locally…"
+msgstr "Obrázek se ukládá místně…"
+
+#: ../src/eog-window.c:3332
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+"Opravdu chcete trvale\n"
+"odstranit „%s“?"
+
+#: ../src/eog-window.c:3335
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"Opravdu chcete vybraný\n"
+"obrázek trvale odstranit?"
+msgstr[1] ""
+"Opravdu chcete %d vybrané\n"
+"obrázky trvale odstranit?"
+msgstr[2] ""
+"Opravdu chcete %d vybraných\n"
+"obrázků trvale odstranit?"
+
+#: ../src/eog-window.c:3357 ../src/eog-window.c:3621
+msgid "_Delete"
+msgstr "O_dstranit"
+
+#: ../src/eog-window.c:3360 ../src/eog-window.c:3623
+msgid "_Yes"
+msgstr "_Ano"
+
+#. add 'dont ask again' button
+#: ../src/eog-window.c:3364 ../src/eog-window.c:3615
+msgid "Do _not ask again during this session"
+msgstr "_Neptat se znovu během tohoto sezení"
+
+#: ../src/eog-window.c:3408
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "Nelze získat soubor s obrázkem"
+
+#: ../src/eog-window.c:3424
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "Nelze získat informace o souboru s obrázkem"
+
+#: ../src/eog-window.c:3440 ../src/eog-window.c:3682
+#, c-format
+msgid "Couldn't delete file"
+msgstr "Soubor nelze smazat"
+
+#. set dialog error message
+#: ../src/eog-window.c:3490 ../src/eog-window.c:3778
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Chyba při odstraňování obrázku %s"
+
+#: ../src/eog-window.c:3583
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+"Opravdu chcete přesunout\n"
+"„%s“ do koše?"
+
+#: ../src/eog-window.c:3586
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+"Koš pro „%s“ není dostupný. Přejete si odstranit tento obrázek natrvalo?"
+
+#: ../src/eog-window.c:3591
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+"Opravdu chcete přesunout\n"
+"vybraný obrázek do koše?"
+msgstr[1] ""
+"Opravdu chcete přesunout\n"
+"%d vybrané obrázky do koše?"
+msgstr[2] ""
+"Opravdu chcete přesunout\n"
+"%d vybraných obrázků do koše?"
+
+#: ../src/eog-window.c:3596
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"Některé z vybraných obrázků nelze přesunout do koše a budou odstraněny "
+"natrvalo. Jste si jisti, že chcete pokračovat?"
+
+#: ../src/eog-window.c:3613 ../src/eog-window.c:4104 ../src/eog-window.c:4131
+msgid "Move to _Trash"
+msgstr "Přesunout do _koše"
+
+#: ../src/eog-window.c:3660 ../src/eog-window.c:3674
+#, c-format
+msgid "Couldn't access trash."
+msgstr "Nelze přistoupit ke koši."
+
+#: ../src/eog-window.c:4025
+msgid "_Image"
+msgstr "_Obrázek"
+
+#: ../src/eog-window.c:4026
+msgid "_Edit"
+msgstr "_Upravit"
+
+#: ../src/eog-window.c:4028
+msgid "_Go"
+msgstr "Pře_jít"
+
+#: ../src/eog-window.c:4029
+msgid "_Tools"
+msgstr "_Nástroje"
+
+#: ../src/eog-window.c:4032
+msgid "_Open…"
+msgstr "_Otevřít…"
+
+#: ../src/eog-window.c:4033
+msgid "Open a file"
+msgstr "Otevřít soubor"
+
+#: ../src/eog-window.c:4036
+msgid "Close window"
+msgstr "Zavřít okno"
+
+#: ../src/eog-window.c:4038
+msgid "T_oolbar"
+msgstr "Nás_trojová lišta"
+
+#: ../src/eog-window.c:4039
+msgid "Edit the application toolbar"
+msgstr "Upravit nástrojovou lištu"
+
+#: ../src/eog-window.c:4042
+msgid "Preferences for Image Viewer"
+msgstr "Předvolby pro prohlížeč obrázků"
+
+#: ../src/eog-window.c:4044
+msgid "_Contents"
+msgstr "_Obsah"
+
+#: ../src/eog-window.c:4045
+msgid "Help on this application"
+msgstr "Nápověda pro tuto aplikaci"
+
+#: ../src/eog-window.c:4048
+msgid "About this application"
+msgstr "O této aplikaci"
+
+#: ../src/eog-window.c:4054
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "Změní viditelnost nástrojové lišty v aktuálním okně"
+
+#: ../src/eog-window.c:4057
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "Změní viditelnost stavové lišty v aktuálním okně"
+
+#: ../src/eog-window.c:4060
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr "Změní viditelnost panelu s galerií obrázků v aktuálním okně"
+
+#: ../src/eog-window.c:4063
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "Změní viditelnost postranního panelu v aktuálním okně"
+
+#: ../src/eog-window.c:4069
+msgid "Save changes in currently selected images"
+msgstr "Uložit změny v aktuálně vybraných obrázcích"
+
+#: ../src/eog-window.c:4071
+msgid "Open _with"
+msgstr "Otevřít _pomocí"
+
+#: ../src/eog-window.c:4072
+msgid "Open the selected image with a different application"
+msgstr "Otevřít vybraný obrázek jinou aplikací"
+
+#: ../src/eog-window.c:4075
+msgid "Save the selected images with a different name"
+msgstr "Uložit vybrané obrázky pod odlišným názvem"
+
+#: ../src/eog-window.c:4077
+msgid "Show Containing _Folder"
+msgstr "Zobrazit mateřskou _složku"
+
+#: ../src/eog-window.c:4080
+msgid "_Print…"
+msgstr "_Tisk…"
+
+#: ../src/eog-window.c:4081
+msgid "Print the selected image"
+msgstr "Vytisknout vybraný obrázek"
+
+#: ../src/eog-window.c:4083
+msgid "Prope_rties"
+msgstr "Vlast_nosti"
+
+#: ../src/eog-window.c:4084
+msgid "Show the properties and metadata of the selected image"
+msgstr "Zobrazit vlastnosti a metadata vybraného obrázku"
+
+#: ../src/eog-window.c:4086
+msgid "_Undo"
+msgstr "_Zpět"
+
+#: ../src/eog-window.c:4087
+msgid "Undo the last change in the image"
+msgstr "Vrátit poslední změnu v obrázku"
+
+#: ../src/eog-window.c:4089
+msgid "Flip _Horizontal"
+msgstr "Překlopit _vodorovně"
+
+#: ../src/eog-window.c:4090
+msgid "Mirror the image horizontally"
+msgstr "Zrcadlit obrázek vodorovně"
+
+#: ../src/eog-window.c:4092
+msgid "Flip _Vertical"
+msgstr "Překlopit _svisle"
+
+#: ../src/eog-window.c:4093
+msgid "Mirror the image vertically"
+msgstr "Zrcadlit obrázek svisle"
+
+#: ../src/eog-window.c:4095
+msgid "_Rotate Clockwise"
+msgstr "Otočit po smě_ru hodinových ručiček"
+
+#: ../src/eog-window.c:4096
+msgid "Rotate the image 90 degrees to the right"
+msgstr "Otočit obrázek o 90 stupňů doprava"
+
+#: ../src/eog-window.c:4098
+msgid "Rotate Counterc_lockwise"
+msgstr "Otočit proti směru _hodinových ručiček"
+
+#: ../src/eog-window.c:4099
+msgid "Rotate the image 90 degrees to the left"
+msgstr "Otočit obrázek o 90 stupňů doleva"
+
+#: ../src/eog-window.c:4101
+msgid "Set as Wa_llpaper"
+msgstr "Nastavit jako _tapetu"
+
+#: ../src/eog-window.c:4102
+msgid "Set the selected image as the wallpaper"
+msgstr "Nastavit vybraný obrázek jako tapetu na pozadí plochy"
+
+#: ../src/eog-window.c:4105
+msgid "Move the selected image to the trash folder"
+msgstr "Přesunout vybraný obrázek do koše"
+
+#: ../src/eog-window.c:4107
+msgid "_Delete Image"
+msgstr "O_dstranit obrázek"
+
+#: ../src/eog-window.c:4108
+msgid "Delete the selected image"
+msgstr "Odstranit vybraný obrázek"
+
+#: ../src/eog-window.c:4110
+msgid "_Copy"
+msgstr "_Kopírovat"
+
+#: ../src/eog-window.c:4111
+msgid "Copy the selected image to the clipboard"
+msgstr "Kopírovat vybraný obrázek do schránky"
+
+#: ../src/eog-window.c:4113 ../src/eog-window.c:4122 ../src/eog-window.c:4125
+msgid "_Zoom In"
+msgstr "Přiblíži_t"
+
+#: ../src/eog-window.c:4114 ../src/eog-window.c:4123
+msgid "Enlarge the image"
+msgstr "Zvětšit obrázek"
+
+#: ../src/eog-window.c:4116 ../src/eog-window.c:4128
+msgid "Zoom _Out"
+msgstr "_Oddálit"
+
+#: ../src/eog-window.c:4117 ../src/eog-window.c:4126 ../src/eog-window.c:4129
+msgid "Shrink the image"
+msgstr "Zmenšit obrázek"
+
+#: ../src/eog-window.c:4119
+msgid "_Normal Size"
+msgstr "_Normální velikost"
+
+#: ../src/eog-window.c:4120
+msgid "Show the image at its normal size"
+msgstr "Zobrazit obrázek v původní velikosti"
+
+#: ../src/eog-window.c:4137
+msgid "_Fullscreen"
+msgstr "_Celá obrazovka"
+
+#: ../src/eog-window.c:4138
+msgid "Show the current image in fullscreen mode"
+msgstr "Zobrazit aktuální obrázek v režimu celé obrazovky"
+
+#: ../src/eog-window.c:4140
+msgid "Pause Slideshow"
+msgstr "Pozastavit promítání snímků"
+
+#: ../src/eog-window.c:4141
+msgid "Pause or resume the slideshow"
+msgstr "Pozastavit nebo pokračovat v promítání snímků"
+
+#: ../src/eog-window.c:4143
+msgid "_Best Fit"
+msgstr "Nejlepší _velikost"
+
+#: ../src/eog-window.c:4144
+msgid "Fit the image to the window"
+msgstr "Přizpůsobit obrázek oknu"
+
+#: ../src/eog-window.c:4149 ../src/eog-window.c:4164
+msgid "_Previous Image"
+msgstr "_Předchozí obrázek"
+
+#: ../src/eog-window.c:4150
+msgid "Go to the previous image of the gallery"
+msgstr "Přejít na předchozí obrázek v galerii"
+
+#: ../src/eog-window.c:4152
+msgid "_Next Image"
+msgstr "_Následující obrázek"
+
+#: ../src/eog-window.c:4153
+msgid "Go to the next image of the gallery"
+msgstr "Přejít na následující obrázek v galerii"
+
+#: ../src/eog-window.c:4155 ../src/eog-window.c:4167
+msgid "_First Image"
+msgstr "P_rvní obrázek"
+
+#: ../src/eog-window.c:4156
+msgid "Go to the first image of the gallery"
+msgstr "Přejít na první obrázek v galerii"
+
+#: ../src/eog-window.c:4158 ../src/eog-window.c:4170
+msgid "_Last Image"
+msgstr "Po_slední obrázek"
+
+#: ../src/eog-window.c:4159
+msgid "Go to the last image of the gallery"
+msgstr "Přejít na poslední obrázek v galerii"
+
+#: ../src/eog-window.c:4161
+msgid "_Random Image"
+msgstr "Ná_hodný obrázek"
+
+#: ../src/eog-window.c:4162
+msgid "Go to a random image of the gallery"
+msgstr "Přejít na náhodný obrázek v galerii"
+
+#: ../src/eog-window.c:4320
+msgid "S_lideshow"
+msgstr "P_romítání snímků"
+
+#: ../src/eog-window.c:4321
+msgid "Start a slideshow view of the images"
+msgstr "Spustit promítání snímků"
+
+#: ../src/eog-window.c:4389
+msgid "Previous"
+msgstr "Předchozí"
+
+#: ../src/eog-window.c:4393
+msgid "Next"
+msgstr "Následující"
+
+#: ../src/eog-window.c:4397
+msgid "Right"
+msgstr "Doprava"
+
+#: ../src/eog-window.c:4400
+msgid "Left"
+msgstr "Doleva"
+
+#: ../src/eog-window.c:4403
+msgid "Show Folder"
+msgstr "Zobrazit složku"
+
+#: ../src/eog-window.c:4406
+msgid "In"
+msgstr "Zvětšit"
+
+#: ../src/eog-window.c:4409
+msgid "Out"
+msgstr "Zmenšit"
+
+#: ../src/eog-window.c:4412
+msgid "Normal"
+msgstr "Normální"
+
+#: ../src/eog-window.c:4415
+msgid "Fit"
+msgstr "Přizpůsobit"
+
+#: ../src/eog-window.c:4418
+msgid "Gallery"
+msgstr "Galerie"
+
+#: ../src/eog-window.c:4435
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "Koš"
+
+#: ../src/eog-window.c:4801
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "Upravit aktuální obrázek pomocí %s"
+
+#: ../src/eog-window.c:4803
+msgid "Edit Image"
+msgstr "Upravit obrázek"
+
+#: ../src/eog-window.c:6147
+msgid "The GNOME image viewer."
+msgstr "Prohlížeč obrázků pro GNOME."
+
+#: ../src/eog-window.c:6150
+msgid "translator-credits"
+msgstr ""
+"George Lebl <jirka@5z.com>\n"
+"Michal Bukovjan <bukm@centrum.cz>\n"
+"Miloslav Trmač <mitr@volny.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
+"Jakub Friedl <jfriedl@suse.cz>\n"
+"Kamil Páral <ripper42@gmail.com>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
+"Adrian Guniš <andygun696@gmail.com>\n"
+"Marek Černocký <marek@manet.cz>"
+
+#: ../src/main.c:56
+msgid "GNOME Image Viewer"
+msgstr "Prohlížeč obrázků pro GNOME"
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "Otevřít v režimu celé obrazovky"
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr "Zakázat galerii obrázků"
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr "Otevřít v režimu promítání snímků"
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "Spustit novou instanci namísto znovupoužití existující"
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr "Otevřít jedno okno, pokud je otevřeno více oken, použít první z nich"
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr "Zobrazit verzi aplikace"
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr "[SOUBOR…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Spustit příkaz „%s --help“ k zobrazení úplného seznamu dostupných přepínačů "
+"příkazové řádky."

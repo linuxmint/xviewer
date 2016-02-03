@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="gl">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Pode converter imaxes dun formato de imaxe a outro. Pode facelo para un lote de varios ficheiros.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Fran Dieguez</mal:name>
+      <mal:email>frandieguez@gnome.org</mal:email>
+      <mal:years>2011-2012.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Converter a un formato de ficheiro diferente</title>
+
+<p>As imaxes gárdanse nun formato de ficheiro específico, como JPEG ou PNG. Pode converter dun formato de ficheiro a outro.</p>
+
+<section id="single">
+ <title>Converter unha única imaxe a un formato de ficheiro diferente</title>
+ <list type="numbered">
+  <item>
+   <p>Prema <guiseq><gui>Imaxe</gui><gui>Gardar como </gui></guiseq>. Mostrarase a xanela emerxente <gui>Gardar imaxe</gui>.</p>
+  </item>
+  <item>
+   <p>No campo de nome, cambie a <em>extensión de ficheiro</em> ao tipo de ficheiro ao que quere converter a súa imaxe. A extensión do ficheiro é a parte do nome do ficheiro despois do punto.</p>
+   <p>Por exemplo, para converter un ficheiro en JPEG (<file>.jpg</file>) a un ficheiro en formato mapa de bits (BMP, <file>.bmp</file>):</p>
+   <p><em>ficheiro orixinal:</em> <file>imaxe.jpg</file></p>
+   <p><em>novo ficheiro:</em> <file>imaxe.bmp</file></p>
+  </item>
+  <item>
+   <p>Prema <gui>Gardar</gui> e gardarase un ficheiro novo no novo formato. O ficheiro antigo (no formato anterior) segurá onde estaba e non se eliminará.</p>
+  </item>
+</list>
+
+<p>O Visor de imaxes tenta adiviñar o formato de ficheiro no que gardar a imaxe baseándose na extensión do ficheiro que elixa. Se non recoñece a extensión de ficheiro que escriba ou se non sabe cal usar, prema <gui>Ficheiros de imaxe compatíbeis</gui> na xanela <gui>Gardar imaxe</gui>. Isto permitiralle seleccionar un formato de ficheiro da lista despregábel.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Converter varias imaxes a un tipo de ficheiro diferente</title>
+ <p>Pode converter certo número de imaxes dun formato de ficheiro a outro dunha sola vez. Útil se ten unha morea de imaxes que precisa converter.</p>
+ <list style="numbered">
+  <item>
+   <p>Na <link xref="view#image-gallery">colección de imaxes</link>, prema e manteña premida a tecla <key>Ctrl</key> e seleccione as imaxes que quere converter unha por unha. Alternativamente prema <keyseq><key>Ctrl</key><key>A</key></keyseq> para seleccionar todas as imaxes.</p>
+  </item>
+  <item>
+   <p>Prema <guiseq><gui>Imaxe</gui><gui>Gardar como</gui></guiseq>. Aparecerá unha xanela (mostrada a continuación).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>De forma predeterminada, as imaxes gardaranse no cartafol actual. Se quere gardalas noutro lugar, seleccione o cartafol desde o menú despregábel <gui>Cartafol de destino</gui>.</p>
+  </item>
+  <item>
+   <p>Seleccione o formato de ficheiro ao que quere converter as imaxes desde o menú despregábel á dereita da caixa de entrada <gui>Formato do nome de ficheiro</gui>.</p>
+  </item>
+  <item>
+   <p>Prema <gui>Gardar</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

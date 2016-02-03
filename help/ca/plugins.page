@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="ca">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Instal·leu connectors per accedir a funcions addicionals.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  </info>
+
+<title>Connectors</title>
+
+<p>Podeu instal·lar el paquet <sys>eog-plugins</sys> per obtenir connectors addicionals del visualitzador d'imatges. Els connectors afegeixen funcions com les que es mostren a sota.</p>
+
+<note style="info package">
+  <p>Podeu instal·lar el paquet <sys>eog-plugins</sys> utilitzant el <em>gestor de paquets</em> de la distribució de Linux que utilitzeu.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">install eog-plugins</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>L'<sys>eog-plugins</sys> inclou les funcions següents:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">Date in statusbar</link>: Shows the image date in the window statusbar.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Visualitza l'EXIF</link>: mostra els paràmetres de la càmera i els histogrames de les fotos digitals.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">Fullscreen Background</link>: Enables changing 
+background in fullscreen mode.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">Fullscreen with double-click</link>: Activate fullscreen mode with double-click.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Mapa</link>: mostra la geolocalització d'una foto digital a un mapa.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">PicasaWeb Uploader</link>: Upload your pictures to PicasaWeb.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Consola de Python</link>: una consola de Python per al visualitzador d'imatges.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">Envia per correu electrònic</link>: envia una imatge a un amic adjuntant-la a un correu electrònic.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Projecció de diapositives mesclades</link>: mescla les imatges en el mode de projecció de diapositives.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Amplia per ajustar-se a l'amplada de la imatge</link>: ajusta l'escala perquè l'amplada de la imatge s'ajusti a la finestra.</p>
+ </item>
+</list>
+
+<note>
+ <p>Podeu gestionar els connectors utilitzant la <link xref="preferences#plugins">pestanya de Connectors</link> de la finestra de preferències.</p>
+</note>
+
+</page>

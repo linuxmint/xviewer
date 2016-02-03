@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="gl">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Vista de imaxes</link>, <link xref="preferences#slideshow">diapositivas</link> e <link xref="preferences#plugins">engadidos</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Fran Dieguez</mal:name>
+      <mal:email>frandieguez@gnome.org</mal:email>
+      <mal:years>2011-2012.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Preferencias</title>
+<p>Este tema explica toda a configuración que pode cambiar no Visor de imaxes. Prema <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> para comezar a cambiar as preferencias.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Preferencias do visor de imaxes</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Melloras de imaxe</title>
+    <p>Select <gui>Smooth images when zoomed out</gui> to enable <em>image 
+    smoothing</em> when you zoom in and out. This makes low-resolution 
+    (pixelated) pictures look better by smoothing out jagged edges.</p>
+    <p>Se activa a <gui>Orientación automática</gui> as imaxes rotaránse automaticamente segundo os seus <em>metadatos Exif</em>. É información sobre unha imaxe automaticamente insertadas pola cámara dixital e pode incluír detalles sobre como se sostivo a cámara cando se tomou a fotografía. Por exemplo, cando se usa a orientación automática, as opcións de retratos rótanse automaticamente de forma correcta. A rotación non se garda até que <link xref="flip-rotate#rotate">garda a imaxe rotada</link>.</p> 
+    <p>A orientación automática non funciona con todas as imaxes; só se rotarán as imaxes tomadas usando unha cámara que garda os metadatos de orientación Exif.</p>
+  </item>
+  <item>
+    <title>Partes transparentes</title>
+     <p>Seleccion eunha das opcións seguintes para determinar como se mostra as partes transparentes dunha imaxe, se hai algunha:</p>
+    <list>
+      <item>
+       <p><gui>Como patrón de cadros:</gui></p>
+       <p>Mostra calquera parte transparente da imaxe nun patrón de cadros.</p>
+      </item>
+      <item>
+       <p><gui>Como cor personalizada:</gui></p>
+       <p>Mostra calquera parte transparente da iamxe nun cor sólido que especifique premendo no botón de selección de cor.</p>
+      </item>
+      <item>
+       <p><gui>Como fondo:</gui></p>
+       <p>Mostra calquera parte transparente da imaxe na cor de <gui>Fondo</gui>, se <gui>Como cor personalizada</gui>, baixo <gui>Fondo</gui> está marcado. De outra forma, úsase a cor de fondo predeterminado.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Preferencias da presentación</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>Para personalizar os axustes do pase de diapositivas:</p>
+<list>
+ <item>
+  <p>Baixo <gui>Ampliación de imaxe</gui> pode selecionar se quere que as imaxes máis pequenas que a pantalla se expandan para axustarse á pantalla</p>
+ </item>
+ <item>
+  <p>Baixo <gui>Secuencia</gui> pode seleccionar cantos segundos se debería mostra cada imaxe (entre 1 e 100) antes de mostrar a seguinte imaxe.</p>
+ </item>
+ <item>
+  <p>Marque <gui>Secuencia en bucle</gui> se quere que as súas diapositivas se repitan cíclicamente. Se está desmarcada, a mostra comezará na imaxe seleccionada e terminará na última imaxe no cartafol.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Preferencias dos engadidos</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Aquí pode marcar/desmarcar calquera característica adicional que queira activar ou desactivar. A imaxe da esquerda mostra os engadidos que dispoñíbeis por omisión.</p>
+
+<p>Tamén pode querer instalar o <link xref="plugins">paquete eog-plugins</link> que contén engadidos que fornezan certas características adicionais. Despois de facelo, poderá seleccionar que <link xref="index#plugins">engadidos adicionais</link> quere actiar, segundo poida velos á dereita.</p>
+</section>
+
+</page>

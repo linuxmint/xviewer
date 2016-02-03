@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="toolbar" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc>Die Werkzeugleiste <link xref="toolbar#view">anzeigen, verbergen</link> oder <link xref="toolbar#edit">bearbeiten</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Werkzeugleiste</title>
+<p>Die Werkzeugleiste bietet leichten Zugriff auf Funktionsmerkmale wie Änderung der Vergrößerungsstufe und Drehung. Sie können sie ausblenden, wenn Sie sie als störend empfinden sollten oder sie Ihrer Meinung nach unnötig Platz verbraucht.</p>
+
+<section id="view">
+<title>Die Werkzeugleiste anzeigen oder verbergen</title>
+  <p>Um die Anzeige der Werkzeugleiste an- oder auszuschalten, klicken Sie auf <guiseq><gui>Ansicht</gui><gui>Werkzeugleiste</gui></guiseq>.</p>
+</section>
+
+<section id="modify">
+ <title>Hinzufügen, Entfernen und neu Anordnen der Werkzeuge in der Werkzeugleiste.</title>
+ <p>Die Standard-Werkzeugleiste enthält einen grundlegenden Satz an Werkzeugen. Sie können durch Bearbeitung der Werkzeugleiste weitere nützliche Einträge hinzufügen:</p>
+ <steps>
+ <item>
+  <p>Stellen Sie sicher, dass die Werkzeugleiste nicht verborgen ist.</p>
+ </item>
+ <item>
+  <p>Klicken Sie auf <guiseq><gui>Bearbeiten</gui><gui>Werkzeugleiste</gui></guiseq>.</p>
+  <p>Der <gui>Werkzeugleisteneditor</gui> enthält die Objekte, die nicht in der Werkzeugleiste vorhanden sind (siehe Bild unten). Weiterhin ist eine Trennlinie verfügbar, mit der Sie die Einträge der Werkzeugleiste gruppieren können.</p>
+ </item>
+ <item>
+  <p>Um Objekte zur Werkzeugleiste <em>hinzuzufügen</em>, ziehen Sie sie aus dem Werkzeugleisteneditor in die Werkzeugleiste.</p>
+  <p>Um Objekte in der Werkzeugleiste <em>neu anzuordnen</em>, ziehen Sie sie an die gewünschte Position.</p>
+  <p>Sie können Einträge aus der Werkzeugleiste <em>entfernen</em>, indem Sie diese aus der Werkzeugleiste in den Werkzeugleisteneditor ziehen.</p>
+ </item>
+ <item>
+  <p>Sobald Sie die Bearbeitung der Werkzeugleiste beendet haben, klicken Sie auf <gui>Schließen</gui> im Fenster des Werkzeugleisteneditors.</p>
+ </item>
+</steps>
+
+<p>Um die Werkzeugleiste auf die Vorgabe zurückzusetzen, klicken Sie auf im Bearbeitungsfenster auf <gui>Zurücksetzen auf Standardeinstellungen</gui>.</p>
+
+<media type="image" src="figures/eog-toolbar-editor.png" width="480"/>
+
+</section>
+
+</page>

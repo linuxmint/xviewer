@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shortcuts" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <desc>Una lista de todos los atajos.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+       <name>Tiffany Antopolski</name>
+       <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2011, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jorge González</mal:name>
+      <mal:email>jorgegonz@svn.gnome.org</mal:email>
+      <mal:years>2008-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Francisco Javier F. Serrador</mal:name>
+      <mal:email>serrador@openshine.com</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Atajos de teclado</title>
+
+<p>Esto es una lista de todos los atajos de teclado que puede usar en el Visor de imágenes.</p>
+
+<section id="open-close-save-print">
+  <title>Abrir, cerrar, guardar e imprimir</title>
+  <table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Abrir un archivo de imagen</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>O</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Guardar la imagen con el mismo nombre de archivo</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>S</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Guardar una copia de la imagen actual con un nombre nuevo</p></td>
+        <td><p><keyseq><key>Mayús</key><key>Ctrl</key><key>S</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Imprimir la imagen actual</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>P</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Cerrar la ventana actual</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>W</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Establecer la imagen como fondo del escritorio</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>F8</key></keyseq></p></td>
+    </tr>
+  </table>
+</section>
+
+<section id="viewing">
+    <title>Ver imágenes</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Ir a la imagen anterior en la carpeta</p></td>
+        <td><p><key>Retroceso</key> / <key>Izquierda</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Ir a la siguiente imagen en la carpeta</p></td>
+        <td><p><key>Espacio</key> / <key>Derecha</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Ir a la primera imagen en la carpeta</p></td>
+        <td><p><keyseq><key>Alt</key><key>Inicio</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Ir a la última imagen en la carpeta</p></td>
+         <td><p><keyseq><key>Alt</key><key>Fin</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Elegir una imagen aleatoria en la carpeta</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>M</key></keyseq></p></td>
+    </tr>
+    <tr>
+    	<td><p>Ver la colección de imágenes</p></td>
+        <td><p><key>F9</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Ver en pantalla completa</p></td>
+         <td><p><key>F11</key></p></td>
+    </tr>
+
+    <tr>
+    	<td><p>Ver diapositivas</p></td>
+         <td><p><key>F5</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Tamaño actual</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq> (cero)</p></td>
+    </tr>
+    <tr>
+    	<td><p>Ajuste _óptim</p></td>
+         <td><p><key>F</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Desplazamiento en una imagen grande</p></td>
+         <td><p><keyseq><key>Alt</key><key>teclas de flechas</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="copy">
+    <title>Copiar una imagen para pegarla en otra aplicación</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Copiar</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="zoom-rotate">
+    <title>Ampliar y rotar</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+    	<td><p>Ampliar</p></td>
+         <td><p><key>+</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Reducir</p></td>
+         <td><p><key>-</key></p></td>
+    </tr>
+    <tr>
+    	<td><p>Rotar en sentido horario</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
+    </tr>
+    <tr>
+    	<td><p>Rotar en sentido antihorario</p></td>
+         <td><p><keyseq><key>Mayús</key><key>Ctrl</key><key>R</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="other">
+    <title>Otras</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Ver panel lateral</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>F9</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Ver las propiedades de la imagen</p></td>
+        <td><p><keyseq><key>Alt</key><key>Intro</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Deshacer</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Z</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Ayuda</p></td>
+        <td><p><key>F1</key></p></td>
+    </tr>
+</table>
+</section>
+</page>

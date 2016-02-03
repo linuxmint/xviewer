@@ -1,0 +1,2228 @@
+# Thai translation for oeg.
+# Copyright (C) 2003-2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the eog package.
+# Paisa Seeluangsawat <paisa@users.sf.net>, 2003-2004.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2014.
+# Sira Nokyoongtong <gumaraa@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-02-05 04:37+0000\n"
+"PO-Revision-Date: 2014-02-05 16:59+0700\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "แสดง “_%s”"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_ย้ายในแถบเครื่องมือ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "ย้ายรายการที่เลือกไปมาในแถบเครื่องมือ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "ลบ_ออกจากแถบเครื่องมือ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "ลบรายการที่เลือกออกจากแถบเครื่องมือ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "_ลบแถบเครื่องมือ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "ลบแถบเครื่องมือที่เลือก"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "เส้นแบ่ง"
+
+#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4027
+msgid "_View"
+msgstr "มุ_มมอง"
+
+#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4053
+msgid "_Toolbar"
+msgstr "แถบเ_ครื่องมือ"
+
+#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4056
+msgid "_Statusbar"
+msgstr "แถบ_สถานะ"
+
+#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4059
+msgid "_Image Gallery"
+msgstr "_ห้องภาพ"
+
+#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4062
+msgid "Side _Pane"
+msgstr "แถบ_ข้าง"
+
+#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4041
+msgid "Prefere_nces"
+msgstr "_ปรับแต่ง"
+
+#: ../data/eog-app-menu.xml.h:7 ../src/eog-window.c:2565
+#: ../src/eog-window.c:4030
+msgid "_Help"
+msgstr "_วีธีใช้"
+
+#: ../data/eog-app-menu.xml.h:8 ../src/eog-window.c:4047
+msgid "_About"
+msgstr "เ_กี่ยวกับ"
+
+#: ../data/eog-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "_ออก"
+
+#: ../data/eog.appdata.xml.in.h:1
+msgid ""
+"The Eye of GNOME is the official image viewer for the GNOME desktop. It "
+"integrates with the GTK+ look and feel of GNOME, and supports many image "
+"formats for viewing single images or images in a collection."
+msgstr ""
+"Eye of GNOME เป็นโปรแกรมแสดงรูปอย่างเป็นทางการของเดสก์ท็อป GNOME "
+"มีการเชื่อมรวมกับรูปลักษณ์การใช้งานแบบ GTK+ ของ GNOME รองรับฟอร์แมตรูปภาพหลายฟอร์แมต "
+"และสามารถแสดงรูปภาพเดี่ยวๆ หรือเป็นชุดก็ได้"
+
+#: ../data/eog.appdata.xml.in.h:2
+msgid ""
+"The Eye of GNOME also allows to view the images in a fullscreen slideshow "
+"mode or set an image as the desktop wallpaper. It reads the camera tags to "
+"automatically rotate your images in the correct portrait or landscape "
+"orientation."
+msgstr ""
+"นอกจากนี้ Eye of GNOME ยังสามารถแสดงรูปภาพแบบเล่นสไลด์เต็มจอ "
+"หรือกำหนดรูปภาพเป็นภาพพื้นหลังของพื้นโต๊ะได้ "
+"สามารถอ่านแท็กของกล้องถ่ายรูปเพื่อหมุนภาพของคุณให้เป็นแนวตั้งหรือแนวนอนได้อย่างถูกต้อง"
+
+#: ../data/eog.desktop.in.in.h:1 ../src/eog-application.c:269
+#: ../src/eog-window.c:6144
+msgid "Image Viewer"
+msgstr "โปรแกรมแสดงรูป"
+
+#: ../data/eog.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "เรียกดูและหมุนรูป"
+
+#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
+#: ../data/eog.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "รูป;ภาพ;สไลด์;กราฟิกส์;"
+
+#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:5020
+msgid "Image Properties"
+msgstr "คุณสมบัติของรูป"
+
+#: ../data/eog-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_ก่อนหน้า"
+
+#: ../data/eog-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_ถัดไป"
+
+#: ../data/eog-image-properties-dialog.ui.h:4
+#: ../src/eog-metadata-sidebar.c:495
+msgid "Name:"
+msgstr "ชื่อ:"
+
+#: ../data/eog-image-properties-dialog.ui.h:5
+#: ../src/eog-metadata-sidebar.c:497
+msgid "Width:"
+msgstr "ความกว้าง:"
+
+#: ../data/eog-image-properties-dialog.ui.h:6
+#: ../src/eog-metadata-sidebar.c:499
+msgid "Height:"
+msgstr "ส่วนสูง:"
+
+#: ../data/eog-image-properties-dialog.ui.h:7
+#: ../src/eog-metadata-sidebar.c:501
+msgid "Type:"
+msgstr "ชนิด:"
+
+#: ../data/eog-image-properties-dialog.ui.h:8
+msgid "Bytes:"
+msgstr "จำนวนไบต์:"
+
+#: ../data/eog-image-properties-dialog.ui.h:9
+#: ../src/eog-metadata-sidebar.c:505
+msgid "Folder:"
+msgstr "โฟลเดอร์:"
+
+#: ../data/eog-image-properties-dialog.ui.h:10
+#: ../src/eog-metadata-sidebar.c:493
+msgid "General"
+msgstr "ทั่วไป"
+
+#: ../data/eog-image-properties-dialog.ui.h:11
+#: ../src/eog-metadata-sidebar.c:530
+msgid "Aperture Value:"
+msgstr "หน้ากล้อง:"
+
+#: ../data/eog-image-properties-dialog.ui.h:12
+#: ../src/eog-metadata-sidebar.c:533
+msgid "Exposure Time:"
+msgstr "ความเร็วชัตเตอร์:"
+
+#: ../data/eog-image-properties-dialog.ui.h:13
+#: ../src/eog-metadata-sidebar.c:536
+msgid "Focal Length:"
+msgstr "ระยะโฟกัส:"
+
+#: ../data/eog-image-properties-dialog.ui.h:14
+#: ../src/eog-metadata-sidebar.c:538
+msgid "Flash:"
+msgstr "แฟลช:"
+
+#: ../data/eog-image-properties-dialog.ui.h:15
+#: ../src/eog-metadata-sidebar.c:542
+msgid "ISO Speed Rating:"
+msgstr "ความไวแสง (ISO):"
+
+#: ../data/eog-image-properties-dialog.ui.h:16
+#: ../src/eog-metadata-sidebar.c:545
+msgid "Metering Mode:"
+msgstr "วิธีวัดแสง:"
+
+#: ../data/eog-image-properties-dialog.ui.h:17
+#: ../src/eog-metadata-sidebar.c:548
+msgid "Camera Model:"
+msgstr "รุ่นกล้อง:"
+
+#: ../data/eog-image-properties-dialog.ui.h:18
+#: ../src/eog-metadata-sidebar.c:550
+msgid "Date/Time:"
+msgstr "วัน/เวลา:"
+
+#: ../data/eog-image-properties-dialog.ui.h:19
+#: ../src/eog-metadata-sidebar.c:555
+msgid "Description:"
+msgstr "คำบรรยาย:"
+
+#: ../data/eog-image-properties-dialog.ui.h:20
+#: ../src/eog-metadata-sidebar.c:558
+msgid "Location:"
+msgstr "สถานที่:"
+
+#: ../data/eog-image-properties-dialog.ui.h:21
+#: ../src/eog-metadata-sidebar.c:561
+msgid "Keywords:"
+msgstr "คำหลัก:"
+
+#: ../data/eog-image-properties-dialog.ui.h:22
+#: ../src/eog-metadata-sidebar.c:563
+msgid "Author:"
+msgstr "ผู้บันทึก:"
+
+#: ../data/eog-image-properties-dialog.ui.h:23
+#: ../src/eog-metadata-sidebar.c:566
+msgid "Copyright:"
+msgstr "ลิขสิทธิ์:"
+
+#: ../data/eog-image-properties-dialog.ui.h:24
+#: ../src/eog-metadata-sidebar.c:569
+msgid "Details"
+msgstr "รายละเอียด"
+
+#: ../data/eog-image-properties-dialog.ui.h:25
+#: ../src/eog-metadata-sidebar.c:526
+msgid "Metadata"
+msgstr "ข้อมูลกำกับ"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "บันทึกเป็_น"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> ชื่อแฟ้มเดิม"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> เลขลำดับ"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:6
+msgid "_Filename format:"
+msgstr "รูปแบบ_ชื่อแฟ้ม:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:7
+msgid "_Destination folder:"
+msgstr "โฟลเดอร์_ปลายทาง:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:8
+msgid "Choose a folder"
+msgstr "เลือกโฟลเดอร์"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:9
+msgid "File Path Specifications"
+msgstr "ข้อกำหนดเรื่องพาธของแฟ้ม"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:10
+msgid "_Start counter at:"
+msgstr "เ_ริ่มนับเลขจาก:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:11
+msgid "_Replace spaces with underscores"
+msgstr "แ_ทนอักษรช่องว่างด้วยตัวขีดเส้นใต้"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:12
+msgid "Options"
+msgstr "ตัวเลือก"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:13
+msgid "Rename from:"
+msgstr "เปลี่ยนชื่อจาก:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:14
+msgid "To:"
+msgstr "ไปเป็น:"
+
+#: ../data/eog-multiple-save-as-dialog.ui.h:15
+msgid "File Name Preview"
+msgstr "ตัวอย่างชื่อแฟ้ม"
+
+#: ../data/eog-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "ปรับแต่ง"
+
+#: ../data/eog-preferences-dialog.ui.h:2
+msgid "Image Enhancements"
+msgstr "การปรับแต่งรูป"
+
+#: ../data/eog-preferences-dialog.ui.h:3
+msgid "Smooth images when zoomed _out"
+msgstr "ลบรอยหยักเมื่อขยายรูป_ออก"
+
+#: ../data/eog-preferences-dialog.ui.h:4
+msgid "Smooth images when zoomed _in"
+msgstr "ลบรอยหยักเมื่อขยายรูปเ_ข้า"
+
+#: ../data/eog-preferences-dialog.ui.h:5
+msgid "_Automatic orientation"
+msgstr "ปรับแ_นววางรูปอัตโนมัติ"
+
+#: ../data/eog-preferences-dialog.ui.h:6
+msgid "Background"
+msgstr "พื้นหลัง"
+
+#: ../data/eog-preferences-dialog.ui.h:7
+msgid "As custom color:"
+msgstr "แสดงสีที่กำหนด:"
+
+#: ../data/eog-preferences-dialog.ui.h:8
+#: ../data/org.gnome.eog.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "สีพื้นหลัง"
+
+#: ../data/eog-preferences-dialog.ui.h:9
+msgid "Transparent Parts"
+msgstr "ส่วนที่โปร่งใส"
+
+#: ../data/eog-preferences-dialog.ui.h:10
+msgid "As check _pattern"
+msgstr "แสดง_ลายตาราง"
+
+#: ../data/eog-preferences-dialog.ui.h:11
+msgid "As custom c_olor:"
+msgstr "แสดง_สีที่กำหนด:"
+
+#: ../data/eog-preferences-dialog.ui.h:12
+msgid "Color for Transparent Areas"
+msgstr "สีสำหรับส่วนที่โปร่งใส"
+
+#: ../data/eog-preferences-dialog.ui.h:13
+msgid "As _background"
+msgstr "แสดง_พื้นหลัง"
+
+#: ../data/eog-preferences-dialog.ui.h:14
+msgid "Image View"
+msgstr "การแสดงรูป"
+
+#: ../data/eog-preferences-dialog.ui.h:15
+msgid "Image Zoom"
+msgstr "การขยายรูป"
+
+#: ../data/eog-preferences-dialog.ui.h:16
+msgid "E_xpand images to fit screen"
+msgstr "_ขยายรูปให้พอดีจอ"
+
+#: ../data/eog-preferences-dialog.ui.h:17
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
+#: ../data/eog-preferences-dialog.ui.h:19
+msgid "_Time between images:"
+msgstr "ช่วงเ_วลาระหว่างภาพ:"
+
+#: ../data/eog-preferences-dialog.ui.h:20
+msgid "_Loop sequence"
+msgstr "_หมดแล้วกลับมาเริ่มใหม่"
+
+#: ../data/eog-preferences-dialog.ui.h:21
+msgid "Slideshow"
+msgstr "การแสดงสไลด์"
+
+#: ../data/eog-preferences-dialog.ui.h:22
+msgid "Plugins"
+msgstr "ปลั๊กอิน"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr "ปรับแนววางรูปอัตโนมัติ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "กำหนดว่าจะหมุนรูปโดยอัตโนมัติโดยอาศัยข้อมูลแนววางรูปของ EXIF หรือไม่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+"สีที่จะใช้เติมพื้นที่ข้างหลังรูปภาพ ถ้าไม่ได้กำหนดคีย์ use-background-color ไว้ "
+"ก็จะพิจารณาสีจากชุดตกแต่ง GTK+ ที่ใช้อยู่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "เฉลี่ยค่าจุดสีจากข้อมูลรอบข้าง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"กำหนดว่าเมื่อขยายรูปออก ควรจะเฉลี่ยค่าจุดสีจากข้อมูลรอบข้างหรือไม่ ถ้าใช้ "
+"คุณภาพของรูปที่แสดงก็จะดีกว่า แต่อาจจะใช้เวลาในการแสดงผลเพิ่มขึ้นบ้าง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "ประมาณค่าจุดสีจากข้อมูลรอบข้าง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"กำหนดว่าเมื่อขยายรูปเข้า ควรจะประมาณค่าจุดสีจากข้อมูลรอบข้างหรือไม่ ถ้าใช้ รูปอาจจะมัว "
+"และอาจใช้เวลาในการแสดงผลเพิ่มขึ้นบ้าง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "การแสดงส่วนที่โปร่งใส"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"เลือกว่าควรจะแสดงรูปส่วนที่โปรงใสอย่างไร สามารถตั้งเป็น CHECK_PATTERN, COLOR หรือ NONE  "
+"ถ้าเลือก COLOR ใช้ค่า trans_color เป็นสีที่จะใช้"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "ใช้ล้อหมุนของเมาส์ย่อ-ขยายรูป"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "กำหนดว่าจะใช้ล้อหมุนของเมาส์ในการย่อ-ขยายรูปหรือไม่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "ตัวคูณสำหรับย่อ-ขยาย"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"ตัวคูณที่จะใช้เมื่อย่อ-ขยายรูปด้วยล้อหมุนของเมาส์ ค่านี้ใช้กำหนดขั้นการย่อ-"
+"ขยายสำหรับการหมุนแต่ละครั้ง ตัวอย่างเช่น 0.05 หมายถึงการเพิ่มอัตราขยายทีละ 5% และ 1.00 "
+"หมายถึงการเพิ่มอัตราขยายทีละ 100%"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "สีโปร่งใส"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr "ถ้าคีย์ transparent ตั้งเป็น COLOR คีย์นี้จะใช้ระบุว่าจะใช้สีใดแสดงส่วนที่โปร่งใสของรูป"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "ใช้สีพื้นหลังที่กำหนดเอง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"ถ้าเปิดใช้ ก็จะใช้สีที่กำหนดในคีย์ background-color เติมในพื้นที่ข้างหลังภาพ ถ้าไม่ได้กำหนดค่าไว้ "
+"ก็จะพิจารณาสีพื้นหลังจากชุดตกแต่งปัจจุบันของ GTK+"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "หมดรูปที่แสดงแล้วกลับมาเริ่มต้นใหม่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "กำหนดว่าเมื่อหมดรูปที่แสดงแล้ว ควรกลับมาเริ่มต้นใหม่หรือไม่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "ยอมให้รูปขยายใหญ่กว่า 100% ตอนที่พึ่งเปิด"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr "ถ้าคีย์นี้ตั้งเป็น FALSE รูปเล็กๆ จะไม่ถูกขยายให้เต็มหน้าต่างเมื่อพึ่งเปิด"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "จำนวนวินาทีที่จะรอก่อนแสดงรูปถัดไป"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"ค่าที่มากกว่า 0 ใช้เป็นจำนวนวินาทีที่จะแสดงรูป ก่อนพลิกไปรูปถัดไป  "
+"ตั้งเป็นศูนย์แล้วจะไม่พลิกหน้าโดยอัตโนมัติ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "แสดง/ซ่อน แถบเครื่องมือ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "แสดง/ซ่อน แถบสถานะ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "แสดง/ซ่อน ช่องห้องภาพ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"ตำแหน่งของช่องห้องภาพ ค่า 0 หมายถึงด้านล่าง; 1 หมายถึงด้านซ้าย; 2 หมายถึงด้านบน; 3 "
+"หมายถึงด้านขวา"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "กำหนดว่าช่องห้องภาพควรให้ปรับขนาดได้หรือไม่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "แสดง/ซ่อน แถบข้าง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "แสดง/ซ่อน ปุ่มเลื่อนในช่องห้องภาพ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "ปิดหน้าต่างหลักโดยไม่ต้องถามให้บันทึกการเปลี่ยนแปลง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "ทิ้งรูปภาพลงถังขยะโดยไม่ต้องถาม"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:36
+msgid ""
+"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+"ถ้าเปิดใช้ Eye of GNOME จะไม่ถามยืนยันเมื่อสั่งย้ายภาพไปลงถังขยะ แต่จะยังคงถามถ้าแฟ้มต่างๆ "
+"ไม่สามารถย้ายไปลงถังขยะได้ และจะลบแฟ้มแทน"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+"กำหนดว่ากล่องโต้ตอบเลือกแฟ้มควรแสดงโฟลเดอร์รูปภาพของผู้ใช้หรือไม่ ถ้าไม่ได้โหลดรูปภาพอยู่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"ถ้าเปิดใช้ และไม่ได้โหลดรูปภาพในหน้าต่างที่ทำงานอยู่ "
+"กล่องโต้ตอบเลือกแฟ้มจะแสดงโฟลเดอร์รูปภาพของผู้ใช้ โดยใช้ไดเรกทอรีพิเศษของผู้ใช้ตามข้อกำหนด "
+"XDG  ถ้าไม่เปิดใช้ หรือยังไม่ได้กำหนดโฟลเดอร์รูปภาพ ก็จะแสดงไดเรกทอรีปัจจุบันที่ทำงานอยู่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr "กำหนดว่าข้อมูลกำกับในกล่องโต้ตอบคุณสมบัติรูปควรแยกแสดงในหน้าต่างหากหรือไม่"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"ถ้าเปิดใช้ รายละเอียดข้อมูลกำกับในกล่องโต้ตอบคุณสมบัติของรูป "
+"จะถูกย้ายไปอยู่ในหน้าต่างหากในกล่องโต้ตอบ "
+"ซึ่งจะทำให้กล่องโต้ตอบนี้ใช้งานได้สะดวกขึ้นในเครื่องที่หน้าจอเล็ก เช่น เมื่อใช้ในเน็ตบุ๊ก ถ้าไม่เปิดใช้ "
+"วิดเจ็ตก็จะฝังตัวอยู่ในหน้า \"ข้อมูลกำกับ\""
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "โปรแกรมภายนอกที่จะใช้แก้ไขรูปภาพ"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"ชื่อแฟ้มเดสก์ท็อป (รวมนามสกุล \".desktop\" ด้วย) "
+"ของโปรแกรมที่จะใช้แก้ไขรูปภาพเมื่อผู้ใช้คลิกปุ่ม \"แก้ไขรูปภาพ\" ถ้าต้องการปิดความสามารถนี้ "
+"ก็กำหนดค่านี้เป็นสตริงว่าง"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "ปลั๊กอินที่เปิดใช้"
+
+#: ../data/org.gnome.eog.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+"รายการของปลั๊กอินที่เปิดใช้ ค่าที่เก็บไม่ใช่ \"ตำแหน่งเก็บ\" ของปลั๊กอินที่เปิดใช้ ดูที่แฟ้ม .eog-"
+"plugin เพื่อดู \"ตำแหน่งเก็บ\" ของปลั๊กอินที่ต้องการ"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "เต็มจอด้วยดับเบิลคลิก"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "เรียกโหมดแสดงเต็มจอด้วยดับเบิลคลิก"
+
+#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "อ่านรูปใหม่"
+
+#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "อ่านรูปปัจจุบันใหม่"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "วันที่ในแถบสถานะ"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "แสดงวันที่ของรูปภาพในแถบสถานะของหน้าต่าง"
+
+#: ../src/eog-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr "ปิดโดยไ_ม่ต้องบันทึก"
+
+#: ../src/eog-close-confirmation-dialog.c:172
+#: ../src/eog-error-message-area.c:119 ../src/eog-file-chooser.c:456
+#: ../src/eog-file-chooser.c:464 ../src/eog-file-chooser.c:472
+#: ../src/eog-window.c:3356 ../src/eog-window.c:3359 ../src/eog-window.c:3610
+msgid "_Cancel"
+msgstr "_ยกเลิก"
+
+#: ../src/eog-close-confirmation-dialog.c:178 ../src/eog-file-chooser.c:465
+#: ../src/eog-window.c:4068
+msgid "_Save"
+msgstr "_บันทึก"
+
+#: ../src/eog-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "บันทึกเป็_น"
+
+#: ../src/eog-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr "คำถาม"
+
+#: ../src/eog-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr "ถ้าคุณไม่บันทึก การเปลี่ยนแปลงต่างๆ ที่คุณทำมาก็จะสูญหายไป"
+
+#: ../src/eog-close-confirmation-dialog.c:428
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "ต้องการบันทึกการเปลี่ยนแปลงในรูปภาพ \"%s\" ก่อนปิดหรือไม่?"
+
+#: ../src/eog-close-confirmation-dialog.c:635
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"มีรูปภาพ %d รูปที่มีการเปลี่ยนแปลงโดยยังไม่ได้บันทึก ต้องการบันทึกการเปลี่ยนแปลงก่อนปิดหรือไม่?"
+
+#: ../src/eog-close-confirmation-dialog.c:652
+msgid "S_elect the images you want to save:"
+msgstr "เ_ลือกรูปภาพที่คุณต้องการบันทึก:"
+
+#. Secondary label
+#: ../src/eog-close-confirmation-dialog.c:671
+msgid "If you don't save, all your changes will be lost."
+msgstr "ถ้าคุณไม่บันทึก การเปลี่ยนแปลงทั้งหมดที่คุณทำมาก็จะสูญหายไป"
+
+#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:847
+msgid "_Reload"
+msgstr "_อ่านใหม่"
+
+#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4074
+msgid "Save _As…"
+msgstr "บันทึกเป็_น…"
+
+#: ../src/eog-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "อ่านรูป '%s' ไม่สำเร็จ"
+
+#: ../src/eog-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "บันทึกรูป '%s' ไม่สำเร็จ"
+
+#: ../src/eog-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "ไม่พบรูปใน '%s'"
+
+#: ../src/eog-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "ไม่มีรูปในตำแหน่งเก็บที่กำหนด"
+
+#: ../src/eog-metadata-details.c:64
+msgid "Camera"
+msgstr "กล้อง"
+
+#: ../src/eog-metadata-details.c:65
+msgid "Image Data"
+msgstr "ข้อมูลรูป"
+
+#: ../src/eog-metadata-details.c:66
+msgid "Image Taking Conditions"
+msgstr "สภาวะขณะถ่ายรูป"
+
+#: ../src/eog-metadata-details.c:67
+msgid "GPS Data"
+msgstr "ข้อมูล GPS"
+
+#: ../src/eog-metadata-details.c:68
+msgid "Maker Note"
+msgstr "หมายเหตุผู้ผลิต"
+
+#: ../src/eog-metadata-details.c:69
+msgid "Other"
+msgstr "อื่นๆ"
+
+#: ../src/eog-metadata-details.c:71
+msgid "XMP Exif"
+msgstr "Exif แบบ XMP"
+
+#: ../src/eog-metadata-details.c:72
+msgid "XMP IPTC"
+msgstr "IPTC แบบ XMP"
+
+#: ../src/eog-metadata-details.c:73
+msgid "XMP Rights Management"
+msgstr "ข้อมูลลิขสิทธิ์แบบ XMP"
+
+#: ../src/eog-metadata-details.c:74
+msgid "XMP Other"
+msgstr "XMP อื่นๆ"
+
+#: ../src/eog-metadata-details.c:250
+msgid "Tag"
+msgstr "ป้าย"
+
+#: ../src/eog-metadata-details.c:257
+msgid "Value"
+msgstr "ค่า"
+
+#: ../src/eog-metadata-details.c:417
+msgid "North"
+msgstr "เหนือ"
+
+#: ../src/eog-metadata-details.c:420
+msgid "East"
+msgstr "ตะวันออก"
+
+#: ../src/eog-metadata-details.c:423
+msgid "West"
+msgstr "ตะวันตก"
+
+#: ../src/eog-metadata-details.c:426
+msgid "South"
+msgstr "ใต้"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a %d %B %Ey  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/eog-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a %d %B %Ey"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eog-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (เลนส์)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eog-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (ฟิล์ม 35 มม.)"
+
+#: ../src/eog-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "ไม่รู้จักหรือไม่รองรับแฟ้มฟอร์แมตนี้"
+
+#: ../src/eog-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr "โปรแกรมแสดงรูปไม่สามารถพิจารณาฟอร์แมตแฟ้มที่รองรับที่จะเขียนจากชื่อแฟ้มนี้ได้"
+
+#: ../src/eog-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "กรุณาลองใช้นามสกุลอื่น เช่น .png หรือ .jpg"
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/eog-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/eog-file-chooser.c:212
+msgid "All files"
+msgstr "ทุกแฟ้ม"
+
+#: ../src/eog-file-chooser.c:217
+msgid "Supported image files"
+msgstr "แฟ้มรูปที่รองรับ"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/eog-file-chooser.c:289 ../src/eog-metadata-sidebar.c:232
+#: ../src/eog-metadata-sidebar.c:236 ../src/eog-properties-dialog.c:135
+#: ../src/eog-properties-dialog.c:137 ../src/eog-thumb-view.c:515
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "พิกเซล"
+
+#: ../src/eog-file-chooser.c:457 ../src/eog-file-chooser.c:473
+msgid "_Open"
+msgstr "_เปิด"
+
+#: ../src/eog-file-chooser.c:459
+msgid "Open Image"
+msgstr "เปิดรูป"
+
+#: ../src/eog-file-chooser.c:467
+msgid "Save Image"
+msgstr "บันทึกรูป"
+
+#: ../src/eog-file-chooser.c:475
+msgid "Open Folder"
+msgstr "เปิดโฟลเดอร์"
+
+#: ../src/eog-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "พยายามแปลงรูปภาพที่ยังไม่ได้อ่านเข้ามา"
+
+#: ../src/eog-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "แปลงรูปภาพไม่สำเร็จ"
+
+#: ../src/eog-image.c:1110
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "ไม่สนับสนุน EXIF สำหรับแฟ้มชนิดนี้"
+
+#: ../src/eog-image.c:1259
+#, c-format
+msgid "Image loading failed."
+msgstr "อ่านรูปไม่สำเร็จ"
+
+#: ../src/eog-image.c:1840 ../src/eog-image.c:1960
+#, c-format
+msgid "No image loaded."
+msgstr "ไม่มีรูปที่อ่านไว้"
+
+#: ../src/eog-image.c:1848 ../src/eog-image.c:1969
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "คุณไม่มีสิทธิ์ที่จำเป็นสำหรับการบันทึกแฟ้มนี้"
+
+#: ../src/eog-image.c:1858 ../src/eog-image.c:1980
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "สร้างแฟ้มชั่วคราวไม่สำเร็จ"
+
+#: ../src/eog-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "ไม่สามารถสร้างแฟ้มชั่วคราวสำหรับใช้บันทึกรูป: %s"
+
+#: ../src/eog-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "หน่วยความจำไม่พอที่จะอ่านรูป JPEG"
+
+#: ../src/eog-metadata-sidebar.c:245 ../src/eog-properties-dialog.c:152
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+#: ../src/eog-metadata-sidebar.c:503
+msgid "File size:"
+msgstr "ขนาดแฟ้ม:"
+
+#: ../src/eog-metadata-sidebar.c:519 ../src/eog-properties-dialog.c:669
+#: ../src/eog-window.c:4078
+msgid "Show the folder which contains this file in the file manager"
+msgstr "แสดงโฟลเดอร์ที่เก็บแฟ้มนี้ในโปรแกรมจัดการแฟ้ม"
+
+#: ../src/eog-preferences-dialog.c:109
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu วินาที"
+
+#: ../src/eog-print.c:371
+msgid "Image Settings"
+msgstr "ค่าตั้งของรูป"
+
+#: ../src/eog-print-image-setup.c:902
+msgid "Image"
+msgstr "รูป"
+
+#: ../src/eog-print-image-setup.c:903
+msgid "The image whose printing properties will be set up"
+msgstr "รูปที่จะตั้งค่าการพิมพ์"
+
+#: ../src/eog-print-image-setup.c:909
+msgid "Page Setup"
+msgstr "ตั้งค่าหน้ากระดาษ"
+
+#: ../src/eog-print-image-setup.c:910
+msgid "The information for the page where the image will be printed"
+msgstr "ข้อมูลของหน้ากระดาษที่จะใช้พิมพ์รูป"
+
+#: ../src/eog-print-image-setup.c:936
+msgid "Position"
+msgstr "ตำแหน่ง"
+
+#: ../src/eog-print-image-setup.c:940
+msgid "_Left:"
+msgstr "_ซ้าย:"
+
+#: ../src/eog-print-image-setup.c:942
+msgid "_Right:"
+msgstr "_ขวา:"
+
+#: ../src/eog-print-image-setup.c:943
+msgid "_Top:"
+msgstr "_บน:"
+
+#: ../src/eog-print-image-setup.c:944
+msgid "_Bottom:"
+msgstr "_ล่าง:"
+
+#: ../src/eog-print-image-setup.c:947
+msgid "C_enter:"
+msgstr "_กึ่งกลาง:"
+
+#: ../src/eog-print-image-setup.c:952
+msgid "None"
+msgstr "ไม่ต้อง"
+
+#: ../src/eog-print-image-setup.c:954
+msgid "Horizontal"
+msgstr "แนวนอน"
+
+#: ../src/eog-print-image-setup.c:956
+msgid "Vertical"
+msgstr "แนวตั้ง"
+
+#: ../src/eog-print-image-setup.c:958
+msgid "Both"
+msgstr "ทั้งสองแนว"
+
+#: ../src/eog-print-image-setup.c:974
+msgid "Size"
+msgstr "ขนาด"
+
+#: ../src/eog-print-image-setup.c:977
+msgid "_Width:"
+msgstr "ก_ว้าง:"
+
+#: ../src/eog-print-image-setup.c:979
+msgid "_Height:"
+msgstr "สู_ง:"
+
+#: ../src/eog-print-image-setup.c:982
+msgid "_Scaling:"
+msgstr "_อัตราส่วน:"
+
+#: ../src/eog-print-image-setup.c:993
+msgid "_Unit:"
+msgstr "ห_น่วย:"
+
+#: ../src/eog-print-image-setup.c:998
+msgid "Millimeters"
+msgstr "มิลลิเมตร"
+
+#: ../src/eog-print-image-setup.c:1000
+msgid "Inches"
+msgstr "นิ้ว"
+
+#: ../src/eog-print-image-setup.c:1029
+msgid "Preview"
+msgstr "ตัวอย่างงานพิมพ์"
+
+#: ../src/eog-save-as-dialog-helper.c:162
+msgid "as is"
+msgstr "ตามที่เป็น"
+
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eog-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
+
+#: ../src/eog-thumb-view.c:543
+msgid "Taken on"
+msgstr "ถ่ายเมื่อ"
+
+#: ../src/eog-uri-converter.c:980
+#, c-format
+msgid "At least two file names are equal."
+msgstr "มีแฟ้มชื่อซ้ำกันอย่างน้อยสองแฟ้ม"
+
+#: ../src/eog-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "ไม่สามารถแสดงเอกสารแนะนำวิธีใช้โปรแกรมแสดงรูป"
+
+#: ../src/eog-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (รหัสยูนิโค้ดผิด)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eog-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i พิกเซล  %s    %i%%"
+
+#: ../src/eog-window.c:849 ../src/eog-window.c:2775
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "ซ่อ_น"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"รูปภาพ \"%s\" มีการแก้ไขโดยโปรแกรมภายนอก\n"
+"คุณต้องการจะอ่านรูปภาพขึ้นมาใหม่หรือไม่?"
+
+#: ../src/eog-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "ใช้ \"%s\" เปิดรูปที่เลือก"
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eog-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "กำลังบันทึกรูป \"%s\" (%u/%u)"
+
+#: ../src/eog-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "กำลังเปิดรูป \"%s\""
+
+#: ../src/eog-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "เ_ลิกแสดงเต็มจอ"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/eog-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "กำลังฉายสไลด์"
+
+#: ../src/eog-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+"เกิดข้อผิดพลาดขณะพิมพ์แฟ้ม:\n"
+"%s"
+
+#: ../src/eog-window.c:2558
+msgid "Toolbar Editor"
+msgstr "เครื่องมือแก้ไขแถบเครื่องมือ"
+
+#: ../src/eog-window.c:2561
+msgid "_Reset to Default"
+msgstr "เปลี่ยนกลับเป็นค่า_ปริยาย"
+
+#: ../src/eog-window.c:2563 ../src/eog-window.c:4035
+msgid "_Close"
+msgstr "ปิ_ด"
+
+#: ../src/eog-window.c:2722 ../src/eog-window.c:2737
+msgid "Error launching System Settings: "
+msgstr "เกิดข้อผิดพลาดขณะเรียกโปรแกรม \"ตั้งค่าระบบ\": "
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eog's menubar
+#: ../src/eog-window.c:2773
+msgid "_Open Background Preferences"
+msgstr "ปรับแต่ง_พื้นหลัง"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eog-window.c:2789
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+"รูปภาพ \"%s\" ถูกกำหนดให้เป็นภาพพื้นหลังพื้นโต๊ะแล้ว\n"
+"คุณต้องการจะปรับรูปแบบการแสดงภาพหรือไม่?"
+
+#: ../src/eog-window.c:3254
+msgid "Saving image locally…"
+msgstr "กำลังบันทึกรูปลงในเครื่อง…"
+
+#: ../src/eog-window.c:3332
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการลบ\n"
+"\"%s\" ทิ้งอย่างถาวร?"
+
+#: ../src/eog-window.c:3335
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"คุณแน่ใจหรือไม่ว่าต้องการลบ\n"
+"รูป %d รูปที่เลือกทิ้งอย่างถาวร?"
+
+#: ../src/eog-window.c:3357 ../src/eog-window.c:3621
+msgid "_Delete"
+msgstr "_ลบ"
+
+#: ../src/eog-window.c:3360 ../src/eog-window.c:3623
+msgid "_Yes"
+msgstr "ใ_ช่"
+
+#. add 'dont ask again' button
+#: ../src/eog-window.c:3364 ../src/eog-window.c:3615
+msgid "Do _not ask again during this session"
+msgstr "ไ_ม่ต้องถามอีกตลอดวาระนี้"
+
+#: ../src/eog-window.c:3408
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "ไม่สามารถดึงแฟ้มรูปได้"
+
+#: ../src/eog-window.c:3424
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "ไม่สามารถดึงข้อมูลเกี่ยวกับแฟ้มรูปได้"
+
+#: ../src/eog-window.c:3440 ../src/eog-window.c:3682
+#, c-format
+msgid "Couldn't delete file"
+msgstr "ไม่สามารถลบแฟ้มได้"
+
+#. set dialog error message
+#: ../src/eog-window.c:3490 ../src/eog-window.c:3778
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "ผิดพลาดขณะลบรูป %s"
+
+#: ../src/eog-window.c:3583
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการย้าย\n"
+"\"%s\" ไปลงถังขยะ?"
+
+#: ../src/eog-window.c:3586
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr "ไม่พบที่ทิ้งขยะสำหรับ \"%s\" คุณต้องการจะลบภาพนี้อย่างถาวรหรือไม่?"
+
+#: ../src/eog-window.c:3591
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+"คุณแน่ใจหรือไม่ว่าต้องการย้าย\n"
+"รูป %d รูปที่เลือกไปลงถังขยะ?"
+
+#: ../src/eog-window.c:3596
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"ภาพบางภาพที่เลือกไม่สามารถทิ้งลงถังขยะได้ และจะลบทิ้งอย่างถาวร ยืนยันที่จะทำต่อไปหรือไม่?"
+
+#: ../src/eog-window.c:3613 ../src/eog-window.c:4104 ../src/eog-window.c:4131
+msgid "Move to _Trash"
+msgstr "_ทิ้งลงถังขยะ"
+
+#: ../src/eog-window.c:3660 ../src/eog-window.c:3674
+#, c-format
+msgid "Couldn't access trash."
+msgstr "เปิดใช้ถังขยะไม่สำเร็จ"
+
+#: ../src/eog-window.c:4025
+msgid "_Image"
+msgstr "รูป_ภาพ"
+
+#: ../src/eog-window.c:4026
+msgid "_Edit"
+msgstr "แ_ก้ไข"
+
+#: ../src/eog-window.c:4028
+msgid "_Go"
+msgstr "ไ_ป"
+
+#: ../src/eog-window.c:4029
+msgid "_Tools"
+msgstr "เ_ครื่องมือ"
+
+#: ../src/eog-window.c:4032
+msgid "_Open…"
+msgstr "_เปิด…"
+
+#: ../src/eog-window.c:4033
+msgid "Open a file"
+msgstr "เปิดแฟ้ม"
+
+#: ../src/eog-window.c:4036
+msgid "Close window"
+msgstr "ปิดหน้าต่าง"
+
+#: ../src/eog-window.c:4038
+msgid "T_oolbar"
+msgstr "แถบเ_ครื่องมือ"
+
+#: ../src/eog-window.c:4039
+msgid "Edit the application toolbar"
+msgstr "แก้ไขแถบเครื่องมือของโปรแกรม"
+
+#: ../src/eog-window.c:4042
+msgid "Preferences for Image Viewer"
+msgstr "ปรับแต่งโปรแกรมแสดงรูป"
+
+#: ../src/eog-window.c:4044
+msgid "_Contents"
+msgstr "เ_นื้อหา"
+
+#: ../src/eog-window.c:4045
+msgid "Help on this application"
+msgstr "วิธีใช้โปรแกรมนี้"
+
+#: ../src/eog-window.c:4048
+msgid "About this application"
+msgstr "เกี่ยวกับโปรแกรมนี้"
+
+#: ../src/eog-window.c:4054
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "แสดง/ซ่อน แถบเครื่องมือในหน้าต่างปัจจุบัน"
+
+#: ../src/eog-window.c:4057
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "แสดง/ซ่อน แถบสถานะในหน้าต่างปัจจุบัน"
+
+#: ../src/eog-window.c:4060
+msgid "Changes the visibility of the image gallery pane in the current window"
+msgstr "แสดง/ซ่อน ช่องห้องภาพในหน้าต่างปัจจุบัน"
+
+#: ../src/eog-window.c:4063
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "แสดง/ซ่อน แถบข้างในหน้าต่างปัจจุบัน"
+
+#: ../src/eog-window.c:4069
+msgid "Save changes in currently selected images"
+msgstr "บันทึกการแก้ไขรูปที่เลือก"
+
+#: ../src/eog-window.c:4071
+msgid "Open _with"
+msgstr "เปิด_ด้วย"
+
+#: ../src/eog-window.c:4072
+msgid "Open the selected image with a different application"
+msgstr "เปิดรูปที่เลือกด้วยโปรแกรมอื่น"
+
+#: ../src/eog-window.c:4075
+msgid "Save the selected images with a different name"
+msgstr "บันทึกรูปที่เลือกเป็นชื่ออื่น"
+
+#: ../src/eog-window.c:4077
+msgid "Show Containing _Folder"
+msgstr "แสดงโ_ฟลเดอร์ที่เก็บ"
+
+#: ../src/eog-window.c:4080
+msgid "_Print…"
+msgstr "_พิมพ์…"
+
+#: ../src/eog-window.c:4081
+msgid "Print the selected image"
+msgstr "พิมพ์รูปที่เลือก"
+
+#: ../src/eog-window.c:4083
+msgid "Prope_rties"
+msgstr "คุณ_สมบัติ"
+
+#: ../src/eog-window.c:4084
+msgid "Show the properties and metadata of the selected image"
+msgstr "แสดงคุณสมบัติและข้อมูลประกอบของรูปที่เลือก"
+
+#: ../src/eog-window.c:4086
+msgid "_Undo"
+msgstr "เรี_ยกคืน"
+
+#: ../src/eog-window.c:4087
+msgid "Undo the last change in the image"
+msgstr "เรียกคืนการแก้ไขล่าสุดที่กระทำต่อรูป"
+
+#: ../src/eog-window.c:4089
+msgid "Flip _Horizontal"
+msgstr "พลิกแนว_นอน"
+
+#: ../src/eog-window.c:4090
+msgid "Mirror the image horizontally"
+msgstr "กลับซ้ายเป็นขวา"
+
+#: ../src/eog-window.c:4092
+msgid "Flip _Vertical"
+msgstr "พลิกแนว_ตั้ง"
+
+#: ../src/eog-window.c:4093
+msgid "Mirror the image vertically"
+msgstr "กลับบนลงล่าง"
+
+#: ../src/eog-window.c:4095
+msgid "_Rotate Clockwise"
+msgstr "หมุนต_ามเข็มนาฬิกา"
+
+#: ../src/eog-window.c:4096
+msgid "Rotate the image 90 degrees to the right"
+msgstr "หมุนรูปไปทางขวา 90 องศา"
+
+#: ../src/eog-window.c:4098
+msgid "Rotate Counterc_lockwise"
+msgstr "หมุน_ทวนเข็มนาฬิกา"
+
+#: ../src/eog-window.c:4099
+msgid "Rotate the image 90 degrees to the left"
+msgstr "หมุนรูปไปทางซ้าย 90 องศา"
+
+#: ../src/eog-window.c:4101
+msgid "Set as Wa_llpaper"
+msgstr "ใช้เป็นภาพ_พื้นหลัง"
+
+#: ../src/eog-window.c:4102
+msgid "Set the selected image as the wallpaper"
+msgstr "ใช้รูปที่เลือกอยู่เป็นภาพพื้นหลัง"
+
+#: ../src/eog-window.c:4105
+msgid "Move the selected image to the trash folder"
+msgstr "ทิ้งรูปที่เลือกอยู่ลงถังขยะ"
+
+#: ../src/eog-window.c:4107
+msgid "_Delete Image"
+msgstr "_ลบรูป"
+
+#: ../src/eog-window.c:4108
+msgid "Delete the selected image"
+msgstr "ลบรูปที่เลือก"
+
+#: ../src/eog-window.c:4110
+msgid "_Copy"
+msgstr "_คัดลอก"
+
+#: ../src/eog-window.c:4111
+msgid "Copy the selected image to the clipboard"
+msgstr "คัดลอกรูปที่เลือกไปยังคลิปบอร์ด"
+
+#: ../src/eog-window.c:4113 ../src/eog-window.c:4122 ../src/eog-window.c:4125
+msgid "_Zoom In"
+msgstr "ขย_าย"
+
+#: ../src/eog-window.c:4114 ../src/eog-window.c:4123
+msgid "Enlarge the image"
+msgstr "ขยายรูปให้ใหญ่ขึ้น"
+
+#: ../src/eog-window.c:4116 ../src/eog-window.c:4128
+msgid "Zoom _Out"
+msgstr "_ย่อ"
+
+#: ../src/eog-window.c:4117 ../src/eog-window.c:4126 ../src/eog-window.c:4129
+msgid "Shrink the image"
+msgstr "ย่อรูปให้เล็กลง"
+
+#: ../src/eog-window.c:4119
+msgid "_Normal Size"
+msgstr "ขนาด_ปกติ"
+
+#: ../src/eog-window.c:4120
+msgid "Show the image at its normal size"
+msgstr "แสดงรูปในขนาดปกติ"
+
+#: ../src/eog-window.c:4137
+msgid "_Fullscreen"
+msgstr "เ_ต็มจอ"
+
+#: ../src/eog-window.c:4138
+msgid "Show the current image in fullscreen mode"
+msgstr "แสดงรูปปัจจุบันแบบเต็มจอ"
+
+#: ../src/eog-window.c:4140
+msgid "Pause Slideshow"
+msgstr "พักการฉายสไลด์"
+
+#: ../src/eog-window.c:4141
+msgid "Pause or resume the slideshow"
+msgstr "พักการฉายสไลด์หรือฉายต่อ"
+
+#: ../src/eog-window.c:4143
+msgid "_Best Fit"
+msgstr "ขนาด_พอดี"
+
+#: ../src/eog-window.c:4144
+msgid "Fit the image to the window"
+msgstr "แสดงรูปภาพในขนาดที่พอดีกับหน้าต่าง"
+
+#: ../src/eog-window.c:4149 ../src/eog-window.c:4164
+msgid "_Previous Image"
+msgstr "รูป_ก่อนหน้า"
+
+#: ../src/eog-window.c:4150
+msgid "Go to the previous image of the gallery"
+msgstr "ไปยังรูปก่อนหน้าในห้องภาพ"
+
+#: ../src/eog-window.c:4152
+msgid "_Next Image"
+msgstr "รูป_ถัดไป"
+
+#: ../src/eog-window.c:4153
+msgid "Go to the next image of the gallery"
+msgstr "ไปยังรูปถัดไปในห้องภาพ"
+
+#: ../src/eog-window.c:4155 ../src/eog-window.c:4167
+msgid "_First Image"
+msgstr "รูปแ_รก"
+
+#: ../src/eog-window.c:4156
+msgid "Go to the first image of the gallery"
+msgstr "ไปยังรูปแรกของห้องภาพ"
+
+#: ../src/eog-window.c:4158 ../src/eog-window.c:4170
+msgid "_Last Image"
+msgstr "รูปสุด_ท้าย"
+
+#: ../src/eog-window.c:4159
+msgid "Go to the last image of the gallery"
+msgstr "ไปยังรูปสุดท้ายของห้องภาพ"
+
+#: ../src/eog-window.c:4161
+msgid "_Random Image"
+msgstr "สุ่_มรูปภาพ"
+
+#: ../src/eog-window.c:4162
+msgid "Go to a random image of the gallery"
+msgstr "ไปยังรูปภาพในห้องภาพแบบสุ่ม"
+
+#: ../src/eog-window.c:4320
+msgid "S_lideshow"
+msgstr "ฉาย_สไลด์"
+
+#: ../src/eog-window.c:4321
+msgid "Start a slideshow view of the images"
+msgstr "เริ่มแสดงภาพต่างๆ แบบฉายสไลด์"
+
+#: ../src/eog-window.c:4389
+msgid "Previous"
+msgstr "ก่อนหน้า"
+
+#: ../src/eog-window.c:4393
+msgid "Next"
+msgstr "ถัดไป"
+
+#: ../src/eog-window.c:4397
+msgid "Right"
+msgstr "ขวา"
+
+#: ../src/eog-window.c:4400
+msgid "Left"
+msgstr "ซ้าย"
+
+#: ../src/eog-window.c:4403
+msgid "Show Folder"
+msgstr "แสดงโฟลเดอร์"
+
+#: ../src/eog-window.c:4406
+msgid "In"
+msgstr "ขยาย"
+
+#: ../src/eog-window.c:4409
+msgid "Out"
+msgstr "ย่อ"
+
+#: ../src/eog-window.c:4412
+msgid "Normal"
+msgstr "ปกติ"
+
+#: ../src/eog-window.c:4415
+msgid "Fit"
+msgstr "พอดี"
+
+#: ../src/eog-window.c:4418
+msgid "Gallery"
+msgstr "ห้องภาพ"
+
+#: ../src/eog-window.c:4435
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "ทิ้งลงถังขยะ"
+
+#: ../src/eog-window.c:4801
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "แก้ไขรูปปัจจุบันโดยใช้ %s"
+
+#: ../src/eog-window.c:4803
+msgid "Edit Image"
+msgstr "แก้ไขรูปภาพ"
+
+#: ../src/eog-window.c:6147
+msgid "The GNOME image viewer."
+msgstr "โปรแกรมแสดงรูปของ GNOME"
+
+#: ../src/eog-window.c:6150
+msgid "translator-credits"
+msgstr ""
+"Paisa Seeluangsawat <paisa@users.sf.net>\n"
+"Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"Sira Nokyoongtong <gumaraa@gmail.com>\n"
+"\n"
+"ถ้ามีเวลาโปรดมาช่วยกันแปล :-)\n"
+"http://gnome-th.sf.net"
+
+#: ../src/main.c:56
+msgid "GNOME Image Viewer"
+msgstr "โปรแกรมแสดงรูปของ GNOME"
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "เปิดในแบบเต็มจอ"
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr "ปิดการแสดงห้องภาพ"
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr "เปิดในแบบฉายสไลด์"
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "เปิดโปรแกรมตัวใหม่ แทนที่จะใช้ตัวเก่าซ้ำ"
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr "เปิดในหน้าต่างเดียว ถ้ามีการเปิดหลายหน้าต่างก็ใช้หน้าต่างแรก"
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr "แสดงรุ่นของโปรแกรม"
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr "[FILE…]"
+
+#. I18N: The '%s' is replaced with eog's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "เรียก '%s --help' เพื่อดูตัวเลือกทั้งหมดที่มีของบรรทัดคำสั่ง"
+
+#~ msgid "_About Image Viewer"
+#~ msgstr "เ_กี่ยวกับโปรแกรมแสดงรูป"
+
+#~ msgid "Set as _Desktop Background"
+#~ msgstr "ใช้เป็น_พื้นหลังพื้นโต๊ะ"
+
+#~ msgctxt "PrefDlgSlideSwitchPrefix"
+#~ msgid "_Switch image after:"
+#~ msgstr "เ_ปลี่ยนรูปภาพหลังจากฉายไป:"
+
+#~ msgid "Running in fullscreen mode"
+#~ msgstr "กำลังทำงานในแบบเต็มจอ"
+
+#~ msgid "_Retry"
+#~ msgstr "ลองให_ม่"
+
+#~ msgid "All Images"
+#~ msgstr "ทุกรูป"
+
+#~ msgid "_Slideshow"
+#~ msgstr "แสดงสไ_ลด์"
+
+#~ msgid "Plugin"
+#~ msgstr "ปลั๊กอิน"
+
+#~ msgid "Enabled"
+#~ msgstr "เปิดใช้"
+
+#~ msgid "C_onfigure"
+#~ msgstr "_ตั้งค่า"
+
+#~ msgid "A_ctivate"
+#~ msgstr "_เปิดใช้"
+
+#~ msgid "Ac_tivate All"
+#~ msgstr "เปิดใ_ช้ทั้งหมด"
+
+#~ msgid "_Deactivate All"
+#~ msgstr "ปิ_ดทั้งหมด"
+
+#~ msgid "Active _Plugins:"
+#~ msgstr "_ปลั๊กอินที่เปิดใช้:"
+
+#~ msgid "_About Plugin"
+#~ msgstr "เ_กี่ยวกับปลั๊กอิน"
+
+#~ msgid "C_onfigure Plugin"
+#~ msgstr "_ตั้งค่าปลั๊กอิน"
+
+#~ msgid ""
+#~ "This program is free software; you can redistribute it and/or modify it "
+#~ "under the terms of the GNU General Public License as published by the "
+#~ "Free Software Foundation; either version 2 of the License, or (at your "
+#~ "option) any later version.\n"
+#~ msgstr ""
+#~ "โปรแกรมนี้เป็นซอฟต์แวร์เสรี คุณสามารถแจกจ่ายต่อ และ/หรือ "
+#~ "แก้ไขโปรแกรมได้ภายใต้เงื่อนไขของ GNU General Public License "
+#~ "ที่เผยแพร่โดยมูลนิธิซอฟต์แวร์เสรีไม่ว่าจะเป็นสัญญาอนุญาตรุ่นที่ 2 หรือรุ่นถัดมา "
+#~ "(ตามแต่คุณจะเลือก)\n"
+
+#~ msgid ""
+#~ "This program is distributed in the hope that it will be useful, but "
+#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
+#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+#~ "Public License for more details.\n"
+#~ msgstr ""
+#~ "โปรแกรมนี้ เผยแพร่ด้วยความหวังว่าโปรแกรมจะมีประโยชน์แต่ _ไม่มีการรับประกันใดๆ_ "
+#~ "ไม่มีแม้การรับประกัน _อรรถประโยชน์เชิงพาณิชย์_หรือ "
+#~ "_ความเหมาะสมสำหรับวัตถุประสงค์เฉพาะกิจใดๆ_ กรุณาอ่านGNU General Public License "
+#~ "เพื่อดูรายละเอียดเพิ่มเติม\n"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program; if not, write to the Free Software Foundation, Inc., "
+#~ "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+#~ msgstr ""
+#~ "คุณควรจะได้รับสำเนาของ GNU General Public License มาพร้อมกับโปรแกรมนี้ถ้าคุณไม่ได้รับ "
+#~ "กรุณาติดต่อไปที่ Free Software Foundation, Inc., 59 Temple Place - Suite 330, "
+#~ "Boston, MA 02111-1307, USA."
+
+#~ msgid "Collection"
+#~ msgstr "สมุดรูป"
+
+#~ msgid "Load Image"
+#~ msgstr "อ่านรูป"
+
+#~ msgid "_File"
+#~ msgstr "แ_ฟ้ม"
+
+#~ msgid "Set up the page properties for printing"
+#~ msgstr "ตั้งหน้ากระดาษสำหรับการพิมพ์"
+
+#~ msgid "<b>Details</b>"
+#~ msgstr "<b>รายละเอียด</b>"
+
+#~ msgid "<b>Height:</b>"
+#~ msgstr "<b>ความสูง:</b>"
+
+#~ msgid "<b>Name:</b>"
+#~ msgstr "<b>ชื่อ:</b>"
+
+#~ msgid "<b>Type:</b>"
+#~ msgstr "<b>ชนิด:</b>"
+
+#~ msgid "<b>Width:</b>"
+#~ msgstr "<b>ความกว้าง:</b>"
+
+#~ msgid "Open with \"%s\""
+#~ msgstr "เปิดด้วย \"%s\""
+
+#~ msgid "_Open..."
+#~ msgstr "_เปิด..."
+
+#~ msgid "Save _As..."
+#~ msgstr "บันทึกเป็_น..."
+
+#~ msgid "_Print..."
+#~ msgstr "_พิมพ์..."
+
+#~ msgid "Move to Trash"
+#~ msgstr "ทิ้งลงถังขยะ"
+
+#~ msgid "Only local images can be used as wallpapers"
+#~ msgstr "ใช้แฟ้มภาพในเครื่องได้เท่านั้นเป็นภาพพื้นหลัง"
+
+#~ msgid ""
+#~ "To be able to set this image as your wallpaper, please save it locally in "
+#~ "your computer"
+#~ msgstr "หากต้องการใช้ภาพนี้เป็นภาพพื้นหลัง กรุณาบันทึกลงในเครื่อง"
+
+#~ msgid "Page Set_up..."
+#~ msgstr "ตั้งค่าห_น้ากระดาษ..."
+
+#~ msgid "Error saving print settings file: %s"
+#~ msgstr "เกิดข้อผิดพลาดขณะบันทึกแฟ้มค่าตั้งการพิมพ์: %s"
+
+#~ msgid "File exists"
+#~ msgstr "แฟ้มมีอยู่แล้ว"
+
+#~ msgid "<b>Location:</b>\t"
+#~ msgstr "<b>สถานที่:</b>\t"
+
+#~ msgid "Last collection window geometry"
+#~ msgstr "ตำแหน่งและขนาดของหน้าต่างสมุดรูปที่เปิดครั้งล่าสุด"
+
+#~ msgid "Last singleton window geometry"
+#~ msgstr "ตำแหน่งและขนาดของหน้าต่างเดี่ยวๆ ที่เปิดครั้งล่าสุด"
+
+#~ msgid "Open images in a new window"
+#~ msgstr "เปิดรูปในหน้าต่างใหม่"
+
+#~ msgid ""
+#~ "Whether opening an image should create a new window instead of replacing "
+#~ "the image in the current window."
+#~ msgstr "กำหนดว่าควรเปิดรูปใหม่ในหน้าต่างใหม่ แทนที่จะทับรูปเก่าในหน้าต่างเดิมหรือไม่"
+
+#~ msgid "The GNOME image viewing and cataloging program."
+#~ msgstr "โปรแกรมแสดงและจัดเรียงรูปของ GNOME"
+
+#~ msgid "<b>Position</b>"
+#~ msgstr "<b>ตำแหน่ง</b>"
+
+#~ msgid "<b>Size</b>"
+#~ msgstr "<b>ขนาด</b>"
+
+#~ msgid "Bottom"
+#~ msgstr "ล่าง"
+
+#~ msgid "Image Collection"
+#~ msgstr "สมุดรูป"
+
+#~ msgid "Top"
+#~ msgstr "บน"
+
+#~ msgid "Use fixed size"
+#~ msgstr "ใช้ขนาดตายตัว"
+
+#~ msgid "label"
+#~ msgstr "ป้าย"
+
+#~ msgid "%s x %s pixels"
+#~ msgid_plural "%s x %s pixels"
+#~ msgstr[0] "%s x %s พิกเซล"
+
+#~ msgid "_Browse"
+#~ msgstr "เ_รียกดู"
+
+#~ msgid "Show/hide image information for collection."
+#~ msgstr "แสดง/ซ่อน ข้อมูลเกี่ยวกับสมุดรูป"
+
+#~ msgid "Show/hide image information for single image."
+#~ msgstr "แสดง/ซ่อน ข้อมูลเกี่ยวกับรูปภาพเดี่ยวๆ"
+
+#~ msgid "Filename"
+#~ msgstr "ชื่อแฟ้ม"
+
+#~ msgid "Width"
+#~ msgstr "กว้าง"
+
+#~ msgid "Height"
+#~ msgstr "สูง"
+
+#~ msgid "Attribute"
+#~ msgstr "คุณลักษณะ"
+
+#~ msgid "File"
+#~ msgstr "แฟ้ม"
+
+#~ msgid "Open in new window"
+#~ msgstr "เปิดในหน้าต่างใหม่"
+
+#~ msgid "Counter"
+#~ msgstr "ตัวนับ"
+
+#~ msgid "Comment"
+#~ msgstr "หมายเหตุ"
+
+#~ msgid "Date"
+#~ msgstr "วันที่"
+
+#~ msgid "Time"
+#~ msgstr "เวลา"
+
+#~ msgid "Day"
+#~ msgstr "วัน"
+
+#~ msgid "Month"
+#~ msgstr "เดือน"
+
+#~ msgid "Year"
+#~ msgstr "ปี"
+
+#~ msgid "Hour"
+#~ msgstr "ชั่วโมง"
+
+#~ msgid "Minute"
+#~ msgstr "นาที"
+
+#~ msgid "Second"
+#~ msgstr "วินาที"
+
+#~ msgid "Option not available."
+#~ msgstr "ตัวเลือกใช้ไม่ได้"
+
+#~ msgid ""
+#~ "To use this function you need the libexif library. Please install libexif "
+#~ "(http://libexif.sf.net) and recompile Eye of GNOME."
+#~ msgstr ""
+#~ "ความสามารถนี้ต้องอาศัยไลบรารี libexif  โปรดติดตั้ง libexif (http://libexif.sf."
+#~ "net) แล้วคอมไพล์ Eye of GNOME ใหม่"
+
+#~ msgid "Cancel saving ..."
+#~ msgstr "ยกเลิกการบันทึก..."
+
+#~ msgid ""
+#~ "Could not display help for Eye of GNOME.\n"
+#~ "%s"
+#~ msgstr ""
+#~ "ไม่สามารถแสดงเอกสารแนะนำวิธีใช้ Eye of GNOME.\n"
+#~ "%s"
+
+#~ msgid "Overwrite file %s?"
+#~ msgstr "เขียนทับแฟ้ม %s หรือไม่"
+
+#~ msgid "File exists. Do you want to overwrite it?"
+#~ msgstr "มีแฟ้มชื่อ %s อยู่แล้ว จะเขียนทับหรือไม่?"
+
+#~ msgid "Skip"
+#~ msgstr "ข้าม"
+
+#~ msgid "Overwrite"
+#~ msgstr "เขียนทับ"
+
+#~ msgid "Error on saving %s."
+#~ msgstr "ผิดพลาดขณะบันทึก %s"
+
+#~ msgid "Couldn't determine destination uri."
+#~ msgstr "ไม่สามารถติดต่อ uri ปลายทาง"
+
+#~ msgid "Please use an appropriate filename suffix or select a file format."
+#~ msgstr "โปรดใช้ชื่อสกุลแฟ้มสำหรับชนิดแฟ้มที่ต้องการ"
+
+#~ msgid "Error on saving images."
+#~ msgstr "ผิดพลากขณะบันทึกรูป"
+
+#~ msgid "Reason: %s"
+#~ msgstr "สาเหตุ: %s"
+
+#~ msgid "Image _Information"
+#~ msgstr "_ข้อมูลเกี่ยวกับรูปภาพ"
+
+#~ msgid "Close"
+#~ msgstr "ปิด"
+
+#~ msgid "Save"
+#~ msgstr "บันทึก"
+
+#~ msgid "Undo"
+#~ msgstr "เรียกคืน"
+
+#~ msgid "User interface description not found."
+#~ msgstr "หาแฟ้มข้อมูลสำหรับสร้างหน้าต่างติดต่อผู้ใช้ไม่พบ"
+
+#~ msgid "Unable to create Eye of GNOME user interface"
+#~ msgstr "ไม่สามารถสร้างหน้าต่างติดต่อผู้ใช้ของ Eye of GNOME ได้"
+
+#~ msgid "File not found."
+#~ msgid_plural "Files not found."
+#~ msgstr[0] "ไม่พบแฟ้ม"
+
+#~ msgid "Empty"
+#~ msgstr "ว่างเปล่า"
+
+#~ msgid "View different types of images"
+#~ msgstr "ดูรูปชนิดต่างๆ"
+
+#~ msgid "Slide Show"
+#~ msgstr "การแสดงสไลด์"
+
+#~ msgid "<b>Image Interpolation</b>"
+#~ msgstr "<b>ประมาณค่าสีจากข้อมูลรอบข้าง</b>"
+
+#~ msgid "Allow _zoom greater than 100% initially"
+#~ msgstr "_ยอมให้รูปขยายใหญ่กว่า 100% ตอนที่พึ่งเปิด"
+
+#~ msgid "Print Preview"
+#~ msgstr "ตัวอย่างงานพิมพ์"
+
+#~ msgid "Rotat_e 180°"
+#~ msgstr "หมุน 180 _องศา"
+
+#~ msgid "Open _Folder..."
+#~ msgstr "เปิดโ_ฟลเดอร์..."
+
+#~ msgid "Open multiple single windows?"
+#~ msgstr "เปิดหลายหน้าต่าง?"
+
+#~ msgid ""
+#~ "You are about to open %i windows simultaneously. Do you want to open them "
+#~ "in a collection instead?"
+#~ msgid_plural ""
+#~ "You are about to open %i windows simultaneously. Do you want to open them "
+#~ "in a collection instead?"
+#~ msgstr[0] ""
+#~ "คุณกำลังจะเปิด %i หน้าต่างพร้อมกัน  คุณต้องการจะแสดงรูปเหล่านี้เป็นสมุดรูปแทนหรือไม่?"
+
+#~ msgid "Single Windows"
+#~ msgstr "หลายหน้าต่าง"
+
+#~ msgid ""
+#~ "If this is set to TRUE images will be switched after number of seconds "
+#~ "determined by the 'full_screen/seconds' key."
+#~ msgstr ""
+#~ "ถ้าค่านี้ตั้งเป็น TRUE จะเปลี่ยนรูปภาพที่แสดงหลังจากเวลาผ่านไปเป็นจำนวนวินาทีตามที่กำหนดในคีย์ "
+#~ "'full_screen/seconds'"
+
+#~ msgid "_New Window"
+#~ msgstr "หน้าต่างใ_หม่"
+
+#~ msgid "Open a new window"
+#~ msgstr "เปิดหน้าต่างใหม่"
+
+#~ msgid "New"
+#~ msgstr "ใหม่"
+
+#~ msgid "empty file"
+#~ msgstr "แฟ้มว่าง"
+
+#~ msgid "Filenames are not disjunct."
+#~ msgstr "มีชื่อแฟ้มซ้ำกัน"
+
+#~ msgid "_New"
+#~ msgstr "ใ_หม่"
+
+#~ msgid "Open _Directory..."
+#~ msgstr "เปิดโ_ฟลเดอร์..."
+
+#~ msgid "Open a directory"
+#~ msgstr "เปิดโฟลเดอร์"
+
+#~ msgid "Images: %i/%i"
+#~ msgstr "รูป: %i/%i"
+
+#~ msgid "Close all windows and quit"
+#~ msgstr "ปิดหน้าต่างทั้งหมดแล้วออกจากโปรแกรม"
+
+#~ msgid "Saving finished"
+#~ msgstr "บันทึกเสร็จเรียบร้อย"
+
+#~ msgid "Collection View"
+#~ msgstr "มุมมองสมุดรูป"
+
+#~ msgid "Window Title"
+#~ msgstr "ชื่อหน้าต่าง"
+
+#~ msgid "Status Text"
+#~ msgstr "ข้อความแสดงสถานะ"
+
+#~ msgid "Progress of Image Loading"
+#~ msgstr "ความคืบหน้าของการอ่านรูป"
+
+#~ msgid "Embeddable EOG Image"
+#~ msgstr "รูป EOG ที่ฝังตัวได้"
+
+#~ msgid "Page"
+#~ msgstr "กระดาษ"
+
+#~ msgid "Paper"
+#~ msgstr "กระดาษ"
+
+#~ msgid "% of original size"
+#~ msgstr "% ของต้นฉบับ"
+
+#~ msgid "Adjust to "
+#~ msgstr "ปรับเป็น "
+
+#~ msgid "Cutting help"
+#~ msgstr "ช่วยตัด"
+
+#~ msgid "Down, then right"
+#~ msgstr "ลงแล้วขวา"
+
+#~ msgid "Fit to page"
+#~ msgstr "พอดีหน้า"
+
+#~ msgid "Horizontally by "
+#~ msgstr "ตามแนวนอน"
+
+#~ msgid "Margins"
+#~ msgstr "ขอบ"
+
+#~ msgid "Ordering help"
+#~ msgstr "ช่วยเรียงลำดับ"
+
+#~ msgid "Overlap"
+#~ msgstr "วางซ้อน"
+
+#~ msgid "Overlap help"
+#~ msgstr "ช่วยวางซ้อน"
+
+#~ msgid "Page order"
+#~ msgstr "ลำดับหน้า"
+
+#~ msgid "Right, then down"
+#~ msgstr "ขวาแล้วลง"
+
+#~ msgid "Scale"
+#~ msgstr "ย่อขยาย"
+
+#~ msgid "Show"
+#~ msgstr "แสดง"
+
+#~ msgid "Vertically by "
+#~ msgstr "ตามแนวตั้ง"
+
+#~ msgid "The name of the file or data to print"
+#~ msgstr "ชื่อแฟ้มหรือข้อมูลที่จะพิมพ์"
+
+#~ msgid "Quit the program"
+#~ msgstr "ออกจากโปรแกรม"
+
+#~ msgid "Full Screen"
+#~ msgstr "เ_ต็มจอ"
+
+#~ msgid "Previews the image to be printed"
+#~ msgstr "ดูตัวอย่างการพิมพ์ของรูป"
+
+#~ msgid "Rotate Left"
+#~ msgstr "หมุนซ้าย"
+
+#~ msgid "Rotate Right"
+#~ msgstr "หมุนขวา"
+
+#~ msgid "/Rotate C_lockwise"
+#~ msgstr "/หมุน_ตามเข็มนาฬิกา"
+
+#~ msgid "/Rotate Counte_r Clockwise"
+#~ msgstr "/หมุน_ย้อนเข็มนาฬิกา"
+
+#~ msgid "/_Zoom In"
+#~ msgstr "/ขย_าย"
+
+#~ msgid "/Zoom _Out"
+#~ msgstr "/_ย่อ"
+
+#~ msgid "/_Normal Size"
+#~ msgstr "/ขนาด_ปกติ"
+
+#~ msgid "/Best _Fit"
+#~ msgstr "/ขนาด_พอดี"
+
+#~ msgid "/_Close"
+#~ msgstr "/ปิ_ด"
+
+#~ msgid "Loading of image %s failed."
+#~ msgstr "อ่านรูป %s ไม่สำเร็จ"
+
+#~ msgid ""
+#~ "Loading of image %s failed.\n"
+#~ "Reason: %s."
+#~ msgstr ""
+#~ "อ่านรูป %s ไม่สำเร็จ\n"
+#~ "เหตุเพราะ: %s"
+
+#~ msgid "Loading failed"
+#~ msgstr "อ่านรูปไม่สำเร็จ"
+
+#~ msgid "Image successfully saved"
+#~ msgstr "บันทึกรูปเรียบร้อย"
+
+#~ msgid "Statusbar Text"
+#~ msgstr "ข้อความบนแถบสถานะ"
+
+#~ msgid "Desired Window Width"
+#~ msgstr "ความกว้างหน้าต่างที่ต้องการ"
+
+#~ msgid "Desired Window Height"
+#~ msgstr "ความสูงหน้าต่างที่ต้องการ"
+
+#~ msgid "Don't use zoom larger than 100%"
+#~ msgstr "อย่าขยายรูปให้ใหญ่กว่าต้นฉบับ"
+
+#~ msgid "By Extension"
+#~ msgstr "ตามนามสกุล"
+
+#~ msgid "Determine File Type:"
+#~ msgstr "ตัดสินชนิดรูป:"
+
+#~ msgid "Automatically pick window size"
+#~ msgstr "เลือกขนาดหน้าต่างโดยอัตโนมัติ"
+
+#~ msgid "Default zoom factor for the full screen view"
+#~ msgstr "ขนาดย่อขยายสำหรับตอนที่ดูรูปเต็มจอ"
+
+#~ msgid ""
+#~ "Default zoom factor for the full screen view. Possible values are: 0 (use "
+#~ "1:1 zoom factor), 1 (use the same zoom factor as the image window), 2 "
+#~ "(fit the image to the screen)."
+#~ msgstr ""
+#~ "ขนาดย่อขยายสำหรับตอนที่ดูรูปเต็มจอ. สามารถตั้งเป็น: 0 (ใช้ขนาด 1:1), 1 "
+#~ "(ใช้ขนาดย่อขยายเดียวกับหน้าต่างรูป), 2 (ปรับขนาดรูปให้พอดีกับจอ)."
+
+#~ msgid "Scrollbar policy for the full screen view"
+#~ msgstr "แนวกำหนดสำหรับแถบเลื่อนตอนดูรูปเต็มจอ"
+
+#~ msgid ""
+#~ "Whether to display scrollbars on the full screen view. Possible values "
+#~ "are: 1 (automatic; only display scrollbars if the image is larger than "
+#~ "the window), 2 (never display scrollbars)."
+#~ msgstr ""
+#~ "เลือกว่าจะแสดงแถบเลื่อนตอนที่แสดงรูปเต็มจอ.  สามารถตั้งเป็น: 1 (อัตโนมัติ; "
+#~ "แสดงแถบเลื่อนแค่ตอนที่รูปใหญ่กว่าจอ), 2 (ไม่แสดงแถบเลื่อน)."
+
+#~ msgid "mm"
+#~ msgstr "ม.ม."
+
+#~ msgid "cm"
+#~ msgstr "ซ.ม."
+
+#~ msgid "centimeter"
+#~ msgstr "เซนติเมตร"
+
+#~ msgid "Print Setup"
+#~ msgstr "ตั้งค่าการพิมพ์"
+
+#~ msgid "Paper size:"
+#~ msgstr "ขนาดกระดาษ:"
+
+#~ msgid "Portrait"
+#~ msgstr "แนวตั้ง"
+
+#~ msgid "Landscape"
+#~ msgstr "แนวนอน"
+
+#~ msgid "Helpers"
+#~ msgstr "ตัวช่วย"

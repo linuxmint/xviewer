@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="rename-multiple" xml:lang="pl"> 
+ 
+  <info> 
+    <link type="guide" xref="index#edit"/>
+    <link type="seealso" xref="format-change#multiple"/> 
+    <desc>Automatically rename and number batches of pictures.</desc> 
+ 
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/> 
+    <credit type="author"> 
+      <name>Tiffany Antopolski</name> 
+      <email>tiffany@antopolski.com</email> 
+    </credit> 
+    <license> 
+      <p>Creative Commons Share Alike 3.0</p> 
+    </license> 
+ 
+  </info> 
+ 
+<title>Rename many pictures at once</title>
+
+<p>If you have lots of pictures that you want to rename, perhaps so that they have a standard, numbered name format:</p>
+
+<steps>
+ <item>
+  <p>Open the <link xref="view#image-gallery">image gallery</link> by pressing 
+  <key>F9</key>.</p>
+ </item>
+ <item>
+  <p>Select all of the pictures that you would like to rename from the image 
+  gallery by holding down <key>Ctrl</key> and clicking them one by one.</p>
+ <p>Alternatively, press <keyseq><key>Ctrl</key><key>A</key></keyseq> to select 
+ all of the pictures.</p>
+ </item>
+ <item>
+  <p>Click <guiseq><gui>Image</gui><gui>Save as</gui></guiseq>. A window with 
+  some filename options will appear (the picture, below, shows what this window 
+  looks like).</p>
+ </item>
+ <item>
+  <p>The renamed pictures will be saved in the current folder by default. To
+save them elsewhere, change the <gui>Destination folder</gui>.</p>
+ </item>
+ <item>
+  <p>Use the <gui>Filename format</gui> box to choose a naming format for the 
+  pictures. The <gui>File Name Preview</gui> shows you what the new filenames 
+  will look like. See the <link xref="#filename-format"/> section, below, for advice on choosing how to rename the files.</p>
+ </item>
+ <item>
+  <p>Ensure that the <gui>Filename Format</gui> drop-down list says 
+  <gui>as is</gui>, unless you want to <link xref="format-change#multiple">convert the pictures to a different file format</link>.</p>
+ </item>
+ <item>
+  <p>Click <gui>Save As</gui> and the pictures will be renamed.</p>
+ </item>
+</steps>
+
+<media type="image" src="figures/multiple-rename-count.png" width="300"/>
+
+<section id="filename-format">
+ <title>Choose a filename format</title>
+ <p>The filenames of the renamed files are determined by what you put in the 
+ <gui>Filename format</gui> box.</p>
+ <list>
+  <item>
+   <p>You can keep the original filename as part of the new filename by leaving 
+  the <input>%f</input> in the box.</p>
+   <p>For example, if you type <input>paris_%f</input> into the <gui>Filename format</gui> box, pictures called <file>flower.jpg</file>, <file>house.jpg</file>, and <file>cat.jpg</file> would be renamed to <file>paris_flower.jpg</file>, <file>paris_house.jpg</file>, and <file>paris_cat.jpg</file>.</p>
+  </item>
+  <item>
+   <p>Adding a <input>%n</input> will number the pictures consecutively, 
+  starting at the counter number you choose under <gui>Options</gui>.</p>
+  <p>For example, if you type <input>sunshine_%n</input> into the <gui>Filename format</gui> box, pictures called <file>flower.jpg</file>, <file>house.jpg</file>, and <file>cat.jpg</file> would be renamed to <file>sunshine_2.jpg</file>, <file>sunshine_3.jpg</file>, and <file>sunshine_1.jpg</file>. (They will be numbered by alphabetical order of the original filenames.)</p>
+  </item>
+ </list>
+</section>
+
+</page>

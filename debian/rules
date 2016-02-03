@@ -1,0 +1,21 @@
+#! /usr/bin/make -f 
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+
+LDFLAGS += -Wl,-O1 -Wl,--as-needed
+
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc
+
+DEB_DH_MAKESHLIBS_ARGS_ALL += --no-act
+
+binary-post-install/eog::
+	# remove gir file from eog package, it will be in eog-dev
+	rm -rf `pwd`/debian/eog/usr/share/eog/gir-1.0/
+
+DEB_DH_GIREPOSITORY_ARGS_eog += -ldebian/tmp/usr/share/eog/gir-1.0/ /usr/lib/eog/girepository-1.0/
+
+common-binary-post-install-arch:: list-missing

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="rename-multiple" xml:lang="fr"> 
+ 
+  <info> 
+    <link type="guide" xref="index#edit"/>
+    <link type="seealso" xref="format-change#multiple"/> 
+    <desc>Renommer et numéroter automatiquement des ensembles d'images.</desc> 
+ 
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/> 
+    <credit type="author"> 
+      <name>Tiffany Antopolski</name> 
+      <email>tiffany@antopolski.com</email> 
+    </credit> 
+    <license> 
+      <p>Creative Commons Share Alike 3.0</p> 
+    </license> 
+ 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info> 
+ 
+<title>Renommage de plusieurs images à la fois</title>
+
+<p>Si vous avez beaucoup d'images à renommer, peut-être afin qu'elles aient un format de nom standard, numéroté :</p>
+
+<steps>
+ <item>
+  <p>Ouvrez la <link xref="view#image-gallery">collection d'image</link> en pressant la touche <key>F9</key>.</p>
+ </item>
+ <item>
+  <p>Sélectionnez toutes les images à renommer dans la collection d'images en pressant la touche <key>Ctrl</key> et en cliquant sur les images les unes après les autres.</p>
+ <p>Vous pouvez également presser <keyseq><key>Ctrl</key><key>A</key></keyseq> pour sélectionner toutes les images.</p>
+ </item>
+ <item>
+  <p>Cliquez sur <guiseq><gui>Image</gui><gui>Enregistrer sous</gui></guiseq>. Une fenêtre avec des options de nom de fichier s'affiche (la figure ci-dessous montre à quoi elle ressemble).</p>
+ </item>
+ <item>
+  <p>Les images renommées sont enregistrées par défaut dans le dossier ouvert. Pour les enregistrer ailleurs, modifiez le <gui>Dossier de destination</gui>.</p>
+ </item>
+ <item>
+  <p>Utilisez la boîte <gui>Format du nom de fichier</gui> pour choisir un format de nom pour les images. L'<gui>Aperçu du nom de fichier</gui> vous montre à quoi vont ressembler les nouveaux noms de fichier. Consultez la section <link xref="#filename-format"/> ci-dessous pour des conseils sur la façon de renommer les fichiers.</p>
+ </item>
+ <item>
+  <p>Assurez-vous que la liste à choix multiples <gui>Format du nom de fichier</gui> affiche <gui>inchangé</gui> à moins que vous ne fassiez une <link xref="format-change#multiple">conversion d'images dans un format de fichier différent</link>.</p>
+ </item>
+ <item>
+  <p>Cliquez sur <gui>Enregistrer sous</gui> et les images sont renommées.</p>
+ </item>
+</steps>
+
+<media type="image" src="figures/multiple-rename-count.png" width="300"/>
+
+<section id="filename-format">
+ <title>Choix d'un format d'image</title>
+ <p>Les noms de fichier des fichiers renommés sont déterminés par ce que vous mettez dans la boîte <gui>Format du nom de fichier</gui>.</p>
+ <list>
+  <item>
+   <p>Vous pouvez conserver le nom de fichier d'origine comme partie du nouveau nom de fichier en laissant le <input>%f</input> dans la boîte.</p>
+   <p>Par exemple, si vous saisissez <input>paris_%f</input> dans la boîte <gui>Format du nom de fichier</gui>, les images appelées <file>fleur.jpg</file>, <file>maison.jpg</file> et <file>chat.jpg</file> seront renommées <file>paris_fleur.jpg</file>, <file>paris_maison.jpg</file> et <file>paris_chat.jpg</file>.</p>
+  </item>
+  <item>
+   <p>L'ajout d'un <input>%n</input> numérote les images consécutivement, en commençant par le nombre choisi dans les <gui>Options</gui>.</p>
+  <p>Par exemple, si vous saisissez <input>soleil_%n</input> dans la boîte <gui>Format du nom de fichier</gui>, les images appelées <file>fleur.jpg</file>, <file>maison.jpg</file> et <file>chat.jpg</file> seront renommées <file>soleil_2.jpg</file>, <file>soleil_3.jpg</file> et <file>soleil_1.jpg</file> respectivement (elles sont numérotées dans l'ordre alphabétique de leur nom de fichier d'origine).</p>
+  </item>
+ </list>
+</section>
+
+</page>

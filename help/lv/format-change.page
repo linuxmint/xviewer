@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="lv">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Tu vari pārvērst attēlus no viena formāta uz citu. To var arī darīt uzreiz ar vairākiem attēliem reizē.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0 licence.</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Viesturs Ružāns</mal:name>
+      <mal:email>viesty@exs.lv</mal:email>
+      <mal:years>2011.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Pārvērst citā faila formātā</title>
+
+<p>Attēli tiek saglabāti noteiktā faila formātā, piemēram JPEG vai PNG. Tu vari pārvērst failu no viena formāta uz citu.</p>
+
+<section id="single">
+ <title>Pārvērst vienu attēlu uz citu failu formātu</title>
+ <list type="numbered">
+  <item>
+   <p>Spied <guiseq><gui>Attēls</gui><gui>Saglabāt kā</gui></guiseq>. Tiks parādīts <gui>Saglabāt attēlu</gui> logs.</p>
+  </item>
+  <item>
+   <p>Nosaukuma laukumā pamaini <em>faila paplašinājumu</em> uz faila tipu, kurā vēlies pārvērst savu attēlu. Faila paplašinājums ir daļa no faila nosaukuma pēc punkta.</p>
+   <p>Piemēram, lai pārvērstu JPEG (<file>.jpg</file>) datni uz bitkartes (<file>.bmp</file>) datni:</p>
+   <p><em>sākotnējā datne:</em> <file>attēls.jpg</file></p>
+   <p><em>jaunā datne:</em> <file>attēls.bmp</file></p>
+  </item>
+  <item>
+   <p>Spied <gui>Saglabāt</gui> un tiks saglabāts jauns fails ar jaunu formātu. Vecais fails (vecajā formātā) paliks tur pat, kur bij un netiks izdzēsts.</p>
+  </item>
+</list>
+
+<p>Attēlu skatītājs mēģinās uzminēt formātu, kādā attēlu saglabāt, balstoties uz attēla paplašinājumu, kuru ierakstīsi. Ja tas tomēr neatpazīst paplašinājumu, kuru tu izmanto, vai arī, ja tu nezini, kuru izmantot, spied <gui>Atbalstītās attēlu datnes</gui> <gui>Saglabāt attēlu</gui> logā. Tas ļaus izvēlēties faila tipu no saraksta.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Pārvērst vairākus attēlus reizē uz citu formātu.</title>
+ <p>Tu reizē vari pārvērst vairākus attēlus no viena formāta uz citu. Tas ir noderīgi, ja tev ir daudz attēlu, kuras nepieciešams pārvērst.</p>
+ <list style="numbered">
+  <item>
+   <p><link xref="view#image-gallery">Attēlu galerijā</link> turi nospiestu <key>Ctrl</key> taustiņu un izvēlies attēlus, kurus vēlies pārvērst. Lai izvēlētos visus attēlus uzreiz, tu vari spiest <keyseq><key>Ctrl</key><key>A</key></keyseq>.</p>
+  </item>
+  <item>
+   <p>Spied  <guiseq><gui>Attēls</gui><gui>Saglabāt kā</gui></guiseq>. Parādīsies logs (skatīt zemāk).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Pārvērstie attēli tiks saglabāti esošajā mapē pēc noklusējuma. Ja tu vēlies tos saglabāt citur, nomaini <gui>Mērķa mape</gui>.</p>
+  </item>
+  <item>
+   <p>Izvēlies faila formātu, uz kuru vēlies pārvērst attēlus, no izkrītošā sarakstapa labi no <gui>Faila nosaukuma formāts</gui> lauka.</p>
+  </item>
+  <item>
+   <p>Spied <gui>Saglabāt</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

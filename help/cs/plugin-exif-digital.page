@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="cs">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Zobrazte si informace, jako nastavení fotoaparátu a histogram nebo datum a místo pořízení.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Marek Černocký</mal:name>
+      <mal:email>marek@manet.cz</mal:email>
+      <mal:years>2009, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Jak zobrazit podrobné informace o obrázku</title>
+
+<p>Obrázky pořízené digitálním fotoaparátem v sobě uchovávají vložené doplňující informace, jako je datum pořízení, nastavení expozice použité fotoaparátem a někdy i místo, kde byly pořízeny.</p>
+
+<p>Zde se dozvíte, jak se k těmto informacím dostat.</p>
+
+<section id="date">
+<title>Zobrazení data ve stavové liště</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Můžete si nechat zobrazovat datum, kdy byl obrázek pořízen, na stavové liště v dolní části okna.</p>
+  <p>Pokud to chcete, klikněte na <guiseq><gui>Upravit</gui> <gui>Předvolby</gui></guiseq> a jděte na kartu <gui>Zásuvné moduly</gui>. Tam zaškrtněte <gui>Datum ve stavové liště</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Podrobné údaje Exif</title>
+  <p>Podrobné informace uchované spolu s digitální fotografií se nazývají <em>data Exif</em>. Můžete si je zobrazit, když si do prohlížeče obrázků doinstalujete zásuvný modul.</p>
+
+  <steps>
+   <item>
+    <p>Abyste je mohli zobrazovat, musíte ze všeho nejdřív nainstalovat balíček <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Až jej máte nainstalovaný, klikněte na <guiseq><gui>Upravit</gui> <gui>Předvolby</gui></guiseq> a přejděte na kartu <gui>Zásuvné moduly</gui>. Pak zaškrtněte <gui>Zobrazení informací Exif</gui> a klikněte na <gui>Zavřít</gui>.</p>
+   </item>
+   <item>
+    <p>Aby se vám informace o nastavení fotoaparátu při pořízení fotky zobrazily, klikněte na <guiseq><gui>Zobrazit</gui> <gui>Postranní panel</gui></guiseq>. Abyste viděli i histogram vyvážení barev a světel/stínů v obrázku, vyberte v zásuvných modulech <gui>Zobrazení informací Exif</gui> a klikněte na <gui>Předvolby</gui>. V části <gui>Histogram</gui> zaškrtněte histogramy, které chcete zobrazovat.</p>
+   </item>
+   <item>
+    <p>Údaje o nastavení fotoaparátu při pořízení snímku můžete mít zobrazené i na stavové liště. Vyberte <gui>Zobrazení informací Exifi</gui> v <gui>Zásuvných modulech</gui> a klikněte na <gui>Předvolby</gui>. Zaškrtněte <gui>Zobrazit nastavení fotoaparátu ve stavové liště</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Zobrazení původu fotografie na mapě</title>
+  <p>Některé fotoaparáty umí do digitální fotografie přidat i <em>geolokační</em> údaje (tzv. geotags). Jedná se obvykle o souřadnice z GPS (zeměpisná šířka a délka) pro místo, kde byla fotografie pořízena.</p>
+
+  <steps>
+   <item>
+    <p>Abyste si mohli na mapě zobrazit informace, kde byla fotografie pořízena, musíte nejprve nainstalovat balíček <link xref="plugins">eog-plugins</link>.</p>
+   </item>
+   <item>
+    <p>Až je nainstalován, klikněte na <guiseq><gui>Upravit</gui> <gui>Předvolby</gui></guiseq> a přejděte na kartu <gui>Zásuvné moduly</gui>. Pak zaškrtněte <gui>Mapa</gui> a klikněte na <gui>Zavřít</gui>.</p>
+   </item>
+   <item>
+    <p>Pro zobrazení mapy klikněte na <guiseq><gui>Zobrazit</gui> <gui>Postranní panel</gui></guiseq>.</p>
+   </item>
+  </steps>
+  <p>Mapa vám zobrazí místo, kde byl obrázek pořízen, jen v případě, že jsou k fotografii geolokační informace připojené. Řada fotoaparátů ale tyto informace získávat neumí.</p>
+</section>
+
+
+</page>

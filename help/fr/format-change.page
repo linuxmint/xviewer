@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="fr">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Vous pouvez convertir des images d'un format d'image à un autre. Vous pouvez faire cela par lot de plusieurs images.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Conversion en un autre format de fichier</title>
+
+<p>Les images sont enregistrées dans un format de fichier spécifique, comme JPEG ou PNG. Vous pouvez les convertir d'un format de fichier en un autre.</p>
+
+<section id="single">
+ <title>Conversion d'une seule image dans un format de fichier différent</title>
+ <list type="numbered">
+  <item>
+   <p>Cliquez sur <guiseq><gui>Image</gui><gui>Enregistrer sous</gui></guiseq>. La boîte de dialogue <gui>Enregistrer l'image</gui> apparaît.</p>
+  </item>
+  <item>
+   <p>Dans le champ Nom, modifiez l'<em>extension du fichier</em> en celle du format de fichier dans lequel vous souhaitez convertir votre image. L'extension du fichier est la partie du nom de fichier après le dernier point.</p>
+   <p>Par exemple, pour convertir un fichier JPEG (<file>.jpg</file>) en fichier Bitmap (<file>.bmp</file>) :</p>
+   <p><em>fichier d'origine :</em> <file>image.jpg</file></p>
+   <p><em>nouveau fichier :</em> <file>image.bmp</file></p>
+  </item>
+  <item>
+   <p>Cliquez sur <gui>Enregistrer</gui> et un nouveau fichier est enregistré dans le nouveau format. L'ancien fichier (dans l'ancien format) reste là où il était et n'est pas supprimé.</p>
+  </item>
+</list>
+
+<p>Le visionneur d'images essaye de deviner dans quel format il doit enregistrer une image en se basant sur l'extension de fichier que vous avez choisie. S'il ne reconnaît pas l'extension de fichier saisie, ou si vous ne savez pas laquelle utiliser, cliquez sur <gui>Fichiers image pris en charge</gui> dans la boîte de dialogue <gui>Enregistrer l'image</gui>. Cela vous permet de sélectionner le format de fichier dans la liste déroulante.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Conversion de plusieurs images en un autre format de fichier</title>
+ <p>Vous pouvez convertir un grand nombre d'images d'un format de fichier en un autre d'un seul coup. C'est très pratique si vous avez un grand nombre d'images à convertir.</p>
+ <list style="numbered">
+  <item>
+   <p>Dans la <link xref="view#image-gallery">collection d'images</link>, pressez et maintenez enfoncé la touche <key>Ctrl</key> et cliquez sur les images devant être converties une par une. Vous pouvez aussi pressez <keyseq><key>Ctrl</key><key>A</key></keyseq> pour sélectionner toutes les images.</p>
+  </item>
+  <item>
+   <p>Cliquez sur <guiseq><gui>Image</gui><gui>Enregistrer sous</gui></guiseq>. Une boîte de dialogue s'affiche (voir ci-dessous).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Les images sont enregistrées par défaut dans le dossier actuel. Pour les enregistrer ailleurs, modifiez le <gui>Dossier de destination</gui>.</p>
+  </item>
+  <item>
+   <p>Sélectionnez le format de fichier dans lequel vous voulez convertir les images à partir de la liste à choix multiples à droite de la boîte <gui>Format du nom de fichier</gui>.</p>
+  </item>
+  <item>
+   <p>Cliquez sur <gui>Enregistrer sous</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

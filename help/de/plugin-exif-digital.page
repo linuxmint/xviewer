@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="de">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Informationen wie Kameraeinstellungen, Histogramm, Geoposition und Datum betrachten.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Detaillierte Informationen zu einem Bild anzeigen</title>
+
+<p>Von Digitalkameras aufgenommene Bilder werden mit zusätzlichen eingebetteten Informationen gespeichert, zum Beispiel dem Aufnahmezeitpunkt, den Belichtungseinstellungen und in einigen Fällen auch dem Aufnahmeort.</p>
+
+<p>Dieses Thema erläutert, wie Sie auf diese Informationen zugreifen können.</p>
+
+<section id="date">
+<title>Datum in Statusleiste anzeigen</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Das Aufnahmedatum des Bildes wird unten rechts in der Statuszeile des Fensters angezeigt.</p>
+  <p>Wählen Sie hierzu <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und öffnen Sie den Reiter <gui>Plugins</gui>. Aktivieren Sie <gui>Datum in Statusleiste</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Detaillierte Exif-Daten</title>
+  <p>Die detaillierten Informationen zu den mit digitalen Kameras aufgenommen Bildern werden <em>Exif-Daten</em> genannt. Sie können Sie durch Installieren eines Plugins für den Bildbetrachter anzeigen lassen.</p>
+
+  <steps>
+   <item>
+    <p>Um die in Ihren Fotos eingebetteten Exif-Daten sehen zu können, müssen Sie die <link xref="plugins">eog-plugins</link> installieren.</p>
+   </item>
+   <item>
+    <p>Falls <sys>eog-plugins</sys> installiert ist, klicken Sie auf <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und öffnen Sie den Reiter <gui>Plugins</gui>. Aktivieren Sie <gui>Exif-Anzeige</gui> und klicken Sie auf <gui>Schließen</gui>.</p>
+   </item>
+   <item>
+    <p>Klicken Sie auf <guiseq><gui>Ansicht</gui><gui>Seitenleiste</gui></guiseq>, um die Kameraeinstellungen des Bildes anzuzeigen. Um auch ein Histogramm anzuzeigen, welches die Farbbalance und die Licht- und Schattenwerte darstellt, wählen Sie <gui>Exif-Anzeige</gui> im Reiter <gui>Plugins</gui> und klicken Sie auf <gui>Einstellungen</gui>. Schauen Sie sich die gewünschten Histogramme an, die unter <gui>Histogramm</gui> angezeigt werden.</p>
+   </item>
+   <item>
+    <p>Sie können auch die bei der Aufnahme eines Fotos gewählten Kameraeinstellungen in der Statusleiste anzeigen. Wählen Sie <gui>Exif-Anzeige</gui> im Reiter <gui>Plugins</gui> und klicken Sie auf <gui>Einstellungen</gui>. Aktivieren Sie <gui>Display camera settings in statusbar</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Standortkarte eines Fotos anzeigen</title>
+  <p>Einige Kameras sind in der Lage, Informationen zur <em>Geoposition</em> (Geotags) zu digitalen Fotos hinzuzufügen. Geotags sind üblicherweise die GPS-Koordinaten (Breitengrad und Längengrad) des Ortes, an dem das Foto aufgenommen wurde.</p>
+
+  <steps>
+   <item>
+    <p>Um eine Karte mit den Aufnahmeorten Ihrer Fotos anzuzeigen, müssen Sie die <link xref="plugins">eog-plugins</link> installieren.</p>
+   </item>
+   <item>
+    <p>Falls <sys>eog-plugins</sys> installiert ist, klicken Sie auf <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und öffnen Sie den Reiter <gui>Plugins</gui>. Aktivieren Sie dort <gui>Karte</gui> und klicken Sie auf <gui>Schließen</gui>.</p>
+   </item>
+   <item>
+    <p>Klicken Sie auf <guiseq><gui>Ansicht</gui><gui>Seitenleiste</gui></guiseq>, um die Karte anzuzeigen.</p>
+   </item>
+  </steps>
+  <p>Die Karte zeigt den Aufnahmeort des Bildes an, sofern die Informationen zur Geoposition innerhalb der Bilddaten verfügbar sind. Viele Kameras zeichnen die Informationen zur Geoposition nicht auf.</p>
+</section>
+
+
+</page>

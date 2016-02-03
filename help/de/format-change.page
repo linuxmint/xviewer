@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Sie können Bilder von einem Format in ein anderes umwandeln, auch in einer Stapelverarbeitung mit mehreren Bildern.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Umwandeln in ein anderes Dateiformat</title>
+
+<p>Bilder werden in einem spezifischen Dateiformat gespeichert, wie JPEG oder PNG. Sie können Umwandlungen von einem Dateiformat in ein anderes vornehmen.</p>
+
+<section id="single">
+ <title>Umwandeln eines einzelnen Bildes in einen anderen Dateityp</title>
+ <list type="numbered">
+  <item>
+   <p>Klicken Sie auf <guiseq><gui>Bild</gui><gui>Speichern unter</gui></guiseq>. Der Dialog <gui>Bild speichern</gui> wird geöffnet.</p>
+  </item>
+  <item>
+   <p>Ändern Sie im Feld <gui>Name</gui> die <em>Erweiterung</em> des Dateityps, in den Sie das Bild umwandeln wollen. Die Dateierweiterung ist der Teil des Dateinamens nach dem Punkt.</p>
+   <p>Um beispielsweise eine JPEG-Datei (<file>.jpg</file>) in eine Bitmap-Datei (<file>.bmp</file>) umzuwandeln, gehen Sie folgendermaßen vor:</p>
+   <p><em>Originaldatei:</em> <file>bild.jpg</file></p>
+   <p><em>Neue Datei:</em> <file>bild.bmp</file></p>
+  </item>
+  <item>
+   <p>Klicken Sie auf <gui>Speichern</gui>, und eine neue Datei wird im neuen Format gespeichert. Die alte Datei (im alten Format) bleibt dabei erhalten und wird nicht gelöscht.</p>
+  </item>
+</list>
+
+<p>Der Bildbetrachter versucht anhand der von Ihnen gewählten Dateiendung zu bestimmen, in welchem Dateiformat ein Bild gespeichert werden soll. Falls die eingegebene Dateiendung nicht erkannt werden kann oder Sie nicht wissen, welche Sie verwenden wollen oder sollen, klicken Sie auf <gui>Unterstützte Bilddateien</gui> im <gui>Bild speichern</gui>-Fenster. Dann können Sie das Dateiformat in einer Auswahlliste wählen.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Umwandeln mehrerer Bilder in einen anderen Dateityp</title>
+ <p>Sie können eine Anzahl von Bildern von einem Dateiformat in ein anderes in einem Arbeitsgang umwandeln. Dies ist sinnvoll, wenn Sie größere Mengen von Bildern umwandeln wollen.</p>
+ <list style="numbered">
+  <item>
+   <p>Drücken Sie die <key>Strg</key>-Taste und klicken Sie in der <link xref="view#image-gallery">Bildersammlung</link> auf die Bilder, die Sie umwandeln wollen, oder drücken Sie <keyseq><key>Strg</key><key>A</key></keyseq>, um alle Bilder auszuwählen.</p>
+  </item>
+  <item>
+   <p>Klicken Sie auf <guiseq><gui>Bild</gui><gui>Speichern unter</gui></guiseq>. Das folgende Fenster wird geöffnet.</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Die umgewandelten Bilder werden standardmäßig im aktuellen Ordner gespeichert. Falls Sie sie an einem anderen Ort speichern wollen, wählen Sie den Ordner in der Auswahlliste <gui>Ordner wählen</gui> aus.</p>
+  </item>
+  <item>
+   <p>Wählen Sie das Dateiformat zur Umwandlung in der Auswahlliste rechts vom Eingabefeld <gui>Dateinamen-Format</gui> aus.</p>
+  </item>
+  <item>
+   <p>Klicken Sie auf <gui>Speichern</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

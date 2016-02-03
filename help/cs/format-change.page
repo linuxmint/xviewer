@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="cs">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>Obrázky můžete převádět z jednoho formátu obrázků do druhého. Můžete to provádět i dávkově pro více obrázků naráz.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Marek Černocký</mal:name>
+      <mal:email>marek@manet.cz</mal:email>
+      <mal:years>2009, 2013</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Jak převádět do jiného formátu souboru</title>
+
+<p>Obrázky jsou ukládány v určitých formátech, příklady budiž JPEG a PNG. Z jednoho do druhého formátu je můžete převádět.</p>
+
+<section id="single">
+ <title>Převod jednoho obrázku do jiného souborového formátu</title>
+ <list type="numbered">
+  <item>
+   <p>Klikněte na <guiseq><gui>Obrázek</gui> <gui>Uložit jako</gui></guiseq>. Objeví se okno <gui>Uložení obrázku</gui>.</p>
+  </item>
+  <item>
+   <p>V poli pro název změňte <em>příponu souboru</em> na tu, kterou používá souborový formát, do kterého chcete obrázek převést. Přípona souboru je část názvu souboru nacházející se za poslední tečkou.</p>
+   <p>Například při převodu souboru JPEG (<file>.jpg</file>) na soubor Bitmap (<file>.bmp</file>):</p>
+   <p><em>původní soubor:</em> <file>obrázek.jpg</file></p>
+   <p><em>nový soubor:</em> <file>obrázek.bmp</file></p>
+  </item>
+  <item>
+   <p>Klikněte na <gui>Uložit</gui> a nový soubor se uloží v novém formátu. Starý soubor (ve starém formátu) zůstane tam, kde byl, nemaže se.</p>
+  </item>
+</list>
+
+<p>Prohlížeč souborů se snaží formát, ve kterém má obrázek uložit, určit na základě přípony souboru, kterou jste zadali. Pokud ji nerozpozná nebo nevíte, jaká má vlastně přípona být, klikněte na <gui>Podporované formáty obrázků</gui> v okně <gui>Uložení obrázku</gui>. Pak si můžete formát souboru vybrat v rozbaleném seznamu.</p>
+
+</section>
+
+<section id="multiple">
+ <title>Převod více obrázků do jiného souborového formátu</title>
+ <p>Máte možnost převádět i několik obrázků z jednoho formátu souboru do druhého v jediném kroku. To se může hodit, když máte hodně obrázků, které potřebujete převést.</p>
+ <list style="numbered">
+  <item>
+   <p>V <link xref="view#image-gallery">galerii obrázků</link> zmáčkněte a držte klávesu <key>Ctrl</key> a vybírejte jeden po druhém obrázky, které chcete převést. Případně můžete zmáčknutím <keyseq><key>Ctrl</key><key>A</key></keyseq> označit všechny.</p>
+  </item>
+  <item>
+   <p>Klikněte na <guiseq><gui>Obrázek</gui> <gui>Uložit jako</gui></guiseq>. Objeví se okno (na obrázku níže).</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>Převedené obrázky budou standardně uloženy v aktuální složce. Pokud je chcete uložit jinam, změňte <gui>Cílovou složku</gui>.</p>
+  </item>
+  <item>
+   <p>V rozbalovacím seznamu napravo od <gui>Formát názvu souboru</gui> vyberte souborový formát, do které chcete obrázek převést.</p>
+  </item>
+  <item>
+   <p>Klikněte na <gui>Uložit</gui>.</p>
+  </item>
+ </list>
+</section>
+
+</page>

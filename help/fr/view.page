@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="view" xml:lang="fr">
+
+  <info>
+    <link type="guide" xref="index#viewing"/>
+    <desc>Appuyer sur <key>flèche gauche</key> et <key>flèche droite</key> pour changer d'image ou utiliser la collection d'images pour les afficher toutes.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+  <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany.antopolski@gmail.com</email>
+  </credit>
+  <license>
+   <p>Creative Commons Share Alike 3.0</p>
+  </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Claude Paroz</mal:name>
+      <mal:email>claude@2xlibre.net</mal:email>
+      <mal:years>2006-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Vincent Untz</mal:name>
+      <mal:email>vuntz@gnome.org</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2011-2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sébastien Seguin</mal:name>
+      <mal:email>seb24b@free.fr</mal:email>
+      <mal:years>2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Bruno Brouard</mal:name>
+      <mal:email>annoa.b@gmail.com</mal:email>
+      <mal:years>2011-12</mal:years>
+    </mal:credit>
+  </info>
+<title>Affichage de toutes les images d'un dossier</title>
+
+<p>Vous pouvez parcourir rapidement toutes les images d'un dossier en ouvrant une des images du dossier puis en cliquant (par exemple) sur <gui>Suivant</gui> et <gui>Précédent</gui>. Vous pouvez aussi afficher une <em>collection d'images</em> contenant des petites vignettes de toutes les images du dossier.</p>
+
+<section id="browse">
+ <title>Consultation des images contenues dans un dossier</title>
+ <p>Si vous avez un dossier contenant plusieurs images, vous pouvez facilement les parcourir toutes sans avoir à les ouvrir individuellement.</p>
+ <steps>
+  <item>
+   <p><link xref="open">Ouvrez</link> n'importe quelle image du dossier que vous voulez parcourir.</p>
+  </item>
+  <item>
+   <p>Cliquez sur <gui>Suivant</gui> et <gui>Précédent</gui> dans la <link xref="toolbar">barre d'outils</link> ou appuyez sur les touches <key>flèche gauche</key> et <key>flèche droite</key> pour changer d'image.</p>
+   <p>Vous aussi pouvez utiliser les touches <key>flèche bas</key> et <key>flèche haut</key> ou les touches <key>barre d'espace</key> et <key>retour arrière</key>. Vous pouvez également cliquer sur <guiseq><gui>Aller à</gui><gui>Image précédente</gui></guiseq> et <guiseq><gui>Aller à</gui><gui>Image suivante</gui></guiseq>.</p>
+  </item>
+  <item>
+   <p>Vous pouvez parcourir les images en mode plein écran en cliquant sur <guiseq><gui>Affichage</gui><gui>Plein écran</gui></guiseq> ou en pressant la touche <key>F11</key>. Utilisez les flèches du clavier pour changer d'image en mode plein écran.</p>
+ <p>Pour revenir en affichage normal, pressez la touche <key>Échap</key> ou <key>F11</key>.</p>
+  </item>
+ </steps>
+</section>
+
+
+<section id="image-gallery"><title>Consultation d'une collection d'images</title>
+ <p>La <em>collection d'images</em> affiche de petits aperçus (vignettes) de toutes les images d'un dossier à la fois. Cela facilite une navigation rapide à travers une grande collection d'images.</p>
+ 
+ <steps>
+  <item> 
+   <p>Pour afficher la collection d'images, cliquez sur <guiseq><gui>Affichage</gui><gui>collection d'images</gui></guiseq> ou pressez la touche <key>F9</key>.</p>
+  </item>
+  <item>
+   <p>Cliquez sur une image de la collection pour l'afficher à pleine échelle.</p>
+   <p>Vous pouvez également utiliser les touches <key>flèche bas</key> et <key>flèche haut</key> pour vous déplacer d'image en image dans la collection.</p>
+  </item>
+  <item>
+   <p>Pour masquer la collection, cliquez à nouveau sur <guiseq><gui>Affichage</gui><gui>collection d'images</gui></guiseq> ou pressez la touche <key>F9</key>.</p>
+  </item>
+ </steps>
+ </section>
+</page>

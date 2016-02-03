@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="toolbar" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="toolbar#view">Mostrar, ocultar</link> o <link xref="toolbar#modify">editar</link> la barra de herramientas.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2011, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jorge González</mal:name>
+      <mal:email>jorgegonz@svn.gnome.org</mal:email>
+      <mal:years>2008-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Francisco Javier F. Serrador</mal:name>
+      <mal:email>serrador@openshine.com</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Barra de herramientas</title>
+<p>La barra de herramientas proporciona acceso fácil a características como ampliar y rotar. Puede ocultarla si le distrae o si ocupa mucho espacio.</p>
+
+<section id="view">
+<title>Mostrar u ocultar la barra de herramientas</title>
+  <p>Pulse <guiseq><gui>Ver</gui><gui>Barra de herramientas</gui></guiseq> para cambiar si se muestra la barra de herramientas o no.</p>
+</section>
+
+<section id="modify">
+ <title>Añadir, quitar y ordenar las herramientas en la barra de herramientas.</title>
+ <p>De forma predeterminada la barra de herramientas sólo contiene un conjunto básico de herramientas. Puede añadir otras útiles modificando la barra de herramientas:</p>
+ <steps>
+ <item>
+  <p>Asegúrese de que la barra de herramientas no está oculta.</p>
+ </item>
+ <item>
+  <p>Pulse <guiseq><gui>Editar</gui><gui>Barra de herramientas</gui></guiseq>.</p>
+  <p>El <gui>editor de la barra de herramientas</gui> contiene los elementos que no están en la barra de herramientas (vea la imagen debajo). También existe un separador que puede usar para agrupar elementos conjuntamente.</p>
+ </item>
+ <item>
+  <p>Para <em>añadir</em> elementos nuevos a la barra de herramientas, arrástrelos desde el editor de la barra de herramientas a la barra de herramientas.</p>
+  <p>Arrastre los elementos a una nueva posición para <em>ordenarlos</em> en la barra de herramientas.</p>
+  <p>Puede <em>quitar</em> elementos de la barra de herramientas arrastrándolas desde la barra de herramientas al editor de la barra de herramientas.</p>
+ </item>
+ <item>
+  <p>Cuando haya terminado de editar la barra de herramientas pulse el botón <gui>Cerrar</gui> en la ventana del editor de la barra de herramientas.</p>
+ </item>
+</steps>
+
+<p>Para restablecer la barra de herramientas a su configuración predeterminada, pulse <gui>Restablecer predeterminados</gui> en la ventana del editor.</p>
+
+<media type="image" src="figures/eog-toolbar-editor.png" width="480"/>
+
+</section>
+
+</page>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="ko">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>카메라 설정, 히스토그램, 위치 정보, 시각 등의 정보를 봅니다.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>류창우</mal:name>
+      <mal:email>cwryu@debian.org</mal:email>
+      <mal:years>2007-2008, 2011, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>사진에서 자세한 정보 보기</title>
+
+<p>디지털 카메라에서 찍은 사진에는 여러가지 추가 정보가 들어 있습니다. 사진을 찍은 시각, 카메라에 사용한 노출 설정, 어떤 경우에는 사진을 찍은 위치도 들어 있습니다.</p>
+
+<p>여기서는 어떻게 이러한 정보를 볼 수 있는지 설명합니다.</p>
+
+<section id="date">
+<title>상태 표시줄에 시각 표시</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>창의 맨 아래에 있는 상태 표시줄에 사진을 찍은 시각을 표시할 수 있습니다.</p>
+  <p>그렇게 하려면, <guiseq><gui>편집</gui><gui>기본 설정</gui></guiseq>을 눌러 <gui>플러그인</gui> 탭으로 가십시오. 그리고 <gui>상태 표시줄에 시각</gui>의 확인란에 표시하십시오.</p>
+</section>
+
+<section id="exif">
+ <title>자세한 EXIF 데이터</title>
+  <p>디지털 사진에 저장된 자세한 정보를 <em>EXIF 데이터</em>라고 합니다. 이미지 보기에 플러그인을 설치하면 이 정보를 볼 수 있습니다.</p>
+
+  <steps>
+   <item>
+    <p>사진에 들어 있는 EXIF 데이터를 보려면, 먼저 <link xref="plugins">eog-plugins</link> 패키지를 설치해야 합니다.</p>
+   </item>
+   <item>
+    <p><sys>eog-plugins</sys>를 설치하면, <guiseq><gui>편집</gui><gui>기본 설정</gui></guiseq>을 눌러 <gui>플러그인</gui> 탭으로 가십시오. 그리고 <gui>EXIF 표시</gui>의 확인란에 표시하고 <gui>닫기</gui>를 누르십시오.</p>
+   </item>
+   <item>
+    <p><guiseq><gui>보기</gui><gui>가장자리 창</gui></guiseq>을 눌러사진을 찍을 때 사용한 카메라 설정을 봅니다. 사진의 색과 명암을 표시하는 히스토그램도 보고 싶으면, <gui>플러그인</gui> 탭에서 <gui>EXIF 보기</gui>를 선택하고 <gui>기본 설정</gui>을 누르십시오. <gui>히스토그램</gui> 목록에서 보고 싶은 히스토그램을 고르십시오.</p>
+   </item>
+   <item>
+    <p>상태 표시줄에서도 사진을 찍을 때 사용한 카메라 설정을 볼 수 있습니다. <gui>플러그인</gui> 탭의 <gui>EXIF 표시</gui>를 선택하고 <gui>기본 설정</gui>을 누르십시오. <gui>카메라 설정을 상태 표시줄에 표시</gui> 확인란에 표시하십시오.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>사진 위치 지도 표시하기</title>
+  <p>카메라에 따라서는 디지털 사진에 <em>위치 정보</em>(위치 태그)를 넣기도 합니다. 위치 태그는 사진을 찍은 위치의 GPS 좌표(위도 및 경도)를 말합니다.</p>
+
+  <steps>
+   <item>
+    <p>사진을 찍은 위치의 지도를 보려면, 먼저 <link xref="plugins">eog-plugins</link> 패키지를 설치해야 합니다.</p>
+   </item>
+   <item>
+    <p><sys>eog-plugins</sys>를 설치했으면, <guiseq><gui>편집</gui><gui>기본 설정</gui></guiseq>을 누르고 <gui>플러그인</gui> 탭으로 갑니다. 그리고 <gui>지도</gui> 확인란에 표시하고 <gui>닫기</gui>를 누릅니다.</p>
+   </item>
+   <item>
+    <p><guiseq><gui>보기</gui><gui>가장자리 창</gui></guiseq>을 눌러 지도를 표시하십시오.</p>
+   </item>
+  </steps>
+  <p>사진에 위치 정보가 들어 있는 경우, 사진을 찍은 위치를 표시하는 지도를 표시합니다. 위치 정보를 넣지 않는 카메라도 많습니다.</p>
+</section>
+
+
+</page>

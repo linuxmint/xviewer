@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Vista de imágenes</link>, <link xref="preferences#slideshow">diapositivas</link> y <link xref="preferences#plugins">complementos</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2011, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jorge González</mal:name>
+      <mal:email>jorgegonz@svn.gnome.org</mal:email>
+      <mal:years>2008-2011</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Francisco Javier F. Serrador</mal:name>
+      <mal:email>serrador@openshine.com</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Preferencias</title>
+<p>Este tema explica toda la configuración que puede cambiar en el Visor de imágenes. Pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> para comenzar a cambiar las preferencias.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Preferencias de visión de imágenes</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Mejoras de imagen</title>
+    <p>Seleccione <guilabel>Suavizar imágenes al reducir</guilabel> para activar el <em>suavizado de imágenes</em> cuando amplía y reduce. Hará que las imágenes de baja resolución (pixeladas) se muestren mejor suavizando sus bordes.</p>
+    <p>Si activa la <gui>Orientación automática</gui> las imágenes se rotarán automáticamente según sus <em>metadatos Exif</em>. Es información acerca de una imagen automáticamente insertada por la cámara digital y puede incluir detalles acerca de cómo se sostuvo la cámara cuando se tomó la fotografía. Por ejemplo, cuando se usa la orientación automática, las fotos de retratos se rotan automáticamente de forma correcta. La rotación no se guarda hasta que <link xref="flip-rotate#rotate">guarda la imagen rotada</link>.</p> 
+    <p>La orientación automática no funciona con todas las imágenes; sólo se rotarán las imágenes tomadas usando una cámara que guarda los metadatps de orientación Exif.</p>
+  </item>
+  <item>
+    <title>Partes transparentes</title>
+     <p>Seleccione una de las opciones siguientes para determinar cómo se muestran las partes transparentes de una imagen, si hay alguna:</p>
+    <list>
+      <item>
+       <p><gui>Como patrón de cuadros:</gui></p>
+       <p>Muestra cualquier parte transparente de la imagen en un patrón de cuadros.</p>
+      </item>
+      <item>
+       <p><gui>Como color personalizado:</gui></p>
+       <p>Muestra cualquier parte transparente de la imagen en un color sólido que especifique pulsando en el botón de selección de color.</p>
+      </item>
+      <item>
+       <p><gui>Como fondo:</gui></p>
+       <p>Muestra cualquier parte transparente de la imagen en el color de <gui>Fondo</gui>, si <gui>Como color personalizado</gui>, bajo <gui>Fondo</gui> está marcado. De otra forma, se usa el color de fondo predeterminado.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Preferencias del pase de diapositivas</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>Para personalizar los ajustes del pase de diapositivas:</p>
+<list>
+ <item>
+  <p>Bajo <gui>Ampliación de imagen</gui> puede seleccionar si quiere que las imágenes más pequeñas que la pantalla se expandan para ajustarse a la pantalla.</p>
+ </item>
+ <item>
+  <p>Bajo <gui>Secuencia</gui> puede seleccionar cuántos segundos se debería mostrar cada imagen (entre 1 y 100) antes de mostrar la siguiente imagen.</p>
+ </item>
+ <item>
+  <p>Marque <gui>Secuencia en bucle</gui> si quiere que sus diapositivas se repitan cíclicamente. Si está desmarcada, la muestra comenzará en la imagen seleccionada y terminará en la última imagen en la carpeta.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Preferencias de los complementos</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Aquí puede marcar o desmarcar cualquier función adicional que quiera activar o desactivar. La imagen a la izquierda muestra los complementos disponibles de forma predeterminada.</p>
+
+<p>También puede querer instalar el <link xref="plugins">paquete eog-plugins</link> que contiene complementos que proporcionan ciertas características adicionales. Después de hacerlo, podrá seleccionar qué <link xref="index#plugins">complementos adicionales</link> quiere activar, según pueda verlos a la derecha.</p>
+</section>
+
+</page>

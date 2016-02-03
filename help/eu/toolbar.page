@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="toolbar" xml:lang="eu">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="toolbar#view">Show, hide</link> or 
+<link xref="toolbar#modify">edit</link> the toolbar.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Tresna-barra</title>
+<p>The toolbar provides easy access to features like zooming and rotating. You 
+can hide it if you find it distracting or it it takes up too much room, 
+however.</p>
+
+<section id="view">
+<title>Show or hide the toolbar</title>
+  <p>To toggle whether the toolbar is displayed or not, click <guiseq><gui>View</gui><gui>Toolbar</gui></guiseq>.</p>
+</section>
+
+<section id="modify">
+ <title>Add, remove and rearrange the tools in the toolbar.</title>
+ <p>By default, the toolbar contains only a basic set of tools. You can add 
+useful extra ones by modifying the toolbar:</p>
+ <steps>
+ <item>
+  <p>Make sure that the toolbar is not hidden.</p>
+ </item>
+ <item>
+  <p>Click <guiseq><gui>Edit</gui><gui>Toolbar</gui></guiseq>.</p>
+  <p>The <gui>toolbar editor</gui> contains the items that are not in the 
+  toolbar (see the picture, below). There is also a separator that you can use to group toolbar items 
+  together.</p>
+ </item>
+ <item>
+  <p>To <em>add</em> new items to the toolbar, drag them from the toolbar editor to the toolbar.</p>
+  <p>To <em>rearrange</em> items on the toolbar, drag them to a new position.</p>
+  <p>You can <em>remove</em> items from the toolbar by dragging them from the toolbar 
+  to the toolbar editor.</p>
+ </item>
+ <item>
+  <p>When you have finish editing the toolbar, click <gui>Close</gui> in the toolbar editor window.</p>
+ </item>
+</steps>
+
+<p>To reset the toolbar to its default settings, click <gui>Reset
+to Default</gui> in the editor window.</p>
+
+<media type="image" src="figures/eog-toolbar-editor.png" width="480"/>
+
+</section>
+
+</page>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="flip-rotate" xml:lang="ru">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>По горизонтали/по вертикали, по часовой стелке/против часовой стрелки</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Василий Фаронов &lt;qvvx@yandex.ru&gt;, 2007Алексей Кабанов</mal:name>
+      <mal:email>ak099@mail.ru</mal:email>
+      <mal:years>2012</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Отражение или поворот изображений</title>
+
+<p>Если изображения повёрнуты неправильно или зеркально отражены, можно исправить это, вернув их в правильное положение с помощью поворота или отражения.</p>
+
+<section id="flip">
+<title>Отражение изображения</title>
+<steps>
+ <item><p>Нажмите <gui>Правка</gui>.</p></item>
+ <item><p>Выберите <gui>Отразить горизонтально</gui> или <gui>Отразить по вертикали</gui>.</p></item>
+ <item>
+  <p>Чтобы сохранить отражённое изображение, нажмите <guiseq><gui>Изображение</gui><gui>Сохранить</gui></guiseq>.</p>
+  <p>В противном случае не сохраняйте изображение, и при следующем открытии оно будет иметь прежнюю ориентацию.</p>
+ </item>
+</steps>
+</section>
+
+<section id="rotate">
+<title>Поворот изображения</title>
+<steps>
+ <item><p>Нажмите <gui>Правка</gui>.</p></item>
+ <item><p>Выберите <gui>Повернуть по часовой стрелке</gui> или <gui>Повернуть против часовой стрелки</gui>.</p></item>
+ <item>
+  <p>Чтобы сохранить повёрнутое изображение, нажмите <guiseq><gui>Изображение</gui><gui>Сохранить</gui></guiseq>.</p>
+  <p>В противном случае не сохраняйте изображение, и при следующем открытии оно будет иметь прежнюю ориентацию.</p>
+ </item>
+</steps>
+
+<p>Для выполнения этих действий можно также воспользоваться инструментами в <link xref="toolbar">панели инструментов</link> или комбинациями клавиш:</p>
+
+<table>
+  <tr>
+    <td><p>Поворот по часовой стрелке</p></td>
+    <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
+  </tr>
+  <tr>
+    <td><p>Поворот против часовой стрелки</p></td>
+    <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>R</key></keyseq></p></td>
+  </tr>
+</table>
+
+</section>
+</page>

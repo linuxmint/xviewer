@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-exif-digital" xml:lang="lv">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Apskati attēla informāciju, tādu kā kameras iestatījumi, histograma, ģeogrāfiskā atrašanās vieta un datums.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0 licence.</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Viesturs Ružāns</mal:name>
+      <mal:email>viesty@exs.lv</mal:email>
+      <mal:years>2011.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Apskatīt detalizētu informāciju par attēlu</title>
+
+<p>Attēli, uzņemti ar digitālajām kamerām, satur arī papildus informāciju, piemēram, uzņemšanas datumu, kameras iestatījumus un, dažos gadījumos pat vietu, kur tika uzņemts attēls.</p>
+
+<p>Šī sadaļa tev parādīs, kā piekļūt šai informācijai.</p>
+
+<section id="date">
+<title>Parādīt datumu statusa joslā</title>
+  <media type="image" src="figures/prefs-plugins-date.png" width="300" style="floatend"/>
+  <p>Tu vari parādīt attēla uzņemšanas datumu statusa joslā, loga apakšā.</p>
+  <p>Lai to izdarītu, nospied <guiseq><gui>Rediģēt</gui><gui>Iestatījumi</gui></guiseq> un dodies uz <gui>Spraudņi</gui> cilni. Tad atzīmē <gui>Datums statusa joslā</gui>.</p>
+</section>
+
+<section id="exif">
+ <title>Detalizēti Exif dati</title>
+  <p>Detalizētu informāciju, kas saglabāta fotografējot ar digitālajiem fotoaparātiem, sauc par <em>Exif datiem</em>. Tu vari tos apskatīt, instalējot spraudni attēlu skatītājam.</p>
+
+  <steps>
+   <item>
+    <p>Lai varētu redzēt fotogrāfijas Exif datus, tev sākumā ir jāinstalē <link xref="plugins">eog-plugins</link> paka.</p>
+   </item>
+   <item>
+    <p>Ja <sys>eog-plugins</sys> ir instalēts, spied <guiseq><gui>Rediģēt</gui><gui>Iestatījumi</gui></guiseq> un dodies uz <gui>Spraudņi</gui> cilni. Tad atzīmē <gui>Exif attēlošana</gui> un spied <gui>Aizvērt</gui>.</p>
+   </item>
+   <item>
+    <p>Spiediet <guiseq><gui>Skats</gui><gui>Sānu rūts</gui></guiseq>, lai skatītu kameras iestatījumus fotogrāfijas uzņemšanas laikā. Lai arī redzētu histogrammu, kas rāda attēla krāsu un gaismas/ēnu balansu, cilnē <gui>Spraudņi</gui> izvēlieties <gui>Exif attēlošana</gui> un spiediet <gui>Iestatījumi</gui>. Sadaļā <gui>Histogramma</gui> atzīmējiet histogrammas, kuras vēlaties apskatīt.</p>
+   </item>
+   <item>
+    <p>Statusa joslā varat arī skatīt iestatījumus kamerai, kuru izmantoja fotogrāfijas uzņemšanai. Izvēlieties <gui>Exif attēlošana</gui> cilnē <gui>Spraudņi</gui> un spiediet <gui>Iestatījumi</gui>. Atzīmējiet <gui>Rādīt kameras iestatījumus statusa joslā</gui>.</p>
+   </item>
+  </steps>
+</section>
+
+<section id="map">
+ <title>Attēlot fotogrāfijas atrašanās vietas karti</title>
+  <p>Dažas kameras digitālajiem fotoattēlam pievieno <em>ģeogrāfiskās atrašanās vietas</em> informāciju(geo birkas). Geo birkas parasti ir tikai foto uzņemšanas vietas GPS koordinātas (garums un platums).</p>
+
+  <steps>
+   <item>
+    <p>Lai varētu redzēt karti ar to, kur ir uzņemtas fotogrāfijas, tev ir nepieciešams instalēt <link xref="plugins">eog-plugins</link> paku.</p>
+   </item>
+   <item>
+    <p>Ja <sys>eog-plugins</sys> ir ieinstalēta, spied <guiseq><gui>Rediģēt</gui><gui>Iestatījumi</gui></guiseq> un dodies uz <gui>Spraudņi</gui> cilni. Tad atzīmē <gui>Karte</gui> un nospied <gui>Aizvērt</gui>.</p>
+   </item>
+   <item>
+    <p>Spied <guiseq><gui>Skats</gui><gui>Sānu rūts</gui></guiseq>, lai rādītu karti.</p>
+   </item>
+  </steps>
+  <p>Karte parādīs vietu, kurā ir uzņemts attēls tikai tad, ja fotogrāfijai ir pievienota ģeogrāfiskās atrašanās vietas informācija. Daudzas kameras šo informāciju nepievieno.</p>
+</section>
+
+
+</page>

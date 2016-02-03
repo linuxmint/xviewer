@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="format-change" xml:lang="ko">
+
+  <info>
+    <link type="guide" xref="index#edit"/>
+    <desc>사진을 한 이미지 형식에서 다른 형식으로 변환할 수 있습니다. 여러 개의 사진을 한 번에 할 수도 있습니다.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Fabiana Simões</name>
+      <email>fabianapsimoes@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>류창우</mal:name>
+      <mal:email>cwryu@debian.org</mal:email>
+      <mal:years>2007-2008, 2011, 2014.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>다른 파일 형식으로 변환하기</title>
+
+<p>사진은 JPEG이나 PNG같은 어떤 특정 파일 형식으로 저장됩니다. 이러한 파일을 다른 형식으로 변환할 수 있습니다.</p>
+
+<section id="single">
+ <title>사진 하나를 다른 파일 형식으로 변환하기</title>
+ <list type="numbered">
+  <item>
+   <p><guiseq><gui>이미지</gui><gui>다른 이름으로 저장</gui></guiseq>을 누르십시오. <gui>이미지 저장</gui> 창이 나타납니다.</p>
+  </item>
+  <item>
+   <p>이름 항목에서 변환하려는 파일 형식의 <em>파일 확장자</em>를 바꾸십시오. 파일 확장자는 파일 이름에서 점 뒤의 부분을 말합니다.</p>
+   <p>예를 들어 JPEG(<file>.jpg</file>) 파일을 비트맵(<file>.bmp</file>) 파일로 변환하려면:</p>
+   <p><em>원본 파일:</em> <file>image.jpg</file></p>
+   <p><em>새 파일:</em> <file>image.bmp</file></p>
+  </item>
+  <item>
+   <p><gui>저장</gui>을 누르면, 새 파일을 새 형식으로 저장합니다. 예전 파일은 예전 형식으로 그대로 남아 있고, 삭제되지 않습니다.</p>
+  </item>
+</list>
+
+<p>이미지 보기에서 파일 확장자에 따라 어떤 파일 형식으로 저장할지 자동으로 알아냅니다. 입력한 파일 확장자에 해당하는 형식을 알아낼 수 없거나, 아니면 어떤 파일 확장자를 입력할지 모르겠으면, <gui>이미지 저장</gui> 창에서 <gui>지원하는 이미지 파일</gui>을 누르십시오. 여기서 드롭다운 박스에서 파일 형식을 선택할 수 있습니다.</p>
+
+</section>
+
+<section id="multiple">
+ <title>여러 사진을 다른 파일 형식으로 변환하기</title>
+ <p>여러 개의 사진을 한 형식에서 다른 형식으로 한 번에 변환할 수 있습니다. 변환하려는 사진이 여러 개 있을 때 사용합니다.</p>
+ <list style="numbered">
+  <item>
+   <p><key>Ctrl</key> 키를 누르고 <link xref="view#image-gallery">이미지 모음</link>에서 변환하려는 이미지를 누르십시오. 아니면 <keyseq><key>Ctrl</key><key>A</key></keyseq> 키를 눌러 모든 이미지를 선택하십시오.</p>
+  </item>
+  <item>
+   <p><guiseq><gui>이미지</gui><gui>다른 이름으로 저장</gui></guiseq>을 누르십시오. 아래와 같은 창이 나타납니다.</p>
+   <media type="image" src="figures/multiple-convert.png" width="300"/>
+  </item>
+  <item>
+   <p>변환한 사진은 기본값으로 현재 폴더에 저장됩니다. 다른 위치에 저장하려면, <gui>대상 폴더</gui>를 바꾸십시오.</p>
+  </item>
+  <item>
+   <p>사진을 변환하려는 대상 파일 포맷을 <gui>파일 이름 형식</gui> 상자의 오른쪽 드롭다운 메뉴에서 선택하십시오.</p>
+  </item>
+  <item>
+   <p><gui>저장</gui>을 누르십시오.</p>
+  </item>
+ </list>
+</section>
+
+</page>

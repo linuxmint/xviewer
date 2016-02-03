@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="rename-multiple" xml:lang="de"> 
+ 
+  <info> 
+    <link type="guide" xref="index#edit"/>
+    <link type="seealso" xref="format-change#multiple"/> 
+    <desc>Automatisches Umbenennen und Nummerieren Ihrer Bilder.</desc> 
+ 
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/> 
+    <credit type="author"> 
+      <name>Tiffany Antopolski</name> 
+      <email>tiffany@antopolski.com</email> 
+    </credit> 
+    <license> 
+      <p>Creative Commons Share Alike 3.0</p> 
+    </license> 
+ 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info> 
+ 
+<title>Gleichzeitiges Umbenennen vieler Bilder</title>
+
+<p>Falls Sie größere Mengen an Bildern umbenennen wollen, so dass sie einem gewissen Standard folgen:</p>
+
+<steps>
+ <item>
+  <p>Öffnen Sie die <link xref="view#image-gallery">Bildersammlung</link> durch Drücken von <key>F9</key>.</p>
+ </item>
+ <item>
+  <p>Wählen Sie alle Bilder in der Bildersammlung aus, die Sie umbenennen wollen. Halten Sie hierzu die <key>Strg</key>-Taste gedrückt und klicken Sie die gewünschten Bilder an.</p>
+ <p>Sie können auch <keyseq><key>Strg</key><key>A</key></keyseq> drücken, um alle Bilder auszuwählen.</p>
+ </item>
+ <item>
+  <p>Klicken Sie auf <guiseq><gui>Bild</gui><gui>Speichern unter</gui></guiseq>. Ein Fenster mit verschiedenen Optionen zum Dateinamen wird geöffnet. Nachstehendes Bild zeigt das Fenster.</p>
+ </item>
+ <item>
+  <p>Die umbenannten Bilder werden standardmäßig im aktuellen Ordner gespeichert. Um sie an einem anderen Ort zu speichern, wählen Sie den Ort im Auswahlmenü <gui>Zielordner</gui> aus.</p>
+ </item>
+ <item>
+  <p>Verwenden Sie das Feld <gui>Dateinamen-Format</gui> zum Auswählen eines Benennungsformats für die Bilder. Die <gui>Dateinamen-Vorschau</gui> zeigt an, wie die Dateinamen aussehen werden. Im nachfolgenden Abschnitt <link xref="#filename-format"/> finden Sie Hinweise zur Auswahl der Namen zum Umbenennen von Dateien.</p>
+ </item>
+ <item>
+  <p>Stellen Sie sicher, dass im Auswahlfeld <gui>Dateinamen-Format</gui> der Wert <gui>wie bisher</gui> angezeigt wird, es sei denn, Sie wollen <link xref="format-change#multiple">das Format umwandeln</link>.</p>
+ </item>
+ <item>
+  <p>Klicken Sie auf <gui>Speichern unter</gui>, und die Bilder werden umbenannt.</p>
+ </item>
+</steps>
+
+<media type="image" src="figures/multiple-rename-count.png" width="300"/>
+
+<section id="filename-format">
+ <title>Ein Dateinamensformat wählen</title>
+ <p>Die Dateinamen der umbenannten Dateien werden durch die Eingaben im Feld <gui>Dateinamen-Format</gui> aus.</p>
+ <list>
+  <item>
+   <p>Sie können den ursprünglichen Dateinamen beibehalten, indem Sie <input>%f</input> im Feld belassen.</p>
+   <p>Wenn Sie beispielsweise <input>berlin_%f</input> im Feld <gui>Dateinamen-Format</gui> eingeben, werden die Bilder <file>blume.jpg</file>, <file>haus.jpg</file> und <file>katze.jpg</file> in <file>berlin_blume.jpg</file>, <file>berlin_haus.jpg</file> und <file>berlin_katze.jpg</file> umbenannt.</p>
+  </item>
+  <item>
+   <p>Durch Hinzufügen von <input>%n</input> werden die Bilder aufeinander folgend nummeriert, beginnend mit der Zahl, die Sie unter <gui>Optionen</gui> festlegen können.</p>
+  <p>Wenn Sie beispielsweise <input>sonnenschein_%n</input> im Feld <gui>Dateinamen-Format</gui> eingeben, werden die Bilder <file>haus.jpg</file>, <file>blume.jpg</file> und <file>katze.jpg</file> in <file>sonnenschein_2.jpg</file>, <file>sonnenschein_1.jpg</file> und <file>sonnenschein_1.jpg</file> umbenannt. Die fortlaufende Nummerierung erfolgt anhand der alphabetischen Reihenfolge der ursprünglichen Dateinamen.</p>
+  </item>
+ </list>
+</section>
+
+</page>

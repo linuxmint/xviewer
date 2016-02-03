@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="preferences" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc><link xref="preferences#view">Bildansicht</link>, <link xref="preferences#slideshow">Diaschau</link> und <link xref="preferences#plugins">Plugins</link>.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jan Arne Petersen</mal:name>
+      <mal:email>jpetersen@jpetersen.org</mal:email>
+      <mal:years>2006</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2008, 2010, 2011, 2012</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felix Riemann</mal:name>
+      <mal:email>friemann@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>Christian.Kirbach@googlemail.com</mal:email>
+      <mal:years>2011, 2012, 2014, 2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Einstellungen</title>
+<p>Dieses Thema erläutert alle Einstellungen, die Sie im Bildbetrachter anpassen können. Wählen Sie <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq>, um mit den Änderungen der Einstellungen zu beginnen.</p>
+
+<links type="section"/>
+
+<section id="view">
+<title>Einstellungen zum Betrachten von Bildern</title>
+<media type="image" src="figures/image-view-prefs.png" style="floatend" width="300"/>
+<terms>
+  <item>
+    <title>Bildverbesserungen</title>
+    <p>Wählen Sie die Option <gui>Bild bei Vergrößerung glätten</gui>, um das Bild zu glätten, wenn Sie den Vergrößerungsfaktor ändern. Dadurch wird die Anzeigequalität von Bildern geringer Auflösung verbessert, indem die ausgefransten Ränder geglättet werden.</p>
+    <p>Wenn Sie <gui>Automatische Drehung des Bildes</gui> aktivieren, werden Bilder anhand ihrer <em>Exif-Metadaten</em> automatisch gedreht. Diese Information wird von einer digitalen Kamera automatisch in die Bilddaten eingefügt und kann Details zur Haltung der Kamera während der Aufnahme enthalten. Wenn die automatische Drehung aktiviert ist, werden beispielsweise Fotos im Hochformat automatisch entsprechend gedreht. Diese Drehung wird nicht gespeichert, bis Sie <link xref="flip-rotate#rotate">das gedrehte Bild tatsächlich speichern</link>.</p> 
+    <p>Die automatische Ausrichtung funktioniert nicht bei allen Bildern, sondern nur bei Bildern, die mit einer Kamera aufgenommen wurden, die Exif-Metadaten zur Ausrichtung speichert.</p>
+  </item>
+  <item>
+    <title>Transparente Bildbereiche</title>
+     <p>Wählen Sie eine der folgenden Optionen, um festzulegen, wie transparente Bereiche eines Bildes anzeigt werden sollen, falls vorhanden:</p>
+    <list>
+      <item>
+       <p><gui>Als Karo-Muster:</gui></p>
+       <p>Zeigt die transparenten Teile des Bildes in einem Karo-Muster an.</p>
+      </item>
+      <item>
+       <p><gui>Als benutzerdefinierte Farbe:</gui></p>
+       <p>Stellt transparente Teile des Bildes in einer von Ihnen festgelegten Farbe dar. Klicken Sie auf den Farbauswahl-Knopf, um eine Farbe auszuwählen.</p>
+      </item>
+      <item>
+       <p><gui>Als Hintergrund:</gui></p>
+       <p>Zeigt eventuell vorhandene transparente Bereiche des Bildes in der <gui>Hintergrundfarbe</gui> an, sofern <gui>Als benutzerdefinierte Farbe</gui> in <gui>Hintergrund</gui> aktiviert ist.</p>
+      </item>
+    </list>
+  </item>
+ </terms>
+</section>
+
+
+<section id="slideshow">
+<title>Einstellungen für die Diaschau</title>
+<media type="image" src="figures/slideshow-prefs.png" style="floatend" width="300"/> 
+<p>So passen Sie die Einstellungen der Diaschau an:</p>
+<list>
+ <item>
+  <p>Unter <gui>Bildvergrößerung</gui> können Sie wählen, ob das Bild vergrößert werden soll, um an die Größe des Fensters angepasst zu werden.</p>
+ </item>
+ <item>
+  <p>Unter <gui>Abfolge</gui> können Sie wählen, wie viele Sekunden lang jedes Bild angezeigt werden soll (zwischen 1 und 100), bevor das nächste Bild angezeigt wird.</p>
+ </item>
+ <item>
+  <p>Aktivieren Sie <gui>Endlosschleife</gui>, wenn die Diaschau endlos wiederholt werden soll. Falls dies nicht aktiviert ist, beginnt die Diaschau mit dem von Ihnen ausgewählten Bild und endet mit dem letzten Bild im Ordner.</p>
+ </item>
+</list>
+</section>
+
+
+<section id="plugins">
+<title>Plugin-Einstellungen</title>
+
+<media type="image" src="figures/plugins-all.png" width="300" style="floatend"/>
+<media type="image" src="figures/prefs-plugins.png" width="300" style="floatstart"/>
+
+<p>Hier können Sie einige zusätzliche Funktionsmerkmale aktivieren oder deaktivieren. Das Bild an der linken Seite zeigt die standardmäßig zur Verfügung stehenden Plugins.</p>
+
+<p>Es ist ratsam, das Paket <link xref="plugins">eog-plugins</link> zu installieren,welches Plugins enthält, die eine Reihe von zusätzlichen Funktionsmerkmalen bereitstellen. Nachdem Sie dies getan haben, können Sie <link xref="index#plugins">zusätzliche Plugins</link> zur Aktivierung auswählen, wie rechts zu sehen ist.</p>
+</section>
+
+</page>

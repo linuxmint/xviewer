@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
+  <bookinfo>
+    <title>Eye of GNOME Reference Manual</title>
+    <releaseinfo>
+      for Eye of GNOME &version;
+    </releaseinfo>
+  </bookinfo>
+
+  <reference>
+    <title>API Reference</title>
+    <chapter>
+      <title>User Interface</title>
+      <xi:include href="xml/eog-properties-dialog.xml"/>
+      <xi:include href="xml/eog-list-store.xml"/>
+      <xi:include href="xml/eog-file-chooser.xml"/>
+      <xi:include href="xml/eog-thumb-nav.xml"/>
+      <xi:include href="xml/eog-thumb-view.xml"/>
+      <xi:include href="xml/eog-scroll-view.xml"/>
+      <xi:include href="xml/eog-window.xml"/>
+      <xi:include href="xml/eog-window-activatable.xml"/>
+      <xi:include href="xml/eog-statusbar.xml"/>
+      <xi:include href="xml/eog-sidebar.xml"/>
+      <xi:include href="xml/eog-thumbnail.xml"/>
+      <xi:include href="xml/eog-save-as-dialog-helper.xml"/>
+      <xi:include href="xml/eog-error-message-area.xml"/>
+    </chapter>
+
+    <chapter>
+      <title>Image data and manipulation</title>
+      <xi:include href="xml/eog-image.xml"/>
+      <xi:include href="xml/eog-image-save-info.xml"/>
+      <xi:include href="xml/eog-transform.xml"/>
+      <xi:include href="xml/eog-clipboard-handler.xml"/>
+    </chapter>
+
+    <chapter>
+      <title>Printing</title>
+      <xi:include href="xml/eog-print.xml"/>
+    </chapter>
+
+    <chapter>
+      <title>Application and configuration</title>
+      <xi:include href="xml/eog-application.xml"/>
+      <xi:include href="xml/eog-session.xml"/>
+      <xi:include href="xml/eog-config-keys.xml"/>
+    </chapter>
+
+    <!--<chapter>
+      <title>Plugins</title>
+      <xi:include href="xml/eog-plugin-engine.xml"/>
+    </chapter>-->
+
+    <chapter>
+      <title>Utilities</title>
+      <xi:include href="xml/eog-debug.xml"/>
+      <xi:include href="xml/eog-uri-converter.xml"/>
+      <xi:include href="xml/eog-util.xml"/>
+      
+      <xi:include href="xml/eog-exif-util.xml"/>
+      
+      <xi:include href="xml/eog-pixbuf-util.xml"/>
+      <xi:include href="xml/zoom.xml"/>
+    </chapter>
+
+    <chapter>
+      <title>Asynchronous jobs</title>
+      <xi:include href="xml/eog-jobs.xml"/>
+      <xi:include href="xml/eog-job-scheduler.xml"/>
+    </chapter>
+  </reference>
+
+  <part>
+    <title>Appendix</title>
+    <index id="api-index">
+      <title>API Index</title>
+      <xi:include href="xml/api-index-full.xml"><xi:fallback /></xi:include>
+    </index>
+    <xi:include href="xml/annotation-glossary.xml"><xi:fallback /></xi:include>
+  </part>
+</book>

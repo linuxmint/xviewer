@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="gl">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Instalar engadidos para acceder a características adicionais.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Compartir Igual 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Fran Dieguez</mal:name>
+      <mal:email>frandieguez@gnome.org</mal:email>
+      <mal:years>2011-2012.</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Engadidos</title>
+
+<p>Pode instalar o paquete <sys>eog-plugins</sys> para obter un conxunto de engadidos para o Visor de imaxes. Os engadidos engaden funcionalidades adicionais, como as listadas embaixo.</p>
+
+<note style="info package">
+  <p>Pode instalar o paquete <sys>eog-plugins</sys> usando o <em>xestor de paquetes</em> da súa distribución GNU/Linux.</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">instalar eog-plugins</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>As seguintes características incluense en <sys>eog-plugins</sys>:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">Data na barra de estado</link>: mostra a data da imaxe na barra de estado da xanela.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Mostrar Exif</link>: mostra a configuración da cámara e o histograma de fotos dixitais.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">Fondon a pantalla completa</link>: permítelle cambiar o fondo no modo a pantalla completa.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">Pantalla completa con dobre clic</link>: activa o modo a pantalla completa co dobre clic.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Mapa</link>: mostra a xeolocalización da imaxe nun mapa.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">Cargador de PicasaWeb</link>: suba as súas imaxes a PicasaWeb</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Consola de Python</link>: unha consola de «scripting» de Python para o Visor de imaxes.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">Enviar por correo-e</link>: envía unha imaxe a un contacto como adxunto nun correo-e novo.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Diapositivas aleatorias</link>: mostra as diapositivas de forma aleatoria.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Ampliar para axustar á anchura da imaxe</link>: axusta a ampliación para que a anchura da imaxe se axuste á xanela.</p>
+ </item>
+</list>
+
+<note>
+ <p>Pode xestionar os engadidos na <link xref="preferences#plugins">lapela de engadidos</link> na xanela de Preferencias.</p>
+</note>
+
+</page>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-python-console" xml:lang="fi">
+
+  <info>
+   <link type="guide" xref="index#advanced"/>
+   <desc>Python-konsolia voidaan käyttää lisäominaisuuksien lisäämiseen ja pienohjelmien ajamiseen kuvakatselimessa.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sami Jaktholm</mal:name>
+      <mal:email>sjakthol@outlook.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Jukka Heikkilä</mal:name>
+      <mal:email>jutsco@gmail.com</mal:email>
+      <mal:years>2010</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Python-konsoli</title>
+
+<p>Kuvakatselimessa on Python-ohjelmointikieleen perustuva lisäosajärjestelmä. Kuvakatselimeen voi lisätä <em>Python-konsolin</em>, joka mahdollistaa muun muassa pienohjelmien kirjoittamisen ja kuvien muokkaamisen suoraan kuvakatselimesta Python-komentotulkin avulla.</p>
+
+<steps>
+ <item>
+  <p><link xref="plugins">eog-plugins</link> -paketti täytyy olla asennettuna ennen Python-konsolin aktivoimista.</p>
+ </item>
+ <item>
+  <p>Kun <sys>eog-plugins</sys> on asennettu, valitse <guiseq><gui>Muokkaa</gui> <gui>Asetukset</gui></guiseq> ja siirry <gui>Lisäosat</gui>-välilehdelle.</p>
+ </item>
+ <item>
+  <p>Valitse <gui>Python-konsoli</gui> valintaruutu ja sulje ikkuna.</p>
+ </item>
+ <item>
+  <p>Avaa konsoli valitsemalla <guiseq><gui>Työkalut</gui><gui>Python-konsoli</gui></guiseq>.</p>
+ </item>
+</steps>
+
+</page>

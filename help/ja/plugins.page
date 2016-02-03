@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/if/1.0/" type="topic" style="task" id="plugins" xml:lang="ja">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>拡張機能へアクセスするプラグインをインストールします。</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Fabiana Simões</name>
+     <email>fabianapsimoes@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  </info>
+
+<title>プラグイン</title>
+
+<p>画像ビューアーの拡張プラグインを得るために eog-plugins パッケージをインストールできます。プラグインは以下に列挙するような付加機能を追加します。</p>
+
+<note style="info package">
+  <p>お使いの Linux ディストリビューションの<em>パッケージマネージャー</em>を利用して <sys>eog-plugins</sys> パッケージをインストールできます。</p>
+
+  <if:choose>
+    <if:when test="action:install">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">eog-plugins をインストール</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p><sys>eog-plugins</sys> には、次の機能が含まれています。</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital#date">日付の表示</link>: ウィンドウのステータスバーに画像の日付を表示します。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-exif-digital">Exif データの表示</link>: カメラの設定とデジタル写真のヒストグラムを表示できます。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-background">フルスクリーンの背景色</link>: フルスクリーンモードでの背景色を変更可能にします。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-fullscreen-double-click">ダブルクリックでフルスクリーンにする</link>: ダブルクリックでフルスクリーンモードに変更できます。</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">マップ</link>: 画像に含まれた情報から地理的位置をマップに表示します。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-picasa">PicasaWeb アップローダー</link>: PicasaWeb へ写真をアップロードします。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Python 端末</link>: 画像ビューアー専用の Python スクリプト用端末です。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-send-by-mail">メールで送信</link>: 新規メールに画像を添付して友達に送信します。</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">スライドショーシャッフル</link>: スライドショーモードで画像の並びをシャッフルします。</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">画像の幅にズームを合わせる</link>: 画像の最大幅がウィンドウに合うようにズームを調整します。</p>
+ </item>
+</list>
+
+<note>
+ <p>設定ウィンドウの<link xref="preferences#plugins">プラグインタブ</link>を利用してプラグインを管理できます。</p>
+</note>
+
+</page>
