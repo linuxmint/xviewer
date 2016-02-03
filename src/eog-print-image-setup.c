@@ -718,7 +718,7 @@ wrap_in_frame (const gchar *label,
 	gtk_box_pack_start (GTK_BOX (frame), label_widget, FALSE, FALSE, 0);
 	gtk_box_pack_start (GTK_BOX (frame), child, FALSE, FALSE, 0);
 
-	gtk_widget_set_margin_start (child, 12);
+	gtk_widget_set_margin_left (child, 12);
 
 	gtk_widget_show (frame);
 
