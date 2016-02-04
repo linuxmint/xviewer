@@ -1,8 +1,8 @@
 AC_PREREQ(2.59)
 
-m4_define(eog_major_version,  3)
-m4_define(eog_minor_version, 14)
-m4_define(eog_micro_version,  4)
+m4_define(eog_major_version,  1)
+m4_define(eog_minor_version, 0)
+m4_define(eog_micro_version,  0)
 m4_define(eog_version, eog_major_version.eog_minor_version.eog_micro_version)
 
 AC_INIT([eog], eog_version, [http://bugzilla.gnome.org/enter_bug.cgi?product=eog], [eog])
