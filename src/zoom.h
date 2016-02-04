@@ -1,4 +1,4 @@
-/* Eye of Gnome image viewer - utility functions for computing zoom factors
+/* Xviewer image viewer - utility functions for computing zoom factors
  *
  * Copyright (C) 2000 The Free Software Foundation
  *

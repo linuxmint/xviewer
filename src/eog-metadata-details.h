@@ -1,4 +1,4 @@
-/* Eye Of Gnome - EOG Metadata Details
+/* Xviewer - XVIEWER Metadata Details
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -19,8 +19,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_METADATA_DETAILS__
-#define __EOG_METADATA_DETAILS__
+#ifndef __XVIEWER_METADATA_DETAILS__
+#define __XVIEWER_METADATA_DETAILS__
 
 
 
@@ -35,44 +35,44 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogMetadataDetails EogMetadataDetails;
-typedef struct _EogMetadataDetailsClass EogMetadataDetailsClass;
-typedef struct _EogMetadataDetailsPrivate EogMetadataDetailsPrivate;
+typedef struct _XviewerMetadataDetails XviewerMetadataDetails;
+typedef struct _XviewerMetadataDetailsClass XviewerMetadataDetailsClass;
+typedef struct _XviewerMetadataDetailsPrivate XviewerMetadataDetailsPrivate;
 
-#define EOG_TYPE_METADATA_DETAILS            (eog_metadata_details_get_type ())
-#define EOG_METADATA_DETAILS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_METADATA_DETAILS, EogMetadataDetails))
-#define EOG_METADATA_DETAILS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass), EOG_TYPE_METADATA_DETAILS, EogMetadataDetailsClass))
-#define EOG_IS_METADATA_DETAILS(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_METADATA_DETAILS))
-#define EOG_IS_METADATA_DETAILS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EOG_TYPE_METADATA_DETAILS))
-#define EOG_METADATA_DETAILS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EOG_TYPE_METADATA_DETAILS, EogMetadataDetailsClass))
+#define XVIEWER_TYPE_METADATA_DETAILS            (xviewer_metadata_details_get_type ())
+#define XVIEWER_METADATA_DETAILS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_METADATA_DETAILS, XviewerMetadataDetails))
+#define XVIEWER_METADATA_DETAILS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass), XVIEWER_TYPE_METADATA_DETAILS, XviewerMetadataDetailsClass))
+#define XVIEWER_IS_METADATA_DETAILS(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_METADATA_DETAILS))
+#define XVIEWER_IS_METADATA_DETAILS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XVIEWER_TYPE_METADATA_DETAILS))
+#define XVIEWER_METADATA_DETAILS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XVIEWER_TYPE_METADATA_DETAILS, XviewerMetadataDetailsClass))
 
-struct _EogMetadataDetails {
+struct _XviewerMetadataDetails {
         GtkTreeView parent;
 
-        EogMetadataDetailsPrivate *priv;
+        XviewerMetadataDetailsPrivate *priv;
 };
 
-struct _EogMetadataDetailsClass {
+struct _XviewerMetadataDetailsClass {
 	GtkTreeViewClass parent_class;
 };
 
 G_GNUC_INTERNAL
-GType               eog_metadata_details_get_type    (void) G_GNUC_CONST;
+GType               xviewer_metadata_details_get_type    (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-GtkWidget          *eog_metadata_details_new         (void);
+GtkWidget          *xviewer_metadata_details_new         (void);
 
 #if HAVE_EXIF
 G_GNUC_INTERNAL
-void                eog_metadata_details_update      (EogMetadataDetails *details,
+void                xviewer_metadata_details_update      (XviewerMetadataDetails *details,
 						      ExifData       *data);
 #endif
 #if HAVE_EXEMPI
 G_GNUC_INTERNAL
-void                eog_metadata_details_xmp_update  (EogMetadataDetails *view,
+void                xviewer_metadata_details_xmp_update  (XviewerMetadataDetails *view,
 						      XmpPtr          xmp_data);
 #endif
 
 G_END_DECLS
 
-#endif /* __EOG_METADATA_DETAILS__ */
+#endif /* __XVIEWER_METADATA_DETAILS__ */

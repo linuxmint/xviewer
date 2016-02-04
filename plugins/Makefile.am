@@ -1,12 +1,12 @@
 AUTOMAKE_OPTIONS = subdir-objects
 
-pluginsdir = $(libdir)/eog/plugins
+pluginsdir = $(libdir)/xviewer/plugins
 
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/src 				\
-	$(EOG_CFLAGS) 					\
+	$(XVIEWER_CFLAGS) 					\
 	$(WARN_CFLAGS)					\
-	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"
+	-DXVIEWER_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"
 
 AM_LDFLAGS = -avoid-version -module
 
@@ -20,33 +20,33 @@ plugins_in_files = \
 
 # Fullscreen plugin
 fullscreen_libfullscreen_la_SOURCES = \
-	fullscreen/eog-fullscreen-plugin.h  \
-	fullscreen/eog-fullscreen-plugin.c
+	fullscreen/xviewer-fullscreen-plugin.h  \
+	fullscreen/xviewer-fullscreen-plugin.c
 
 fullscreen_libfullscreen_la_LIBADD = \
-	$(top_builddir)/src/libeog.la	\
-	$(EOG_LIBS)
+	$(top_builddir)/src/libxviewer.la	\
+	$(XVIEWER_LIBS)
 
 # Reload plugin
 reload_libreload_la_SOURCES = \
-	reload/eog-reload-plugin.h  \
-	reload/eog-reload-plugin.c
+	reload/xviewer-reload-plugin.h  \
+	reload/xviewer-reload-plugin.c
 
 reload_libreload_la_LIBADD = \
-	$(top_builddir)/src/libeog.la	\
-	$(EOG_LIBS)
+	$(top_builddir)/src/libxviewer.la	\
+	$(XVIEWER_LIBS)
 
 # Statusbar Date Plugin
 if HAVE_EXIF
 plugins_LTLIBRARIES += statusbar-date/libstatusbar-date.la
 
 statusbar_date_libstatusbar_date_la_SOURCES = \
-	statusbar-date/eog-statusbar-date-plugin.h  \
-	statusbar-date/eog-statusbar-date-plugin.c
+	statusbar-date/xviewer-statusbar-date-plugin.h  \
+	statusbar-date/xviewer-statusbar-date-plugin.c
 
 statusbar_date_libstatusbar_date_la_LIBADD = \
-	$(top_builddir)/src/libeog.la	\
-	$(EOG_LIBS)
+	$(top_builddir)/src/libxviewer.la	\
+	$(XVIEWER_LIBS)
 
 plugins_in_files += statusbar-date/statusbar-date.plugin.desktop.in
 endif

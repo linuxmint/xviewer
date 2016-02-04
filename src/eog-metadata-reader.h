@@ -1,4 +1,4 @@
-/* Eye Of GNOME -- Metadata Reader Interface
+/* Xviewer -- Metadata Reader Interface
  *
  * Copyright (C) 2008 The Free Software Foundation
  *
@@ -19,12 +19,12 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef _EOG_METADATA_READER_H_
-#define _EOG_METADATA_READER_H_
+#ifndef _XVIEWER_METADATA_READER_H_
+#define _XVIEWER_METADATA_READER_H_
 
 #include <glib-object.h>
 #if HAVE_EXIF
-#include "eog-exif-util.h"
+#include "xviewer-exif-util.h"
 #endif
 #if HAVE_EXEMPI
 #include <exempi/xmp.h>
@@ -35,78 +35,78 @@
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_METADATA_READER	      (eog_metadata_reader_get_type ())
-#define EOG_METADATA_READER(o)		      (G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_METADATA_READER, EogMetadataReader))
-#define EOG_IS_METADATA_READER(o)	      (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_METADATA_READER))
-#define EOG_METADATA_READER_GET_INTERFACE(o)  (G_TYPE_INSTANCE_GET_INTERFACE ((o), EOG_TYPE_METADATA_READER, EogMetadataReaderInterface))
+#define XVIEWER_TYPE_METADATA_READER	      (xviewer_metadata_reader_get_type ())
+#define XVIEWER_METADATA_READER(o)		      (G_TYPE_CHECK_INSTANCE_CAST ((o), XVIEWER_TYPE_METADATA_READER, XviewerMetadataReader))
+#define XVIEWER_IS_METADATA_READER(o)	      (G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_METADATA_READER))
+#define XVIEWER_METADATA_READER_GET_INTERFACE(o)  (G_TYPE_INSTANCE_GET_INTERFACE ((o), XVIEWER_TYPE_METADATA_READER, XviewerMetadataReaderInterface))
 
-typedef struct _EogMetadataReader EogMetadataReader;
-typedef struct _EogMetadataReaderInterface EogMetadataReaderInterface;
+typedef struct _XviewerMetadataReader XviewerMetadataReader;
+typedef struct _XviewerMetadataReaderInterface XviewerMetadataReaderInterface;
 
-struct _EogMetadataReaderInterface {
+struct _XviewerMetadataReaderInterface {
 	GTypeInterface parent;
 
-	void		(*consume)		(EogMetadataReader *self,
+	void		(*consume)		(XviewerMetadataReader *self,
 						 const guchar *buf,
 						 guint len);
 
-	gboolean	(*finished)		(EogMetadataReader *self);
+	gboolean	(*finished)		(XviewerMetadataReader *self);
 
-	void		(*get_raw_exif)		(EogMetadataReader *self,
+	void		(*get_raw_exif)		(XviewerMetadataReader *self,
 						 guchar **data,
 						 guint *len);
 
-	gpointer	(*get_exif_data)	(EogMetadataReader *self);
+	gpointer	(*get_exif_data)	(XviewerMetadataReader *self);
 
-	gpointer	(*get_icc_profile)	(EogMetadataReader *self);
+	gpointer	(*get_icc_profile)	(XviewerMetadataReader *self);
 
-	gpointer	(*get_xmp_ptr)		(EogMetadataReader *self);
+	gpointer	(*get_xmp_ptr)		(XviewerMetadataReader *self);
 };
 
 typedef enum {
-	EOG_METADATA_JPEG,
-	EOG_METADATA_PNG
-} EogMetadataFileType;
+	XVIEWER_METADATA_JPEG,
+	XVIEWER_METADATA_PNG
+} XviewerMetadataFileType;
 
 G_GNUC_INTERNAL
-GType                eog_metadata_reader_get_type	(void) G_GNUC_CONST;
+GType                xviewer_metadata_reader_get_type	(void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-EogMetadataReader*   eog_metadata_reader_new 		(EogMetadataFileType type);
+XviewerMetadataReader*   xviewer_metadata_reader_new 		(XviewerMetadataFileType type);
 
 G_GNUC_INTERNAL
-void                 eog_metadata_reader_consume	(EogMetadataReader *emr,
+void                 xviewer_metadata_reader_consume	(XviewerMetadataReader *emr,
 							 const guchar *buf,
 							 guint len);
 
 G_GNUC_INTERNAL
-gboolean             eog_metadata_reader_finished	(EogMetadataReader *emr);
+gboolean             xviewer_metadata_reader_finished	(XviewerMetadataReader *emr);
 
 G_GNUC_INTERNAL
-void                 eog_metadata_reader_get_exif_chunk (EogMetadataReader *emr,
+void                 xviewer_metadata_reader_get_exif_chunk (XviewerMetadataReader *emr,
 							 guchar **data,
 							 guint *len);
 
 #ifdef HAVE_EXIF
 G_GNUC_INTERNAL
-ExifData*         eog_metadata_reader_get_exif_data	(EogMetadataReader *emr);
+ExifData*         xviewer_metadata_reader_get_exif_data	(XviewerMetadataReader *emr);
 #endif
 
 #ifdef HAVE_EXEMPI
 G_GNUC_INTERNAL
-XmpPtr	     	     eog_metadata_reader_get_xmp_data	(EogMetadataReader *emr);
+XmpPtr	     	     xviewer_metadata_reader_get_xmp_data	(XviewerMetadataReader *emr);
 #endif
 
 #if 0
-gpointer             eog_metadata_reader_get_iptc_chunk	(EogMetadataReader *emr);
-IptcData*            eog_metadata_reader_get_iptc_data	(EogMetadataReader *emr);
+gpointer             xviewer_metadata_reader_get_iptc_chunk	(XviewerMetadataReader *emr);
+IptcData*            xviewer_metadata_reader_get_iptc_data	(XviewerMetadataReader *emr);
 #endif
 
 #ifdef HAVE_LCMS
 G_GNUC_INTERNAL
-cmsHPROFILE          eog_metadata_reader_get_icc_profile (EogMetadataReader *emr);
+cmsHPROFILE          xviewer_metadata_reader_get_icc_profile (XviewerMetadataReader *emr);
 #endif
 
 G_END_DECLS
 
-#endif /* _EOG_METADATA_READER_H_ */
+#endif /* _XVIEWER_METADATA_READER_H_ */

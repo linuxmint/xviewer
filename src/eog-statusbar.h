@@ -1,4 +1,4 @@
-/* Eye of Gnome - Statusbar
+/* Xviewer - Statusbar
  *
  * Copyright (C) 2000-2006 The Free Software Foundation
  *
@@ -20,8 +20,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_STATUSBAR_H__
-#define __EOG_STATUSBAR_H__
+#ifndef __XVIEWER_STATUSBAR_H__
+#define __XVIEWER_STATUSBAR_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -29,40 +29,40 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogStatusbar        EogStatusbar;
-typedef struct _EogStatusbarPrivate EogStatusbarPrivate;
-typedef struct _EogStatusbarClass   EogStatusbarClass;
+typedef struct _XviewerStatusbar        XviewerStatusbar;
+typedef struct _XviewerStatusbarPrivate XviewerStatusbarPrivate;
+typedef struct _XviewerStatusbarClass   XviewerStatusbarClass;
 
-#define EOG_TYPE_STATUSBAR            (eog_statusbar_get_type ())
-#define EOG_STATUSBAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_STATUSBAR, EogStatusbar))
-#define EOG_STATUSBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),   EOG_TYPE_STATUSBAR, EogStatusbarClass))
-#define EOG_IS_STATUSBAR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_STATUSBAR))
-#define EOG_IS_STATUSBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_STATUSBAR))
-#define EOG_STATUSBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_STATUSBAR, EogStatusbarClass))
+#define XVIEWER_TYPE_STATUSBAR            (xviewer_statusbar_get_type ())
+#define XVIEWER_STATUSBAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_STATUSBAR, XviewerStatusbar))
+#define XVIEWER_STATUSBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),   XVIEWER_TYPE_STATUSBAR, XviewerStatusbarClass))
+#define XVIEWER_IS_STATUSBAR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_STATUSBAR))
+#define XVIEWER_IS_STATUSBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_STATUSBAR))
+#define XVIEWER_STATUSBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_STATUSBAR, XviewerStatusbarClass))
 
-struct _EogStatusbar
+struct _XviewerStatusbar
 {
         GtkStatusbar parent;
 
-        EogStatusbarPrivate *priv;
+        XviewerStatusbarPrivate *priv;
 };
 
-struct _EogStatusbarClass
+struct _XviewerStatusbarClass
 {
         GtkStatusbarClass parent_class;
 };
 
-GType		 eog_statusbar_get_type			(void) G_GNUC_CONST;
+GType		 xviewer_statusbar_get_type			(void) G_GNUC_CONST;
 
-GtkWidget	*eog_statusbar_new			(void);
+GtkWidget	*xviewer_statusbar_new			(void);
 
-void		 eog_statusbar_set_image_number		(EogStatusbar   *statusbar,
+void		 xviewer_statusbar_set_image_number		(XviewerStatusbar   *statusbar,
 							 gint           num,
 							 gint           tot);
 
-void		 eog_statusbar_set_progress		(EogStatusbar   *statusbar,
+void		 xviewer_statusbar_set_progress		(XviewerStatusbar   *statusbar,
 							 gdouble        progress);
 
 G_END_DECLS
 
-#endif /* __EOG_STATUSBAR_H__ */
+#endif /* __XVIEWER_STATUSBAR_H__ */

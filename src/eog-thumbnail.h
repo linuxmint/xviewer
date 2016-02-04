@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Thumbnailing functions
+/* Xviewer - Thumbnailing functions
  *
  * Copyright (C) 2000-2007 The Free Software Foundation
  *
@@ -22,27 +22,27 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef _EOG_THUMBNAIL_H_
-#define _EOG_THUMBNAIL_H_
+#ifndef _XVIEWER_THUMBNAIL_H_
+#define _XVIEWER_THUMBNAIL_H_
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include "eog-image.h"
+#include "xviewer-image.h"
 
 G_BEGIN_DECLS
 
-void          eog_thumbnail_init        (void);
+void          xviewer_thumbnail_init        (void);
 
-GdkPixbuf*    eog_thumbnail_fit_to_size (GdkPixbuf *thumbnail,
+GdkPixbuf*    xviewer_thumbnail_fit_to_size (GdkPixbuf *thumbnail,
 					 gint        dimension);
 
-GdkPixbuf*    eog_thumbnail_add_frame   (GdkPixbuf *thumbnail);
+GdkPixbuf*    xviewer_thumbnail_add_frame   (GdkPixbuf *thumbnail);
 
-GdkPixbuf*    eog_thumbnail_load        (EogImage *image,
+GdkPixbuf*    xviewer_thumbnail_load        (XviewerImage *image,
 					 GError **error);
 
-#define EOG_THUMBNAIL_ORIGINAL_WIDTH  "eog-thumbnail-orig-width"
-#define EOG_THUMBNAIL_ORIGINAL_HEIGHT "eog-thumbnail-orig-height"
+#define XVIEWER_THUMBNAIL_ORIGINAL_WIDTH  "xviewer-thumbnail-orig-width"
+#define XVIEWER_THUMBNAIL_ORIGINAL_HEIGHT "xviewer-thumbnail-orig-height"
 
 G_END_DECLS
 
-#endif /* _EOG_THUMBNAIL_H_ */
+#endif /* _XVIEWER_THUMBNAIL_H_ */

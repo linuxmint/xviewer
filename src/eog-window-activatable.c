@@ -1,6 +1,6 @@
 /*
- * eog-window-activatable.c
- * This file is part of eog
+ * xviewer-window-activatable.c
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -28,30 +28,30 @@
 #include "config.h"
 #endif
 
-#include "eog-window-activatable.h"
+#include "xviewer-window-activatable.h"
 
 #include <glib-object.h>
-#include "eog-window.h"
+#include "xviewer-window.h"
 
-G_DEFINE_INTERFACE(EogWindowActivatable, eog_window_activatable, G_TYPE_OBJECT)
+G_DEFINE_INTERFACE(XviewerWindowActivatable, xviewer_window_activatable, G_TYPE_OBJECT)
 
 void
-eog_window_activatable_default_init (EogWindowActivatableInterface *iface)
+xviewer_window_activatable_default_init (XviewerWindowActivatableInterface *iface)
 {
 	static gboolean initialized = FALSE;
 
 	if (!initialized) {
 		/**
-		 * EogWindowActivatable:window:
+		 * XviewerWindowActivatable:window:
 		 *
-		 * This is the #EogWindow this #EogWindowActivatable instance
+		 * This is the #XviewerWindow this #XviewerWindowActivatable instance
 		 * should be attached to.
 		 */
 		g_object_interface_install_property (iface,
 				g_param_spec_object ("window", "Window",
-						     "The EogWindow this "
+						     "The XviewerWindow this "
 						     "instance it attached to",
-						     EOG_TYPE_WINDOW,
+						     XVIEWER_TYPE_WINDOW,
 						     G_PARAM_READWRITE |
 						     G_PARAM_CONSTRUCT_ONLY |
 						     G_PARAM_STATIC_STRINGS));
@@ -60,26 +60,26 @@ eog_window_activatable_default_init (EogWindowActivatableInterface *iface)
 }
 
 void
-eog_window_activatable_activate (EogWindowActivatable *activatable)
+xviewer_window_activatable_activate (XviewerWindowActivatable *activatable)
 {
-	EogWindowActivatableInterface *iface;
+	XviewerWindowActivatableInterface *iface;
 
-	g_return_if_fail (EOG_IS_WINDOW_ACTIVATABLE (activatable));
+	g_return_if_fail (XVIEWER_IS_WINDOW_ACTIVATABLE (activatable));
 
-	iface = EOG_WINDOW_ACTIVATABLE_GET_IFACE (activatable);
+	iface = XVIEWER_WINDOW_ACTIVATABLE_GET_IFACE (activatable);
 
 	if (G_LIKELY (iface->activate != NULL))
 		iface->activate (activatable);
 }
 
 void
-eog_window_activatable_deactivate (EogWindowActivatable *activatable)
+xviewer_window_activatable_deactivate (XviewerWindowActivatable *activatable)
 {
-	EogWindowActivatableInterface *iface;
+	XviewerWindowActivatableInterface *iface;
 
-	g_return_if_fail (EOG_IS_WINDOW_ACTIVATABLE (activatable));
+	g_return_if_fail (XVIEWER_IS_WINDOW_ACTIVATABLE (activatable));
 
-	iface = EOG_WINDOW_ACTIVATABLE_GET_IFACE (activatable);
+	iface = XVIEWER_WINDOW_ACTIVATABLE_GET_IFACE (activatable);
 
 	if (G_LIKELY (iface->deactivate != NULL))
 		iface->deactivate (activatable);

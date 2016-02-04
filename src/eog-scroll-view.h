@@ -1,107 +1,107 @@
-#ifndef _EOG_SCROLL_VIEW_H_
-#define _EOG_SCROLL_VIEW_H_
+#ifndef _XVIEWER_SCROLL_VIEW_H_
+#define _XVIEWER_SCROLL_VIEW_H_
 
 #include <gtk/gtk.h>
-#include "eog-image.h"
+#include "xviewer-image.h"
 
 G_BEGIN_DECLS
 
-typedef struct _EogScrollView EogScrollView;
-typedef struct _EogScrollViewClass EogScrollViewClass;
-typedef struct _EogScrollViewPrivate EogScrollViewPrivate;
+typedef struct _XviewerScrollView XviewerScrollView;
+typedef struct _XviewerScrollViewClass XviewerScrollViewClass;
+typedef struct _XviewerScrollViewPrivate XviewerScrollViewPrivate;
 
-#define EOG_TYPE_SCROLL_VIEW              (eog_scroll_view_get_type ())
-#define EOG_SCROLL_VIEW(obj)              (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_SCROLL_VIEW, EogScrollView))
-#define EOG_SCROLL_VIEW_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), EOG_TYPE_SCROLL_VIEW, EogScrollViewClass))
-#define EOG_IS_SCROLL_VIEW(obj)           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_SCROLL_VIEW))
-#define EOG_IS_SCROLL_VIEW_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), EOG_TYPE_SCROLL_VIEW))
+#define XVIEWER_TYPE_SCROLL_VIEW              (xviewer_scroll_view_get_type ())
+#define XVIEWER_SCROLL_VIEW(obj)              (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_SCROLL_VIEW, XviewerScrollView))
+#define XVIEWER_SCROLL_VIEW_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), XVIEWER_TYPE_SCROLL_VIEW, XviewerScrollViewClass))
+#define XVIEWER_IS_SCROLL_VIEW(obj)           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_SCROLL_VIEW))
+#define XVIEWER_IS_SCROLL_VIEW_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), XVIEWER_TYPE_SCROLL_VIEW))
 
 
-struct _EogScrollView {
+struct _XviewerScrollView {
 	GtkGrid  base_instance;
 
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 };
 
-struct _EogScrollViewClass {
+struct _XviewerScrollViewClass {
 	GtkGridClass parent_class;
 
-	void (* zoom_changed) (EogScrollView *view, double zoom);
-	void (* rotation_changed) (EogScrollView *view, double degrees);
-	void (* next_image) (EogScrollView *view);
-	void (* previous_image) (EogScrollView *view);
+	void (* zoom_changed) (XviewerScrollView *view, double zoom);
+	void (* rotation_changed) (XviewerScrollView *view, double degrees);
+	void (* next_image) (XviewerScrollView *view);
+	void (* previous_image) (XviewerScrollView *view);
 };
 
 /**
- * EogTransparencyStyle:
- * @EOG_TRANSP_BACKGROUND: Use the background color of the current UI theme
- * @EOG_TRANSP_CHECKED: Show transparent parts as a checkerboard pattern
- * @EOG_TRANSP_COLOR: Show transparent parts in a user defined color
- *                    (see #EogScrollView:transparency-color )
+ * XviewerTransparencyStyle:
+ * @XVIEWER_TRANSP_BACKGROUND: Use the background color of the current UI theme
+ * @XVIEWER_TRANSP_CHECKED: Show transparent parts as a checkerboard pattern
+ * @XVIEWER_TRANSP_COLOR: Show transparent parts in a user defined color
+ *                    (see #XviewerScrollView:transparency-color )
  *
  * Used to define how transparent image parts are drawn.
  */
 typedef enum {
-	EOG_TRANSP_BACKGROUND,
-	EOG_TRANSP_CHECKED,
-	EOG_TRANSP_COLOR
-} EogTransparencyStyle;
+	XVIEWER_TRANSP_BACKGROUND,
+	XVIEWER_TRANSP_CHECKED,
+	XVIEWER_TRANSP_COLOR
+} XviewerTransparencyStyle;
 
 /**
- * EogZoomMode:
- * @EOG_ZOOM_MODE_FREE: Use the currently set zoom factor to display the image
- *                      (see eog_scroll_view_set_zoom()).
- * @EOG_ZOOM_MODE_SHRINK_TO_FIT: If an image is to large for the window,
+ * XviewerZoomMode:
+ * @XVIEWER_ZOOM_MODE_FREE: Use the currently set zoom factor to display the image
+ *                      (see xviewer_scroll_view_set_zoom()).
+ * @XVIEWER_ZOOM_MODE_SHRINK_TO_FIT: If an image is to large for the window,
  *                               zoom out until the image is fully visible.
  *                               This will never zoom in on smaller images.
  *
- * Used to determine the zooming behaviour of an #EogScrollView.
+ * Used to determine the zooming behaviour of an #XviewerScrollView.
  */
 typedef enum {
-	EOG_ZOOM_MODE_FREE,
-	EOG_ZOOM_MODE_SHRINK_TO_FIT
-} EogZoomMode;
+	XVIEWER_ZOOM_MODE_FREE,
+	XVIEWER_ZOOM_MODE_SHRINK_TO_FIT
+} XviewerZoomMode;
 
-GType    eog_scroll_view_get_type         (void) G_GNUC_CONST;
-GtkWidget* eog_scroll_view_new            (void);
+GType    xviewer_scroll_view_get_type         (void) G_GNUC_CONST;
+GtkWidget* xviewer_scroll_view_new            (void);
 
 /* loading stuff */
-void     eog_scroll_view_set_image        (EogScrollView *view, EogImage *image);
-EogImage* eog_scroll_view_get_image       (EogScrollView *view);
+void     xviewer_scroll_view_set_image        (XviewerScrollView *view, XviewerImage *image);
+XviewerImage* xviewer_scroll_view_get_image       (XviewerScrollView *view);
 
 
 /* general properties */
-void     eog_scroll_view_set_scroll_wheel_zoom (EogScrollView *view, gboolean scroll_wheel_zoom);
-void     eog_scroll_view_set_zoom_upscale (EogScrollView *view, gboolean upscale);
-void     eog_scroll_view_set_zoom_multiplier (EogScrollView *view, gdouble multiplier);
-void     eog_scroll_view_set_zoom_mode (EogScrollView *view, EogZoomMode mode);
-EogZoomMode	eog_scroll_view_get_zoom_mode (EogScrollView *view);
-void     eog_scroll_view_set_antialiasing_in (EogScrollView *view, gboolean state);
-void     eog_scroll_view_set_antialiasing_out (EogScrollView *view, gboolean state);
-void     eog_scroll_view_set_transparency_color (EogScrollView *view, GdkRGBA *color);
-void     eog_scroll_view_set_transparency (EogScrollView *view, EogTransparencyStyle style);
-gboolean eog_scroll_view_scrollbars_visible (EogScrollView *view);
-void	 eog_scroll_view_set_popup (EogScrollView *view, GtkMenu *menu);
-void	 eog_scroll_view_set_background_color (EogScrollView *view,
+void     xviewer_scroll_view_set_scroll_wheel_zoom (XviewerScrollView *view, gboolean scroll_wheel_zoom);
+void     xviewer_scroll_view_set_zoom_upscale (XviewerScrollView *view, gboolean upscale);
+void     xviewer_scroll_view_set_zoom_multiplier (XviewerScrollView *view, gdouble multiplier);
+void     xviewer_scroll_view_set_zoom_mode (XviewerScrollView *view, XviewerZoomMode mode);
+XviewerZoomMode	xviewer_scroll_view_get_zoom_mode (XviewerScrollView *view);
+void     xviewer_scroll_view_set_antialiasing_in (XviewerScrollView *view, gboolean state);
+void     xviewer_scroll_view_set_antialiasing_out (XviewerScrollView *view, gboolean state);
+void     xviewer_scroll_view_set_transparency_color (XviewerScrollView *view, GdkRGBA *color);
+void     xviewer_scroll_view_set_transparency (XviewerScrollView *view, XviewerTransparencyStyle style);
+gboolean xviewer_scroll_view_scrollbars_visible (XviewerScrollView *view);
+void	 xviewer_scroll_view_set_popup (XviewerScrollView *view, GtkMenu *menu);
+void	 xviewer_scroll_view_set_background_color (XviewerScrollView *view,
 					       const GdkRGBA *color);
-void	 eog_scroll_view_override_bg_color (EogScrollView *view,
+void	 xviewer_scroll_view_override_bg_color (XviewerScrollView *view,
 					    const GdkRGBA *color);
-void     eog_scroll_view_set_use_bg_color (EogScrollView *view, gboolean use);
+void     xviewer_scroll_view_set_use_bg_color (XviewerScrollView *view, gboolean use);
 /* zoom api */
-void     eog_scroll_view_zoom_in          (EogScrollView *view, gboolean smooth);
-void     eog_scroll_view_zoom_out         (EogScrollView *view, gboolean smooth);
-void     eog_scroll_view_set_zoom         (EogScrollView *view, double zoom);
-double   eog_scroll_view_get_zoom         (EogScrollView *view);
-gboolean eog_scroll_view_get_zoom_is_min  (EogScrollView *view);
-gboolean eog_scroll_view_get_zoom_is_max  (EogScrollView *view);
-void     eog_scroll_view_show_cursor      (EogScrollView *view);
-void     eog_scroll_view_hide_cursor      (EogScrollView *view);
+void     xviewer_scroll_view_zoom_in          (XviewerScrollView *view, gboolean smooth);
+void     xviewer_scroll_view_zoom_out         (XviewerScrollView *view, gboolean smooth);
+void     xviewer_scroll_view_set_zoom         (XviewerScrollView *view, double zoom);
+double   xviewer_scroll_view_get_zoom         (XviewerScrollView *view);
+gboolean xviewer_scroll_view_get_zoom_is_min  (XviewerScrollView *view);
+gboolean xviewer_scroll_view_get_zoom_is_max  (XviewerScrollView *view);
+void     xviewer_scroll_view_show_cursor      (XviewerScrollView *view);
+void     xviewer_scroll_view_hide_cursor      (XviewerScrollView *view);
 
-gboolean eog_scroll_view_event_is_over_image	(EogScrollView *view,
+gboolean xviewer_scroll_view_event_is_over_image	(XviewerScrollView *view,
 						 const GdkEvent *ev);
 
 G_END_DECLS
 
-#endif /* _EOG_SCROLL_VIEW_H_ */
+#endif /* _XVIEWER_SCROLL_VIEW_H_ */
 
 

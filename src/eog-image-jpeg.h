@@ -1,11 +1,11 @@
-#ifndef _EOG_IMAGE_JPEG_H_
-#define _EOG_IMAGE_JPEG_H_
+#ifndef _XVIEWER_IMAGE_JPEG_H_
+#define _XVIEWER_IMAGE_JPEG_H_
 
 #if HAVE_JPEG
 
 #include <glib.h>
-#include "eog-image.h"
-#include "eog-image-save-info.h"
+#include "xviewer-image.h"
+#include "xviewer-image-save-info.h"
 
 /* Saves a source jpeg file in an arbitrary format (as specified by
  * target). The target pointer may be NULL, in which case the output
@@ -14,9 +14,9 @@
  * target is a jpeg image too).
  */
 G_GNUC_INTERNAL
-gboolean eog_image_jpeg_save_file (EogImage *image, const char *file,
-				   EogImageSaveInfo *source, EogImageSaveInfo *target,
+gboolean xviewer_image_jpeg_save_file (XviewerImage *image, const char *file,
+				   XviewerImageSaveInfo *source, XviewerImageSaveInfo *target,
 				   GError **error);
 #endif
 
-#endif /* _EOG_IMAGE_JPEG_H_ */
+#endif /* _XVIEWER_IMAGE_JPEG_H_ */

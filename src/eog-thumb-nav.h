@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Thumbnail Navigator
+/* Xviewer - Thumbnail Navigator
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -19,10 +19,10 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_THUMB_NAV_H__
-#define __EOG_THUMB_NAV_H__
+#ifndef __XVIEWER_THUMB_NAV_H__
+#define __XVIEWER_THUMB_NAV_H__
 
-#include "eog-thumb-view.h"
+#include "xviewer-thumb-view.h"
 
 #include <gtk/gtk.h>
 #include <glib.h>
@@ -30,50 +30,50 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogThumbNav EogThumbNav;
-typedef struct _EogThumbNavClass EogThumbNavClass;
-typedef struct _EogThumbNavPrivate EogThumbNavPrivate;
+typedef struct _XviewerThumbNav XviewerThumbNav;
+typedef struct _XviewerThumbNavClass XviewerThumbNavClass;
+typedef struct _XviewerThumbNavPrivate XviewerThumbNavPrivate;
 
-#define EOG_TYPE_THUMB_NAV            (eog_thumb_nav_get_type ())
-#define EOG_THUMB_NAV(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), EOG_TYPE_THUMB_NAV, EogThumbNav))
-#define EOG_THUMB_NAV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  EOG_TYPE_THUMB_NAV, EogThumbNavClass))
-#define EOG_IS_THUMB_NAV(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOG_TYPE_THUMB_NAV))
-#define EOG_IS_THUMB_NAV_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  EOG_TYPE_THUMB_NAV))
-#define EOG_THUMB_NAV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOG_TYPE_THUMB_NAV, EogThumbNavClass))
+#define XVIEWER_TYPE_THUMB_NAV            (xviewer_thumb_nav_get_type ())
+#define XVIEWER_THUMB_NAV(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), XVIEWER_TYPE_THUMB_NAV, XviewerThumbNav))
+#define XVIEWER_THUMB_NAV_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  XVIEWER_TYPE_THUMB_NAV, XviewerThumbNavClass))
+#define XVIEWER_IS_THUMB_NAV(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), XVIEWER_TYPE_THUMB_NAV))
+#define XVIEWER_IS_THUMB_NAV_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  XVIEWER_TYPE_THUMB_NAV))
+#define XVIEWER_THUMB_NAV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  XVIEWER_TYPE_THUMB_NAV, XviewerThumbNavClass))
 
 typedef enum {
-	EOG_THUMB_NAV_MODE_ONE_ROW,
-	EOG_THUMB_NAV_MODE_ONE_COLUMN,
-	EOG_THUMB_NAV_MODE_MULTIPLE_ROWS,
-	EOG_THUMB_NAV_MODE_MULTIPLE_COLUMNS
-} EogThumbNavMode;
+	XVIEWER_THUMB_NAV_MODE_ONE_ROW,
+	XVIEWER_THUMB_NAV_MODE_ONE_COLUMN,
+	XVIEWER_THUMB_NAV_MODE_MULTIPLE_ROWS,
+	XVIEWER_THUMB_NAV_MODE_MULTIPLE_COLUMNS
+} XviewerThumbNavMode;
 
-struct _EogThumbNav {
+struct _XviewerThumbNav {
 	GtkBox base_instance;
 
-	EogThumbNavPrivate *priv;
+	XviewerThumbNavPrivate *priv;
 };
 
-struct _EogThumbNavClass {
+struct _XviewerThumbNavClass {
 	GtkBoxClass parent_class;
 };
 
-GType	         eog_thumb_nav_get_type          (void) G_GNUC_CONST;
+GType	         xviewer_thumb_nav_get_type          (void) G_GNUC_CONST;
 
-GtkWidget       *eog_thumb_nav_new               (GtkWidget         *thumbview,
-						  EogThumbNavMode    mode,
+GtkWidget       *xviewer_thumb_nav_new               (GtkWidget         *thumbview,
+						  XviewerThumbNavMode    mode,
 	             			          gboolean           show_buttons);
 
-gboolean         eog_thumb_nav_get_show_buttons  (EogThumbNav       *nav);
+gboolean         xviewer_thumb_nav_get_show_buttons  (XviewerThumbNav       *nav);
 
-void             eog_thumb_nav_set_show_buttons  (EogThumbNav       *nav,
+void             xviewer_thumb_nav_set_show_buttons  (XviewerThumbNav       *nav,
                                                   gboolean           show_buttons);
 
-EogThumbNavMode  eog_thumb_nav_get_mode          (EogThumbNav       *nav);
+XviewerThumbNavMode  xviewer_thumb_nav_get_mode          (XviewerThumbNav       *nav);
 
-void             eog_thumb_nav_set_mode          (EogThumbNav       *nav,
-                                                  EogThumbNavMode    mode);
+void             xviewer_thumb_nav_set_mode          (XviewerThumbNav       *nav,
+                                                  XviewerThumbNavMode    mode);
 
 G_END_DECLS
 
-#endif /* __EOG_THUMB_NAV_H__ */
+#endif /* __XVIEWER_THUMB_NAV_H__ */

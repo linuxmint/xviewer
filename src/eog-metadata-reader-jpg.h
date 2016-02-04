@@ -1,10 +1,10 @@
-/* Eye Of GNOME -- JPEG Metadata Reader
+/* Xviewer -- JPEG Metadata Reader
  *
  * Copyright (C) 2008 The Free Software Foundation
  *
  * Author: Felix Riemann <friemann@svn.gnome.org>
  *
- * Based on the original EogMetadataReader code.
+ * Based on the original XviewerMetadataReader code.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,35 +21,35 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef _EOG_METADATA_READER_JPG_H_
-#define _EOG_METADATA_READER_JPG_H_
+#ifndef _XVIEWER_METADATA_READER_JPG_H_
+#define _XVIEWER_METADATA_READER_JPG_H_
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_METADATA_READER_JPG		(eog_metadata_reader_jpg_get_type ())
-#define EOG_METADATA_READER_JPG(o)         	(G_TYPE_CHECK_INSTANCE_CAST ((o),EOG_TYPE_METADATA_READER_JPG, EogMetadataReaderJpg))
-#define EOG_METADATA_READER_JPG_CLASS(k)   	(G_TYPE_CHECK_CLASS_CAST((k), EOG_TYPE_METADATA_READER_JPG, EogMetadataReaderJpgClass))
-#define EOG_IS_METADATA_READER_JPG(o)      	(G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_METADATA_READER_JPG))
-#define EOG_IS_METADATA_READER_JPG_CLASS(k)   	(G_TYPE_CHECK_CLASS_TYPE ((k), EOG_TYPE_METADATA_READER_JPG))
-#define EOG_METADATA_READER_JPG_GET_CLASS(o)  	(G_TYPE_INSTANCE_GET_CLASS ((o), EOG_TYPE_METADATA_READER_JPG, EogMetadataReaderJpgClass))
+#define XVIEWER_TYPE_METADATA_READER_JPG		(xviewer_metadata_reader_jpg_get_type ())
+#define XVIEWER_METADATA_READER_JPG(o)         	(G_TYPE_CHECK_INSTANCE_CAST ((o),XVIEWER_TYPE_METADATA_READER_JPG, XviewerMetadataReaderJpg))
+#define XVIEWER_METADATA_READER_JPG_CLASS(k)   	(G_TYPE_CHECK_CLASS_CAST((k), XVIEWER_TYPE_METADATA_READER_JPG, XviewerMetadataReaderJpgClass))
+#define XVIEWER_IS_METADATA_READER_JPG(o)      	(G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_METADATA_READER_JPG))
+#define XVIEWER_IS_METADATA_READER_JPG_CLASS(k)   	(G_TYPE_CHECK_CLASS_TYPE ((k), XVIEWER_TYPE_METADATA_READER_JPG))
+#define XVIEWER_METADATA_READER_JPG_GET_CLASS(o)  	(G_TYPE_INSTANCE_GET_CLASS ((o), XVIEWER_TYPE_METADATA_READER_JPG, XviewerMetadataReaderJpgClass))
 
-typedef struct _EogMetadataReaderJpg EogMetadataReaderJpg;
-typedef struct _EogMetadataReaderJpgClass EogMetadataReaderJpgClass;
-typedef struct _EogMetadataReaderJpgPrivate EogMetadataReaderJpgPrivate;
+typedef struct _XviewerMetadataReaderJpg XviewerMetadataReaderJpg;
+typedef struct _XviewerMetadataReaderJpgClass XviewerMetadataReaderJpgClass;
+typedef struct _XviewerMetadataReaderJpgPrivate XviewerMetadataReaderJpgPrivate;
 
-struct _EogMetadataReaderJpg {
+struct _XviewerMetadataReaderJpg {
 	GObject parent;
 
-	EogMetadataReaderJpgPrivate *priv;
+	XviewerMetadataReaderJpgPrivate *priv;
 };
 
-struct _EogMetadataReaderJpgClass {
+struct _XviewerMetadataReaderJpgClass {
 	GObjectClass parent_klass;
 };
 
 G_GNUC_INTERNAL
-GType		      eog_metadata_reader_jpg_get_type	(void) G_GNUC_CONST;
+GType		      xviewer_metadata_reader_jpg_get_type	(void) G_GNUC_CONST;
 
 G_END_DECLS
 
-#endif /* _EOG_METADATA_READER_JPG_H_ */
+#endif /* _XVIEWER_METADATA_READER_JPG_H_ */

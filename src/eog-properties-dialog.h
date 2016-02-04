@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Image Properties Dialog
+/* Xviewer - Image Properties Dialog
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -19,11 +19,11 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_PROPERTIES_DIALOG_H__
-#define __EOG_PROPERTIES_DIALOG_H__
+#ifndef __XVIEWER_PROPERTIES_DIALOG_H__
+#define __XVIEWER_PROPERTIES_DIALOG_H__
 
-#include "eog-image.h"
-#include "eog-thumb-view.h"
+#include "xviewer-image.h"
+#include "xviewer-thumb-view.h"
 
 #include <glib.h>
 #include <glib-object.h>
@@ -31,49 +31,49 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogPropertiesDialog EogPropertiesDialog;
-typedef struct _EogPropertiesDialogClass EogPropertiesDialogClass;
-typedef struct _EogPropertiesDialogPrivate EogPropertiesDialogPrivate;
+typedef struct _XviewerPropertiesDialog XviewerPropertiesDialog;
+typedef struct _XviewerPropertiesDialogClass XviewerPropertiesDialogClass;
+typedef struct _XviewerPropertiesDialogPrivate XviewerPropertiesDialogPrivate;
 
-#define EOG_TYPE_PROPERTIES_DIALOG            (eog_properties_dialog_get_type ())
-#define EOG_PROPERTIES_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), EOG_TYPE_PROPERTIES_DIALOG, EogPropertiesDialog))
-#define EOG_PROPERTIES_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  EOG_TYPE_PROPERTIES_DIALOG, EogPropertiesDialogClass))
-#define EOG_IS_PROPERTIES_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOG_TYPE_PROPERTIES_DIALOG))
-#define EOG_IS_PROPERTIES_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  EOG_TYPE_PROPERTIES_DIALOG))
-#define EOG_PROPERTIES_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOG_TYPE_PROPERTIES_DIALOG, EogPropertiesDialogClass))
+#define XVIEWER_TYPE_PROPERTIES_DIALOG            (xviewer_properties_dialog_get_type ())
+#define XVIEWER_PROPERTIES_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), XVIEWER_TYPE_PROPERTIES_DIALOG, XviewerPropertiesDialog))
+#define XVIEWER_PROPERTIES_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  XVIEWER_TYPE_PROPERTIES_DIALOG, XviewerPropertiesDialogClass))
+#define XVIEWER_IS_PROPERTIES_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), XVIEWER_TYPE_PROPERTIES_DIALOG))
+#define XVIEWER_IS_PROPERTIES_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  XVIEWER_TYPE_PROPERTIES_DIALOG))
+#define XVIEWER_PROPERTIES_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  XVIEWER_TYPE_PROPERTIES_DIALOG, XviewerPropertiesDialogClass))
 
 typedef enum {
-	EOG_PROPERTIES_DIALOG_PAGE_GENERAL = 0,
-	EOG_PROPERTIES_DIALOG_PAGE_EXIF,
-	EOG_PROPERTIES_DIALOG_PAGE_DETAILS,
-	EOG_PROPERTIES_DIALOG_N_PAGES
-} EogPropertiesDialogPage;
+	XVIEWER_PROPERTIES_DIALOG_PAGE_GENERAL = 0,
+	XVIEWER_PROPERTIES_DIALOG_PAGE_EXIF,
+	XVIEWER_PROPERTIES_DIALOG_PAGE_DETAILS,
+	XVIEWER_PROPERTIES_DIALOG_N_PAGES
+} XviewerPropertiesDialogPage;
 
-struct _EogPropertiesDialog {
+struct _XviewerPropertiesDialog {
 	GtkDialog dialog;
 
-	EogPropertiesDialogPrivate *priv;
+	XviewerPropertiesDialogPrivate *priv;
 };
 
-struct _EogPropertiesDialogClass {
+struct _XviewerPropertiesDialogClass {
 	GtkDialogClass parent_class;
 };
 
-GType	    eog_properties_dialog_get_type	(void) G_GNUC_CONST;
+GType	    xviewer_properties_dialog_get_type	(void) G_GNUC_CONST;
 
-GtkWidget  *eog_properties_dialog_new		(GtkWindow               *parent,
-						 EogThumbView            *thumbview,
+GtkWidget  *xviewer_properties_dialog_new		(GtkWindow               *parent,
+						 XviewerThumbView            *thumbview,
 						 GtkAction               *next_image_action,
 						 GtkAction               *previous_image_action);
 
-void	    eog_properties_dialog_update  	(EogPropertiesDialog     *prop,
-						 EogImage                *image);
+void	    xviewer_properties_dialog_update  	(XviewerPropertiesDialog     *prop,
+						 XviewerImage                *image);
 
-void	    eog_properties_dialog_set_page  	(EogPropertiesDialog     *prop,
-						 EogPropertiesDialogPage  page);
+void	    xviewer_properties_dialog_set_page  	(XviewerPropertiesDialog     *prop,
+						 XviewerPropertiesDialogPage  page);
 
-void	    eog_properties_dialog_set_netbook_mode (EogPropertiesDialog *dlg,
+void	    xviewer_properties_dialog_set_netbook_mode (XviewerPropertiesDialog *dlg,
 						    gboolean enable);
 G_END_DECLS
 
-#endif /* __EOG_PROPERTIES_DIALOG_H__ */
+#endif /* __XVIEWER_PROPERTIES_DIALOG_H__ */

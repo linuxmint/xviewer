@@ -12,7 +12,7 @@
     <property name="can_focus">False</property>
     <property name="icon_name">go-previous</property>
   </object>
-  <template class="EogPropertiesDialog" parent="GtkDialog">
+  <template class="XviewerPropertiesDialog" parent="GtkDialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Image Properties</property>
@@ -94,7 +94,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="border_width">5</property>
-            <signal name="switch-page" handler="eog_properties_dialog_page_switch" object="EogPropertiesDialog" swapped="no"/>
+            <signal name="switch-page" handler="xviewer_properties_dialog_page_switch" object="XviewerPropertiesDialog" swapped="no"/>
             <child>
               <object class="GtkBox" id="general_box">
                 <property name="visible">True</property>
@@ -294,7 +294,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
-                        <signal name="clicked" handler="pd_folder_button_clicked_cb" object="EogPropertiesDialog" swapped="no"/>
+                        <signal name="clicked" handler="pd_folder_button_clicked_cb" object="XviewerPropertiesDialog" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -837,7 +837,7 @@
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
-                        <signal name="notify::expanded" handler="pd_exif_details_activated_cb" object="EogPropertiesDialog" after="yes" swapped="no"/>
+                        <signal name="notify::expanded" handler="pd_exif_details_activated_cb" object="XviewerPropertiesDialog" after="yes" swapped="no"/>
                       </object>
                     </child>
                   </object>

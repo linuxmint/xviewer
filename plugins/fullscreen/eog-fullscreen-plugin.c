@@ -1,4 +1,4 @@
-/* Fullscreen with double-click -- Sets eog to fullscreen by double-clicking
+/* Fullscreen with double-click -- Sets xviewer to fullscreen by double-clicking
  *
  * Copyright (C) 2007-2012 The Free Software Foundation
  *
@@ -23,24 +23,24 @@
 #include <config.h>
 #endif
 
-#include "eog-fullscreen-plugin.h"
+#include "xviewer-fullscreen-plugin.h"
 
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
 #include <libpeas/peas-activatable.h>
 
-#include <eog-debug.h>
-#include <eog-scroll-view.h>
-#include <eog-window-activatable.h>
+#include <xviewer-debug.h>
+#include <xviewer-scroll-view.h>
+#include <xviewer-window-activatable.h>
 
-static void eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
+static void xviewer_window_activatable_iface_init (XviewerWindowActivatableInterface *iface);
 
-G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogFullscreenPlugin,
-		eog_fullscreen_plugin,
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (XviewerFullscreenPlugin,
+		xviewer_fullscreen_plugin,
 		PEAS_TYPE_EXTENSION_BASE,
 		0,
-		G_IMPLEMENT_INTERFACE_DYNAMIC (EOG_TYPE_WINDOW_ACTIVATABLE,
-					     eog_window_activatable_iface_init))
+		G_IMPLEMENT_INTERFACE_DYNAMIC (XVIEWER_TYPE_WINDOW_ACTIVATABLE,
+					     xviewer_window_activatable_iface_init))
 
 enum {
 	PROP_0,
@@ -48,22 +48,22 @@ enum {
 };
 
 static gboolean
-on_button_press (GtkWidget *widget, GdkEventButton *event, EogWindow *window)
+on_button_press (GtkWidget *widget, GdkEventButton *event, XviewerWindow *window)
 {
-	EogScrollView *view = EOG_SCROLL_VIEW (widget);
+	XviewerScrollView *view = XVIEWER_SCROLL_VIEW (widget);
 
 	if (event->button == 1 && event->type == GDK_2BUTTON_PRESS) {
-		EogWindowMode mode = eog_window_get_mode (window);
+		XviewerWindowMode mode = xviewer_window_get_mode (window);
 		GdkEvent *ev = (GdkEvent*) event;
 
-		if(!eog_scroll_view_event_is_over_image (view, ev))
+		if(!xviewer_scroll_view_event_is_over_image (view, ev))
 			return FALSE;
 
-		if (mode == EOG_WINDOW_MODE_SLIDESHOW ||
-		    mode == EOG_WINDOW_MODE_FULLSCREEN)
-			eog_window_set_mode (window, EOG_WINDOW_MODE_NORMAL);
-		else if (mode == EOG_WINDOW_MODE_NORMAL)
-			eog_window_set_mode (window, EOG_WINDOW_MODE_FULLSCREEN);
+		if (mode == XVIEWER_WINDOW_MODE_SLIDESHOW ||
+		    mode == XVIEWER_WINDOW_MODE_FULLSCREEN)
+			xviewer_window_set_mode (window, XVIEWER_WINDOW_MODE_NORMAL);
+		else if (mode == XVIEWER_WINDOW_MODE_NORMAL)
+			xviewer_window_set_mode (window, XVIEWER_WINDOW_MODE_FULLSCREEN);
 
 		return TRUE;
 	}
@@ -72,17 +72,17 @@ on_button_press (GtkWidget *widget, GdkEventButton *event, EogWindow *window)
 }
 
 static void
-eog_fullscreen_plugin_set_property (GObject      *object,
+xviewer_fullscreen_plugin_set_property (GObject      *object,
 				guint         prop_id,
 				const GValue *value,
 				GParamSpec   *pspec)
 {
-	EogFullscreenPlugin *plugin = EOG_FULLSCREEN_PLUGIN (object);
+	XviewerFullscreenPlugin *plugin = XVIEWER_FULLSCREEN_PLUGIN (object);
 
 	switch (prop_id)
 	{
 	case PROP_WINDOW:
-		plugin->window = EOG_WINDOW (g_value_dup_object (value));
+		plugin->window = XVIEWER_WINDOW (g_value_dup_object (value));
 		break;
 
 	default:
@@ -92,12 +92,12 @@ eog_fullscreen_plugin_set_property (GObject      *object,
 }
 
 static void
-eog_fullscreen_plugin_get_property (GObject    *object,
+xviewer_fullscreen_plugin_get_property (GObject    *object,
 				guint       prop_id,
 				GValue     *value,
 				GParamSpec *pspec)
 {
-	EogFullscreenPlugin *plugin = EOG_FULLSCREEN_PLUGIN (object);
+	XviewerFullscreenPlugin *plugin = XVIEWER_FULLSCREEN_PLUGIN (object);
 
 	switch (prop_id)
 	{
@@ -112,33 +112,33 @@ eog_fullscreen_plugin_get_property (GObject    *object,
 }
 
 static void
-eog_fullscreen_plugin_init (EogFullscreenPlugin *plugin)
+xviewer_fullscreen_plugin_init (XviewerFullscreenPlugin *plugin)
 {
-	eog_debug_message (DEBUG_PLUGINS, "EogFullscreenPlugin initializing");
+	xviewer_debug_message (DEBUG_PLUGINS, "XviewerFullscreenPlugin initializing");
 }
 
 static void
-eog_fullscreen_plugin_dispose (GObject *object)
+xviewer_fullscreen_plugin_dispose (GObject *object)
 {
-	EogFullscreenPlugin *plugin = EOG_FULLSCREEN_PLUGIN (object);
+	XviewerFullscreenPlugin *plugin = XVIEWER_FULLSCREEN_PLUGIN (object);
 
-	eog_debug_message (DEBUG_PLUGINS, "EogFullscreenPlugin disposing");
+	xviewer_debug_message (DEBUG_PLUGINS, "XviewerFullscreenPlugin disposing");
 
 	if (plugin->window != NULL) {
 		g_object_unref (plugin->window);
 		plugin->window = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_fullscreen_plugin_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_fullscreen_plugin_parent_class)->dispose (object);
 }
 
 static void
-eog_fullscreen_plugin_activate (EogWindowActivatable *activatable)
+xviewer_fullscreen_plugin_activate (XviewerWindowActivatable *activatable)
 {
-	EogFullscreenPlugin *plugin = EOG_FULLSCREEN_PLUGIN (activatable);
-	GtkWidget *view = eog_window_get_view (plugin->window);
+	XviewerFullscreenPlugin *plugin = XVIEWER_FULLSCREEN_PLUGIN (activatable);
+	GtkWidget *view = xviewer_window_get_view (plugin->window);
 
-	eog_debug (DEBUG_PLUGINS);
+	xviewer_debug (DEBUG_PLUGINS);
 
 	plugin->signal_id = g_signal_connect (G_OBJECT (view),
 					      "button-press-event",
@@ -147,43 +147,43 @@ eog_fullscreen_plugin_activate (EogWindowActivatable *activatable)
 }
 
 static void
-eog_fullscreen_plugin_deactivate (EogWindowActivatable *activatable)
+xviewer_fullscreen_plugin_deactivate (XviewerWindowActivatable *activatable)
 {
-	EogFullscreenPlugin *plugin = EOG_FULLSCREEN_PLUGIN (activatable);
-	GtkWidget *view = eog_window_get_view (plugin->window);
+	XviewerFullscreenPlugin *plugin = XVIEWER_FULLSCREEN_PLUGIN (activatable);
+	GtkWidget *view = xviewer_window_get_view (plugin->window);
 
 	g_signal_handler_disconnect (view, plugin->signal_id);
 }
 
 static void
-eog_fullscreen_plugin_class_init (EogFullscreenPluginClass *klass)
+xviewer_fullscreen_plugin_class_init (XviewerFullscreenPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->dispose = eog_fullscreen_plugin_dispose;
-	object_class->set_property = eog_fullscreen_plugin_set_property;
-	object_class->get_property = eog_fullscreen_plugin_get_property;
+	object_class->dispose = xviewer_fullscreen_plugin_dispose;
+	object_class->set_property = xviewer_fullscreen_plugin_set_property;
+	object_class->get_property = xviewer_fullscreen_plugin_get_property;
 
 	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 }
 
 static void
-eog_fullscreen_plugin_class_finalize (EogFullscreenPluginClass *klass)
+xviewer_fullscreen_plugin_class_finalize (XviewerFullscreenPluginClass *klass)
 {
 }
 
 static void
-eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+xviewer_window_activatable_iface_init (XviewerWindowActivatableInterface *iface)
 {
-	iface->activate = eog_fullscreen_plugin_activate;
-	iface->deactivate = eog_fullscreen_plugin_deactivate;
+	iface->activate = xviewer_fullscreen_plugin_activate;
+	iface->deactivate = xviewer_fullscreen_plugin_deactivate;
 }
 
 G_MODULE_EXPORT void
 peas_register_types (PeasObjectModule *module)
 {
-	eog_fullscreen_plugin_register_type (G_TYPE_MODULE (module));
+	xviewer_fullscreen_plugin_register_type (G_TYPE_MODULE (module));
 	peas_object_module_register_extension_type (module,
-						    EOG_TYPE_WINDOW_ACTIVATABLE,
-						    EOG_TYPE_FULLSCREEN_PLUGIN);
+						    XVIEWER_TYPE_WINDOW_ACTIVATABLE,
+						    XVIEWER_TYPE_FULLSCREEN_PLUGIN);
 }

@@ -1,4 +1,4 @@
-/* Eye of Gnome - Main Window
+/* Xviewer - Main Window
  *
  * Copyright (C) 2000-2008 The Free Software Foundation
  *
@@ -25,11 +25,11 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_WINDOW_H__
-#define __EOG_WINDOW_H__
+#ifndef __XVIEWER_WINDOW_H__
+#define __XVIEWER_WINDOW_H__
 
-#include "eog-list-store.h"
-#include "eog-image.h"
+#include "xviewer-list-store.h"
+#include "xviewer-image.h"
 
 #include <glib.h>
 #include <glib-object.h>
@@ -37,101 +37,101 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogWindow EogWindow;
-typedef struct _EogWindowClass EogWindowClass;
-typedef struct _EogWindowPrivate EogWindowPrivate;
+typedef struct _XviewerWindow XviewerWindow;
+typedef struct _XviewerWindowClass XviewerWindowClass;
+typedef struct _XviewerWindowPrivate XviewerWindowPrivate;
 
-#define EOG_TYPE_WINDOW            (eog_window_get_type ())
-#define EOG_WINDOW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_WINDOW, EogWindow))
-#define EOG_WINDOW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_WINDOW, EogWindowClass))
-#define EOG_IS_WINDOW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_WINDOW))
-#define EOG_IS_WINDOW_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_WINDOW))
-#define EOG_WINDOW_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_WINDOW, EogWindowClass))
+#define XVIEWER_TYPE_WINDOW            (xviewer_window_get_type ())
+#define XVIEWER_WINDOW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_WINDOW, XviewerWindow))
+#define XVIEWER_WINDOW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_WINDOW, XviewerWindowClass))
+#define XVIEWER_IS_WINDOW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_WINDOW))
+#define XVIEWER_IS_WINDOW_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_WINDOW))
+#define XVIEWER_WINDOW_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_WINDOW, XviewerWindowClass))
 
-#define EOG_WINDOW_ERROR           (eog_window_error_quark ())
-
-typedef enum {
-	EOG_WINDOW_MODE_UNKNOWN,
-	EOG_WINDOW_MODE_NORMAL,
-	EOG_WINDOW_MODE_FULLSCREEN,
-	EOG_WINDOW_MODE_SLIDESHOW
-} EogWindowMode;
+#define XVIEWER_WINDOW_ERROR           (xviewer_window_error_quark ())
 
 typedef enum {
-	EOG_WINDOW_GALLERY_POS_BOTTOM,
-	EOG_WINDOW_GALLERY_POS_LEFT,
-	EOG_WINDOW_GALLERY_POS_TOP,
-	EOG_WINDOW_GALLERY_POS_RIGHT
-} EogWindowGalleryPos;
+	XVIEWER_WINDOW_MODE_UNKNOWN,
+	XVIEWER_WINDOW_MODE_NORMAL,
+	XVIEWER_WINDOW_MODE_FULLSCREEN,
+	XVIEWER_WINDOW_MODE_SLIDESHOW
+} XviewerWindowMode;
+
+typedef enum {
+	XVIEWER_WINDOW_GALLERY_POS_BOTTOM,
+	XVIEWER_WINDOW_GALLERY_POS_LEFT,
+	XVIEWER_WINDOW_GALLERY_POS_TOP,
+	XVIEWER_WINDOW_GALLERY_POS_RIGHT
+} XviewerWindowGalleryPos;
 
 //TODO
 typedef enum {
-	EOG_WINDOW_ERROR_CONTROL_NOT_FOUND,
-	EOG_WINDOW_ERROR_UI_NOT_FOUND,
-	EOG_WINDOW_ERROR_NO_PERSIST_FILE_INTERFACE,
-	EOG_WINDOW_ERROR_IO,
-	EOG_WINDOW_ERROR_TRASH_NOT_FOUND,
-	EOG_WINDOW_ERROR_GENERIC,
-	EOG_WINDOW_ERROR_UNKNOWN
-} EogWindowError;
+	XVIEWER_WINDOW_ERROR_CONTROL_NOT_FOUND,
+	XVIEWER_WINDOW_ERROR_UI_NOT_FOUND,
+	XVIEWER_WINDOW_ERROR_NO_PERSIST_FILE_INTERFACE,
+	XVIEWER_WINDOW_ERROR_IO,
+	XVIEWER_WINDOW_ERROR_TRASH_NOT_FOUND,
+	XVIEWER_WINDOW_ERROR_GENERIC,
+	XVIEWER_WINDOW_ERROR_UNKNOWN
+} XviewerWindowError;
 
 typedef enum {
-	EOG_STARTUP_FULLSCREEN         = 1 << 0,
-	EOG_STARTUP_SLIDE_SHOW         = 1 << 1,
-	EOG_STARTUP_DISABLE_GALLERY    = 1 << 2,
-	EOG_STARTUP_SINGLE_WINDOW      = 1 << 3
-} EogStartupFlags;
+	XVIEWER_STARTUP_FULLSCREEN         = 1 << 0,
+	XVIEWER_STARTUP_SLIDE_SHOW         = 1 << 1,
+	XVIEWER_STARTUP_DISABLE_GALLERY    = 1 << 2,
+	XVIEWER_STARTUP_SINGLE_WINDOW      = 1 << 3
+} XviewerStartupFlags;
 
-struct _EogWindow {
+struct _XviewerWindow {
 	GtkApplicationWindow win;
 
-	EogWindowPrivate *priv;
+	XviewerWindowPrivate *priv;
 };
 
-struct _EogWindowClass {
+struct _XviewerWindowClass {
 	GtkApplicationWindowClass parent_class;
 
-	void (* prepared) (EogWindow *window);
+	void (* prepared) (XviewerWindow *window);
 };
 
-GType         eog_window_get_type  	(void) G_GNUC_CONST;
+GType         xviewer_window_get_type  	(void) G_GNUC_CONST;
 
-GtkWidget    *eog_window_new		(EogStartupFlags  flags);
+GtkWidget    *xviewer_window_new		(XviewerStartupFlags  flags);
 
-EogWindowMode eog_window_get_mode       (EogWindow       *window);
+XviewerWindowMode xviewer_window_get_mode       (XviewerWindow       *window);
 
-void          eog_window_set_mode       (EogWindow       *window,
-					 EogWindowMode    mode);
+void          xviewer_window_set_mode       (XviewerWindow       *window,
+					 XviewerWindowMode    mode);
 
-GtkUIManager *eog_window_get_ui_manager (EogWindow       *window);
+GtkUIManager *xviewer_window_get_ui_manager (XviewerWindow       *window);
 
-EogListStore *eog_window_get_store      (EogWindow       *window);
+XviewerListStore *xviewer_window_get_store      (XviewerWindow       *window);
 
-GtkWidget    *eog_window_get_view       (EogWindow       *window);
+GtkWidget    *xviewer_window_get_view       (XviewerWindow       *window);
 
-GtkWidget    *eog_window_get_sidebar    (EogWindow       *window);
+GtkWidget    *xviewer_window_get_sidebar    (XviewerWindow       *window);
 
-GtkWidget    *eog_window_get_thumb_view (EogWindow       *window);
+GtkWidget    *xviewer_window_get_thumb_view (XviewerWindow       *window);
 
-GtkWidget    *eog_window_get_thumb_nav  (EogWindow       *window);
+GtkWidget    *xviewer_window_get_thumb_nav  (XviewerWindow       *window);
 
-GtkWidget    *eog_window_get_statusbar  (EogWindow       *window);
+GtkWidget    *xviewer_window_get_statusbar  (XviewerWindow       *window);
 
-EogImage     *eog_window_get_image      (EogWindow       *window);
+XviewerImage     *xviewer_window_get_image      (XviewerWindow       *window);
 
-void          eog_window_open_file_list	(EogWindow       *window,
+void          xviewer_window_open_file_list	(XviewerWindow       *window,
 					 GSList          *file_list);
 
-gboolean      eog_window_is_empty 	(EogWindow       *window);
-gboolean      eog_window_is_not_initializing (const EogWindow *window);
+gboolean      xviewer_window_is_empty 	(XviewerWindow       *window);
+gboolean      xviewer_window_is_not_initializing (const XviewerWindow *window);
 
-void          eog_window_reload_image (EogWindow *window);
-GtkWidget    *eog_window_get_properties_dialog (EogWindow *window);
+void          xviewer_window_reload_image (XviewerWindow *window);
+GtkWidget    *xviewer_window_get_properties_dialog (XviewerWindow *window);
 
-void          eog_window_show_about_dialog (EogWindow    *window);
-void          eog_window_show_preferences_dialog (EogWindow *window);
+void          xviewer_window_show_about_dialog (XviewerWindow    *window);
+void          xviewer_window_show_preferences_dialog (XviewerWindow *window);
 
-void          eog_window_close          (EogWindow *window);
+void          xviewer_window_close          (XviewerWindow *window);
 
 G_END_DECLS
 

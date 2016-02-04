@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Application Facade
+/* Xviewer - Application Facade
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -22,68 +22,68 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_APPLICATION_H__
-#define __EOG_APPLICATION_H__
+#ifndef __XVIEWER_APPLICATION_H__
+#define __XVIEWER_APPLICATION_H__
 
 
 #include <glib.h>
 #include <glib-object.h>
 
 #include <gtk/gtk.h>
-#include "eog-window.h"
+#include "xviewer-window.h"
 
 G_BEGIN_DECLS
 
-typedef struct _EogApplication EogApplication;
-typedef struct _EogApplicationClass EogApplicationClass;
-typedef struct _EogApplicationPrivate EogApplicationPrivate;
+typedef struct _XviewerApplication XviewerApplication;
+typedef struct _XviewerApplicationClass XviewerApplicationClass;
+typedef struct _XviewerApplicationPrivate XviewerApplicationPrivate;
 
-#define EOG_TYPE_APPLICATION            (eog_application_get_type ())
-#define EOG_APPLICATION(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), EOG_TYPE_APPLICATION, EogApplication))
-#define EOG_APPLICATION_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  EOG_TYPE_APPLICATION, EogApplicationClass))
-#define EOG_IS_APPLICATION(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOG_TYPE_APPLICATION))
-#define EOG_IS_APPLICATION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  EOG_TYPE_APPLICATION))
-#define EOG_APPLICATION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOG_TYPE_APPLICATION, EogApplicationClass))
+#define XVIEWER_TYPE_APPLICATION            (xviewer_application_get_type ())
+#define XVIEWER_APPLICATION(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), XVIEWER_TYPE_APPLICATION, XviewerApplication))
+#define XVIEWER_APPLICATION_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  XVIEWER_TYPE_APPLICATION, XviewerApplicationClass))
+#define XVIEWER_IS_APPLICATION(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), XVIEWER_TYPE_APPLICATION))
+#define XVIEWER_IS_APPLICATION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  XVIEWER_TYPE_APPLICATION))
+#define XVIEWER_APPLICATION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  XVIEWER_TYPE_APPLICATION, XviewerApplicationClass))
 
-#define EOG_APP				(eog_application_get_instance ())
+#define XVIEWER_APP				(xviewer_application_get_instance ())
 
-struct _EogApplication {
+struct _XviewerApplication {
 	GtkApplication base_instance;
 
-	EogApplicationPrivate *priv;
+	XviewerApplicationPrivate *priv;
 };
 
-struct _EogApplicationClass {
+struct _XviewerApplicationClass {
 	GtkApplicationClass parent_class;
 };
 
-GType	          eog_application_get_type	      (void) G_GNUC_CONST;
+GType	          xviewer_application_get_type	      (void) G_GNUC_CONST;
 
-EogApplication   *eog_application_get_instance        (void);
+XviewerApplication   *xviewer_application_get_instance        (void);
 
-gboolean          eog_application_open_window         (EogApplication   *application,
+gboolean          xviewer_application_open_window         (XviewerApplication   *application,
 						       guint             timestamp,
-						       EogStartupFlags   flags,
+						       XviewerStartupFlags   flags,
 						       GError          **error);
 
-gboolean          eog_application_open_uri_list      (EogApplication   *application,
+gboolean          xviewer_application_open_uri_list      (XviewerApplication   *application,
 						      GSList           *uri_list,
 						      guint             timestamp,
-						      EogStartupFlags   flags,
+						      XviewerStartupFlags   flags,
 						      GError          **error);
 
-gboolean          eog_application_open_file_list     (EogApplication  *application,
+gboolean          xviewer_application_open_file_list     (XviewerApplication  *application,
 						      GSList          *file_list,
 						      guint           timestamp,
-						      EogStartupFlags flags,
+						      XviewerStartupFlags flags,
 						      GError         **error);
 
-gboolean          eog_application_open_uris           (EogApplication *application,
+gboolean          xviewer_application_open_uris           (XviewerApplication *application,
 						       gchar         **uris,
 						       guint           timestamp,
-						       EogStartupFlags flags,
+						       XviewerStartupFlags flags,
 						       GError        **error);
 
 G_END_DECLS
 
-#endif /* __EOG_APPLICATION_H__ */
+#endif /* __XVIEWER_APPLICATION_H__ */

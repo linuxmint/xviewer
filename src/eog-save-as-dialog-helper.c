@@ -6,9 +6,9 @@
 #include <string.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include "eog-save-as-dialog-helper.h"
-#include "eog-pixbuf-util.h"
-#include "eog-file-chooser.h"
+#include "xviewer-save-as-dialog-helper.h"
+#include "xviewer-pixbuf-util.h"
+#include "xviewer-file-chooser.h"
 
 typedef struct {
 	GtkWidget *dir_chooser;
@@ -20,7 +20,7 @@ typedef struct {
 
 	guint      idle_id;
 	gint       n_images;
-	EogImage  *image;
+	XviewerImage  *image;
 	gint       nth_image;
 } SaveAsData;
 
@@ -64,7 +64,7 @@ update_preview (gpointer user_data)
 
 	if (token_str != NULL) {
 		/* generate preview filename */
-		preview_str = eog_uri_converter_preview (token_str, data->image, format,
+		preview_str = xviewer_uri_converter_preview (token_str, data->image, format,
 							 (counter_start + data->nth_image),
 							 data->n_images,
 							 convert_spaces, '_' /* FIXME: make this editable */);
@@ -147,7 +147,7 @@ prepare_format_combobox (SaveAsData *data)
 	gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (combobox), cell,
 				 	"text", 0);
 
-	formats = eog_pixbuf_get_savable_formats ();
+	formats = xviewer_pixbuf_get_savable_formats ();
 	for (it = formats; it != NULL; it = it->next) {
 		GdkPixbufFormat *f;
 
@@ -200,7 +200,7 @@ set_default_values (GtkWidget *dlg, GFile *base_file)
 }
 
 GtkWidget*
-eog_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
+xviewer_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 {
 	GtkBuilder  *xml;
 	GtkWidget *dlg;
@@ -208,10 +208,10 @@ eog_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 	GtkWidget *label;
 
 
-	xml = gtk_builder_new_from_resource ("/org/gnome/eog/ui/eog-multiple-save-as-dialog.ui");
+	xml = gtk_builder_new_from_resource ("/org/gnome/xviewer/ui/xviewer-multiple-save-as-dialog.ui");
 	gtk_builder_set_translation_domain (xml, GETTEXT_PACKAGE);
 
-	dlg = GTK_WIDGET (g_object_ref (gtk_builder_get_object (xml, "eog_multiple_save_as_dialog")));
+	dlg = GTK_WIDGET (g_object_ref (gtk_builder_get_object (xml, "xviewer_multiple_save_as_dialog")));
 	gtk_window_set_transient_for (GTK_WINDOW (dlg), GTK_WINDOW (main));
 	gtk_window_set_position (GTK_WINDOW (dlg), GTK_WIN_POS_CENTER_ON_PARENT);
 
@@ -251,7 +251,7 @@ eog_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 			  (GCallback) on_counter_spin_changed, dlg);
 
 	label = GTK_WIDGET (gtk_builder_get_object (xml, "preview_label_from"));
-	gtk_label_set_text (GTK_LABEL (label), eog_image_get_caption (data->image));
+	gtk_label_set_text (GTK_LABEL (label), xviewer_image_get_caption (data->image));
 
 	prepare_format_combobox (data);
 
@@ -260,10 +260,10 @@ eog_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 	return dlg;
 }
 
-EogURIConverter*
-eog_save_as_dialog_get_converter (GtkWidget *dlg)
+XviewerURIConverter*
+xviewer_save_as_dialog_get_converter (GtkWidget *dlg)
 {
-	EogURIConverter *conv;
+	XviewerURIConverter *conv;
 
 	SaveAsData *data;
 	const char *format_str;
@@ -289,7 +289,7 @@ eog_save_as_dialog_get_converter (GtkWidget *dlg)
 	base_file = gtk_file_chooser_get_file (GTK_FILE_CHOOSER (data->dir_chooser));
 
 	/* create converter object */
-	conv = eog_uri_converter_new (base_file, format, format_str);
+	conv = xviewer_uri_converter_new (base_file, format, format_str);
 
 	/* set other properties */
 	g_object_set (G_OBJECT (conv),

@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Session Handler
+/* Xviewer - Session Handler
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -27,26 +27,26 @@
 #include <config.h>
 #endif
 
-#include "eog-session.h"
-#include "eog-window.h"
-#include "eog-application.h"
+#include "xviewer-session.h"
+#include "xviewer-window.h"
+#include "xviewer-application.h"
 
 void
-eog_session_init (EogApplication *application)
+xviewer_session_init (XviewerApplication *application)
 {
-	g_return_if_fail (EOG_IS_APPLICATION (application));
+	g_return_if_fail (XVIEWER_IS_APPLICATION (application));
 
-	/* FIXME: Session management is currently a no-op in eog. */
+	/* FIXME: Session management is currently a no-op in xviewer. */
 }
 
 gboolean
-eog_session_is_restored	(void)
+xviewer_session_is_restored	(void)
 {
 	return FALSE;
 }
 
 gboolean
-eog_session_load (void)
+xviewer_session_load (void)
 {
 	return TRUE;
 }

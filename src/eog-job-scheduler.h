@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Jobs scheduler
+/* Xviewer - Jobs scheduler
  *
  * Copyright (C) 2013 The Free Software Foundation
  *
@@ -22,28 +22,28 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_JOB_SCHEDULER_H__
-#define __EOG_JOB_SCHEDULER_H__
+#ifndef __XVIEWER_JOB_SCHEDULER_H__
+#define __XVIEWER_JOB_SCHEDULER_H__
 
-#include "eog-jobs.h"
+#include "xviewer-jobs.h"
 
 G_BEGIN_DECLS
 
 typedef enum {
-	EOG_JOB_PRIORITY_HIGH,
-	EOG_JOB_PRIORITY_MEDIUM,
-	EOG_JOB_PRIORITY_LOW,
-	EOG_JOB_N_PRIORITIES
-} EogJobPriority;
+	XVIEWER_JOB_PRIORITY_HIGH,
+	XVIEWER_JOB_PRIORITY_MEDIUM,
+	XVIEWER_JOB_PRIORITY_LOW,
+	XVIEWER_JOB_N_PRIORITIES
+} XviewerJobPriority;
 
 /* initialization */
-void eog_job_scheduler_init                  (void);
+void xviewer_job_scheduler_init                  (void);
 
 /* jobs management */
-void eog_job_scheduler_add_job               (EogJob         *job);
-void eog_job_scheduler_add_job_with_priority (EogJob         *job,
-					      EogJobPriority  priority);
+void xviewer_job_scheduler_add_job               (XviewerJob         *job);
+void xviewer_job_scheduler_add_job_with_priority (XviewerJob         *job,
+					      XviewerJobPriority  priority);
 
 G_END_DECLS
 
-#endif /* __EOG_JOB_SCHEDULER_H__ */
+#endif /* __XVIEWER_JOB_SCHEDULER_H__ */

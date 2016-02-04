@@ -1,7 +1,7 @@
 Feature: Smoke tests
 
   Background:
-    * Make sure that eog is running
+    * Make sure that xviewer is running
 
   @about
   Scenario: About dialog

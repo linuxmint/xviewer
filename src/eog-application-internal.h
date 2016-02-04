@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Application Facade (internal)
+/* Xviewer - Application Facade (internal)
  *
  * Copyright (C) 2006-2012 The Free Software Foundation
  *
@@ -22,27 +22,27 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_APPLICATION_INTERNAL_H__
-#define __EOG_APPLICATION_INTERNAL_H__
+#ifndef __XVIEWER_APPLICATION_INTERNAL_H__
+#define __XVIEWER_APPLICATION_INTERNAL_H__
 
 #include <glib.h>
 #include <glib-object.h>
 
 #include <libpeas/peas-extension-set.h>
 
-#include "eog-application.h"
-#include "eog-plugin-engine.h"
+#include "xviewer-application.h"
+#include "xviewer-plugin-engine.h"
 #include "egg-toolbars-model.h"
-#include "eog-window.h"
+#include "xviewer-window.h"
 
 G_BEGIN_DECLS
 
-struct _EogApplicationPrivate {
+struct _XviewerApplicationPrivate {
 	EggToolbarsModel *toolbars_model;
 	gchar            *toolbars_file;
-	EogPluginEngine  *plugin_engine;
+	XviewerPluginEngine  *plugin_engine;
 
-	EogStartupFlags   flags;
+	XviewerStartupFlags   flags;
 
 	GSettings        *ui_settings;
 
@@ -50,16 +50,16 @@ struct _EogApplicationPrivate {
 };
 
 
-EggToolbarsModel *eog_application_get_toolbars_model  (EogApplication *application);
+EggToolbarsModel *xviewer_application_get_toolbars_model  (XviewerApplication *application);
 
-void              eog_application_save_toolbars_model (EogApplication *application);
+void              xviewer_application_save_toolbars_model (XviewerApplication *application);
 
-void		  eog_application_reset_toolbars_model (EogApplication *app);
+void		  xviewer_application_reset_toolbars_model (XviewerApplication *app);
 
-void              eog_application_screensaver_enable  (EogApplication *application);
+void              xviewer_application_screensaver_enable  (XviewerApplication *application);
 
-void              eog_application_screensaver_disable (EogApplication *application);
+void              xviewer_application_screensaver_disable (XviewerApplication *application);
 
 G_END_DECLS
 
-#endif /* __EOG_APPLICATION_INTERNAL_H__ */
+#endif /* __XVIEWER_APPLICATION_INTERNAL_H__ */

@@ -1,4 +1,4 @@
-/* Eye Of GNOME -- Metadata Reader Interface
+/* Xviewer -- Metadata Reader Interface
  *
  * Copyright (C) 2008-2011 The Free Software Foundation
  *
@@ -23,24 +23,24 @@
 #include <config.h>
 #endif
 
-#include "eog-metadata-reader.h"
-#include "eog-metadata-reader-jpg.h"
-#include "eog-metadata-reader-png.h"
-#include "eog-debug.h"
+#include "xviewer-metadata-reader.h"
+#include "xviewer-metadata-reader-jpg.h"
+#include "xviewer-metadata-reader-png.h"
+#include "xviewer-debug.h"
 
-G_DEFINE_INTERFACE (EogMetadataReader, eog_metadata_reader, G_TYPE_INVALID)
+G_DEFINE_INTERFACE (XviewerMetadataReader, xviewer_metadata_reader, G_TYPE_INVALID)
 
-EogMetadataReader*
-eog_metadata_reader_new (EogMetadataFileType type)
+XviewerMetadataReader*
+xviewer_metadata_reader_new (XviewerMetadataFileType type)
 {
-	EogMetadataReader *emr;
+	XviewerMetadataReader *emr;
 
 	switch (type) {
-	case EOG_METADATA_JPEG:
-		emr = EOG_METADATA_READER (g_object_new (EOG_TYPE_METADATA_READER_JPG, NULL));
+	case XVIEWER_METADATA_JPEG:
+		emr = XVIEWER_METADATA_READER (g_object_new (XVIEWER_TYPE_METADATA_READER_JPG, NULL));
 		break;
-	case EOG_METADATA_PNG:
-		emr = EOG_METADATA_READER (g_object_new (EOG_TYPE_METADATA_READER_PNG, NULL));
+	case XVIEWER_METADATA_PNG:
+		emr = XVIEWER_METADATA_READER (g_object_new (XVIEWER_TYPE_METADATA_READER_PNG, NULL));
 		break;
 	default:
 		emr = NULL;
@@ -51,59 +51,59 @@ eog_metadata_reader_new (EogMetadataFileType type)
 }
 
 gboolean
-eog_metadata_reader_finished (EogMetadataReader *emr)
+xviewer_metadata_reader_finished (XviewerMetadataReader *emr)
 {
-	g_return_val_if_fail (EOG_IS_METADATA_READER (emr), TRUE);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER (emr), TRUE);
 
-	return EOG_METADATA_READER_GET_INTERFACE (emr)->finished (emr);
+	return XVIEWER_METADATA_READER_GET_INTERFACE (emr)->finished (emr);
 }
 
 
 void
-eog_metadata_reader_consume (EogMetadataReader *emr, const guchar *buf, guint len)
+xviewer_metadata_reader_consume (XviewerMetadataReader *emr, const guchar *buf, guint len)
 {
-	EOG_METADATA_READER_GET_INTERFACE (emr)->consume (emr, buf, len);
+	XVIEWER_METADATA_READER_GET_INTERFACE (emr)->consume (emr, buf, len);
 }
 
 /* Returns the raw exif data. NOTE: The caller of this function becomes
  * the new owner of this piece of memory and is responsible for freeing it!
  */
 void
-eog_metadata_reader_get_exif_chunk (EogMetadataReader *emr, guchar **data, guint *len)
+xviewer_metadata_reader_get_exif_chunk (XviewerMetadataReader *emr, guchar **data, guint *len)
 {
 	g_return_if_fail (data != NULL && len != NULL);
 
-	EOG_METADATA_READER_GET_INTERFACE (emr)->get_raw_exif (emr, data, len);
+	XVIEWER_METADATA_READER_GET_INTERFACE (emr)->get_raw_exif (emr, data, len);
 }
 
 #ifdef HAVE_EXIF
 ExifData*
-eog_metadata_reader_get_exif_data (EogMetadataReader *emr)
+xviewer_metadata_reader_get_exif_data (XviewerMetadataReader *emr)
 {
-	return EOG_METADATA_READER_GET_INTERFACE (emr)->get_exif_data (emr);
+	return XVIEWER_METADATA_READER_GET_INTERFACE (emr)->get_exif_data (emr);
 }
 #endif
 
 #ifdef HAVE_EXEMPI
 XmpPtr
-eog_metadata_reader_get_xmp_data (EogMetadataReader *emr)
+xviewer_metadata_reader_get_xmp_data (XviewerMetadataReader *emr)
 {
-	return EOG_METADATA_READER_GET_INTERFACE (emr)->get_xmp_ptr (emr);
+	return XVIEWER_METADATA_READER_GET_INTERFACE (emr)->get_xmp_ptr (emr);
 }
 #endif
 
 #ifdef HAVE_LCMS
 cmsHPROFILE
-eog_metadata_reader_get_icc_profile (EogMetadataReader *emr)
+xviewer_metadata_reader_get_icc_profile (XviewerMetadataReader *emr)
 {
-	return EOG_METADATA_READER_GET_INTERFACE (emr)->get_icc_profile (emr);
+	return XVIEWER_METADATA_READER_GET_INTERFACE (emr)->get_icc_profile (emr);
 }
 #endif
 
 /* Default vfunc that simply clears the output if not overriden by the
    implementing class. This mimics the old behaviour of get_exif_chunk(). */
 static void
-_eog_metadata_reader_default_get_raw_exif (EogMetadataReader *emr,
+_xviewer_metadata_reader_default_get_raw_exif (XviewerMetadataReader *emr,
 					   guchar **data, guint *length)
 {
 	g_return_if_fail (data != NULL && length != NULL);
@@ -115,18 +115,18 @@ _eog_metadata_reader_default_get_raw_exif (EogMetadataReader *emr,
 /* Default vfunc that simply returns NULL if not overriden by the implementing
    class. Mimics the old fallback behaviour of the getter functions. */
 static gpointer
-_eog_metadata_reader_default_get_null (EogMetadataReader *emr)
+_xviewer_metadata_reader_default_get_null (XviewerMetadataReader *emr)
 {
 	return NULL;
 }
 
 static void
-eog_metadata_reader_default_init (EogMetadataReaderInterface *iface)
+xviewer_metadata_reader_default_init (XviewerMetadataReaderInterface *iface)
 {
 	/* consume and finished are required to be implemented */
 	/* Not-implemented funcs return NULL by default */
-	iface->get_raw_exif = _eog_metadata_reader_default_get_raw_exif;
-	iface->get_exif_data = _eog_metadata_reader_default_get_null;
-	iface->get_icc_profile = _eog_metadata_reader_default_get_null;
-	iface->get_xmp_ptr = _eog_metadata_reader_default_get_null;
+	iface->get_raw_exif = _xviewer_metadata_reader_default_get_raw_exif;
+	iface->get_exif_data = _xviewer_metadata_reader_default_get_null;
+	iface->get_icc_profile = _xviewer_metadata_reader_default_get_null;
+	iface->get_xmp_ptr = _xviewer_metadata_reader_default_get_null;
 }

@@ -1,6 +1,6 @@
 /*
- * eog-application-activatable.c
- * This file is part of eog
+ * xviewer-application-activatable.c
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -28,29 +28,29 @@
 #include "config.h"
 #endif
 
-#include "eog-application-activatable.h"
+#include "xviewer-application-activatable.h"
 
 #include <glib-object.h>
-#include "eog-application.h"
+#include "xviewer-application.h"
 
-G_DEFINE_INTERFACE(EogApplicationActivatable, eog_application_activatable, G_TYPE_OBJECT)
+G_DEFINE_INTERFACE(XviewerApplicationActivatable, xviewer_application_activatable, G_TYPE_OBJECT)
 
 void
-eog_application_activatable_default_init (EogApplicationActivatableInterface *iface)
+xviewer_application_activatable_default_init (XviewerApplicationActivatableInterface *iface)
 {
 	static gboolean initialized = FALSE;
 
 	if (!initialized) {
 		/**
-         * EogApplicationActivatable:app:
+         * XviewerApplicationActivatable:app:
 		 *
-         * This is the #EogApplication this #EogApplicationActivatable instance
+         * This is the #XviewerApplication this #XviewerApplicationActivatable instance
 		 * should be attached to.
 		 */
 		g_object_interface_install_property (iface,
                 g_param_spec_object ("app", "Application",
-                             "The EogApplication this instance it attached to",
-                             EOG_TYPE_APPLICATION,
+                             "The XviewerApplication this instance it attached to",
+                             XVIEWER_TYPE_APPLICATION,
 						     G_PARAM_READWRITE |
 						     G_PARAM_CONSTRUCT_ONLY |
 						     G_PARAM_STATIC_STRINGS));
@@ -59,26 +59,26 @@ eog_application_activatable_default_init (EogApplicationActivatableInterface *if
 }
 
 void
-eog_application_activatable_activate (EogApplicationActivatable *activatable)
+xviewer_application_activatable_activate (XviewerApplicationActivatable *activatable)
 {
-    EogApplicationActivatableInterface *iface;
+    XviewerApplicationActivatableInterface *iface;
 
-    g_return_if_fail (EOG_IS_APPLICATION_ACTIVATABLE (activatable));
+    g_return_if_fail (XVIEWER_IS_APPLICATION_ACTIVATABLE (activatable));
 
-    iface = EOG_APPLICATION_ACTIVATABLE_GET_IFACE (activatable);
+    iface = XVIEWER_APPLICATION_ACTIVATABLE_GET_IFACE (activatable);
 
 	if (G_LIKELY (iface->activate != NULL))
 		iface->activate (activatable);
 }
 
 void
-eog_application_activatable_deactivate (EogApplicationActivatable *activatable)
+xviewer_application_activatable_deactivate (XviewerApplicationActivatable *activatable)
 {
-    EogApplicationActivatableInterface *iface;
+    XviewerApplicationActivatableInterface *iface;
 
-    g_return_if_fail (EOG_IS_APPLICATION_ACTIVATABLE (activatable));
+    g_return_if_fail (XVIEWER_IS_APPLICATION_ACTIVATABLE (activatable));
 
-    iface = EOG_APPLICATION_ACTIVATABLE_GET_IFACE (activatable);
+    iface = XVIEWER_APPLICATION_ACTIVATABLE_GET_IFACE (activatable);
 
 	if (G_LIKELY (iface->deactivate != NULL))
 		iface->deactivate (activatable);

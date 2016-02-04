@@ -1,6 +1,6 @@
 /*
  * jpegint.h
- * This file is part of eog
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *

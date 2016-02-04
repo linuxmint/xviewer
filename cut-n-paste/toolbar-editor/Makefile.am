@@ -22,7 +22,7 @@ libtoolbareditor_la_SOURCES = 	\
 libtoolbareditor_la_LIBADD = $(LIBXML2_LIBS)
 
 libtoolbareditor_la_CFLAGS = \
-	$(EOG_CFLAGS)				\
+	$(XVIEWER_CFLAGS)				\
 	$(WARN_CFLAGS)				\
 	$(LIBXML2_CFLAGS)			\
 	-DCURSOR_DIR=\"$(pkgdatadir)\"

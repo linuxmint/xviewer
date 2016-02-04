@@ -1,11 +1,11 @@
 <schemalist>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.eog" path="/org/gnome/eog/">
-    <child name="view" schema="org.gnome.eog.view"/>
-    <child name="fullscreen" schema="org.gnome.eog.fullscreen"/>
-    <child name="ui" schema="org.gnome.eog.ui"/>
-    <child name="plugins" schema="org.gnome.eog.plugins"/>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer" path="/org/gnome/xviewer/">
+    <child name="view" schema="org.gnome.xviewer.view"/>
+    <child name="fullscreen" schema="org.gnome.xviewer.fullscreen"/>
+    <child name="ui" schema="org.gnome.xviewer.ui"/>
+    <child name="plugins" schema="org.gnome.xviewer.plugins"/>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.eog.view" path="/org/gnome/eog/view/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer.view" path="/org/gnome/xviewer/view/">
     <key name="autorotate" type="b">
       <default>true</default>
       <summary>Automatic orientation</summary>
@@ -26,7 +26,7 @@
       <summary>Extrapolate Image</summary>
       <description>Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images.</description>
     </key>
-    <key name="transparency" enum="org.gnome.eog.EogTransparencyStyle">
+    <key name="transparency" enum="org.gnome.xviewer.XviewerTransparencyStyle">
       <default>'checked'</default>
       <summary>Transparency indicator</summary>
       <description>Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used.</description>
@@ -52,7 +52,7 @@
 	<description>If this is active, the color set by the background-color key will be used to fill the area behind the image. If it is not set, the current GTK+ theme will determine the fill color.</description>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.eog.fullscreen" path="/org/gnome/eog/fullscreen/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer.fullscreen" path="/org/gnome/xviewer/fullscreen/">
     <key name="loop" type="b">
       <default>true</default>
       <summary>Loop through the image sequence</summary>
@@ -69,7 +69,7 @@
       <description>A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero  disables the automatic browsing.</description>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.eog.ui" path="/org/gnome/eog/ui/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer.ui" path="/org/gnome/xviewer/ui/">
     <key name="toolbar" type="b">
       <default>true</default>
       <summary>Show/Hide the window toolbar.</summary>
@@ -82,7 +82,7 @@
       <default>false</default>
       <summary>Show/Hide the image gallery pane.</summary>
     </key>
-    <key name="image-gallery-position" enum="org.gnome.eog.EogWindowGalleryPos">
+    <key name="image-gallery-position" enum="org.gnome.xviewer.XviewerWindowGalleryPos">
       <default>'bottom'</default>
       <summary>Image gallery pane position. Set to 0 for bottom;  1 for left; 2 for top; 3 for right.</summary>
     </key>
@@ -105,7 +105,7 @@
     <key name="disable-trash-confirmation" type="b">
       <default>false</default>
       <summary>Trash images without asking</summary>
-      <description>If activated, Eye of GNOME won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead.</description>
+      <description>If activated, Xviewer won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead.</description>
     </key>
     <key name="filechooser-xdg-fallback" type="b">
       <default>true</default>
@@ -123,11 +123,11 @@
       <description>The desktop file name (including the ".desktop") of the application to use for editing images (when the "Edit Image" toolbar button is clicked). Set to the empty string to disable this feature.</description>
     </key>
   </schema>
-  <schema id="org.gnome.eog.plugins" path="/org/gnome/eog/plugins/">
+  <schema id="org.gnome.xviewer.plugins" path="/org/gnome/xviewer/plugins/">
     <key name="active-plugins" type="as">
       <default>['fullscreen']</default>
       <summary>Active plugins</summary>
-      <description>List of active plugins. It doesn't contain the "Location" of the active plugins.  See the .eog-plugin file for obtaining the "Location" of a given plugin.</description>
+      <description>List of active plugins. It doesn't contain the "Location" of the active plugins.  See the .xviewer-plugin file for obtaining the "Location" of a given plugin.</description>
     </key>
   </schema>
 </schemalist>

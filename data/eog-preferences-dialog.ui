@@ -10,7 +10,7 @@
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
   </object>
-  <template class="EogPreferencesDialog" parent="GtkDialog">
+  <template class="XviewerPreferencesDialog" parent="GtkDialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Preferences</property>
@@ -475,7 +475,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes" comments="I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.">_Time between images:</property>
+                                    <property name="label" translatable="yes" comments="I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.">_Time between images:</property>
                                     <property name="use_underline">True</property>
                                   </object>
                                   <packing>

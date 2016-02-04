@@ -11,13 +11,13 @@
 
 2009-04-10  Felix Riemann  <friemann@svn.gnome.org>
 
-	* reload/eog-reload-plugin.c:
+	* reload/xviewer-reload-plugin.c:
 	Make reload action available from the scrollview's context menu.
 
 2009-04-10  Felix Riemann  <friemann@svn.gnome.org>
 
-	* reload/eog-reload-plugin.c: (impl_activate),
-	(eog_reload_plugin_class_init):
+	* reload/xviewer-reload-plugin.c: (impl_activate),
+	(xviewer_reload_plugin_class_init):
 	Update reload plugin to be independent of the five predefined
 	menu slots. Also remove unneeded hook.
 
@@ -31,7 +31,7 @@
 
 2009-02-28  Felix Riemann  <friemann@svn.gnome.org>
 
-	* reload/eog-reload-plugin.c: Use 'R' as shortcut key. The old one is
+	* reload/xviewer-reload-plugin.c: Use 'R' as shortcut key. The old one is
 	needed elsewhere.
 
 2009-02-16  Felix Riemann  <friemann@svn.gnome.org>
@@ -64,7 +64,7 @@
 
 2008-09-07  Felix Riemann  <friemann@svn.gnome.org>
 
-	* reload/eog-reload-plugin.c: (reload_cb): Adapt reload plugin to the
+	* reload/xviewer-reload-plugin.c: (reload_cb): Adapt reload plugin to the
 	latest API changes regarding image reloading. This turns this plugin
 	pretty much into a boilerplate plugin. Part of bug #548392.
 
@@ -122,23 +122,23 @@
 
 2008-03-20  Claudio Saavedra  <csaavedra@gnome.org>
 
-	* statusbar-date/eog-statusbar-date-plugin.c: (impl_activate): Request
+	* statusbar-date/xviewer-statusbar-date-plugin.c: (impl_activate): Request
 	a wider size, to give place for the human readable date.
 
 2008-03-20  Claudio Saavedra  <csaavedra@gnome.org>
 
-	* statusbar-date/eog-statusbar-date-plugin.c: (impl_deactivate):
+	* statusbar-date/xviewer-statusbar-date-plugin.c: (impl_deactivate):
 	Disconnect the signal handler on plugin deactivation.
 
 2008-03-20  Claudio Saavedra  <csaavedra@gnome.org>
 
-	* statusbar-date/eog-statusbar-date-plugin.c: (statusbar_set_date),
+	* statusbar-date/xviewer-statusbar-date-plugin.c: (statusbar_set_date),
 	(selection_changed_cb), (impl_activate), (impl_deactivate): Do some refactoring
 	to allow to set the date during plugin activation.
 
 2008-03-20  Claudio Saavedra  <csaavedra@gnome.org>
 
-	* statusbar-date/eog-statusbar-date-plugin.c:
+	* statusbar-date/xviewer-statusbar-date-plugin.c:
 	(selection_changed_cb): Remove unnecessary checks
 	for HAVE_EXIF.
 
@@ -147,13 +147,13 @@
 	* Makefile.am: Add statusbar-date plugin conditionally on
 	libexif presence.
 	* statusbar-date/Makefile.am:
-	* statusbar-date/eog-statusbar-date-plugin.c: (free_window_data),
-	(selection_changed_cb), (eog_statusbar_date_plugin_init),
-	(eog_statusbar_date_plugin_finalize), (impl_activate),
+	* statusbar-date/xviewer-statusbar-date-plugin.c: (free_window_data),
+	(selection_changed_cb), (xviewer_statusbar_date_plugin_init),
+	(xviewer_statusbar_date_plugin_finalize), (impl_activate),
 	(impl_deactivate), (impl_update_ui),
-	(eog_statusbar_date_plugin_class_init):
-	* statusbar-date/eog-statusbar-date-plugin.h:
-	* statusbar-date/statusbar-date.eog-plugin.desktop.in:
+	(xviewer_statusbar_date_plugin_class_init):
+	* statusbar-date/xviewer-statusbar-date-plugin.h:
+	* statusbar-date/statusbar-date.xviewer-plugin.desktop.in:
 
 	Added a plugin to show the EXIF date on the statusbar. This fixes
 	bug #466566.

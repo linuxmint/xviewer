@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Session Handler
+/* Xviewer - Session Handler
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -23,24 +23,24 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_SESSION_H__
-#define __EOG_SESSION_H__
+#ifndef __XVIEWER_SESSION_H__
+#define __XVIEWER_SESSION_H__
 
-#include "eog-application.h"
+#include "xviewer-application.h"
 
 #include <glib.h>
 
 G_BEGIN_DECLS
 
 G_GNUC_INTERNAL
-void 		eog_session_init 		(EogApplication *application);
+void 		xviewer_session_init 		(XviewerApplication *application);
 
 G_GNUC_INTERNAL
-gboolean 	eog_session_is_restored 	(void);
+gboolean 	xviewer_session_is_restored 	(void);
 
 G_GNUC_INTERNAL
-gboolean 	eog_session_load 		(void);
+gboolean 	xviewer_session_load 		(void);
 
 G_END_DECLS
 
-#endif /* __EOG_SESSION_H__ */
+#endif /* __XVIEWER_SESSION_H__ */

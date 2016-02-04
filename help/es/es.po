@@ -1,11 +1,11 @@
-# translation of eog.help.master.po to Español
+# translation of xviewer.help.master.po to Español
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2009, 2010, 2011.
 # 
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011., 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-help.master\n"
+"Project-Id-Version: xviewer-help.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-02 03:36+0000\n"
 "PO-Revision-Date: 2014-04-02 10:10+0200\n"
@@ -111,17 +111,17 @@ msgstr ""
 #: C/bug-filing.page:30
 msgid ""
 "Once you have an account, log in, and click <guiseq><gui>File a Bug</"
-"gui><gui>Core</gui><gui>eog</gui></guiseq>. Before reporting a bug, please "
+"gui><gui>Core</gui><gui>xviewer</gui></guiseq>. Before reporting a bug, please "
 "read the <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html"
 "\">bug writing guidelines</link>, and please <link href=\"https://bugzilla."
-"gnome.org/browse.cgi?product=eog\">browse</link> for the bug to see if it "
+"gnome.org/browse.cgi?product=xviewer\">browse</link> for the bug to see if it "
 "already exists."
 msgstr ""
 "Una vez que tenga una cuenta, inicie sesión y pulse en <guiseq><gui>File a "
-"Bug</gui><gui>Core</gui><gui>eog</gui></guiseq>. Antes de informar de un "
+"Bug</gui><gui>Core</gui><gui>xviewer</gui></guiseq>. Antes de informar de un "
 "error, lea la <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-"
 "writing.html\">guía para informar de un error</link> y <link href=\"https://"
-"bugzilla.gnome.org/browse.cgi?product=eog\">explore</link> para ver si ya se "
+"bugzilla.gnome.org/browse.cgi?product=xviewer\">explore</link> para ver si ya se "
 "ha informado del error."
 
 #. (itstool) path: page/p
@@ -168,9 +168,9 @@ msgstr "Línea de comandos"
 #. (itstool) path: info/desc
 #: C/commandline.page:8
 msgid ""
-"The <cmd>eog</cmd> command can open any number of images in various modes."
+"The <cmd>xviewer</cmd> command can open any number of images in various modes."
 msgstr ""
-"El comando <cmd>eog</cmd> puede abrir cualquier número de imágenes en varios "
+"El comando <cmd>xviewer</cmd> puede abrir cualquier número de imágenes en varios "
 "modos."
 
 #. (itstool) path: credit/name
@@ -190,40 +190,40 @@ msgstr "La línea de comandos"
 #: C/commandline.page:27
 msgid ""
 "To start the <app>Image Viewer</app> from the <app>Terminal</app>, type "
-"<cmd>eog</cmd>."
+"<cmd>xviewer</cmd>."
 msgstr ""
 "Para iniciar el <app>Visor de imágenes</app> desde la <app>Terminal</app>, "
-"escriba <cmd>eog</cmd>."
+"escriba <cmd>xviewer</cmd>."
 
 #. (itstool) path: page/p
 #: C/commandline.page:31
 msgid ""
-"You can open a specific file by typing the filename after the <cmd>eog</cmd> "
+"You can open a specific file by typing the filename after the <cmd>xviewer</cmd> "
 "command:"
 msgstr ""
 "Puede abrir un archivo en concreto escribiendo el nombre del archivo después "
-"del comando <cmd>eog</cmd>:"
+"del comando <cmd>xviewer</cmd>:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:34
 #, no-wrap
-msgid "eog image.jpeg"
-msgstr "eog imagen.jpeg"
+msgid "xviewer image.jpeg"
+msgstr "xviewer imagen.jpeg"
 
 #. (itstool) path: page/p
 #: C/commandline.page:35
 msgid ""
-"You can open a specific folder by typing the folder name after the <cmd>eog</"
+"You can open a specific folder by typing the folder name after the <cmd>xviewer</"
 "cmd> command:"
 msgstr ""
 "Puede abrir una carpeta en concreto escribiendo el nombre del archivo "
-"después del comando <cmd>eog</cmd>:"
+"después del comando <cmd>xviewer</cmd>:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:38
 #, no-wrap
-msgid "eog folder"
-msgstr "eog carpeta"
+msgid "xviewer folder"
+msgstr "xviewer carpeta"
 
 #. (itstool) path: page/p
 #: C/commandline.page:39
@@ -242,8 +242,8 @@ msgstr "Abrir una imagen en modo a pantalla completa"
 #. (itstool) path: section/screen
 #: C/commandline.page:45
 #, no-wrap
-msgid "eog --fullscreen image.jpeg"
-msgstr "eog --fullscreen imagen.jpeg"
+msgid "xviewer --fullscreen image.jpeg"
+msgstr "xviewer --fullscreen imagen.jpeg"
 
 #. (itstool) path: section/title
 #: C/commandline.page:48
@@ -253,8 +253,8 @@ msgstr "Abrir imagen con la colección desactivada"
 #. (itstool) path: section/screen
 #: C/commandline.page:49
 #, no-wrap
-msgid "eog --disable-gallery image.jpeg"
-msgstr "eog --disable-gallery imagen.jpeg"
+msgid "xviewer --disable-gallery image.jpeg"
+msgstr "xviewer --disable-gallery imagen.jpeg"
 
 #. (itstool) path: section/title
 #: C/commandline.page:52
@@ -264,8 +264,8 @@ msgstr "Abrir imagen en una instancia nueva"
 #. (itstool) path: section/screen
 #: C/commandline.page:53
 #, no-wrap
-msgid "eog --new-instance image.jpeg"
-msgstr "eog --new-instance imagen.jpeg"
+msgid "xviewer --new-instance image.jpeg"
+msgstr "xviewer --new-instance imagen.jpeg"
 
 #. (itstool) path: section/title
 #: C/commandline.page:56
@@ -275,8 +275,8 @@ msgstr "Abrir una carpeta en modo diapositiva"
 #. (itstool) path: section/screen
 #: C/commandline.page:57
 #, no-wrap
-msgid "eog --slide-show Pictures/"
-msgstr "eog --slide-show Imágenes/"
+msgid "xviewer --slide-show Pictures/"
+msgstr "xviewer --slide-show Imágenes/"
 
 #. (itstool) path: info/desc
 #: C/copy-paste.page:9
@@ -444,19 +444,19 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://wiki.gnome.org/Apps/EyeOfGnome/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Xviewer/"
 "PlaceForNewIdeas\">help develop</link> the <app>Image Viewer</app>, you can "
 "get in touch with the developers using <link href=\"https://cbe005.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Feog\">irc</link>, or via our "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/eog-list\">mailing list</"
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fxviewer\">irc</link>, or via our "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/xviewer-list\">mailing list</"
 "link>."
 msgstr ""
-"Si quiere <link href=\"https://wiki.gnome.org/Apps/EyeOfGnome/"
+"Si quiere <link href=\"https://wiki.gnome.org/Apps/Xviewer/"
 "PlaceForNewIdeas\">contribuir al desarrollo</link> del <app>Visor de "
 "imágenes</app>, puede ponerse en contacto con los desarrolladores usando "
 "<link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Feog\">irc</link>, o mediante su <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/eog-list\">lista de correo</link>."
+"%2Fxviewer\">irc</link>, o mediante su <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/xviewer-list\">lista de correo</link>."
 
 #. (itstool) path: info/desc
 #: C/documentation.page:6
@@ -998,27 +998,27 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/index.page:7
-msgid "Help for the Eye of GNOME Image Viewer."
-msgstr "Ayuda del Visor de imágenes Eye of GNOME."
+msgid "Help for the Xviewer Image Viewer."
+msgstr "Ayuda del Visor de imágenes Xviewer."
 
 #. (itstool) path: info/title
 #: C/index.page:9
 msgctxt "link"
-msgid "Eye of GNOME Image Viewer"
-msgstr "Visor de imágenes Eye of GNOME"
+msgid "Xviewer Image Viewer"
+msgstr "Visor de imágenes Xviewer"
 
 #. (itstool) path: info/title
 #: C/index.page:10
 msgctxt "text"
-msgid "Eye of GNOME Image Viewer"
-msgstr "Visor de imágenes Eye of GNOME"
+msgid "Xviewer Image Viewer"
+msgstr "Visor de imágenes Xviewer"
 
 #. (itstool) path: page/title
 #: C/index.page:20
 #| msgctxt "link"
-#| msgid "Eye of GNOME Image Viewer"
-msgid "<_:media-1/> Eye of GNOME Image Viewer"
-msgstr "<_:media-1/> Visor de imágenes Eye of GNOME"
+#| msgid "Xviewer Image Viewer"
+msgid "<_:media-1/> Xviewer Image Viewer"
+msgstr "<_:media-1/> Visor de imágenes Xviewer"
 
 #. (itstool) path: section/title
 #: C/index.page:23
@@ -1062,8 +1062,8 @@ msgstr "Involucrarse"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:7
-msgid "Welcome to the <app>Eye of GNOME Image Viewer</app>."
-msgstr "Bienvenido al <app>Visor de imágenes Eye of GNOME</app>."
+msgid "Welcome to the <app>Xviewer Image Viewer</app>."
+msgstr "Bienvenido al <app>Visor de imágenes Xviewer</app>."
 
 #. (itstool) path: page/title
 #: C/introduction.page:20
@@ -1073,7 +1073,7 @@ msgstr "Introducción"
 #. (itstool) path: page/p
 #: C/introduction.page:22
 msgid ""
-"<app>Eye of GNOME</app> is an image viewer. With it, you can view pictures "
+"<app>Xviewer</app> is an image viewer. With it, you can view pictures "
 "of <link xref=\"formats-view\">almost any type</link>. It can handle <link "
 "xref=\"view#image-gallery\">large collections</link> of pictures, and can "
 "display a <link xref=\"slideshow\">slideshow</link>. You can also make basic "
@@ -1081,7 +1081,7 @@ msgid ""
 "link> them, or <link xref=\"format-change\">converting them</link> to a "
 "different file format."
 msgstr ""
-"<app>Eye of GNOME</app> es un visor de imágenes. Con él puede ver imágenes "
+"<app>Xviewer</app> es un visor de imágenes. Con él puede ver imágenes "
 "de <link xref=\"formats-view\">casi cualquier tipo</link>. Puede gestionar "
 "<link xref=\"view#image-gallery\">grandes colecciones</link> de imágenes y "
 "puede mostrar un pase de <link xref=\"slideshow\">diapositivas</link>. "
@@ -1349,19 +1349,19 @@ msgstr ""
 #: C/plugin-exif-digital.page:51
 msgid ""
 "To be able to see the Exif data embedded in your photos, you must first "
-"install the <link xref=\"plugins\">eog-plugins</link> package."
+"install the <link xref=\"plugins\">xviewer-plugins</link> package."
 msgstr ""
 "Para poder ver los datos Exif empotrados en sus fotos, primero debe instalar "
-"el paquete <link xref=\"plugins\">eog-plugins</link>."
+"el paquete <link xref=\"plugins\">xviewer-plugins</link>."
 
 #. (itstool) path: item/p
 #: C/plugin-exif-digital.page:55
 msgid ""
-"If <sys>eog-plugins</sys> is installed, click <guiseq><gui>Edit</"
+"If <sys>xviewer-plugins</sys> is installed, click <guiseq><gui>Edit</"
 "gui><gui>Preferences</gui></guiseq> and go to the <gui>Plugins</gui> tab. "
 "Then, check <gui>Exif display</gui> and click <gui>Close</gui>."
 msgstr ""
-"Si <sys>eog-plugins</sys> está instalado, pulse <guiseq><gui>Editar</"
+"Si <sys>xviewer-plugins</sys> está instalado, pulse <guiseq><gui>Editar</"
 "gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</"
 "gui>. Después, marque <gui>Pantalla Exif</gui> y pulse <gui>Cerrar</gui>."
 
@@ -1414,19 +1414,19 @@ msgstr ""
 #: C/plugin-exif-digital.page:83
 msgid ""
 "To be able to see a map of where your photos were taken, you must first "
-"install the <link xref=\"plugins\">eog-plugins</link> package."
+"install the <link xref=\"plugins\">xviewer-plugins</link> package."
 msgstr ""
 "Para poder ver un mapa de dónde se tomaron sus fotos, primero debe instalar "
-"el paquete <link xref=\"plugins\">eog-plugins</link>."
+"el paquete <link xref=\"plugins\">xviewer-plugins</link>."
 
 #. (itstool) path: item/p
 #: C/plugin-exif-digital.page:87
 msgid ""
-"If <sys>eog-plugins</sys> is installed, click <guiseq><gui>Edit</"
+"If <sys>xviewer-plugins</sys> is installed, click <guiseq><gui>Edit</"
 "gui><gui>Preferences</gui></guiseq> and go to the <gui>Plugins</gui> tab. "
 "Then, check <gui>Map</gui> and click <gui>Close</gui>."
 msgstr ""
-"Si <sys>eog-plugins</sys> está instalado, pulse <guiseq><gui>Editar</"
+"Si <sys>xviewer-plugins</sys> está instalado, pulse <guiseq><gui>Editar</"
 "gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</"
 "gui>. Después, marque <gui>Mapa</gui> y pulse <gui>Cerrar</gui>."
 
@@ -1468,13 +1468,13 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/plugin-fullscreen-background.page:24
 msgid ""
-"To do this, make sure that <link xref=\"plugins\">eog-plugins</link> is "
+"To do this, make sure that <link xref=\"plugins\">xviewer-plugins</link> is "
 "installed. Then, click <guiseq><gui>Edit</gui><gui>Preferences</gui></"
 "guiseq> and go to the <gui>Plugins</gui> tab. Then, check <gui>Fullscreen "
 "Background</gui> and click <gui>Preferences</gui>. Choose the color you want "
 "in fullscreen mode and click <gui>Close</gui>"
 msgstr ""
-"Para ello, asegúrese de que <link xref=\"plugins\">eog-plugins</link> está "
+"Para ello, asegúrese de que <link xref=\"plugins\">xviewer-plugins</link> está "
 "instalado. Después, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></"
 "guiseq> y vaya a la pestaña <gui>Complementos</gui> y marque <gui>Fondo a "
 "pantalla completa</gui> y pulse <gui>Preferencias</gui>. Elija el color que "
@@ -1566,12 +1566,12 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/plugin-picasa.page:26
 msgid ""
-"To do this, make sure that <link xref=\"plugins\">eog-plugins</link> is "
+"To do this, make sure that <link xref=\"plugins\">xviewer-plugins</link> is "
 "installed. Then, click <guiseq><gui>Edit</gui><gui>Preferences</gui></"
 "guiseq>, go to the <gui>Plugins</gui> tab and check <gui>PicasaWeb Uploader</"
 "gui>."
 msgstr ""
-"Para ello, asegúrese de que <sys>eog-plugins</sys> está instalado. Después, "
+"Para ello, asegúrese de que <sys>xviewer-plugins</sys> está instalado. Después, "
 "pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la "
 "pestaña <gui>Complementos</gui> y marque <gui>Cargador para PicasaWeb</gui>."
 
@@ -1615,18 +1615,18 @@ msgstr ""
 #: C/plugin-python-console.page:29
 msgid ""
 "Before you can activate the Python console, you will need to install <link "
-"xref=\"plugins\">eog-plugins</link>."
+"xref=\"plugins\">xviewer-plugins</link>."
 msgstr ""
 "Antes de que pueda activar la Consola de Python deberá instalar <link xref="
-"\"plugins\">eog-plugins</link>."
+"\"plugins\">xviewer-plugins</link>."
 
 #. (itstool) path: item/p
 #: C/plugin-python-console.page:33
 msgid ""
-"Once <sys>eog-plugins</sys> is installed, click <guiseq><gui>Edit</gui> "
+"Once <sys>xviewer-plugins</sys> is installed, click <guiseq><gui>Edit</gui> "
 "<gui>Preferences</gui></guiseq> and go to the <gui>Plugins</gui> tab."
 msgstr ""
-"Una vez que haya instalado <sys>eog-plugins</sys>, pulse "
+"Una vez que haya instalado <sys>xviewer-plugins</sys>, pulse "
 "<guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la "
 "pestaña <gui>Complementos</gui>."
 
@@ -1695,10 +1695,10 @@ msgstr ""
 #: C/plugin-send-by-mail.page:30 C/plugin-slideshow-shuffle.page:30
 msgid ""
 "In order to enable this feature, you need to have installed <link xref="
-"\"plugins\">eog-plugins</link>."
+"\"plugins\">xviewer-plugins</link>."
 msgstr ""
 "Para poder añadir esta funcionalidad necesitará tener instalado <link xref="
-"\"plugins\">eog-plugins</link>."
+"\"plugins\">xviewer-plugins</link>."
 
 #. (itstool) path: note/p
 #: C/plugin-send-by-mail.page:34
@@ -1753,36 +1753,36 @@ msgstr "Complementos"
 #. (itstool) path: page/p
 #: C/plugins.page:28
 msgid ""
-"You can install the <sys>eog-plugins</sys> package to get extra plugins for "
+"You can install the <sys>xviewer-plugins</sys> package to get extra plugins for "
 "the image viewer. Plugins add additional features, like the ones listed "
 "below."
 msgstr ""
-"Puede instalar el paquete <sys>eog-plugins</sys> para obtener un conjunto de "
+"Puede instalar el paquete <sys>xviewer-plugins</sys> para obtener un conjunto de "
 "complementos para el Visor de imágenes. Los complementos añaden "
 "funcionalidades adiciones, como las listadas debajo."
 
 #. (itstool) path: note/p
 #: C/plugins.page:32
 msgid ""
-"You can install the <sys>eog-plugins</sys> package using your Linux "
+"You can install the <sys>xviewer-plugins</sys> package using your Linux "
 "distribution's <em>package manager</em>."
 msgstr ""
-"Puede instalar el paquete <sys>eog-plugins</sys> usando el <app>gestor de "
+"Puede instalar el paquete <sys>xviewer-plugins</sys> usando el <app>gestor de "
 "paquetes</app> de su distribución GNU/Linux."
 
 #. (itstool) path: when/p
 #: C/plugins.page:37
 msgid ""
-"<link action=\"install:eog-plugins\" href=\"http://ftp.gnome.org/pub/gnome/"
-"sources/eog-plugins\" style=\"button\">install eog-plugins</link>"
+"<link action=\"install:xviewer-plugins\" href=\"http://ftp.gnome.org/pub/gnome/"
+"sources/xviewer-plugins\" style=\"button\">install xviewer-plugins</link>"
 msgstr ""
-"<link action=\"install:eog-plugins\" href=\"http://ftp.gnome.org/pub/gnome/"
-"sources/eog-plugins\" style=\"button\">instalar eog-plugins</link>"
+"<link action=\"install:xviewer-plugins\" href=\"http://ftp.gnome.org/pub/gnome/"
+"sources/xviewer-plugins\" style=\"button\">instalar xviewer-plugins</link>"
 
 #. (itstool) path: page/p
 #: C/plugins.page:42
-msgid "The following features are included in <sys>eog-plugins</sys>:"
-msgstr "Las siguientes características se incluyen en <sys>eog-plugins</sys>:"
+msgid "The following features are included in <sys>xviewer-plugins</sys>:"
+msgstr "Las siguientes características se incluyen en <sys>xviewer-plugins</sys>:"
 
 #. (itstool) path: item/p
 #: C/plugins.page:46
@@ -1921,10 +1921,10 @@ msgstr ""
 #: C/plugin-zoom-width.page:29
 msgid ""
 "In order to add this functionality, you will need to have installed <link "
-"xref=\"plugins\">eog-plugins</link>."
+"xref=\"plugins\">xviewer-plugins</link>."
 msgstr ""
 "Para añadir esta funcionalidad necesitará instalar <link xref=\"plugins"
-"\">eog-plugins</link>."
+"\">xviewer-plugins</link>."
 
 #. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
@@ -2171,13 +2171,13 @@ msgstr ""
 #. (itstool) path: section/p
 #: C/preferences.page:111
 msgid ""
-"You may also wish to install the <link xref=\"plugins\">eog-plugins package</"
+"You may also wish to install the <link xref=\"plugins\">xviewer-plugins package</"
 "link>, which contains plugins providing a number of extra features. After "
 "installing it, you will be able to activate <link xref=\"index#plugins"
 "\">additional plugins</link>, like the ones shown in the picture on the "
 "right."
 msgstr ""
-"También puede querer instalar el <link xref=\"plugins\">paquete eog-plugins</"
+"También puede querer instalar el <link xref=\"plugins\">paquete xviewer-plugins</"
 "link> que contiene complementos que proporcionan ciertas características "
 "adicionales. Después de hacerlo, podrá seleccionar qué <link xref="
 "\"index#plugins\">complementos adicionales</link> quiere activar, según "
@@ -2816,10 +2816,10 @@ msgstr ""
 #: C/toolbar.page:60
 msgctxt "_"
 msgid ""
-"external ref='figures/eog-toolbar-editor.png' "
+"external ref='figures/xviewer-toolbar-editor.png' "
 "md5='8667905116666a17f53ecfecb725b004'"
 msgstr ""
-"external ref='figures/eog-toolbar-editor.png' "
+"external ref='figures/xviewer-toolbar-editor.png' "
 "md5='8667905116666a17f53ecfecb725b004'"
 
 #. (itstool) path: info/desc
@@ -2971,10 +2971,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/eog/\">many languages</"
+"There are <link href=\"http://l10n.gnome.org/module/xviewer/\">many languages</"
 "link> for which translations are still needed."
 msgstr ""
-"Hay <link href=\"http://l10n.gnome.org/module/eog/\">muchos idiomas</link> "
+"Hay <link href=\"http://l10n.gnome.org/module/xviewer/\">muchos idiomas</link> "
 "para los que se siguen necesitando traducciones."
 
 #. (itstool) path: page/p
@@ -3240,24 +3240,24 @@ msgstr ""
 
 #~ msgctxt "_"
 #~ msgid ""
-#~ "external ref='figures/eog-trail.png' "
+#~ "external ref='figures/xviewer-trail.png' "
 #~ "md5='e0d1ca1a72b992f34f2db77fdc176fb7'"
 #~ msgstr ""
-#~ "external ref='figures/eog-trail.png' "
+#~ "external ref='figures/xviewer-trail.png' "
 #~ "md5='e0d1ca1a72b992f34f2db77fdc176fb7'"
 
 #~ msgctxt "_"
 #~ msgid ""
-#~ "external ref='figures/eog-logo.png' md5='c96789a27fc0c18d812613e33481b022'"
+#~ "external ref='figures/xviewer-logo.png' md5='c96789a27fc0c18d812613e33481b022'"
 #~ msgstr ""
-#~ "external ref='figures/eog-logo.png' md5='c96789a27fc0c18d812613e33481b022'"
+#~ "external ref='figures/xviewer-logo.png' md5='c96789a27fc0c18d812613e33481b022'"
 
 #~ msgid ""
-#~ "<media type=\"image\" src=\"figures/eog-logo.png\">Eye of GNOME logo</"
-#~ "media> Eye of GNOME Image Viewer"
+#~ "<media type=\"image\" src=\"figures/xviewer-logo.png\">Xviewer logo</"
+#~ "media> Xviewer Image Viewer"
 #~ msgstr ""
-#~ "<media type=\"image\" src=\"figures/eog.png\">Logo de Eye of GNOME</"
-#~ "media> Visor de imágenes Eye of GNOME"
+#~ "<media type=\"image\" src=\"figures/xviewer.png\">Logo de Xviewer</"
+#~ "media> Visor de imágenes Xviewer"
 
 #~ msgctxt "_"
 #~ msgid ""
@@ -3323,12 +3323,12 @@ msgstr ""
 #~ msgstr "También puede añadir un botón para subir imágenes a Flickr."
 
 #~ msgid ""
-#~ "To do this, make sure that <link xref=\"plugins\">eog-plugins</link> is "
+#~ "To do this, make sure that <link xref=\"plugins\">xviewer-plugins</link> is "
 #~ "installed. Then, click <guiseq><gui>Edit</gui><gui>Preferences</gui></"
 #~ "guiseq>, go to the <gui>Plugins</gui> tab and check <gui>Upload to "
 #~ "Flickr</gui>."
 #~ msgstr ""
-#~ "Para ello, asegúrese de que <sys>eog-plugins</sys> está instalado. "
+#~ "Para ello, asegúrese de que <sys>xviewer-plugins</sys> está instalado. "
 #~ "Después, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> "
 #~ "y vaya a la pestaña <gui>Complementos</gui> y marque <gui>Cargador para "
 #~ "Flickr</gui>."
@@ -3422,8 +3422,8 @@ msgstr ""
 #~ msgid "fabianapsimoes@gmail.com"
 #~ msgstr "fabianapsimoes@gmail.com"
 
-#~ msgid "install eog-plugins"
-#~ msgstr "Instalar «eog-plugins»"
+#~ msgid "install xviewer-plugins"
+#~ msgstr "Instalar «xviewer-plugins»"
 
 #~ msgid "original file:"
 #~ msgstr "archivo original:"
@@ -3458,14 +3458,14 @@ msgstr ""
 #~ "quiere seguir trabajando con el archivo original."
 
 #~ msgid ""
-#~ "You can open multiple images by typing the filenames after the <cmd>eog</"
+#~ "You can open multiple images by typing the filenames after the <cmd>xviewer</"
 #~ "cmd> command, separating the filenames by a space:"
 #~ msgstr ""
 #~ "Puede abrir varias imágenes escribiendo los nombres de los archivos "
-#~ "después del comando <cmd>eog</cmd>, separándolos por un espacio:"
+#~ "después del comando <cmd>xviewer</cmd>, separándolos por un espacio:"
 
-#~ msgid "eog image1.jpeg image2.jpeg"
-#~ msgstr "eog imagen1.jpeg imagen2.jpeg"
+#~ msgid "xviewer image1.jpeg image2.jpeg"
+#~ msgstr "xviewer imagen1.jpeg imagen2.jpeg"
 
 #~ msgid ""
 #~ "You can view lots of information about pictures taken with a digital "
@@ -3480,26 +3480,26 @@ msgstr ""
 #~ "\"plugin-exif-digital#date\">fecha</link>."
 
 #~ msgid ""
-#~ "@@image: 'figures/eog-enlarge.png'; md5=00217450a871a6dc754ff9d77701ce40"
+#~ "@@image: 'figures/xviewer-enlarge.png'; md5=00217450a871a6dc754ff9d77701ce40"
 #~ msgstr ""
-#~ "@@image: 'figures/eog-enlarge.png'; md5=00217450a871a6dc754ff9d77701ce40"
+#~ "@@image: 'figures/xviewer-enlarge.png'; md5=00217450a871a6dc754ff9d77701ce40"
 
 #~ msgid ""
-#~ "@@image: 'figures/eog-shrink.png'; md5=a32ef2d5d2a75737206a394c8183cdf8"
+#~ "@@image: 'figures/xviewer-shrink.png'; md5=a32ef2d5d2a75737206a394c8183cdf8"
 #~ msgstr ""
-#~ "@@image: 'figures/eog-shrink.png'; md5=a32ef2d5d2a75737206a394c8183cdf8"
+#~ "@@image: 'figures/xviewer-shrink.png'; md5=a32ef2d5d2a75737206a394c8183cdf8"
 
 #~ msgid ""
-#~ "@@image: 'figures/eog-normalsize.png'; "
+#~ "@@image: 'figures/xviewer-normalsize.png'; "
 #~ "md5=318389b5fdbed89ec6361c6a0a1f7d9c"
 #~ msgstr ""
-#~ "@@image: 'figures/eog-normalsize.png'; "
+#~ "@@image: 'figures/xviewer-normalsize.png'; "
 #~ "md5=318389b5fdbed89ec6361c6a0a1f7d9c"
 
 #~ msgid ""
-#~ "@@image: 'figures/eog-bestfit.png'; md5=e65b05d7f601a4152e6e3b101803ac47"
+#~ "@@image: 'figures/xviewer-bestfit.png'; md5=e65b05d7f601a4152e6e3b101803ac47"
 #~ msgstr ""
-#~ "@@image: 'figures/eog-bestfit.png'; md5=e65b05d7f601a4152e6e3b101803ac47"
+#~ "@@image: 'figures/xviewer-bestfit.png'; md5=e65b05d7f601a4152e6e3b101803ac47"
 
 #~ msgid "View"
 #~ msgstr "Ver"
@@ -3628,10 +3628,10 @@ msgstr ""
 #~ "adelante y atrás, respectivamente."
 
 #~ msgid ""
-#~ "@@image: 'figures/eog-toolbar-default.png'; "
+#~ "@@image: 'figures/xviewer-toolbar-default.png'; "
 #~ "md5=60e39efaa71fcf2d316fb3bf8069c8c2"
 #~ msgstr ""
-#~ "@@image: 'figures/eog-toolbar-default.png'; "
+#~ "@@image: 'figures/xviewer-toolbar-default.png'; "
 #~ "md5=60e39efaa71fcf2d316fb3bf8069c8c2"
 
 #~ msgid "Click <guiseq><gui>View</gui><gui>Toolbar</gui></guiseq>."
@@ -3809,13 +3809,13 @@ msgstr ""
 
 #~ msgid ""
 #~ "In order to add this functionality, you will need to install <link xref="
-#~ "\"plugins\">eog-plugins</link>. Once installed, you can activate the "
+#~ "\"plugins\">xviewer-plugins</link>. Once installed, you can activate the "
 #~ "plugin in the <link xref=\"preferences#plugins\">preferences plugins "
 #~ "menu</link>. This will give you a convenient <guiseq><gui>Tools</"
 #~ "gui><gui>Upload to flickr</gui></guiseq> menu item."
 #~ msgstr ""
 #~ "Para añadir esta funcionalidad, deberá instalar el paquete <link xref="
-#~ "\"plugins\">eog-plugins</link>. Una vez instalado, puede activar el "
+#~ "\"plugins\">xviewer-plugins</link>. Una vez instalado, puede activar el "
 #~ "complemento en el <link xref=\"preferences#plugins\">menú de preferencias "
 #~ "de los complementos</link>. Esto le dará un elemento de menú "
 #~ "<guiseq><gui>Herramientas</gui><gui>Subir fotos a Flickr</gui></guiseq> "
@@ -3920,13 +3920,13 @@ msgstr ""
 #~ msgstr "Pulse <gui>Abrir</gui>."
 
 #~ msgid ""
-#~ "<app>Eye of GNOME</app> is an image viewer. With it, you can view single "
+#~ "<app>Xviewer</app> is an image viewer. With it, you can view single "
 #~ "image files, as well as large image collections. The <app>image viewer</"
 #~ "app> supports a variey of image <link xref=\"formats-view\"> formats for "
 #~ "viewing, by default</link>. It also supports certain <link xref=\"formats-"
 #~ "save\">file formats for saving by default</link>."
 #~ msgstr ""
-#~ "<app>Eye of GNOME</app> es un Visor de imágenes. Con él, puede ver "
+#~ "<app>Xviewer</app> es un Visor de imágenes. Con él, puede ver "
 #~ "archivos de imágenes sencillos, así como grandes colecciones de imágenes. "
 #~ "El <app>Visor de imágenes</app> soporta varios <link xref=\"formats-view"
 #~ "\"> formatos de visualización, de manera predeterminada</link>. También "
@@ -4086,15 +4086,15 @@ msgstr ""
 #~ "<link xref=\"view#browse\">Explorar carpeta</link> o <link xref="
 #~ "\"view#image-gallery\">colección de imágenes.</link>"
 
-#~ msgid "A python console for <app>Eye of GNOME</app>."
-#~ msgstr "Una consola de Python para <app>Eye of GNOME</app>."
+#~ msgid "A python console for <app>Xviewer</app>."
+#~ msgstr "Una consola de Python para <app>Xviewer</app>."
 
 #~ msgid ""
 #~ "<link xref=\"open#from-nautilus\">Open from <app>files</app> app</link> "
-#~ "or <link xref=\"open#from-eog\">from <app>image viewer</app></link>."
+#~ "or <link xref=\"open#from-xviewer\">from <app>image viewer</app></link>."
 #~ msgstr ""
 #~ "<link xref=\"open#from-nautilus\">Abrir con la aplicación de "
-#~ "<app>archivos</app></link> o <link xref=\"open#from-eog\">con el "
+#~ "<app>archivos</app></link> o <link xref=\"open#from-xviewer\">con el "
 #~ "<app>Visor de imágenes</app></link>."
 
 #~ msgid ""

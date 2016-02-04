@@ -1,4 +1,4 @@
-/* Eye Of GNOME -- Affine Transformations
+/* Xviewer -- Affine Transformations
  *
  * Copyright (C) 2003-2009 The Free Software Foundation
  *
@@ -29,57 +29,57 @@
 #include <gtk/gtk.h>
 #include <cairo/cairo.h>
 
-#include "eog-transform.h"
-#include "eog-jobs.h"
+#include "xviewer-transform.h"
+#include "xviewer-jobs.h"
 
 /* The number of progress updates per transformation */
-#define EOG_TRANSFORM_N_PROG_UPDATES 20
+#define XVIEWER_TRANSFORM_N_PROG_UPDATES 20
 
-struct _EogTransformPrivate {
+struct _XviewerTransformPrivate {
 	cairo_matrix_t affine;
 };
 
 typedef struct {
 	gdouble x;
 	gdouble y;
-} EogPoint;
+} XviewerPoint;
 
 /* Convert degrees into radians */
-#define EOG_DEG_TO_RAD(degree) ((degree) * (G_PI/180.0)) 
+#define XVIEWER_DEG_TO_RAD(degree) ((degree) * (G_PI/180.0)) 
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogTransform, eog_transform, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerTransform, xviewer_transform, G_TYPE_OBJECT)
 
 static void
-eog_transform_init (EogTransform *trans)
+xviewer_transform_init (XviewerTransform *trans)
 {
-	trans->priv = eog_transform_get_instance_private (trans);
+	trans->priv = xviewer_transform_get_instance_private (trans);
 }
 
 static void
-eog_transform_class_init (EogTransformClass *klass)
+xviewer_transform_class_init (XviewerTransformClass *klass)
 {
 
 }
 
 /**
- * eog_transform_apply:
- * @trans: a #EogTransform
+ * xviewer_transform_apply:
+ * @trans: a #XviewerTransform
  * @pixbuf: a #GdkPixbuf
- * @job: a #EogJob
+ * @job: a #XviewerJob
  *
  * Applies the transformation in @trans to @pixbuf, setting its progress in @job.
  *
  * Returns: (transfer full): A new #GdkPixbuf with the transformation applied.
  **/
 GdkPixbuf*
-eog_transform_apply (EogTransform *trans, GdkPixbuf *pixbuf, EogJob *job)
+xviewer_transform_apply (XviewerTransform *trans, GdkPixbuf *pixbuf, XviewerJob *job)
 {
-	EogPoint dest_top_left;
-	EogPoint dest_bottom_right;
-	EogPoint vertices[4] = { {0, 0}, {1, 0}, {1, 1}, {0, 1} };
+	XviewerPoint dest_top_left;
+	XviewerPoint dest_bottom_right;
+	XviewerPoint vertices[4] = { {0, 0}, {1, 0}, {1, 1}, {0, 1} };
 	double r_det;
 	int inverted [6];
-	EogPoint dest;
+	XviewerPoint dest;
 
 	int src_width;
 	int src_height;
@@ -158,7 +158,7 @@ eog_transform_apply (EogTransform *trans, GdkPixbuf *pixbuf, EogJob *job)
 	inverted[4] = -trans->priv->affine.x0 * inverted[0] - trans->priv->affine.y0 * inverted[2];
 	inverted[5] = -trans->priv->affine.x0 * inverted[1] - trans->priv->affine.y0 * inverted[3];
 
-	progress_delta = MAX (1, dest_height / EOG_TRANSFORM_N_PROG_UPDATES);
+	progress_delta = MAX (1, dest_height / XVIEWER_TRANSFORM_N_PROG_UPDATES);
 
 	/*
 	 * for every destination pixel (dx,dy) compute the source pixel (sx, sy)
@@ -185,21 +185,21 @@ eog_transform_apply (EogTransform *trans, GdkPixbuf *pixbuf, EogJob *job)
 
 			progress = (gfloat) (y + 1.0) / (gfloat) dest_height;
 
-			eog_job_set_progress (job, progress);
+			xviewer_job_set_progress (job, progress);
 		}
 	}
 
 	g_object_unref (pixbuf);
 
 	if (job != NULL) {
-		eog_job_set_progress (job, 1.0);
+		xviewer_job_set_progress (job, 1.0);
 	}
 
 	return dest_pixbuf;
 }
 
 static void
-_eog_cairo_matrix_copy (const cairo_matrix_t *src, cairo_matrix_t *dest)
+_xviewer_cairo_matrix_copy (const cairo_matrix_t *src, cairo_matrix_t *dest)
 {
 	cairo_matrix_init (dest, src->xx, src->yx, src->xy, src->yy, src->x0, src->y0);
 }
@@ -208,7 +208,7 @@ _eog_cairo_matrix_copy (const cairo_matrix_t *src, cairo_matrix_t *dest)
 #define DOUBLE_EQUAL(a,b) (fabs (a - b) < DOUBLE_EQUAL_MAX_DIFF)
 /* art_affine_equal modified to work with cairo_matrix_t */
 static gboolean
-_eog_cairo_matrix_equal (const cairo_matrix_t *a, const cairo_matrix_t *b)
+_xviewer_cairo_matrix_equal (const cairo_matrix_t *a, const cairo_matrix_t *b)
 {
 	return (DOUBLE_EQUAL (a->xx, b->xx) && DOUBLE_EQUAL (a->yx, b->yx) &&
 		DOUBLE_EQUAL (a->xy, b->xy) && DOUBLE_EQUAL (a->yy, b->yy) &&
@@ -217,7 +217,7 @@ _eog_cairo_matrix_equal (const cairo_matrix_t *a, const cairo_matrix_t *b)
 
 /* art_affine_flip modified to work with cairo_matrix_t */
 static void
-_eog_cairo_matrix_flip (cairo_matrix_t *dst, const cairo_matrix_t *src, gboolean horiz, gboolean vert)
+_xviewer_cairo_matrix_flip (cairo_matrix_t *dst, const cairo_matrix_t *src, gboolean horiz, gboolean vert)
 {
 	dst->xx = horiz ? -src->xx : src->xx;
 	dst->yx = horiz ? -src->yx : src->yx;
@@ -228,23 +228,23 @@ _eog_cairo_matrix_flip (cairo_matrix_t *dst, const cairo_matrix_t *src, gboolean
 }
 
 /**
- * eog_transform_reverse:
- * @trans: a #EogTransform
+ * xviewer_transform_reverse:
+ * @trans: a #XviewerTransform
  *
  * Creates the reverse transformation of @trans
  *
  * Returns: (transfer full): a new transformation
  **/
-EogTransform*
-eog_transform_reverse (EogTransform *trans)
+XviewerTransform*
+xviewer_transform_reverse (XviewerTransform *trans)
 {
-	EogTransform *reverse;
+	XviewerTransform *reverse;
 
-	g_return_val_if_fail (EOG_IS_TRANSFORM (trans), NULL);
+	g_return_val_if_fail (XVIEWER_IS_TRANSFORM (trans), NULL);
 
-	reverse = EOG_TRANSFORM (g_object_new (EOG_TYPE_TRANSFORM, NULL));
+	reverse = XVIEWER_TRANSFORM (g_object_new (XVIEWER_TYPE_TRANSFORM, NULL));
 
-	_eog_cairo_matrix_copy (&trans->priv->affine, &reverse->priv->affine);
+	_xviewer_cairo_matrix_copy (&trans->priv->affine, &reverse->priv->affine);
 
 	g_return_val_if_fail (cairo_matrix_invert (&reverse->priv->affine) == CAIRO_STATUS_SUCCESS, reverse);
 
@@ -252,23 +252,23 @@ eog_transform_reverse (EogTransform *trans)
 }
 
 /**
- * eog_transform_compose:
- * @trans: a #EogTransform
- * @compose: another #EogTransform
+ * xviewer_transform_compose:
+ * @trans: a #XviewerTransform
+ * @compose: another #XviewerTransform
  *
  * 
  *
  * Returns: (transfer full): a new transform
  **/
-EogTransform*
-eog_transform_compose (EogTransform *trans, EogTransform *compose)
+XviewerTransform*
+xviewer_transform_compose (XviewerTransform *trans, XviewerTransform *compose)
 {
-	EogTransform *composition;
+	XviewerTransform *composition;
 
-	g_return_val_if_fail (EOG_IS_TRANSFORM (trans), NULL);
-	g_return_val_if_fail (EOG_IS_TRANSFORM (compose), NULL);
+	g_return_val_if_fail (XVIEWER_IS_TRANSFORM (trans), NULL);
+	g_return_val_if_fail (XVIEWER_IS_TRANSFORM (compose), NULL);
 
-	composition = EOG_TRANSFORM (g_object_new (EOG_TYPE_TRANSFORM, NULL));
+	composition = XVIEWER_TRANSFORM (g_object_new (XVIEWER_TYPE_TRANSFORM, NULL));
 
 	cairo_matrix_multiply (&composition->priv->affine,
 			       &trans->priv->affine,
@@ -278,168 +278,168 @@ eog_transform_compose (EogTransform *trans, EogTransform *compose)
 }
 
 gboolean
-eog_transform_is_identity (EogTransform *trans)
+xviewer_transform_is_identity (XviewerTransform *trans)
 {
 	static const cairo_matrix_t identity = { 1, 0, 0, 1, 0, 0 };
 
-	g_return_val_if_fail (EOG_IS_TRANSFORM (trans), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_TRANSFORM (trans), FALSE);
 
-	return _eog_cairo_matrix_equal (&identity, &trans->priv->affine);
+	return _xviewer_cairo_matrix_equal (&identity, &trans->priv->affine);
 }
 
-EogTransform*
-eog_transform_identity_new (void)
+XviewerTransform*
+xviewer_transform_identity_new (void)
 {
-	EogTransform *trans;
+	XviewerTransform *trans;
 
-	trans = EOG_TRANSFORM (g_object_new (EOG_TYPE_TRANSFORM, NULL));
+	trans = XVIEWER_TRANSFORM (g_object_new (XVIEWER_TYPE_TRANSFORM, NULL));
 
 	cairo_matrix_init_identity (&trans->priv->affine);
 
 	return trans;
 }
 
-EogTransform*
-eog_transform_rotate_new (int degree)
+XviewerTransform*
+xviewer_transform_rotate_new (int degree)
 {
-	EogTransform *trans;
+	XviewerTransform *trans;
 
-	trans = EOG_TRANSFORM (g_object_new (EOG_TYPE_TRANSFORM, NULL));
+	trans = XVIEWER_TRANSFORM (g_object_new (XVIEWER_TYPE_TRANSFORM, NULL));
 
-	cairo_matrix_init_rotate (&trans->priv->affine, EOG_DEG_TO_RAD(degree));
+	cairo_matrix_init_rotate (&trans->priv->affine, XVIEWER_DEG_TO_RAD(degree));
 
 	return trans;
 }
 
-EogTransform*
-eog_transform_flip_new   (EogTransformType type)
+XviewerTransform*
+xviewer_transform_flip_new   (XviewerTransformType type)
 {
-	EogTransform *trans;
+	XviewerTransform *trans;
 	gboolean horiz, vert;
 
-	trans = EOG_TRANSFORM (g_object_new (EOG_TYPE_TRANSFORM, NULL));
+	trans = XVIEWER_TRANSFORM (g_object_new (XVIEWER_TYPE_TRANSFORM, NULL));
 
 	cairo_matrix_init_identity (&trans->priv->affine);
 
-	horiz = (type == EOG_TRANSFORM_FLIP_HORIZONTAL);
-	vert = (type == EOG_TRANSFORM_FLIP_VERTICAL);
+	horiz = (type == XVIEWER_TRANSFORM_FLIP_HORIZONTAL);
+	vert = (type == XVIEWER_TRANSFORM_FLIP_VERTICAL);
 
-	_eog_cairo_matrix_flip (&trans->priv->affine,
+	_xviewer_cairo_matrix_flip (&trans->priv->affine,
 				&trans->priv->affine,
 				horiz, vert);
 
 	return trans;
 }
 
-EogTransform*
-eog_transform_new (EogTransformType type)
+XviewerTransform*
+xviewer_transform_new (XviewerTransformType type)
 {
-	EogTransform *trans = NULL;
-	EogTransform *temp1 = NULL, *temp2 = NULL;
+	XviewerTransform *trans = NULL;
+	XviewerTransform *temp1 = NULL, *temp2 = NULL;
 
 	switch (type) {
-	case EOG_TRANSFORM_NONE:
-		trans = eog_transform_identity_new ();
+	case XVIEWER_TRANSFORM_NONE:
+		trans = xviewer_transform_identity_new ();
 		break;
-	case EOG_TRANSFORM_FLIP_HORIZONTAL:
-		trans = eog_transform_flip_new (EOG_TRANSFORM_FLIP_HORIZONTAL);
+	case XVIEWER_TRANSFORM_FLIP_HORIZONTAL:
+		trans = xviewer_transform_flip_new (XVIEWER_TRANSFORM_FLIP_HORIZONTAL);
 		break;
-	case EOG_TRANSFORM_ROT_180:
-		trans = eog_transform_rotate_new (180);
+	case XVIEWER_TRANSFORM_ROT_180:
+		trans = xviewer_transform_rotate_new (180);
 		break;
-	case EOG_TRANSFORM_FLIP_VERTICAL:
-		trans = eog_transform_flip_new (EOG_TRANSFORM_FLIP_VERTICAL);
+	case XVIEWER_TRANSFORM_FLIP_VERTICAL:
+		trans = xviewer_transform_flip_new (XVIEWER_TRANSFORM_FLIP_VERTICAL);
 		break;
-	case EOG_TRANSFORM_TRANSPOSE:
-		temp1 = eog_transform_rotate_new (90);
-		temp2 = eog_transform_flip_new (EOG_TRANSFORM_FLIP_HORIZONTAL);
-		trans = eog_transform_compose (temp1, temp2);
+	case XVIEWER_TRANSFORM_TRANSPOSE:
+		temp1 = xviewer_transform_rotate_new (90);
+		temp2 = xviewer_transform_flip_new (XVIEWER_TRANSFORM_FLIP_HORIZONTAL);
+		trans = xviewer_transform_compose (temp1, temp2);
 		g_object_unref (temp1);
 		g_object_unref (temp2);
 		break;
-	case EOG_TRANSFORM_ROT_90:
-		trans = eog_transform_rotate_new (90);
+	case XVIEWER_TRANSFORM_ROT_90:
+		trans = xviewer_transform_rotate_new (90);
 		break;
-	case EOG_TRANSFORM_TRANSVERSE:
-		temp1 = eog_transform_rotate_new (90);
-		temp2 = eog_transform_flip_new (EOG_TRANSFORM_FLIP_VERTICAL);
-		trans = eog_transform_compose (temp1, temp2);
+	case XVIEWER_TRANSFORM_TRANSVERSE:
+		temp1 = xviewer_transform_rotate_new (90);
+		temp2 = xviewer_transform_flip_new (XVIEWER_TRANSFORM_FLIP_VERTICAL);
+		trans = xviewer_transform_compose (temp1, temp2);
 		g_object_unref (temp1);
 		g_object_unref (temp2);
 		break;
-	case EOG_TRANSFORM_ROT_270:
-		trans = eog_transform_rotate_new (270);
+	case XVIEWER_TRANSFORM_ROT_270:
+		trans = xviewer_transform_rotate_new (270);
 		break;
 	default:
-		trans = eog_transform_identity_new ();
+		trans = xviewer_transform_identity_new ();
 		break;
 	}
 
 	return trans;
 }
 
-EogTransformType
-eog_transform_get_transform_type (EogTransform *trans)
+XviewerTransformType
+xviewer_transform_get_transform_type (XviewerTransform *trans)
 {
 	cairo_matrix_t affine, a1, a2;
-	EogTransformPrivate *priv;
+	XviewerTransformPrivate *priv;
 
-	g_return_val_if_fail (EOG_IS_TRANSFORM (trans), EOG_TRANSFORM_NONE);
+	g_return_val_if_fail (XVIEWER_IS_TRANSFORM (trans), XVIEWER_TRANSFORM_NONE);
 
 	priv = trans->priv;
 
-	cairo_matrix_init_rotate (&affine, EOG_DEG_TO_RAD(90));
-	if (_eog_cairo_matrix_equal (&affine, &priv->affine)) {
-		return EOG_TRANSFORM_ROT_90;
+	cairo_matrix_init_rotate (&affine, XVIEWER_DEG_TO_RAD(90));
+	if (_xviewer_cairo_matrix_equal (&affine, &priv->affine)) {
+		return XVIEWER_TRANSFORM_ROT_90;
 	}
 
-	cairo_matrix_init_rotate (&affine, EOG_DEG_TO_RAD(180));
-	if (_eog_cairo_matrix_equal (&affine, &priv->affine)) {
-		return EOG_TRANSFORM_ROT_180;
+	cairo_matrix_init_rotate (&affine, XVIEWER_DEG_TO_RAD(180));
+	if (_xviewer_cairo_matrix_equal (&affine, &priv->affine)) {
+		return XVIEWER_TRANSFORM_ROT_180;
 	}
 
-	cairo_matrix_init_rotate (&affine, EOG_DEG_TO_RAD(270));
-	if (_eog_cairo_matrix_equal (&affine, &priv->affine)) {
-		return EOG_TRANSFORM_ROT_270;
-	}
-
-	cairo_matrix_init_identity (&affine);
-	_eog_cairo_matrix_flip (&affine, &affine, TRUE, FALSE);
-	if (_eog_cairo_matrix_equal (&affine, &priv->affine)) {
-		return EOG_TRANSFORM_FLIP_HORIZONTAL;
+	cairo_matrix_init_rotate (&affine, XVIEWER_DEG_TO_RAD(270));
+	if (_xviewer_cairo_matrix_equal (&affine, &priv->affine)) {
+		return XVIEWER_TRANSFORM_ROT_270;
 	}
 
 	cairo_matrix_init_identity (&affine);
-	_eog_cairo_matrix_flip (&affine, &affine, FALSE, TRUE);
-	if (_eog_cairo_matrix_equal (&affine, &priv->affine)) {
-		return EOG_TRANSFORM_FLIP_VERTICAL;
+	_xviewer_cairo_matrix_flip (&affine, &affine, TRUE, FALSE);
+	if (_xviewer_cairo_matrix_equal (&affine, &priv->affine)) {
+		return XVIEWER_TRANSFORM_FLIP_HORIZONTAL;
 	}
 
-	cairo_matrix_init_rotate (&a1, EOG_DEG_TO_RAD(90));
+	cairo_matrix_init_identity (&affine);
+	_xviewer_cairo_matrix_flip (&affine, &affine, FALSE, TRUE);
+	if (_xviewer_cairo_matrix_equal (&affine, &priv->affine)) {
+		return XVIEWER_TRANSFORM_FLIP_VERTICAL;
+	}
+
+	cairo_matrix_init_rotate (&a1, XVIEWER_DEG_TO_RAD(90));
 	cairo_matrix_init_identity (&a2);
-	_eog_cairo_matrix_flip (&a2, &a2, TRUE, FALSE);
+	_xviewer_cairo_matrix_flip (&a2, &a2, TRUE, FALSE);
 	cairo_matrix_multiply(&affine, &a1, &a2);
-	if (_eog_cairo_matrix_equal (&affine, &priv->affine)) {
-		return EOG_TRANSFORM_TRANSPOSE;
+	if (_xviewer_cairo_matrix_equal (&affine, &priv->affine)) {
+		return XVIEWER_TRANSFORM_TRANSPOSE;
 	}
 
 	/* A transversion is a 180° rotation followed by a transposition */
 	/* Reuse the transposition from the previous step for this. */
-	cairo_matrix_init_rotate (&a1, EOG_DEG_TO_RAD(180));
+	cairo_matrix_init_rotate (&a1, XVIEWER_DEG_TO_RAD(180));
 	cairo_matrix_multiply(&a2, &a1, &affine);
-	if (_eog_cairo_matrix_equal (&a2, &priv->affine)) {
-		return EOG_TRANSFORM_TRANSVERSE;
+	if (_xviewer_cairo_matrix_equal (&a2, &priv->affine)) {
+		return XVIEWER_TRANSFORM_TRANSVERSE;
 	}
 
-	return EOG_TRANSFORM_NONE;
+	return XVIEWER_TRANSFORM_NONE;
 }
 
 gboolean
-eog_transform_get_affine (EogTransform *trans, cairo_matrix_t *affine)
+xviewer_transform_get_affine (XviewerTransform *trans, cairo_matrix_t *affine)
 {
-	g_return_val_if_fail (EOG_IS_TRANSFORM (trans), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_TRANSFORM (trans), FALSE);
 
-	_eog_cairo_matrix_copy (&trans->priv->affine, affine);
+	_xviewer_cairo_matrix_copy (&trans->priv->affine, affine);
 
 	return TRUE;
 }

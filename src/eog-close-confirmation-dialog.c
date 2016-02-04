@@ -1,6 +1,6 @@
 /*
- * eog-close-confirmation-dialog.c
- * This file is part of eog
+ * xviewer-close-confirmation-dialog.c
+ * This file is part of xviewer
  *
  * Author: Marcus Carlson <marcus@mejlamej.nu>
  *
@@ -29,16 +29,16 @@
 
 #include <glib/gi18n.h>
 
-#include "eog-close-confirmation-dialog.h"
-#include <eog-window.h>
+#include "xviewer-close-confirmation-dialog.h"
+#include <xviewer-window.h>
 
 typedef enum {
-	EOG_CLOSE_CONFIRMATION_DIALOG_NO_BUTTONS    = 0,
-	EOG_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON  = 1 << 0,
-	EOG_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON = 1 << 1,
-	EOG_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON   = 1 << 2,
-	EOG_CLOSE_CONFIRMATION_DIALOG_SAVEAS_BUTTON = 1 << 3
-} EogCloseConfirmationDialogButtons;
+	XVIEWER_CLOSE_CONFIRMATION_DIALOG_NO_BUTTONS    = 0,
+	XVIEWER_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON  = 1 << 0,
+	XVIEWER_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON = 1 << 1,
+	XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON   = 1 << 2,
+	XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVEAS_BUTTON = 1 << 3
+} XviewerCloseConfirmationDialogButtons;
 
 /* Properties */
 enum
@@ -64,7 +64,7 @@ enum
 	N_COLUMNS
 };
 
-struct _EogCloseConfirmationDialogPrivate
+struct _XviewerCloseConfirmationDialogPrivate
 {
 	GList	    *unsaved_images;
 
@@ -81,15 +81,15 @@ struct _EogCloseConfirmationDialogPrivate
 
 #define IMAGE_COLUMN_HEIGHT 40
 
-G_DEFINE_TYPE_WITH_PRIVATE(EogCloseConfirmationDialog, eog_close_confirmation_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE_WITH_PRIVATE(XviewerCloseConfirmationDialog, xviewer_close_confirmation_dialog, GTK_TYPE_DIALOG)
 
-static void	 set_unsaved_image		(EogCloseConfirmationDialog *dlg,
+static void	 set_unsaved_image		(XviewerCloseConfirmationDialog *dlg,
 						 const GList		      *list);
 
 static GList	*get_selected_imgs		(GtkTreeModel		      *store);
 
 static GdkPixbuf *
-eog_close_confirmation_dialog_get_icon (const gchar *icon_name)
+xviewer_close_confirmation_dialog_get_icon (const gchar *icon_name)
 {
 	GError *error = NULL;
 	GtkIconTheme *icon_theme;
@@ -115,7 +115,7 @@ static GdkPixbuf*
 get_nothumb_pixbuf (void)
 {
 	static GOnce nothumb_once = G_ONCE_INIT;
-	g_once (&nothumb_once, (GThreadFunc) eog_close_confirmation_dialog_get_icon, "image-x-generic");
+	g_once (&nothumb_once, (GThreadFunc) xviewer_close_confirmation_dialog_get_icon, "image-x-generic");
 	return GDK_PIXBUF (g_object_ref (nothumb_once.retval));
 }
 
@@ -123,21 +123,21 @@ get_nothumb_pixbuf (void)
  *  before the user ones
  */
 static void
-response_cb (EogCloseConfirmationDialog *dlg,
+response_cb (XviewerCloseConfirmationDialog *dlg,
 	     gint			 response_id,
 	     gpointer			 data)
 {
-	EogCloseConfirmationDialogPrivate *priv;
+	XviewerCloseConfirmationDialogPrivate *priv;
 
-	g_return_if_fail (EOG_IS_CLOSE_CONFIRMATION_DIALOG (dlg));
+	g_return_if_fail (XVIEWER_IS_CLOSE_CONFIRMATION_DIALOG (dlg));
 
 	priv = dlg->priv;
 
 	if (priv->selected_images != NULL)
 		g_list_free (priv->selected_images);
 
-	if (response_id == EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVE ||
-	    response_id == EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVEAS)
+	if (response_id == XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVE ||
+	    response_id == XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVEAS)
 	{
 		if (GET_MODE (priv) == SINGLE_IMG_MODE)
 		{
@@ -157,45 +157,45 @@ response_cb (EogCloseConfirmationDialog *dlg,
 }
 
 static void
-add_buttons (EogCloseConfirmationDialog	       *dlg,
-	     EogCloseConfirmationDialogButtons	buttons)
+add_buttons (XviewerCloseConfirmationDialog	       *dlg,
+	     XviewerCloseConfirmationDialogButtons	buttons)
 {
 	/* add requested buttons to the dialog */
-	if (buttons & EOG_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON) {
+	if (buttons & XVIEWER_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON) {
 		gtk_dialog_add_button (GTK_DIALOG (dlg),
 				       _("Close _without Saving"),
-				       EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_CLOSE);
+				       XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_CLOSE);
 	}
 
-	if (buttons & EOG_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON) {
+	if (buttons & XVIEWER_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON) {
 		gtk_dialog_add_button (GTK_DIALOG (dlg),
 				       _("_Cancel"),
-				       EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_CANCEL);
+				       XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_CANCEL);
 	}
 
-	if (buttons & EOG_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON) {
+	if (buttons & XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON) {
 		gtk_dialog_add_button (GTK_DIALOG (dlg),
 				       _("_Save"),
-				       EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVE);
+				       XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVE);
 	}
 
-	if (buttons & EOG_CLOSE_CONFIRMATION_DIALOG_SAVEAS_BUTTON) {
+	if (buttons & XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVEAS_BUTTON) {
 		gtk_dialog_add_button (GTK_DIALOG (dlg),
 				       _("Save _As"),
-				       EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVEAS);
+				       XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVEAS);
 	}
 
 	/* set default response */
 	gtk_dialog_set_default_response	(GTK_DIALOG (dlg),
-					 EOG_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVE);
+					 XVIEWER_CLOSE_CONFIRMATION_DIALOG_RESPONSE_SAVE);
 }
 
 static void
-eog_close_confirmation_dialog_init (EogCloseConfirmationDialog *dlg)
+xviewer_close_confirmation_dialog_init (XviewerCloseConfirmationDialog *dlg)
 {
 	AtkObject *atk_obj;
 
-	dlg->priv = eog_close_confirmation_dialog_get_instance_private (dlg);
+	dlg->priv = xviewer_close_confirmation_dialog_get_instance_private (dlg);
 
 	gtk_container_set_border_width (GTK_CONTAINER (dlg), 5);
 	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))), 14);
@@ -218,11 +218,11 @@ eog_close_confirmation_dialog_init (EogCloseConfirmationDialog *dlg)
 }
 
 static void
-eog_close_confirmation_dialog_finalize (GObject *object)
+xviewer_close_confirmation_dialog_finalize (GObject *object)
 {
-	EogCloseConfirmationDialogPrivate *priv;
+	XviewerCloseConfirmationDialogPrivate *priv;
 
-	priv = EOG_CLOSE_CONFIRMATION_DIALOG (object)->priv;
+	priv = XVIEWER_CLOSE_CONFIRMATION_DIALOG (object)->priv;
 
 	if (priv->unsaved_images != NULL)
 		g_list_free (priv->unsaved_images);
@@ -231,18 +231,18 @@ eog_close_confirmation_dialog_finalize (GObject *object)
 		g_list_free (priv->selected_images);
 
 	/* Call the parent's destructor */
-	G_OBJECT_CLASS (eog_close_confirmation_dialog_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xviewer_close_confirmation_dialog_parent_class)->finalize (object);
 }
 
 static void
-eog_close_confirmation_dialog_set_property (GObject	 *object,
+xviewer_close_confirmation_dialog_set_property (GObject	 *object,
 					      guint	    prop_id,
 					      const GValue *value,
 					      GParamSpec   *pspec)
 {
-	EogCloseConfirmationDialog *dlg;
+	XviewerCloseConfirmationDialog *dlg;
 
-	dlg = EOG_CLOSE_CONFIRMATION_DIALOG (object);
+	dlg = XVIEWER_CLOSE_CONFIRMATION_DIALOG (object);
 
 	switch (prop_id)
 	{
@@ -257,14 +257,14 @@ eog_close_confirmation_dialog_set_property (GObject	 *object,
 }
 
 static void
-eog_close_confirmation_dialog_get_property (GObject    *object,
+xviewer_close_confirmation_dialog_get_property (GObject    *object,
 					      guint	  prop_id,
 					      GValue	 *value,
 					      GParamSpec *pspec)
 {
-	EogCloseConfirmationDialogPrivate *priv;
+	XviewerCloseConfirmationDialogPrivate *priv;
 
-	priv = EOG_CLOSE_CONFIRMATION_DIALOG (object)->priv;
+	priv = XVIEWER_CLOSE_CONFIRMATION_DIALOG (object)->priv;
 
 	switch( prop_id )
 	{
@@ -279,13 +279,13 @@ eog_close_confirmation_dialog_get_property (GObject    *object,
 }
 
 static void
-eog_close_confirmation_dialog_class_init (EogCloseConfirmationDialogClass *klass)
+xviewer_close_confirmation_dialog_class_init (XviewerCloseConfirmationDialogClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-	gobject_class->set_property = eog_close_confirmation_dialog_set_property;
-	gobject_class->get_property = eog_close_confirmation_dialog_get_property;
-	gobject_class->finalize = eog_close_confirmation_dialog_finalize;
+	gobject_class->set_property = xviewer_close_confirmation_dialog_set_property;
+	gobject_class->get_property = xviewer_close_confirmation_dialog_get_property;
+	gobject_class->finalize = xviewer_close_confirmation_dialog_finalize;
 
 	g_object_class_install_property (gobject_class,
 					 PROP_UNSAVED_IMAGES,
@@ -309,7 +309,7 @@ get_selected_imgs (GtkTreeModel *store)
 	while (valid)
 	{
 		gboolean to_save;
-		EogImage *img;
+		XviewerImage *img;
 
 		gtk_tree_model_get (store, &iter,
 				    SAVE_COLUMN, &to_save,
@@ -327,15 +327,15 @@ get_selected_imgs (GtkTreeModel *store)
 }
 
 GList *
-eog_close_confirmation_dialog_get_selected_images (EogCloseConfirmationDialog *dlg)
+xviewer_close_confirmation_dialog_get_selected_images (XviewerCloseConfirmationDialog *dlg)
 {
-	g_return_val_if_fail (EOG_IS_CLOSE_CONFIRMATION_DIALOG (dlg), NULL);
+	g_return_val_if_fail (XVIEWER_IS_CLOSE_CONFIRMATION_DIALOG (dlg), NULL);
 
 	return g_list_copy (dlg->priv->selected_images);
 }
 
 GtkWidget *
-eog_close_confirmation_dialog_new (GtkWindow *parent,
+xviewer_close_confirmation_dialog_new (GtkWindow *parent,
 				   GList     *unsaved_images)
 {
 	GtkWidget *dlg;
@@ -343,7 +343,7 @@ eog_close_confirmation_dialog_new (GtkWindow *parent,
 
 	g_return_val_if_fail (unsaved_images != NULL, NULL);
 
-	dlg = GTK_WIDGET (g_object_new (EOG_TYPE_CLOSE_CONFIRMATION_DIALOG,
+	dlg = GTK_WIDGET (g_object_new (XVIEWER_TYPE_CLOSE_CONFIRMATION_DIALOG,
 					"unsaved_images", unsaved_images,
 					NULL));
 	g_return_val_if_fail (dlg != NULL, NULL);
@@ -366,8 +366,8 @@ eog_close_confirmation_dialog_new (GtkWindow *parent,
 }
 
 GtkWidget *
-eog_close_confirmation_dialog_new_single (GtkWindow	*parent,
-					  EogImage	*image)
+xviewer_close_confirmation_dialog_new_single (GtkWindow	*parent,
+					  XviewerImage	*image)
 {
 	GtkWidget *dlg;
 	GList *unsaved_images;
@@ -375,7 +375,7 @@ eog_close_confirmation_dialog_new_single (GtkWindow	*parent,
 
 	unsaved_images = g_list_prepend (NULL, image);
 
-	dlg = eog_close_confirmation_dialog_new (parent,
+	dlg = xviewer_close_confirmation_dialog_new (parent,
 						 unsaved_images);
 
 	g_list_free (unsaved_images);
@@ -384,7 +384,7 @@ eog_close_confirmation_dialog_new_single (GtkWindow	*parent,
 }
 
 static gchar *
-get_text_secondary_label (EogImage *image)
+get_text_secondary_label (XviewerImage *image)
 {
 	gchar *secondary_msg;
 
@@ -394,22 +394,22 @@ get_text_secondary_label (EogImage *image)
 }
 
 static void
-build_single_img_dialog (EogCloseConfirmationDialog *dlg)
+build_single_img_dialog (XviewerCloseConfirmationDialog *dlg)
 {
 	GtkWidget     *hbox;
 	GtkWidget     *vbox;
 	GtkWidget     *primary_label;
 	GtkWidget     *secondary_label;
 	GtkWidget     *image;
-	EogImage      *img;
+	XviewerImage      *img;
 	const gchar   *image_name;
 	gchar	      *str;
 	gchar	      *markup_str;
 
-	EogCloseConfirmationDialogButtons buttons;
+	XviewerCloseConfirmationDialogButtons buttons;
 
 	g_return_if_fail (dlg->priv->unsaved_images->data != NULL);
-	img = EOG_IMAGE (dlg->priv->unsaved_images->data);
+	img = XVIEWER_IMAGE (dlg->priv->unsaved_images->data);
 
 	/* Image */
 	image = gtk_image_new_from_icon_name ("dialog-warning-symbolic",
@@ -432,7 +432,7 @@ G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 G_GNUC_END_IGNORE_DEPRECATIONS
 	gtk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
 
-	image_name = eog_image_get_caption (img);
+	image_name = xviewer_image_get_caption (img);
 
 	str = g_markup_printf_escaped (_("Save changes to image \"%s\" before closing?"),
 				       image_name);
@@ -474,14 +474,14 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 			    FALSE,
 			    0);
 
-	if (eog_image_is_file_writable (img)) {
-		buttons = EOG_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON |
-			EOG_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON  |
-			EOG_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON;
+	if (xviewer_image_is_file_writable (img)) {
+		buttons = XVIEWER_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON |
+			XVIEWER_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON  |
+			XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON;
 	} else {
-		buttons = EOG_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON |
-			EOG_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON  |
-			EOG_CLOSE_CONFIRMATION_DIALOG_SAVEAS_BUTTON;
+		buttons = XVIEWER_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON |
+			XVIEWER_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON  |
+			XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVEAS_BUTTON;
 	}
 
 	add_buttons (dlg, buttons);
@@ -497,17 +497,17 @@ populate_model (GtkTreeModel *store, GList *imgs)
 
 	while (imgs != NULL)
 	{
-		EogImage *img;
+		XviewerImage *img;
 		const gchar *name;
 		GdkPixbuf *buf = NULL;
 		GdkPixbuf *buf_scaled = NULL;
 		int width;
 		double ratio;
 
-		img = EOG_IMAGE (imgs->data);
+		img = XVIEWER_IMAGE (imgs->data);
 
-		name = eog_image_get_caption (img);
-		buf = eog_image_get_thumbnail (img);
+		name = xviewer_image_get_caption (img);
+		buf = xviewer_image_get_thumbnail (img);
 
 		if (buf) {
 			ratio = IMAGE_COLUMN_HEIGHT / (double) gdk_pixbuf_get_height (buf);
@@ -548,7 +548,7 @@ save_toggled (GtkCellRendererToggle *renderer, gchar *path_str, GtkTreeModel *st
 }
 
 static GtkWidget *
-create_treeview (EogCloseConfirmationDialogPrivate *priv)
+create_treeview (XviewerCloseConfirmationDialogPrivate *priv)
 {
 	GtkListStore *store;
 	GtkWidget *treeview;
@@ -604,9 +604,9 @@ create_treeview (EogCloseConfirmationDialogPrivate *priv)
 }
 
 static void
-build_multiple_imgs_dialog (EogCloseConfirmationDialog *dlg)
+build_multiple_imgs_dialog (XviewerCloseConfirmationDialog *dlg)
 {
-	EogCloseConfirmationDialogPrivate *priv;
+	XviewerCloseConfirmationDialogPrivate *priv;
 	GtkWidget *hbox;
 	GtkWidget *image;
 	GtkWidget *vbox;
@@ -619,7 +619,7 @@ build_multiple_imgs_dialog (EogCloseConfirmationDialog *dlg)
 	gchar	  *str;
 	gchar	  *markup_str;
 
-	EogCloseConfirmationDialogButtons buttons;
+	XviewerCloseConfirmationDialogButtons buttons;
 
 	priv = dlg->priv;
 
@@ -699,9 +699,9 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (select_label), treeview);
 
-	buttons = EOG_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON |
-		EOG_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON  |
-		EOG_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON;
+	buttons = XVIEWER_CLOSE_CONFIRMATION_DIALOG_CLOSE_BUTTON |
+		XVIEWER_CLOSE_CONFIRMATION_DIALOG_CANCEL_BUTTON  |
+		XVIEWER_CLOSE_CONFIRMATION_DIALOG_SAVE_BUTTON;
 
 	add_buttons (dlg, buttons);
 
@@ -709,10 +709,10 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 static void
-set_unsaved_image (EogCloseConfirmationDialog *dlg,
+set_unsaved_image (XviewerCloseConfirmationDialog *dlg,
 		   const GList		      *list)
 {
-	EogCloseConfirmationDialogPrivate *priv;
+	XviewerCloseConfirmationDialogPrivate *priv;
 
 	g_return_if_fail (list != NULL);
 
@@ -732,20 +732,20 @@ set_unsaved_image (EogCloseConfirmationDialog *dlg,
 }
 
 const GList *
-eog_close_confirmation_dialog_get_unsaved_images (EogCloseConfirmationDialog *dlg)
+xviewer_close_confirmation_dialog_get_unsaved_images (XviewerCloseConfirmationDialog *dlg)
 {
-	g_return_val_if_fail (EOG_IS_CLOSE_CONFIRMATION_DIALOG (dlg), NULL);
+	g_return_val_if_fail (XVIEWER_IS_CLOSE_CONFIRMATION_DIALOG (dlg), NULL);
 
 	return dlg->priv->unsaved_images;
 }
 
 void
-eog_close_confirmation_dialog_set_sensitive (EogCloseConfirmationDialog *dlg,
+xviewer_close_confirmation_dialog_set_sensitive (XviewerCloseConfirmationDialog *dlg,
 					     gboolean value)
 {
 	GtkWidget *action_area;
 
-	g_return_if_fail (EOG_IS_CLOSE_CONFIRMATION_DIALOG (dlg));
+	g_return_if_fail (XVIEWER_IS_CLOSE_CONFIRMATION_DIALOG (dlg));
 
 	action_area = gtk_dialog_get_action_area (GTK_DIALOG (dlg));
 	gtk_widget_set_sensitive (action_area, value);

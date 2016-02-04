@@ -1,10 +1,10 @@
-/* Eye Of GNOME -- PNG Metadata Reader
+/* Xviewer -- PNG Metadata Reader
  *
  * Copyright (C) 2008 The Free Software Foundation
  *
  * Author: Felix Riemann <friemann@svn.gnome.org>
  *
- * Based on the old EogMetadataReader code.
+ * Based on the old XviewerMetadataReader code.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,35 +21,35 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef _EOG_METADATA_READER_PNG_H_
-#define _EOG_METADATA_READER_PNG_H_
+#ifndef _XVIEWER_METADATA_READER_PNG_H_
+#define _XVIEWER_METADATA_READER_PNG_H_
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_METADATA_READER_PNG		(eog_metadata_reader_png_get_type ())
-#define EOG_METADATA_READER_PNG(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_METADATA_READER_PNG, EogMetadataReaderPng))
-#define EOG_METADATA_READER_PNG_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), EOG_TYPE_METADATA_READER_PNG, EogMetadataReaderPngClass))
-#define EOG_IS_METADATA_READER_PNG(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_METADATA_READER_PNG))
-#define EOG_IS_METADATA_READER_PNG_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), EOG_TYPE_METADATA_READER_PNG))
-#define EOG_METADATA_READER_PNG_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), EOG_TYPE_METADATA_READER_PNG, EogMetadataReaderPngClass))
+#define XVIEWER_TYPE_METADATA_READER_PNG		(xviewer_metadata_reader_png_get_type ())
+#define XVIEWER_METADATA_READER_PNG(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XVIEWER_TYPE_METADATA_READER_PNG, XviewerMetadataReaderPng))
+#define XVIEWER_METADATA_READER_PNG_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XVIEWER_TYPE_METADATA_READER_PNG, XviewerMetadataReaderPngClass))
+#define XVIEWER_IS_METADATA_READER_PNG(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_METADATA_READER_PNG))
+#define XVIEWER_IS_METADATA_READER_PNG_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XVIEWER_TYPE_METADATA_READER_PNG))
+#define XVIEWER_METADATA_READER_PNG_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XVIEWER_TYPE_METADATA_READER_PNG, XviewerMetadataReaderPngClass))
 
-typedef struct _EogMetadataReaderPng EogMetadataReaderPng;
-typedef struct _EogMetadataReaderPngClass EogMetadataReaderPngClass;
-typedef struct _EogMetadataReaderPngPrivate EogMetadataReaderPngPrivate;
+typedef struct _XviewerMetadataReaderPng XviewerMetadataReaderPng;
+typedef struct _XviewerMetadataReaderPngClass XviewerMetadataReaderPngClass;
+typedef struct _XviewerMetadataReaderPngPrivate XviewerMetadataReaderPngPrivate;
 
-struct _EogMetadataReaderPng {
+struct _XviewerMetadataReaderPng {
 	GObject parent;
 
-	EogMetadataReaderPngPrivate *priv;
+	XviewerMetadataReaderPngPrivate *priv;
 };
 
-struct _EogMetadataReaderPngClass {
+struct _XviewerMetadataReaderPngClass {
 	GObjectClass parent_klass;
 };
 
 G_GNUC_INTERNAL
-GType		      eog_metadata_reader_png_get_type	(void) G_GNUC_CONST;
+GType		      xviewer_metadata_reader_png_get_type	(void) G_GNUC_CONST;
 
 G_END_DECLS
 
-#endif /* _EOG_METADATA_READER_PNG_H_ */
+#endif /* _XVIEWER_METADATA_READER_PNG_H_ */

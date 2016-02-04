@@ -1,6 +1,6 @@
 /*
- * eog-clipboard-handler.h
- * This file is part of eog
+ * xviewer-clipboard-handler.h
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -21,43 +21,43 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_CLIPBOARD_HANDLER_H__
-#define __EOG_CLIPBOARD_HANDLER_H__
+#ifndef __XVIEWER_CLIPBOARD_HANDLER_H__
+#define __XVIEWER_CLIPBOARD_HANDLER_H__
 
 #include <glib-object.h>
 #include <gtk/gtk.h>
 
-#include "eog-image.h"
+#include "xviewer-image.h"
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_CLIPBOARD_HANDLER          (eog_clipboard_handler_get_type ())
-#define EOG_CLIPBOARD_HANDLER(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_CLIPBOARD_HANDLER, EogClipboardHandler))
-#define EOG_CLIPBOARD_HANDLER_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), EOG_TYPE_CLIPBOARD_HANDLER, EogClipboardHandlerClass))
-#define EOG_IS_CLIPBOARD_HANDLER(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_CLIPBOARD_HANDLER))
-#define EOG_IS_CLIPBOARD_HANDLER_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), EOG_TYPE_CLIPBOARD_HANDLER))
-#define EOG_CLIPBOARD_HANDLER_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), EOG_TYPE_CLIPBOARD_HANDLER, EogClipboardHandlerClass))
+#define XVIEWER_TYPE_CLIPBOARD_HANDLER          (xviewer_clipboard_handler_get_type ())
+#define XVIEWER_CLIPBOARD_HANDLER(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), XVIEWER_TYPE_CLIPBOARD_HANDLER, XviewerClipboardHandler))
+#define XVIEWER_CLIPBOARD_HANDLER_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), XVIEWER_TYPE_CLIPBOARD_HANDLER, XviewerClipboardHandlerClass))
+#define XVIEWER_IS_CLIPBOARD_HANDLER(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_CLIPBOARD_HANDLER))
+#define XVIEWER_IS_CLIPBOARD_HANDLER_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), XVIEWER_TYPE_CLIPBOARD_HANDLER))
+#define XVIEWER_CLIPBOARD_HANDLER_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), XVIEWER_TYPE_CLIPBOARD_HANDLER, XviewerClipboardHandlerClass))
 
-typedef struct _EogClipboardHandler EogClipboardHandler;
-typedef struct _EogClipboardHandlerClass EogClipboardHandlerClass;
-typedef struct _EogClipboardHandlerPrivate EogClipboardHandlerPrivate;
+typedef struct _XviewerClipboardHandler XviewerClipboardHandler;
+typedef struct _XviewerClipboardHandlerClass XviewerClipboardHandlerClass;
+typedef struct _XviewerClipboardHandlerPrivate XviewerClipboardHandlerPrivate;
 
-struct _EogClipboardHandler {
+struct _XviewerClipboardHandler {
 	GObject parent;
 
-	EogClipboardHandlerPrivate *priv;
+	XviewerClipboardHandlerPrivate *priv;
 };
 
-struct _EogClipboardHandlerClass {
+struct _XviewerClipboardHandlerClass {
 	GObjectClass parent_klass;
 };
 
-GType eog_clipboard_handler_get_type (void) G_GNUC_CONST;
+GType xviewer_clipboard_handler_get_type (void) G_GNUC_CONST;
 
-EogClipboardHandler* eog_clipboard_handler_new (EogImage *img);
+XviewerClipboardHandler* xviewer_clipboard_handler_new (XviewerImage *img);
 
-void eog_clipboard_handler_copy_to_clipboard (EogClipboardHandler *handler,
+void xviewer_clipboard_handler_copy_to_clipboard (XviewerClipboardHandler *handler,
 					      GtkClipboard *clipboard);
 
 G_END_DECLS
-#endif /* __EOG_CLIPBOARD_HANDLER_H__ */
+#endif /* __XVIEWER_CLIPBOARD_HANDLER_H__ */

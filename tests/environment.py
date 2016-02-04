@@ -12,7 +12,7 @@ from shutil import copyfile
 
 
 def before_all(context):
-    """Setup eog stuff
+    """Setup xviewer stuff
     Being executed before all features
     """
 
@@ -21,7 +21,7 @@ def before_all(context):
         config.logDebugToStdOut = False
         config.typingDelay = 0.2
 
-        context.app_class = App('eog')
+        context.app_class = App('xviewer')
 
         context.screenshot_counter = 0
         context.save_screenshots = False
@@ -34,7 +34,7 @@ def before_tag(context, tag):
         # Copy screenshots
         if 'screenshot' in tag:
             context.save_screenshots = True
-            context.screenshot_dir = "../eog_screenshots"
+            context.screenshot_dir = "../xviewer_screenshots"
             makedirs(context.screenshot_dir)
     except Exception as e:
         print("Error in before_tag: %s" % str(e))
@@ -72,7 +72,7 @@ def before_scenario(context, scenario):
 
 def after_scenario(context, scenario):
     """Teardown for each scenario
-    Kill eog (in order to make this reliable we send sigkill)
+    Kill xviewer (in order to make this reliable we send sigkill)
     """
     try:
         # Stop gnome-calculator

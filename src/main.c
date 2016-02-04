@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Main
+/* Xviewer - Main
  *
  * Copyright (C) 2000-2006 The Free Software Foundation
  *
@@ -30,16 +30,16 @@
 #include <girepository.h>
 #endif
 
-#include "eog-application.h"
-#include "eog-application-internal.h"
-#include "eog-plugin-engine.h"
-#include "eog-util.h"
+#include "xviewer-application.h"
+#include "xviewer-application-internal.h"
+#include "xviewer-plugin-engine.h"
+#include "xviewer-util.h"
 
 #include <string.h>
 #include <stdlib.h>
 #include <glib/gi18n.h>
 
-static EogStartupFlags flags;
+static XviewerStartupFlags flags;
 
 static gboolean fullscreen = FALSE;
 static gboolean slide_show = FALSE;
@@ -74,16 +74,16 @@ static void
 set_startup_flags (void)
 {
   if (fullscreen)
-    flags |= EOG_STARTUP_FULLSCREEN;
+    flags |= XVIEWER_STARTUP_FULLSCREEN;
 
   if (disable_gallery)
-    flags |= EOG_STARTUP_DISABLE_GALLERY;
+    flags |= XVIEWER_STARTUP_DISABLE_GALLERY;
 
   if (slide_show)
-    flags |= EOG_STARTUP_SLIDE_SHOW;
+    flags |= XVIEWER_STARTUP_SLIDE_SHOW;
 
   if (single_window)
-    flags |= EOG_STARTUP_SINGLE_WINDOW;
+    flags |= XVIEWER_STARTUP_SINGLE_WINDOW;
 }
 
 int
@@ -92,7 +92,7 @@ main (int argc, char **argv)
 	GError *error = NULL;
 	GOptionContext *ctx;
 
-	bindtextdomain (PACKAGE, EOG_LOCALE_DIR);
+	bindtextdomain (PACKAGE, XVIEWER_LOCALE_DIR);
 	bind_textdomain_codeset (PACKAGE, "UTF-8");
 	textdomain (PACKAGE);
 
@@ -108,7 +108,7 @@ main (int argc, char **argv)
 	if (!g_option_context_parse (ctx, &argc, &argv, &error)) {
 		gchar *help_msg;
 
-		/* I18N: The '%s' is replaced with eog's command name. */
+		/* I18N: The '%s' is replaced with xviewer's command name. */
 		help_msg = g_strdup_printf (_("Run '%s --help' to see a full "
 					      "list of available command line "
 					      "options."), argv[0]);
@@ -123,15 +123,15 @@ main (int argc, char **argv)
 
 	set_startup_flags ();
 
-	EOG_APP->priv->flags = flags;
+	XVIEWER_APP->priv->flags = flags;
 	if (force_new_instance) {
-		GApplicationFlags app_flags = g_application_get_flags (G_APPLICATION (EOG_APP));
+		GApplicationFlags app_flags = g_application_get_flags (G_APPLICATION (XVIEWER_APP));
 		app_flags |= G_APPLICATION_NON_UNIQUE;
-		g_application_set_flags (G_APPLICATION (EOG_APP), app_flags);
+		g_application_set_flags (G_APPLICATION (XVIEWER_APP), app_flags);
 	}
 
-	g_application_run (G_APPLICATION (EOG_APP), argc, argv);
-	g_object_unref (EOG_APP);
+	g_application_run (G_APPLICATION (XVIEWER_APP), argc, argv);
+	g_object_unref (XVIEWER_APP);
 
 	return 0;
 }

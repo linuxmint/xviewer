@@ -1,4 +1,4 @@
-/* Fullscreen with double-click -- Sets eog to fullscreen by double-clicking
+/* Fullscreen with double-click -- Sets xviewer to fullscreen by double-clicking
  *
  * Copyright (C) 2007-2012 The Free Software Foundation
  *
@@ -19,8 +19,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_FULLSCREEN_PLUGIN_H__
-#define __EOG_FULLSCREEN_PLUGIN_H__
+#ifndef __XVIEWER_FULLSCREEN_PLUGIN_H__
+#define __XVIEWER_FULLSCREEN_PLUGIN_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -28,42 +28,42 @@
 #include <libpeas/peas-extension-base.h>
 #include <libpeas/peas-object-module.h>
 
-#include <eog-window.h>
+#include <xviewer-window.h>
 
 G_BEGIN_DECLS
 
 /*
  * Type checking and casting macros
  */
-#define EOG_TYPE_FULLSCREEN_PLUGIN		(eog_fullscreen_plugin_get_type ())
-#define EOG_FULLSCREEN_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_FULLSCREEN_PLUGIN, EogFullscreenPlugin))
-#define EOG_FULLSCREEN_PLUGIN_CLASS(k)		G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_FULLSCREEN_PLUGIN, EogFullscreenPluginClass))
-#define EOG_IS_FULLSCREEN_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_FULLSCREEN_PLUGIN))
-#define EOG_IS_FULLSCREEN_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    EOG_TYPE_FULLSCREEN_PLUGIN))
-#define EOG_FULLSCREEN_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_FULLSCREEN_PLUGIN, EogFullscreenPluginClass))
+#define XVIEWER_TYPE_FULLSCREEN_PLUGIN		(xviewer_fullscreen_plugin_get_type ())
+#define XVIEWER_FULLSCREEN_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XVIEWER_TYPE_FULLSCREEN_PLUGIN, XviewerFullscreenPlugin))
+#define XVIEWER_FULLSCREEN_PLUGIN_CLASS(k)		G_TYPE_CHECK_CLASS_CAST((k),      XVIEWER_TYPE_FULLSCREEN_PLUGIN, XviewerFullscreenPluginClass))
+#define XVIEWER_IS_FULLSCREEN_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_FULLSCREEN_PLUGIN))
+#define XVIEWER_IS_FULLSCREEN_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    XVIEWER_TYPE_FULLSCREEN_PLUGIN))
+#define XVIEWER_FULLSCREEN_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  XVIEWER_TYPE_FULLSCREEN_PLUGIN, XviewerFullscreenPluginClass))
 
 /* Private structure type */
-typedef struct _EogFullscreenPluginPrivate	EogFullscreenPluginPrivate;
+typedef struct _XviewerFullscreenPluginPrivate	XviewerFullscreenPluginPrivate;
 
 /*
  * Main object structure
  */
-typedef struct _EogFullscreenPlugin		EogFullscreenPlugin;
+typedef struct _XviewerFullscreenPlugin		XviewerFullscreenPlugin;
 
-struct _EogFullscreenPlugin
+struct _XviewerFullscreenPlugin
 {
 	PeasExtensionBase parent_instance;
 
-	EogWindow *window;
+	XviewerWindow *window;
 	gulong signal_id;
 };
 
 /*
  * Class definition
  */
-typedef struct _EogFullscreenPluginClass	EogFullscreenPluginClass;
+typedef struct _XviewerFullscreenPluginClass	XviewerFullscreenPluginClass;
 
-struct _EogFullscreenPluginClass
+struct _XviewerFullscreenPluginClass
 {
 	PeasExtensionBaseClass parent_class;
 };
@@ -71,11 +71,11 @@ struct _EogFullscreenPluginClass
 /*
  * Public methods
  */
-GType	eog_fullscreen_plugin_get_type		(void) G_GNUC_CONST;
+GType	xviewer_fullscreen_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
 G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 
-#endif /* __EOG_FULLSCREEN_PLUGIN_H__ */
+#endif /* __XVIEWER_FULLSCREEN_PLUGIN_H__ */

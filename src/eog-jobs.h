@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Jobs
+/* Xviewer - Jobs
  *
  * Copyright (C) 2013 The Free Software Foundation
  *
@@ -22,14 +22,14 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_JOBS_H__
-#define __EOG_JOBS_H__
+#ifndef __XVIEWER_JOBS_H__
+#define __XVIEWER_JOBS_H__
 
-#include "eog-enums.h"
-#include "eog-image.h"
-#include "eog-list-store.h"
-#include "eog-transform.h"
-#include "eog-uri-converter.h"
+#include "xviewer-enums.h"
+#include "xviewer-image.h"
+#include "xviewer-list-store.h"
+#include "xviewer-transform.h"
+#include "xviewer-uri-converter.h"
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gio/gio.h>
@@ -38,97 +38,97 @@
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_JOB                      (eog_job_get_type ())
-#define EOG_JOB(obj)                      (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB, EogJob))
-#define EOG_JOB_CLASS(klass)              (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB, EogJobClass))
-#define EOG_IS_JOB(obj)                   (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB))
-#define EOG_IS_JOB_CLASS(klass)           (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB))
-#define EOG_JOB_GET_CLASS(obj)            (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB, EogJobClass))
+#define XVIEWER_TYPE_JOB                      (xviewer_job_get_type ())
+#define XVIEWER_JOB(obj)                      (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB, XviewerJob))
+#define XVIEWER_JOB_CLASS(klass)              (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB, XviewerJobClass))
+#define XVIEWER_IS_JOB(obj)                   (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB))
+#define XVIEWER_IS_JOB_CLASS(klass)           (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB))
+#define XVIEWER_JOB_GET_CLASS(obj)            (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB, XviewerJobClass))
 
-#define EOG_TYPE_JOB_COPY                 (eog_job_copy_get_type ())
-#define EOG_JOB_COPY(obj)                 (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_COPY, EogJobCopy))
-#define EOG_JOB_COPY_CLASS(klass)         (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_COPY, EogJobCopyClass))
-#define EOG_IS_JOB_COPY(obj)              (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_COPY))
-#define EOG_IS_JOB_COPY_CLASS(klass)      (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_COPY))
-#define EOG_JOB_COPY_GET_CLASS(obj)       (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_COPY, EogJobCopyClass))
+#define XVIEWER_TYPE_JOB_COPY                 (xviewer_job_copy_get_type ())
+#define XVIEWER_JOB_COPY(obj)                 (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_COPY, XviewerJobCopy))
+#define XVIEWER_JOB_COPY_CLASS(klass)         (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_COPY, XviewerJobCopyClass))
+#define XVIEWER_IS_JOB_COPY(obj)              (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_COPY))
+#define XVIEWER_IS_JOB_COPY_CLASS(klass)      (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_COPY))
+#define XVIEWER_JOB_COPY_GET_CLASS(obj)       (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_COPY, XviewerJobCopyClass))
 
-#define EOG_TYPE_JOB_LOAD                 (eog_job_load_get_type ())
-#define EOG_JOB_LOAD(obj)                 (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_LOAD, EogJobLoad))
-#define EOG_JOB_LOAD_CLASS(klass)         (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_LOAD, EogJobLoadClass))
-#define EOG_IS_JOB_LOAD(obj)              (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_LOAD))
-#define EOG_IS_JOB_LOAD_CLASS(klass)      (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_LOAD))
-#define EOG_JOB_LOAD_GET_CLASS(obj)       (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_LOAD, EogJobLoadClass))
+#define XVIEWER_TYPE_JOB_LOAD                 (xviewer_job_load_get_type ())
+#define XVIEWER_JOB_LOAD(obj)                 (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_LOAD, XviewerJobLoad))
+#define XVIEWER_JOB_LOAD_CLASS(klass)         (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_LOAD, XviewerJobLoadClass))
+#define XVIEWER_IS_JOB_LOAD(obj)              (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_LOAD))
+#define XVIEWER_IS_JOB_LOAD_CLASS(klass)      (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_LOAD))
+#define XVIEWER_JOB_LOAD_GET_CLASS(obj)       (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_LOAD, XviewerJobLoadClass))
 
-#define EOG_TYPE_JOB_MODEL                (eog_job_model_get_type ())
-#define EOG_JOB_MODEL(obj)                (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_MODEL, EogJobModel))
-#define EOG_JOB_MODEL_CLASS(klass)        (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_MODEL, EogJobModelClass))
-#define EOG_IS_JOB_MODEL(obj)             (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_MODEL))
-#define EOG_IS_JOB_MODEL_CLASS(klass)     (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_MODEL))
-#define EOG_JOB_MODEL_GET_CLASS(obj)      (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_MODEL, EogJobModelClass))
+#define XVIEWER_TYPE_JOB_MODEL                (xviewer_job_model_get_type ())
+#define XVIEWER_JOB_MODEL(obj)                (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_MODEL, XviewerJobModel))
+#define XVIEWER_JOB_MODEL_CLASS(klass)        (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_MODEL, XviewerJobModelClass))
+#define XVIEWER_IS_JOB_MODEL(obj)             (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_MODEL))
+#define XVIEWER_IS_JOB_MODEL_CLASS(klass)     (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_MODEL))
+#define XVIEWER_JOB_MODEL_GET_CLASS(obj)      (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_MODEL, XviewerJobModelClass))
 
-#define EOG_TYPE_JOB_SAVE                 (eog_job_save_get_type ())
-#define EOG_JOB_SAVE(obj)                 (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_SAVE, EogJobSave))
-#define EOG_JOB_SAVE_CLASS(klass)         (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_SAVE, EogJobSaveClass))
-#define EOG_IS_JOB_SAVE(obj)              (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_SAVE))
-#define EOG_IS_JOB_SAVE_CLASS(klass)      (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_SAVE))
-#define EOG_JOB_SAVE_GET_CLASS(obj)       (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_SAVE, EogJobSaveClass))
+#define XVIEWER_TYPE_JOB_SAVE                 (xviewer_job_save_get_type ())
+#define XVIEWER_JOB_SAVE(obj)                 (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_SAVE, XviewerJobSave))
+#define XVIEWER_JOB_SAVE_CLASS(klass)         (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_SAVE, XviewerJobSaveClass))
+#define XVIEWER_IS_JOB_SAVE(obj)              (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_SAVE))
+#define XVIEWER_IS_JOB_SAVE_CLASS(klass)      (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_SAVE))
+#define XVIEWER_JOB_SAVE_GET_CLASS(obj)       (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_SAVE, XviewerJobSaveClass))
 
-#define EOG_TYPE_JOB_SAVE_AS              (eog_job_save_as_get_type ())
-#define EOG_JOB_SAVE_AS(obj)              (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_SAVE_AS, EogJobSaveAs))
-#define EOG_JOB_SAVE_AS_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_SAVE_AS, EogJobSaveAsClass))
-#define EOG_IS_JOB_SAVE_AS(obj)           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_SAVE_AS))
-#define EOG_IS_JOB_SAVE_AS_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_SAVE_AS))
-#define EOG_JOB_SAVE_AS_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_SAVE_AS, EogJobSaveAsClass))
+#define XVIEWER_TYPE_JOB_SAVE_AS              (xviewer_job_save_as_get_type ())
+#define XVIEWER_JOB_SAVE_AS(obj)              (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_SAVE_AS, XviewerJobSaveAs))
+#define XVIEWER_JOB_SAVE_AS_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_SAVE_AS, XviewerJobSaveAsClass))
+#define XVIEWER_IS_JOB_SAVE_AS(obj)           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_SAVE_AS))
+#define XVIEWER_IS_JOB_SAVE_AS_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_SAVE_AS))
+#define XVIEWER_JOB_SAVE_AS_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_SAVE_AS, XviewerJobSaveAsClass))
 
-#define EOG_TYPE_JOB_THUMBNAIL            (eog_job_thumbnail_get_type ())
-#define EOG_JOB_THUMBNAIL(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_THUMBNAIL, EogJobThumbnail))
-#define EOG_JOB_THUMBNAIL_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_THUMBNAIL, EogJobThumbnailClass))
-#define EOG_IS_JOB_THUMBNAIL(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_THUMBNAIL))
-#define EOG_IS_JOB_THUMBNAIL_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_THUMBNAIL))
-#define EOG_JOB_THUMBNAIL_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_THUMBNAIL, EogJobThumbnailClass))
+#define XVIEWER_TYPE_JOB_THUMBNAIL            (xviewer_job_thumbnail_get_type ())
+#define XVIEWER_JOB_THUMBNAIL(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_THUMBNAIL, XviewerJobThumbnail))
+#define XVIEWER_JOB_THUMBNAIL_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_THUMBNAIL, XviewerJobThumbnailClass))
+#define XVIEWER_IS_JOB_THUMBNAIL(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_THUMBNAIL))
+#define XVIEWER_IS_JOB_THUMBNAIL_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_THUMBNAIL))
+#define XVIEWER_JOB_THUMBNAIL_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_THUMBNAIL, XviewerJobThumbnailClass))
 
-#define EOG_TYPE_JOB_TRANSFORM            (eog_job_transform_get_type ())
-#define EOG_JOB_TRANSFORM(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_JOB_TRANSFORM, EogJobTransform))
-#define EOG_JOB_TRANSFORM_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_JOB_TRANSFORM, EogJobTransformClass))
-#define EOG_IS_JOB_TRANSFORM(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_JOB_TRANSFORM))
-#define EOG_IS_JOB_TRANSFORM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_JOB_TRANSFORM))
-#define EOG_JOB_TRANSFORM_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_JOB_TRANSFORM, EogJobTransformClass))
+#define XVIEWER_TYPE_JOB_TRANSFORM            (xviewer_job_transform_get_type ())
+#define XVIEWER_JOB_TRANSFORM(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_JOB_TRANSFORM, XviewerJobTransform))
+#define XVIEWER_JOB_TRANSFORM_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_JOB_TRANSFORM, XviewerJobTransformClass))
+#define XVIEWER_IS_JOB_TRANSFORM(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_JOB_TRANSFORM))
+#define XVIEWER_IS_JOB_TRANSFORM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_JOB_TRANSFORM))
+#define XVIEWER_JOB_TRANSFORM_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_JOB_TRANSFORM, XviewerJobTransformClass))
 
 
-#ifndef __EOG_URI_CONVERTER_DECLR__
-#define __EOG_URI_CONVERTER_DECLR__
-typedef struct _EogURIConverter EogURIConverter;
+#ifndef __XVIEWER_URI_CONVERTER_DECLR__
+#define __XVIEWER_URI_CONVERTER_DECLR__
+typedef struct _XviewerURIConverter XviewerURIConverter;
 #endif
 
-#ifndef __EOG_JOB_DECLR__
-#define __EOG_JOB_DECLR__
-typedef struct _EogJob               EogJob;
+#ifndef __XVIEWER_JOB_DECLR__
+#define __XVIEWER_JOB_DECLR__
+typedef struct _XviewerJob               XviewerJob;
 #endif
 
-typedef struct _EogJobClass          EogJobClass;
+typedef struct _XviewerJobClass          XviewerJobClass;
 
-typedef struct _EogJobCopy           EogJobCopy;
-typedef struct _EogJobCopyClass      EogJobCopyClass;
+typedef struct _XviewerJobCopy           XviewerJobCopy;
+typedef struct _XviewerJobCopyClass      XviewerJobCopyClass;
 
-typedef struct _EogJobLoad           EogJobLoad;
-typedef struct _EogJobLoadClass      EogJobLoadClass;
+typedef struct _XviewerJobLoad           XviewerJobLoad;
+typedef struct _XviewerJobLoadClass      XviewerJobLoadClass;
 
-typedef struct _EogJobModel          EogJobModel;
-typedef struct _EogJobModelClass     EogJobModelClass;
+typedef struct _XviewerJobModel          XviewerJobModel;
+typedef struct _XviewerJobModelClass     XviewerJobModelClass;
 
-typedef struct _EogJobSave           EogJobSave;
-typedef struct _EogJobSaveClass      EogJobSaveClass;
+typedef struct _XviewerJobSave           XviewerJobSave;
+typedef struct _XviewerJobSaveClass      XviewerJobSaveClass;
 
-typedef struct _EogJobSaveAs         EogJobSaveAs;
-typedef struct _EogJobSaveAsClass    EogJobSaveAsClass;
+typedef struct _XviewerJobSaveAs         XviewerJobSaveAs;
+typedef struct _XviewerJobSaveAsClass    XviewerJobSaveAsClass;
 
-typedef struct _EogJobThumbnail      EogJobThumbnail;
-typedef struct _EogJobThumbnailClass EogJobThumbnailClass;
+typedef struct _XviewerJobThumbnail      XviewerJobThumbnail;
+typedef struct _XviewerJobThumbnailClass XviewerJobThumbnailClass;
 
-typedef struct _EogJobTransform      EogJobTransform;
-typedef struct _EogJobTransformClass EogJobTransformClass;
+typedef struct _XviewerJobTransform      XviewerJobTransform;
+typedef struct _XviewerJobTransformClass XviewerJobTransformClass;
 
-struct _EogJob
+struct _XviewerJob
 {
 	GObject       parent;
 
@@ -141,160 +141,160 @@ struct _EogJob
 	gboolean      finished;
 };
 
-struct _EogJobClass
+struct _XviewerJobClass
 {
 	GObjectClass parent_class;
 
 	/* vfuncs */
-	void    (* run)       (EogJob *job);
+	void    (* run)       (XviewerJob *job);
 
 	/* signals */
-	void    (* progress)  (EogJob *job,
+	void    (* progress)  (XviewerJob *job,
 			       gfloat  progress);
-	void    (* cancelled) (EogJob *job);
-	void    (* finished)  (EogJob *job);
+	void    (* cancelled) (XviewerJob *job);
+	void    (* finished)  (XviewerJob *job);
 };
 
-struct _EogJobCopy
+struct _XviewerJobCopy
 {
-	EogJob           parent;
+	XviewerJob           parent;
 
 	GList           *images;
 	gchar           *destination;
 	guint            current_position;
 };
 
-struct _EogJobCopyClass
+struct _XviewerJobCopyClass
 {
-	EogJobClass      parent_class;
+	XviewerJobClass      parent_class;
 };
 
-struct _EogJobLoad
+struct _XviewerJobLoad
 {
-	EogJob           parent;
+	XviewerJob           parent;
 
-	EogImage        *image;
-	EogImageData     data;
+	XviewerImage        *image;
+	XviewerImageData     data;
 };
 
-struct _EogJobLoadClass
+struct _XviewerJobLoadClass
 {
-	EogJobClass      parent_class;
+	XviewerJobClass      parent_class;
 };
 
-struct _EogJobModel
+struct _XviewerJobModel
 {
-	EogJob           parent;
+	XviewerJob           parent;
 
-	EogListStore    *store;
+	XviewerListStore    *store;
 	GSList          *file_list;
 };
 
-struct _EogJobModelClass
+struct _XviewerJobModelClass
 {
-        EogJobClass      parent_class;
+        XviewerJobClass      parent_class;
 };
 
-struct _EogJobSave
+struct _XviewerJobSave
 {
-	EogJob           parent;
+	XviewerJob           parent;
 
 	GList	        *images;
-	EogImage        *current_image;
+	XviewerImage        *current_image;
 	guint            current_position;
 };
 
-struct _EogJobSaveClass
+struct _XviewerJobSaveClass
 {
-	EogJobClass      parent_class;
+	XviewerJobClass      parent_class;
 };
 
-struct _EogJobSaveAs
+struct _XviewerJobSaveAs
 {
-	EogJobSave       parent;
+	XviewerJobSave       parent;
 
-	EogURIConverter *converter;
+	XviewerURIConverter *converter;
 	GFile           *file;
 };
 
-struct _EogJobSaveAsClass
+struct _XviewerJobSaveAsClass
 {
-	EogJobSaveClass  parent;
+	XviewerJobSaveClass  parent;
 };
 
-struct _EogJobThumbnail
+struct _XviewerJobThumbnail
 {
-	EogJob           parent;
+	XviewerJob           parent;
 
-	EogImage        *image;
+	XviewerImage        *image;
 	GdkPixbuf       *thumbnail;
 };
 
-struct _EogJobThumbnailClass
+struct _XviewerJobThumbnailClass
 {
-	EogJobClass      parent_class;
+	XviewerJobClass      parent_class;
 };
 
-struct _EogJobTransform
+struct _XviewerJobTransform
 {
-	EogJob           parent;
+	XviewerJob           parent;
 
 	GList           *images;
-	EogTransform    *transform;
+	XviewerTransform    *transform;
 };
 
-struct _EogJobTransformClass
+struct _XviewerJobTransformClass
 {
-        EogJobClass      parent_class;
+        XviewerJobClass      parent_class;
 };
 
 
-/* EogJob */
-GType    eog_job_get_type           (void) G_GNUC_CONST;
+/* XviewerJob */
+GType    xviewer_job_get_type           (void) G_GNUC_CONST;
 
-void     eog_job_run                (EogJob          *job);
-void     eog_job_cancel             (EogJob          *job);
+void     xviewer_job_run                (XviewerJob          *job);
+void     xviewer_job_cancel             (XviewerJob          *job);
 
-gfloat   eog_job_get_progress       (EogJob          *job);
-void     eog_job_set_progress       (EogJob          *job,
+gfloat   xviewer_job_get_progress       (XviewerJob          *job);
+void     xviewer_job_set_progress       (XviewerJob          *job,
 				     gfloat           progress);
-gboolean eog_job_is_cancelled       (EogJob          *job);
-gboolean eog_job_is_finished        (EogJob          *job);
+gboolean xviewer_job_is_cancelled       (XviewerJob          *job);
+gboolean xviewer_job_is_finished        (XviewerJob          *job);
 
-/* EogJobCopy */
-GType    eog_job_copy_get_type      (void) G_GNUC_CONST;
-EogJob  *eog_job_copy_new           (GList           *images,
+/* XviewerJobCopy */
+GType    xviewer_job_copy_get_type      (void) G_GNUC_CONST;
+XviewerJob  *xviewer_job_copy_new           (GList           *images,
 				     const gchar     *destination);
 
-/* EogJobLoad */
-GType    eog_job_load_get_type      (void) G_GNUC_CONST;
+/* XviewerJobLoad */
+GType    xviewer_job_load_get_type      (void) G_GNUC_CONST;
 
-EogJob  *eog_job_load_new           (EogImage        *image,
-				     EogImageData     data);
+XviewerJob  *xviewer_job_load_new           (XviewerImage        *image,
+				     XviewerImageData     data);
 
-/* EogJobModel */
-GType 	 eog_job_model_get_type     (void) G_GNUC_CONST;
-EogJob 	*eog_job_model_new          (GSList          *file_list);
+/* XviewerJobModel */
+GType 	 xviewer_job_model_get_type     (void) G_GNUC_CONST;
+XviewerJob 	*xviewer_job_model_new          (GSList          *file_list);
 
-/* EogJobSave */
-GType    eog_job_save_get_type      (void) G_GNUC_CONST;
-EogJob  *eog_job_save_new           (GList           *images);
+/* XviewerJobSave */
+GType    xviewer_job_save_get_type      (void) G_GNUC_CONST;
+XviewerJob  *xviewer_job_save_new           (GList           *images);
 
-/* EogJobSaveAs */
-GType    eog_job_save_as_get_type   (void) G_GNUC_CONST;
-EogJob  *eog_job_save_as_new        (GList           *images,
-				     EogURIConverter *converter,
+/* XviewerJobSaveAs */
+GType    xviewer_job_save_as_get_type   (void) G_GNUC_CONST;
+XviewerJob  *xviewer_job_save_as_new        (GList           *images,
+				     XviewerURIConverter *converter,
 				     GFile           *file);
 
-/* EogJobThumbnail */
-GType    eog_job_thumbnail_get_type (void) G_GNUC_CONST;
-EogJob  *eog_job_thumbnail_new      (EogImage        *image);
+/* XviewerJobThumbnail */
+GType    xviewer_job_thumbnail_get_type (void) G_GNUC_CONST;
+XviewerJob  *xviewer_job_thumbnail_new      (XviewerImage        *image);
 
-/* EogJobTransform */
-GType 	 eog_job_transform_get_type (void) G_GNUC_CONST;
-EogJob  *eog_job_transform_new      (GList           *images,
-				     EogTransform    *transform);
+/* XviewerJobTransform */
+GType 	 xviewer_job_transform_get_type (void) G_GNUC_CONST;
+XviewerJob  *xviewer_job_transform_new      (GList           *images,
+				     XviewerTransform    *transform);
 
 G_END_DECLS
 
-#endif /* __EOG_JOBS_H__ */
+#endif /* __XVIEWER_JOBS_H__ */

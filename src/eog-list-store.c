@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Image Store
+/* Xviewer - Image Store
  *
  * Copyright (C) 2006-2008 The Free Software Foundation
  *
@@ -21,15 +21,15 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "eog-list-store.h"
-#include "eog-thumbnail.h"
-#include "eog-image.h"
-#include "eog-job-scheduler.h"
-#include "eog-jobs.h"
+#include "xviewer-list-store.h"
+#include "xviewer-thumbnail.h"
+#include "xviewer-image.h"
+#include "xviewer-job-scheduler.h"
+#include "xviewer-jobs.h"
 
 #include <string.h>
 
-struct _EogListStorePrivate {
+struct _XviewerListStorePrivate {
 	GList *monitors;          /* Monitors for the directories */
 	gint initial_image;       /* The image that should be selected firstly by the view. */
 	GdkPixbuf *busy_image;    /* Loading image icon */
@@ -37,7 +37,7 @@ struct _EogListStorePrivate {
 	GMutex mutex;             /* Mutex for saving the jobs in the model */
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogListStore, eog_list_store, GTK_TYPE_LIST_STORE);
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerListStore, xviewer_list_store, GTK_TYPE_LIST_STORE);
 
 static void
 foreach_monitors_free (gpointer data, gpointer user_data)
@@ -46,9 +46,9 @@ foreach_monitors_free (gpointer data, gpointer user_data)
 }
 
 static void
-eog_list_store_dispose (GObject *object)
+xviewer_list_store_dispose (GObject *object)
 {
-	EogListStore *store = EOG_LIST_STORE (object);
+	XviewerListStore *store = XVIEWER_LIST_STORE (object);
 
 	g_list_foreach (store->priv->monitors,
 			foreach_monitors_free, NULL);
@@ -67,26 +67,26 @@ eog_list_store_dispose (GObject *object)
 		store->priv->missing_image = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_list_store_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_list_store_parent_class)->dispose (object);
 }
 
 static void
-eog_list_store_finalize (GObject *object)
+xviewer_list_store_finalize (GObject *object)
 {
-	EogListStore *store = EOG_LIST_STORE (object);
+	XviewerListStore *store = XVIEWER_LIST_STORE (object);
 
 	g_mutex_clear (&store->priv->mutex);
 
-	G_OBJECT_CLASS (eog_list_store_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xviewer_list_store_parent_class)->finalize (object);
 }
 
 static void
-eog_list_store_class_init (EogListStoreClass *klass)
+xviewer_list_store_class_init (XviewerListStoreClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->dispose = eog_list_store_dispose;
-	object_class->finalize = eog_list_store_finalize;
+	object_class->dispose = xviewer_list_store_dispose;
+	object_class->finalize = xviewer_list_store_finalize;
 }
 
 /*
@@ -94,25 +94,25 @@ eog_list_store_class_init (EogListStoreClass *klass)
 */
 
 static gint
-eog_list_store_compare_func (GtkTreeModel *model,
+xviewer_list_store_compare_func (GtkTreeModel *model,
 			     GtkTreeIter *a,
 			     GtkTreeIter *b,
 			     gpointer user_data)
 {
 	gint r_value;
 
-	EogImage *image_a, *image_b;
+	XviewerImage *image_a, *image_b;
 
 	gtk_tree_model_get (model, a,
-			    EOG_LIST_STORE_EOG_IMAGE, &image_a,
+			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image_a,
 			    -1);
 
 	gtk_tree_model_get (model, b,
-			    EOG_LIST_STORE_EOG_IMAGE, &image_b,
+			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image_b,
 			    -1);
 
-	r_value = strcmp (eog_image_get_collate_key (image_a),
-			  eog_image_get_collate_key (image_b));
+	r_value = strcmp (xviewer_image_get_collate_key (image_a),
+			  xviewer_image_get_collate_key (image_b));
 
 	g_object_unref (G_OBJECT (image_a));
 	g_object_unref (G_OBJECT (image_b));
@@ -121,7 +121,7 @@ eog_list_store_compare_func (GtkTreeModel *model,
 }
 
 static GdkPixbuf *
-eog_list_store_get_icon (const gchar *icon_name)
+xviewer_list_store_get_icon (const gchar *icon_name)
 {
 	GError *error = NULL;
 	GtkIconTheme *icon_theme;
@@ -131,7 +131,7 @@ eog_list_store_get_icon (const gchar *icon_name)
 
 	pixbuf = gtk_icon_theme_load_icon (icon_theme,
 					   icon_name,
-					   EOG_LIST_STORE_THUMB_SIZE,
+					   XVIEWER_LIST_STORE_THUMB_SIZE,
 					   0,
 					   &error);
 
@@ -144,30 +144,30 @@ eog_list_store_get_icon (const gchar *icon_name)
 }
 
 static void
-eog_list_store_init (EogListStore *self)
+xviewer_list_store_init (XviewerListStore *self)
 {
-	GType types[EOG_LIST_STORE_NUM_COLUMNS];
+	GType types[XVIEWER_LIST_STORE_NUM_COLUMNS];
 
-	types[EOG_LIST_STORE_THUMBNAIL] = GDK_TYPE_PIXBUF;
-	types[EOG_LIST_STORE_EOG_IMAGE] = G_TYPE_OBJECT;
-	types[EOG_LIST_STORE_THUMB_SET] = G_TYPE_BOOLEAN;
-	types[EOG_LIST_STORE_EOG_JOB]   = G_TYPE_POINTER;
+	types[XVIEWER_LIST_STORE_THUMBNAIL] = GDK_TYPE_PIXBUF;
+	types[XVIEWER_LIST_STORE_XVIEWER_IMAGE] = G_TYPE_OBJECT;
+	types[XVIEWER_LIST_STORE_THUMB_SET] = G_TYPE_BOOLEAN;
+	types[XVIEWER_LIST_STORE_XVIEWER_JOB]   = G_TYPE_POINTER;
 
 	gtk_list_store_set_column_types (GTK_LIST_STORE (self),
-					 EOG_LIST_STORE_NUM_COLUMNS, types);
+					 XVIEWER_LIST_STORE_NUM_COLUMNS, types);
 
-	self->priv = eog_list_store_get_instance_private (self);
+	self->priv = xviewer_list_store_get_instance_private (self);
 
 	self->priv->monitors = NULL;
 	self->priv->initial_image = -1;
 
-	self->priv->busy_image = eog_list_store_get_icon ("image-loading");
-	self->priv->missing_image = eog_list_store_get_icon ("image-missing");
+	self->priv->busy_image = xviewer_list_store_get_icon ("image-loading");
+	self->priv->missing_image = xviewer_list_store_get_icon ("image-missing");
 
 	g_mutex_init (&self->priv->mutex);
 
 	gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (self),
-						 eog_list_store_compare_func,
+						 xviewer_list_store_compare_func,
 						 NULL, NULL);
 
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (self),
@@ -176,16 +176,16 @@ eog_list_store_init (EogListStore *self)
 }
 
 /**
- * eog_list_store_new:
+ * xviewer_list_store_new:
  *
- * Creates a new and empty #EogListStore.
+ * Creates a new and empty #XviewerListStore.
  *
- * Returns: a newly created #EogListStore.
+ * Returns: a newly created #XviewerListStore.
  **/
 GtkListStore*
-eog_list_store_new (void)
+xviewer_list_store_new (void)
 {
-        return g_object_new (EOG_TYPE_LIST_STORE, NULL);
+        return g_object_new (XVIEWER_TYPE_LIST_STORE, NULL);
 }
 
 /*
@@ -193,12 +193,12 @@ eog_list_store_new (void)
    then sets @iter_found to a #GtkTreeIter pointing to the file.
  */
 static gboolean
-is_file_in_list_store (EogListStore *store,
+is_file_in_list_store (XviewerListStore *store,
 		       const gchar *info_uri,
 		       GtkTreeIter *iter_found)
 {
 	gboolean found = FALSE;
-	EogImage *image;
+	XviewerImage *image;
 	GFile *file;
 	gchar *str;
 	GtkTreeIter iter;
@@ -209,12 +209,12 @@ is_file_in_list_store (EogListStore *store,
 
 	do {
 		gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-				    EOG_LIST_STORE_EOG_IMAGE, &image,
+				    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 				    -1);
 		if (!image)
 			continue;
 
-		file = eog_image_get_file (image);
+		file = xviewer_image_get_file (image);
 		str = g_file_get_uri (file);
 
 		found = (strcmp (str, info_uri) == 0)? TRUE : FALSE;
@@ -234,7 +234,7 @@ is_file_in_list_store (EogListStore *store,
 }
 
 static gboolean
-is_file_in_list_store_file (EogListStore *store,
+is_file_in_list_store_file (XviewerListStore *store,
 			   GFile *file,
 			   GtkTreeIter *iter_found)
 {
@@ -251,39 +251,39 @@ is_file_in_list_store_file (EogListStore *store,
 }
 
 static void
-eog_job_thumbnail_cb (EogJobThumbnail *job, gpointer data)
+xviewer_job_thumbnail_cb (XviewerJobThumbnail *job, gpointer data)
 {
-	EogListStore *store;
+	XviewerListStore *store;
 	GtkTreeIter iter;
-	EogImage *image;
+	XviewerImage *image;
 	GdkPixbuf *thumbnail;
 	GFile *file;
 
-	g_return_if_fail (EOG_IS_LIST_STORE (data));
+	g_return_if_fail (XVIEWER_IS_LIST_STORE (data));
 
-	store = EOG_LIST_STORE (data);
+	store = XVIEWER_LIST_STORE (data);
 
-	file = eog_image_get_file (job->image);
+	file = xviewer_image_get_file (job->image);
 
 	if (is_file_in_list_store_file (store, file, &iter)) {
 		gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-				    EOG_LIST_STORE_EOG_IMAGE, &image,
+				    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 				    -1);
 
 		if (job->thumbnail) {
-			eog_image_set_thumbnail (image, job->thumbnail);
+			xviewer_image_set_thumbnail (image, job->thumbnail);
 
 			/* Getting the thumbnail, in case it needed
  			 * transformations */
-			thumbnail = eog_image_get_thumbnail (image);
+			thumbnail = xviewer_image_get_thumbnail (image);
 		} else {
 			thumbnail = g_object_ref (store->priv->missing_image);
 		}
 
 		gtk_list_store_set (GTK_LIST_STORE (store), &iter,
-				    EOG_LIST_STORE_THUMBNAIL, thumbnail,
-				    EOG_LIST_STORE_THUMB_SET, TRUE,
-				    EOG_LIST_STORE_EOG_JOB, NULL,
+				    XVIEWER_LIST_STORE_THUMBNAIL, thumbnail,
+				    XVIEWER_LIST_STORE_THUMB_SET, TRUE,
+				    XVIEWER_LIST_STORE_XVIEWER_JOB, NULL,
 				    -1);
 
 		g_object_unref (thumbnail);
@@ -293,34 +293,34 @@ eog_job_thumbnail_cb (EogJobThumbnail *job, gpointer data)
 }
 
 static void
-on_image_changed (EogImage *image, EogListStore *store)
+on_image_changed (XviewerImage *image, XviewerListStore *store)
 {
 	GtkTreePath *path;
 	GtkTreeIter iter;
 	gint pos;
 
-	pos = eog_list_store_get_pos_by_image (store, image);
+	pos = xviewer_list_store_get_pos_by_image (store, image);
 	path = gtk_tree_path_new_from_indices (pos, -1);
 
 	gtk_tree_model_get_iter (GTK_TREE_MODEL (store), &iter, path);
-	eog_list_store_thumbnail_refresh (store, &iter);
+	xviewer_list_store_thumbnail_refresh (store, &iter);
 	gtk_tree_path_free (path);
 }
 
 /**
- * eog_list_store_remove:
- * @store: An #EogListStore.
+ * xviewer_list_store_remove:
+ * @store: An #XviewerListStore.
  * @iter: A #GtkTreeIter.
  *
  * Removes the image pointed by @iter from @store.
  **/
 static void
-eog_list_store_remove (EogListStore *store, GtkTreeIter *iter)
+xviewer_list_store_remove (XviewerListStore *store, GtkTreeIter *iter)
 {
-	EogImage *image;
+	XviewerImage *image;
 
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
-			    EOG_LIST_STORE_EOG_IMAGE, &image,
+			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 			    -1);
 
 	g_signal_handlers_disconnect_by_func (image, on_image_changed, store);
@@ -330,16 +330,16 @@ eog_list_store_remove (EogListStore *store, GtkTreeIter *iter)
 }
 
 /**
- * eog_list_store_append_image:
- * @store: An #EogListStore.
- * @image: An #EogImage.
+ * xviewer_list_store_append_image:
+ * @store: An #XviewerListStore.
+ * @image: An #XviewerImage.
  *
- * Adds an #EogImage to @store. The thumbnail of the image is not
+ * Adds an #XviewerImage to @store. The thumbnail of the image is not
  * loaded and will only be loaded if the thumbnail is made visible.
  *
  **/
 void
-eog_list_store_append_image (EogListStore *store, EogImage *image)
+xviewer_list_store_append_image (XviewerListStore *store, XviewerImage *image)
 {
 	GtkTreeIter iter;
 
@@ -349,23 +349,23 @@ eog_list_store_append_image (EogListStore *store, EogImage *image)
 
 	gtk_list_store_append (GTK_LIST_STORE (store), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (store), &iter,
-			    EOG_LIST_STORE_EOG_IMAGE, image,
-			    EOG_LIST_STORE_THUMBNAIL, store->priv->busy_image,
-			    EOG_LIST_STORE_THUMB_SET, FALSE,
+			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, image,
+			    XVIEWER_LIST_STORE_THUMBNAIL, store->priv->busy_image,
+			    XVIEWER_LIST_STORE_THUMB_SET, FALSE,
 			    -1);
 }
 
 static void
-eog_list_store_append_image_from_file (EogListStore *store,
+xviewer_list_store_append_image_from_file (XviewerListStore *store,
 				       GFile *file)
 {
-	EogImage *image;
+	XviewerImage *image;
 
-	g_return_if_fail (EOG_IS_LIST_STORE (store));
+	g_return_if_fail (XVIEWER_IS_LIST_STORE (store));
 
-	image = eog_image_new_file (file);
+	image = xviewer_image_new_file (file);
 
-	eog_list_store_append_image (store, image);
+	xviewer_list_store_append_image (store, image);
 }
 
 static void
@@ -373,12 +373,12 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 			 GFile *file,
 			 GFile *other_file,
 			 GFileMonitorEvent event,
-			 EogListStore *store)
+			 XviewerListStore *store)
 {
 	const char *mimetype;
 	GFileInfo *file_info;
 	GtkTreeIter iter;
-	EogImage *image;
+	XviewerImage *image;
 
 	switch (event) {
 	case G_FILE_MONITOR_EVENT_CHANGED:
@@ -391,32 +391,32 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 		mimetype = g_file_info_get_content_type (file_info);
 
 		if (is_file_in_list_store_file (store, file, &iter)) {
-			if (eog_image_is_supported_mime_type (mimetype)) {
+			if (xviewer_image_is_supported_mime_type (mimetype)) {
 				gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-						    EOG_LIST_STORE_EOG_IMAGE, &image,
+						    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 						    -1);
-				eog_image_file_changed (image);
+				xviewer_image_file_changed (image);
 				g_object_unref (image);
-				eog_list_store_thumbnail_refresh (store, &iter);
+				xviewer_list_store_thumbnail_refresh (store, &iter);
 			} else {
-				eog_list_store_remove (store, &iter);
+				xviewer_list_store_remove (store, &iter);
 			}
 		} else {
-			if (eog_image_is_supported_mime_type (mimetype)) {
-				eog_list_store_append_image_from_file (store, file);
+			if (xviewer_image_is_supported_mime_type (mimetype)) {
+				xviewer_list_store_append_image_from_file (store, file);
 			}
 		}
 		g_object_unref (file_info);
 		break;
 	case G_FILE_MONITOR_EVENT_DELETED:
 		if (is_file_in_list_store_file (store, file, &iter)) {
-			EogImage *image;
+			XviewerImage *image;
 
 			gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-					    EOG_LIST_STORE_EOG_IMAGE, &image,
+					    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 					    -1);
 
-			eog_list_store_remove (store, &iter);
+			xviewer_list_store_remove (store, &iter);
 		}
 		break;
 	case G_FILE_MONITOR_EVENT_CREATED:
@@ -429,8 +429,8 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 			}
 			mimetype = g_file_info_get_content_type (file_info);
 
-			if (eog_image_is_supported_mime_type (mimetype)) {
-				eog_list_store_append_image_from_file (store, file);
+			if (xviewer_image_is_supported_mime_type (mimetype)) {
+				xviewer_list_store_append_image_from_file (store, file);
 			}
 			g_object_unref (file_info);
 		}
@@ -444,8 +444,8 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 		}
 		mimetype = g_file_info_get_content_type (file_info);
 		if (is_file_in_list_store_file (store, file, &iter) &&
-		    eog_image_is_supported_mime_type (mimetype)) {
-			eog_list_store_thumbnail_refresh (store, &iter);
+		    xviewer_image_is_supported_mime_type (mimetype)) {
+			xviewer_list_store_thumbnail_refresh (store, &iter);
 		}
 		g_object_unref (file_info);
 		break;
@@ -465,7 +465,7 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 static void
 directory_visit (GFile *directory,
 		 GFileInfo *children_info,
-		 EogListStore *store)
+		 XviewerListStore *store)
 {
 	GFile *child;
 	gboolean load_uri = FALSE;
@@ -475,19 +475,19 @@ directory_visit (GFile *directory,
 	name = g_file_info_get_name (children_info);
 
         if (!g_str_has_prefix (name, ".")) {
-		if (eog_image_is_supported_mime_type (mime_type)) {
+		if (xviewer_image_is_supported_mime_type (mime_type)) {
 			load_uri = TRUE;
 		}
 	}
 
 	if (load_uri) {
 		child = g_file_get_child (directory, name);
-		eog_list_store_append_image_from_file (store, child);
+		xviewer_list_store_append_image_from_file (store, child);
 	}
 }
 
 static void
-eog_list_store_append_directory (EogListStore *store,
+xviewer_list_store_append_directory (XviewerListStore *store,
 				 GFile *file,
 				 GFileType file_type)
 {
@@ -525,8 +525,8 @@ eog_list_store_append_directory (EogListStore *store,
 }
 
 /**
- * eog_list_store_add_files:
- * @store: An #EogListStore.
+ * xviewer_list_store_add_files:
+ * @store: An #XviewerListStore.
  * @file_list: (element-type GFile): A %NULL-terminated list of #GFile's.
  *
  * Adds a list of #GFile's to @store. The given list
@@ -539,7 +539,7 @@ eog_list_store_append_directory (EogListStore *store,
  *
  **/
 void
-eog_list_store_add_files (EogListStore *store, GList *file_list)
+xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 {
 	GList *it;
 	GFileInfo *file_info;
@@ -574,14 +574,14 @@ eog_list_store_add_files (EogListStore *store, GList *file_list)
 			ctype = g_file_info_get_content_type (file_info);
 
 			/* If the content type is supported adjust file_type */
-			if (eog_image_is_supported_mime_type (ctype))
+			if (xviewer_image_is_supported_mime_type (ctype))
 				file_type = G_FILE_TYPE_REGULAR;
 		}
 
 		g_object_unref (file_info);
 
 		if (file_type == G_FILE_TYPE_DIRECTORY) {
-			eog_list_store_append_directory (store, file, file_type);
+			xviewer_list_store_append_directory (store, file, file_type);
 		} else if (file_type == G_FILE_TYPE_REGULAR &&
 			   g_list_length (file_list) == 1) {
 
@@ -600,20 +600,20 @@ eog_list_store_add_files (EogListStore *store, GList *file_list)
 			}
 
 			if (file_type == G_FILE_TYPE_DIRECTORY) {
-				eog_list_store_append_directory (store, file, file_type);
+				xviewer_list_store_append_directory (store, file, file_type);
 
 				if (!is_file_in_list_store_file (store,
 								 initial_file,
 								 &iter)) {
-					eog_list_store_append_image_from_file (store, initial_file);
+					xviewer_list_store_append_image_from_file (store, initial_file);
 				}
 			} else {
-				eog_list_store_append_image_from_file (store, initial_file);
+				xviewer_list_store_append_image_from_file (store, initial_file);
 			}
 			g_object_unref (file);
 		} else if (file_type == G_FILE_TYPE_REGULAR &&
 			   g_list_length (file_list) > 1) {
-			eog_list_store_append_image_from_file (store, file);
+			xviewer_list_store_append_image_from_file (store, file);
 		}
 	}
 
@@ -623,7 +623,7 @@ eog_list_store_add_files (EogListStore *store, GList *file_list)
 
 	if (initial_file &&
 	    is_file_in_list_store_file (store, initial_file, &iter)) {
-		store->priv->initial_image = eog_list_store_get_pos_by_iter (store, &iter);
+		store->priv->initial_image = xviewer_list_store_get_pos_by_iter (store, &iter);
 		g_object_unref (initial_file);
 	} else {
 		store->priv->initial_image = 0;
@@ -631,57 +631,57 @@ eog_list_store_add_files (EogListStore *store, GList *file_list)
 }
 
 /**
- * eog_list_store_remove_image:
- * @store: An #EogListStore.
- * @image: An #EogImage.
+ * xviewer_list_store_remove_image:
+ * @store: An #XviewerListStore.
+ * @image: An #XviewerImage.
  *
  * Removes @image from @store.
  **/
 void
-eog_list_store_remove_image (EogListStore *store, EogImage *image)
+xviewer_list_store_remove_image (XviewerListStore *store, XviewerImage *image)
 {
 	GtkTreeIter iter;
 	GFile *file;
 
-	g_return_if_fail (EOG_IS_LIST_STORE (store));
-	g_return_if_fail (EOG_IS_IMAGE (image));
+	g_return_if_fail (XVIEWER_IS_LIST_STORE (store));
+	g_return_if_fail (XVIEWER_IS_IMAGE (image));
 
-	file = eog_image_get_file (image);
+	file = xviewer_image_get_file (image);
 
 	if (is_file_in_list_store_file (store, file, &iter)) {
-		eog_list_store_remove (store, &iter);
+		xviewer_list_store_remove (store, &iter);
 	}
 	g_object_unref (file);
 }
 
 /**
- * eog_list_store_new_from_glist:
- * @list: (element-type EogImage): a %NULL-terminated list of #EogImage's.
+ * xviewer_list_store_new_from_glist:
+ * @list: (element-type XviewerImage): a %NULL-terminated list of #XviewerImage's.
  *
- * Creates a new #EogListStore from a list of #EogImage's.
+ * Creates a new #XviewerListStore from a list of #XviewerImage's.
  * The given list must be %NULL-terminated.
  *
- * Returns: a new #EogListStore.
+ * Returns: a new #XviewerListStore.
  **/
 GtkListStore *
-eog_list_store_new_from_glist (GList *list)
+xviewer_list_store_new_from_glist (GList *list)
 {
 	GList *it;
 
-	GtkListStore *store = eog_list_store_new ();
+	GtkListStore *store = xviewer_list_store_new ();
 
 	for (it = list; it != NULL; it = it->next) {
-		eog_list_store_append_image (EOG_LIST_STORE (store),
-					     EOG_IMAGE (it->data));
+		xviewer_list_store_append_image (XVIEWER_LIST_STORE (store),
+					     XVIEWER_IMAGE (it->data));
 	}
 
 	return store;
 }
 
 /**
- * eog_list_store_get_pos_by_image:
- * @store: An #EogListStore.
- * @image: An #EogImage.
+ * xviewer_list_store_get_pos_by_image:
+ * @store: An #XviewerListStore.
+ * @image: An #XviewerImage.
  *
  * Gets the position where @image is stored in @store. If @image
  * is not stored in @store, -1 is returned.
@@ -689,19 +689,19 @@ eog_list_store_new_from_glist (GList *list)
  * Returns: the position of @image in @store or -1 if not found.
  **/
 gint
-eog_list_store_get_pos_by_image (EogListStore *store, EogImage *image)
+xviewer_list_store_get_pos_by_image (XviewerListStore *store, XviewerImage *image)
 {
 	GtkTreeIter iter;
 	gint pos = -1;
 	GFile *file;
 
-	g_return_val_if_fail (EOG_IS_LIST_STORE (store), -1);
-	g_return_val_if_fail (EOG_IS_IMAGE (image), -1);
+	g_return_val_if_fail (XVIEWER_IS_LIST_STORE (store), -1);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (image), -1);
 
-	file = eog_image_get_file (image);
+	file = xviewer_image_get_file (image);
 
 	if (is_file_in_list_store_file (store, file, &iter)) {
-		pos = eog_list_store_get_pos_by_iter (store, &iter);
+		pos = xviewer_list_store_get_pos_by_iter (store, &iter);
 	}
 
 	g_object_unref (file);
@@ -709,27 +709,27 @@ eog_list_store_get_pos_by_image (EogListStore *store, EogImage *image)
 }
 
 /**
- * eog_list_store_get_image_by_pos:
- * @store: An #EogListStore.
- * @pos: the position of the required #EogImage.
+ * xviewer_list_store_get_image_by_pos:
+ * @store: An #XviewerListStore.
+ * @pos: the position of the required #XviewerImage.
  *
- * Gets the #EogImage in the position @pos of @store. If there is
+ * Gets the #XviewerImage in the position @pos of @store. If there is
  * no image at position @pos, %NULL is returned.
  *
- * Returns: (transfer full): the #EogImage in position @pos or %NULL.
+ * Returns: (transfer full): the #XviewerImage in position @pos or %NULL.
  *
  **/
-EogImage *
-eog_list_store_get_image_by_pos (EogListStore *store, gint pos)
+XviewerImage *
+xviewer_list_store_get_image_by_pos (XviewerListStore *store, gint pos)
 {
-	EogImage *image = NULL;
+	XviewerImage *image = NULL;
 	GtkTreeIter iter;
 
-	g_return_val_if_fail (EOG_IS_LIST_STORE (store), NULL);
+	g_return_val_if_fail (XVIEWER_IS_LIST_STORE (store), NULL);
 
 	if (gtk_tree_model_iter_nth_child (GTK_TREE_MODEL (store), &iter, NULL, pos)) {
 		gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-				    EOG_LIST_STORE_EOG_IMAGE, &image,
+				    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 				    -1);
 	}
 
@@ -737,8 +737,8 @@ eog_list_store_get_image_by_pos (EogListStore *store, gint pos)
 }
 
 /**
- * eog_list_store_get_pos_by_iter:
- * @store: An #EogListStore.
+ * xviewer_list_store_get_pos_by_iter:
+ * @store: An #XviewerListStore.
  * @iter: A #GtkTreeIter pointing to an image in @store.
  *
  * Gets the position of the image pointed by @iter.
@@ -746,7 +746,7 @@ eog_list_store_get_image_by_pos (EogListStore *store, gint pos)
  * Returns: The position of the image pointed by @iter.
  **/
 gint
-eog_list_store_get_pos_by_iter (EogListStore *store,
+xviewer_list_store_get_pos_by_iter (XviewerListStore *store,
 				GtkTreeIter *iter)
 {
 	gint *indices;
@@ -762,54 +762,54 @@ eog_list_store_get_pos_by_iter (EogListStore *store,
 }
 
 /**
- * eog_list_store_length:
- * @store: An #EogListStore.
+ * xviewer_list_store_length:
+ * @store: An #XviewerListStore.
  *
  * Returns the number of images in the store.
  *
  * Returns: The number of images in @store.
  **/
 gint
-eog_list_store_length (EogListStore *store)
+xviewer_list_store_length (XviewerListStore *store)
 {
-	g_return_val_if_fail (EOG_IS_LIST_STORE (store), -1);
+	g_return_val_if_fail (XVIEWER_IS_LIST_STORE (store), -1);
 
 	return gtk_tree_model_iter_n_children (GTK_TREE_MODEL (store), NULL);
 }
 
 /**
- * eog_list_store_get_initial_pos:
- * @store: An #EogListStore.
+ * xviewer_list_store_get_initial_pos:
+ * @store: An #XviewerListStore.
  *
- * Gets the position of the #EogImage that should be loaded first.
+ * Gets the position of the #XviewerImage that should be loaded first.
  * If not set, it returns -1.
  *
  * Returns: the position of the image to be loaded first or -1.
  *
  **/
 gint
-eog_list_store_get_initial_pos (EogListStore *store)
+xviewer_list_store_get_initial_pos (XviewerListStore *store)
 {
-	g_return_val_if_fail (EOG_IS_LIST_STORE (store), -1);
+	g_return_val_if_fail (XVIEWER_IS_LIST_STORE (store), -1);
 
 	return store->priv->initial_image;
 }
 
 static void
-eog_list_store_remove_thumbnail_job (EogListStore *store,
+xviewer_list_store_remove_thumbnail_job (XviewerListStore *store,
 				     GtkTreeIter *iter)
 {
-	EogJob *job;
+	XviewerJob *job;
 
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
-			    EOG_LIST_STORE_EOG_JOB, &job,
+			    XVIEWER_LIST_STORE_XVIEWER_JOB, &job,
 			    -1);
 
 	if (job != NULL) {
 		g_mutex_lock (&store->priv->mutex);
-		eog_job_cancel (job);
+		xviewer_job_cancel (job);
 		gtk_list_store_set (GTK_LIST_STORE (store), iter,
-				    EOG_LIST_STORE_EOG_JOB, NULL,
+				    XVIEWER_LIST_STORE_XVIEWER_JOB, NULL,
 				    -1);
 		g_mutex_unlock (&store->priv->mutex);
 	}
@@ -818,14 +818,14 @@ eog_list_store_remove_thumbnail_job (EogListStore *store,
 }
 
 static void
-eog_list_store_add_thumbnail_job (EogListStore *store, GtkTreeIter *iter)
+xviewer_list_store_add_thumbnail_job (XviewerListStore *store, GtkTreeIter *iter)
 {
-	EogImage *image;
-	EogJob *job;
+	XviewerImage *image;
+	XviewerJob *job;
 
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
-			    EOG_LIST_STORE_EOG_IMAGE, &image,
-			    EOG_LIST_STORE_EOG_JOB, &job,
+			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
+			    XVIEWER_LIST_STORE_XVIEWER_JOB, &job,
 			    -1);
 
 	if (job != NULL) {
@@ -833,51 +833,51 @@ eog_list_store_add_thumbnail_job (EogListStore *store, GtkTreeIter *iter)
 		return;
 	}
 
-	job = eog_job_thumbnail_new (image);
+	job = xviewer_job_thumbnail_new (image);
 
 	g_signal_connect (job,
 			  "finished",
-			  G_CALLBACK (eog_job_thumbnail_cb),
+			  G_CALLBACK (xviewer_job_thumbnail_cb),
 			  store);
 
 	g_mutex_lock (&store->priv->mutex);
 	gtk_list_store_set (GTK_LIST_STORE (store), iter,
-			    EOG_LIST_STORE_EOG_JOB, job,
+			    XVIEWER_LIST_STORE_XVIEWER_JOB, job,
 			    -1);
-	eog_job_scheduler_add_job (job);
+	xviewer_job_scheduler_add_job (job);
 	g_mutex_unlock (&store->priv->mutex);
 	g_object_unref (job);
 	g_object_unref (image);
 }
 
 /**
- * eog_list_store_thumbnail_set:
- * @store: An #EogListStore.
+ * xviewer_list_store_thumbnail_set:
+ * @store: An #XviewerListStore.
  * @iter: A #GtkTreeIter pointing to an image in @store.
  *
  * Sets the thumbnail for the image pointed by @iter.
  *
  **/
 void
-eog_list_store_thumbnail_set (EogListStore *store,
+xviewer_list_store_thumbnail_set (XviewerListStore *store,
 			      GtkTreeIter *iter)
 {
 	gboolean thumb_set = FALSE;
 
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
-			    EOG_LIST_STORE_THUMB_SET, &thumb_set,
+			    XVIEWER_LIST_STORE_THUMB_SET, &thumb_set,
 			    -1);
 
 	if (thumb_set) {
 		return;
 	}
 
-	eog_list_store_add_thumbnail_job (store, iter);
+	xviewer_list_store_add_thumbnail_job (store, iter);
 }
 
 /**
- * eog_list_store_thumbnail_unset:
- * @store: An #EogListStore.
+ * xviewer_list_store_thumbnail_unset:
+ * @store: An #XviewerListStore.
  * @iter: A #GtkTreeIter pointing to an image in @store.
  *
  * Unsets the thumbnail for the image pointed by @iter, changing
@@ -885,37 +885,37 @@ eog_list_store_thumbnail_set (EogListStore *store,
  *
  **/
 void
-eog_list_store_thumbnail_unset (EogListStore *store,
+xviewer_list_store_thumbnail_unset (XviewerListStore *store,
 				GtkTreeIter *iter)
 {
-	EogImage *image;
+	XviewerImage *image;
 
-	eog_list_store_remove_thumbnail_job (store, iter);
+	xviewer_list_store_remove_thumbnail_job (store, iter);
 
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
-			    EOG_LIST_STORE_EOG_IMAGE, &image,
+			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 			    -1);
-	eog_image_set_thumbnail (image, NULL);
+	xviewer_image_set_thumbnail (image, NULL);
 	g_object_unref (image);
 
 	gtk_list_store_set (GTK_LIST_STORE (store), iter,
-			    EOG_LIST_STORE_THUMBNAIL, store->priv->busy_image,
-			    EOG_LIST_STORE_THUMB_SET, FALSE,
+			    XVIEWER_LIST_STORE_THUMBNAIL, store->priv->busy_image,
+			    XVIEWER_LIST_STORE_THUMB_SET, FALSE,
 			    -1);
 }
 
 /**
- * eog_list_store_thumbnail_refresh:
- * @store: An #EogListStore.
+ * xviewer_list_store_thumbnail_refresh:
+ * @store: An #XviewerListStore.
  * @iter: A #GtkTreeIter pointing to an image in @store.
  *
  * Refreshes the thumbnail for the image pointed by @iter.
  *
  **/
 void
-eog_list_store_thumbnail_refresh (EogListStore *store,
+xviewer_list_store_thumbnail_refresh (XviewerListStore *store,
 				  GtkTreeIter *iter)
 {
-	eog_list_store_remove_thumbnail_job (store, iter);
-	eog_list_store_add_thumbnail_job (store, iter);
+	xviewer_list_store_remove_thumbnail_job (store, iter);
+	xviewer_list_store_add_thumbnail_job (store, iter);
 }

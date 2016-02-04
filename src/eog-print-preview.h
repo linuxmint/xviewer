@@ -1,4 +1,4 @@
-/* Eye of GNOME -- Print Preview Widget
+/* Xviewer -- Print Preview Widget
  *
  * Copyright (C) 2006-2007 The Free Software Foundation
  *
@@ -19,72 +19,72 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef _EOG_PRINT_PREVIEW_H_
-#define _EOG_PRINT_PREVIEW_H_
+#ifndef _XVIEWER_PRINT_PREVIEW_H_
+#define _XVIEWER_PRINT_PREVIEW_H_
 
 G_BEGIN_DECLS
 
-typedef struct _EogPrintPreview EogPrintPreview;
-typedef struct _EogPrintPreviewClass EogPrintPreviewClass;
-typedef struct _EogPrintPreviewPrivate EogPrintPreviewPrivate;
+typedef struct _XviewerPrintPreview XviewerPrintPreview;
+typedef struct _XviewerPrintPreviewClass XviewerPrintPreviewClass;
+typedef struct _XviewerPrintPreviewPrivate XviewerPrintPreviewPrivate;
 
-#define EOG_TYPE_PRINT_PREVIEW            (eog_print_preview_get_type ())
-#define EOG_PRINT_PREVIEW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_PRINT_PREVIEW, EogPrintPreview))
-#define EOG_PRINT_PREVIEW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), EOG_TYPE_PRINT_PREVIEW, EogPrintPreviewClass))
-#define EOG_IS_PRINT_PREVIEW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_PRINT_PREVIEW))
-#define EOG_IS_PRINT_PREVIEW_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EOG_TYPE_PRINT_PREVIEW))
+#define XVIEWER_TYPE_PRINT_PREVIEW            (xviewer_print_preview_get_type ())
+#define XVIEWER_PRINT_PREVIEW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_PRINT_PREVIEW, XviewerPrintPreview))
+#define XVIEWER_PRINT_PREVIEW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XVIEWER_TYPE_PRINT_PREVIEW, XviewerPrintPreviewClass))
+#define XVIEWER_IS_PRINT_PREVIEW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_PRINT_PREVIEW))
+#define XVIEWER_IS_PRINT_PREVIEW_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XVIEWER_TYPE_PRINT_PREVIEW))
 
-struct _EogPrintPreview {
+struct _XviewerPrintPreview {
 	GtkAspectFrame aspect_frame;
 
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 };
 
-struct _EogPrintPreviewClass {
+struct _XviewerPrintPreviewClass {
 	GtkAspectFrameClass parent_class;
 
 };
 
 G_GNUC_INTERNAL
-GType        eog_print_preview_get_type            (void) G_GNUC_CONST;
+GType        xviewer_print_preview_get_type            (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-GtkWidget   *eog_print_preview_new                 (void);
+GtkWidget   *xviewer_print_preview_new                 (void);
 
 G_GNUC_INTERNAL
-GtkWidget   *eog_print_preview_new_with_pixbuf     (GdkPixbuf       *pixbuf);
+GtkWidget   *xviewer_print_preview_new_with_pixbuf     (GdkPixbuf       *pixbuf);
 
 G_GNUC_INTERNAL
-void         eog_print_preview_set_page_margins    (EogPrintPreview *preview,
+void         xviewer_print_preview_set_page_margins    (XviewerPrintPreview *preview,
 						    gfloat          l_margin,
 						    gfloat          r_margin,
 						    gfloat          t_margin,
 						    gfloat          b_margin);
 
 G_GNUC_INTERNAL
-void         eog_print_preview_set_from_page_setup (EogPrintPreview *preview,
+void         xviewer_print_preview_set_from_page_setup (XviewerPrintPreview *preview,
 						    GtkPageSetup    *setup);
 
 G_GNUC_INTERNAL
-void         eog_print_preview_get_image_position  (EogPrintPreview *preview,
+void         xviewer_print_preview_get_image_position  (XviewerPrintPreview *preview,
 						    gdouble         *x,
 						    gdouble         *y);
 
 G_GNUC_INTERNAL
-void         eog_print_preview_set_image_position  (EogPrintPreview *preview,
+void         xviewer_print_preview_set_image_position  (XviewerPrintPreview *preview,
 						    gdouble          x,
 						    gdouble          y);
 
 G_GNUC_INTERNAL
-gboolean     eog_print_preview_point_in_image_area (EogPrintPreview *preview,
+gboolean     xviewer_print_preview_point_in_image_area (XviewerPrintPreview *preview,
 						    guint            x,
 						    guint            y);
 G_GNUC_INTERNAL
-void         eog_print_preview_set_scale           (EogPrintPreview *preview,
+void         xviewer_print_preview_set_scale           (XviewerPrintPreview *preview,
 						    gfloat           scale);
 G_GNUC_INTERNAL
-gfloat       eog_print_preview_get_scale           (EogPrintPreview *preview);
+gfloat       xviewer_print_preview_get_scale           (XviewerPrintPreview *preview);
 
 G_END_DECLS
 
-#endif /* _EOG_PRINT_PREVIEW_H_ */
+#endif /* _XVIEWER_PRINT_PREVIEW_H_ */

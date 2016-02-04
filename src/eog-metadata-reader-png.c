@@ -1,10 +1,10 @@
-/* Eye Of GNOME -- PNG Metadata Reader
+/* Xviewer -- PNG Metadata Reader
  *
  * Copyright (C) 2008 The Free Software Foundation
  *
  * Author: Felix Riemann <friemann@svn.gnome.org>
  *
- * Based on the old EogMetadataReader code.
+ * Based on the old XviewerMetadataReader code.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,9 +28,9 @@
 #include <string.h>
 #include <zlib.h>
 
-#include "eog-metadata-reader.h"
-#include "eog-metadata-reader-png.h"
-#include "eog-debug.h"
+#include "xviewer-metadata-reader.h"
+#include "xviewer-metadata-reader-png.h"
+#include "xviewer-debug.h"
 
 typedef enum {
 	EMR_READ_MAGIC,
@@ -48,15 +48,15 @@ typedef enum {
 	EMR_READ_CHRM,
 	EMR_READ_GAMA,
 	EMR_FINISHED
-} EogMetadataReaderPngState;
+} XviewerMetadataReaderPngState;
 
 #if 0
 #define IS_FINISHED(priv) (priv->icc_chunk  != NULL && \
                            priv->xmp_chunk  != NULL)
 #endif
 
-struct _EogMetadataReaderPngPrivate {
-	EogMetadataReaderPngState  state;
+struct _XviewerMetadataReaderPngPrivate {
+	XviewerMetadataReaderPngState  state;
 
 	/* data fields */
 	guint32  icc_len;
@@ -86,19 +86,19 @@ struct _EogMetadataReaderPngPrivate {
 };
 
 static void
-eog_metadata_reader_png_init_emr_iface (gpointer g_iface, gpointer iface_data);
+xviewer_metadata_reader_png_init_emr_iface (gpointer g_iface, gpointer iface_data);
 
-G_DEFINE_TYPE_WITH_CODE (EogMetadataReaderPng, eog_metadata_reader_png,
+G_DEFINE_TYPE_WITH_CODE (XviewerMetadataReaderPng, xviewer_metadata_reader_png,
 			 G_TYPE_OBJECT,
-			 G_IMPLEMENT_INTERFACE (EOG_TYPE_METADATA_READER,
-					eog_metadata_reader_png_init_emr_iface) \
-			 G_ADD_PRIVATE(EogMetadataReaderPng))
+			 G_IMPLEMENT_INTERFACE (XVIEWER_TYPE_METADATA_READER,
+					xviewer_metadata_reader_png_init_emr_iface) \
+			 G_ADD_PRIVATE(XviewerMetadataReaderPng))
 
 static void
-eog_metadata_reader_png_dispose (GObject *object)
+xviewer_metadata_reader_png_dispose (GObject *object)
 {
-	EogMetadataReaderPng *emr = EOG_METADATA_READER_PNG (object);
-	EogMetadataReaderPngPrivate *priv = emr->priv;
+	XviewerMetadataReaderPng *emr = XVIEWER_METADATA_READER_PNG (object);
+	XviewerMetadataReaderPngPrivate *priv = emr->priv;
 
 	g_free (priv->xmp_chunk);
 	priv->xmp_chunk = NULL;
@@ -115,15 +115,15 @@ eog_metadata_reader_png_dispose (GObject *object)
 	g_free (priv->gAMA_chunk);
 	priv->gAMA_chunk = NULL;
 
-	G_OBJECT_CLASS (eog_metadata_reader_png_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_metadata_reader_png_parent_class)->dispose (object);
 }
 
 static void
-eog_metadata_reader_png_init (EogMetadataReaderPng *emr)
+xviewer_metadata_reader_png_init (XviewerMetadataReaderPng *emr)
 {
-	EogMetadataReaderPngPrivate *priv;
+	XviewerMetadataReaderPngPrivate *priv;
 
-	priv = emr->priv =  eog_metadata_reader_png_get_instance_private (emr);
+	priv = emr->priv =  xviewer_metadata_reader_png_get_instance_private (emr);
 	priv->icc_chunk = NULL;
 	priv->icc_len = 0;
 	priv->xmp_chunk = NULL;
@@ -141,29 +141,29 @@ eog_metadata_reader_png_init (EogMetadataReaderPng *emr)
 }
 
 static void
-eog_metadata_reader_png_class_init (EogMetadataReaderPngClass *klass)
+xviewer_metadata_reader_png_class_init (XviewerMetadataReaderPngClass *klass)
 {
 	GObjectClass *object_class = (GObjectClass*) klass;
 
-	object_class->dispose = eog_metadata_reader_png_dispose;
+	object_class->dispose = xviewer_metadata_reader_png_dispose;
 }
 
 static gboolean
-eog_metadata_reader_png_finished (EogMetadataReaderPng *emr)
+xviewer_metadata_reader_png_finished (XviewerMetadataReaderPng *emr)
 {
-	g_return_val_if_fail (EOG_IS_METADATA_READER_PNG (emr), TRUE);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER_PNG (emr), TRUE);
 
 	return (emr->priv->state == EMR_FINISHED);
 }
 
 
 static void
-eog_metadata_reader_png_get_next_block (EogMetadataReaderPngPrivate* priv,
+xviewer_metadata_reader_png_get_next_block (XviewerMetadataReaderPngPrivate* priv,
 				    	guchar *chunk,
 					int* i,
 					const guchar *buf,
 					int len,
-					EogMetadataReaderPngState state)
+					XviewerMetadataReaderPngState state)
 {
 	if (*i + priv->size < len) {
 		/* read data in one block */
@@ -182,14 +182,14 @@ eog_metadata_reader_png_get_next_block (EogMetadataReaderPngPrivate* priv,
 }
 
 static void
-eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, guint len)
+xviewer_metadata_reader_png_consume (XviewerMetadataReaderPng *emr, const guchar *buf, guint len)
 {
-	EogMetadataReaderPngPrivate *priv;
+	XviewerMetadataReaderPngPrivate *priv;
  	int i;
 	guint32 chunk_crc;
 	static const gchar PNGMAGIC[8] = "\x89PNG\x0D\x0A\x1a\x0A";
 
-	g_return_if_fail (EOG_IS_METADATA_READER_PNG (emr));
+	g_return_if_fail (XVIEWER_IS_METADATA_READER_PNG (emr));
 
 	priv = emr->priv;
 
@@ -234,7 +234,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 				priv->sub_step = 0;
 			} else {
 				priv->state = EMR_FINISHED;
-				eog_debug_message (DEBUG_IMAGE_DATA,
+				xviewer_debug_message (DEBUG_IMAGE_DATA,
 						   "chunk size larger than "
 						   "2^31-1; stopping parser");
 			}
@@ -292,7 +292,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 			priv->size = 4;
 		case EMR_SKIP_BYTES:
 		/* Skip chunk and start reading the size of the next one */
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Skip bytes: %" G_GSIZE_FORMAT,
 					   priv->size);
 
@@ -320,7 +320,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 			chunk_crc = crc32 (crc32 (0L, Z_NULL, 0), priv->chunk_name, 4);
 			chunk_crc = crc32 (chunk_crc, *priv->crc_chunk, *priv->crc_len);
 
-			eog_debug_message (DEBUG_IMAGE_DATA, "Checking CRC: Chunk: 0x%X - Target: 0x%X", chunk_crc, priv->target_crc);
+			xviewer_debug_message (DEBUG_IMAGE_DATA, "Checking CRC: Chunk: 0x%X - Target: 0x%X", chunk_crc, priv->target_crc);
 
 			/* ...and check if they match. If they don't throw
 			 * the chunk away and stop parsing. */
@@ -338,7 +338,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 		case EMR_READ_XMP_ITXT:
 			/* Extract an iTXt chunk possibly containing
 			 * an XMP packet */
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read XMP Chunk - size: %"
 					   G_GSIZE_FORMAT, priv->size);
 
@@ -349,7 +349,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 				priv->bytes_read = 0;
 				priv->crc_chunk = &priv->xmp_chunk;
 			}
-			eog_metadata_reader_png_get_next_block (priv,
+			xviewer_metadata_reader_png_get_next_block (priv,
 							    priv->xmp_chunk,
 							    &i, buf, len,
 							    EMR_READ_XMP_ITXT);
@@ -370,7 +370,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 		case EMR_READ_ICCP:
 			/* Extract an iCCP chunk containing a
 			 * deflated ICC profile. */
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read ICC Chunk - size: %"
 					   G_GSIZE_FORMAT, priv->size);
 
@@ -382,7 +382,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 				priv->crc_chunk = &priv->icc_chunk;
 			}
 
-			eog_metadata_reader_png_get_next_block (priv,
+			xviewer_metadata_reader_png_get_next_block (priv,
 							    priv->icc_chunk,
 							    &i, buf, len,
 							    EMR_READ_ICCP);
@@ -390,7 +390,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 		case EMR_READ_SRGB:
 			/* Extract the sRGB chunk. Marks the image data as
 			 * being in sRGB colorspace. */
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read sRGB Chunk - value: %u", *(buf+i));
 
 			if (priv->sRGB_chunk == NULL) {
@@ -401,7 +401,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 				priv->crc_chunk = &priv->sRGB_chunk;
 			}
 
-			eog_metadata_reader_png_get_next_block (priv,
+			xviewer_metadata_reader_png_get_next_block (priv,
 							    priv->sRGB_chunk,
 							    &i, buf, len,
 							    EMR_READ_SRGB);
@@ -409,7 +409,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 		case EMR_READ_CHRM:
 			/* Extract the cHRM chunk. Contains the coordinates of
 			 * the image's whitepoint and primary chromacities. */
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read cHRM Chunk - size: %"
 					   G_GSIZE_FORMAT, priv->size);
 
@@ -421,7 +421,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 				priv->crc_chunk = &priv->cHRM_chunk;
 			}
 
-			eog_metadata_reader_png_get_next_block (priv,
+			xviewer_metadata_reader_png_get_next_block (priv,
 							    priv->cHRM_chunk,
 							    &i, buf, len,
 							    EMR_READ_ICCP);
@@ -429,7 +429,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 		case EMR_READ_GAMA:
 			/* Extract the gAMA chunk containing the
 			 * image's gamma value */
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read gAMA-Chunk - size: %"
 					   G_GSIZE_FORMAT, priv->size);
 
@@ -441,7 +441,7 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 				priv->crc_chunk = &priv->gAMA_chunk;
 			}
 
-			eog_metadata_reader_png_get_next_block (priv,
+			xviewer_metadata_reader_png_get_next_block (priv,
 							    priv->gAMA_chunk,
 							    &i, buf, len,
 							    EMR_READ_ICCP);
@@ -455,21 +455,21 @@ eog_metadata_reader_png_consume (EogMetadataReaderPng *emr, const guchar *buf, g
 #ifdef HAVE_EXEMPI
 
 /* skip the chunk ID */
-#define EOG_XMP_OFFSET (22)
+#define XVIEWER_XMP_OFFSET (22)
 
 static gpointer
-eog_metadata_reader_png_get_xmp_data (EogMetadataReaderPng *emr )
+xviewer_metadata_reader_png_get_xmp_data (XviewerMetadataReaderPng *emr )
 {
-	EogMetadataReaderPngPrivate *priv;
+	XviewerMetadataReaderPngPrivate *priv;
 	XmpPtr xmp = NULL;
 
-	g_return_val_if_fail (EOG_IS_METADATA_READER_PNG (emr), NULL);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER_PNG (emr), NULL);
 
 	priv = emr->priv;
 
 	if (priv->xmp_chunk != NULL) {
-		xmp = xmp_new ((const char*)priv->xmp_chunk+EOG_XMP_OFFSET,
-			       priv->xmp_len-EOG_XMP_OFFSET);
+		xmp = xmp_new ((const char*)priv->xmp_chunk+XVIEWER_XMP_OFFSET,
+			       priv->xmp_len-XVIEWER_XMP_OFFSET);
 	}
 
 	return (gpointer) xmp;
@@ -483,19 +483,19 @@ eog_metadata_reader_png_get_xmp_data (EogMetadataReaderPng *emr )
 
 /* This is the amount of memory the inflate output buffer gets increased by
  * while decompressing the ICC profile */
-#define EOG_ICC_INFLATE_BUFFER_STEP 1024
+#define XVIEWER_ICC_INFLATE_BUFFER_STEP 1024
 
 /* I haven't seen ICC profiles larger than 1MB yet.
  * A maximum output buffer of 5MB should be enough. */
-#define EOG_ICC_INFLATE_BUFFER_LIMIT (1024*1024*5)
+#define XVIEWER_ICC_INFLATE_BUFFER_LIMIT (1024*1024*5)
 
 static gpointer
-eog_metadata_reader_png_get_icc_profile (EogMetadataReaderPng *emr)
+xviewer_metadata_reader_png_get_icc_profile (XviewerMetadataReaderPng *emr)
 {
-	EogMetadataReaderPngPrivate *priv;
+	XviewerMetadataReaderPngPrivate *priv;
 	cmsHPROFILE profile = NULL;
 
-	g_return_val_if_fail (EOG_IS_METADATA_READER_PNG (emr), NULL);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER_PNG (emr), NULL);
 
 	priv = emr->priv;
 
@@ -526,34 +526,34 @@ eog_metadata_reader_png_get_icc_profile (EogMetadataReaderPng *emr)
 		}
 
 		/* Prepare output buffer and make zlib aware of it */
-		outbuf = g_malloc (EOG_ICC_INFLATE_BUFFER_STEP);
+		outbuf = g_malloc (XVIEWER_ICC_INFLATE_BUFFER_STEP);
 		zstr.next_out = outbuf;
-		zstr.avail_out = EOG_ICC_INFLATE_BUFFER_STEP;
+		zstr.avail_out = XVIEWER_ICC_INFLATE_BUFFER_STEP;
 
 		do {
 			if (zstr.avail_out == 0) {
 				/* The output buffer was not large enough to
 				 * hold all the decompressed data. Increase its
 				 * size and continue decompression. */
-				gsize new_size = zstr.total_out + EOG_ICC_INFLATE_BUFFER_STEP;
+				gsize new_size = zstr.total_out + XVIEWER_ICC_INFLATE_BUFFER_STEP;
 
-				if (G_UNLIKELY (new_size > EOG_ICC_INFLATE_BUFFER_LIMIT)) {
+				if (G_UNLIKELY (new_size > XVIEWER_ICC_INFLATE_BUFFER_LIMIT)) {
 					/* Enforce a memory limit for the output
 					 * buffer to avoid possible OOM cases */
 					inflateEnd (&zstr);
 					g_free (outbuf);
-					eog_debug_message (DEBUG_IMAGE_DATA, "ICC profile is too large. Ignoring.");
+					xviewer_debug_message (DEBUG_IMAGE_DATA, "ICC profile is too large. Ignoring.");
 					return NULL;
 				}
 				outbuf = g_realloc(outbuf, new_size);
-				zstr.avail_out = EOG_ICC_INFLATE_BUFFER_STEP;
+				zstr.avail_out = XVIEWER_ICC_INFLATE_BUFFER_STEP;
 				zstr.next_out = (Bytef*)outbuf + zstr.total_out;
 			}
 			z_ret = inflate (&zstr, Z_SYNC_FLUSH);
 		} while (z_ret == Z_OK);
 
 		if (G_UNLIKELY (z_ret != Z_STREAM_END)) {
-			eog_debug_message (DEBUG_IMAGE_DATA, "Error while inflating ICC profile: %s (%d)", zstr.msg, z_ret);
+			xviewer_debug_message (DEBUG_IMAGE_DATA, "Error while inflating ICC profile: %s (%d)", zstr.msg, z_ret);
 			inflateEnd (&zstr);
 			g_free (outbuf);
 			return NULL;
@@ -563,11 +563,11 @@ eog_metadata_reader_png_get_icc_profile (EogMetadataReaderPng *emr)
 		inflateEnd (&zstr);
 		g_free (outbuf);
 
-		eog_debug_message (DEBUG_LCMS, "PNG has %s ICC profile", profile ? "valid" : "invalid");
+		xviewer_debug_message (DEBUG_LCMS, "PNG has %s ICC profile", profile ? "valid" : "invalid");
 	}
 
 	if (!profile && priv->sRGB_chunk) {
-		eog_debug_message (DEBUG_LCMS, "PNG is sRGB");
+		xviewer_debug_message (DEBUG_LCMS, "PNG is sRGB");
 		/* If the file has an sRGB chunk the image data is in the sRGB
 		 * colorspace. lcms has a built-in sRGB profile. */
 
@@ -585,7 +585,7 @@ eog_metadata_reader_png_get_icc_profile (EogMetadataReaderPng *emr)
 		 * 5th decimal point.
 		 * They are saved as integer values multiplied by 100000. */
 
-		eog_debug_message (DEBUG_LCMS, "Trying to calculate color profile");
+		xviewer_debug_message (DEBUG_LCMS, "Trying to calculate color profile");
 
 		whitepoint.x = EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->cHRM_chunk, 0, 100000);
 		whitepoint.y = EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->cHRM_chunk, 1, 100000);
@@ -617,26 +617,26 @@ eog_metadata_reader_png_get_icc_profile (EogMetadataReaderPng *emr)
 #endif
 
 static void
-eog_metadata_reader_png_init_emr_iface (gpointer g_iface, gpointer iface_data)
+xviewer_metadata_reader_png_init_emr_iface (gpointer g_iface, gpointer iface_data)
 {
-	EogMetadataReaderInterface *iface;
+	XviewerMetadataReaderInterface *iface;
 
-	iface = (EogMetadataReaderInterface*) g_iface;
+	iface = (XviewerMetadataReaderInterface*) g_iface;
 
 	iface->consume =
-		(void (*) (EogMetadataReader *self, const guchar *buf, guint len))
-			eog_metadata_reader_png_consume;
+		(void (*) (XviewerMetadataReader *self, const guchar *buf, guint len))
+			xviewer_metadata_reader_png_consume;
 	iface->finished =
-		(gboolean (*) (EogMetadataReader *self))
-			eog_metadata_reader_png_finished;
+		(gboolean (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_png_finished;
 #ifdef HAVE_LCMS
 	iface->get_icc_profile =
-		(cmsHPROFILE (*) (EogMetadataReader *self))
-			eog_metadata_reader_png_get_icc_profile;
+		(cmsHPROFILE (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_png_get_icc_profile;
 #endif
 #ifdef HAVE_EXEMPI
 	iface->get_xmp_ptr =
-		(gpointer (*) (EogMetadataReader *self))
-			eog_metadata_reader_png_get_xmp_data;
+		(gpointer (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_png_get_xmp_data;
 #endif
 }

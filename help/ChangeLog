@@ -61,7 +61,7 @@
 
 2009-02-23  Claudio Saavedra  <csaavedra@igalia.com>
 
-	* C/eog.xml: Fix a typo. Fixes bug #572889 (Łukasz Jernaś).
+	* C/xviewer.xml: Fix a typo. Fixes bug #572889 (Łukasz Jernaś).
 
 2009-02-16  Felix Riemann  <friemann@svn.gnome.org>
 
@@ -98,13 +98,13 @@
 
 2009-01-05  Felix Riemann  <friemann@svn.gnome.org>
 
-	* C/figures/eog_save_as_window.png: Use better compression. 
+	* C/figures/xviewer_save_as_window.png: Use better compression. 
 
 2009-01-05  Felix Riemann  <friemann@svn.gnome.org>
 
-	* C/figures/eog_save_as_window.png: Update figure to show the actual
+	* C/figures/xviewer_save_as_window.png: Update figure to show the actual
 	layout the dialog has since 2.19.1. 
-	* C/eog.xml: Several smaller updates in the 'Saving Multiple Images'
+	* C/xviewer.xml: Several smaller updates in the 'Saving Multiple Images'
 	section.
 
 2008-12-15  Felix Riemann  <friemann@svn.gnome.org>
@@ -145,7 +145,7 @@
 2008-09-21  Mario Blättermann  <mariobl@svn.gnome.org>
 
 	* de/de.po: Updated German translation
-	* de/figures/eog_toolbar_editor_window.png: Added new screenshot
+	* de/figures/xviewer_toolbar_editor_window.png: Added new screenshot
 
 2008-09-20  Luca Ferretti  <elle.uca@libero.it>
 
@@ -225,7 +225,7 @@
 
 2008-04-18  Felix Riemann  <friemann@svn.gnome.org>
 
-	* C/eog.xml: Update manual to reflect the current default scroll wheel
+	* C/xviewer.xml: Update manual to reflect the current default scroll wheel
 	policy.	Also try to be a bit more precise about how "Zoom Fit" works.
 
 2008-03-10 Maxim Dziumanenko <dziumanenko@gmail.com>
@@ -247,7 +247,7 @@
 2008-03-07  Felix Riemann  <friemann@svn.gnome.org>
 
 	* Makefile.am: Keep lang list sorted alphabetically.
-	* C/eog.xml: 
+	* C/xviewer.xml: 
 	* da/da.po:
 	* en_GB/en_GB.po:
 	* es/es.po:
@@ -297,7 +297,7 @@
 2008-02-17  Changwoo Ryu  <cwryu@debian.org>
 
 	* ko/ko.po: Updated Korean translation.
-	* ko/figures/eog_toolbar_editor_window.png: Added a screenshot.
+	* ko/figures/xviewer_toolbar_editor_window.png: Added a screenshot.
 
 2008-02-16  Kenneth Nielsen  <k.nielsen81@gmail.com>
 
@@ -325,23 +325,23 @@
 
 	* Makefile.am:
 	* eu/Makefile.am:
-	* eu/eog-eu.omf:
-	* eu/eog.xml:
+	* eu/xviewer-eu.omf:
+	* eu/xviewer.xml:
 	* eu/eu.po:
 	* eu/legal.xml:
 	* ja/Makefile.am:
-	* ja/eog-ja.omf:
-	* ja/eog.xml:
+	* ja/xviewer-ja.omf:
+	* ja/xviewer.xml:
 	* ja/ja.po:
 	* ja/legal.xml:
 	* zh_CN/Makefile.am:
-	* zh_CN/eog-zh_CN.omf:
-	* zh_CN/eog.xml:
+	* zh_CN/xviewer-zh_CN.omf:
+	* zh_CN/xviewer.xml:
 	* zh_CN/legal.xml:
 	* zh_CN/zh_CN.po:
 	* zh_TW/Makefile.am:
-	* zh_TW/eog-zh_TW.omf:
-	* zh_TW/eog.xml:
+	* zh_TW/xviewer-zh_TW.omf:
+	* zh_TW/xviewer.xml:
 	* zh_TW/legal.xml:
 	* zh_TW/zh_TW.po:
 	Convert remaining translations to g-d-u. That should make
@@ -353,8 +353,8 @@
 
 2008-01-13  Felix Riemann  <friemann@svn.gnome.org>
 
-	* C/eog.xml:
-	* C/figures/eog_toolbar_editor_window.png:
+	* C/xviewer.xml:
+	* C/figures/xviewer_toolbar_editor_window.png:
 	* Makefile.am:
 	Add chapter and figure about toolbar editor. Fixes bug #503637.
 
@@ -390,8 +390,8 @@
 
 	* Makefile.am: moved it from SUBDIRS to DOC_LINGUAS
 	* it/Makefile.am: removed
-	* it/eog-it.omf: remoded
-	* it/eog.xml: removed 
+	* it/xviewer-it.omf: remoded
+	* it/xviewer.xml: removed 
 	* it/it.po: added 
 	* it/legal.xml: added
 
@@ -447,7 +447,7 @@
 
 2007-06-24  Lucas Rocha  <lucasr@gnome.org>
 
-	* C/eog.xml: removed conditional text about libjpeg as most
+	* C/xviewer.xml: removed conditional text about libjpeg as most
 	distributions ship with it by default.
 
 2007-06-04  Claudio Saavedra  <csaavedra@alumnos.utalca.cl>
@@ -477,19 +477,19 @@
 
 2007-04-22  Felix Riemann  <friemann@svn.gnome.org>
 
-	* C/eog.xml: Fix wrong label. Fixes bug 431297.
+	* C/xviewer.xml: Fix wrong label. Fixes bug 431297.
 
 2007-04-19  Changwoo Ryu  <cwryu@debian.org>
 
 	* ko/ko.po: Updated Korean translation.
-	* ko/figures/eog_save_as_window.png: Added a screenshot.
+	* ko/figures/xviewer_save_as_window.png: Added a screenshot.
 
 2007-04-13  Changwoo Ryu  <cwryu@debian.org>
 
 	* Makefile.am: Removed ko from SUBDIRS and added ko to DOC_LINGUAS.
 	* ko/ko.po: Migrated to gnome-doc-utils.
 	* ko/figures/*.png: Updated screenshots.
-	* ko/Makefile.am, ko/eog.xml, ko/eog-ko.omf, ko/legal.xml: Removed.
+	* ko/Makefile.am, ko/xviewer.xml, ko/xviewer-ko.omf, ko/legal.xml: Removed.
 
 2007-03-23  Daniel Nylander <po@danielnylander.se>
 
@@ -530,7 +530,7 @@
 
 2007-02-28  Joachim Noreiko  <jnoreiko@yahoo.com>
 
-	* C/eog.xml: Updates for 2.18 - #401893:
+	* C/xviewer.xml: Updates for 2.18 - #401893:
 	Remove 180° rotation
 	Update labels in preferences dialog
 	Add description of EXIF-rotation
@@ -609,8 +609,8 @@
 	* de/figures/*: Updated screenshots.
 	* de/de.po: Migrated and updated German translation.
 	* Makefile.am: Added de to DOC_LINGUAS.
-	* de/eog-de.omf: Removed
-	* de/eog.xml: Removed
+	* de/xviewer-de.omf: Removed
+	* de/xviewer.xml: Removed
 	* de/legal.xml: Removed
 	* de/Makefile.am: Removed
 
@@ -620,7 +620,7 @@
 	
 2006-12-06  Joachim Noreiko  <jnoreiko@yahoo.com>
 
-	* C/eog.xml: Updates for 2.16. General tweaks, including:
+	* C/xviewer.xml: Updates for 2.16. General tweaks, including:
 	  Changing titles to gerunds
 	  Split off new section 'Saving Multiple Images'
 	  Clearing up section on deleting images - #382610
@@ -652,8 +652,8 @@
 	* sv/sv.po: Added Swedish translation.
 	* sv/figures/*png: Updated screenshot.
 	* Makefile.am: Added sv to DOC_LINGUAS.
-	* help/sv/eog-sv.omf: Removed
-	* help/sv/eog.xml: Removed
+	* help/sv/xviewer-sv.omf: Removed
+	* help/sv/xviewer.xml: Removed
 	* help/sv/legal.xml: Removed
 
 2006-10-19  Claudio Saavedra  <csaavedra@alumnos.utalca.cl>
@@ -670,12 +670,12 @@
 	
 2006-10-18  Claudio Saavedra  <csaavedra@alumnos.utalca.cl>
 
-	* help/es/eog-es.omf:
-	* help/es/eog.xml:
+	* help/es/xviewer-es.omf:
+	* help/es/xviewer.xml:
 	* help/es/legal.xml:
 	* help/es/Makefile.am:
-	* help/uk/eog-uk.omf:
-	* help/uk/eog.xml:
+	* help/uk/xviewer-uk.omf:
+	* help/uk/xviewer.xml:
 	* help/uk/legal.xml:
 	* help/uk/Makefile.am:
 
@@ -717,7 +717,7 @@
 
 2006-07-13  Lucas Rocha  <lucasr@cvs.gnome.org>
 
-	* C/eog.xml: manual update from
+	* C/xviewer.xml: manual update from
 	Felix Riemann <felix@hsgheli.de>.
 
 2006-07-13  Lucas Rocha  <lucasr@gnome.org>
@@ -738,6 +738,6 @@
 
 2006-04-20  Lucas Rocha  <lucasr@cvs.gnome.org>
 
-	* C/eog.xml, C/figures/*: manual update from
+	* C/xviewer.xml, C/figures/*: manual update from
 	Felix Riemann <felix@hsgheli.de>.
 	* ChangeLog: added ChangeLog here.

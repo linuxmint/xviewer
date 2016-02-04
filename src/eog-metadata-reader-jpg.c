@@ -1,10 +1,10 @@
-/* Eye Of GNOME -- JPEG Metadata Reader
+/* Xviewer -- JPEG Metadata Reader
  *
  * Copyright (C) 2008 The Free Software Foundation
  *
  * Author: Felix Riemann <friemann@svn.gnome.org>
  *
- * Based on the original EogMetadataReader code.
+ * Based on the original XviewerMetadataReader code.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,9 +27,9 @@
 
 #include <string.h>
 
-#include "eog-metadata-reader.h"
-#include "eog-metadata-reader-jpg.h"
-#include "eog-debug.h"
+#include "xviewer-metadata-reader.h"
+#include "xviewer-metadata-reader-jpg.h"
+#include "xviewer-debug.h"
 
 typedef enum {
 	EMR_READ = 0,
@@ -43,20 +43,20 @@ typedef enum {
 	EMR_READ_ICC,
 	EMR_READ_IPTC,
 	EMR_FINISHED
-} EogMetadataReaderState;
+} XviewerMetadataReaderState;
 
 typedef enum {
 	EJA_EXIF = 0,
 	EJA_XMP,
 	EJA_OTHER
-} EogJpegApp1Type;
+} XviewerJpegApp1Type;
 
 
-#define EOG_JPEG_MARKER_START   0xFF
-#define EOG_JPEG_MARKER_SOI     0xD8
-#define EOG_JPEG_MARKER_APP1	0xE1
-#define EOG_JPEG_MARKER_APP2	0xE2
-#define EOG_JPEG_MARKER_APP14	0xED
+#define XVIEWER_JPEG_MARKER_START   0xFF
+#define XVIEWER_JPEG_MARKER_SOI     0xD8
+#define XVIEWER_JPEG_MARKER_APP1	0xE1
+#define XVIEWER_JPEG_MARKER_APP2	0xE2
+#define XVIEWER_JPEG_MARKER_APP14	0xED
 
 #define IS_FINISHED(priv) (priv->state == EMR_READ  && \
                            priv->exif_chunk != NULL && \
@@ -64,8 +64,8 @@ typedef enum {
                            priv->iptc_chunk != NULL && \
                            priv->xmp_chunk  != NULL)
 
-struct _EogMetadataReaderJpgPrivate {
-	EogMetadataReaderState  state;
+struct _XviewerMetadataReaderJpgPrivate {
+	XviewerMetadataReaderState  state;
 
 	/* data fields */
 	guint    exif_len;
@@ -87,20 +87,20 @@ struct _EogMetadataReaderJpgPrivate {
 };
 
 static void
-eog_metadata_reader_jpg_init_emr_iface (gpointer g_iface, gpointer iface_data);
+xviewer_metadata_reader_jpg_init_emr_iface (gpointer g_iface, gpointer iface_data);
 
 
-G_DEFINE_TYPE_WITH_CODE (EogMetadataReaderJpg, eog_metadata_reader_jpg,
+G_DEFINE_TYPE_WITH_CODE (XviewerMetadataReaderJpg, xviewer_metadata_reader_jpg,
 			 G_TYPE_OBJECT,
-			 G_IMPLEMENT_INTERFACE (EOG_TYPE_METADATA_READER,
-					eog_metadata_reader_jpg_init_emr_iface) \
-			 G_ADD_PRIVATE (EogMetadataReaderJpg))
+			 G_IMPLEMENT_INTERFACE (XVIEWER_TYPE_METADATA_READER,
+					xviewer_metadata_reader_jpg_init_emr_iface) \
+			 G_ADD_PRIVATE (XviewerMetadataReaderJpg))
 
 
 static void
-eog_metadata_reader_jpg_dispose (GObject *object)
+xviewer_metadata_reader_jpg_dispose (GObject *object)
 {
-	EogMetadataReaderJpg *emr = EOG_METADATA_READER_JPG (object);
+	XviewerMetadataReaderJpg *emr = XVIEWER_METADATA_READER_JPG (object);
 
 	if (emr->priv->exif_chunk != NULL) {
 		g_free (emr->priv->exif_chunk);
@@ -122,15 +122,15 @@ eog_metadata_reader_jpg_dispose (GObject *object)
 		emr->priv->icc_chunk = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_metadata_reader_jpg_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_metadata_reader_jpg_parent_class)->dispose (object);
 }
 
 static void
-eog_metadata_reader_jpg_init (EogMetadataReaderJpg *emr)
+xviewer_metadata_reader_jpg_init (XviewerMetadataReaderJpg *emr)
 {
-	EogMetadataReaderJpgPrivate *priv;
+	XviewerMetadataReaderJpgPrivate *priv;
 
-	priv = emr->priv =  eog_metadata_reader_jpg_get_instance_private (emr);
+	priv = emr->priv =  xviewer_metadata_reader_jpg_get_instance_private (emr);
 	priv->exif_chunk = NULL;
 	priv->exif_len = 0;
 	priv->iptc_chunk = NULL;
@@ -140,24 +140,24 @@ eog_metadata_reader_jpg_init (EogMetadataReaderJpg *emr)
 }
 
 static void
-eog_metadata_reader_jpg_class_init (EogMetadataReaderJpgClass *klass)
+xviewer_metadata_reader_jpg_class_init (XviewerMetadataReaderJpgClass *klass)
 {
 	GObjectClass *object_class = (GObjectClass*) klass;
 
-	object_class->dispose = eog_metadata_reader_jpg_dispose;
+	object_class->dispose = xviewer_metadata_reader_jpg_dispose;
 }
 
 static gboolean
-eog_metadata_reader_jpg_finished (EogMetadataReaderJpg *emr)
+xviewer_metadata_reader_jpg_finished (XviewerMetadataReaderJpg *emr)
 {
-	g_return_val_if_fail (EOG_IS_METADATA_READER_JPG (emr), TRUE);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER_JPG (emr), TRUE);
 
 	return (emr->priv->state == EMR_FINISHED);
 }
 
 
-static EogJpegApp1Type
-eog_metadata_identify_app1 (gchar *buf, guint len)
+static XviewerJpegApp1Type
+xviewer_metadata_identify_app1 (gchar *buf, guint len)
 {
  	if (len < 5) {
  		return EJA_OTHER;
@@ -177,12 +177,12 @@ eog_metadata_identify_app1 (gchar *buf, guint len)
 }
 
 static void
-eog_metadata_reader_get_next_block (EogMetadataReaderJpgPrivate* priv,
+xviewer_metadata_reader_get_next_block (XviewerMetadataReaderJpgPrivate* priv,
 				    guchar *chunk,
 				    int* i,
 				    const guchar *buf,
 				    int len,
-				    EogMetadataReaderState state)
+				    XviewerMetadataReaderState state)
 {
 	if (*i + priv->size < len) {
 		/* read data in one block */
@@ -200,15 +200,15 @@ eog_metadata_reader_get_next_block (EogMetadataReaderJpgPrivate* priv,
 }
 
 static void
-eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, guint len)
+xviewer_metadata_reader_jpg_consume (XviewerMetadataReaderJpg *emr, const guchar *buf, guint len)
 {
-	EogMetadataReaderJpgPrivate *priv;
- 	EogJpegApp1Type app1_type;
+	XviewerMetadataReaderJpgPrivate *priv;
+ 	XviewerJpegApp1Type app1_type;
 	int i;
-	EogMetadataReaderState next_state = EMR_READ;
+	XviewerMetadataReaderState next_state = EMR_READ;
 	guchar *chunk = NULL;
 
-	g_return_if_fail (EOG_IS_METADATA_READER_JPG (emr));
+	g_return_if_fail (XVIEWER_IS_METADATA_READER_JPG (emr));
 
 	priv = emr->priv;
 
@@ -218,7 +218,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 
 		switch (priv->state) {
 		case EMR_READ:
-			if (buf[i] == EOG_JPEG_MARKER_START) {
+			if (buf[i] == XVIEWER_JPEG_MARKER_START) {
 				priv->state = EMR_READ_MARKER;
 			}
 			else {
@@ -234,7 +234,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 				priv->size = 0;
 				priv->state = EMR_READ_SIZE_HIGH_BYTE;
 
-				eog_debug_message (DEBUG_IMAGE_DATA, "APPx or COM Marker Found: %x", priv->last_marker);
+				xviewer_debug_message (DEBUG_IMAGE_DATA, "APPx or COM Marker Found: %x", priv->last_marker);
 			}
 			else {
 				/* otherwise simply consume the byte */
@@ -255,16 +255,16 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 
 			if (priv->size == 0) {
 				priv->state = EMR_READ;
-			} else if (priv->last_marker == EOG_JPEG_MARKER_APP1 &&
+			} else if (priv->last_marker == XVIEWER_JPEG_MARKER_APP1 &&
 				   ((priv->exif_chunk == NULL) || (priv->xmp_chunk == NULL)))
 			{
 				priv->state = EMR_READ_APP1;
-			} else if (priv->last_marker == EOG_JPEG_MARKER_APP2 &&
+			} else if (priv->last_marker == XVIEWER_JPEG_MARKER_APP2 &&
 				   priv->icc_chunk == NULL && priv->size > 14)
 			{
 	 			/* Chunk has 14 bytes identification data */
 				priv->state = EMR_READ_ICC;
-			} else if (priv->last_marker == EOG_JPEG_MARKER_APP14 &&
+			} else if (priv->last_marker == XVIEWER_JPEG_MARKER_APP14 &&
 				priv->iptc_chunk == NULL)
 			{
 				priv->state = EMR_READ_IPTC;
@@ -276,7 +276,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			break;
 
 		case EMR_SKIP_BYTES:
-			eog_debug_message (DEBUG_IMAGE_DATA, "Skip bytes: %i", priv->size);
+			xviewer_debug_message (DEBUG_IMAGE_DATA, "Skip bytes: %i", priv->size);
 
 			if (i + priv->size < len) {
 				i = i + priv->size - 1; /* the for-loop consumes the other byte */
@@ -292,9 +292,9 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			break;
 
 		case EMR_READ_APP1:
-			eog_debug_message (DEBUG_IMAGE_DATA, "Read APP1 data, Length: %i", priv->size);
+			xviewer_debug_message (DEBUG_IMAGE_DATA, "Read APP1 data, Length: %i", priv->size);
 
-			app1_type = eog_metadata_identify_app1 ((gchar*) &buf[i], priv->size);
+			app1_type = xviewer_metadata_identify_app1 ((gchar*) &buf[i], priv->size);
 
 			switch (app1_type) {
 			case EJA_EXIF:
@@ -330,7 +330,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			}
 
 			if (chunk) {
-				eog_metadata_reader_get_next_block (priv, chunk,
+				xviewer_metadata_reader_get_next_block (priv, chunk,
 								    &i, buf,
 								    len,
 								    next_state);
@@ -341,9 +341,9 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			break;
 
 		case EMR_READ_EXIF:
-			eog_debug_message (DEBUG_IMAGE_DATA, "Read continuation of EXIF data, length: %i", priv->size);
+			xviewer_debug_message (DEBUG_IMAGE_DATA, "Read continuation of EXIF data, length: %i", priv->size);
 			{
- 				eog_metadata_reader_get_next_block (priv, priv->exif_chunk,
+ 				xviewer_metadata_reader_get_next_block (priv, priv->exif_chunk,
  								    &i, buf, len, EMR_READ_EXIF);
 			}
 			if (IS_FINISHED(priv))
@@ -351,9 +351,9 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			break;
 
 		case EMR_READ_XMP:
-			eog_debug_message (DEBUG_IMAGE_DATA, "Read continuation of XMP data, length: %i", priv->size);
+			xviewer_debug_message (DEBUG_IMAGE_DATA, "Read continuation of XMP data, length: %i", priv->size);
 			{
-				eog_metadata_reader_get_next_block (priv, priv->xmp_chunk,
+				xviewer_metadata_reader_get_next_block (priv, priv->xmp_chunk,
  								    &i, buf, len, EMR_READ_XMP);
 			}
 			if (IS_FINISHED (priv))
@@ -361,7 +361,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			break;
 
 		case EMR_READ_ICC:
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read continuation of ICC data, "
 					   "length: %i", priv->size);
 
@@ -371,7 +371,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 				priv->bytes_read = 0;
 			}
 
-			eog_metadata_reader_get_next_block (priv,
+			xviewer_metadata_reader_get_next_block (priv,
 							    priv->icc_chunk,
 							    &i, buf, len,
 							    EMR_READ_ICC);
@@ -392,7 +392,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 
 				if (!valid) {
 					/* This no ICC data. Throw it away. */
-					eog_debug_message (DEBUG_IMAGE_DATA,
+					xviewer_debug_message (DEBUG_IMAGE_DATA,
 					"Supposed ICC chunk didn't validate. "
 					"Ignoring.");
 					g_free (priv->icc_chunk);
@@ -406,7 +406,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 			break;
 
 		case EMR_READ_IPTC:
-			eog_debug_message (DEBUG_IMAGE_DATA,
+			xviewer_debug_message (DEBUG_IMAGE_DATA,
 					   "Read continuation of IPTC data, "
 					   "length: %i", priv->size);
 
@@ -416,7 +416,7 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
 				priv->bytes_read = 0;
 			}
 
-			eog_metadata_reader_get_next_block (priv,
+			xviewer_metadata_reader_get_next_block (priv,
 							    priv->iptc_chunk,
 							    &i, buf, len,
 							    EMR_READ_IPTC);
@@ -435,11 +435,11 @@ eog_metadata_reader_jpg_consume (EogMetadataReaderJpg *emr, const guchar *buf, g
  * the new owner of this piece of memory and is responsible for freeing it!
  */
 static void
-eog_metadata_reader_jpg_get_exif_chunk (EogMetadataReaderJpg *emr, guchar **data, guint *len)
+xviewer_metadata_reader_jpg_get_exif_chunk (XviewerMetadataReaderJpg *emr, guchar **data, guint *len)
 {
-	EogMetadataReaderJpgPrivate *priv;
+	XviewerMetadataReaderJpgPrivate *priv;
 
-	g_return_if_fail (EOG_IS_METADATA_READER (emr));
+	g_return_if_fail (XVIEWER_IS_METADATA_READER (emr));
 	priv = emr->priv;
 
 	*data = (guchar*) priv->exif_chunk;
@@ -451,12 +451,12 @@ eog_metadata_reader_jpg_get_exif_chunk (EogMetadataReaderJpg *emr, guchar **data
 
 #ifdef HAVE_EXIF
 static gpointer
-eog_metadata_reader_jpg_get_exif_data (EogMetadataReaderJpg *emr)
+xviewer_metadata_reader_jpg_get_exif_data (XviewerMetadataReaderJpg *emr)
 {
-	EogMetadataReaderJpgPrivate *priv;
+	XviewerMetadataReaderJpgPrivate *priv;
 	ExifData *data = NULL;
 
-	g_return_val_if_fail (EOG_IS_METADATA_READER (emr), NULL);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER (emr), NULL);
 	priv = emr->priv;
 
 	if (priv->exif_chunk != NULL) {
@@ -471,21 +471,21 @@ eog_metadata_reader_jpg_get_exif_data (EogMetadataReaderJpg *emr)
 #ifdef HAVE_EXEMPI
 
 /* skip the signature */
-#define EOG_XMP_OFFSET (29)
+#define XVIEWER_XMP_OFFSET (29)
 
 static gpointer
-eog_metadata_reader_jpg_get_xmp_data (EogMetadataReaderJpg *emr )
+xviewer_metadata_reader_jpg_get_xmp_data (XviewerMetadataReaderJpg *emr )
 {
-	EogMetadataReaderJpgPrivate *priv;
+	XviewerMetadataReaderJpgPrivate *priv;
 	XmpPtr xmp = NULL;
 
-	g_return_val_if_fail (EOG_IS_METADATA_READER (emr), NULL);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER (emr), NULL);
 
 	priv = emr->priv;
 
 	if (priv->xmp_chunk != NULL) {
-		xmp = xmp_new (((const char*)priv->xmp_chunk)+EOG_XMP_OFFSET,
-			       priv->xmp_len-EOG_XMP_OFFSET);
+		xmp = xmp_new (((const char*)priv->xmp_chunk)+XVIEWER_XMP_OFFSET,
+			       priv->xmp_len-XVIEWER_XMP_OFFSET);
 	}
 
 	return (gpointer)xmp;
@@ -499,12 +499,12 @@ eog_metadata_reader_jpg_get_xmp_data (EogMetadataReaderJpg *emr )
  */
 #ifdef HAVE_LCMS
 static gpointer
-eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
+xviewer_metadata_reader_jpg_get_icc_profile (XviewerMetadataReaderJpg *emr)
 {
-	EogMetadataReaderJpgPrivate *priv;
+	XviewerMetadataReaderJpgPrivate *priv;
 	cmsHPROFILE profile = NULL;
 
-	g_return_val_if_fail (EOG_IS_METADATA_READER (emr), NULL);
+	g_return_val_if_fail (XVIEWER_IS_METADATA_READER (emr), NULL);
 
 	priv = emr->priv;
 
@@ -514,9 +514,9 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 		                            priv->icc_len - 14);
 
 		if (profile) {
-			eog_debug_message (DEBUG_LCMS, "JPEG has ICC profile");
+			xviewer_debug_message (DEBUG_LCMS, "JPEG has ICC profile");
 		} else {
-			eog_debug_message (DEBUG_LCMS, "JPEG has invalid ICC profile");
+			xviewer_debug_message (DEBUG_LCMS, "JPEG has invalid ICC profile");
 		}
 	}
 
@@ -525,7 +525,7 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 		ExifEntry *entry;
 		ExifByteOrder o;
 		gint color_space;
-		ExifData *exif = eog_metadata_reader_jpg_get_exif_data (emr);
+		ExifData *exif = xviewer_metadata_reader_jpg_get_exif_data (emr);
 
 		if (!exif) return NULL;
 
@@ -542,13 +542,13 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 
 		switch (color_space) {
 		case 1:
-			eog_debug_message (DEBUG_LCMS, "JPEG is sRGB");
+			xviewer_debug_message (DEBUG_LCMS, "JPEG is sRGB");
 
 			profile = cmsCreate_sRGBProfile ();
 
 			break;
 		case 2:
-			eog_debug_message (DEBUG_LCMS, "JPEG is Adobe RGB (Disabled)");
+			xviewer_debug_message (DEBUG_LCMS, "JPEG is Adobe RGB (Disabled)");
 
 			/* TODO: create Adobe RGB profile */
 			//profile = cmsCreate_Adobe1998Profile ();
@@ -574,7 +574,7 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 				whitepoint.y = (double) r.numerator / r.denominator;
 				whitepoint.Y = 1.0;
 			} else {
-				eog_debug_message (DEBUG_LCMS, "No whitepoint found");
+				xviewer_debug_message (DEBUG_LCMS, "No whitepoint found");
 				break;
 			}
 
@@ -601,7 +601,7 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 
 				primaries.Red.Y = primaries.Green.Y = primaries.Blue.Y = 1.0;
 			} else {
-				eog_debug_message (DEBUG_LCMS, "No primary chromaticities found");
+				xviewer_debug_message (DEBUG_LCMS, "No primary chromaticities found");
 				break;
 			}
 
@@ -611,7 +611,7 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 				r = exif_get_rational (entry->data, o);
 				gammaValue = (double) r.numerator / r.denominator;
 			} else {
-				eog_debug_message (DEBUG_LCMS, "No gamma found");
+				xviewer_debug_message (DEBUG_LCMS, "No gamma found");
 				gammaValue = 2.2;
 			}
 
@@ -621,7 +621,7 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 
 			cmsFreeToneCurve(gamma[0]);
 
-			eog_debug_message (DEBUG_LCMS, "JPEG is calibrated");
+			xviewer_debug_message (DEBUG_LCMS, "JPEG is calibrated");
 
 			break;
 			}
@@ -635,35 +635,35 @@ eog_metadata_reader_jpg_get_icc_profile (EogMetadataReaderJpg *emr)
 #endif
 
 static void
-eog_metadata_reader_jpg_init_emr_iface (gpointer g_iface, gpointer iface_data)
+xviewer_metadata_reader_jpg_init_emr_iface (gpointer g_iface, gpointer iface_data)
 {
-	EogMetadataReaderInterface *iface;
+	XviewerMetadataReaderInterface *iface;
 
-	iface = (EogMetadataReaderInterface*)g_iface;
+	iface = (XviewerMetadataReaderInterface*)g_iface;
 
 	iface->consume =
-		(void (*) (EogMetadataReader *self, const guchar *buf, guint len))
-			eog_metadata_reader_jpg_consume;
+		(void (*) (XviewerMetadataReader *self, const guchar *buf, guint len))
+			xviewer_metadata_reader_jpg_consume;
 	iface->finished =
-		(gboolean (*) (EogMetadataReader *self))
-			eog_metadata_reader_jpg_finished;
+		(gboolean (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_jpg_finished;
 	iface->get_raw_exif =
-		(void (*) (EogMetadataReader *self, guchar **data, guint *len))
-			eog_metadata_reader_jpg_get_exif_chunk;
+		(void (*) (XviewerMetadataReader *self, guchar **data, guint *len))
+			xviewer_metadata_reader_jpg_get_exif_chunk;
 #ifdef HAVE_EXIF
 	iface->get_exif_data =
-		(gpointer (*) (EogMetadataReader *self))
-			eog_metadata_reader_jpg_get_exif_data;
+		(gpointer (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_jpg_get_exif_data;
 #endif
 #ifdef HAVE_LCMS
 	iface->get_icc_profile =
-		(gpointer (*) (EogMetadataReader *self))
-			eog_metadata_reader_jpg_get_icc_profile;
+		(gpointer (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_jpg_get_icc_profile;
 #endif
 #ifdef HAVE_EXEMPI
 	iface->get_xmp_ptr =
-		(gpointer (*) (EogMetadataReader *self))
-			eog_metadata_reader_jpg_get_xmp_data;
+		(gpointer (*) (XviewerMetadataReader *self))
+			xviewer_metadata_reader_jpg_get_xmp_data;
 #endif
 }
 

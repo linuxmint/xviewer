@@ -1,4 +1,4 @@
-/* Eye Of Gnome - GSettings Keys Macros
+/* Xviewer - GSettings Keys Macros
  *
  * Copyright (C) 2000-2006 The Free Software Foundation
  *
@@ -23,50 +23,50 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_CONFIG_KEYS_H__
-#define __EOG_CONFIG_KEYS_H__
+#ifndef __XVIEWER_CONFIG_KEYS_H__
+#define __XVIEWER_CONFIG_KEYS_H__
 
-#define EOG_CONF_DOMAIN				"org.gnome.eog"
-#define EOG_CONF_FULLSCREEN			EOG_CONF_DOMAIN".fullscreen"
-#define EOG_CONF_PLUGINS			EOG_CONF_DOMAIN".plugins"
-#define EOG_CONF_UI				EOG_CONF_DOMAIN".ui"
-#define EOG_CONF_VIEW				EOG_CONF_DOMAIN".view"
+#define XVIEWER_CONF_DOMAIN				"org.gnome.xviewer"
+#define XVIEWER_CONF_FULLSCREEN			XVIEWER_CONF_DOMAIN".fullscreen"
+#define XVIEWER_CONF_PLUGINS			XVIEWER_CONF_DOMAIN".plugins"
+#define XVIEWER_CONF_UI				XVIEWER_CONF_DOMAIN".ui"
+#define XVIEWER_CONF_VIEW				XVIEWER_CONF_DOMAIN".view"
 
-#define EOG_CONF_DESKTOP_WALLPAPER_SCHEMA	"org.gnome.desktop.background"
-#define EOG_CONF_DESKTOP_WALLPAPER		"picture-uri"
+#define XVIEWER_CONF_DESKTOP_WALLPAPER_SCHEMA	"org.gnome.desktop.background"
+#define XVIEWER_CONF_DESKTOP_WALLPAPER		"picture-uri"
 
-#define EOG_CONF_DESKTOP_LOCKDOWN_SCHEMA	"org.gnome.desktop.lockdown"
-#define EOG_CONF_DESKTOP_CAN_PRINT		"disable-printing"
-#define EOG_CONF_DESKTOP_CAN_SAVE		"disable-save-to-disk"
-#define EOG_CONF_DESKTOP_CAN_SETUP_PAGE 	"disable-print-setup"
+#define XVIEWER_CONF_DESKTOP_LOCKDOWN_SCHEMA	"org.gnome.desktop.lockdown"
+#define XVIEWER_CONF_DESKTOP_CAN_PRINT		"disable-printing"
+#define XVIEWER_CONF_DESKTOP_CAN_SAVE		"disable-save-to-disk"
+#define XVIEWER_CONF_DESKTOP_CAN_SETUP_PAGE 	"disable-print-setup"
 
-#define EOG_CONF_VIEW_BACKGROUND_COLOR		"background-color"
-#define EOG_CONF_VIEW_INTERPOLATE		"interpolate"
-#define EOG_CONF_VIEW_EXTRAPOLATE		"extrapolate"
-#define EOG_CONF_VIEW_SCROLL_WHEEL_ZOOM		"scroll-wheel-zoom"
-#define EOG_CONF_VIEW_ZOOM_MULTIPLIER		"zoom-multiplier"
-#define EOG_CONF_VIEW_AUTOROTATE                "autorotate"
-#define EOG_CONF_VIEW_TRANSPARENCY		"transparency"
-#define EOG_CONF_VIEW_TRANS_COLOR		"trans-color"
-#define EOG_CONF_VIEW_USE_BG_COLOR		"use-background-color"
+#define XVIEWER_CONF_VIEW_BACKGROUND_COLOR		"background-color"
+#define XVIEWER_CONF_VIEW_INTERPOLATE		"interpolate"
+#define XVIEWER_CONF_VIEW_EXTRAPOLATE		"extrapolate"
+#define XVIEWER_CONF_VIEW_SCROLL_WHEEL_ZOOM		"scroll-wheel-zoom"
+#define XVIEWER_CONF_VIEW_ZOOM_MULTIPLIER		"zoom-multiplier"
+#define XVIEWER_CONF_VIEW_AUTOROTATE                "autorotate"
+#define XVIEWER_CONF_VIEW_TRANSPARENCY		"transparency"
+#define XVIEWER_CONF_VIEW_TRANS_COLOR		"trans-color"
+#define XVIEWER_CONF_VIEW_USE_BG_COLOR		"use-background-color"
 
-#define EOG_CONF_FULLSCREEN_LOOP		"loop"
-#define EOG_CONF_FULLSCREEN_UPSCALE		"upscale"
-#define EOG_CONF_FULLSCREEN_SECONDS		"seconds"
+#define XVIEWER_CONF_FULLSCREEN_LOOP		"loop"
+#define XVIEWER_CONF_FULLSCREEN_UPSCALE		"upscale"
+#define XVIEWER_CONF_FULLSCREEN_SECONDS		"seconds"
 
-#define EOG_CONF_UI_TOOLBAR			"toolbar"
-#define EOG_CONF_UI_STATUSBAR			"statusbar"
-#define EOG_CONF_UI_IMAGE_GALLERY		"image-gallery"
-#define EOG_CONF_UI_IMAGE_GALLERY_POSITION	"image-gallery-position"
-#define EOG_CONF_UI_IMAGE_GALLERY_RESIZABLE	"image-gallery-resizable"
-#define EOG_CONF_UI_SIDEBAR			"sidebar"
-#define EOG_CONF_UI_SCROLL_BUTTONS		"scroll-buttons"
-#define EOG_CONF_UI_DISABLE_CLOSE_CONFIRMATION  "disable-close-confirmation"
-#define EOG_CONF_UI_DISABLE_TRASH_CONFIRMATION	"disable-trash-confirmation"
-#define EOG_CONF_UI_FILECHOOSER_XDG_FALLBACK	"filechooser-xdg-fallback"
-#define EOG_CONF_UI_PROPSDIALOG_NETBOOK_MODE	"propsdialog-netbook-mode"
-#define EOG_CONF_UI_EXTERNAL_EDITOR		"external-editor"
+#define XVIEWER_CONF_UI_TOOLBAR			"toolbar"
+#define XVIEWER_CONF_UI_STATUSBAR			"statusbar"
+#define XVIEWER_CONF_UI_IMAGE_GALLERY		"image-gallery"
+#define XVIEWER_CONF_UI_IMAGE_GALLERY_POSITION	"image-gallery-position"
+#define XVIEWER_CONF_UI_IMAGE_GALLERY_RESIZABLE	"image-gallery-resizable"
+#define XVIEWER_CONF_UI_SIDEBAR			"sidebar"
+#define XVIEWER_CONF_UI_SCROLL_BUTTONS		"scroll-buttons"
+#define XVIEWER_CONF_UI_DISABLE_CLOSE_CONFIRMATION  "disable-close-confirmation"
+#define XVIEWER_CONF_UI_DISABLE_TRASH_CONFIRMATION	"disable-trash-confirmation"
+#define XVIEWER_CONF_UI_FILECHOOSER_XDG_FALLBACK	"filechooser-xdg-fallback"
+#define XVIEWER_CONF_UI_PROPSDIALOG_NETBOOK_MODE	"propsdialog-netbook-mode"
+#define XVIEWER_CONF_UI_EXTERNAL_EDITOR		"external-editor"
 
-#define EOG_CONF_PLUGINS_ACTIVE_PLUGINS         "active-plugins"
+#define XVIEWER_CONF_PLUGINS_ACTIVE_PLUGINS         "active-plugins"
 
-#endif /* __EOG_CONFIG_KEYS_H__ */
+#endif /* __XVIEWER_CONFIG_KEYS_H__ */

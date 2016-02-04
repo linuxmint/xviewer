@@ -1,6 +1,6 @@
 /*
- * eog-window-activatable.h
- * This file is part of eog
+ * xviewer-window-activatable.h
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -24,45 +24,45 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_WINDOW_ACTIVATABLE_H__
-#define __EOG_WINDOW_ACTIVATABLE_H__
+#ifndef __XVIEWER_WINDOW_ACTIVATABLE_H__
+#define __XVIEWER_WINDOW_ACTIVATABLE_H__
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_WINDOW_ACTIVATABLE	(eog_window_activatable_get_type ())
-#define EOG_WINDOW_ACTIVATABLE(obj) 	(G_TYPE_CHECK_INSTANCE_CAST ((obj), \
-					 EOG_TYPE_WINDOW_ACTIVATABLE, \
-					 EogWindowActivatable))
-#define EOG_WINDOW_ACTIVATABLE_IFACE(obj) \
+#define XVIEWER_TYPE_WINDOW_ACTIVATABLE	(xviewer_window_activatable_get_type ())
+#define XVIEWER_WINDOW_ACTIVATABLE(obj) 	(G_TYPE_CHECK_INSTANCE_CAST ((obj), \
+					 XVIEWER_TYPE_WINDOW_ACTIVATABLE, \
+					 XviewerWindowActivatable))
+#define XVIEWER_WINDOW_ACTIVATABLE_IFACE(obj) \
 					(G_TYPE_CHECK_CLASS_CAST ((obj), \
-					 EOG_TYPE_WINDOW_ACTIVATABLE, \
-					 EogWindowActivatableInterface))
-#define EOG_IS_WINDOW_ACTIVATABLE(obj)	(G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
-					 EOG_TYPE_WINDOW_ACTIVATABLE))
-#define EOG_WINDOW_ACTIVATABLE_GET_IFACE(obj) \
+					 XVIEWER_TYPE_WINDOW_ACTIVATABLE, \
+					 XviewerWindowActivatableInterface))
+#define XVIEWER_IS_WINDOW_ACTIVATABLE(obj)	(G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
+					 XVIEWER_TYPE_WINDOW_ACTIVATABLE))
+#define XVIEWER_WINDOW_ACTIVATABLE_GET_IFACE(obj) \
 					(G_TYPE_INSTANCE_GET_INTERFACE ((obj), \
-					 EOG_TYPE_WINDOW_ACTIVATABLE, \
-					 EogWindowActivatableInterface))
+					 XVIEWER_TYPE_WINDOW_ACTIVATABLE, \
+					 XviewerWindowActivatableInterface))
 
-typedef struct _EogWindowActivatable		EogWindowActivatable;
-typedef struct _EogWindowActivatableInterface	EogWindowActivatableInterface;
+typedef struct _XviewerWindowActivatable		XviewerWindowActivatable;
+typedef struct _XviewerWindowActivatableInterface	XviewerWindowActivatableInterface;
 
-struct _EogWindowActivatableInterface
+struct _XviewerWindowActivatableInterface
 {
 	GTypeInterface g_iface;
 
 	/* vfuncs */
 
-	void	(*activate)	(EogWindowActivatable *activatable);
-	void	(*deactivate)	(EogWindowActivatable *activatable);
+	void	(*activate)	(XviewerWindowActivatable *activatable);
+	void	(*deactivate)	(XviewerWindowActivatable *activatable);
 };
 
-GType	eog_window_activatable_get_type	(void) G_GNUC_CONST;
+GType	xviewer_window_activatable_get_type	(void) G_GNUC_CONST;
 
-void	eog_window_activatable_activate	    (EogWindowActivatable *activatable);
-void	eog_window_activatable_deactivate   (EogWindowActivatable *activatable);
+void	xviewer_window_activatable_activate	    (XviewerWindowActivatable *activatable);
+void	xviewer_window_activatable_deactivate   (XviewerWindowActivatable *activatable);
 
 G_END_DECLS
-#endif /* __EOG_WINDOW_ACTIVATABLE_H__ */
+#endif /* __XVIEWER_WINDOW_ACTIVATABLE_H__ */

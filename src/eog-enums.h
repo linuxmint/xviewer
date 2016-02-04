@@ -1,4 +1,4 @@
-/* Eye of GNOME - General enumerations.
+/* Xviewer - General enumerations.
  *
  * Copyright (C) 2007-2008 The Free Software Foundation
  *
@@ -19,19 +19,19 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_ENUMS__
-#define __EOG_ENUMS__
+#ifndef __XVIEWER_ENUMS__
+#define __XVIEWER_ENUMS__
 
 typedef enum {
-	EOG_IMAGE_DATA_IMAGE     = 1 << 0,
-	EOG_IMAGE_DATA_DIMENSION = 1 << 1,
-	EOG_IMAGE_DATA_EXIF      = 1 << 2,
-	EOG_IMAGE_DATA_XMP       = 1 << 3
-} EogImageData;
+	XVIEWER_IMAGE_DATA_IMAGE     = 1 << 0,
+	XVIEWER_IMAGE_DATA_DIMENSION = 1 << 1,
+	XVIEWER_IMAGE_DATA_EXIF      = 1 << 2,
+	XVIEWER_IMAGE_DATA_XMP       = 1 << 3
+} XviewerImageData;
 
-#define EOG_IMAGE_DATA_ALL  (EOG_IMAGE_DATA_IMAGE |     \
-			     EOG_IMAGE_DATA_DIMENSION | \
-			     EOG_IMAGE_DATA_EXIF |      \
-			     EOG_IMAGE_DATA_XMP)
+#define XVIEWER_IMAGE_DATA_ALL  (XVIEWER_IMAGE_DATA_IMAGE |     \
+			     XVIEWER_IMAGE_DATA_DIMENSION | \
+			     XVIEWER_IMAGE_DATA_EXIF |      \
+			     XVIEWER_IMAGE_DATA_XMP)
 
 #endif

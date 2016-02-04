@@ -1,4 +1,4 @@
-/* Eye Of GNOME -- Print Preview Widget
+/* Xviewer -- Print Preview Widget
  *
  * Copyright (C) 2006-2008 The Free Software Foundation
  *
@@ -23,10 +23,10 @@
 #include <cairo.h>
 #include <gdk/gdkkeysyms.h>
 
-#include "eog-image.h"
-#include "eog-print-preview.h"
+#include "xviewer-image.h"
+#include "xviewer-print-preview.h"
 
-struct _EogPrintPreviewPrivate {
+struct _XviewerPrintPreviewPrivate {
 	GtkWidget *area;
 	GdkPixbuf *image;
 	GdkPixbuf *image_scaled;
@@ -91,22 +91,22 @@ enum {
 	PROP_PAGE_BOTTOM_MARGIN
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogPrintPreview, eog_print_preview, GTK_TYPE_ASPECT_FRAME)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerPrintPreview, xviewer_print_preview, GTK_TYPE_ASPECT_FRAME)
 
-static void eog_print_preview_draw (EogPrintPreview *preview, cairo_t *cr);
-static void eog_print_preview_finalize (GObject *object);
-static void update_relative_sizes (EogPrintPreview *preview);
-static void create_surface (EogPrintPreview *preview);
-static void create_image_scaled (EogPrintPreview *preview);
-static gboolean create_surface_when_idle (EogPrintPreview *preview);
+static void xviewer_print_preview_draw (XviewerPrintPreview *preview, cairo_t *cr);
+static void xviewer_print_preview_finalize (GObject *object);
+static void update_relative_sizes (XviewerPrintPreview *preview);
+static void create_surface (XviewerPrintPreview *preview);
+static void create_image_scaled (XviewerPrintPreview *preview);
+static gboolean create_surface_when_idle (XviewerPrintPreview *preview);
 
 static void
-eog_print_preview_get_property (GObject    *object,
+xviewer_print_preview_get_property (GObject    *object,
 				guint       prop_id,
 				GValue     *value,
 				GParamSpec *pspec)
 {
-	EogPrintPreviewPrivate *priv = EOG_PRINT_PREVIEW (object)->priv;
+	XviewerPrintPreviewPrivate *priv = XVIEWER_PRINT_PREVIEW (object)->priv;
 
 	switch (prop_id) {
 	case PROP_IMAGE:
@@ -145,12 +145,12 @@ eog_print_preview_get_property (GObject    *object,
 }
 
 static void
-eog_print_preview_set_property (GObject      *object,
+xviewer_print_preview_set_property (GObject      *object,
 				guint         prop_id,
 				const GValue *value,
 				GParamSpec   *pspec)
 {
-	EogPrintPreviewPrivate *priv = EOG_PRINT_PREVIEW (object)->priv;
+	XviewerPrintPreviewPrivate *priv = XVIEWER_PRINT_PREVIEW (object)->priv;
 	gboolean paper_size_changed = FALSE;
 
 	switch (prop_id) {
@@ -207,23 +207,23 @@ eog_print_preview_set_property (GObject      *object,
 			      NULL);
 	}
 
-	update_relative_sizes (EOG_PRINT_PREVIEW (object));
+	update_relative_sizes (XVIEWER_PRINT_PREVIEW (object));
 	gtk_widget_queue_draw (priv->area);
 }
 
 static void
-eog_print_preview_class_init (EogPrintPreviewClass *klass)
+xviewer_print_preview_class_init (XviewerPrintPreviewClass *klass)
 {
 	GObjectClass *gobject_class;
 
 	gobject_class = (GObjectClass*) klass;
 
-	gobject_class->get_property = eog_print_preview_get_property;
-	gobject_class->set_property = eog_print_preview_set_property;
-	gobject_class->finalize     = eog_print_preview_finalize;
+	gobject_class->get_property = xviewer_print_preview_get_property;
+	gobject_class->set_property = xviewer_print_preview_set_property;
+	gobject_class->finalize     = xviewer_print_preview_finalize;
 
 /**
- * EogPrintPreview:image:
+ * XviewerPrintPreview:image:
  *
  * The "image" property defines the image that is previewed
  * in the widget.
@@ -237,7 +237,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:image-x-align:
+ * XviewerPrintPreview:image-x-align:
  *
  * The "image-x-align" property defines the horizontal alignment
  * of the image in the widget.
@@ -253,7 +253,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:image-y-align:
+ * XviewerPrintPreview:image-y-align:
  *
  * The "image-y-align" property defines the horizontal alignment
  * of the image in the widget.
@@ -269,7 +269,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:image-scale:
+ * XviewerPrintPreview:image-scale:
  *
  * The "image-scale" property defines the scaling of the image
  * that the user wants for the printing.
@@ -285,7 +285,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:paper-width:
+ * XviewerPrintPreview:paper-width:
  *
  * The width of the previewed paper, in inches.
  */
@@ -300,7 +300,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							     G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:paper-height:
+ * XviewerPrintPreview:paper-height:
  *
  * The height of the previewed paper, in inches.
  */
@@ -315,7 +315,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:page-left-margin:
+ * XviewerPrintPreview:page-left-margin:
  *
  * The size of the page's left margin, in inches.
  */
@@ -330,7 +330,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							     G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:page-right-margin:
+ * XviewerPrintPreview:page-right-margin:
  *
  * The size of the page's right margin, in inches.
  */
@@ -344,7 +344,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      0.25,
 							      G_PARAM_READWRITE));
 /**
- * EogPrintPreview:page-top-margin:
+ * XviewerPrintPreview:page-top-margin:
  *
  * The size of the page's top margin, in inches.
  */
@@ -359,7 +359,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview:page-bottom-margin:
+ * XviewerPrintPreview:page-bottom-margin:
  *
  * The size of the page's bottom margin, in inches.
  */
@@ -374,10 +374,10 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 							      G_PARAM_READWRITE));
 
 /**
- * EogPrintPreview::image-moved:
+ * XviewerPrintPreview::image-moved:
  * @preview: the object which received the signal
  *
- * The #EogPrintPreview::image-moved signal is emitted when the position
+ * The #XviewerPrintPreview::image-moved signal is emitted when the position
  * of the image is changed.
  */
 	preview_signals [SIGNAL_IMAGE_MOVED] =
@@ -388,7 +388,7 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 			      0, NULL);
 
 /**
- * EogPrintPreview::image-scaled:
+ * XviewerPrintPreview::image-scaled:
  * @preview: the object which received the signal
  *
  * The ::image-scaled signal is emitted when the scale of the image is changed.
@@ -402,11 +402,11 @@ eog_print_preview_class_init (EogPrintPreviewClass *klass)
 }
 
 static void
-eog_print_preview_finalize (GObject *object)
+xviewer_print_preview_finalize (GObject *object)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 
-	priv = EOG_PRINT_PREVIEW (object)->priv;
+	priv = XVIEWER_PRINT_PREVIEW (object)->priv;
 
 	if (priv->image) {
 		g_object_unref (priv->image);
@@ -423,16 +423,16 @@ eog_print_preview_finalize (GObject *object)
 		priv->surface = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_print_preview_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xviewer_print_preview_parent_class)->finalize (object);
 }
 
 static void
-eog_print_preview_init (EogPrintPreview *preview)
+xviewer_print_preview_init (XviewerPrintPreview *preview)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	gfloat ratio;
 
-	priv = preview->priv = eog_print_preview_get_instance_private (preview);
+	priv = preview->priv = xviewer_print_preview_get_instance_private (preview);
 
 	priv->area = GTK_WIDGET (gtk_drawing_area_new ());
 
@@ -478,22 +478,22 @@ static gboolean draw_cb (GtkDrawingArea *drawing_area, cairo_t *cr, gpointer  us
 static void size_allocate_cb (GtkWidget *widget, GtkAllocation *allocation, gpointer user_data);
 
 /**
- * eog_print_preview_new_with_pixbuf:
+ * xviewer_print_preview_new_with_pixbuf:
  * @pixbuf: a #GdkPixbuf
  *
- * Creates a new #EogPrintPreview widget, and sets the #GdkPixbuf to preview
+ * Creates a new #XviewerPrintPreview widget, and sets the #GdkPixbuf to preview
  * on it.
  *
- * Returns: A new #EogPrintPreview widget.
+ * Returns: A new #XviewerPrintPreview widget.
  **/
 GtkWidget *
-eog_print_preview_new_with_pixbuf (GdkPixbuf *pixbuf)
+xviewer_print_preview_new_with_pixbuf (GdkPixbuf *pixbuf)
 {
-	EogPrintPreview *preview;
+	XviewerPrintPreview *preview;
 
 	g_return_val_if_fail (GDK_IS_PIXBUF (pixbuf), NULL);
 
-	preview = EOG_PRINT_PREVIEW (eog_print_preview_new ());
+	preview = XVIEWER_PRINT_PREVIEW (xviewer_print_preview_new ());
 
 	preview->priv->image = g_object_ref (pixbuf);
 
@@ -503,21 +503,21 @@ eog_print_preview_new_with_pixbuf (GdkPixbuf *pixbuf)
 }
 
 /**
- * eog_print_preview_new:
+ * xviewer_print_preview_new:
  *
- * Creates a new #EogPrintPreview widget, setting it to the default values,
- * and leaving the page empty. You still need to set the #EogPrintPreview:image
+ * Creates a new #XviewerPrintPreview widget, setting it to the default values,
+ * and leaving the page empty. You still need to set the #XviewerPrintPreview:image
  * property to make it useful.
  *
- * Returns: A new and empty #EogPrintPreview widget.
+ * Returns: A new and empty #XviewerPrintPreview widget.
  **/
 GtkWidget *
-eog_print_preview_new (void)
+xviewer_print_preview_new (void)
 {
-	EogPrintPreview *preview;
+	XviewerPrintPreview *preview;
 	GtkWidget *area;
 
-	preview = g_object_new (EOG_TYPE_PRINT_PREVIEW, NULL);
+	preview = g_object_new (XVIEWER_TYPE_PRINT_PREVIEW, NULL);
 
 	area = preview->priv->area;
 
@@ -561,9 +561,9 @@ draw_cb (GtkDrawingArea *drawing_area,
 		 cairo_t *cr,
 		 gpointer  user_data)
 {
-	update_relative_sizes (EOG_PRINT_PREVIEW (user_data));
+	update_relative_sizes (XVIEWER_PRINT_PREVIEW (user_data));
 
-	eog_print_preview_draw (EOG_PRINT_PREVIEW (user_data), cr);
+	xviewer_print_preview_draw (XVIEWER_PRINT_PREVIEW (user_data), cr);
 
 	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS) {
 		fprintf (stderr, "Cairo is unhappy: %s\n",
@@ -575,7 +575,7 @@ draw_cb (GtkDrawingArea *drawing_area,
 
 /**
  * get_current_image_coordinates:
- * @preview: an #EogPrintPreview
+ * @preview: an #XviewerPrintPreview
  * @x0: A pointer where to store the x coordinate.
  * @y0: A pointer where to store the y coordinate.
  *
@@ -583,10 +583,10 @@ draw_cb (GtkDrawingArea *drawing_area,
  * with the properties of the given @preview widget.
  **/
 static void
-get_current_image_coordinates (EogPrintPreview *preview,
+get_current_image_coordinates (XviewerPrintPreview *preview,
 			       gint *x0, gint *y0)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	GtkAllocation allocation;
 
 	priv = preview->priv;
@@ -598,7 +598,7 @@ get_current_image_coordinates (EogPrintPreview *preview,
 
 /**
  * press_inside_image_area:
- * @preview: an #EogPrintPreview
+ * @preview: an #XviewerPrintPreview
  * @x: the points x coordinate
  * @y: the points y coordinate
  *
@@ -608,11 +608,11 @@ get_current_image_coordinates (EogPrintPreview *preview,
  * %FALSE otherwise.
  **/
 static gboolean
-press_inside_image_area (EogPrintPreview *preview,
+press_inside_image_area (XviewerPrintPreview *preview,
 			 guint x,
 			 guint y)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	gint x0, y0;
 
 	priv = preview->priv;
@@ -626,19 +626,19 @@ press_inside_image_area (EogPrintPreview *preview,
 }
 
 gboolean
-eog_print_preview_point_in_image_area (EogPrintPreview *preview,
+xviewer_print_preview_point_in_image_area (XviewerPrintPreview *preview,
 				       guint x,
 				       guint y)
 {
-	g_return_val_if_fail (EOG_IS_PRINT_PREVIEW (preview), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview), FALSE);
 
 	return press_inside_image_area (preview, x, y);
 }
 
 static void
-create_image_scaled (EogPrintPreview *preview)
+create_image_scaled (XviewerPrintPreview *preview)
 {
-	EogPrintPreviewPrivate *priv = preview->priv;
+	XviewerPrintPreviewPrivate *priv = preview->priv;
 
 	if (!priv->image_scaled) {
 		gint i_width, i_height;
@@ -665,7 +665,7 @@ create_image_scaled (EogPrintPreview *preview)
 }
 
 static GdkPixbuf *
-create_preview_buffer (EogPrintPreview *preview)
+create_preview_buffer (XviewerPrintPreview *preview)
 {
 	GdkPixbuf *pixbuf;
 	gint width, height;
@@ -794,9 +794,9 @@ create_surface_from_pixbuf (GdkPixbuf *pixbuf)
 }
 
 static void
-create_surface (EogPrintPreview *preview)
+create_surface (XviewerPrintPreview *preview)
 {
-	EogPrintPreviewPrivate *priv = preview->priv;
+	XviewerPrintPreviewPrivate *priv = preview->priv;
 	GdkPixbuf *pixbuf;
 
 	if (priv->surface) {
@@ -813,7 +813,7 @@ create_surface (EogPrintPreview *preview)
 }
 
 static gboolean
-create_surface_when_idle (EogPrintPreview *preview)
+create_surface_when_idle (XviewerPrintPreview *preview)
 {
 	create_surface (preview);
 
@@ -825,7 +825,7 @@ button_press_event_cb (GtkWidget *widget,
 		       GdkEventButton *event,
 		       gpointer user_data)
 {
-	EogPrintPreview *preview = EOG_PRINT_PREVIEW (user_data);
+	XviewerPrintPreview *preview = XVIEWER_PRINT_PREVIEW (user_data);
 
 	preview->priv->cursorx = event->x;
 	preview->priv->cursory = event->y;
@@ -850,7 +850,7 @@ button_release_event_cb (GtkWidget *widget,
 			 GdkEventButton *event,
 			 gpointer user_data)
 {
-	EogPrintPreview *preview = EOG_PRINT_PREVIEW (user_data);
+	XviewerPrintPreview *preview = XVIEWER_PRINT_PREVIEW (user_data);
 
 	switch (event->button) {
 	case 1:
@@ -918,7 +918,7 @@ motion_notify_event_cb (GtkWidget      *widget,
 			GdkEventMotion *event,
 			gpointer        user_data)
 {
-	EogPrintPreviewPrivate *priv = EOG_PRINT_PREVIEW (user_data)->priv;
+	XviewerPrintPreviewPrivate *priv = XVIEWER_PRINT_PREVIEW (user_data)->priv;
 	gdouble dx, dy;
 	GtkAllocation allocation;
 
@@ -946,7 +946,7 @@ motion_notify_event_cb (GtkWidget      *widget,
 			priv->r_dy = 0;
 
 		/* we do this to correctly change the property values */
-		g_object_set (EOG_PRINT_PREVIEW (user_data),
+		g_object_set (XVIEWER_PRINT_PREVIEW (user_data),
 			      "image-x-align", priv->image_x_align,
 			      "image-y-align", priv->image_y_align,
 			      NULL);
@@ -958,7 +958,7 @@ motion_notify_event_cb (GtkWidget      *widget,
 			       preview_signals
 			       [SIGNAL_IMAGE_MOVED], 0);
 	} else {
-		if (press_inside_image_area (EOG_PRINT_PREVIEW (user_data), event->x, event->y)) {
+		if (press_inside_image_area (XVIEWER_PRINT_PREVIEW (user_data), event->x, event->y)) {
 		  	GdkCursor *cursor;
 			cursor = gdk_cursor_new_for_display (gtk_widget_get_display (widget),
 							     GDK_FLEUR);
@@ -978,9 +978,9 @@ size_allocate_cb (GtkWidget *widget,
 		  GtkAllocation *allocation,
 		  gpointer user_data)
 {
-	EogPrintPreview *preview;
+	XviewerPrintPreview *preview;
 
-	preview = EOG_PRINT_PREVIEW (user_data);
+	preview = XVIEWER_PRINT_PREVIEW (user_data);
 	update_relative_sizes (preview);
 
 	preview->priv->flag_create_surface = TRUE;
@@ -994,9 +994,9 @@ size_allocate_cb (GtkWidget *widget,
 }
 
 static void
-eog_print_preview_draw (EogPrintPreview *preview, cairo_t *cr)
+xviewer_print_preview_draw (XviewerPrintPreview *preview, cairo_t *cr)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	GtkWidget *area;
 	GtkAllocation allocation;
 	gint x0, y0;
@@ -1066,9 +1066,9 @@ eog_print_preview_draw (EogPrintPreview *preview, cairo_t *cr)
 }
 
 static void
-update_relative_sizes (EogPrintPreview *preview)
+update_relative_sizes (XviewerPrintPreview *preview)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	GtkAllocation allocation;
 	gint i_width, i_height;
 
@@ -1095,8 +1095,8 @@ update_relative_sizes (EogPrintPreview *preview)
 }
 
 /**
- * eog_print_preview_set_page_margins:
- * @preview: a #EogPrintPreview
+ * xviewer_print_preview_set_page_margins:
+ * @preview: a #XviewerPrintPreview
  * @l_margin: Left margin.
  * @r_margin: Right margin.
  * @t_margin: Top margin.
@@ -1105,13 +1105,13 @@ update_relative_sizes (EogPrintPreview *preview)
  * Manually set the margins, in inches.
  **/
 void
-eog_print_preview_set_page_margins (EogPrintPreview *preview,
+xviewer_print_preview_set_page_margins (XviewerPrintPreview *preview,
 				    gfloat l_margin,
 				    gfloat r_margin,
 				    gfloat t_margin,
 				    gfloat b_margin)
 {
-	g_return_if_fail (EOG_IS_PRINT_PREVIEW (preview));
+	g_return_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview));
 
 	g_object_set (G_OBJECT(preview),
 		      "page-left-margin",   l_margin,
@@ -1122,18 +1122,18 @@ eog_print_preview_set_page_margins (EogPrintPreview *preview,
 }
 
 /**
- * eog_print_preview_set_from_page_setup:
- * @preview: a #EogPrintPreview
+ * xviewer_print_preview_set_from_page_setup:
+ * @preview: a #XviewerPrintPreview
  * @setup: a #GtkPageSetup to set the properties from
  *
  * Sets up the page properties from a #GtkPageSetup. Useful when using the
  * widget with the GtkPrint API.
  **/
 void
-eog_print_preview_set_from_page_setup (EogPrintPreview *preview,
+xviewer_print_preview_set_from_page_setup (XviewerPrintPreview *preview,
 				       GtkPageSetup *setup)
 {
-	g_return_if_fail (EOG_IS_PRINT_PREVIEW (preview));
+	g_return_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview));
 	g_return_if_fail (GTK_IS_PAGE_SETUP (setup));
 
 	g_object_set (G_OBJECT (preview),
@@ -1148,8 +1148,8 @@ eog_print_preview_set_from_page_setup (EogPrintPreview *preview,
 }
 
 /**
- * eog_print_preview_get_image_position:
- * @preview: a #EogPrintPreview
+ * xviewer_print_preview_get_image_position:
+ * @preview: a #XviewerPrintPreview
  * @x: a pointer to a #gdouble, or %NULL to ignore it
  * @y: a pointer to a #gdouble, or %NULL to ignore it
  *
@@ -1157,14 +1157,14 @@ eog_print_preview_set_from_page_setup (EogPrintPreview *preview,
  * (0, 0) position is the intersection between the left and top margins.
  **/
 void
-eog_print_preview_get_image_position (EogPrintPreview *preview,
+xviewer_print_preview_get_image_position (XviewerPrintPreview *preview,
 				      gdouble *x,
 				      gdouble *y)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	gdouble width, height;
 
-	g_return_if_fail (EOG_IS_PRINT_PREVIEW (preview));
+	g_return_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview));
 
 	priv = preview->priv;
 
@@ -1179,8 +1179,8 @@ eog_print_preview_get_image_position (EogPrintPreview *preview,
 }
 
 /**
- * eog_print_preview_set_image_position:
- * @preview: a #EogPrintPreview
+ * xviewer_print_preview_set_image_position:
+ * @preview: a #XviewerPrintPreview
  * @x: The X coordinate, in inches, or -1 to ignore it.
  * @y: The Y coordinate, in inches, or -1 to ignore it.
  *
@@ -1188,15 +1188,15 @@ eog_print_preview_get_image_position (EogPrintPreview *preview,
  * only want to set the other.
  **/
 void
-eog_print_preview_set_image_position (EogPrintPreview *preview,
+xviewer_print_preview_set_image_position (XviewerPrintPreview *preview,
 				      gdouble x,
 				      gdouble y)
 {
-	EogPrintPreviewPrivate *priv;
+	XviewerPrintPreviewPrivate *priv;
 	gfloat x_align, y_align;
 	gdouble width, height;
 
-	g_return_if_fail (EOG_IS_PRINT_PREVIEW (preview));
+	g_return_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview));
 
 	priv = preview->priv;
 
@@ -1214,17 +1214,17 @@ eog_print_preview_set_image_position (EogPrintPreview *preview,
 }
 
 /**
- * eog_print_preview_set_scale:
- * @preview: a #EogPrintPreview
+ * xviewer_print_preview_set_scale:
+ * @preview: a #XviewerPrintPreview
  * @scale: a scale value, between 0 and 1.
  *
  * Sets the scale for the image.
  **/
 void
-eog_print_preview_set_scale (EogPrintPreview *preview,
+xviewer_print_preview_set_scale (XviewerPrintPreview *preview,
 			     gfloat           scale)
 {
-	g_return_if_fail (EOG_IS_PRINT_PREVIEW (preview));
+	g_return_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview));
 
 	g_object_set (preview,
 		      "image-scale", scale,
@@ -1237,19 +1237,19 @@ eog_print_preview_set_scale (EogPrintPreview *preview,
 }
 
 /**
- * eog_print_preview_get_scale:
- * @preview: A #EogPrintPreview.
+ * xviewer_print_preview_get_scale:
+ * @preview: A #XviewerPrintPreview.
  *
  * Gets the scale for the image.
  *
  * Returns: The scale for the image.
  **/
 gfloat
-eog_print_preview_get_scale (EogPrintPreview *preview)
+xviewer_print_preview_get_scale (XviewerPrintPreview *preview)
 {
 	gfloat scale;
 
-	g_return_val_if_fail (EOG_IS_PRINT_PREVIEW (preview), 0);
+	g_return_val_if_fail (XVIEWER_IS_PRINT_PREVIEW (preview), 0);
 
 	g_object_get (preview,
 		      "image-scale", &scale,

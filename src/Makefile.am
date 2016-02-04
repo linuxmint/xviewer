@@ -1,231 +1,231 @@
 if ENABLE_JPEG
-jpeg_LIB = $(top_builddir)/jpegutils/libeog-jpegutils.la
+jpeg_LIB = $(top_builddir)/jpegutils/libxviewer-jpegutils.la
 endif
 
 toolbar_LIB = $(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la
 
-pkglib_LTLIBRARIES = libeog.la
+pkglib_LTLIBRARIES = libxviewer.la
 
-bin_PROGRAMS = eog
+bin_PROGRAMS = xviewer
 
-headerdir = $(includedir)/eog-@EOG_API_VERSION@/eog
+headerdir = $(includedir)/xviewer-@XVIEWER_API_VERSION@/xviewer
 header_DATA = $(INST_H_FILES)
 
 MARSHAL_OUTPUT = 	\
-	eog-marshal.h	\
-	eog-marshal.c
+	xviewer-marshal.h	\
+	xviewer-marshal.c
 
 NOINST_H_FILES =			\
-	eog-application-internal.h	\
-	eog-close-confirmation-dialog.h	\
-	eog-config-keys.h		\
-	eog-error-message-area.h	\
-	eog-image-jpeg.h		\
-	eog-image-private.h		\
-	eog-metadata-sidebar.h		\
-	eog-metadata-reader.h		\
-	eog-metadata-reader-jpg.h	\
-	eog-metadata-reader-png.h	\
-	eog-pixbuf-util.h		\
-	eog-plugin-engine.h             \
-	eog-preferences-dialog.h	\
-	eog-print.h			\
-	eog-print-image-setup.h         \
-	eog-print-preview.h             \
-	eog-save-as-dialog-helper.h	\
-	eog-session.h			\
-	eog-util.h			\
+	xviewer-application-internal.h	\
+	xviewer-close-confirmation-dialog.h	\
+	xviewer-config-keys.h		\
+	xviewer-error-message-area.h	\
+	xviewer-image-jpeg.h		\
+	xviewer-image-private.h		\
+	xviewer-metadata-sidebar.h		\
+	xviewer-metadata-reader.h		\
+	xviewer-metadata-reader-jpg.h	\
+	xviewer-metadata-reader-png.h	\
+	xviewer-pixbuf-util.h		\
+	xviewer-plugin-engine.h             \
+	xviewer-preferences-dialog.h	\
+	xviewer-print.h			\
+	xviewer-print-image-setup.h         \
+	xviewer-print-preview.h             \
+	xviewer-save-as-dialog-helper.h	\
+	xviewer-session.h			\
+	xviewer-util.h			\
 	zoom.h
 
 INST_H_FILES =				\
-	eog-application.h		\
-	eog-application-activatable.h	\
-	eog-clipboard-handler.h		\
-	eog-debug.h			\
-	eog-enums.h			\
-	eog-file-chooser.h		\
-	eog-image.h			\
-	eog-image-save-info.h		\
-	eog-job-scheduler.h		\
-	eog-jobs.h			\
-	eog-list-store.h		\
-	eog-properties-dialog.h		\
-	eog-scroll-view.h		\
-	eog-sidebar.h			\
-	eog-statusbar.h			\
-	eog-thumbnail.h			\
-	eog-thumb-nav.h			\
-	eog-thumb-view.h		\
-	eog-transform.h			\
-	eog-uri-converter.h		\
-	eog-window-activatable.h	\
-	eog-window.h
+	xviewer-application.h		\
+	xviewer-application-activatable.h	\
+	xviewer-clipboard-handler.h		\
+	xviewer-debug.h			\
+	xviewer-enums.h			\
+	xviewer-file-chooser.h		\
+	xviewer-image.h			\
+	xviewer-image-save-info.h		\
+	xviewer-job-scheduler.h		\
+	xviewer-jobs.h			\
+	xviewer-list-store.h		\
+	xviewer-properties-dialog.h		\
+	xviewer-scroll-view.h		\
+	xviewer-sidebar.h			\
+	xviewer-statusbar.h			\
+	xviewer-thumbnail.h			\
+	xviewer-thumb-nav.h			\
+	xviewer-thumb-view.h		\
+	xviewer-transform.h			\
+	xviewer-uri-converter.h		\
+	xviewer-window-activatable.h	\
+	xviewer-window.h
 
-libeog_c_files = 			\
-	eog-application.c		\
-	eog-application-activatable.c	\
-	eog-clipboard-handler.c		\
-	eog-close-confirmation-dialog.c \
-	eog-debug.c			\
-	eog-error-message-area.c	\
-	eog-file-chooser.c		\
-	eog-image.c			\
-	eog-image-jpeg.c		\
-	eog-image-save-info.c		\
-	eog-job-scheduler.c		\
-	eog-jobs.c			\
-	eog-list-store.c		\
-	eog-metadata-sidebar.c		\
-	eog-metadata-reader.c		\
-	eog-metadata-reader-jpg.c	\
-	eog-metadata-reader-png.c	\
-	eog-pixbuf-util.c		\
-	eog-plugin-engine.c            	\
-	eog-preferences-dialog.c	\
-	eog-print.c			\
-	eog-print-image-setup.c         \
-	eog-print-preview.c           	\
-	eog-properties-dialog.c		\
-	eog-save-as-dialog-helper.c	\
-	eog-scroll-view.c		\
-	eog-session.c			\
-	eog-sidebar.c			\
-	eog-statusbar.c			\
-	eog-thumbnail.c			\
-	eog-thumb-nav.c			\
-	eog-thumb-view.c		\
-	eog-transform.c			\
-	eog-uri-converter.c		\
-	eog-util.c			\
-	eog-window-activatable.c	\
-	eog-window.c			\
+libxviewer_c_files = 			\
+	xviewer-application.c		\
+	xviewer-application-activatable.c	\
+	xviewer-clipboard-handler.c		\
+	xviewer-close-confirmation-dialog.c \
+	xviewer-debug.c			\
+	xviewer-error-message-area.c	\
+	xviewer-file-chooser.c		\
+	xviewer-image.c			\
+	xviewer-image-jpeg.c		\
+	xviewer-image-save-info.c		\
+	xviewer-job-scheduler.c		\
+	xviewer-jobs.c			\
+	xviewer-list-store.c		\
+	xviewer-metadata-sidebar.c		\
+	xviewer-metadata-reader.c		\
+	xviewer-metadata-reader-jpg.c	\
+	xviewer-metadata-reader-png.c	\
+	xviewer-pixbuf-util.c		\
+	xviewer-plugin-engine.c            	\
+	xviewer-preferences-dialog.c	\
+	xviewer-print.c			\
+	xviewer-print-image-setup.c         \
+	xviewer-print-preview.c           	\
+	xviewer-properties-dialog.c		\
+	xviewer-save-as-dialog-helper.c	\
+	xviewer-scroll-view.c		\
+	xviewer-session.c			\
+	xviewer-sidebar.c			\
+	xviewer-statusbar.c			\
+	xviewer-thumbnail.c			\
+	xviewer-thumb-nav.c			\
+	xviewer-thumb-view.c		\
+	xviewer-transform.c			\
+	xviewer-uri-converter.c		\
+	xviewer-util.c			\
+	xviewer-window-activatable.c	\
+	xviewer-window.c			\
 	zoom.c
 
-libeog_la_SOURCES =			\
-	$(libeog_c_files)		\
+libxviewer_la_SOURCES =			\
+	$(libxviewer_c_files)		\
 	$(BUILT_SOURCES)		\
 	$(NOINST_H_FILES)		\
 	$(INST_H_FILES)
 
 if HAVE_EXIF
 INST_H_FILES +=				\
-	eog-exif-util.h
+	xviewer-exif-util.h
 
 NOINST_H_FILES +=			\
-	eog-metadata-details.h
+	xviewer-metadata-details.h
 
-libeog_c_files +=			\
-	eog-metadata-details.c		\
-	eog-exif-util.c
+libxviewer_c_files +=			\
+	xviewer-metadata-details.c		\
+	xviewer-exif-util.c
 endif
 
 if HAVE_EXEMPI
-# We need to make sure eog-metadata-details
+# We need to make sure xviewer-metadata-details
 # is only listed once
 # or the build will break with automake-1.11
 if !HAVE_EXIF
 NOINST_H_FILES +=				\
-	eog-metadata-details.h
+	xviewer-metadata-details.h
 
-libeog_la_SOURCES +=			\
-	eog-metadata-details.c
+libxviewer_la_SOURCES +=			\
+	xviewer-metadata-details.c
 endif !HAVE_EXIF
 endif HAVE_EXEMPI
 
-libeog_la_CPPFLAGS =						\
+libxviewer_la_CPPFLAGS =						\
 	-I$(top_srcdir)/jpegutils				\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-	-DG_LOG_DOMAIN=\"EOG\"					\
-	-DEOG_PREFIX=\""${prefix}"\"				\
-	-DEOG_DATA_DIR=\""$(pkgdatadir)"\"			\
-	-DEOG_LOCALE_DIR=\""$(datadir)/locale"\"		\
-	-DEOG_PIXMAPS_DIR=\""$(datadir)/pixmaps/eog"\"		\
-	-DEOG_PLUGIN_DIR=\""$(libdir)/eog/plugins"\"		\
+	-DG_LOG_DOMAIN=\"XVIEWER\"					\
+	-DXVIEWER_PREFIX=\""${prefix}"\"				\
+	-DXVIEWER_DATA_DIR=\""$(pkgdatadir)"\"			\
+	-DXVIEWER_LOCALE_DIR=\""$(datadir)/locale"\"		\
+	-DXVIEWER_PIXMAPS_DIR=\""$(datadir)/pixmaps/xviewer"\"		\
+	-DXVIEWER_PLUGIN_DIR=\""$(libdir)/xviewer/plugins"\"		\
 	-DLIBDIR=\""$(libdir)"\"
 
-libeog_la_CFLAGS =						\
-	$(EOG_CFLAGS)						\
+libxviewer_la_CFLAGS =						\
+	$(XVIEWER_CFLAGS)						\
 	$(WARN_CFLAGS)
 
-libeog_la_LIBADD = \
-	$(EOG_LIBS)	\
+libxviewer_la_LIBADD = \
+	$(XVIEWER_LIBS)	\
 	$(toolbar_LIB)	\
 	$(jpeg_LIB)	\
 	$(LIBJPEG)	\
 	$(LIBM)
 
 if HAVE_LCMS
-libeog_la_CFLAGS += 	\
+libxviewer_la_CFLAGS += 	\
 	$(X11_CFLAGS)
 
-libeog_la_LIBADD += \
+libxviewer_la_LIBADD += \
 	$(X11_LIBS)
 endif
 
-libeog_la_LDFLAGS = -avoid-version -export-dynamic -no-undefined -export-symbols-regex "^eog_.*"
+libxviewer_la_LDFLAGS = -avoid-version -export-dynamic -no-undefined -export-symbols-regex "^xviewer_.*"
 
-eog_SOURCES = main.c
+xviewer_SOURCES = main.c
 
-eog_CFLAGS = 							\
+xviewer_CFLAGS = 							\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-	$(EOG_CFLAGS)						\
-	-DEOG_DATA_DIR=\""$(pkgdatadir)"\"			\
-	-DEOG_LOCALE_DIR=\""$(datadir)/locale"\"                \
+	$(XVIEWER_CFLAGS)						\
+	-DXVIEWER_DATA_DIR=\""$(pkgdatadir)"\"			\
+	-DXVIEWER_LOCALE_DIR=\""$(datadir)/locale"\"                \
 	$(INTROSPECTION_CFLAGS)
 
-eog_LDADD = 				\
-	libeog.la			\
-	$(EOG_LIBS)			\
+xviewer_LDADD = 				\
+	libxviewer.la			\
+	$(XVIEWER_LIBS)			\
 	$(INTROSPECTION_LIBS)
 
-eog_LDFLAGS = -export-dynamic -no-undefined
+xviewer_LDFLAGS = -export-dynamic -no-undefined
 
 BUILT_SOURCES = 			\
-	eog-enum-types.c		\
-	eog-enum-types.h		\
-	eog-resources.c			\
+	xviewer-enum-types.c		\
+	xviewer-enum-types.h		\
+	xviewer-resources.c			\
 	$(MARSHAL_OUTPUT)
 
-eog-resources.c: eog.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(top_srcdir)/data --generate-dependencies eog.gresource.xml)
+xviewer-resources.c: xviewer.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(top_srcdir)/data --generate-dependencies xviewer.gresource.xml)
 	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) "$<" --target=$@ \
-         --sourcedir=$(top_srcdir)/data --c-name _eog --generate-source
+         --sourcedir=$(top_srcdir)/data --c-name _xviewer --generate-source
 
-eog-enum-types.h: eog-enum-types.h.template $(INST_H_FILES) $(GLIB_MKENUMS)
-	$(AM_V_GEN)(cd $(srcdir) && $(GLIB_MKENUMS) --template eog-enum-types.h.template $(INST_H_FILES)) > $@
+xviewer-enum-types.h: xviewer-enum-types.h.template $(INST_H_FILES) $(GLIB_MKENUMS)
+	$(AM_V_GEN)(cd $(srcdir) && $(GLIB_MKENUMS) --template xviewer-enum-types.h.template $(INST_H_FILES)) > $@
 
-eog-enum-types.c: eog-enum-types.c.template $(INST_H_FILES) $(GLIB_MKENUMS)
-	$(AM_V_GEN)(cd $(srcdir) && $(GLIB_MKENUMS) --template eog-enum-types.c.template $(INST_H_FILES)) > $@
+xviewer-enum-types.c: xviewer-enum-types.c.template $(INST_H_FILES) $(GLIB_MKENUMS)
+	$(AM_V_GEN)(cd $(srcdir) && $(GLIB_MKENUMS) --template xviewer-enum-types.c.template $(INST_H_FILES)) > $@
 
-eog-marshal.h: eog-marshal.list $(GLIB_GENMARSHAL)
-	$(AM_V_GEN)$(GLIB_GENMARSHAL) $< --header --internal --prefix=eog_marshal > $@
+xviewer-marshal.h: xviewer-marshal.list $(GLIB_GENMARSHAL)
+	$(AM_V_GEN)$(GLIB_GENMARSHAL) $< --header --internal --prefix=xviewer_marshal > $@
 
-eog-marshal.c: eog-marshal.list $(GLIB_GENMARSHAL)
-	$(AM_V_GEN)$(GLIB_GENMARSHAL) $< --body --header --prefix=eog_marshal > $@
+xviewer-marshal.c: xviewer-marshal.list $(GLIB_GENMARSHAL)
+	$(AM_V_GEN)$(GLIB_GENMARSHAL) $< --body --header --prefix=xviewer_marshal > $@
 
 EXTRA_DIST = 				\
-	eog.gresource.xml		\
-	eog-enum-types.h.template	\
-	eog-enum-types.c.template	\
-	eog-marshal.list
+	xviewer.gresource.xml		\
+	xviewer-enum-types.h.template	\
+	xviewer-enum-types.c.template	\
+	xviewer-marshal.list
 
 CLEANFILES = $(BUILT_SOURCES)
 
 if HAVE_INTROSPECTION
 -include $(INTROSPECTION_MAKEFILE)
-INTROSPECTION_GIRS = Eog-3.0.gir
-INTROSPECTION_SCANNER_ARGS = -I$(top_srcdir) --warn-all $(libeog_la_CPPFLAGS)
+INTROSPECTION_GIRS = Xviewer-3.0.gir
+INTROSPECTION_SCANNER_ARGS = -I$(top_srcdir) --warn-all $(libxviewer_la_CPPFLAGS)
 
-Eog-3.0.gir: eog
-Eog_3_0_gir_INCLUDES = Gtk-3.0
-Eog_3_0_gir_FILES = $(INST_H_FILES) $(libeog_c_files) $(BUILT_SOURCES)
-Eog_3_0_gir_VERSION = 3.0
-Eog_3_0_gir_PROGRAM = $(builddir)/eog
-Eog_3_0_gir_NAMESPACE = Eog
-Eog_3_0_gir_CFLAGS = $(EOG_CFLAGS)
-girdir = $(datadir)/eog/gir-1.0
+Xviewer-3.0.gir: xviewer
+Xviewer_3_0_gir_INCLUDES = Gtk-3.0
+Xviewer_3_0_gir_FILES = $(INST_H_FILES) $(libxviewer_c_files) $(BUILT_SOURCES)
+Xviewer_3_0_gir_VERSION = 3.0
+Xviewer_3_0_gir_PROGRAM = $(builddir)/xviewer
+Xviewer_3_0_gir_NAMESPACE = Xviewer
+Xviewer_3_0_gir_CFLAGS = $(XVIEWER_CFLAGS)
+girdir = $(datadir)/xviewer/gir-1.0
 gir_DATA = $(INTROSPECTION_GIRS)
 
-typelibdir = $(libdir)/eog/girepository-1.0
+typelibdir = $(libdir)/xviewer/girepository-1.0
 typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
 
 CLEANFILES += $(gir_DATA) $(typelib_DATA)

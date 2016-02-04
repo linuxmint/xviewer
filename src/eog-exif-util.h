@@ -1,4 +1,4 @@
-/* Eye Of Gnome - EXIF Utilities
+/* Xviewer - EXIF Utilities
  *
  * Copyright (C) 2006-2007 The Free Software Foundation
  *
@@ -24,8 +24,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_EXIF_UTIL_H__
-#define __EOG_EXIF_UTIL_H__
+#ifndef __XVIEWER_EXIF_UTIL_H__
+#define __XVIEWER_EXIF_UTIL_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -34,26 +34,26 @@
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_EXIF_DATA eog_exif_data_get_type ()
+#define XVIEWER_TYPE_EXIF_DATA xviewer_exif_data_get_type ()
 
-gchar       *eog_exif_util_format_date           (const gchar *date);
-void         eog_exif_util_set_label_text        (GtkLabel *label,
+gchar       *xviewer_exif_util_format_date           (const gchar *date);
+void         xviewer_exif_util_set_label_text        (GtkLabel *label,
                                                   ExifData *exif_data,
                                                   gint tag_id);
 
-void         eog_exif_util_set_focal_length_label_text (GtkLabel *label,
+void         xviewer_exif_util_set_focal_length_label_text (GtkLabel *label,
                                                         ExifData *exif_data);
 
 
-const gchar *eog_exif_data_get_value             (ExifData *exif_data,
+const gchar *xviewer_exif_data_get_value             (ExifData *exif_data,
                                                   gint tag_id, gchar *buffer,
                                                   guint buf_size);
 
-GType        eog_exif_data_get_type              (void) G_GNUC_CONST;
+GType        xviewer_exif_data_get_type              (void) G_GNUC_CONST;
 
-ExifData    *eog_exif_data_copy                  (ExifData *data);
-void         eog_exif_data_free                  (ExifData *data);
+ExifData    *xviewer_exif_data_copy                  (ExifData *data);
+void         xviewer_exif_data_free                  (ExifData *data);
 
 G_END_DECLS
 
-#endif /* __EOG_EXIF_UTIL_H__ */
+#endif /* __XVIEWER_EXIF_UTIL_H__ */

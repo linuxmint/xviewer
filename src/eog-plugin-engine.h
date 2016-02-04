@@ -1,4 +1,4 @@
-/* Eye Of Gnome - EOG Plugin Engine
+/* Xviewer - XVIEWER Plugin Engine
  *
  * Copyright (C) 2007 The Free Software Foundation
  *
@@ -22,8 +22,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_PLUGIN_ENGINE_H__
-#define __EOG_PLUGIN_ENGINE_H__
+#ifndef __XVIEWER_PLUGIN_ENGINE_H__
+#define __XVIEWER_PLUGIN_ENGINE_H__
 
 #include <libpeas/peas-engine.h>
 #include <glib.h>
@@ -31,32 +31,32 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogPluginEngine EogPluginEngine;
-typedef struct _EogPluginEngineClass EogPluginEngineClass;
-typedef struct _EogPluginEnginePrivate EogPluginEnginePrivate;
+typedef struct _XviewerPluginEngine XviewerPluginEngine;
+typedef struct _XviewerPluginEngineClass XviewerPluginEngineClass;
+typedef struct _XviewerPluginEnginePrivate XviewerPluginEnginePrivate;
 
-#define EOG_TYPE_PLUGIN_ENGINE            eog_plugin_engine_get_type()
-#define EOG_PLUGIN_ENGINE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_PLUGIN_ENGINE, EogPluginEngine))
-#define EOG_PLUGIN_ENGINE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), EOG_TYPE_PLUGIN_ENGINE, EogPluginEngineClass))
-#define EOG_IS_PLUGIN_ENGINE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_PLUGIN_ENGINE))
-#define EOG_IS_PLUGIN_ENGINE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EOG_TYPE_PLUGIN_ENGINE))
-#define EOG_PLUGIN_ENGINE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EOG_TYPE_PLUGIN_ENGINE, EogPluginEngineClass))
+#define XVIEWER_TYPE_PLUGIN_ENGINE            xviewer_plugin_engine_get_type()
+#define XVIEWER_PLUGIN_ENGINE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_PLUGIN_ENGINE, XviewerPluginEngine))
+#define XVIEWER_PLUGIN_ENGINE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XVIEWER_TYPE_PLUGIN_ENGINE, XviewerPluginEngineClass))
+#define XVIEWER_IS_PLUGIN_ENGINE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_PLUGIN_ENGINE))
+#define XVIEWER_IS_PLUGIN_ENGINE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XVIEWER_TYPE_PLUGIN_ENGINE))
+#define XVIEWER_PLUGIN_ENGINE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XVIEWER_TYPE_PLUGIN_ENGINE, XviewerPluginEngineClass))
 
-struct _EogPluginEngine {
+struct _XviewerPluginEngine {
   PeasEngine parent;
-  EogPluginEnginePrivate *priv;
+  XviewerPluginEnginePrivate *priv;
 };
 
-struct _EogPluginEngineClass {
+struct _XviewerPluginEngineClass {
   PeasEngineClass parent_class;
 };
 
 G_GNUC_INTERNAL
-GType eog_plugin_engine_get_type (void) G_GNUC_CONST;
+GType xviewer_plugin_engine_get_type (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-EogPluginEngine* eog_plugin_engine_new (void);
+XviewerPluginEngine* xviewer_plugin_engine_new (void);
 
 G_END_DECLS
 
-#endif  /* __EOG_PLUGIN_ENGINE_H__ */
+#endif  /* __XVIEWER_PLUGIN_ENGINE_H__ */

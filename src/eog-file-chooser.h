@@ -14,46 +14,46 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef _EOG_FILE_CHOOSER_H_
-#define _EOG_FILE_CHOOSER_H_
+#ifndef _XVIEWER_FILE_CHOOSER_H_
+#define _XVIEWER_FILE_CHOOSER_H_
 
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_FILE_CHOOSER          (eog_file_chooser_get_type ())
-#define EOG_FILE_CHOOSER(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_FILE_CHOOSER, EogFileChooser))
-#define EOG_FILE_CHOOSER_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), EOG_TYPE_FILE_CHOOSER, EogFileChooserClass))
+#define XVIEWER_TYPE_FILE_CHOOSER          (xviewer_file_chooser_get_type ())
+#define XVIEWER_FILE_CHOOSER(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), XVIEWER_TYPE_FILE_CHOOSER, XviewerFileChooser))
+#define XVIEWER_FILE_CHOOSER_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), XVIEWER_TYPE_FILE_CHOOSER, XviewerFileChooserClass))
 
-#define EOG_IS_FILE_CHOOSER(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_FILE_CHOOSER))
-#define EOG_IS_FILE_CHOOSER_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), EOG_TYPE_FILE_CHOOSER))
-#define EOG_FILE_CHOOSER_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), EOG_TYPE_FILE_CHOOSER, EogFileChooserClass))
+#define XVIEWER_IS_FILE_CHOOSER(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_FILE_CHOOSER))
+#define XVIEWER_IS_FILE_CHOOSER_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), XVIEWER_TYPE_FILE_CHOOSER))
+#define XVIEWER_FILE_CHOOSER_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), XVIEWER_TYPE_FILE_CHOOSER, XviewerFileChooserClass))
 
-typedef struct _EogFileChooser         EogFileChooser;
-typedef struct _EogFileChooserClass    EogFileChooserClass;
-typedef struct _EogFileChooserPrivate  EogFileChooserPrivate;
+typedef struct _XviewerFileChooser         XviewerFileChooser;
+typedef struct _XviewerFileChooserClass    XviewerFileChooserClass;
+typedef struct _XviewerFileChooserPrivate  XviewerFileChooserPrivate;
 
-struct _EogFileChooser
+struct _XviewerFileChooser
 {
 	GtkFileChooserDialog  parent;
 
-	EogFileChooserPrivate *priv;
+	XviewerFileChooserPrivate *priv;
 };
 
-struct _EogFileChooserClass
+struct _XviewerFileChooserClass
 {
 	GtkFileChooserDialogClass  parent_class;
 };
 
 
-GType		 eog_file_chooser_get_type	(void) G_GNUC_CONST;
+GType		 xviewer_file_chooser_get_type	(void) G_GNUC_CONST;
 
-GtkWidget	*eog_file_chooser_new		(GtkFileChooserAction action);
+GtkWidget	*xviewer_file_chooser_new		(GtkFileChooserAction action);
 
-GdkPixbufFormat	*eog_file_chooser_get_format	(EogFileChooser *chooser);
+GdkPixbufFormat	*xviewer_file_chooser_get_format	(XviewerFileChooser *chooser);
 
 
 G_END_DECLS
 
-#endif /* _EOG_FILE_CHOOSER_H_ */
+#endif /* _XVIEWER_FILE_CHOOSER_H_ */

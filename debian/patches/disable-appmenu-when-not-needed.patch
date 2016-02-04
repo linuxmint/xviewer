@@ -1,12 +1,12 @@
 Description: Disables the application menu on platforms that show an app menu
   and a menubar (such as unity). The menubar already contains all the actions of
   the appmenu. Having both is redundant.
-Forwarded: doesn't make sense upstream until eog is ported to GMenuModel
+Forwarded: doesn't make sense upstream until xviewer is ported to GMenuModel
 Author: Lars Uebernickel <lars.uebernickel@canonical.com>
-Index: b/src/eog-application.c
+Index: b/src/xviewer-application.c
 ===================================================================
---- a/src/eog-application.c
-+++ b/src/eog-application.c
+--- a/src/xviewer-application.c
++++ b/src/xviewer-application.c
 @@ -256,6 +256,8 @@
  	GFile *css_file;
  	GtkSettings *settings;
@@ -14,20 +14,20 @@ Index: b/src/eog-application.c
 +	gboolean shows_app_menu;
 +	gboolean shows_menubar;
  
- 	G_APPLICATION_CLASS (eog_application_parent_class)->startup (application);
+ 	G_APPLICATION_CLASS (xviewer_application_parent_class)->startup (application);
  
 @@ -295,7 +297,13 @@
  	              "gtk-application-prefer-dark-theme", TRUE,
  	              NULL);
  
--	eog_application_init_app_menu (app);
+-	xviewer_application_init_app_menu (app);
 +	g_object_get (gtk_settings_get_default (),
 +		      "gtk-shell-shows-app-menu", &shows_app_menu,
 +		      "gtk-shell-shows-menubar", &shows_menubar,
 +		      NULL);
 +
 +	if (shows_app_menu && !shows_menubar)
-+		eog_application_init_app_menu (EOG_APPLICATION (application));
++		xviewer_application_init_app_menu (XVIEWER_APPLICATION (application));
  
  	app->priv->extensions = peas_extension_set_new (
  				   PEAS_ENGINE (app->priv->plugin_engine),

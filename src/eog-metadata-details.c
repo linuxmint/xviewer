@@ -1,4 +1,4 @@
-/* Eye Of Gnome - EOG Metadata Details
+/* Xviewer - XVIEWER Metadata Details
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -23,8 +23,8 @@
 #include <config.h>
 #endif
 
-#include "eog-metadata-details.h"
-#include "eog-util.h"
+#include "xviewer-metadata-details.h"
+#include "xviewer-util.h"
 
 #if HAVE_EXIF
 #include <libexif/exif-entry.h>
@@ -194,7 +194,7 @@ static ExifTagCategory exif_tag_category_map[] = {
 #define MODEL_COLUMN_ATTRIBUTE 0
 #define MODEL_COLUMN_VALUE     1
 
-struct _EogMetadataDetailsPrivate {
+struct _XviewerMetadataDetailsPrivate {
 	GtkTreeModel *model;
 
 	GHashTable   *id_path_hash;
@@ -203,16 +203,16 @@ struct _EogMetadataDetailsPrivate {
 
 static char*  set_row_data (GtkTreeStore *store, char *path, char *parent, const char *attribute, const char *value);
 
-static void eog_metadata_details_reset (EogMetadataDetails *details);
+static void xviewer_metadata_details_reset (XviewerMetadataDetails *details);
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogMetadataDetails, eog_metadata_details, GTK_TYPE_TREE_VIEW)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerMetadataDetails, xviewer_metadata_details, GTK_TYPE_TREE_VIEW)
 
 static void
-eog_metadata_details_dispose (GObject *object)
+xviewer_metadata_details_dispose (GObject *object)
 {
-	EogMetadataDetailsPrivate *priv;
+	XviewerMetadataDetailsPrivate *priv;
 
-	priv = EOG_METADATA_DETAILS (object)->priv;
+	priv = XVIEWER_METADATA_DETAILS (object)->priv;
 
 	if (priv->model) {
 		g_object_unref (priv->model);
@@ -228,17 +228,17 @@ eog_metadata_details_dispose (GObject *object)
 		g_hash_table_destroy (priv->id_path_hash_mnote);
 		priv->id_path_hash_mnote = NULL;
 	}
-	G_OBJECT_CLASS (eog_metadata_details_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_metadata_details_parent_class)->dispose (object);
 }
 
 static void
-eog_metadata_details_init (EogMetadataDetails *details)
+xviewer_metadata_details_init (XviewerMetadataDetails *details)
 {
-	EogMetadataDetailsPrivate *priv;
+	XviewerMetadataDetailsPrivate *priv;
 	GtkTreeViewColumn *column;
 	GtkCellRenderer *cell;
 
-	details->priv = eog_metadata_details_get_instance_private (details);
+	details->priv = xviewer_metadata_details_get_instance_private (details);
 
 	priv = details->priv;
 
@@ -262,18 +262,18 @@ eog_metadata_details_init (EogMetadataDetails *details)
 
 	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (details), TRUE);
 
-	eog_metadata_details_reset (details);
+	xviewer_metadata_details_reset (details);
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (details),
 				 GTK_TREE_MODEL (priv->model));
 }
 
 static void
-eog_metadata_details_class_init (EogMetadataDetailsClass *klass)
+xviewer_metadata_details_class_init (XviewerMetadataDetailsClass *klass)
 {
 	GObjectClass *object_class = (GObjectClass*) klass;
 
-	object_class->dispose = eog_metadata_details_dispose;
+	object_class->dispose = xviewer_metadata_details_dispose;
 }
 
 #ifdef HAVE_EXIF
@@ -337,13 +337,13 @@ set_row_data (GtkTreeStore *store, char *path, char *parent, const char *attribu
 		}
 	}
 
-	utf_attribute = eog_util_make_valid_utf8 (attribute);
+	utf_attribute = xviewer_util_make_valid_utf8 (attribute);
 
 	gtk_tree_store_set (store, &iter, MODEL_COLUMN_ATTRIBUTE, utf_attribute, -1);
 	g_free (utf_attribute);
 
 	if (value != NULL) {
-		utf_value = eog_util_make_valid_utf8 (value);
+		utf_value = xviewer_util_make_valid_utf8 (value);
 		gtk_tree_store_set (store, &iter, MODEL_COLUMN_VALUE, utf_value, -1);
 		g_free (utf_value);
 	}
@@ -354,7 +354,7 @@ set_row_data (GtkTreeStore *store, char *path, char *parent, const char *attribu
 #ifdef HAVE_EXIF
 
 static const char *
-eog_exif_entry_get_value (ExifEntry    *e,
+xviewer_exif_entry_get_value (ExifEntry    *e,
 			  char         *buf,
 			  guint         n_buf)
 {
@@ -462,8 +462,8 @@ static void
 exif_entry_cb (ExifEntry *entry, gpointer data)
 {
 	GtkTreeStore *store;
-	EogMetadataDetails *view;
-	EogMetadataDetailsPrivate *priv;
+	XviewerMetadataDetails *view;
+	XviewerMetadataDetailsPrivate *priv;
 	MetadataCategory cat;
 	ExifIfd ifd = exif_entry_get_ifd (entry);
 	char *path;
@@ -473,7 +473,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 	/* This should optimize away if comparison is correct */
 	g_warn_if_fail (EXIF_IFD_COUNT <= G_MAXUINT16);
 
-	view = EOG_METADATA_DETAILS (data);
+	view = XVIEWER_METADATA_DETAILS (data);
 	priv = view->priv;
 
 	store = GTK_TREE_STORE (gtk_tree_view_get_model (GTK_TREE_VIEW (view)));
@@ -490,7 +490,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 			      path,
 			      NULL,
 			      exif_tag_get_name_in_ifd (entry->tag, ifd),
-			      eog_exif_entry_get_value (entry, b, sizeof(b)));
+			      xviewer_exif_entry_get_value (entry, b, sizeof(b)));
 	} else {
 
 		ExifMnoteData *mnote = (entry->tag == EXIF_TAG_MAKER_NOTE ?
@@ -522,7 +522,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 					     NULL,
 					     exif_categories[cat].path,
 					     exif_tag_get_name_in_ifd (entry->tag, ifd),
-					     eog_exif_entry_get_value (entry, b,
+					     xviewer_exif_entry_get_value (entry, b,
 								    sizeof(b)));
 
 			g_hash_table_insert (priv->id_path_hash,
@@ -542,19 +542,19 @@ exif_content_cb (ExifContent *content, gpointer data)
 #endif
 
 GtkWidget *
-eog_metadata_details_new (void)
+xviewer_metadata_details_new (void)
 {
 	GObject *object;
 
-	object = g_object_new (EOG_TYPE_METADATA_DETAILS, NULL);
+	object = g_object_new (XVIEWER_TYPE_METADATA_DETAILS, NULL);
 
 	return GTK_WIDGET (object);
 }
 
 static void
-eog_metadata_details_reset (EogMetadataDetails *details)
+xviewer_metadata_details_reset (XviewerMetadataDetails *details)
 {
-	EogMetadataDetailsPrivate *priv = details->priv;
+	XviewerMetadataDetailsPrivate *priv = details->priv;
 	int i;
 
 	gtk_tree_store_clear (GTK_TREE_STORE (priv->model));
@@ -577,11 +577,11 @@ eog_metadata_details_reset (EogMetadataDetails *details)
 
 #ifdef HAVE_EXIF
 void
-eog_metadata_details_update (EogMetadataDetails *details, ExifData *data)
+xviewer_metadata_details_update (XviewerMetadataDetails *details, ExifData *data)
 {
-	g_return_if_fail (EOG_IS_METADATA_DETAILS (details));
+	g_return_if_fail (XVIEWER_IS_METADATA_DETAILS (details));
 
-	eog_metadata_details_reset (details);
+	xviewer_metadata_details_reset (details);
 	if (data) {
 		exif_data_foreach_content (data, exif_content_cb, details);
 	}
@@ -624,11 +624,11 @@ get_xmp_category (XmpStringPtr schema)
 }
 
 static void
-xmp_entry_insert (EogMetadataDetails *view, XmpStringPtr xmp_schema,
+xmp_entry_insert (XviewerMetadataDetails *view, XmpStringPtr xmp_schema,
 		  XmpStringPtr xmp_path, XmpStringPtr xmp_prop)
 {
 	GtkTreeStore *store;
-	EogMetadataDetailsPrivate *priv;
+	XviewerMetadataDetailsPrivate *priv;
 	MetadataCategory cat;
 	char *path;
 	gchar *key;
@@ -661,9 +661,9 @@ xmp_entry_insert (EogMetadataDetails *view, XmpStringPtr xmp_schema,
 }
 
 void
-eog_metadata_details_xmp_update (EogMetadataDetails *view, XmpPtr data)
+xviewer_metadata_details_xmp_update (XviewerMetadataDetails *view, XmpPtr data)
 {
-	g_return_if_fail (EOG_IS_METADATA_DETAILS (view));
+	g_return_if_fail (XVIEWER_IS_METADATA_DETAILS (view));
 
 	if (data) {
 		XmpIteratorPtr iter = xmp_iterator_new(data, NULL, NULL, XMP_ITER_JUSTLEAFNODES);

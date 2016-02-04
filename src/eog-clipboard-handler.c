@@ -1,6 +1,6 @@
 /*
- * eog-clipboard-handler.c
- * This file is part of eog
+ * xviewer-clipboard-handler.c
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -28,7 +28,7 @@
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
-#include "eog-clipboard-handler.h"
+#include "xviewer-clipboard-handler.h"
 
 enum {
 	PROP_0,
@@ -42,33 +42,33 @@ enum {
 	TARGET_URI
 };
 
-struct _EogClipboardHandlerPrivate {
+struct _XviewerClipboardHandlerPrivate {
 	GdkPixbuf *pixbuf;
 	gchar     *uri;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE(EogClipboardHandler, eog_clipboard_handler, G_TYPE_INITIALLY_UNOWNED)
+G_DEFINE_TYPE_WITH_PRIVATE(XviewerClipboardHandler, xviewer_clipboard_handler, G_TYPE_INITIALLY_UNOWNED)
 
 static GdkPixbuf*
-eog_clipboard_handler_get_pixbuf (EogClipboardHandler *handler)
+xviewer_clipboard_handler_get_pixbuf (XviewerClipboardHandler *handler)
 {
-	g_return_val_if_fail (EOG_IS_CLIPBOARD_HANDLER (handler), NULL);
+	g_return_val_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (handler), NULL);
 
 	return handler->priv->pixbuf;
 }
 
 static const gchar *
-eog_clipboard_handler_get_uri (EogClipboardHandler *handler)
+xviewer_clipboard_handler_get_uri (XviewerClipboardHandler *handler)
 {
-	g_return_val_if_fail (EOG_IS_CLIPBOARD_HANDLER (handler), NULL);
+	g_return_val_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (handler), NULL);
 
 	return handler->priv->uri;
 }
 
 static void
-eog_clipboard_handler_set_pixbuf (EogClipboardHandler *handler, GdkPixbuf *pixbuf)
+xviewer_clipboard_handler_set_pixbuf (XviewerClipboardHandler *handler, GdkPixbuf *pixbuf)
 {
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (handler));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (handler));
 	g_return_if_fail (pixbuf == NULL || GDK_IS_PIXBUF (pixbuf));
 
 	if (handler->priv->pixbuf == pixbuf)
@@ -83,9 +83,9 @@ eog_clipboard_handler_set_pixbuf (EogClipboardHandler *handler, GdkPixbuf *pixbu
 }
 
 static void
-eog_clipboard_handler_set_uri (EogClipboardHandler *handler, const gchar *uri)
+xviewer_clipboard_handler_set_uri (XviewerClipboardHandler *handler, const gchar *uri)
 {
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (handler));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (handler));
 
 	if (handler->priv->uri != NULL)
 		g_free (handler->priv->uri);
@@ -95,23 +95,23 @@ eog_clipboard_handler_set_uri (EogClipboardHandler *handler, const gchar *uri)
 }
 
 static void
-eog_clipboard_handler_get_property (GObject *object, guint property_id,
+xviewer_clipboard_handler_get_property (GObject *object, guint property_id,
 				    GValue *value, GParamSpec *pspec)
 {
-	EogClipboardHandler *handler;
+	XviewerClipboardHandler *handler;
 
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (object));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (object));
 
-	handler = EOG_CLIPBOARD_HANDLER (object);
+	handler = XVIEWER_CLIPBOARD_HANDLER (object);
 
 	switch (property_id) {
 	case PROP_PIXBUF:
 		g_value_set_object (value,
-				    eog_clipboard_handler_get_pixbuf (handler));
+				    xviewer_clipboard_handler_get_pixbuf (handler));
 		break;
 	case PROP_URI:
 		g_value_set_string (value,
-				    eog_clipboard_handler_get_uri (handler));
+				    xviewer_clipboard_handler_get_uri (handler));
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -119,14 +119,14 @@ eog_clipboard_handler_get_property (GObject *object, guint property_id,
 }
 
 static void
-eog_clipboard_handler_set_property (GObject *object, guint property_id,
+xviewer_clipboard_handler_set_property (GObject *object, guint property_id,
 				    const GValue *value, GParamSpec *pspec)
 {
-	EogClipboardHandler *handler;
+	XviewerClipboardHandler *handler;
 
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (object));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (object));
 
-	handler = EOG_CLIPBOARD_HANDLER (object);
+	handler = XVIEWER_CLIPBOARD_HANDLER (object);
 
 	switch (property_id) {
 	case PROP_PIXBUF:
@@ -134,7 +134,7 @@ eog_clipboard_handler_set_property (GObject *object, guint property_id,
 		GdkPixbuf *pixbuf;
 
 		pixbuf = g_value_get_object (value);
-		eog_clipboard_handler_set_pixbuf (handler, pixbuf);
+		xviewer_clipboard_handler_set_pixbuf (handler, pixbuf);
 		break;
 	}
 	case PROP_URI:
@@ -142,7 +142,7 @@ eog_clipboard_handler_set_property (GObject *object, guint property_id,
 		const gchar *uri;
 
 		uri = g_value_get_string (value);
-		eog_clipboard_handler_set_uri (handler, uri);
+		xviewer_clipboard_handler_set_uri (handler, uri);
 		break;
 	}
 	default:
@@ -152,13 +152,13 @@ eog_clipboard_handler_set_property (GObject *object, guint property_id,
 }
 
 static void
-eog_clipboard_handler_dispose (GObject *obj)
+xviewer_clipboard_handler_dispose (GObject *obj)
 {
-	EogClipboardHandlerPrivate *priv;
+	XviewerClipboardHandlerPrivate *priv;
 
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (obj));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (obj));
 
-	priv = EOG_CLIPBOARD_HANDLER (obj)->priv;
+	priv = XVIEWER_CLIPBOARD_HANDLER (obj)->priv;
 
 	if (priv->pixbuf != NULL) {
 		g_object_unref (priv->pixbuf);
@@ -169,23 +169,23 @@ eog_clipboard_handler_dispose (GObject *obj)
 		priv->uri = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_clipboard_handler_parent_class)->dispose (obj);
+	G_OBJECT_CLASS (xviewer_clipboard_handler_parent_class)->dispose (obj);
 }
 
 static void
-eog_clipboard_handler_init (EogClipboardHandler *handler)
+xviewer_clipboard_handler_init (XviewerClipboardHandler *handler)
 {
-	handler->priv = eog_clipboard_handler_get_instance_private (handler);
+	handler->priv = xviewer_clipboard_handler_get_instance_private (handler);
 }
 
 static void
-eog_clipboard_handler_class_init (EogClipboardHandlerClass *klass)
+xviewer_clipboard_handler_class_init (XviewerClipboardHandlerClass *klass)
 {
 	GObjectClass *g_obj_class = G_OBJECT_CLASS (klass);
 
-	g_obj_class->get_property = eog_clipboard_handler_get_property;
-	g_obj_class->set_property = eog_clipboard_handler_set_property;
-	g_obj_class->dispose = eog_clipboard_handler_dispose;
+	g_obj_class->get_property = xviewer_clipboard_handler_get_property;
+	g_obj_class->set_property = xviewer_clipboard_handler_set_property;
+	g_obj_class->dispose = xviewer_clipboard_handler_dispose;
 
 	g_object_class_install_property (
 		g_obj_class, PROP_PIXBUF,
@@ -200,8 +200,8 @@ eog_clipboard_handler_class_init (EogClipboardHandlerClass *klass)
 				     G_PARAM_STATIC_STRINGS));
 }
 
-EogClipboardHandler*
-eog_clipboard_handler_new (EogImage *img)
+XviewerClipboardHandler*
+xviewer_clipboard_handler_new (XviewerImage *img)
 {
 	GObject *obj;
 	GFile *file;
@@ -209,10 +209,10 @@ eog_clipboard_handler_new (EogImage *img)
 	gchar *uri;
 
 	g_object_ref (img);
-	pbuf = eog_image_get_pixbuf (img);
-	file = eog_image_get_file (img);
+	pbuf = xviewer_image_get_pixbuf (img);
+	file = xviewer_image_get_file (img);
 	uri = g_file_get_uri (file);
-	obj = g_object_new (EOG_TYPE_CLIPBOARD_HANDLER,
+	obj = g_object_new (XVIEWER_TYPE_CLIPBOARD_HANDLER,
 			    "pixbuf", pbuf,
 			    "uri", uri,
 			    NULL);
@@ -221,25 +221,25 @@ eog_clipboard_handler_new (EogImage *img)
 	g_object_unref (pbuf);
 	g_object_unref (img);
 
-	return EOG_CLIPBOARD_HANDLER (obj);
+	return XVIEWER_CLIPBOARD_HANDLER (obj);
 
 }
 
 static void
-eog_clipboard_handler_get_func (GtkClipboard *clipboard,
+xviewer_clipboard_handler_get_func (GtkClipboard *clipboard,
 				GtkSelectionData *selection,
 				guint info, gpointer owner)
 {
-	EogClipboardHandler *handler;
+	XviewerClipboardHandler *handler;
 
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (owner));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (owner));
 
-	handler = EOG_CLIPBOARD_HANDLER (owner);
+	handler = XVIEWER_CLIPBOARD_HANDLER (owner);
 
 	switch (info) {
 	case TARGET_PIXBUF:
 	{
-		GdkPixbuf *pixbuf = eog_clipboard_handler_get_pixbuf (handler);
+		GdkPixbuf *pixbuf = xviewer_clipboard_handler_get_pixbuf (handler);
 		g_object_ref (pixbuf);
 		gtk_selection_data_set_pixbuf (selection, pixbuf);
 		g_object_unref (pixbuf);
@@ -248,14 +248,14 @@ eog_clipboard_handler_get_func (GtkClipboard *clipboard,
 	case TARGET_TEXT:
 	{
 		gtk_selection_data_set_text (selection,
-					     eog_clipboard_handler_get_uri (handler),
+					     xviewer_clipboard_handler_get_uri (handler),
 					     -1);
 		break;
 	}
 	case TARGET_URI:
 	{
 		gchar *uris[2];
-		uris[0] = g_strdup (eog_clipboard_handler_get_uri (handler));
+		uris[0] = g_strdup (xviewer_clipboard_handler_get_uri (handler));
 		uris[1] = NULL;
 
 		gtk_selection_data_set_uris (selection, uris);
@@ -269,15 +269,15 @@ eog_clipboard_handler_get_func (GtkClipboard *clipboard,
 }
 
 static void
-eog_clipboard_handler_clear_func (GtkClipboard *clipboard, gpointer owner)
+xviewer_clipboard_handler_clear_func (GtkClipboard *clipboard, gpointer owner)
 {
-	g_return_if_fail (EOG_IS_CLIPBOARD_HANDLER (owner));
+	g_return_if_fail (XVIEWER_IS_CLIPBOARD_HANDLER (owner));
 
 	g_object_unref (G_OBJECT (owner));
 }
 
 void
-eog_clipboard_handler_copy_to_clipboard (EogClipboardHandler *handler,
+xviewer_clipboard_handler_copy_to_clipboard (XviewerClipboardHandler *handler,
 					 GtkClipboard *clipboard)
 {
 	GtkTargetList *tlist;
@@ -303,8 +303,8 @@ eog_clipboard_handler_copy_to_clipboard (EogClipboardHandler *handler,
 	if (n_targets > 0) {
 		set = gtk_clipboard_set_with_owner (clipboard,
 						    targets, n_targets,
-						    eog_clipboard_handler_get_func,
-						    eog_clipboard_handler_clear_func,
+						    xviewer_clipboard_handler_get_func,
+						    xviewer_clipboard_handler_clear_func,
 						    G_OBJECT (handler));
 
 	} 

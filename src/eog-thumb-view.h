@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Thumbnail View
+/* Xviewer - Thumbnail View
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -19,69 +19,69 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef EOG_THUMB_VIEW_H
-#define EOG_THUMB_VIEW_H
+#ifndef XVIEWER_THUMB_VIEW_H
+#define XVIEWER_THUMB_VIEW_H
 
-#include "eog-image.h"
-#include "eog-list-store.h"
+#include "xviewer-image.h"
+#include "xviewer-list-store.h"
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_THUMB_VIEW            (eog_thumb_view_get_type ())
-#define EOG_THUMB_VIEW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_THUMB_VIEW, EogThumbView))
-#define EOG_THUMB_VIEW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  EOG_TYPE_THUMB_VIEW, EogThumbViewClass))
-#define EOG_IS_THUMB_VIEW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_THUMB_VIEW))
-#define EOG_IS_THUMB_VIEW_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  EOG_TYPE_THUMB_VIEW))
-#define EOG_THUMB_VIEW_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  EOG_TYPE_THUMB_VIEW, EogThumbViewClass))
+#define XVIEWER_TYPE_THUMB_VIEW            (xviewer_thumb_view_get_type ())
+#define XVIEWER_THUMB_VIEW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_THUMB_VIEW, XviewerThumbView))
+#define XVIEWER_THUMB_VIEW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  XVIEWER_TYPE_THUMB_VIEW, XviewerThumbViewClass))
+#define XVIEWER_IS_THUMB_VIEW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_THUMB_VIEW))
+#define XVIEWER_IS_THUMB_VIEW_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  XVIEWER_TYPE_THUMB_VIEW))
+#define XVIEWER_THUMB_VIEW_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  XVIEWER_TYPE_THUMB_VIEW, XviewerThumbViewClass))
 
-typedef struct _EogThumbView EogThumbView;
-typedef struct _EogThumbViewClass EogThumbViewClass;
-typedef struct _EogThumbViewPrivate EogThumbViewPrivate;
+typedef struct _XviewerThumbView XviewerThumbView;
+typedef struct _XviewerThumbViewClass XviewerThumbViewClass;
+typedef struct _XviewerThumbViewPrivate XviewerThumbViewPrivate;
 
 typedef enum {
-	EOG_THUMB_VIEW_SELECT_CURRENT = 0,
-	EOG_THUMB_VIEW_SELECT_LEFT,
-	EOG_THUMB_VIEW_SELECT_RIGHT,
-	EOG_THUMB_VIEW_SELECT_FIRST,
-	EOG_THUMB_VIEW_SELECT_LAST,
-	EOG_THUMB_VIEW_SELECT_RANDOM
-} EogThumbViewSelectionChange;
+	XVIEWER_THUMB_VIEW_SELECT_CURRENT = 0,
+	XVIEWER_THUMB_VIEW_SELECT_LEFT,
+	XVIEWER_THUMB_VIEW_SELECT_RIGHT,
+	XVIEWER_THUMB_VIEW_SELECT_FIRST,
+	XVIEWER_THUMB_VIEW_SELECT_LAST,
+	XVIEWER_THUMB_VIEW_SELECT_RANDOM
+} XviewerThumbViewSelectionChange;
 
-struct _EogThumbView {
+struct _XviewerThumbView {
 	GtkIconView icon_view;
-	EogThumbViewPrivate *priv;
+	XviewerThumbViewPrivate *priv;
 };
 
-struct _EogThumbViewClass {
+struct _XviewerThumbViewClass {
 	 GtkIconViewClass icon_view_class;
 };
 
-GType       eog_thumb_view_get_type 		    (void) G_GNUC_CONST;
+GType       xviewer_thumb_view_get_type 		    (void) G_GNUC_CONST;
 
-GtkWidget  *eog_thumb_view_new 			    (void);
+GtkWidget  *xviewer_thumb_view_new 			    (void);
 
-void	    eog_thumb_view_set_model 		    (EogThumbView *thumbview,
-						     EogListStore *store);
+void	    xviewer_thumb_view_set_model 		    (XviewerThumbView *thumbview,
+						     XviewerListStore *store);
 
-void        eog_thumb_view_set_item_height          (EogThumbView *thumbview,
+void        xviewer_thumb_view_set_item_height          (XviewerThumbView *thumbview,
 						     gint          height);
 
-guint	    eog_thumb_view_get_n_selected 	    (EogThumbView *thumbview);
+guint	    xviewer_thumb_view_get_n_selected 	    (XviewerThumbView *thumbview);
 
-EogImage   *eog_thumb_view_get_first_selected_image (EogThumbView *thumbview);
+XviewerImage   *xviewer_thumb_view_get_first_selected_image (XviewerThumbView *thumbview);
 
-GList      *eog_thumb_view_get_selected_images 	    (EogThumbView *thumbview);
+GList      *xviewer_thumb_view_get_selected_images 	    (XviewerThumbView *thumbview);
 
-void        eog_thumb_view_select_single 	    (EogThumbView *thumbview,
-						     EogThumbViewSelectionChange change);
+void        xviewer_thumb_view_select_single 	    (XviewerThumbView *thumbview,
+						     XviewerThumbViewSelectionChange change);
 
-void        eog_thumb_view_set_current_image	    (EogThumbView *thumbview,
-						     EogImage     *image,
+void        xviewer_thumb_view_set_current_image	    (XviewerThumbView *thumbview,
+						     XviewerImage     *image,
 						     gboolean     deselect_other);
 
-void        eog_thumb_view_set_thumbnail_popup      (EogThumbView *thumbview,
+void        xviewer_thumb_view_set_thumbnail_popup      (XviewerThumbView *thumbview,
 						     GtkMenu      *menu);
 
 G_END_DECLS
 
-#endif /* EOG_THUMB_VIEW_H */
+#endif /* XVIEWER_THUMB_VIEW_H */

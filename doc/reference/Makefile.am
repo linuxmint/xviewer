@@ -9,7 +9,7 @@ AUTOMAKE_OPTIONS = 1.6
 # of using the various options.
 
 # The name of the module, e.g. 'glib'.
-DOC_MODULE=eog
+DOC_MODULE=xviewer
 
 # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
 #DOC_MODULE_VERSION=2
@@ -59,27 +59,27 @@ EXTRA_HFILES=
 # Header files or dirs to ignore when scanning. Use base file/dir names
 # e.g. IGNORE_HFILES=gtkdebug.h gtkintl.h private_code
 IGNORE_HFILES= \
-	eog-application-service.h \
-	eog-close-confirmation-dialog.h \
-	eog-enum-types.h \
-	eog-image-private.h \
-	eog-image-jpeg.h \
-	eog-marshal.h \
-	eog-metadata-details.h \
-	eog-metadata-reader.h \
-	eog-metadata-reader-jpg.h \
-	eog-metadata-reader-png.h \
-	eog-metadata-sidebar.h \
-	eog-module.h \
-	eog-plugin-engine.h \
-	eog-preferences-dialog.h \
-	eog-print-image-setup.h \
-	eog-print-preview.h
+	xviewer-application-service.h \
+	xviewer-close-confirmation-dialog.h \
+	xviewer-enum-types.h \
+	xviewer-image-private.h \
+	xviewer-image-jpeg.h \
+	xviewer-marshal.h \
+	xviewer-metadata-details.h \
+	xviewer-metadata-reader.h \
+	xviewer-metadata-reader-jpg.h \
+	xviewer-metadata-reader-png.h \
+	xviewer-metadata-sidebar.h \
+	xviewer-module.h \
+	xviewer-plugin-engine.h \
+	xviewer-preferences-dialog.h \
+	xviewer-print-image-setup.h \
+	xviewer-print-preview.h
 
 if !HAVE_EXIF
 if !HAVE_EXEMPI
 IGNORE_HFILES +=			\
-	eog-exif-util.h
+	xviewer-exif-util.h
 endif
 endif
 
@@ -108,19 +108,19 @@ GTKDOC_CFLAGS= \
 	-I$(top_srcdir)/plugins \
 	-I$(top_srcdir)/jpegutils				\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-	$(EOG_CFLAGS)
+	$(XVIEWER_CFLAGS)
 
 if ENABLE_JPEG
-jpeg_LIB = $(top_builddir)/jpegutils/libeog-jpegutils.la
+jpeg_LIB = $(top_builddir)/jpegutils/libxviewer-jpegutils.la
 endif
 
 GTKDOC_LIBS=\
-	$(top_builddir)/src/libeog.la 	\
+	$(top_builddir)/src/libxviewer.la 	\
 	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la \
 	$(BINDING_LIBS)			\
 	$(LIBJPEG)			\
 	$(X_LIBS)			\
-	$(EOG_LIBS)			\
+	$(XVIEWER_LIBS)			\
 	$(jpeg_LIB)			\
 	$(MORE_GTKDOC_LIBS)
 

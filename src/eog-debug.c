@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Debugging
+/* Xviewer - Debugging
  *
  * Copyright (C) 2007 The Free Software Foundation
  *
@@ -31,7 +31,7 @@
 
 #include <stdio.h>
 
-#include "eog-debug.h"
+#include "xviewer-debug.h"
 
 #define ENABLE_PROFILING
 
@@ -40,65 +40,65 @@ static GTimer *timer = NULL;
 static gdouble last = 0.0;
 #endif
 
-static EogDebug debug = EOG_DEBUG_NO_DEBUG;
+static XviewerDebug debug = XVIEWER_DEBUG_NO_DEBUG;
 
 void
-eog_debug_init (void)
+xviewer_debug_init (void)
 {
-	if (g_getenv ("EOG_DEBUG") != NULL)
+	if (g_getenv ("XVIEWER_DEBUG") != NULL)
 	{
 		/* Enable all debugging */
-		debug = ~EOG_DEBUG_NO_DEBUG;
+		debug = ~XVIEWER_DEBUG_NO_DEBUG;
 		goto out;
 	}
 
-	if (g_getenv ("EOG_DEBUG_WINDOW") != NULL)
-		debug = debug | EOG_DEBUG_WINDOW;
+	if (g_getenv ("XVIEWER_DEBUG_WINDOW") != NULL)
+		debug = debug | XVIEWER_DEBUG_WINDOW;
 
-	if (g_getenv ("EOG_DEBUG_VIEW") != NULL)
-		debug = debug | EOG_DEBUG_VIEW;
+	if (g_getenv ("XVIEWER_DEBUG_VIEW") != NULL)
+		debug = debug | XVIEWER_DEBUG_VIEW;
 
-	if (g_getenv ("EOG_DEBUG_JOBS") != NULL)
-		debug = debug | EOG_DEBUG_JOBS;
+	if (g_getenv ("XVIEWER_DEBUG_JOBS") != NULL)
+		debug = debug | XVIEWER_DEBUG_JOBS;
 
-	if (g_getenv ("EOG_DEBUG_THUMBNAIL") != NULL)
-		debug = debug | EOG_DEBUG_THUMBNAIL;
+	if (g_getenv ("XVIEWER_DEBUG_THUMBNAIL") != NULL)
+		debug = debug | XVIEWER_DEBUG_THUMBNAIL;
 
-	if (g_getenv ("EOG_DEBUG_IMAGE_DATA") != NULL)
-		debug = debug | EOG_DEBUG_IMAGE_DATA;
+	if (g_getenv ("XVIEWER_DEBUG_IMAGE_DATA") != NULL)
+		debug = debug | XVIEWER_DEBUG_IMAGE_DATA;
 
-	if (g_getenv ("EOG_DEBUG_IMAGE_LOAD") != NULL)
-		debug = debug | EOG_DEBUG_IMAGE_LOAD;
+	if (g_getenv ("XVIEWER_DEBUG_IMAGE_LOAD") != NULL)
+		debug = debug | XVIEWER_DEBUG_IMAGE_LOAD;
 
-	if (g_getenv ("EOG_DEBUG_IMAGE_SAVE") != NULL)
-		debug = debug | EOG_DEBUG_IMAGE_SAVE;
+	if (g_getenv ("XVIEWER_DEBUG_IMAGE_SAVE") != NULL)
+		debug = debug | XVIEWER_DEBUG_IMAGE_SAVE;
 
-	if (g_getenv ("EOG_DEBUG_LIST_STORE") != NULL)
-		debug = debug | EOG_DEBUG_LIST_STORE;
+	if (g_getenv ("XVIEWER_DEBUG_LIST_STORE") != NULL)
+		debug = debug | XVIEWER_DEBUG_LIST_STORE;
 
-	if (g_getenv ("EOG_DEBUG_PREFERENCES") != NULL)
-		debug = debug | EOG_DEBUG_PREFERENCES;
+	if (g_getenv ("XVIEWER_DEBUG_PREFERENCES") != NULL)
+		debug = debug | XVIEWER_DEBUG_PREFERENCES;
 
-	if (g_getenv ("EOG_DEBUG_PRINTING") != NULL)
-		debug = debug | EOG_DEBUG_PRINTING;
+	if (g_getenv ("XVIEWER_DEBUG_PRINTING") != NULL)
+		debug = debug | XVIEWER_DEBUG_PRINTING;
 
-	if (g_getenv ("EOG_DEBUG_LCMS") != NULL)
-		debug = debug | EOG_DEBUG_LCMS;
+	if (g_getenv ("XVIEWER_DEBUG_LCMS") != NULL)
+		debug = debug | XVIEWER_DEBUG_LCMS;
 
-	if (g_getenv ("EOG_DEBUG_PLUGINS") != NULL)
-		debug = debug | EOG_DEBUG_PLUGINS;
+	if (g_getenv ("XVIEWER_DEBUG_PLUGINS") != NULL)
+		debug = debug | XVIEWER_DEBUG_PLUGINS;
 
 out:
 
 #ifdef ENABLE_PROFILING
-	if (debug != EOG_DEBUG_NO_DEBUG)
+	if (debug != XVIEWER_DEBUG_NO_DEBUG)
 		timer = g_timer_new ();
 #endif
 	return;
 }
 
 void
-eog_debug_message (EogDebug   section,
+xviewer_debug_message (XviewerDebug   section,
 		   const gchar      *file,
 		   gint              line,
 		   const gchar      *function,
@@ -136,7 +136,7 @@ eog_debug_message (EogDebug   section,
 	}
 }
 
-void eog_debug (EogDebug  section,
+void xviewer_debug (XviewerDebug  section,
 		  const gchar       *file,
 		  gint               line,
 		  const gchar       *function)

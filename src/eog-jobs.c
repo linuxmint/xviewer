@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Jobs
+/* Xviewer - Jobs
  *
  * Copyright (C) 2013 The Free Software Foundation
  *
@@ -22,21 +22,21 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "eog-debug.h"
-#include "eog-jobs.h"
-#include "eog-thumbnail.h"
-#include "eog-pixbuf-util.h"
+#include "xviewer-debug.h"
+#include "xviewer-jobs.h"
+#include "xviewer-thumbnail.h"
+#include "xviewer-pixbuf-util.h"
 
 #include <gio/gio.h>
 
-G_DEFINE_ABSTRACT_TYPE (EogJob, eog_job, G_TYPE_OBJECT);
-G_DEFINE_TYPE (EogJobCopy,      eog_job_copy,      EOG_TYPE_JOB);
-G_DEFINE_TYPE (EogJobLoad,      eog_job_load,      EOG_TYPE_JOB);
-G_DEFINE_TYPE (EogJobModel,     eog_job_model,     EOG_TYPE_JOB);
-G_DEFINE_TYPE (EogJobSave,      eog_job_save,      EOG_TYPE_JOB);
-G_DEFINE_TYPE (EogJobSaveAs,    eog_job_save_as,   EOG_TYPE_JOB_SAVE);
-G_DEFINE_TYPE (EogJobThumbnail, eog_job_thumbnail, EOG_TYPE_JOB);
-G_DEFINE_TYPE (EogJobTransform, eog_job_transform, EOG_TYPE_JOB);
+G_DEFINE_ABSTRACT_TYPE (XviewerJob, xviewer_job, G_TYPE_OBJECT);
+G_DEFINE_TYPE (XviewerJobCopy,      xviewer_job_copy,      XVIEWER_TYPE_JOB);
+G_DEFINE_TYPE (XviewerJobLoad,      xviewer_job_load,      XVIEWER_TYPE_JOB);
+G_DEFINE_TYPE (XviewerJobModel,     xviewer_job_model,     XVIEWER_TYPE_JOB);
+G_DEFINE_TYPE (XviewerJobSave,      xviewer_job_save,      XVIEWER_TYPE_JOB);
+G_DEFINE_TYPE (XviewerJobSaveAs,    xviewer_job_save_as,   XVIEWER_TYPE_JOB_SAVE);
+G_DEFINE_TYPE (XviewerJobThumbnail, xviewer_job_thumbnail, XVIEWER_TYPE_JOB);
+G_DEFINE_TYPE (XviewerJobTransform, xviewer_job_transform, XVIEWER_TYPE_JOB);
 
 /* signals */
 enum {
@@ -49,74 +49,74 @@ enum {
 static guint job_signals[LAST_SIGNAL];
 
 /* notify signal funcs */
-static gboolean notify_progress              (EogJob               *job);
-static gboolean notify_cancelled             (EogJob               *job);
-static gboolean notify_finished              (EogJob               *job);
+static gboolean notify_progress              (XviewerJob               *job);
+static gboolean notify_cancelled             (XviewerJob               *job);
+static gboolean notify_finished              (XviewerJob               *job);
 
 /* gobject vfuncs */
-static void     eog_job_class_init           (EogJobClass          *class);
-static void     eog_job_init                 (EogJob               *job);
-static void     eog_job_dispose              (GObject              *object);
+static void     xviewer_job_class_init           (XviewerJobClass          *class);
+static void     xviewer_job_init                 (XviewerJob               *job);
+static void     xviewer_job_dispose              (GObject              *object);
 
-static void     eog_job_copy_class_init      (EogJobCopyClass      *class);
-static void     eog_job_copy_init            (EogJobCopy           *job);
-static void     eog_job_copy_dispose         (GObject              *object);
+static void     xviewer_job_copy_class_init      (XviewerJobCopyClass      *class);
+static void     xviewer_job_copy_init            (XviewerJobCopy           *job);
+static void     xviewer_job_copy_dispose         (GObject              *object);
 
-static void     eog_job_load_class_init      (EogJobLoadClass      *class);
-static void     eog_job_load_init            (EogJobLoad           *job);
-static void     eog_job_load_dispose         (GObject              *object);
+static void     xviewer_job_load_class_init      (XviewerJobLoadClass      *class);
+static void     xviewer_job_load_init            (XviewerJobLoad           *job);
+static void     xviewer_job_load_dispose         (GObject              *object);
 
-static void     eog_job_model_class_init     (EogJobModelClass     *class);
-static void     eog_job_model_init           (EogJobModel          *job);
-static void     eog_job_model_dispose        (GObject              *object);
+static void     xviewer_job_model_class_init     (XviewerJobModelClass     *class);
+static void     xviewer_job_model_init           (XviewerJobModel          *job);
+static void     xviewer_job_model_dispose        (GObject              *object);
 
-static void     eog_job_save_class_init      (EogJobSaveClass      *class);
-static void     eog_job_save_init            (EogJobSave           *job);
-static void     eog_job_save_dispose         (GObject              *object);
+static void     xviewer_job_save_class_init      (XviewerJobSaveClass      *class);
+static void     xviewer_job_save_init            (XviewerJobSave           *job);
+static void     xviewer_job_save_dispose         (GObject              *object);
 
-static void     eog_job_save_as_class_init   (EogJobSaveAsClass    *class);
-static void     eog_job_save_as_init         (EogJobSaveAs         *job);
-static void     eog_job_save_as_dispose      (GObject              *object);
+static void     xviewer_job_save_as_class_init   (XviewerJobSaveAsClass    *class);
+static void     xviewer_job_save_as_init         (XviewerJobSaveAs         *job);
+static void     xviewer_job_save_as_dispose      (GObject              *object);
 
-static void     eog_job_thumbnail_class_init (EogJobThumbnailClass *class);
-static void     eog_job_thumbnail_init       (EogJobThumbnail      *job);
-static void     eog_job_thumbnail_dispose    (GObject              *object);
+static void     xviewer_job_thumbnail_class_init (XviewerJobThumbnailClass *class);
+static void     xviewer_job_thumbnail_init       (XviewerJobThumbnail      *job);
+static void     xviewer_job_thumbnail_dispose    (GObject              *object);
 
-static void     eog_job_transform_class_init (EogJobTransformClass *class);
-static void     eog_job_transform_init       (EogJobTransform      *job);
-static void     eog_job_transform_dispose    (GObject              *object);
+static void     xviewer_job_transform_class_init (XviewerJobTransformClass *class);
+static void     xviewer_job_transform_init       (XviewerJobTransform      *job);
+static void     xviewer_job_transform_dispose    (GObject              *object);
 
 /* vfuncs */
-static void     eog_job_run_unimplemented    (EogJob               *job);
-static void     eog_job_copy_run             (EogJob               *job);
-static void     eog_job_load_run             (EogJob               *job);
-static void     eog_job_model_run            (EogJob               *job);
-static void     eog_job_save_run             (EogJob               *job);
-static void     eog_job_save_as_run          (EogJob               *job);
-static void     eog_job_thumbnail_run        (EogJob               *job);
-static void     eog_job_transform_run        (EogJob               *job);
+static void     xviewer_job_run_unimplemented    (XviewerJob               *job);
+static void     xviewer_job_copy_run             (XviewerJob               *job);
+static void     xviewer_job_load_run             (XviewerJob               *job);
+static void     xviewer_job_model_run            (XviewerJob               *job);
+static void     xviewer_job_save_run             (XviewerJob               *job);
+static void     xviewer_job_save_as_run          (XviewerJob               *job);
+static void     xviewer_job_thumbnail_run        (XviewerJob               *job);
+static void     xviewer_job_transform_run        (XviewerJob               *job);
 
 /* callbacks */
-static void eog_job_copy_progress_callback (goffset  current_num_bytes,
+static void xviewer_job_copy_progress_callback (goffset  current_num_bytes,
 					    goffset  total_num_bytes,
 					    gpointer user_data);
 
-static void eog_job_save_progress_callback (EogImage *image,
+static void xviewer_job_save_progress_callback (XviewerImage *image,
 					    gfloat    progress,
 					    gpointer  data);
 
 /* --------------------------- notify signal funcs --------------------------- */
 static gboolean
-notify_progress (EogJob *job)
+notify_progress (XviewerJob *job)
 {
 	/* check if the current job was previously cancelled */
-	if (eog_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job))
 		return FALSE;
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job update its progress to -> %1.2f",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job,
 			   job->progress);
 
@@ -129,12 +129,12 @@ notify_progress (EogJob *job)
 }
 
 static gboolean
-notify_cancelled (EogJob *job)
+notify_cancelled (XviewerJob *job)
 {
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CANCELLED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
 	/* notify cancelation */
@@ -146,12 +146,12 @@ notify_cancelled (EogJob *job)
 }
 
 static gboolean
-notify_finished (EogJob *job)
+notify_finished (XviewerJob *job)
 {
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was FINISHED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
 	/* notify job finalization */
@@ -161,21 +161,21 @@ notify_finished (EogJob *job)
 	return FALSE;
 }
 
-/* --------------------------------- EogJob ---------------------------------- */
+/* --------------------------------- XviewerJob ---------------------------------- */
 static void
-eog_job_class_init (EogJobClass *class)
+xviewer_job_class_init (XviewerJobClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
 
-	g_object_class->dispose = eog_job_dispose;
-	class->run              = eog_job_run_unimplemented;
+	g_object_class->dispose = xviewer_job_dispose;
+	class->run              = xviewer_job_run_unimplemented;
 
 	/* signals */
 	job_signals [PROGRESS] =
 		g_signal_new ("progress",
-			      EOG_TYPE_JOB,
+			      XVIEWER_TYPE_JOB,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogJobClass, progress),
+			      G_STRUCT_OFFSET (XviewerJobClass, progress),
 			      NULL,
 			      NULL,
 			      g_cclosure_marshal_VOID__FLOAT,
@@ -185,9 +185,9 @@ eog_job_class_init (EogJobClass *class)
 
 	job_signals [CANCELLED] =
 		g_signal_new ("cancelled",
-			      EOG_TYPE_JOB,
+			      XVIEWER_TYPE_JOB,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogJobClass, cancelled),
+			      G_STRUCT_OFFSET (XviewerJobClass, cancelled),
 			      NULL,
 			      NULL,
 			      g_cclosure_marshal_VOID__VOID,
@@ -196,9 +196,9 @@ eog_job_class_init (EogJobClass *class)
 
 	job_signals [FINISHED] =
 		g_signal_new ("finished",
-			      EOG_TYPE_JOB,
+			      XVIEWER_TYPE_JOB,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogJobClass, finished),
+			      G_STRUCT_OFFSET (XviewerJobClass, finished),
 			      NULL,
 			      NULL,
 			      g_cclosure_marshal_VOID__VOID,
@@ -207,7 +207,7 @@ eog_job_class_init (EogJobClass *class)
 }
 
 static
-void eog_job_init (EogJob *job)
+void xviewer_job_init (XviewerJob *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -225,13 +225,13 @@ void eog_job_init (EogJob *job)
 }
 
 static
-void eog_job_dispose (GObject *object)
+void xviewer_job_dispose (GObject *object)
 {
-	EogJob *job;
+	XviewerJob *job;
 
-	g_return_if_fail (EOG_IS_JOB (object));
+	g_return_if_fail (XVIEWER_IS_JOB (object));
 
-	job = EOG_JOB (object);
+	job = XVIEWER_JOB (object);
 
 	/* free all public and private members */
 	if (job->cancellable) {
@@ -250,31 +250,31 @@ void eog_job_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_parent_class)->dispose (object);
 }
 
 static void
-eog_job_run_unimplemented (EogJob *job)
+xviewer_job_run_unimplemented (XviewerJob *job)
 {
 	g_critical ("Class \"%s\" does not implement the required run action",
 		    G_OBJECT_CLASS_NAME (G_OBJECT_GET_CLASS (job)));
 }
 
 void
-eog_job_run (EogJob *job)
+xviewer_job_run (XviewerJob *job)
 {
-	EogJobClass *class;
+	XviewerJobClass *class;
 
-	g_return_if_fail (EOG_IS_JOB (job));
+	g_return_if_fail (XVIEWER_IS_JOB (job));
 
-	class = EOG_JOB_GET_CLASS (job);
+	class = XVIEWER_JOB_GET_CLASS (job);
 	class->run (job);
 }
 
 void
-eog_job_cancel (EogJob *job)
+xviewer_job_cancel (XviewerJob *job)
 {
-	g_return_if_fail (EOG_IS_JOB (job));
+	g_return_if_fail (XVIEWER_IS_JOB (job));
 
 	g_object_ref (job);
 
@@ -287,9 +287,9 @@ eog_job_cancel (EogJob *job)
 		return;
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "CANCELLING a %s (%p)",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
 	/* --- enter critical section --- */
@@ -310,18 +310,18 @@ eog_job_cancel (EogJob *job)
 }
 
 gfloat
-eog_job_get_progress (EogJob *job)
+xviewer_job_get_progress (XviewerJob *job)
 {
-	g_return_val_if_fail (EOG_IS_JOB (job), 0.0);
+	g_return_val_if_fail (XVIEWER_IS_JOB (job), 0.0);
 
 	return job->progress;
 }
 
 void
-eog_job_set_progress (EogJob *job,
+xviewer_job_set_progress (XviewerJob *job,
 		      gfloat  progress)
 {
-	g_return_if_fail (EOG_IS_JOB (job));
+	g_return_if_fail (XVIEWER_IS_JOB (job));
 	g_return_if_fail (progress >= 0.0 && progress <= 1.0);
 
 	g_object_ref (job);
@@ -342,34 +342,34 @@ eog_job_set_progress (EogJob *job,
 }
 
 gboolean
-eog_job_is_cancelled (EogJob *job)
+xviewer_job_is_cancelled (XviewerJob *job)
 {
-	g_return_val_if_fail (EOG_IS_JOB (job), TRUE);
+	g_return_val_if_fail (XVIEWER_IS_JOB (job), TRUE);
 
 	return job->cancelled;
 }
 
 gboolean
-eog_job_is_finished (EogJob *job)
+xviewer_job_is_finished (XviewerJob *job)
 {
-	g_return_val_if_fail (EOG_IS_JOB (job), TRUE);
+	g_return_val_if_fail (XVIEWER_IS_JOB (job), TRUE);
 
 	return job->finished;
 }
 
-/* ------------------------------- EogJobCopy -------------------------------- */
+/* ------------------------------- XviewerJobCopy -------------------------------- */
 static void
-eog_job_copy_class_init (EogJobCopyClass *class)
+xviewer_job_copy_class_init (XviewerJobCopyClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_copy_dispose;
-	eog_job_class->run      = eog_job_copy_run;
+	g_object_class->dispose = xviewer_job_copy_dispose;
+	xviewer_job_class->run      = xviewer_job_copy_run;
 }
 
 static
-void eog_job_copy_init (EogJobCopy *job)
+void xviewer_job_copy_init (XviewerJobCopy *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -379,13 +379,13 @@ void eog_job_copy_init (EogJobCopy *job)
 }
 
 static
-void eog_job_copy_dispose (GObject *object)
+void xviewer_job_copy_dispose (GObject *object)
 {
-	EogJobCopy *job;
+	XviewerJobCopy *job;
 
-	g_return_if_fail (EOG_IS_JOB_COPY (object));
+	g_return_if_fail (XVIEWER_IS_JOB_COPY (object));
 
-	job = EOG_JOB_COPY (object);
+	job = XVIEWER_JOB_COPY (object);
 
 	/* free all public and private members */
 	if (job->images) {
@@ -400,37 +400,37 @@ void eog_job_copy_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_copy_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_copy_parent_class)->dispose (object);
 }
 
 static void
-eog_job_copy_progress_callback (goffset  current_num_bytes,
+xviewer_job_copy_progress_callback (goffset  current_num_bytes,
 				goffset  total_num_bytes,
 				gpointer user_data)
 {
 	gfloat      progress;
 	guint       n_images;
-	EogJobCopy *job;
+	XviewerJobCopy *job;
 
-	job = EOG_JOB_COPY (user_data);
+	job = XVIEWER_JOB_COPY (user_data);
 
 	n_images = g_list_length (job->images);
 
 	progress = ((current_num_bytes / (gfloat) total_num_bytes) + job->current_position) / n_images;
 
-	eog_job_set_progress (EOG_JOB (job), progress);
+	xviewer_job_set_progress (XVIEWER_JOB (job), progress);
 }
 
 static void
-eog_job_copy_run (EogJob *job)
+xviewer_job_copy_run (XviewerJob *job)
 {
-	EogJobCopy *copyjob;
+	XviewerJobCopy *copyjob;
 	GList *it;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_COPY (job));
+	g_return_if_fail (XVIEWER_IS_JOB_COPY (job));
 
-	copyjob = EOG_JOB_COPY (g_object_ref (job));
+	copyjob = XVIEWER_JOB_COPY (g_object_ref (job));
 
 	/* clean previous errors */
 	if (job->error) {
@@ -439,7 +439,7 @@ eog_job_copy_run (EogJob *job)
 	}
 
 	/* check if the current job was previously cancelled */
-	if (eog_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job))
 	{
 		g_object_unref (job);
 		return;
@@ -458,7 +458,7 @@ eog_job_copy_run (EogJob *job)
 
 		g_file_copy (src, dest,
 					 G_FILE_COPY_OVERWRITE, NULL,
-					 eog_job_copy_progress_callback, job,
+					 xviewer_job_copy_progress_callback, job,
 					 &job->error);
 		g_object_unref (dest);
 		g_free (filename);
@@ -481,13 +481,13 @@ eog_job_copy_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_copy_new (GList       *images,
+XviewerJob *
+xviewer_job_copy_new (GList       *images,
 		  const gchar *destination)
 {
-	EogJobCopy *job;
+	XviewerJobCopy *job;
 
-	job = g_object_new (EOG_TYPE_JOB_COPY, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_COPY, NULL);
 
 	if (images)
 		job->images = images;
@@ -496,42 +496,42 @@ eog_job_copy_new (GList       *images,
 		job->destination = g_strdup (destination);
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }
 
-/* ------------------------------- EogJobLoad -------------------------------- */
+/* ------------------------------- XviewerJobLoad -------------------------------- */
 static void
-eog_job_load_class_init (EogJobLoadClass *class)
+xviewer_job_load_class_init (XviewerJobLoadClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_load_dispose;
-	eog_job_class->run      = eog_job_load_run;
+	g_object_class->dispose = xviewer_job_load_dispose;
+	xviewer_job_class->run      = xviewer_job_load_run;
 }
 
 static
-void eog_job_load_init (EogJobLoad *job)
+void xviewer_job_load_init (XviewerJobLoad *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
 	job->image = NULL;
-	job->data  = EOG_IMAGE_DATA_ALL;
+	job->data  = XVIEWER_IMAGE_DATA_ALL;
 }
 
 static
-void eog_job_load_dispose (GObject *object)
+void xviewer_job_load_dispose (GObject *object)
 {
-	EogJobLoad *job;
+	XviewerJobLoad *job;
 
-	g_return_if_fail (EOG_IS_JOB_LOAD (object));
+	g_return_if_fail (XVIEWER_IS_JOB_LOAD (object));
 
-	job = EOG_JOB_LOAD (object);
+	job = XVIEWER_JOB_LOAD (object);
 
 	/* free all public and private members */
 	if (job->image) {
@@ -540,18 +540,18 @@ void eog_job_load_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_load_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_load_parent_class)->dispose (object);
 }
 
 static void
-eog_job_load_run (EogJob *job)
+xviewer_job_load_run (XviewerJob *job)
 {
-	EogJobLoad *job_load;
+	XviewerJobLoad *job_load;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_LOAD (job));
+	g_return_if_fail (XVIEWER_IS_JOB_LOAD (job));
 
-	job_load = EOG_JOB_LOAD (g_object_ref (job));
+	job_load = XVIEWER_JOB_LOAD (g_object_ref (job));
 
 	/* clean previous errors */
 	if (job->error) {
@@ -560,13 +560,13 @@ eog_job_load_run (EogJob *job)
 	}
 
 	/* load image from file */
-	eog_image_load (job_load->image,
+	xviewer_image_load (job_load->image,
 			job_load->data,
 			job,
 			&job->error);
 
 	/* check if the current job was previously cancelled */
-	if (eog_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job))
 		return;
 
 	/* --- enter critical section --- */
@@ -585,13 +585,13 @@ eog_job_load_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_load_new (EogImage     *image,
-		  EogImageData  data)
+XviewerJob *
+xviewer_job_load_new (XviewerImage     *image,
+		  XviewerImageData  data)
 {
-	EogJobLoad *job;
+	XviewerJobLoad *job;
 
-	job = g_object_new (EOG_TYPE_JOB_LOAD, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_LOAD, NULL);
 
 	if (image)
 		job->image = g_object_ref (image);
@@ -599,27 +599,27 @@ eog_job_load_new (EogImage     *image,
 	job->data = data;
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }
 
-/* ------------------------------- EogJobModel -------------------------------- */
+/* ------------------------------- XviewerJobModel -------------------------------- */
 static void
-eog_job_model_class_init (EogJobModelClass *class)
+xviewer_job_model_class_init (XviewerJobModelClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_model_dispose;
-	eog_job_class->run      = eog_job_model_run;
+	g_object_class->dispose = xviewer_job_model_dispose;
+	xviewer_job_class->run      = xviewer_job_model_run;
 }
 
 static
-void eog_job_model_init (EogJobModel *job)
+void xviewer_job_model_init (XviewerJobModel *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -628,13 +628,13 @@ void eog_job_model_init (EogJobModel *job)
 }
 
 static
-void eog_job_model_dispose (GObject *object)
+void xviewer_job_model_dispose (GObject *object)
 {
-	EogJobModel *job;
+	XviewerJobModel *job;
 
-	g_return_if_fail (EOG_IS_JOB_MODEL (object));
+	g_return_if_fail (XVIEWER_IS_JOB_MODEL (object));
 
-	job = EOG_JOB_MODEL (object);
+	job = XVIEWER_JOB_MODEL (object);
 
 	/* free all public and private members */
 	if (job->store) {
@@ -649,7 +649,7 @@ void eog_job_model_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_model_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_model_parent_class)->dispose (object);
 }
 
 static void
@@ -682,7 +682,7 @@ filter_files (GSList *files, GList **file_list, GList **error_list)
 
 					/* If the content type is supported
 					   adjust the file_type */
-					if (eog_image_is_supported_mime_type (ctype))
+					if (xviewer_image_is_supported_mime_type (ctype))
 						type = G_FILE_TYPE_REGULAR;
 				}
 
@@ -707,16 +707,16 @@ filter_files (GSList *files, GList **file_list, GList **error_list)
 }
 
 static void
-eog_job_model_run (EogJob *job)
+xviewer_job_model_run (XviewerJob *job)
 {
-	EogJobModel *job_model;
+	XviewerJobModel *job_model;
 	GList       *filtered_list;
 	GList       *error_list;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_MODEL (job));
+	g_return_if_fail (XVIEWER_IS_JOB_MODEL (job));
 
-	job_model     = EOG_JOB_MODEL (g_object_ref (job));
+	job_model     = XVIEWER_JOB_MODEL (g_object_ref (job));
 	filtered_list = NULL;
 	error_list    = NULL;
 
@@ -728,8 +728,8 @@ eog_job_model_run (EogJob *job)
 	g_mutex_lock (job->mutex);
 
 	/* create a list store */
-	job_model->store = EOG_LIST_STORE (eog_list_store_new ());
-	eog_list_store_add_files (job_model->store, filtered_list);
+	job_model->store = XVIEWER_LIST_STORE (xviewer_list_store_new ());
+	xviewer_list_store_add_files (job_model->store, filtered_list);
 
 	/* --- leave critical section --- */
 	g_mutex_unlock (job->mutex);
@@ -757,38 +757,38 @@ eog_job_model_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_model_new (GSList *file_list)
+XviewerJob *
+xviewer_job_model_new (GSList *file_list)
 {
-	EogJobModel *job;
+	XviewerJobModel *job;
 
-	job = g_object_new (EOG_TYPE_JOB_MODEL, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_MODEL, NULL);
 
 	if (file_list != NULL)
 		job->file_list = file_list;
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }
 
-/* ------------------------------- EogJobSave -------------------------------- */
+/* ------------------------------- XviewerJobSave -------------------------------- */
 static void
-eog_job_save_class_init (EogJobSaveClass *class)
+xviewer_job_save_class_init (XviewerJobSaveClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_save_dispose;
-	eog_job_class->run      = eog_job_save_run;
+	g_object_class->dispose = xviewer_job_save_dispose;
+	xviewer_job_class->run      = xviewer_job_save_run;
 }
 
 static
-void eog_job_save_init (EogJobSave *job)
+void xviewer_job_save_init (XviewerJobSave *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -798,13 +798,13 @@ void eog_job_save_init (EogJobSave *job)
 }
 
 static
-void eog_job_save_dispose (GObject *object)
+void xviewer_job_save_dispose (GObject *object)
 {
-	EogJobSave *job;
+	XviewerJobSave *job;
 
-	g_return_if_fail (EOG_IS_JOB_SAVE (object));
+	g_return_if_fail (XVIEWER_IS_JOB_SAVE (object));
 
-	job = EOG_JOB_SAVE (object);
+	job = XVIEWER_JOB_SAVE (object);
 
 	/* free all public and private members */
 	if (job->images) {
@@ -819,34 +819,34 @@ void eog_job_save_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_save_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_save_parent_class)->dispose (object);
 }
 
 static void
-eog_job_save_progress_callback (EogImage *image,
+xviewer_job_save_progress_callback (XviewerImage *image,
 				gfloat    progress,
 				gpointer  data)
 {
-	EogJobSave *job;
+	XviewerJobSave *job;
 	guint       n_images;
 	gfloat      job_progress;
 
-	job = EOG_JOB_SAVE (data);
+	job = XVIEWER_JOB_SAVE (data);
 
 	n_images     = g_list_length (job->images);
 	job_progress = (job->current_position / (gfloat) n_images) + (progress / n_images);
 
-	eog_job_set_progress (EOG_JOB (job), job_progress);
+	xviewer_job_set_progress (XVIEWER_JOB (job), job_progress);
 }
 
 static void
-eog_job_save_run (EogJob *job)
+xviewer_job_save_run (XviewerJob *job)
 {
-	EogJobSave *save_job;
+	XviewerJobSave *save_job;
 	GList *it;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_SAVE (job));
+	g_return_if_fail (XVIEWER_IS_JOB_SAVE (job));
 
 	g_object_ref (job);
 
@@ -857,41 +857,41 @@ eog_job_save_run (EogJob *job)
 	}
 
 	/* check if the current job was previously cancelled */
-	if (eog_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job))
 		return;
 
-	save_job = EOG_JOB_SAVE (job);
+	save_job = XVIEWER_JOB_SAVE (job);
 
 	save_job->current_position = 0;
 
 	for (it = save_job->images; it != NULL; it = it->next, save_job->current_position++) {
-		EogImage *image = EOG_IMAGE (it->data);
-		EogImageSaveInfo *save_info = NULL;
+		XviewerImage *image = XVIEWER_IMAGE (it->data);
+		XviewerImageSaveInfo *save_info = NULL;
 		gulong handler_id = 0;
 		gboolean success = FALSE;
 
 		save_job->current_image = image;
 
 		/* Make sure the image doesn't go away while saving */
-		eog_image_data_ref (image);
+		xviewer_image_data_ref (image);
 
-		if (!eog_image_has_data (image, EOG_IMAGE_DATA_ALL)) {
-			EogImageMetadataStatus m_status;
+		if (!xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_ALL)) {
+			XviewerImageMetadataStatus m_status;
 			gint data2load = 0;
 
-			m_status = eog_image_get_metadata_status (image);
-			if (!eog_image_has_data (image, EOG_IMAGE_DATA_IMAGE)) {
+			m_status = xviewer_image_get_metadata_status (image);
+			if (!xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_IMAGE)) {
 				// Queue full read in this case
-				data2load = EOG_IMAGE_DATA_ALL;
-			} else if (m_status == EOG_IMAGE_METADATA_NOT_READ)
+				data2load = XVIEWER_IMAGE_DATA_ALL;
+			} else if (m_status == XVIEWER_IMAGE_METADATA_NOT_READ)
 			{
 				// Load only if we haven't read it yet
-				data2load = EOG_IMAGE_DATA_EXIF
-						| EOG_IMAGE_DATA_XMP;
+				data2load = XVIEWER_IMAGE_DATA_EXIF
+						| XVIEWER_IMAGE_DATA_XMP;
 			}
 
 			if (data2load != 0) {
-				eog_image_load (image,
+				xviewer_image_load (image,
 						data2load,
 						NULL,
 						&job->error);
@@ -900,12 +900,12 @@ eog_job_save_run (EogJob *job)
 
 		handler_id = g_signal_connect (G_OBJECT (image),
 						   "save-progress",
-							   G_CALLBACK (eog_job_save_progress_callback),
+							   G_CALLBACK (xviewer_job_save_progress_callback),
 						   job);
 
-		save_info = eog_image_save_info_new_from_image (image);
+		save_info = xviewer_image_save_info_new_from_image (image);
 
-		success = eog_image_save_by_info (image,
+		success = xviewer_image_save_by_info (image,
 						  save_info,
 						  &job->error);
 
@@ -915,7 +915,7 @@ eog_job_save_run (EogJob *job)
 		if (handler_id != 0)
 			g_signal_handler_disconnect (G_OBJECT (image), handler_id);
 
-		eog_image_data_unref (image);
+		xviewer_image_data_unref (image);
 
 		if (!success)
 			break;
@@ -937,38 +937,38 @@ eog_job_save_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_save_new (GList *images)
+XviewerJob *
+xviewer_job_save_new (GList *images)
 {
-	EogJobSave *job;
+	XviewerJobSave *job;
 
-	job = g_object_new (EOG_TYPE_JOB_SAVE, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_SAVE, NULL);
 
 	if (images)
 		job->images = images;
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }
 
-/* ------------------------------- EogJobSaveAs -------------------------------- */
+/* ------------------------------- XviewerJobSaveAs -------------------------------- */
 static void
-eog_job_save_as_class_init (EogJobSaveAsClass *class)
+xviewer_job_save_as_class_init (XviewerJobSaveAsClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_save_as_dispose;
-	eog_job_class->run      = eog_job_save_as_run;
+	g_object_class->dispose = xviewer_job_save_as_dispose;
+	xviewer_job_class->run      = xviewer_job_save_as_run;
 }
 
 static
-void eog_job_save_as_init (EogJobSaveAs *job)
+void xviewer_job_save_as_init (XviewerJobSaveAs *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -977,13 +977,13 @@ void eog_job_save_as_init (EogJobSaveAs *job)
 }
 
 static
-void eog_job_save_as_dispose (GObject *object)
+void xviewer_job_save_as_dispose (GObject *object)
 {
-	EogJobSaveAs *job;
+	XviewerJobSaveAs *job;
 
-	g_return_if_fail (EOG_IS_JOB_SAVE_AS (object));
+	g_return_if_fail (XVIEWER_IS_JOB_SAVE_AS (object));
 
-	job = EOG_JOB_SAVE_AS (object);
+	job = XVIEWER_JOB_SAVE_AS (object);
 
 	/* free all public and private members */
 	if (job->converter != NULL) {
@@ -997,19 +997,19 @@ void eog_job_save_as_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_save_as_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_save_as_parent_class)->dispose (object);
 }
 
 static void
-eog_job_save_as_run (EogJob *job)
+xviewer_job_save_as_run (XviewerJob *job)
 {
-	EogJobSave *save_job;
-	EogJobSaveAs *saveas_job;
+	XviewerJobSave *save_job;
+	XviewerJobSaveAs *saveas_job;
 	GList *it;
 	guint n_images;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_SAVE_AS (job));
+	g_return_if_fail (XVIEWER_IS_JOB_SAVE_AS (job));
 
 	/* clean previous errors */
 	if (job->error) {
@@ -1018,43 +1018,43 @@ eog_job_save_as_run (EogJob *job)
 	}
 
 	/* check if the current job was previously cancelled */
-	if (eog_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job))
 		return;
 
-	save_job = EOG_JOB_SAVE (g_object_ref (job));
-	saveas_job = EOG_JOB_SAVE_AS (job);
+	save_job = XVIEWER_JOB_SAVE (g_object_ref (job));
+	saveas_job = XVIEWER_JOB_SAVE_AS (job);
 
 	save_job->current_position = 0;
 	n_images = g_list_length (save_job->images);
 
 	for (it = save_job->images; it != NULL; it = it->next, save_job->current_position++) {
 		GdkPixbufFormat *format;
-		EogImageSaveInfo *src_info, *dest_info;
-		EogImage *image = EOG_IMAGE (it->data);
+		XviewerImageSaveInfo *src_info, *dest_info;
+		XviewerImage *image = XVIEWER_IMAGE (it->data);
 		gboolean success = FALSE;
 		gulong handler_id = 0;
 
 		save_job->current_image = image;
 
-		eog_image_data_ref (image);
+		xviewer_image_data_ref (image);
 
-		if (!eog_image_has_data (image, EOG_IMAGE_DATA_ALL)) {
-			EogImageMetadataStatus m_status;
+		if (!xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_ALL)) {
+			XviewerImageMetadataStatus m_status;
 			gint data2load = 0;
 
-			m_status = eog_image_get_metadata_status (image);
-			if (!eog_image_has_data (image, EOG_IMAGE_DATA_IMAGE)) {
+			m_status = xviewer_image_get_metadata_status (image);
+			if (!xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_IMAGE)) {
 				// Queue full read in this case
-				data2load = EOG_IMAGE_DATA_ALL;
-			} else if (m_status == EOG_IMAGE_METADATA_NOT_READ)
+				data2load = XVIEWER_IMAGE_DATA_ALL;
+			} else if (m_status == XVIEWER_IMAGE_METADATA_NOT_READ)
 			{
 				// Load only if we haven't read it yet
-				data2load = EOG_IMAGE_DATA_EXIF
-						| EOG_IMAGE_DATA_XMP;
+				data2load = XVIEWER_IMAGE_DATA_EXIF
+						| XVIEWER_IMAGE_DATA_XMP;
 			}
 
 			if (data2load != 0) {
-				eog_image_load (image,
+				xviewer_image_load (image,
 						data2load,
 						NULL,
 						&job->error);
@@ -1066,17 +1066,17 @@ eog_job_save_as_run (EogJob *job)
 
 		handler_id = g_signal_connect (G_OBJECT (image),
 						   "save-progress",
-							   G_CALLBACK (eog_job_save_progress_callback),
+							   G_CALLBACK (xviewer_job_save_progress_callback),
 						   job);
 
-		src_info = eog_image_save_info_new_from_image (image);
+		src_info = xviewer_image_save_info_new_from_image (image);
 
 		if (n_images == 1) {
 			g_assert (saveas_job->file != NULL);
 
-			format = eog_pixbuf_get_format (saveas_job->file);
+			format = xviewer_pixbuf_get_format (saveas_job->file);
 
-			dest_info = eog_image_save_info_new_from_file (saveas_job->file,
+			dest_info = xviewer_image_save_info_new_from_file (saveas_job->file,
 									   format);
 
 		/* SaveAsDialog has already secured permission to overwrite */
@@ -1087,7 +1087,7 @@ eog_job_save_as_run (EogJob *job)
 			GFile *dest_file;
 			gboolean result;
 
-			result = eog_uri_converter_do (saveas_job->converter,
+			result = xviewer_uri_converter_do (saveas_job->converter,
 							   image,
 							   &dest_file,
 							   &format,
@@ -1095,11 +1095,11 @@ eog_job_save_as_run (EogJob *job)
 
 			g_assert (result);
 
-			dest_info = eog_image_save_info_new_from_file (dest_file,
+			dest_info = xviewer_image_save_info_new_from_file (dest_file,
 									   format);
 		}
 
-		success = eog_image_save_as_by_info (image,
+		success = xviewer_image_save_as_by_info (image,
 							 src_info,
 							 dest_info,
 							 &job->error);
@@ -1113,7 +1113,7 @@ eog_job_save_as_run (EogJob *job)
 		if (handler_id != 0)
 			g_signal_handler_disconnect (G_OBJECT (image), handler_id);
 
-		eog_image_data_unref (image);
+		xviewer_image_data_unref (image);
 
 		if (!success)
 			break;
@@ -1135,17 +1135,17 @@ eog_job_save_as_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_save_as_new (GList           *images,
-		     EogURIConverter *converter,
+XviewerJob *
+xviewer_job_save_as_new (GList           *images,
+		     XviewerURIConverter *converter,
 		     GFile           *file)
 {
-	EogJobSaveAs *job;
+	XviewerJobSaveAs *job;
 
-	job = g_object_new (EOG_TYPE_JOB_SAVE_AS, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_SAVE_AS, NULL);
 
 	if (images)
-		EOG_JOB_SAVE(job)->images = images;
+		XVIEWER_JOB_SAVE(job)->images = images;
 
 	if (converter)
 		job->converter = g_object_ref (converter);
@@ -1154,27 +1154,27 @@ eog_job_save_as_new (GList           *images,
 		job->file = g_object_ref (file);
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }
 
-/* ------------------------------- EogJobThumbnail -------------------------------- */
+/* ------------------------------- XviewerJobThumbnail -------------------------------- */
 static void
-eog_job_thumbnail_class_init (EogJobThumbnailClass *class)
+xviewer_job_thumbnail_class_init (XviewerJobThumbnailClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_thumbnail_dispose;
-	eog_job_class->run      = eog_job_thumbnail_run;
+	g_object_class->dispose = xviewer_job_thumbnail_dispose;
+	xviewer_job_class->run      = xviewer_job_thumbnail_run;
 }
 
 static
-void eog_job_thumbnail_init (EogJobThumbnail *job)
+void xviewer_job_thumbnail_init (XviewerJobThumbnail *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -1183,13 +1183,13 @@ void eog_job_thumbnail_init (EogJobThumbnail *job)
 }
 
 static
-void eog_job_thumbnail_dispose (GObject *object)
+void xviewer_job_thumbnail_dispose (GObject *object)
 {
-	EogJobThumbnail *job;
+	XviewerJobThumbnail *job;
 
-	g_return_if_fail (EOG_IS_JOB_THUMBNAIL (object));
+	g_return_if_fail (XVIEWER_IS_JOB_THUMBNAIL (object));
 
-	job = EOG_JOB_THUMBNAIL (object);
+	job = XVIEWER_JOB_THUMBNAIL (object);
 
 	/* free all public and private members */
 	if (job->image) {
@@ -1203,13 +1203,13 @@ void eog_job_thumbnail_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_thumbnail_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_thumbnail_parent_class)->dispose (object);
 }
 
 static void
-eog_job_thumbnail_run (EogJob *job)
+xviewer_job_thumbnail_run (XviewerJob *job)
 {
-	EogJobThumbnail *job_thumbnail;
+	XviewerJobThumbnail *job_thumbnail;
 	gchar           *original_width;
 	gchar           *original_height;
 	gint             width;
@@ -1217,9 +1217,9 @@ eog_job_thumbnail_run (EogJob *job)
 	GdkPixbuf       *pixbuf;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_THUMBNAIL (job));
+	g_return_if_fail (XVIEWER_IS_JOB_THUMBNAIL (job));
 
-	job_thumbnail = EOG_JOB_THUMBNAIL (g_object_ref (job));
+	job_thumbnail = XVIEWER_JOB_THUMBNAIL (g_object_ref (job));
 
 	/* clean previous errors */
 	if (job->error) {
@@ -1228,7 +1228,7 @@ eog_job_thumbnail_run (EogJob *job)
 	}
 
 	/* try to load the image thumbnail from cache */
-	job_thumbnail->thumbnail = eog_thumbnail_load (job_thumbnail->image,
+	job_thumbnail->thumbnail = xviewer_thumbnail_load (job_thumbnail->image,
 						       &job->error);
 
 	if (!job_thumbnail->thumbnail) {
@@ -1240,17 +1240,17 @@ eog_job_thumbnail_run (EogJob *job)
 	original_width  = g_strdup (gdk_pixbuf_get_option (job_thumbnail->thumbnail, "tEXt::Thumb::Image::Width"));
 	original_height = g_strdup (gdk_pixbuf_get_option (job_thumbnail->thumbnail, "tEXt::Thumb::Image::Height"));
 
-	pixbuf = eog_thumbnail_fit_to_size (job_thumbnail->thumbnail,
-					    EOG_LIST_STORE_THUMB_SIZE);
+	pixbuf = xviewer_thumbnail_fit_to_size (job_thumbnail->thumbnail,
+					    XVIEWER_LIST_STORE_THUMB_SIZE);
 
 	g_object_unref (job_thumbnail->thumbnail);
-	job_thumbnail->thumbnail = eog_thumbnail_add_frame (pixbuf);
+	job_thumbnail->thumbnail = xviewer_thumbnail_add_frame (pixbuf);
 	g_object_unref (pixbuf);
 
 	if (original_width) {
 		sscanf (original_width, "%i", &width);
 		g_object_set_data (G_OBJECT (job_thumbnail->thumbnail),
-				   EOG_THUMBNAIL_ORIGINAL_WIDTH,
+				   XVIEWER_THUMBNAIL_ORIGINAL_WIDTH,
 				   GINT_TO_POINTER (width));
 		g_free (original_width);
 	}
@@ -1258,7 +1258,7 @@ eog_job_thumbnail_run (EogJob *job)
 	if (original_height) {
 		sscanf (original_height, "%i", &height);
 		g_object_set_data (G_OBJECT (job_thumbnail->thumbnail),
-				   EOG_THUMBNAIL_ORIGINAL_HEIGHT,
+				   XVIEWER_THUMBNAIL_ORIGINAL_HEIGHT,
 				   GINT_TO_POINTER (height));
 		g_free (original_height);
 	}
@@ -1283,38 +1283,38 @@ eog_job_thumbnail_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_thumbnail_new (EogImage *image)
+XviewerJob *
+xviewer_job_thumbnail_new (XviewerImage *image)
 {
-	EogJobThumbnail *job;
+	XviewerJobThumbnail *job;
 
-	job = g_object_new (EOG_TYPE_JOB_THUMBNAIL, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_THUMBNAIL, NULL);
 
 	if (image)
 		job->image = g_object_ref (image);
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }
 
-/* ------------------------------- EogJobTransform -------------------------------- */
+/* ------------------------------- XviewerJobTransform -------------------------------- */
 static void
-eog_job_transform_class_init (EogJobTransformClass *class)
+xviewer_job_transform_class_init (XviewerJobTransformClass *class)
 {
 	GObjectClass *g_object_class = (GObjectClass *) class;
-	EogJobClass  *eog_job_class  = (EogJobClass *)  class;
+	XviewerJobClass  *xviewer_job_class  = (XviewerJobClass *)  class;
 
-	g_object_class->dispose = eog_job_transform_dispose;
-	eog_job_class->run      = eog_job_transform_run;
+	g_object_class->dispose = xviewer_job_transform_dispose;
+	xviewer_job_class->run      = xviewer_job_transform_run;
 }
 
 static
-void eog_job_transform_init (EogJobTransform *job)
+void xviewer_job_transform_init (XviewerJobTransform *job)
 {
 	/* initialize all public and private members to reasonable
 	   default values. */
@@ -1323,13 +1323,13 @@ void eog_job_transform_init (EogJobTransform *job)
 }
 
 static
-void eog_job_transform_dispose (GObject *object)
+void xviewer_job_transform_dispose (GObject *object)
 {
-	EogJobTransform *job;
+	XviewerJobTransform *job;
 
-	g_return_if_fail (EOG_IS_JOB_TRANSFORM (object));
+	g_return_if_fail (XVIEWER_IS_JOB_TRANSFORM (object));
 
-	job = EOG_JOB_TRANSFORM (object);
+	job = XVIEWER_JOB_TRANSFORM (object);
 
 	/* free all public and private members */
 	if (job->transform) {
@@ -1343,30 +1343,30 @@ void eog_job_transform_dispose (GObject *object)
 	}
 
 	/* call parent dispose */
-	G_OBJECT_CLASS (eog_job_transform_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_job_transform_parent_class)->dispose (object);
 }
 
 static gboolean
-eog_job_transform_image_modified (gpointer data)
+xviewer_job_transform_image_modified (gpointer data)
 {
-	g_return_val_if_fail (EOG_IS_IMAGE (data), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (data), FALSE);
 
-	eog_image_modified (EOG_IMAGE (data));
+	xviewer_image_modified (XVIEWER_IMAGE (data));
 	g_object_unref (G_OBJECT (data));
 
 	return FALSE;
 }
 
 static void
-eog_job_transform_run (EogJob *job)
+xviewer_job_transform_run (XviewerJob *job)
 {
-	EogJobTransform *transjob;
+	XviewerJobTransform *transjob;
 	GList *it;
 
 	/* initialization */
-	g_return_if_fail (EOG_IS_JOB_TRANSFORM (job));
+	g_return_if_fail (XVIEWER_IS_JOB_TRANSFORM (job));
 
-	transjob = EOG_JOB_TRANSFORM (g_object_ref (job));
+	transjob = XVIEWER_JOB_TRANSFORM (g_object_ref (job));
 
 	/* clean previous errors */
 	if (job->error) {
@@ -1375,27 +1375,27 @@ eog_job_transform_run (EogJob *job)
 	}
 
 	/* check if the current job was previously cancelled */
-	if (eog_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job))
 	{
 		g_object_unref (transjob);
 		return;
 	}
 
 	for (it = transjob->images; it != NULL; it = it->next) {
-		EogImage *image = EOG_IMAGE (it->data);
+		XviewerImage *image = XVIEWER_IMAGE (it->data);
 
 		if (transjob->transform == NULL) {
-			eog_image_undo (image);
+			xviewer_image_undo (image);
 		} else {
-			eog_image_transform (image, transjob->transform, job);
+			xviewer_image_transform (image, transjob->transform, job);
 		}
 
-		if (eog_image_is_modified (image) || transjob->transform == NULL) {
+		if (xviewer_image_is_modified (image) || transjob->transform == NULL) {
 			g_object_ref (image);
-			g_idle_add (eog_job_transform_image_modified, image);
+			g_idle_add (xviewer_job_transform_image_modified, image);
 		}
 
-		if (G_UNLIKELY (eog_job_is_cancelled (job)))
+		if (G_UNLIKELY (xviewer_job_is_cancelled (job)))
 		{
 			g_object_unref (transjob);
 			return;
@@ -1418,13 +1418,13 @@ eog_job_transform_run (EogJob *job)
 			 g_object_unref);
 }
 
-EogJob *
-eog_job_transform_new (GList        *images,
-		       EogTransform *transform)
+XviewerJob *
+xviewer_job_transform_new (GList        *images,
+		       XviewerTransform *transform)
 {
-	EogJobTransform *job;
+	XviewerJobTransform *job;
 
-	job = g_object_new (EOG_TYPE_JOB_TRANSFORM, NULL);
+	job = g_object_new (XVIEWER_TYPE_JOB_TRANSFORM, NULL);
 
 	if (images)
 		job->images = images;
@@ -1433,10 +1433,10 @@ eog_job_transform_new (GList        *images,
 		job->transform = g_object_ref (transform);
 
 	/* show info for debugging */
-	eog_debug_message (DEBUG_JOBS,
+	xviewer_debug_message (DEBUG_JOBS,
 			   "%s (%p) job was CREATED",
-			   EOG_GET_TYPE_NAME (job),
+			   XVIEWER_GET_TYPE_NAME (job),
 			   job);
 
-	return EOG_JOB (job);
+	return XVIEWER_JOB (job);
 }

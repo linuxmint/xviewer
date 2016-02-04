@@ -20,7 +20,7 @@ import pyatspi
 
 
 def cleanup():
-    for schema in ['org.gnome.eog.fullscreen', 'org.gnome.eog.plugins', 'org.gnome.eog.ui', 'org.gnome.eog.view']:
+    for schema in ['org.gnome.xviewer.fullscreen', 'org.gnome.xviewer.plugins', 'org.gnome.xviewer.ui', 'org.gnome.xviewer.view']:
         system("gsettings reset-recursively %s" % schema)
 
     # Remove all the remains of other files
@@ -252,7 +252,7 @@ def file_save_to_path(context, path, button):
 def set_locale_to(context, locale):
     environ['LANG'] = locale
     i18n.translationDbs = []
-    i18n.loadTranslationsFromPackageMoFiles('eog')
+    i18n.loadTranslationsFromPackageMoFiles('xviewer')
     i18n.loadTranslationsFromPackageMoFiles('gtk30')
 
     context.current_locale = locale

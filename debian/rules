@@ -12,10 +12,10 @@ DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc
 
 DEB_DH_MAKESHLIBS_ARGS_ALL += --no-act
 
-binary-post-install/eog::
-	# remove gir file from eog package, it will be in eog-dev
-	rm -rf `pwd`/debian/eog/usr/share/eog/gir-1.0/
+binary-post-install/xviewer::
+	# remove gir file from xviewer package, it will be in xviewer-dev
+	rm -rf `pwd`/debian/xviewer/usr/share/xviewer/gir-1.0/
 
-DEB_DH_GIREPOSITORY_ARGS_eog += -ldebian/tmp/usr/share/eog/gir-1.0/ /usr/lib/eog/girepository-1.0/
+DEB_DH_GIREPOSITORY_ARGS_xviewer += -ldebian/tmp/usr/share/xviewer/gir-1.0/ /usr/lib/xviewer/girepository-1.0/
 
 common-binary-post-install-arch:: list-missing

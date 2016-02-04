@@ -1,6 +1,6 @@
 /*
- * eog-metadata-sidebar.c
- * This file is part of eog
+ * xviewer-metadata-sidebar.c
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -32,17 +32,17 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-#include "eog-image.h"
-#include "eog-metadata-sidebar.h"
-#include "eog-properties-dialog.h"
-#include "eog-scroll-view.h"
-#include "eog-util.h"
-#include "eog-window.h"
+#include "xviewer-image.h"
+#include "xviewer-metadata-sidebar.h"
+#include "xviewer-properties-dialog.h"
+#include "xviewer-scroll-view.h"
+#include "xviewer-util.h"
+#include "xviewer-window.h"
 
 #ifdef HAVE_EXIF
 #include <libexif/exif-data.h>
 #include <libexif/exif-tag.h>
-#include "eog-exif-util.h"
+#include "xviewer-exif-util.h"
 #endif
 
 #if HAVE_EXEMPI
@@ -60,9 +60,9 @@ enum {
 	PROP_PARENT_WINDOW
 };
 
-struct _EogMetadataSidebarPrivate {
-	EogWindow *parent_window;
-	EogImage *image;
+struct _XviewerMetadataSidebarPrivate {
+	XviewerWindow *parent_window;
+	XviewerImage *image;
 
 	gulong image_changed_id;
 	gulong thumb_changed_id;
@@ -100,7 +100,7 @@ struct _EogMetadataSidebarPrivate {
 #endif
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE(EogMetadataSidebar, eog_metadata_sidebar, GTK_TYPE_SCROLLED_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE(XviewerMetadataSidebar, xviewer_metadata_sidebar, GTK_TYPE_SCROLLED_WINDOW)
 
 static GtkWidget*
 _gtk_grid_append_title_line (GtkGrid *grid, GtkWidget *sibling,
@@ -154,7 +154,7 @@ _gtk_grid_append_prop_line (GtkGrid *grid, GtkWidget *sibling,
 
 #if HAVE_EXEMPI
 static void
-eog_xmp_set_label (XmpPtr xmp,
+xviewer_xmp_set_label (XmpPtr xmp,
 		   const char *ns,
 		   const char *propname,
 		   GtkWidget *w)
@@ -208,10 +208,10 @@ eog_xmp_set_label (XmpPtr xmp,
 #endif
 
 static void
-eog_metadata_sidebar_update_general_section (EogMetadataSidebar *sidebar)
+xviewer_metadata_sidebar_update_general_section (XviewerMetadataSidebar *sidebar)
 {
-	EogMetadataSidebarPrivate *priv = sidebar->priv;
-	EogImage *img = priv->image;
+	XviewerMetadataSidebarPrivate *priv = sidebar->priv;
+	XviewerImage *img = priv->image;
 	GFile *file, *parent_file;
 	GFileInfo *file_info;
 	gchar *str;
@@ -228,8 +228,8 @@ eog_metadata_sidebar_update_general_section (EogMetadataSidebar *sidebar)
 	}
 
 	gtk_label_set_text (GTK_LABEL (priv->name_label),
-			    eog_image_get_caption (img));
-	eog_image_get_size (img, &width, &height);
+			    xviewer_image_get_caption (img));
+	xviewer_image_get_size (img, &width, &height);
 	str = g_strdup_printf ("%d %s", height,
 			       ngettext ("pixel", "pixels", height));
 	gtk_label_set_text (GTK_LABEL (priv->height_label), str);
@@ -239,7 +239,7 @@ eog_metadata_sidebar_update_general_section (EogMetadataSidebar *sidebar)
 	gtk_label_set_text (GTK_LABEL (priv->width_label), str);
 	g_free (str);
 
-	file = eog_image_get_file (img);
+	file = xviewer_image_get_file (img);
 	file_info = g_file_query_info (file,
 				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
 				       0, NULL, NULL);
@@ -255,7 +255,7 @@ eog_metadata_sidebar_update_general_section (EogMetadataSidebar *sidebar)
 	gtk_label_set_text (GTK_LABEL (priv->type_label), str);
 	g_free (str);
 
-	bytes = eog_image_get_bytes (img);
+	bytes = xviewer_image_get_bytes (img);
 	str = g_format_size (bytes);
 	gtk_label_set_text (GTK_LABEL (priv->size_label), str);
 	g_free (str);
@@ -273,10 +273,10 @@ eog_metadata_sidebar_update_general_section (EogMetadataSidebar *sidebar)
 
 #if HAVE_METADATA
 static void
-eog_metadata_sidebar_update_metadata_section (EogMetadataSidebar *sidebar)
+xviewer_metadata_sidebar_update_metadata_section (XviewerMetadataSidebar *sidebar)
 {
-	EogMetadataSidebarPrivate *priv = sidebar->priv;
-	EogImage *img = priv->image;
+	XviewerMetadataSidebarPrivate *priv = sidebar->priv;
+	XviewerImage *img = priv->image;
 #if HAVE_EXIF
 	ExifData *exif_data = NULL;
 #endif
@@ -286,33 +286,33 @@ eog_metadata_sidebar_update_metadata_section (EogMetadataSidebar *sidebar)
 
 	if (img) {
 #if HAVE_EXIF
-		exif_data = eog_image_get_exif_info (img);
+		exif_data = xviewer_image_get_exif_info (img);
 #endif
 #if HAVE_EXEMPI
-		xmp_data =  eog_image_get_xmp_info (img);
+		xmp_data =  xviewer_image_get_xmp_info (img);
 #endif
 	}
 
 #if HAVE_EXIF
-	eog_exif_util_set_label_text (GTK_LABEL (priv->aperture_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->aperture_label),
 				      exif_data, EXIF_TAG_FNUMBER);
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exposure_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exposure_label),
 				      exif_data,
 				      EXIF_TAG_EXPOSURE_TIME);
-	eog_exif_util_set_focal_length_label_text (
+	xviewer_exif_util_set_focal_length_label_text (
 				       GTK_LABEL (priv->focallen_label),
 				       exif_data);
-	eog_exif_util_set_label_text (GTK_LABEL (priv->flash_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->flash_label),
 				      exif_data, EXIF_TAG_FLASH);
-	eog_exif_util_set_label_text (GTK_LABEL (priv->iso_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->iso_label),
 				      exif_data,
 				      EXIF_TAG_ISO_SPEED_RATINGS);
-	eog_exif_util_set_label_text (GTK_LABEL (priv->metering_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->metering_label),
 				      exif_data,
 				      EXIF_TAG_METERING_MODE);
-	eog_exif_util_set_label_text (GTK_LABEL (priv->model_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->model_label),
 				      exif_data, EXIF_TAG_MODEL);
-	eog_exif_util_set_label_text (GTK_LABEL (priv->date_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->date_label),
 				      exif_data,
 				      EXIF_TAG_DATE_TIME_ORIGINAL);
 
@@ -321,27 +321,27 @@ eog_metadata_sidebar_update_metadata_section (EogMetadataSidebar *sidebar)
 #endif /* HAVE_EXIF */
 
 #if HAVE_EXEMPI
- 	eog_xmp_set_label (xmp_data,
+ 	xviewer_xmp_set_label (xmp_data,
 			   NS_IPTC4XMP,
 			   "Location",
 			   priv->location_label);
 
-	eog_xmp_set_label (xmp_data,
+	xviewer_xmp_set_label (xmp_data,
 			   NS_DC,
 			   "description",
 			   priv->desc_label);
 
-	eog_xmp_set_label (xmp_data,
+	xviewer_xmp_set_label (xmp_data,
 			   NS_DC,
 			   "subject",
 			   priv->keyword_label);
 
-	eog_xmp_set_label (xmp_data,
+	xviewer_xmp_set_label (xmp_data,
 			   NS_DC,
        	                   "creator",
 			   priv->creator_label);
 
-	eog_xmp_set_label (xmp_data,
+	xviewer_xmp_set_label (xmp_data,
 			   NS_DC,
 			   "rights",
 			   priv->rights_label);
@@ -354,26 +354,26 @@ eog_metadata_sidebar_update_metadata_section (EogMetadataSidebar *sidebar)
 #endif /* HAVE_METADATA */
 
 static void
-eog_metadata_sidebar_update (EogMetadataSidebar *sidebar)
+xviewer_metadata_sidebar_update (XviewerMetadataSidebar *sidebar)
 {
-	g_return_if_fail (EOG_IS_METADATA_SIDEBAR (sidebar));
+	g_return_if_fail (XVIEWER_IS_METADATA_SIDEBAR (sidebar));
 
-	eog_metadata_sidebar_update_general_section (sidebar);
+	xviewer_metadata_sidebar_update_general_section (sidebar);
 #if HAVE_METADATA
-	eog_metadata_sidebar_update_metadata_section (sidebar);
+	xviewer_metadata_sidebar_update_metadata_section (sidebar);
 #endif
 }
 
 static void
-_thumbnail_changed_cb (EogImage *image, gpointer user_data)
+_thumbnail_changed_cb (XviewerImage *image, gpointer user_data)
 {
-	eog_metadata_sidebar_update (EOG_METADATA_SIDEBAR (user_data));
+	xviewer_metadata_sidebar_update (XVIEWER_METADATA_SIDEBAR (user_data));
 }
 
 static void
-eog_metadata_sidebar_set_image (EogMetadataSidebar *sidebar, EogImage *image)
+xviewer_metadata_sidebar_set_image (XviewerMetadataSidebar *sidebar, XviewerImage *image)
 {
-	EogMetadataSidebarPrivate *priv = sidebar->priv;
+	XviewerMetadataSidebarPrivate *priv = sidebar->priv;
 
 	if (image == priv->image)
 		return;
@@ -396,7 +396,7 @@ eog_metadata_sidebar_set_image (EogMetadataSidebar *sidebar, EogImage *image)
 			g_signal_connect (priv->image, "thumbnail-changed",
 					  G_CALLBACK (_thumbnail_changed_cb),
 					  sidebar);
-		eog_metadata_sidebar_update (sidebar);
+		xviewer_metadata_sidebar_update (sidebar);
 	}
 	
 	g_object_notify (G_OBJECT (sidebar), "image");
@@ -405,14 +405,14 @@ eog_metadata_sidebar_set_image (EogMetadataSidebar *sidebar, EogImage *image)
 static void
 _notify_image_cb (GObject *gobject, GParamSpec *pspec, gpointer user_data)
 {
-	EogImage *image;
+	XviewerImage *image;
 
-	g_return_if_fail (EOG_IS_METADATA_SIDEBAR (user_data));
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (gobject));
+	g_return_if_fail (XVIEWER_IS_METADATA_SIDEBAR (user_data));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (gobject));
 
-	image = eog_scroll_view_get_image (EOG_SCROLL_VIEW (gobject));
+	image = xviewer_scroll_view_get_image (XVIEWER_SCROLL_VIEW (gobject));
 
-	eog_metadata_sidebar_set_image (EOG_METADATA_SIDEBAR (user_data),
+	xviewer_metadata_sidebar_set_image (XVIEWER_METADATA_SIDEBAR (user_data),
 					image);
 
 	if (image)
@@ -422,18 +422,18 @@ _notify_image_cb (GObject *gobject, GParamSpec *pspec, gpointer user_data)
 static void
 _folder_button_clicked_cb (GtkButton *button, gpointer user_data)
 {
-	EogMetadataSidebarPrivate *priv = EOG_METADATA_SIDEBAR(user_data)->priv;
-	EogImage *img;
+	XviewerMetadataSidebarPrivate *priv = XVIEWER_METADATA_SIDEBAR(user_data)->priv;
+	XviewerImage *img;
 	GdkScreen *screen;
 	GFile *file;
 
 	g_return_if_fail (priv->parent_window != NULL);
 
-	img = eog_window_get_image (priv->parent_window);
+	img = xviewer_window_get_image (priv->parent_window);
 	screen = gtk_widget_get_screen (GTK_WIDGET (priv->parent_window));
-	file = eog_image_get_file (img);
+	file = xviewer_image_get_file (img);
 
-	eog_util_show_file_in_filemanager (file, screen);
+	xviewer_util_show_file_in_filemanager (file, screen);
 
 	g_object_unref (file);
 }
@@ -442,34 +442,34 @@ _folder_button_clicked_cb (GtkButton *button, gpointer user_data)
 static void
 _details_button_clicked_cb (GtkButton *button, gpointer user_data)
 {
-	EogMetadataSidebarPrivate *priv = EOG_METADATA_SIDEBAR(user_data)->priv;
+	XviewerMetadataSidebarPrivate *priv = XVIEWER_METADATA_SIDEBAR(user_data)->priv;
 	GtkWidget *dlg;
 
 	g_return_if_fail (priv->parent_window != NULL);
 
-	dlg = eog_window_get_properties_dialog (
-					EOG_WINDOW (priv->parent_window));
+	dlg = xviewer_window_get_properties_dialog (
+					XVIEWER_WINDOW (priv->parent_window));
 	g_return_if_fail (dlg != NULL);
-	eog_properties_dialog_set_page (EOG_PROPERTIES_DIALOG (dlg),
-					EOG_PROPERTIES_DIALOG_PAGE_DETAILS);
+	xviewer_properties_dialog_set_page (XVIEWER_PROPERTIES_DIALOG (dlg),
+					XVIEWER_PROPERTIES_DIALOG_PAGE_DETAILS);
 	gtk_widget_show (dlg);
 }
 #endif
 
 static void
-eog_metadata_sidebar_set_parent_window (EogMetadataSidebar *sidebar,
-					EogWindow *window)
+xviewer_metadata_sidebar_set_parent_window (XviewerMetadataSidebar *sidebar,
+					XviewerWindow *window)
 {
-	EogMetadataSidebarPrivate *priv;
+	XviewerMetadataSidebarPrivate *priv;
 	GtkWidget *view;
 
-	g_return_if_fail (EOG_IS_METADATA_SIDEBAR (sidebar));
+	g_return_if_fail (XVIEWER_IS_METADATA_SIDEBAR (sidebar));
 	priv = sidebar->priv;
 	g_return_if_fail (priv->parent_window == NULL);
 
 	priv->parent_window = g_object_ref (window);
-	eog_metadata_sidebar_update (sidebar);
-	view = eog_window_get_view (window);
+	xviewer_metadata_sidebar_update (sidebar);
+	view = xviewer_window_get_view (window);
 	priv->image_changed_id = g_signal_connect (view, "notify::image",
 						  G_CALLBACK (_notify_image_cb),
 						  sidebar);
@@ -479,12 +479,12 @@ eog_metadata_sidebar_set_parent_window (EogMetadataSidebar *sidebar,
 }
 
 static void
-eog_metadata_sidebar_init (EogMetadataSidebar *sidebar)
+xviewer_metadata_sidebar_init (XviewerMetadataSidebar *sidebar)
 {
-	EogMetadataSidebarPrivate *priv;
+	XviewerMetadataSidebarPrivate *priv;
 	GtkWidget *label;
 
-	priv = sidebar->priv = eog_metadata_sidebar_get_instance_private (sidebar);
+	priv = sidebar->priv = xviewer_metadata_sidebar_get_instance_private (sidebar);
 	priv->grid = gtk_grid_new ();
 	g_object_set (G_OBJECT (priv->grid),
 	              "row-spacing", 6,
@@ -581,29 +581,29 @@ eog_metadata_sidebar_init (EogMetadataSidebar *sidebar)
 }
 
 static void
-eog_metadata_sidebar_constructed (GObject *object)
+xviewer_metadata_sidebar_constructed (GObject *object)
 {
-	EogMetadataSidebarPrivate *priv;
+	XviewerMetadataSidebarPrivate *priv;
 
-	priv = EOG_METADATA_SIDEBAR (object)->priv;
+	priv = XVIEWER_METADATA_SIDEBAR (object)->priv;
 
 	/* This can only happen after all construct properties for
 	 * GtkScrolledWindow are set/handled. */
 	gtk_container_add (GTK_CONTAINER (object), priv->grid);
 	gtk_widget_show (GTK_WIDGET (object));
 
-	G_OBJECT_CLASS (eog_metadata_sidebar_parent_class)->constructed (object);
+	G_OBJECT_CLASS (xviewer_metadata_sidebar_parent_class)->constructed (object);
 }
 
 static void
-eog_metadata_sidebar_get_property (GObject *object, guint property_id,
+xviewer_metadata_sidebar_get_property (GObject *object, guint property_id,
 				   GValue *value, GParamSpec *pspec)
 {
-	EogMetadataSidebar *sidebar;
+	XviewerMetadataSidebar *sidebar;
 
-	g_return_if_fail (EOG_IS_METADATA_SIDEBAR (object));
+	g_return_if_fail (XVIEWER_IS_METADATA_SIDEBAR (object));
 
-	sidebar = EOG_METADATA_SIDEBAR (object);
+	sidebar = XVIEWER_METADATA_SIDEBAR (object);
 
 	switch (property_id) {
 	case PROP_IMAGE:
@@ -620,14 +620,14 @@ eog_metadata_sidebar_get_property (GObject *object, guint property_id,
 }
 
 static void
-eog_metadata_sidebar_set_property (GObject *object, guint property_id,
+xviewer_metadata_sidebar_set_property (GObject *object, guint property_id,
 				   const GValue *value, GParamSpec *pspec)
 {
-	EogMetadataSidebar *sidebar;
+	XviewerMetadataSidebar *sidebar;
 
-	g_return_if_fail (EOG_IS_METADATA_SIDEBAR (object));
+	g_return_if_fail (XVIEWER_IS_METADATA_SIDEBAR (object));
 
-	sidebar = EOG_METADATA_SIDEBAR (object);
+	sidebar = XVIEWER_METADATA_SIDEBAR (object);
 
 	switch (property_id) {
 	case PROP_IMAGE:
@@ -636,10 +636,10 @@ eog_metadata_sidebar_set_property (GObject *object, guint property_id,
 	}
 	case PROP_PARENT_WINDOW:
 	{
-		EogWindow *window;
+		XviewerWindow *window;
 
 		window = g_value_get_object (value);
-		eog_metadata_sidebar_set_parent_window (sidebar, window);
+		xviewer_metadata_sidebar_set_parent_window (sidebar, window);
 		break;
 	}
 	default:
@@ -648,33 +648,33 @@ eog_metadata_sidebar_set_property (GObject *object, guint property_id,
 
 }
 static void
-eog_metadata_sidebar_class_init (EogMetadataSidebarClass *klass)
+xviewer_metadata_sidebar_class_init (XviewerMetadataSidebarClass *klass)
 {
 	GObjectClass *g_obj_class = G_OBJECT_CLASS (klass);
 
-	g_obj_class->constructed = eog_metadata_sidebar_constructed;
-	g_obj_class->get_property = eog_metadata_sidebar_get_property;
-	g_obj_class->set_property = eog_metadata_sidebar_set_property;
-/*	g_obj_class->dispose = eog_metadata_sidebar_dispose;*/
+	g_obj_class->constructed = xviewer_metadata_sidebar_constructed;
+	g_obj_class->get_property = xviewer_metadata_sidebar_get_property;
+	g_obj_class->set_property = xviewer_metadata_sidebar_set_property;
+/*	g_obj_class->dispose = xviewer_metadata_sidebar_dispose;*/
 
 	g_object_class_install_property (
 		g_obj_class, PROP_PARENT_WINDOW,
 		g_param_spec_object ("parent-window", NULL, NULL,
-				     EOG_TYPE_WINDOW, G_PARAM_READWRITE
+				     XVIEWER_TYPE_WINDOW, G_PARAM_READWRITE
 				     | G_PARAM_CONSTRUCT_ONLY
 				     | G_PARAM_STATIC_STRINGS));
 	g_object_class_install_property (
 		g_obj_class, PROP_IMAGE,
-		g_param_spec_object ("image", NULL, NULL, EOG_TYPE_IMAGE,
+		g_param_spec_object ("image", NULL, NULL, XVIEWER_TYPE_IMAGE,
 				     G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS)
 				    );
 }
 
 
 GtkWidget*
-eog_metadata_sidebar_new (EogWindow *window)
+xviewer_metadata_sidebar_new (XviewerWindow *window)
 {
-	return gtk_widget_new (EOG_TYPE_METADATA_SIDEBAR,
+	return gtk_widget_new (XVIEWER_TYPE_METADATA_SIDEBAR,
 			       "hadjustment", NULL,
 			       "vadjustment", NULL,
 	                       "hscrollbar-policy", GTK_POLICY_NEVER,

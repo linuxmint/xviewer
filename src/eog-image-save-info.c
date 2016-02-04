@@ -3,17 +3,17 @@
 #endif
 
 #include <string.h>
-#include "eog-image-save-info.h"
-#include "eog-image-private.h"
-#include "eog-pixbuf-util.h"
-#include "eog-image.h"
+#include "xviewer-image-save-info.h"
+#include "xviewer-image-private.h"
+#include "xviewer-pixbuf-util.h"
+#include "xviewer-image.h"
 
-G_DEFINE_TYPE (EogImageSaveInfo, eog_image_save_info, G_TYPE_OBJECT)
+G_DEFINE_TYPE (XviewerImageSaveInfo, xviewer_image_save_info, G_TYPE_OBJECT)
 
 static void
-eog_image_save_info_dispose (GObject *object)
+xviewer_image_save_info_dispose (GObject *object)
 {
-	EogImageSaveInfo *info = EOG_IMAGE_SAVE_INFO (object);
+	XviewerImageSaveInfo *info = XVIEWER_IMAGE_SAVE_INFO (object);
 
 	if (info->file != NULL) {
 		g_object_unref (info->file);
@@ -25,21 +25,21 @@ eog_image_save_info_dispose (GObject *object)
 		info->format = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_image_save_info_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_image_save_info_parent_class)->dispose (object);
 }
 
 static void
-eog_image_save_info_init (EogImageSaveInfo *obj)
+xviewer_image_save_info_init (XviewerImageSaveInfo *obj)
 {
 
 }
 
 static void
-eog_image_save_info_class_init (EogImageSaveInfoClass *klass)
+xviewer_image_save_info_class_init (XviewerImageSaveInfoClass *klass)
 {
 	GObjectClass *object_class = (GObjectClass*) klass;
 
-	object_class->dispose = eog_image_save_info_dispose;
+	object_class->dispose = xviewer_image_save_info_dispose;
 }
 
 /* is_local_uri:
@@ -70,7 +70,7 @@ get_save_file_type_by_file (GFile *file)
 	GdkPixbufFormat *format;
 	char *type = NULL;
 
-	format = eog_pixbuf_get_format (file);
+	format = xviewer_pixbuf_get_format (file);
 	if (format != NULL) {
 		type = gdk_pixbuf_format_get_name (format);
 	}
@@ -78,21 +78,21 @@ get_save_file_type_by_file (GFile *file)
 	return type;
 }
 
-EogImageSaveInfo*
-eog_image_save_info_new_from_image (EogImage *image)
+XviewerImageSaveInfo*
+xviewer_image_save_info_new_from_image (XviewerImage *image)
 {
-	EogImageSaveInfo *info = NULL;
+	XviewerImageSaveInfo *info = NULL;
 
-	g_return_val_if_fail (EOG_IS_IMAGE (image), NULL);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (image), NULL);
 
-	info = g_object_new (EOG_TYPE_IMAGE_SAVE_INFO, NULL);
+	info = g_object_new (XVIEWER_TYPE_IMAGE_SAVE_INFO, NULL);
 
-	info->file         = eog_image_get_file (image);
+	info->file         = xviewer_image_get_file (image);
 	info->format       = g_strdup (image->priv->file_type);
 	info->exists       = g_file_query_exists (info->file, NULL);
 	info->local        = is_local_file (info->file);
-        info->has_metadata = eog_image_has_data (image, EOG_IMAGE_DATA_EXIF);
-	info->modified     = eog_image_is_modified (image);
+        info->has_metadata = xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_EXIF);
+	info->modified     = xviewer_image_is_modified (image);
 	info->overwrite    = FALSE;
 
 	info->jpeg_quality = -1.0;
@@ -100,31 +100,31 @@ eog_image_save_info_new_from_image (EogImage *image)
 	return info;
 }
 
-EogImageSaveInfo*
-eog_image_save_info_new_from_uri (const char *txt_uri, GdkPixbufFormat *format)
+XviewerImageSaveInfo*
+xviewer_image_save_info_new_from_uri (const char *txt_uri, GdkPixbufFormat *format)
 {
 	GFile *file;
-	EogImageSaveInfo *info;
+	XviewerImageSaveInfo *info;
 
 	g_return_val_if_fail (txt_uri != NULL, NULL);
 
 	file = g_file_new_for_uri (txt_uri);
 
-	info = eog_image_save_info_new_from_file (file, format);
+	info = xviewer_image_save_info_new_from_file (file, format);
 
 	g_object_unref (file);
 
 	return info;
 }
 
-EogImageSaveInfo*
-eog_image_save_info_new_from_file (GFile *file, GdkPixbufFormat *format)
+XviewerImageSaveInfo*
+xviewer_image_save_info_new_from_file (GFile *file, GdkPixbufFormat *format)
 {
-	EogImageSaveInfo *info;
+	XviewerImageSaveInfo *info;
 
 	g_return_val_if_fail (file != NULL, NULL);
 
-	info = g_object_new (EOG_TYPE_IMAGE_SAVE_INFO, NULL);
+	info = g_object_new (XVIEWER_TYPE_IMAGE_SAVE_INFO, NULL);
 
 	info->file = g_object_ref (file);
 	if (format == NULL) {

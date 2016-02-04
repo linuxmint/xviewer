@@ -23,28 +23,28 @@
 #include <config.h>
 #endif
 
-#include "eog-reload-plugin.h"
+#include "xviewer-reload-plugin.h"
 
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
 
 #include <libpeas/peas.h>
 
-#include <eog-debug.h>
-#include <eog-scroll-view.h>
-#include <eog-thumb-view.h>
-#include <eog-image.h>
-#include <eog-window.h>
-#include <eog-window-activatable.h>
+#include <xviewer-debug.h>
+#include <xviewer-scroll-view.h>
+#include <xviewer-thumb-view.h>
+#include <xviewer-image.h>
+#include <xviewer-window.h>
+#include <xviewer-window-activatable.h>
 
-static void eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
+static void xviewer_window_activatable_iface_init (XviewerWindowActivatableInterface *iface);
 
-G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogReloadPlugin,
-                                eog_reload_plugin,
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (XviewerReloadPlugin,
+                                xviewer_reload_plugin,
                                 PEAS_TYPE_EXTENSION_BASE,
                                 0,
-                                G_IMPLEMENT_INTERFACE_DYNAMIC (EOG_TYPE_WINDOW_ACTIVATABLE,
-                                                               eog_window_activatable_iface_init))
+                                G_IMPLEMENT_INTERFACE_DYNAMIC (XVIEWER_TYPE_WINDOW_ACTIVATABLE,
+                                                               xviewer_window_activatable_iface_init))
 
 enum {
   PROP_0,
@@ -53,23 +53,23 @@ enum {
 
 static void
 reload_cb (GtkAction	*action, 
-	   EogWindow *window)
+	   XviewerWindow *window)
 {
-        eog_window_reload_image (window);
+        xviewer_window_reload_image (window);
 }
 
 static const gchar * const ui_definition =
 	"<ui><menubar name=\"MainMenu\">"
 	"<menu name=\"ToolsMenu\" action=\"Tools\"><separator/>"
-	"<menuitem name=\"EogPluginReload\" action=\"EogPluginRunReload\"/>"
+	"<menuitem name=\"XviewerPluginReload\" action=\"XviewerPluginRunReload\"/>"
 	"<separator/></menu></menubar>"
 	"<popup name=\"ViewPopup\"><separator/>"
-	"<menuitem action=\"EogPluginRunReload\"/><separator/>"
+	"<menuitem action=\"XviewerPluginRunReload\"/><separator/>"
 	"</popup></ui>";
 
 static const GtkActionEntry action_entries[] =
 {
-	{ "EogPluginRunReload",
+	{ "XviewerPluginRunReload",
 	  "view-refresh",
 	  N_("Reload Image"),
 	  "R",
@@ -78,17 +78,17 @@ static const GtkActionEntry action_entries[] =
 };
 
 static void
-eog_reload_plugin_set_property (GObject      *object,
+xviewer_reload_plugin_set_property (GObject      *object,
 				guint         prop_id,
 				const GValue *value,
 				GParamSpec   *pspec)
 {
-	EogReloadPlugin *plugin = EOG_RELOAD_PLUGIN (object);
+	XviewerReloadPlugin *plugin = XVIEWER_RELOAD_PLUGIN (object);
 
 	switch (prop_id)
 	{
 	case PROP_WINDOW:
-		plugin->window = EOG_WINDOW (g_value_dup_object (value));
+		plugin->window = XVIEWER_WINDOW (g_value_dup_object (value));
 		break;
 
 	default:
@@ -98,12 +98,12 @@ eog_reload_plugin_set_property (GObject      *object,
 }
 
 static void
-eog_reload_plugin_get_property (GObject    *object,
+xviewer_reload_plugin_get_property (GObject    *object,
 				guint       prop_id,
 				GValue     *value,
 				GParamSpec *pspec)
 {
-	EogReloadPlugin *plugin = EOG_RELOAD_PLUGIN (object);
+	XviewerReloadPlugin *plugin = XVIEWER_RELOAD_PLUGIN (object);
 
 	switch (prop_id)
 	{
@@ -118,37 +118,37 @@ eog_reload_plugin_get_property (GObject    *object,
 }
 
 static void
-eog_reload_plugin_init (EogReloadPlugin *plugin)
+xviewer_reload_plugin_init (XviewerReloadPlugin *plugin)
 {
-	eog_debug_message (DEBUG_PLUGINS, "EogReloadPlugin initializing");
+	xviewer_debug_message (DEBUG_PLUGINS, "XviewerReloadPlugin initializing");
 }
 
 static void
-eog_reload_plugin_dispose (GObject *object)
+xviewer_reload_plugin_dispose (GObject *object)
 {
-	EogReloadPlugin *plugin = EOG_RELOAD_PLUGIN (object);
+	XviewerReloadPlugin *plugin = XVIEWER_RELOAD_PLUGIN (object);
 
-	eog_debug_message (DEBUG_PLUGINS, "EogReloadPlugin disposing");
+	xviewer_debug_message (DEBUG_PLUGINS, "XviewerReloadPlugin disposing");
 
 	if (plugin->window != NULL) {
 		g_object_unref (plugin->window);
 		plugin->window = NULL;
 	}
 
-	G_OBJECT_CLASS (eog_reload_plugin_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_reload_plugin_parent_class)->dispose (object);
 }
 
 static void
-eog_reload_plugin_activate (EogWindowActivatable *activatable)
+xviewer_reload_plugin_activate (XviewerWindowActivatable *activatable)
 {
 	GtkUIManager *manager;
-	EogReloadPlugin *plugin = EOG_RELOAD_PLUGIN (activatable);
+	XviewerReloadPlugin *plugin = XVIEWER_RELOAD_PLUGIN (activatable);
 
-	eog_debug (DEBUG_PLUGINS);
+	xviewer_debug (DEBUG_PLUGINS);
 
-	manager = eog_window_get_ui_manager (plugin->window);
+	manager = xviewer_window_get_ui_manager (plugin->window);
 
-	plugin->ui_action_group = gtk_action_group_new ("EogReloadPluginActions");
+	plugin->ui_action_group = gtk_action_group_new ("XviewerReloadPluginActions");
 
 	gtk_action_group_set_translation_domain (plugin->ui_action_group,
 						 GETTEXT_PACKAGE);
@@ -169,14 +169,14 @@ eog_reload_plugin_activate (EogWindowActivatable *activatable)
 }
 
 static void
-eog_reload_plugin_deactivate (EogWindowActivatable *activatable)
+xviewer_reload_plugin_deactivate (XviewerWindowActivatable *activatable)
 {
 	GtkUIManager *manager;
-	EogReloadPlugin *plugin = EOG_RELOAD_PLUGIN (activatable);
+	XviewerReloadPlugin *plugin = XVIEWER_RELOAD_PLUGIN (activatable);
 
-	eog_debug (DEBUG_PLUGINS);
+	xviewer_debug (DEBUG_PLUGINS);
 
-	manager = eog_window_get_ui_manager (plugin->window);
+	manager = xviewer_window_get_ui_manager (plugin->window);
 
 	gtk_ui_manager_remove_ui (manager,
 				  plugin->ui_id);
@@ -186,34 +186,34 @@ eog_reload_plugin_deactivate (EogWindowActivatable *activatable)
 }
 
 static void
-eog_reload_plugin_class_init (EogReloadPluginClass *klass)
+xviewer_reload_plugin_class_init (XviewerReloadPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->dispose= eog_reload_plugin_dispose;
-	object_class->set_property = eog_reload_plugin_set_property;
-	object_class->get_property = eog_reload_plugin_get_property;
+	object_class->dispose= xviewer_reload_plugin_dispose;
+	object_class->set_property = xviewer_reload_plugin_set_property;
+	object_class->get_property = xviewer_reload_plugin_get_property;
 
 	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 }
 
 static void
-eog_reload_plugin_class_finalize (EogReloadPluginClass *klass)
+xviewer_reload_plugin_class_finalize (XviewerReloadPluginClass *klass)
 {
 }
 
 static void
-eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+xviewer_window_activatable_iface_init (XviewerWindowActivatableInterface *iface)
 {
-	iface->activate = eog_reload_plugin_activate;
-	iface->deactivate = eog_reload_plugin_deactivate;
+	iface->activate = xviewer_reload_plugin_activate;
+	iface->deactivate = xviewer_reload_plugin_deactivate;
 }
 
 G_MODULE_EXPORT void
 peas_register_types (PeasObjectModule *module)
 {
-	eog_reload_plugin_register_type (G_TYPE_MODULE (module));
+	xviewer_reload_plugin_register_type (G_TYPE_MODULE (module));
 	peas_object_module_register_extension_type (module,
-						    EOG_TYPE_WINDOW_ACTIVATABLE,
-						    EOG_TYPE_RELOAD_PLUGIN);
+						    XVIEWER_TYPE_WINDOW_ACTIVATABLE,
+						    XVIEWER_TYPE_RELOAD_PLUGIN);
 }

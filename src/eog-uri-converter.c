@@ -7,8 +7,8 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 
-#include "eog-uri-converter.h"
-#include "eog-pixbuf-util.h"
+#include "xviewer-uri-converter.h"
+#include "xviewer-pixbuf-util.h"
 
 enum {
 	PROP_0,
@@ -20,15 +20,15 @@ enum {
 };
 
 typedef struct {
-	EogUCType  type;
+	XviewerUCType  type;
 	union {
-		char    *string;  /* if type == EOG_UC_STRING */
-		gulong  counter;  /* if type == EOG_UC_COUNTER */
+		char    *string;  /* if type == XVIEWER_UC_STRING */
+		gulong  counter;  /* if type == XVIEWER_UC_COUNTER */
 	} data;
-} EogUCToken;
+} XviewerUCToken;
 
 
-struct _EogURIConverterPrivate {
+struct _XviewerURIConverterPrivate {
 	GFile           *base_file;
 	GList           *token_list;
 	char            *suffix;
@@ -42,35 +42,35 @@ struct _EogURIConverterPrivate {
 	guint    counter_n_digits;
 };
 
-static void eog_uri_converter_set_property (GObject      *object,
+static void xviewer_uri_converter_set_property (GObject      *object,
 					    guint         property_id,
 					    const GValue *value,
 					    GParamSpec   *pspec);
 
-static void eog_uri_converter_get_property (GObject    *object,
+static void xviewer_uri_converter_get_property (GObject    *object,
 					    guint       property_id,
 					    GValue     *value,
 					    GParamSpec *pspec);
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogURIConverter, eog_uri_converter, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerURIConverter, xviewer_uri_converter, G_TYPE_OBJECT)
 
 static void
 free_token (gpointer data)
 {
-	EogUCToken *token = (EogUCToken*) data;
+	XviewerUCToken *token = (XviewerUCToken*) data;
 
-	if (token->type == EOG_UC_STRING) {
+	if (token->type == XVIEWER_UC_STRING) {
 		g_free (token->data.string);
 	}
 
-	g_slice_free (EogUCToken, token);
+	g_slice_free (XviewerUCToken, token);
 }
 
 static void
-eog_uri_converter_dispose (GObject *object)
+xviewer_uri_converter_dispose (GObject *object)
 {
-	EogURIConverter *instance = EOG_URI_CONVERTER (object);
-	EogURIConverterPrivate *priv;
+	XviewerURIConverter *instance = XVIEWER_URI_CONVERTER (object);
+	XviewerURIConverterPrivate *priv;
 
 	priv = instance->priv;
 
@@ -91,15 +91,15 @@ eog_uri_converter_dispose (GObject *object)
 	}
 
 
-	G_OBJECT_CLASS (eog_uri_converter_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_uri_converter_parent_class)->dispose (object);
 }
 
 static void
-eog_uri_converter_init (EogURIConverter *conv)
+xviewer_uri_converter_init (XviewerURIConverter *conv)
 {
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 
-	priv = conv->priv = eog_uri_converter_get_instance_private (conv);
+	priv = conv->priv = xviewer_uri_converter_get_instance_private (conv);
 
 	priv->convert_spaces   = FALSE;
 	priv->space_character  = '_';
@@ -109,15 +109,15 @@ eog_uri_converter_init (EogURIConverter *conv)
 }
 
 static void
-eog_uri_converter_class_init (EogURIConverterClass *klass)
+xviewer_uri_converter_class_init (XviewerURIConverterClass *klass)
 {
 	GObjectClass *object_class = (GObjectClass*) klass;
 
-	object_class->dispose = eog_uri_converter_dispose;
+	object_class->dispose = xviewer_uri_converter_dispose;
 
         /* GObjectClass */
-        object_class->set_property = eog_uri_converter_set_property;
-        object_class->get_property = eog_uri_converter_get_property;
+        object_class->set_property = xviewer_uri_converter_set_property;
+        object_class->get_property = xviewer_uri_converter_get_property;
 
         /* Properties */
         g_object_class_install_property (
@@ -162,28 +162,28 @@ eog_uri_converter_class_init (EogURIConverterClass *klass)
 }
 
 GQuark
-eog_uc_error_quark (void)
+xviewer_uc_error_quark (void)
 {
 	static GQuark q = 0;
 	if (q == 0)
-		q = g_quark_from_static_string ("eog-uri-converter-error-quark");
+		q = g_quark_from_static_string ("xviewer-uri-converter-error-quark");
 
 	return q;
 }
 
 
 static void
-eog_uri_converter_set_property (GObject      *object,
+xviewer_uri_converter_set_property (GObject      *object,
                                 guint         property_id,
                                 const GValue *value,
                                 GParamSpec   *pspec)
 {
-	EogURIConverter *conv;
-	EogURIConverterPrivate *priv;
+	XviewerURIConverter *conv;
+	XviewerURIConverterPrivate *priv;
 
-        g_return_if_fail (EOG_IS_URI_CONVERTER (object));
+        g_return_if_fail (XVIEWER_IS_URI_CONVERTER (object));
 
-        conv = EOG_URI_CONVERTER (object);
+        conv = XVIEWER_URI_CONVERTER (object);
 	priv = conv->priv;
 
         switch (property_id)
@@ -225,17 +225,17 @@ eog_uri_converter_set_property (GObject      *object,
 }
 
 static void
-eog_uri_converter_get_property (GObject    *object,
+xviewer_uri_converter_get_property (GObject    *object,
                                 guint       property_id,
                                 GValue     *value,
                                 GParamSpec *pspec)
 {
-	EogURIConverter *conv;
-	EogURIConverterPrivate *priv;
+	XviewerURIConverter *conv;
+	XviewerURIConverterPrivate *priv;
 
-        g_return_if_fail (EOG_IS_URI_CONVERTER (object));
+        g_return_if_fail (XVIEWER_IS_URI_CONVERTER (object));
 
-        conv = EOG_URI_CONVERTER (object);
+        conv = XVIEWER_URI_CONVERTER (object);
 	priv = conv->priv;
 
         switch (property_id)
@@ -268,13 +268,13 @@ enum {
 	PARSER_TOKEN
 };
 
-static EogUCToken*
+static XviewerUCToken*
 create_token_string (const char *string, int substr_start, int substr_len)
 {
 	char *start_byte;
 	char *end_byte;
 	int n_bytes;
-	EogUCToken *token;
+	XviewerUCToken *token;
 
 	if (string == NULL) return NULL;
 	if (substr_len <= 0) return NULL;
@@ -285,41 +285,41 @@ create_token_string (const char *string, int substr_start, int substr_len)
 	/* FIXME: is this right? */
 	n_bytes = end_byte - start_byte;
 
-	token = g_slice_new0 (EogUCToken);
-	token->type = EOG_UC_STRING;
+	token = g_slice_new0 (XviewerUCToken);
+	token->type = XVIEWER_UC_STRING;
 	token->data.string = g_new0 (char, n_bytes);
 	token->data.string = g_utf8_strncpy (token->data.string, start_byte, substr_len);
 
 	return token;
 }
 
-static EogUCToken*
+static XviewerUCToken*
 create_token_counter (int start_counter)
 {
-	EogUCToken *token;
+	XviewerUCToken *token;
 
-	token = g_slice_new0 (EogUCToken);
-	token->type = EOG_UC_COUNTER;
+	token = g_slice_new0 (XviewerUCToken);
+	token->type = XVIEWER_UC_COUNTER;
 	token->data.counter = 0;
 
 	return token;
 }
 
-static EogUCToken*
-create_token_other (EogUCType type)
+static XviewerUCToken*
+create_token_other (XviewerUCType type)
 {
-	EogUCToken *token;
+	XviewerUCToken *token;
 
-	token = g_slice_new0 (EogUCToken);
+	token = g_slice_new0 (XviewerUCToken);
 	token->type = type;
 
 	return token;
 }
 
 static GList*
-eog_uri_converter_parse_string (EogURIConverter *conv, const char *string)
+xviewer_uri_converter_parse_string (XviewerURIConverter *conv, const char *string)
 {
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 	GList *list = NULL;
 	gulong len;
 	int i;
@@ -328,9 +328,9 @@ eog_uri_converter_parse_string (EogURIConverter *conv, const char *string)
 	int substr_len = 0;
 	gunichar c;
 	const char *s;
-	EogUCToken *token;
+	XviewerUCToken *token;
 
-	g_return_val_if_fail (EOG_IS_URI_CONVERTER (conv), NULL);
+	g_return_val_if_fail (XVIEWER_IS_URI_CONVERTER (conv), NULL);
 
 	priv = conv->priv;
 
@@ -372,44 +372,44 @@ eog_uri_converter_parse_string (EogURIConverter *conv, const char *string)
 			break;
 
 		case PARSER_TOKEN: {
-			EogUCType type = EOG_UC_END;
+			XviewerUCType type = XVIEWER_UC_END;
 
 			if (c == 'f') {
-				type = EOG_UC_FILENAME;
+				type = XVIEWER_UC_FILENAME;
 			}
 			else if (c == 'n') {
-				type = EOG_UC_COUNTER;
+				type = XVIEWER_UC_COUNTER;
 				token = create_token_counter (priv->counter_start);
 			}
 			else if (c == 'c') {
-				type = EOG_UC_COMMENT;
+				type = XVIEWER_UC_COMMENT;
 			}
 			else if (c == 'd') {
-				type = EOG_UC_DATE;
+				type = XVIEWER_UC_DATE;
 			}
 			else if (c == 't') {
-				type = EOG_UC_TIME;
+				type = XVIEWER_UC_TIME;
 			}
 			else if (c == 'a') {
-				type = EOG_UC_DAY;
+				type = XVIEWER_UC_DAY;
 			}
 			else if (c == 'm') {
-				type = EOG_UC_MONTH;
+				type = XVIEWER_UC_MONTH;
 			}
 			else if (c == 'y') {
-				type = EOG_UC_YEAR;
+				type = XVIEWER_UC_YEAR;
 			}
 			else if (c == 'h') {
-				type = EOG_UC_HOUR;
+				type = XVIEWER_UC_HOUR;
 			}
 			else if (c == 'i') {
-				type = EOG_UC_MINUTE;
+				type = XVIEWER_UC_MINUTE;
 			}
 			else if (c == 's') {
-				type = EOG_UC_SECOND;
+				type = XVIEWER_UC_SECOND;
 			}
 
-			if (type != EOG_UC_END && token == NULL) {
+			if (type != XVIEWER_UC_END && token == NULL) {
 				token = create_token_other (type);
 				priv->requires_exif = TRUE;
 			}
@@ -437,56 +437,56 @@ eog_uri_converter_parse_string (EogURIConverter *conv, const char *string)
 }
 
 void
-eog_uri_converter_print_list (EogURIConverter *conv)
+xviewer_uri_converter_print_list (XviewerURIConverter *conv)
 {
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 	GList *it;
 
-	g_return_if_fail (EOG_URI_CONVERTER (conv));
+	g_return_if_fail (XVIEWER_URI_CONVERTER (conv));
 
 	priv = conv->priv;
 
 	for (it = priv->token_list; it != NULL; it = it->next) {
-		EogUCToken *token;
+		XviewerUCToken *token;
 		char *str;
 
-		token = (EogUCToken*) it->data;
+		token = (XviewerUCToken*) it->data;
 
 		switch (token->type) {
-		case EOG_UC_STRING:
+		case XVIEWER_UC_STRING:
 			str = g_strdup_printf ("string [%s]", token->data.string);
 			break;
-		case EOG_UC_FILENAME:
+		case XVIEWER_UC_FILENAME:
 			str = "filename";
 			break;
-		case EOG_UC_COUNTER:
+		case XVIEWER_UC_COUNTER:
 			str = g_strdup_printf ("counter [%lu]", token->data.counter);
 			break;
-		case EOG_UC_COMMENT:
+		case XVIEWER_UC_COMMENT:
 			str = "comment";
 			break;
-		case EOG_UC_DATE:
+		case XVIEWER_UC_DATE:
 			str = "date";
 			break;
-		case EOG_UC_TIME:
+		case XVIEWER_UC_TIME:
 			str = "time";
 			break;
-		case EOG_UC_DAY:
+		case XVIEWER_UC_DAY:
 			str = "day";
 			break;
-		case EOG_UC_MONTH:
+		case XVIEWER_UC_MONTH:
 			str = "month";
 			break;
-		case EOG_UC_YEAR:
+		case XVIEWER_UC_YEAR:
 			str = "year";
 			break;
-		case EOG_UC_HOUR:
+		case XVIEWER_UC_HOUR:
 			str = "hour";
 			break;
-		case EOG_UC_MINUTE:
+		case XVIEWER_UC_MINUTE:
 			str = "minute";
 			break;
-		case EOG_UC_SECOND:
+		case XVIEWER_UC_SECOND:
 			str = "second";
 			break;
 		default:
@@ -496,21 +496,21 @@ eog_uri_converter_print_list (EogURIConverter *conv)
 
 		g_print ("- %s\n", str);
 
-		if (token->type == EOG_UC_STRING || token->type == EOG_UC_COUNTER) {
+		if (token->type == XVIEWER_UC_STRING || token->type == XVIEWER_UC_COUNTER) {
 			g_free (str);
 		}
 	}
 }
 
 
-EogURIConverter*
-eog_uri_converter_new (GFile *base_file, GdkPixbufFormat *img_format, const char *format_str)
+XviewerURIConverter*
+xviewer_uri_converter_new (GFile *base_file, GdkPixbufFormat *img_format, const char *format_str)
 {
-	EogURIConverter *conv;
+	XviewerURIConverter *conv;
 
 	g_return_val_if_fail (format_str != NULL, NULL);
 
-	conv = g_object_new (EOG_TYPE_URI_CONVERTER, NULL);
+	conv = g_object_new (XVIEWER_TYPE_URI_CONVERTER, NULL);
 
 	if (base_file != NULL) {
 		conv->priv->base_file  = g_object_ref (base_file);
@@ -519,19 +519,19 @@ eog_uri_converter_new (GFile *base_file, GdkPixbufFormat *img_format, const char
 		conv->priv->base_file = NULL;
 	}
 	conv->priv->img_format = img_format;
-	conv->priv->token_list = eog_uri_converter_parse_string (conv, format_str);
+	conv->priv->token_list = xviewer_uri_converter_parse_string (conv, format_str);
 
 	return conv;
 }
 
 static GFile*
-get_file_directory (EogURIConverter *conv, EogImage *image)
+get_file_directory (XviewerURIConverter *conv, XviewerImage *image)
 {
 	GFile *file = NULL;
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 
-	g_return_val_if_fail (EOG_IS_URI_CONVERTER (conv), NULL);
-	g_return_val_if_fail (EOG_IS_IMAGE (image), NULL);
+	g_return_val_if_fail (XVIEWER_IS_URI_CONVERTER (conv), NULL);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (image), NULL);
 
 	priv = conv->priv;
 
@@ -541,7 +541,7 @@ get_file_directory (EogURIConverter *conv, EogImage *image)
 	else {
 		GFile *img_file;
 
-		img_file = eog_image_get_file (image);
+		img_file = xviewer_image_get_file (image);
 		g_assert (img_file != NULL);
 
 		file = g_file_get_parent (img_file);
@@ -583,7 +583,7 @@ split_filename (GFile *file, char **name, char **suffix)
 }
 
 static GString*
-append_filename (GString *str, EogImage *img)
+append_filename (GString *str, XviewerImage *img)
 {
 	/* appends the name of the original file without
 	   filetype suffix */
@@ -592,7 +592,7 @@ append_filename (GString *str, EogImage *img)
 	char *suffix;
 	GString *result;
 
-	img_file = eog_image_get_file (img);
+	img_file = xviewer_image_get_file (img);
 	split_filename (img_file, &name, &suffix);
 
 	result = g_string_append (str, name);
@@ -606,9 +606,9 @@ append_filename (GString *str, EogImage *img)
 }
 
 static GString*
-append_counter (GString *str, gulong counter,  EogURIConverter *conv)
+append_counter (GString *str, gulong counter,  XviewerURIConverter *conv)
 {
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 
 	priv = conv->priv;
 
@@ -619,18 +619,18 @@ append_counter (GString *str, gulong counter,  EogURIConverter *conv)
 
 
 static void
-build_absolute_file (EogURIConverter *conv, EogImage *image, GString *str,  /* input  */
+build_absolute_file (XviewerURIConverter *conv, XviewerImage *image, GString *str,  /* input  */
 		     GFile **file, GdkPixbufFormat **format)                /* output */
 {
 	GFile *dir_file;
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 
 	*file = NULL;
 	if (format != NULL)
 		*format = NULL;
 
-	g_return_if_fail (EOG_IS_URI_CONVERTER (conv));
-	g_return_if_fail (EOG_IS_IMAGE (image));
+	g_return_if_fail (XVIEWER_IS_URI_CONVERTER (conv));
+	g_return_if_fail (XVIEWER_IS_IMAGE (image));
 	g_return_if_fail (file != NULL);
 	g_return_if_fail (str != NULL);
 
@@ -645,7 +645,7 @@ build_absolute_file (EogURIConverter *conv, EogImage *image, GString *str,  /* i
 		char *old_suffix;
 		GFile *img_file;
 
-		img_file = eog_image_get_file (image);
+		img_file = xviewer_image_get_file (image);
 		split_filename (img_file, &name, &old_suffix);
 
 		g_assert (old_suffix != NULL);
@@ -654,12 +654,12 @@ build_absolute_file (EogURIConverter *conv, EogImage *image, GString *str,  /* i
 		g_string_append (str, old_suffix);
 
 		if (format != NULL)
-			*format = eog_pixbuf_get_format_by_suffix (old_suffix);
+			*format = xviewer_pixbuf_get_format_by_suffix (old_suffix);
 
 		g_object_unref (img_file);
 	} else {
 		if (priv->suffix == NULL)
-			priv->suffix = eog_pixbuf_get_common_suffix (priv->img_format);
+			priv->suffix = xviewer_pixbuf_get_common_suffix (priv->img_format);
 
 		g_string_append_unichar (str, '.');
 		g_string_append (str, priv->suffix);
@@ -715,20 +715,20 @@ replace_remove_chars (GString *str, gboolean convert_spaces, gunichar space_char
 }
 
 /*
- * This function converts the uri of the EogImage object, according to the
- * EogUCToken list. The absolute uri (converted filename appended to base uri)
+ * This function converts the uri of the XviewerImage object, according to the
+ * XviewerUCToken list. The absolute uri (converted filename appended to base uri)
  * is returned in uri and the image format will be in the format pointer.
  */
 gboolean
-eog_uri_converter_do (EogURIConverter *conv, EogImage *image,
+xviewer_uri_converter_do (XviewerURIConverter *conv, XviewerImage *image,
 		      GFile **file, GdkPixbufFormat **format, GError **error)
 {
-	EogURIConverterPrivate *priv;
+	XviewerURIConverterPrivate *priv;
 	GList *it;
 	GString *str;
 	GString *repl_str;
 
-	g_return_val_if_fail (EOG_IS_URI_CONVERTER (conv), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_URI_CONVERTER (conv), FALSE);
 
 	priv = conv->priv;
 
@@ -739,18 +739,18 @@ eog_uri_converter_do (EogURIConverter *conv, EogImage *image,
 	str = g_string_new ("");
 
 	for (it = priv->token_list; it != NULL; it = it->next) {
-		EogUCToken *token = (EogUCToken*) it->data;
+		XviewerUCToken *token = (XviewerUCToken*) it->data;
 
 		switch (token->type) {
-		case EOG_UC_STRING:
+		case XVIEWER_UC_STRING:
 			str = g_string_append (str, token->data.string);
 			break;
 
-		case EOG_UC_FILENAME:
+		case XVIEWER_UC_FILENAME:
 			str = append_filename (str, image);
 			break;
 
-		case EOG_UC_COUNTER: {
+		case XVIEWER_UC_COUNTER: {
 			if (token->data.counter < priv->counter_start)
 				token->data.counter = priv->counter_start;
 
@@ -758,32 +758,32 @@ eog_uri_converter_do (EogURIConverter *conv, EogImage *image,
 			break;
 		}
 #if 0
-		case EOG_UC_COMMENT:
+		case XVIEWER_UC_COMMENT:
 			str = g_string_append_printf ();
 			str = "comment";
 			break;
-		case EOG_UC_DATE:
+		case XVIEWER_UC_DATE:
 			str = "date";
 			break;
-		case EOG_UC_TIME:
+		case XVIEWER_UC_TIME:
 			str = "time";
 			break;
-		case EOG_UC_DAY:
+		case XVIEWER_UC_DAY:
 			str = "day";
 			break;
-		case EOG_UC_MONTH:
+		case XVIEWER_UC_MONTH:
 			str = "month";
 			break;
-		case EOG_UC_YEAR:
+		case XVIEWER_UC_YEAR:
 			str = "year";
 			break;
-		case EOG_UC_HOUR:
+		case XVIEWER_UC_HOUR:
 			str = "hour";
 			break;
-		case EOG_UC_MINUTE:
+		case XVIEWER_UC_MINUTE:
 			str = "minute";
 			break;
-		case EOG_UC_SECOND:
+		case XVIEWER_UC_SECOND:
 			str = "second";
 			break;
 #endif
@@ -809,7 +809,7 @@ eog_uri_converter_do (EogURIConverter *conv, EogImage *image,
 
 
 char*
-eog_uri_converter_preview (const char *format_str, EogImage *img, GdkPixbufFormat *format,
+xviewer_uri_converter_preview (const char *format_str, XviewerImage *img, GdkPixbufFormat *format,
 			   gulong counter, guint n_images,
 			   gboolean convert_spaces, gunichar space_char)
 {
@@ -824,7 +824,7 @@ eog_uri_converter_preview (const char *format_str, EogImage *img, GdkPixbufForma
 	gboolean token_next;
 
 	g_return_val_if_fail (format_str != NULL, NULL);
-	g_return_val_if_fail (EOG_IS_IMAGE (img), NULL);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (img), NULL);
 
 	if (n_images == 0) return NULL;
 
@@ -855,31 +855,31 @@ eog_uri_converter_preview (const char *format_str, EogImage *img, GdkPixbufForma
 			}
 #if 0                   /* ignore the rest for now */
 			else if (c == 'c') {
-				type = EOG_UC_COMMENT;
+				type = XVIEWER_UC_COMMENT;
 			}
 			else if (c == 'd') {
-				type = EOG_UC_DATE;
+				type = XVIEWER_UC_DATE;
 			}
 			else if (c == 't') {
-				type = EOG_UC_TIME;
+				type = XVIEWER_UC_TIME;
 			}
 			else if (c == 'a') {
-				type = EOG_UC_DAY;
+				type = XVIEWER_UC_DAY;
 			}
 			else if (c == 'm') {
-				type = EOG_UC_MONTH;
+				type = XVIEWER_UC_MONTH;
 			}
 			else if (c == 'y') {
-				type = EOG_UC_YEAR;
+				type = XVIEWER_UC_YEAR;
 			}
 			else if (c == 'h') {
-				type = EOG_UC_HOUR;
+				type = XVIEWER_UC_HOUR;
 			}
 			else if (c == 'i') {
-				type = EOG_UC_MINUTE;
+				type = XVIEWER_UC_MINUTE;
 			}
 			else if (c == 's') {
-				type = EOG_UC_SECOND;
+				type = XVIEWER_UC_SECOND;
 			}
 #endif
 			token_next = FALSE;
@@ -903,7 +903,7 @@ eog_uri_converter_preview (const char *format_str, EogImage *img, GdkPixbufForma
 			char *old_suffix;
 			GFile *img_file;
 
-			img_file = eog_image_get_file (img);
+			img_file = xviewer_image_get_file (img);
 			split_filename (img_file, &name, &old_suffix);
 
 			g_assert (old_suffix != NULL);
@@ -916,7 +916,7 @@ eog_uri_converter_preview (const char *format_str, EogImage *img, GdkPixbufForma
 			g_object_unref (img_file);
 		}
 		else {
-			char *suffix = eog_pixbuf_get_common_suffix (format);
+			char *suffix = xviewer_pixbuf_get_common_suffix (format);
 
 			g_string_append_unichar (repl_str, '.');
 			g_string_append (repl_str, suffix);
@@ -934,21 +934,21 @@ eog_uri_converter_preview (const char *format_str, EogImage *img, GdkPixbufForma
 }
 
 gboolean
-eog_uri_converter_requires_exif (EogURIConverter *converter)
+xviewer_uri_converter_requires_exif (XviewerURIConverter *converter)
 {
-	g_return_val_if_fail (EOG_IS_URI_CONVERTER (converter), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_URI_CONVERTER (converter), FALSE);
 
 	return converter->priv->requires_exif;
 }
 
 gboolean
-eog_uri_converter_check (EogURIConverter *converter, GList *img_list, GError **error)
+xviewer_uri_converter_check (XviewerURIConverter *converter, GList *img_list, GError **error)
 {
 	GList *it;
 	GList *file_list = NULL;
 	gboolean all_different = TRUE;
 
-	g_return_val_if_fail (EOG_IS_URI_CONVERTER (converter), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_URI_CONVERTER (converter), FALSE);
 
 	/* convert all image uris */
 	for (it = img_list; it != NULL; it = it->next) {
@@ -956,7 +956,7 @@ eog_uri_converter_check (EogURIConverter *converter, GList *img_list, GError **e
 		GFile *file;
 		GError *conv_error = NULL;
 
-		result = eog_uri_converter_do (converter, EOG_IMAGE (it->data),
+		result = xviewer_uri_converter_do (converter, XVIEWER_IMAGE (it->data),
 					       &file, NULL, &conv_error);
 
 		if (result) {
@@ -977,8 +977,8 @@ eog_uri_converter_check (EogURIConverter *converter, GList *img_list, GError **e
 	}
 
 	if (!all_different) {
-		g_set_error (error, EOG_UC_ERROR,
-			     EOG_UC_ERROR_EQUAL_FILENAMES,
+		g_set_error (error, XVIEWER_UC_ERROR,
+			     XVIEWER_UC_ERROR_EQUAL_FILENAMES,
 			     _("At least two file names are equal."));
 	}
 

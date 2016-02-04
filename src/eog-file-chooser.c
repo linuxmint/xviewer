@@ -18,8 +18,8 @@
 #include "config.h"
 #endif
 
-#include "eog-file-chooser.h"
-#include "eog-pixbuf-util.h"
+#include "xviewer-file-chooser.h"
+#include "xviewer-pixbuf-util.h"
 
 #include <stdlib.h>
 
@@ -39,7 +39,7 @@ static char *last_dir[] = { NULL, NULL, NULL, NULL };
 
 #define FILE_FORMAT_KEY "file-format"
 
-struct _EogFileChooserPrivate
+struct _XviewerFileChooserPrivate
 {
 	GnomeDesktopThumbnailFactory *thumb_factory;
 
@@ -49,33 +49,33 @@ struct _EogFileChooserPrivate
 	GtkWidget *creator_label;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogFileChooser, eog_file_chooser, GTK_TYPE_FILE_CHOOSER_DIALOG)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerFileChooser, xviewer_file_chooser, GTK_TYPE_FILE_CHOOSER_DIALOG)
 
 static void
-eog_file_chooser_finalize (GObject *object)
+xviewer_file_chooser_finalize (GObject *object)
 {
-	EogFileChooserPrivate *priv;
+	XviewerFileChooserPrivate *priv;
 
-	priv = EOG_FILE_CHOOSER (object)->priv;
+	priv = XVIEWER_FILE_CHOOSER (object)->priv;
 
 	if (priv->thumb_factory != NULL)
 		g_object_unref (priv->thumb_factory);
 
-	(* G_OBJECT_CLASS (eog_file_chooser_parent_class)->finalize) (object);
+	(* G_OBJECT_CLASS (xviewer_file_chooser_parent_class)->finalize) (object);
 }
 
 static void
-eog_file_chooser_class_init (EogFileChooserClass *klass)
+xviewer_file_chooser_class_init (XviewerFileChooserClass *klass)
 {
 	GObjectClass *object_class = (GObjectClass *) klass;
 
-	object_class->finalize = eog_file_chooser_finalize;
+	object_class->finalize = xviewer_file_chooser_finalize;
 }
 
 static void
-eog_file_chooser_init (EogFileChooser *chooser)
+xviewer_file_chooser_init (XviewerFileChooser *chooser)
 {
-	chooser->priv = eog_file_chooser_get_instance_private (chooser);
+	chooser->priv = xviewer_file_chooser_get_instance_private (chooser);
 }
 
 static void
@@ -105,7 +105,7 @@ save_response_cb (GtkDialog *dlg, gint id, gpointer data)
 		return;
 
 	file = gtk_file_chooser_get_file (GTK_FILE_CHOOSER (dlg));
-	format = eog_pixbuf_get_format (file);
+	format = xviewer_pixbuf_get_format (file);
 	g_object_unref (file);
 
 	if (!format || !gdk_pixbuf_format_is_writable (format)) {
@@ -134,7 +134,7 @@ save_response_cb (GtkDialog *dlg, gint id, gpointer data)
 }
 
 static GSList*
-_eog_file_chooser_prepare_save_file_filter (GtkFileFilter *all_img_filter)
+_xviewer_file_chooser_prepare_save_file_filter (GtkFileFilter *all_img_filter)
 {
 	GSList *filters = NULL;
 	GSList *formats = NULL;
@@ -143,7 +143,7 @@ _eog_file_chooser_prepare_save_file_filter (GtkFileFilter *all_img_filter)
 	gchar **mime_types, **pattern, *tmp;
 	int i;
 
-	formats = eog_pixbuf_get_savable_formats ();
+	formats = xviewer_pixbuf_get_savable_formats ();
 
 	/* Image filters */
 	for (it = formats; it != NULL; it = it->next) {
@@ -181,7 +181,7 @@ _eog_file_chooser_prepare_save_file_filter (GtkFileFilter *all_img_filter)
 		g_strfreev (pattern);
 
 		/* attach GdkPixbufFormat to filter, see also
-		 * eog_file_chooser_get_format. */
+		 * xviewer_file_chooser_get_format. */
 		g_object_set_data (G_OBJECT (filter),
 				   FILE_FORMAT_KEY,
 				   format);
@@ -193,7 +193,7 @@ _eog_file_chooser_prepare_save_file_filter (GtkFileFilter *all_img_filter)
 	return filters;
 }
 static void
-eog_file_chooser_add_filter (EogFileChooser *chooser)
+xviewer_file_chooser_add_filter (XviewerFileChooser *chooser)
 {
 	GSList *it;
  	GtkFileFilter *all_file_filter;
@@ -217,7 +217,7 @@ eog_file_chooser_add_filter (EogFileChooser *chooser)
 	gtk_file_filter_set_name (all_img_filter, _("Supported image files"));
 
 	if (action == GTK_FILE_CHOOSER_ACTION_SAVE) {
-		filters = _eog_file_chooser_prepare_save_file_filter(all_img_filter);
+		filters = _xviewer_file_chooser_prepare_save_file_filter(all_img_filter);
 	}
 	else {
 		gtk_file_filter_add_pixbuf_formats(all_img_filter);
@@ -250,9 +250,9 @@ set_preview_label (GtkWidget *label, const char *str)
  * further information according to the thumbnail spec.
  */
 static void
-set_preview_pixbuf (EogFileChooser *chooser, GdkPixbuf *pixbuf, goffset size)
+set_preview_pixbuf (XviewerFileChooser *chooser, GdkPixbuf *pixbuf, goffset size)
 {
-	EogFileChooserPrivate *priv;
+	XviewerFileChooserPrivate *priv;
 	int bytes;
 	int pixels;
 	const char *bytes_str;
@@ -262,7 +262,7 @@ set_preview_pixbuf (EogFileChooser *chooser, GdkPixbuf *pixbuf, goffset size)
 	char *size_str    = NULL;
 	char *dim_str     = NULL;
 
-	g_return_if_fail (EOG_IS_FILE_CHOOSER (chooser));
+	g_return_if_fail (XVIEWER_IS_FILE_CHOOSER (chooser));
 
 	priv = chooser->priv;
 
@@ -320,7 +320,7 @@ set_preview_pixbuf (EogFileChooser *chooser, GdkPixbuf *pixbuf, goffset size)
 static void
 update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 {
-	EogFileChooserPrivate *priv;
+	XviewerFileChooserPrivate *priv;
 	char *uri;
 	char *thumb_path = NULL;
 	GFile *file;
@@ -328,7 +328,7 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 	GdkPixbuf *pixbuf = NULL;
 	gboolean have_preview = FALSE;
 
-	priv = EOG_FILE_CHOOSER (file_chooser)->priv;
+	priv = XVIEWER_FILE_CHOOSER (file_chooser)->priv;
 
 	uri = gtk_file_chooser_get_preview_uri (file_chooser);
 	if (uri == NULL) {
@@ -384,7 +384,7 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 		if (pixbuf != NULL) {
 			have_preview = TRUE;
 
-			set_preview_pixbuf (EOG_FILE_CHOOSER (file_chooser), pixbuf,
+			set_preview_pixbuf (XVIEWER_FILE_CHOOSER (file_chooser), pixbuf,
 					    g_file_info_get_size (file_info));
 
 			if (pixbuf != NULL) {
@@ -404,12 +404,12 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 }
 
 static void
-eog_file_chooser_add_preview (GtkWidget *widget)
+xviewer_file_chooser_add_preview (GtkWidget *widget)
 {
-	EogFileChooserPrivate *priv;
+	XviewerFileChooserPrivate *priv;
 	GtkWidget *vbox;
 
-	priv = EOG_FILE_CHOOSER (widget)->priv;
+	priv = XVIEWER_FILE_CHOOSER (widget)->priv;
 
 	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_container_set_border_width (GTK_CONTAINER (vbox), 12);
@@ -439,12 +439,12 @@ eog_file_chooser_add_preview (GtkWidget *widget)
 }
 
 GtkWidget *
-eog_file_chooser_new (GtkFileChooserAction action)
+xviewer_file_chooser_new (GtkFileChooserAction action)
 {
 	GtkWidget *chooser;
 	gchar *title = NULL;
 
-	chooser = g_object_new (EOG_TYPE_FILE_CHOOSER,
+	chooser = g_object_new (XVIEWER_TYPE_FILE_CHOOSER,
 				"action", action,
 				"select-multiple", (action == GTK_FILE_CHOOSER_ACTION_OPEN),
 				"local-only", FALSE,
@@ -480,8 +480,8 @@ eog_file_chooser_new (GtkFileChooserAction action)
 	}
 
 	if (action != GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER) {
-		eog_file_chooser_add_filter (EOG_FILE_CHOOSER (chooser));
-		eog_file_chooser_add_preview (chooser);
+		xviewer_file_chooser_add_filter (XVIEWER_FILE_CHOOSER (chooser));
+		xviewer_file_chooser_add_preview (chooser);
 	}
 
 	if (last_dir[action] != NULL) {
@@ -502,12 +502,12 @@ eog_file_chooser_new (GtkFileChooserAction action)
 }
 
 GdkPixbufFormat *
-eog_file_chooser_get_format (EogFileChooser *chooser)
+xviewer_file_chooser_get_format (XviewerFileChooser *chooser)
 {
 	GtkFileFilter *filter;
 	GdkPixbufFormat* format;
 
-	g_return_val_if_fail (EOG_IS_FILE_CHOOSER (chooser), NULL);
+	g_return_val_if_fail (XVIEWER_IS_FILE_CHOOSER (chooser), NULL);
 
 	filter = gtk_file_chooser_get_filter (GTK_FILE_CHOOSER (chooser));
 	if (filter == NULL)

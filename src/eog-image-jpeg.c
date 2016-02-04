@@ -31,8 +31,8 @@
 #include <config.h>
 #endif
 
-#include "eog-image-jpeg.h"
-#include "eog-image-private.h"
+#include "xviewer-image-jpeg.h"
+#include "xviewer-image-private.h"
 
 #if HAVE_JPEG
 
@@ -59,10 +59,10 @@
 #endif
 
 typedef enum {
-	EOG_SAVE_NONE,
-	EOG_SAVE_JPEG_AS_JPEG,
-	EOG_SAVE_ANY_AS_JPEG
-} EogJpegSaveMethod;
+	XVIEWER_SAVE_NONE,
+	XVIEWER_SAVE_JPEG_AS_JPEG,
+	XVIEWER_SAVE_ANY_AS_JPEG
+} XviewerJpegSaveMethod;
 
 /* error handler data */
 struct error_handler_data {
@@ -110,21 +110,21 @@ output_message_handler (j_common_ptr cinfo)
 }
 
 static void
-init_transform_info (EogImage *image, jpeg_transform_info *info)
+init_transform_info (XviewerImage *image, jpeg_transform_info *info)
 {
-	EogImagePrivate *priv;
-	EogTransform *composition = NULL;
-	EogTransformType transformation;
+	XviewerImagePrivate *priv;
+	XviewerTransform *composition = NULL;
+	XviewerTransformType transformation;
 	JXFORM_CODE trans_code = JXFORM_NONE;
 
-	g_return_if_fail (EOG_IS_IMAGE (image));
+	g_return_if_fail (XVIEWER_IS_IMAGE (image));
 
 	memset (info, 0x0, sizeof (jpeg_transform_info));
 
 	priv = image->priv;
 
 	if (priv->trans != NULL && priv->trans_autorotate != NULL) {
-		composition = eog_transform_compose (priv->trans,
+		composition = xviewer_transform_compose (priv->trans,
 						     priv->trans_autorotate);
 	} else if (priv->trans != NULL) {
 		composition = g_object_ref (priv->trans);
@@ -133,34 +133,34 @@ init_transform_info (EogImage *image, jpeg_transform_info *info)
 	}
 
 	if (composition != NULL) {
-		transformation = eog_transform_get_transform_type (composition);
+		transformation = xviewer_transform_get_transform_type (composition);
 
 		switch (transformation) {
-		case EOG_TRANSFORM_ROT_90:
+		case XVIEWER_TRANSFORM_ROT_90:
 			trans_code = JXFORM_ROT_90;
 			break;
-		case EOG_TRANSFORM_ROT_270:
+		case XVIEWER_TRANSFORM_ROT_270:
 			trans_code = JXFORM_ROT_270;
 			break;
-		case EOG_TRANSFORM_ROT_180:
+		case XVIEWER_TRANSFORM_ROT_180:
 			trans_code = JXFORM_ROT_180;
 			break;
-		case EOG_TRANSFORM_FLIP_HORIZONTAL:
+		case XVIEWER_TRANSFORM_FLIP_HORIZONTAL:
 			trans_code = JXFORM_FLIP_H;
 			break;
-		case EOG_TRANSFORM_FLIP_VERTICAL:
+		case XVIEWER_TRANSFORM_FLIP_VERTICAL:
 			trans_code = JXFORM_FLIP_V;
 			break;
-		case EOG_TRANSFORM_TRANSPOSE:
+		case XVIEWER_TRANSFORM_TRANSPOSE:
 			trans_code = JXFORM_TRANSPOSE;
 			break;
-		case EOG_TRANSFORM_TRANSVERSE:
+		case XVIEWER_TRANSFORM_TRANSVERSE:
 			trans_code = JXFORM_TRANSVERSE;
 			break;
 		default:
-			g_warning("EogTransformType not supported!");
+			g_warning("XviewerTransformType not supported!");
 			/* Fallthrough intended here. */
-		case EOG_TRANSFORM_NONE:
+		case XVIEWER_TRANSFORM_NONE:
 			trans_code = JXFORM_NONE;
 			break;
 		}
@@ -177,8 +177,8 @@ init_transform_info (EogImage *image, jpeg_transform_info *info)
 }
 
 static gboolean
-_save_jpeg_as_jpeg (EogImage *image, const char *file, EogImageSaveInfo *source,
-		    EogImageSaveInfo *target, GError **error)
+_save_jpeg_as_jpeg (XviewerImage *image, const char *file, XviewerImageSaveInfo *source,
+		    XviewerImageSaveInfo *target, GError **error)
 {
 	struct jpeg_decompress_struct  srcinfo;
 	struct jpeg_compress_struct    dstinfo;
@@ -188,11 +188,11 @@ _save_jpeg_as_jpeg (EogImage *image, const char *file, EogImageSaveInfo *source,
 	jvirt_barray_ptr              *dst_coef_arrays;
 	FILE                          *output_file;
 	FILE                          *input_file;
-	EogImagePrivate               *priv;
+	XviewerImagePrivate               *priv;
 	gchar                          *infile_uri;
 
-	g_return_val_if_fail (EOG_IS_IMAGE (image), FALSE);
-	g_return_val_if_fail (EOG_IMAGE (image)->priv->file != NULL, FALSE);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (image), FALSE);
+	g_return_val_if_fail (XVIEWER_IMAGE (image)->priv->file != NULL, FALSE);
 
 	priv = image->priv;
 
@@ -342,10 +342,10 @@ _save_jpeg_as_jpeg (EogImage *image, const char *file, EogImageSaveInfo *source,
 }
 
 static gboolean
-_save_any_as_jpeg (EogImage *image, const char *file, EogImageSaveInfo *source,
-		   EogImageSaveInfo *target, GError **error)
+_save_any_as_jpeg (XviewerImage *image, const char *file, XviewerImageSaveInfo *source,
+		   XviewerImageSaveInfo *target, GError **error)
 {
-	EogImagePrivate *priv;
+	XviewerImagePrivate *priv;
 	GdkPixbuf *pixbuf;
 	struct jpeg_compress_struct cinfo;
 	guchar *buf = NULL;
@@ -360,8 +360,8 @@ _save_any_as_jpeg (EogImage *image, const char *file, EogImageSaveInfo *source,
 	FILE *outfile;
 	struct error_handler_data jerr;
 
-	g_return_val_if_fail (EOG_IS_IMAGE (image), FALSE);
-	g_return_val_if_fail (EOG_IMAGE (image)->priv->image != NULL, FALSE);
+	g_return_val_if_fail (XVIEWER_IS_IMAGE (image), FALSE);
+	g_return_val_if_fail (XVIEWER_IMAGE (image)->priv->image != NULL, FALSE);
 
 	priv = image->priv;
 	pixbuf = priv->image;
@@ -476,47 +476,47 @@ _save_any_as_jpeg (EogImage *image, const char *file, EogImageSaveInfo *source,
 }
 
 gboolean
-eog_image_jpeg_save_file (EogImage *image, const char *file,
-			  EogImageSaveInfo *source, EogImageSaveInfo *target,
+xviewer_image_jpeg_save_file (XviewerImage *image, const char *file,
+			  XviewerImageSaveInfo *source, XviewerImageSaveInfo *target,
 			  GError **error)
 {
-	EogJpegSaveMethod method = EOG_SAVE_NONE;
+	XviewerJpegSaveMethod method = XVIEWER_SAVE_NONE;
 	gboolean source_is_jpeg = FALSE;
 	gboolean target_is_jpeg = FALSE;
         gboolean result;
 
 	g_return_val_if_fail (source != NULL, FALSE);
 
-	source_is_jpeg = !g_ascii_strcasecmp (source->format, EOG_FILE_FORMAT_JPEG);
+	source_is_jpeg = !g_ascii_strcasecmp (source->format, XVIEWER_FILE_FORMAT_JPEG);
 
 	/* determine which method should be used for saving */
 	if (target == NULL) {
 		if (source_is_jpeg) {
-			method = EOG_SAVE_JPEG_AS_JPEG;
+			method = XVIEWER_SAVE_JPEG_AS_JPEG;
 		}
 	}
 	else {
-		target_is_jpeg = !g_ascii_strcasecmp (target->format, EOG_FILE_FORMAT_JPEG);
+		target_is_jpeg = !g_ascii_strcasecmp (target->format, XVIEWER_FILE_FORMAT_JPEG);
 
 		if (source_is_jpeg && target_is_jpeg) {
 			if (target->jpeg_quality < 0.0) {
-				method = EOG_SAVE_JPEG_AS_JPEG;
+				method = XVIEWER_SAVE_JPEG_AS_JPEG;
 			}
 			else {
 				/* reencoding is required, cause quality is set */
-				method = EOG_SAVE_ANY_AS_JPEG;
+				method = XVIEWER_SAVE_ANY_AS_JPEG;
 			}
 		}
 		else if (!source_is_jpeg && target_is_jpeg) {
-			method = EOG_SAVE_ANY_AS_JPEG;
+			method = XVIEWER_SAVE_ANY_AS_JPEG;
 		}
 	}
 
 	switch (method) {
-	case EOG_SAVE_JPEG_AS_JPEG:
+	case XVIEWER_SAVE_JPEG_AS_JPEG:
 		result = _save_jpeg_as_jpeg (image, file, source, target, error);
 		break;
-	case EOG_SAVE_ANY_AS_JPEG:
+	case XVIEWER_SAVE_ANY_AS_JPEG:
 		result = _save_any_as_jpeg (image, file, source, target, error);
 		break;
 	default:

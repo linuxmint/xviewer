@@ -1,4 +1,4 @@
-/* Eye Of Gnome - General Utilities
+/* Xviewer - General Utilities
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -33,8 +33,8 @@
 
 #include <time.h>
 
-#include "eog-util.h"
-#include "eog-debug.h"
+#include "xviewer-util.h"
+#include "xviewer-debug.h"
 
 #include <errno.h>
 #include <string.h>
@@ -45,15 +45,15 @@
 #include <glib/gi18n.h>
 
 void
-eog_util_show_help (const gchar *section, GtkWindow *parent)
+xviewer_util_show_help (const gchar *section, GtkWindow *parent)
 {
 	GError *error = NULL;
 	gchar *uri = NULL;
 
 	if (section)
-		uri = g_strdup_printf ("help:eog/%s", section);
+		uri = g_strdup_printf ("help:xviewer/%s", section);
 
-	gtk_show_uri (NULL, ((uri != NULL) ? uri : "help:eog"),
+	gtk_show_uri (NULL, ((uri != NULL) ? uri : "help:xviewer"),
 		      gtk_get_current_event_time (), &error);
 
 	g_free (uri);
@@ -80,7 +80,7 @@ eog_util_show_help (const gchar *section, GtkWindow *parent)
 }
 
 gchar *
-eog_util_make_valid_utf8 (const gchar *str)
+xviewer_util_make_valid_utf8 (const gchar *str)
 {
 	GString *string;
 	const char *remainder, *invalid;
@@ -121,7 +121,7 @@ eog_util_make_valid_utf8 (const gchar *str)
 }
 
 GSList*
-eog_util_parse_uri_string_list_to_file_list (const gchar *uri_list)
+xviewer_util_parse_uri_string_list_to_file_list (const gchar *uri_list)
 {
 	GSList* file_list = NULL;
 	gsize i = 0;
@@ -140,7 +140,7 @@ eog_util_parse_uri_string_list_to_file_list (const gchar *uri_list)
 }
 
 GSList*
-eog_util_string_list_to_file_list (GSList *string_list)
+xviewer_util_string_list_to_file_list (GSList *string_list)
 {
 	GSList *it = NULL;
 	GSList *file_list = NULL;
@@ -158,7 +158,7 @@ eog_util_string_list_to_file_list (GSList *string_list)
 }
 
 GSList*
-eog_util_strings_to_file_list (gchar **strings)
+xviewer_util_strings_to_file_list (gchar **strings)
 {
 	int i;
  	GSList *file_list = NULL;
@@ -172,7 +172,7 @@ eog_util_strings_to_file_list (gchar **strings)
 }
 
 GSList*
-eog_util_string_array_to_list (const gchar **files, gboolean create_uri)
+xviewer_util_string_array_to_list (const gchar **files, gboolean create_uri)
 {
 	gint i;
 	GSList *list = NULL;
@@ -203,7 +203,7 @@ eog_util_string_array_to_list (const gchar **files, gboolean create_uri)
 }
 
 gchar **
-eog_util_string_array_make_absolute (gchar **files)
+xviewer_util_string_array_make_absolute (gchar **files)
 {
 	int i;
 	int size;
@@ -251,20 +251,20 @@ ensure_dir_exists (const char *dir)
 }
 
 const gchar *
-eog_util_dot_dir (void)
+xviewer_util_dot_dir (void)
 {
 	if (dot_dir == NULL) {
 		gboolean exists;
 
 		dot_dir = g_build_filename (g_get_user_config_dir (),
-					    "eog", NULL);
+					    "xviewer", NULL);
 
 		exists = ensure_dir_exists (dot_dir);
 		if (G_UNLIKELY (!exists)) {
 			static gboolean printed_warning = FALSE;
 
 			if (!printed_warning) {
-				g_warning ("EOG could not save some of your preferences in its settings directory due to a file with the same name (%s) blocking its creation. Please remove that file, or move it away.", dot_dir);
+				g_warning ("XVIEWER could not save some of your preferences in its settings directory due to a file with the same name (%s) blocking its creation. Please remove that file, or move it away.", dot_dir);
 				printed_warning = TRUE;
 			}
 			g_free (dot_dir);
@@ -298,14 +298,14 @@ static void migrate_config_file (const gchar *old_filename, const gchar* new_fil
 static void migrate_config_folder (const gchar* new_dir)
 {
 	gchar* old_dir = g_build_filename (g_get_home_dir (), ".gnome2",
-					   "eog", NULL);
+					   "xviewer", NULL);
 	gchar* old_filename = NULL;
 	gchar* new_filename = NULL;
 	GError *error = NULL;
 	GFile *dir_file = NULL;
 	gsize i;
-	static const gchar *old_files[] = { "eog-print-settings.ini",
-					    "eog_toolbar.xml",
+	static const gchar *old_files[] = { "xviewer-print-settings.ini",
+					    "xviewer_toolbar.xml",
 					    NULL };
 
 	if(!g_file_test (old_dir, G_FILE_TEST_IS_DIR)) {
@@ -314,7 +314,7 @@ static void migrate_config_folder (const gchar* new_dir)
 		return;
 	}
 
-	eog_debug (DEBUG_PREFERENCES);
+	xviewer_debug (DEBUG_PREFERENCES);
 
 	for (i = 0; old_files[i] != NULL; i++) {
 		old_filename = g_build_filename (old_dir,
@@ -330,8 +330,8 @@ static void migrate_config_folder (const gchar* new_dir)
 
 	/* Migrate accels file */
 	old_filename = g_build_filename (g_get_home_dir (), ".gnome2",
-					 "accels", "eog", NULL);
-	/* move file to ~/.config/eog/accels if its not already there */
+					 "accels", "xviewer", NULL);
+	/* move file to ~/.config/xviewer/accels if its not already there */
 	new_filename = g_build_filename (new_dir, "accels", NULL);
 
 	migrate_config_file (old_filename, new_filename);
@@ -351,7 +351,7 @@ static void migrate_config_folder (const gchar* new_dir)
 /* Based on eel_filename_strip_extension() */
 
 /**
- * eog_util_filename_get_extension:
+ * xviewer_util_filename_get_extension:
  * @filename: a filename
  *
  * Returns a reasonably good guess of the file extension of @filename.
@@ -359,7 +359,7 @@ static void migrate_config_folder (const gchar* new_dir)
  * Returns: a newly allocated string with the file extension of @filename.
  **/
 char *
-eog_util_filename_get_extension (const char * filename)
+xviewer_util_filename_get_extension (const char * filename)
 {
 	char *begin, *begin2;
 
@@ -393,7 +393,7 @@ eog_util_filename_get_extension (const char * filename)
 
 
 /**
- * eog_util_file_is_persistent:
+ * xviewer_util_file_is_persistent:
  * @file: a #GFile
  *
  * Checks whether @file is a non-removable local mount.
@@ -402,7 +402,7 @@ eog_util_filename_get_extension (const char * filename)
  * %FALSE otherwise or when it is remote.
  **/
 gboolean
-eog_util_file_is_persistent (GFile *file)
+xviewer_util_file_is_persistent (GFile *file)
 {
 	GMount *mount;
 
@@ -420,7 +420,7 @@ eog_util_file_is_persistent (GFile *file)
 }
 
 static void
-_eog_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
+_xviewer_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
 {
 	gchar *uri = NULL;
 	GError *error = NULL;
@@ -449,7 +449,7 @@ _eog_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
 }
 
 void
-eog_util_show_file_in_filemanager (GFile *file, GdkScreen *screen)
+xviewer_util_show_file_in_filemanager (GFile *file, GdkScreen *screen)
 {
 	GDBusProxy *proxy;
 	gboolean done = FALSE;
@@ -502,5 +502,5 @@ eog_util_show_file_in_filemanager (GFile *file, GdkScreen *screen)
 
 	/* Fallback to gtk_show_uri() if launch over DBus is not possible */
 	if (!done)
-		_eog_util_show_file_in_filemanager_fallback (file, screen);
+		_xviewer_util_show_file_in_filemanager_fallback (file, screen);
 }

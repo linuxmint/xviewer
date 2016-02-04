@@ -1,4 +1,4 @@
-/* Eye of Gnome - Side bar
+/* Xviewer - Side bar
  *
  * Copyright (C) 2004 Red Hat, Inc.
  * Copyright (C) 2007 The Free Software Foundation
@@ -23,60 +23,60 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_SIDEBAR_H__
-#define __EOG_SIDEBAR_H__
+#ifndef __XVIEWER_SIDEBAR_H__
+#define __XVIEWER_SIDEBAR_H__
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-typedef struct _EogSidebar EogSidebar;
-typedef struct _EogSidebarClass EogSidebarClass;
-typedef struct _EogSidebarPrivate EogSidebarPrivate;
+typedef struct _XviewerSidebar XviewerSidebar;
+typedef struct _XviewerSidebarClass XviewerSidebarClass;
+typedef struct _XviewerSidebarPrivate XviewerSidebarPrivate;
 
-#define EOG_TYPE_SIDEBAR	    (eog_sidebar_get_type())
-#define EOG_SIDEBAR(obj)	    (G_TYPE_CHECK_INSTANCE_CAST((obj), EOG_TYPE_SIDEBAR, EogSidebar))
-#define EOG_SIDEBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  EOG_TYPE_SIDEBAR, EogSidebarClass))
-#define EOG_IS_SIDEBAR(obj)	    (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOG_TYPE_SIDEBAR))
-#define EOG_IS_SIDEBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  EOG_TYPE_SIDEBAR))
-#define EOG_SIDEBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOG_TYPE_SIDEBAR, EogSidebarClass))
+#define XVIEWER_TYPE_SIDEBAR	    (xviewer_sidebar_get_type())
+#define XVIEWER_SIDEBAR(obj)	    (G_TYPE_CHECK_INSTANCE_CAST((obj), XVIEWER_TYPE_SIDEBAR, XviewerSidebar))
+#define XVIEWER_SIDEBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  XVIEWER_TYPE_SIDEBAR, XviewerSidebarClass))
+#define XVIEWER_IS_SIDEBAR(obj)	    (G_TYPE_CHECK_INSTANCE_TYPE((obj), XVIEWER_TYPE_SIDEBAR))
+#define XVIEWER_IS_SIDEBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  XVIEWER_TYPE_SIDEBAR))
+#define XVIEWER_SIDEBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  XVIEWER_TYPE_SIDEBAR, XviewerSidebarClass))
 
-struct _EogSidebar {
+struct _XviewerSidebar {
 	GtkBox base_instance;
 
-	EogSidebarPrivate *priv;
+	XviewerSidebarPrivate *priv;
 };
 
-struct _EogSidebarClass {
+struct _XviewerSidebarClass {
 	GtkBoxClass base_class;
 
-	void (* page_added)   (EogSidebar *eog_sidebar,
+	void (* page_added)   (XviewerSidebar *xviewer_sidebar,
 			       GtkWidget  *main_widget);
 
-	void (* page_removed) (EogSidebar *eog_sidebar,
+	void (* page_removed) (XviewerSidebar *xviewer_sidebar,
 			       GtkWidget  *main_widget);
 };
 
-GType      eog_sidebar_get_type     (void);
+GType      xviewer_sidebar_get_type     (void);
 
-GtkWidget *eog_sidebar_new          (void);
+GtkWidget *xviewer_sidebar_new          (void);
 
-void       eog_sidebar_add_page     (EogSidebar  *eog_sidebar,
+void       xviewer_sidebar_add_page     (XviewerSidebar  *xviewer_sidebar,
 				     const gchar *title,
 				     GtkWidget   *main_widget);
 
-void       eog_sidebar_remove_page  (EogSidebar  *eog_sidebar,
+void       xviewer_sidebar_remove_page  (XviewerSidebar  *xviewer_sidebar,
 				     GtkWidget   *main_widget);
 
-void       eog_sidebar_set_page     (EogSidebar  *eog_sidebar,
+void       xviewer_sidebar_set_page     (XviewerSidebar  *xviewer_sidebar,
 				     GtkWidget   *main_widget);
 
-gint       eog_sidebar_get_n_pages  (EogSidebar  *eog_sidebar);
+gint       xviewer_sidebar_get_n_pages  (XviewerSidebar  *xviewer_sidebar);
 
-gboolean   eog_sidebar_is_empty     (EogSidebar  *eog_sidebar);
+gboolean   xviewer_sidebar_is_empty     (XviewerSidebar  *xviewer_sidebar);
 
 G_END_DECLS
 
-#endif /* __EOG_SIDEBAR_H__ */
+#endif /* __XVIEWER_SIDEBAR_H__ */
 
 

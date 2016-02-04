@@ -1,4 +1,4 @@
-/* Eye Of Gnome - EXIF Utilities
+/* Xviewer - EXIF Utilities
  *
  * Copyright (C) 2006-2007 The Free Software Foundation
  *
@@ -34,8 +34,8 @@
 #endif
 #include <time.h>
 
-#include "eog-exif-util.h"
-#include "eog-util.h"
+#include "xviewer-exif-util.h"
+#include "xviewer-util.h"
 
 #include <string.h>
 #include <glib/gi18n.h>
@@ -50,10 +50,10 @@
 #define GPOINTER_TO_BOOLEAN(i) ((gboolean) ((GPOINTER_TO_INT (i) == 2) ? TRUE : FALSE))
 #endif
 
-typedef ExifData EogExifData;
+typedef ExifData XviewerExifData;
 
-/* Define EogExifData type */
-G_DEFINE_BOXED_TYPE(EogExifData, eog_exif_data, eog_exif_data_copy, eog_exif_data_free)
+/* Define XviewerExifData type */
+G_DEFINE_BOXED_TYPE(XviewerExifData, xviewer_exif_data, xviewer_exif_data_copy, xviewer_exif_data_free)
 
 static gpointer
 _check_strptime_updates_wday (gpointer data)
@@ -95,7 +95,7 @@ _calculate_wday_yday (struct tm *tm)
 
 #ifdef HAVE_STRPTIME
 static gchar *
-eog_exif_util_format_date_with_strptime (const gchar *date)
+xviewer_exif_util_format_date_with_strptime (const gchar *date)
 {
 	static GOnce strptime_updates_wday = G_ONCE_INIT;
 	gchar *new_date = NULL;
@@ -125,7 +125,7 @@ eog_exif_util_format_date_with_strptime (const gchar *date)
 }
 #else
 static gchar *
-eog_exif_util_format_date_by_hand (const gchar *date)
+xviewer_exif_util_format_date_by_hand (const gchar *date)
 {
 	int year, month, day, hour, minutes, seconds;
 	int result;
@@ -170,7 +170,7 @@ eog_exif_util_format_date_by_hand (const gchar *date)
 #endif /* HAVE_STRPTIME */
 
 /**
- * eog_exif_util_format_date:
+ * xviewer_exif_util_format_date:
  * @date: a date string following Exif specifications
  *
  * Takes a date string formatted after Exif specifications and generates a
@@ -180,20 +180,20 @@ eog_exif_util_format_date_by_hand (const gchar *date)
  * current locale.
  */
 gchar *
-eog_exif_util_format_date (const gchar *date)
+xviewer_exif_util_format_date (const gchar *date)
 {
 	gchar *new_date;
 #ifdef HAVE_STRPTIME
-	new_date = eog_exif_util_format_date_with_strptime (date);
+	new_date = xviewer_exif_util_format_date_with_strptime (date);
 #else
-	new_date = eog_exif_util_format_date_by_hand (date);
+	new_date = xviewer_exif_util_format_date_by_hand (date);
 #endif /* HAVE_STRPTIME */
 	return new_date;
 }
 
 void
-eog_exif_util_set_label_text (GtkLabel *label,
-			      EogExifData *exif_data,
+xviewer_exif_util_set_label_text (GtkLabel *label,
+			      XviewerExifData *exif_data,
 			      gint tag_id)
 {
 	gchar exif_buffer[512];
@@ -203,13 +203,13 @@ eog_exif_util_set_label_text (GtkLabel *label,
 	g_return_if_fail (GTK_IS_LABEL (label));
 
 	if (exif_data) {
-		buf_ptr = eog_exif_data_get_value (exif_data, tag_id,
+		buf_ptr = xviewer_exif_data_get_value (exif_data, tag_id,
 						   exif_buffer, 512);
 
 		if (tag_id == EXIF_TAG_DATE_TIME_ORIGINAL && buf_ptr)
-			label_text = eog_exif_util_format_date (buf_ptr);
+			label_text = xviewer_exif_util_format_date (buf_ptr);
 		else
-			label_text = eog_util_make_valid_utf8 (buf_ptr);
+			label_text = xviewer_util_make_valid_utf8 (buf_ptr);
 	}
 
 	gtk_label_set_text (label, label_text);
@@ -217,8 +217,8 @@ eog_exif_util_set_label_text (GtkLabel *label,
 }
 
 void
-eog_exif_util_set_focal_length_label_text (GtkLabel *label,
-					   EogExifData *exif_data)
+xviewer_exif_util_set_focal_length_label_text (GtkLabel *label,
+					   XviewerExifData *exif_data)
 {
 	ExifEntry *entry = NULL, *entry35mm = NULL;
 	ExifByteOrder byte_order;
@@ -282,7 +282,7 @@ eog_exif_util_set_focal_length_label_text (GtkLabel *label,
 }
 
 /**
- * eog_exif_data_get_value:
+ * xviewer_exif_data_get_value:
  * @exif_data: pointer to an <structname>ExifData</structname> struct
  * @tag_id: the requested tag's id. See <filename>exif-tag.h</filename>
  * from the libexif package for possible values (e.g. %EXIF_TAG_EXPOSURE_MODE).
@@ -296,7 +296,7 @@ eog_exif_util_set_focal_length_label_text (GtkLabel *label,
  * Returns: a pointer to @buffer.
  */
 const gchar *
-eog_exif_data_get_value (EogExifData *exif_data, gint tag_id, gchar *buffer, guint buf_size)
+xviewer_exif_data_get_value (XviewerExifData *exif_data, gint tag_id, gchar *buffer, guint buf_size)
 {
 	ExifEntry *exif_entry;
 	const gchar *exif_value;
@@ -310,8 +310,8 @@ eog_exif_data_get_value (EogExifData *exif_data, gint tag_id, gchar *buffer, gui
 	return exif_value;
 }
 
-EogExifData *
-eog_exif_data_copy (EogExifData *data)
+XviewerExifData *
+xviewer_exif_data_copy (XviewerExifData *data)
 {
 	exif_data_ref (data);
 
@@ -319,7 +319,7 @@ eog_exif_data_copy (EogExifData *data)
 }
 
 void
-eog_exif_data_free (EogExifData *data)
+xviewer_exif_data_free (XviewerExifData *data)
 {
 	exif_data_unref (data);
 }

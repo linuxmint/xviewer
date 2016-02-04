@@ -1,6 +1,6 @@
 /*
- * eog-application-activatable.h
- * This file is part of eog
+ * xviewer-application-activatable.h
+ * This file is part of xviewer
  *
  * Author: Felix Riemann <friemann@gnome.org>
  *
@@ -24,46 +24,46 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_APPLICATION_ACTIVATABLE_H__
-#define __EOG_APPLICATION_ACTIVATABLE_H__
+#ifndef __XVIEWER_APPLICATION_ACTIVATABLE_H__
+#define __XVIEWER_APPLICATION_ACTIVATABLE_H__
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define EOG_TYPE_APPLICATION_ACTIVATABLE (eog_application_activatable_get_type ())
-#define EOG_APPLICATION_ACTIVATABLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
-                                          EOG_TYPE_APPLICATION_ACTIVATABLE, \
-                                          EogApplicationActivatable))
-#define EOG_APPLICATION_ACTIVATABLE_IFACE(obj) \
+#define XVIEWER_TYPE_APPLICATION_ACTIVATABLE (xviewer_application_activatable_get_type ())
+#define XVIEWER_APPLICATION_ACTIVATABLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
+                                          XVIEWER_TYPE_APPLICATION_ACTIVATABLE, \
+                                          XviewerApplicationActivatable))
+#define XVIEWER_APPLICATION_ACTIVATABLE_IFACE(obj) \
                                           (G_TYPE_CHECK_CLASS_CAST ((obj), \
-                                           EOG_TYPE_APPLICATION_ACTIVATABLE, \
-                                           EogApplicationActivatableInterface))
-#define EOG_IS_APPLICATION_ACTIVATABLE(obj) \
+                                           XVIEWER_TYPE_APPLICATION_ACTIVATABLE, \
+                                           XviewerApplicationActivatableInterface))
+#define XVIEWER_IS_APPLICATION_ACTIVATABLE(obj) \
                                           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
-                                           EOG_TYPE_APPLICATION_ACTIVATABLE))
-#define EOG_APPLICATION_ACTIVATABLE_GET_IFACE(obj) \
+                                           XVIEWER_TYPE_APPLICATION_ACTIVATABLE))
+#define XVIEWER_APPLICATION_ACTIVATABLE_GET_IFACE(obj) \
                                         (G_TYPE_INSTANCE_GET_INTERFACE ((obj), \
-                                         EOG_TYPE_APPLICATION_ACTIVATABLE, \
-                                         EogApplicationActivatableInterface))
+                                         XVIEWER_TYPE_APPLICATION_ACTIVATABLE, \
+                                         XviewerApplicationActivatableInterface))
 
-typedef struct _EogApplicationActivatable		EogApplicationActivatable;
-typedef struct _EogApplicationActivatableInterface	EogApplicationActivatableInterface;
+typedef struct _XviewerApplicationActivatable		XviewerApplicationActivatable;
+typedef struct _XviewerApplicationActivatableInterface	XviewerApplicationActivatableInterface;
 
-struct _EogApplicationActivatableInterface
+struct _XviewerApplicationActivatableInterface
 {
 	GTypeInterface g_iface;
 
 	/* vfuncs */
 
-    void	(*activate)	(EogApplicationActivatable *activatable);
-    void	(*deactivate)	(EogApplicationActivatable *activatable);
+    void	(*activate)	(XviewerApplicationActivatable *activatable);
+    void	(*deactivate)	(XviewerApplicationActivatable *activatable);
 };
 
-GType	eog_application_activatable_get_type     (void) G_GNUC_CONST;
+GType	xviewer_application_activatable_get_type     (void) G_GNUC_CONST;
 
-void	eog_application_activatable_activate     (EogApplicationActivatable *activatable);
-void	eog_application_activatable_deactivate   (EogApplicationActivatable *activatable);
+void	xviewer_application_activatable_activate     (XviewerApplicationActivatable *activatable);
+void	xviewer_application_activatable_deactivate   (XviewerApplicationActivatable *activatable);
 
 G_END_DECLS
-#endif /* __EOG_APPLICATION_ACTIVATABLE_H__ */
+#endif /* __XVIEWER_APPLICATION_ACTIVATABLE_H__ */

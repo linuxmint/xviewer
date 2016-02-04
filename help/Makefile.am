@@ -1,11 +1,11 @@
 @YELP_HELP_RULES@
 
-HELP_ID = eog
+HELP_ID = xviewer
 
 HELP_MEDIA = \
-	figures/eog-logo.png			\
-	figures/eog-toolbar-editor.png		\
-	figures/eog-trail.png			\
+	figures/xviewer-logo.png			\
+	figures/xviewer-toolbar-editor.png		\
+	figures/xviewer-trail.png			\
 	figures/image-view-prefs.png		\
 	figures/multiple-convert.png		\
 	figures/multiple-rename-count.png	\

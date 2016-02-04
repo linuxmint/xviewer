@@ -1,4 +1,4 @@
-/* Eye Of Gnome - EOG Preferences Dialog
+/* Xviewer - XVIEWER Preferences Dialog
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -19,11 +19,11 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_PREFERENCES_DIALOG_H__
-#define __EOG_PREFERENCES_DIALOG_H__
+#ifndef __XVIEWER_PREFERENCES_DIALOG_H__
+#define __XVIEWER_PREFERENCES_DIALOG_H__
 
-#include "eog-image.h"
-#include "eog-thumb-view.h"
+#include "xviewer-image.h"
+#include "xviewer-thumb-view.h"
 
 #include <glib.h>
 #include <glib-object.h>
@@ -31,33 +31,33 @@
 
 G_BEGIN_DECLS
 
-typedef struct _EogPreferencesDialog EogPreferencesDialog;
-typedef struct _EogPreferencesDialogClass EogPreferencesDialogClass;
-typedef struct _EogPreferencesDialogPrivate EogPreferencesDialogPrivate;
+typedef struct _XviewerPreferencesDialog XviewerPreferencesDialog;
+typedef struct _XviewerPreferencesDialogClass XviewerPreferencesDialogClass;
+typedef struct _XviewerPreferencesDialogPrivate XviewerPreferencesDialogPrivate;
 
-#define EOG_TYPE_PREFERENCES_DIALOG            (eog_preferences_dialog_get_type ())
-#define EOG_PREFERENCES_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), EOG_TYPE_PREFERENCES_DIALOG, EogPreferencesDialog))
-#define EOG_PREFERENCES_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  EOG_TYPE_PREFERENCES_DIALOG, EogPreferencesDialogClass))
-#define EOG_IS_PREFERENCES_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOG_TYPE_PREFERENCES_DIALOG))
-#define EOG_IS_PREFERENCES_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  EOG_TYPE_PREFERENCES_DIALOG))
-#define EOG_PREFERENCES_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOG_TYPE_PREFERENCES_DIALOG, EogPreferencesDialogClass))
+#define XVIEWER_TYPE_PREFERENCES_DIALOG            (xviewer_preferences_dialog_get_type ())
+#define XVIEWER_PREFERENCES_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), XVIEWER_TYPE_PREFERENCES_DIALOG, XviewerPreferencesDialog))
+#define XVIEWER_PREFERENCES_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  XVIEWER_TYPE_PREFERENCES_DIALOG, XviewerPreferencesDialogClass))
+#define XVIEWER_IS_PREFERENCES_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), XVIEWER_TYPE_PREFERENCES_DIALOG))
+#define XVIEWER_IS_PREFERENCES_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  XVIEWER_TYPE_PREFERENCES_DIALOG))
+#define XVIEWER_PREFERENCES_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  XVIEWER_TYPE_PREFERENCES_DIALOG, XviewerPreferencesDialogClass))
 
-struct _EogPreferencesDialog {
+struct _XviewerPreferencesDialog {
 	GtkDialog dialog;
 
-	EogPreferencesDialogPrivate *priv;
+	XviewerPreferencesDialogPrivate *priv;
 };
 
-struct _EogPreferencesDialogClass {
+struct _XviewerPreferencesDialogClass {
 	GtkDialogClass parent_class;
 };
 
 G_GNUC_INTERNAL
-GType	    eog_preferences_dialog_get_type	  (void) G_GNUC_CONST;
+GType	    xviewer_preferences_dialog_get_type	  (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-GtkWidget  *eog_preferences_dialog_get_instance	  (GtkWindow   *parent);
+GtkWidget  *xviewer_preferences_dialog_get_instance	  (GtkWindow   *parent);
 
 G_END_DECLS
 
-#endif /* __EOG_PREFERENCES_DIALOG_H__ */
+#endif /* __XVIEWER_PREFERENCES_DIALOG_H__ */

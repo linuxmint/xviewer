@@ -2161,7 +2161,7 @@
 
 2007-03-19  Felix Riemann  <friemann@svn.gnome.org>
 
-	* POTFILES.in: Add missing eog-exif-util.c to file list.
+	* POTFILES.in: Add missing xviewer-exif-util.c to file list.
 
 2007-03-18  Daniel Nylander <po@danielnylander.se>
 
@@ -2491,7 +2491,7 @@
 
 2007-01-05  Claudio Saavedra  <csaavedra@alumnos.utalca.cl>
 
-	* POTFILES.in: Add shell/eog-print-image-setup.c
+	* POTFILES.in: Add shell/xviewer-print-image-setup.c
 
 2007-01-05  Jakub Friedl <jfriedl@suse.cz>
 
@@ -2764,8 +2764,8 @@
 
 2006-08-17  Wouter Bolsterlee  <uws+gnome@xs4all.nl>
 
-	* POTFILES.skip: Added eog.desktop.in, since it is
-	generated from eog.desktop.in.in.
+	* POTFILES.skip: Added xviewer.desktop.in, since it is
+	generated from xviewer.desktop.in.in.
 
 	* nl.po: Translation updated by Wouter Bolsterlee.
 
@@ -4314,8 +4314,8 @@
 
 2005-01-15  Kjartan Maraas  <kmaraas@gnome.org>
 
-	* POTFILES.in: Add libeog/eog-util.c and shell/eog-preferences.c
-	* POTFILES.skip: Add eog.desktop.in
+	* POTFILES.in: Add libxviewer/xviewer-util.c and shell/xviewer-preferences.c
+	* POTFILES.skip: Add xviewer.desktop.in
 	* nb.po: Update
 	* no.po: Update
 
@@ -5035,7 +5035,7 @@
 
 2004-04-25  Jens Finke  <jens@triq.net>
 
-	* POTFILES.in: Added libeog/eog-info-view-*.c files.
+	* POTFILES.in: Added libxviewer/xviewer-info-view-*.c files.
 
 	* de.po: Updated German translation.
 
@@ -5941,7 +5941,7 @@
 
 2003-08-23  Kjartan Maraas  <kmaraas@gnome.org>
 
-	* POTFILES.skip: Added libeog/GNOME_EOG.server.in
+	* POTFILES.skip: Added libxviewer/GNOME_XVIEWER.server.in
 	* no.po: Update Norwegian translation.
 
 2003-08-23  Kjartan Maraas  <kmaraas@gnome.org>
@@ -6179,9 +6179,9 @@
 
 2003-06-23  Jens Finke <jens@triq.net>
 
-	* POTFILES.in: Removed viewer/eog-image.c
+	* POTFILES.in: Removed viewer/xviewer-image.c
 
-	* POTFILES.skip: Removed collection/eog-collection-preferences.c
+	* POTFILES.skip: Removed collection/xviewer-collection-preferences.c
 
 2003-06-23  Miloslav Trmac  <mitr@volny.cz>
 
@@ -6689,7 +6689,7 @@
 
 	* no.po: Updated Norwegian translation.
 	* POTFILES.skip: Update.
-	* POTFILES.in: Add collection/eog-collection-view-ui.xml.
+	* POTFILES.in: Add collection/xviewer-collection-view-ui.xml.
 
 2002-11-22  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
 
@@ -6718,7 +6718,7 @@
 
 	* no.po: Updated Norwegian translation.
 	* POTFILES.skip: Update.
-	* POTFILES.in: Use eog.glade directly.
+	* POTFILES.in: Use xviewer.glade directly.
 
 2002-10-13  Jens Finke  <jens@triq.net>
 
@@ -6726,7 +6726,7 @@
 
 2002-10-13  Jens Finke  <jens@triq.net>
 
-	* POTFILES.in: Added eog-glade.h and eog.schemas.in.
+	* POTFILES.in: Added xviewer-glade.h and xviewer.schemas.in.
 
 2002-10-10  Kjartan Maraas  <kmaraas@gnome.org>
 
@@ -6785,11 +6785,11 @@
 
 2002-07-16  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
 
-	* POTFILES.in: Fixed libeog/GNOME_EOG.server.in.in name.
+	* POTFILES.in: Fixed libxviewer/GNOME_XVIEWER.server.in.in name.
 
 2002-07-10  Jens Finke <jens@triq.net>
 
-	* POTFILES.in: Added libeog/eog-file-selection.c
+	* POTFILES.in: Added libxviewer/xviewer-file-selection.c
 
 	* de.po: Updated German translation.
 
@@ -6841,7 +6841,7 @@
 
 2002-06-24  Federico Mena Quintero  <federico@ximian.com>
 
-	* POTFILES.in: Added libeog/ui-image.c.
+	* POTFILES.in: Added libxviewer/ui-image.c.
 
 2002-06-24  Jarkko Ranta  <jjranta@cc.joensuu.fi>
 
@@ -7245,7 +7245,7 @@
 
 2002-03-21  Jens Finke  <jens@triq.net>
 
-	* POTFILES.in: Added shell/eog-preferences.c
+	* POTFILES.in: Added shell/xviewer-preferences.c
 
 	* de.po: Updated German translation.
 
@@ -7343,7 +7343,7 @@
 
 2002-02-10  Jens Finke  <jens@triq.net>
 
-	* POTFILES.in: Added viewer/eog-image-view-ctrl-ui.xml.
+	* POTFILES.in: Added viewer/xviewer-image-view-ctrl-ui.xml.
 
 2002-02-07  Abel Cheung  <maddog@linux.org.hk>
 
@@ -7414,7 +7414,7 @@
 
 2001-12-27  Jens Finke <jens@triq.net>
 
-	* POTFILES.in: Renamed GNOME_EOG.oaf.in to GNOME_EOG.server.in.
+	* POTFILES.in: Renamed GNOME_XVIEWER.oaf.in to GNOME_XVIEWER.server.in.
 
 2001-12-27  Duarte Loreto <happyguy_pt@hotmail.com>
 
@@ -7470,7 +7470,7 @@
 
 2001-10-02  Fabrice Bellet <fabrice@gnu.org>
 
-	* POTFILES.in: removed duplicated GNOME_EOG.oaf.in.
+	* POTFILES.in: removed duplicated GNOME_XVIEWER.oaf.in.
 
 2001-09-30  Carlos Perelló Marín <carlos@gnome-db.org>
 
@@ -7621,7 +7621,7 @@
 2001-03-28  Jens Finke <jens@gnome.org>
 
 	* POTFILES.in: Removed all files from src/ directory, added
-	libeog/GNOME_EOG.oaf.in.
+	libxviewer/GNOME_XVIEWER.oaf.in.
 
 2001-03-18  Fatih Demir <kabalak@gtranslator.org>
 
@@ -7637,8 +7637,8 @@
 
 2001-03-07  Jens Finke <jens@gnome.org>
 
-	* POTFILES.in: Added GNOME_EOG_Collection.oaf.in and
-	eog-shell-ui.xml.
+	* POTFILES.in: Added GNOME_XVIEWER_Collection.oaf.in and
+	xviewer-shell-ui.xml.
 
 2001-02-27  Federico Mena Quintero  <federico@ximian.com>
 
@@ -7679,8 +7679,8 @@
 2001-02-09  Gediminas Paulauskas <menesis@delfi.lt>
 
 	* lt.po: Updated Lithuanian translation.
-	* *.po: added string with translation from eog.desktop file.
-	* POTFILES.in: replace .glade.h with .glade, added eog.desktop.in.
+	* *.po: added string with translation from xviewer.desktop file.
+	* POTFILES.in: replace .glade.h with .glade, added xviewer.desktop.in.
 
 2001-02-09  Christian Meyer  <cm@ggtt.de>
 

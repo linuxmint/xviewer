@@ -1,4 +1,4 @@
-/* Eye Of GNOME -- Print Dialog Custom Widget
+/* Xviewer -- Print Dialog Custom Widget
  *
  * Copyright (C) 2006-2007 The Free Software Foundation
  *
@@ -33,22 +33,22 @@
 #include <langinfo.h>
 #endif
 
-#include "eog-print-image-setup.h"
-#include "eog-print-preview.h"
+#include "xviewer-print-image-setup.h"
+#include "xviewer-print-preview.h"
 
 /**
  * SECTION:
  * @Title: Printing Custom Widget
  * @Short_Description: a custom widget to setup image prints.
  * @Stability_Level: Internal
- * @See_Also: #EogPrintPreview
+ * @See_Also: #XviewerPrintPreview
  *
  * This widget is to be used as the custom widget in a #GtkPrintUnixDialog in
- * EOG. Through it, you can set the position and scaling of a image
+ * XVIEWER. Through it, you can set the position and scaling of a image
  * interactively.
  */
 
-struct _EogPrintImageSetupPrivate {
+struct _XviewerPrintImageSetupPrivate {
 	GtkWidget *left;
 	GtkWidget *right;
 	GtkWidget *top;
@@ -64,7 +64,7 @@ struct _EogPrintImageSetupPrivate {
 
 	GtkUnit current_unit;
 
-	EogImage *image;
+	XviewerImage *image;
 	GtkPageSetup *page_setup;
 
 	GtkWidget *preview;
@@ -98,8 +98,8 @@ enum {
 #define FACTOR_MM_TO_INCH 0.03937007874015748
 #define FACTOR_MM_TO_PIXEL 2.834645669
 
-static void eog_print_image_setup_set_property (GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec);
-static void eog_print_image_setup_get_property (GObject *object, guint prop_id, GValue *value, GParamSpec *pspec);
+static void xviewer_print_image_setup_set_property (GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec);
+static void xviewer_print_image_setup_get_property (GObject *object, guint prop_id, GValue *value, GParamSpec *pspec);
 
 static void on_left_value_changed   (GtkSpinButton *spinbutton, gpointer user_data);
 static void on_right_value_changed  (GtkSpinButton *spinbutton, gpointer user_data);
@@ -109,12 +109,12 @@ static void on_bottom_value_changed (GtkSpinButton *spinbutton, gpointer user_da
 static void on_width_value_changed  (GtkSpinButton *spinbutton, gpointer user_data);
 static void on_height_value_changed (GtkSpinButton *spinbutton, gpointer user_data);
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogPrintImageSetup, eog_print_image_setup, GTK_TYPE_GRID);
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerPrintImageSetup, xviewer_print_image_setup, GTK_TYPE_GRID);
 
 static void
-block_handlers (EogPrintImageSetup *setup)
+block_handlers (XviewerPrintImageSetup *setup)
 {
-	EogPrintImageSetupPrivate *priv = setup->priv;
+	XviewerPrintImageSetupPrivate *priv = setup->priv;
 
 	g_signal_handlers_block_by_func (priv->left, on_left_value_changed, setup);
 	g_signal_handlers_block_by_func (priv->right, on_right_value_changed, setup);
@@ -125,9 +125,9 @@ block_handlers (EogPrintImageSetup *setup)
 }
 
 static void
-unblock_handlers (EogPrintImageSetup *setup)
+unblock_handlers (XviewerPrintImageSetup *setup)
 {
-	EogPrintImageSetupPrivate *priv = setup->priv;
+	XviewerPrintImageSetupPrivate *priv = setup->priv;
 
 	g_signal_handlers_unblock_by_func (priv->left, on_left_value_changed, setup);
 	g_signal_handlers_unblock_by_func (priv->right, on_right_value_changed, setup);
@@ -138,7 +138,7 @@ unblock_handlers (EogPrintImageSetup *setup)
 }
 
 static gdouble
-get_scale_to_px_factor (EogPrintImageSetup *setup)
+get_scale_to_px_factor (XviewerPrintImageSetup *setup)
 {
 	gdouble factor = 0.;
 
@@ -157,9 +157,9 @@ get_scale_to_px_factor (EogPrintImageSetup *setup)
 }
 
 static gdouble
-get_max_percentage (EogPrintImageSetup *setup)
+get_max_percentage (XviewerPrintImageSetup *setup)
 {
-	EogPrintImageSetupPrivate *priv = setup->priv;
+	XviewerPrintImageSetupPrivate *priv = setup->priv;
 	gdouble p_width, p_height;
 	gdouble width, height;
 	gint pix_width, pix_height;
@@ -168,7 +168,7 @@ get_max_percentage (EogPrintImageSetup *setup)
 	p_width = gtk_page_setup_get_page_width (priv->page_setup, GTK_UNIT_INCH);
 	p_height = gtk_page_setup_get_page_height (priv->page_setup, GTK_UNIT_INCH);
 
-	eog_image_get_size (priv->image, &pix_width, &pix_height);
+	xviewer_image_get_size (priv->image, &pix_width, &pix_height);
 
 	width  = (gdouble)pix_width/FACTOR_INCH_TO_PIXEL;
 	height = (gdouble)pix_height/FACTOR_INCH_TO_PIXEL;
@@ -200,11 +200,11 @@ static void
 on_center_changed (GtkComboBox *combobox,
 		   gpointer user_data)
 {
-	EogPrintImageSetup *setup;
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetup *setup;
+	XviewerPrintImageSetupPrivate *priv;
 	gint active;
 
-	setup = EOG_PRINT_IMAGE_SETUP (user_data);
+	setup = XVIEWER_PRINT_IMAGE_SETUP (user_data);
 	priv = setup->priv;
 
 	active = gtk_combo_box_get_active (combobox);
@@ -245,13 +245,13 @@ on_center_changed (GtkComboBox *combobox,
 }
 
 static void
-update_image_pos_ranges (EogPrintImageSetup *setup,
+update_image_pos_ranges (XviewerPrintImageSetup *setup,
 			 gdouble page_width,
 			 gdouble page_height,
 			 gdouble width,
 			 gdouble height)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
 	priv = setup->priv;
 
@@ -274,18 +274,18 @@ on_scale_changed (GtkRange     *range,
 	gint pix_width, pix_height;
 	gdouble left, right, top, bottom;
 	gdouble page_width, page_height;
-	EogPrintImageSetupPrivate *priv;
-	EogPrintImageSetup *setup;
+	XviewerPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetup *setup;
 	gdouble factor;
-	EogImage *image;
+	XviewerImage *image;
 
-	setup = EOG_PRINT_IMAGE_SETUP (user_data);
+	setup = XVIEWER_PRINT_IMAGE_SETUP (user_data);
 	priv = setup->priv;
 
 	gtk_combo_box_set_active (GTK_COMBO_BOX (priv->center), CENTER_NONE);
 
 	image = priv->image;
-	eog_image_get_size (image, &pix_width, &pix_height);
+	xviewer_image_get_size (image, &pix_width, &pix_height);
 
 	factor = get_scale_to_px_factor (setup);
 
@@ -297,7 +297,7 @@ on_scale_changed (GtkRange     *range,
 
 	scale = CLAMP (0.01*gtk_range_get_value (range), 0, get_max_percentage (setup));
 
- 	eog_print_preview_set_scale (EOG_PRINT_PREVIEW (priv->preview), scale);
+ 	xviewer_print_preview_set_scale (XVIEWER_PRINT_PREVIEW (priv->preview), scale);
 
 	width  *= scale;
 	height *= scale;
@@ -326,14 +326,14 @@ on_scale_format_value (GtkScale *scale,
 }
 
 static void
-position_values_changed (EogPrintImageSetup *setup,
+position_values_changed (XviewerPrintImageSetup *setup,
 			 GtkWidget *w_changed,
 			 GtkWidget *w_to_update,
 			 GtkWidget *w_size,
 			 gdouble total_size,
 			 gint change)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 	gdouble changed, to_update, size;
 	gdouble pos;
 
@@ -351,14 +351,14 @@ position_values_changed (EogPrintImageSetup *setup,
 		if (setup->priv->current_unit == GTK_UNIT_MM) {
 			pos *= FACTOR_MM_TO_INCH;
 		}
- 		eog_print_preview_set_image_position (EOG_PRINT_PREVIEW (priv->preview), pos, -1);
+ 		xviewer_print_preview_set_image_position (XVIEWER_PRINT_PREVIEW (priv->preview), pos, -1);
 		break;
 	case CHANGE_VERT:
 		pos = gtk_spin_button_get_value (GTK_SPIN_BUTTON (setup->priv->top));
 		if (setup->priv->current_unit == GTK_UNIT_MM) {
 			pos *= FACTOR_MM_TO_INCH;
 		}
-		eog_print_preview_set_image_position (EOG_PRINT_PREVIEW (priv->preview), -1, pos);
+		xviewer_print_preview_set_image_position (XVIEWER_PRINT_PREVIEW (priv->preview), -1, pos);
 		break;
 	}
 }
@@ -367,10 +367,10 @@ static void
 on_left_value_changed (GtkSpinButton *spinbutton,
 		       gpointer       user_data)
 {
-	EogPrintImageSetup *setup;
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetup *setup;
+	XviewerPrintImageSetupPrivate *priv;
 
-	setup = EOG_PRINT_IMAGE_SETUP (user_data);
+	setup = XVIEWER_PRINT_IMAGE_SETUP (user_data);
 	priv = setup->priv;
 
 	position_values_changed (setup,
@@ -384,11 +384,11 @@ static void
 on_right_value_changed (GtkSpinButton *spinbutton,
 			gpointer       user_data)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
-	priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
+	priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
 
-	position_values_changed (EOG_PRINT_IMAGE_SETUP (user_data),
+	position_values_changed (XVIEWER_PRINT_IMAGE_SETUP (user_data),
 				 priv->right, priv->left, priv->width,
 				 gtk_page_setup_get_page_width (priv->page_setup,
 								priv->current_unit),
@@ -399,11 +399,11 @@ static void
 on_top_value_changed (GtkSpinButton *spinbutton,
 		      gpointer       user_data)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
-	priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
+	priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
 
-	position_values_changed (EOG_PRINT_IMAGE_SETUP (user_data),
+	position_values_changed (XVIEWER_PRINT_IMAGE_SETUP (user_data),
 				 priv->top, priv->bottom, priv->height,
 				 gtk_page_setup_get_page_height (priv->page_setup,
 								 priv->current_unit),
@@ -414,11 +414,11 @@ static void
 on_bottom_value_changed (GtkSpinButton *spinbutton,
 			 gpointer       user_data)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
-	priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
+	priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
 
-	position_values_changed (EOG_PRINT_IMAGE_SETUP (user_data),
+	position_values_changed (XVIEWER_PRINT_IMAGE_SETUP (user_data),
 				 priv->bottom, priv->top, priv->height,
 				 gtk_page_setup_get_page_height (priv->page_setup,
 								 priv->current_unit),
@@ -426,7 +426,7 @@ on_bottom_value_changed (GtkSpinButton *spinbutton,
 }
 
 static void
-size_changed (EogPrintImageSetup *setup,
+size_changed (XviewerPrintImageSetup *setup,
 	      GtkWidget *w_size_x,
 	      GtkWidget *w_size_y,
 	      GtkWidget *w_margin_x_1,
@@ -437,7 +437,7 @@ size_changed (EogPrintImageSetup *setup,
 	      gdouble page_size_y,
 	      gint change)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 	gdouble margin_x_1, margin_x_2;
 	gdouble margin_y_1, margin_y_2;
 	gdouble orig_size_x = -1, orig_size_y = -1, scale;
@@ -451,7 +451,7 @@ size_changed (EogPrintImageSetup *setup,
 	margin_x_1 = gtk_spin_button_get_value (GTK_SPIN_BUTTON (w_margin_x_1));
 	margin_y_1 = gtk_spin_button_get_value (GTK_SPIN_BUTTON (w_margin_y_1));
 
-	eog_image_get_size (priv->image, &pix_width, &pix_height);
+	xviewer_image_get_size (priv->image, &pix_width, &pix_height);
 
 	factor = get_scale_to_px_factor (setup);
 
@@ -473,7 +473,7 @@ size_changed (EogPrintImageSetup *setup,
 	margin_x_2 = page_size_x - margin_x_1 - size_x;
 	margin_y_2 = page_size_y - margin_y_1 - size_y;
 
- 	eog_print_preview_set_scale (EOG_PRINT_PREVIEW (priv->preview), scale);
+ 	xviewer_print_preview_set_scale (XVIEWER_PRINT_PREVIEW (priv->preview), scale);
 
 	switch (change) {
 	case CHANGE_HORIZ:
@@ -497,9 +497,9 @@ static void
 on_width_value_changed (GtkSpinButton *spinbutton,
 			gpointer       user_data)
 {
-	EogPrintImageSetupPrivate *priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
+	XviewerPrintImageSetupPrivate *priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
 
-	size_changed (EOG_PRINT_IMAGE_SETUP (user_data),
+	size_changed (XVIEWER_PRINT_IMAGE_SETUP (user_data),
 		      priv->width, priv->height,
 		      priv->left, priv->right,
 		      priv->top, priv->bottom,
@@ -514,9 +514,9 @@ static void
 on_height_value_changed (GtkSpinButton *spinbutton,
 			 gpointer       user_data)
 {
-	EogPrintImageSetupPrivate *priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
+	XviewerPrintImageSetupPrivate *priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
 
-	size_changed (EOG_PRINT_IMAGE_SETUP (user_data),
+	size_changed (XVIEWER_PRINT_IMAGE_SETUP (user_data),
 		      priv->height, priv->width,
 		      priv->top, priv->bottom,
 		      priv->left, priv->right,
@@ -550,10 +550,10 @@ change_unit (GtkSpinButton *spinbutton,
 }
 
 static void
-set_scale_unit (EogPrintImageSetup *setup,
+set_scale_unit (XviewerPrintImageSetup *setup,
 		GtkUnit unit)
 {
-	EogPrintImageSetupPrivate *priv = setup->priv;
+	XviewerPrintImageSetupPrivate *priv = setup->priv;
 	gdouble factor;
 	gdouble step, page;
 	gint digits;
@@ -609,17 +609,17 @@ on_unit_changed (GtkComboBox *combobox,
 		g_assert_not_reached ();
 	}
 
-	set_scale_unit (EOG_PRINT_IMAGE_SETUP (user_data), unit);
+	set_scale_unit (XVIEWER_PRINT_IMAGE_SETUP (user_data), unit);
 }
 
 static void
-on_preview_image_moved (EogPrintPreview *preview,
+on_preview_image_moved (XviewerPrintPreview *preview,
 			gpointer user_data)
 {
-	EogPrintImageSetupPrivate *priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
+	XviewerPrintImageSetupPrivate *priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
 	gdouble x, y;
 
-	eog_print_preview_get_image_position (preview, &x, &y);
+	xviewer_print_preview_get_image_position (preview, &x, &y);
 
 	if (priv->current_unit == GTK_UNIT_MM) {
 		x *= FACTOR_INCH_TO_MM;
@@ -635,13 +635,13 @@ on_preview_image_scrolled (GtkWidget *widget,
 			   GdkEventScroll *event,
 			   gpointer user_data)
 {
-	EogPrintImageSetupPrivate *priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
-	EogPrintPreview *preview = EOG_PRINT_PREVIEW (widget);
+	XviewerPrintImageSetupPrivate *priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
+	XviewerPrintPreview *preview = XVIEWER_PRINT_PREVIEW (widget);
 	gfloat scale;
 
-	scale = eog_print_preview_get_scale (preview);
+	scale = xviewer_print_preview_get_scale (preview);
 
-	if (!eog_print_preview_point_in_image_area (preview,
+	if (!xviewer_print_preview_point_in_image_area (preview,
 						    event->x, event->y))
 	{
 		return FALSE;
@@ -671,11 +671,11 @@ on_preview_image_key_pressed (GtkWidget *widget,
 			      GdkEventKey *event,
 			      gpointer user_data)
 {
-	EogPrintImageSetupPrivate *priv = EOG_PRINT_IMAGE_SETUP (user_data)->priv;
-	EogPrintPreview *preview = EOG_PRINT_PREVIEW (widget);
+	XviewerPrintImageSetupPrivate *priv = XVIEWER_PRINT_IMAGE_SETUP (user_data)->priv;
+	XviewerPrintPreview *preview = XVIEWER_PRINT_PREVIEW (widget);
 	gfloat scale;
 
-	scale = eog_print_preview_get_scale (preview);
+	scale = xviewer_print_preview_get_scale (preview);
 
 	switch (event->keyval) {
 	case GDK_KEY_KP_Add:
@@ -747,13 +747,13 @@ grid_attach_spin_button_with_label (GtkWidget *grid,
 
 
 static void
-eog_print_image_setup_set_property (GObject      *object,
+xviewer_print_image_setup_set_property (GObject      *object,
 				    guint         prop_id,
 				    const GValue *value,
 				    GParamSpec   *pspec)
 {
-	EogPrintImageSetup *setup = EOG_PRINT_IMAGE_SETUP (object);
-	EogPrintImageSetupPrivate *priv = setup->priv;
+	XviewerPrintImageSetup *setup = XVIEWER_PRINT_IMAGE_SETUP (object);
+	XviewerPrintImageSetupPrivate *priv = setup->priv;
 	GdkPixbuf *pixbuf;
 
 	switch (prop_id) {
@@ -761,9 +761,9 @@ eog_print_image_setup_set_property (GObject      *object,
 		if (priv->image) {
 			g_object_unref (priv->image);
 		}
-		priv->image = EOG_IMAGE (g_value_dup_object (value));
-		if (EOG_IS_IMAGE (priv->image)) {
-			pixbuf = eog_image_get_pixbuf (priv->image);
+		priv->image = XVIEWER_IMAGE (g_value_dup_object (value));
+		if (XVIEWER_IS_IMAGE (priv->image)) {
+			pixbuf = xviewer_image_get_pixbuf (priv->image);
 			g_object_set (priv->preview, "image",
 				      pixbuf, NULL);
 			g_object_unref (pixbuf);
@@ -778,13 +778,13 @@ eog_print_image_setup_set_property (GObject      *object,
 }
 
 static void
-eog_print_image_setup_get_property (GObject    *object,
+xviewer_print_image_setup_get_property (GObject    *object,
 				    guint       prop_id,
 				    GValue     *value,
 				    GParamSpec *pspec)
 {
-	EogPrintImageSetup *setup = EOG_PRINT_IMAGE_SETUP (object);
-	EogPrintImageSetupPrivate *priv = setup->priv;
+	XviewerPrintImageSetup *setup = XVIEWER_PRINT_IMAGE_SETUP (object);
+	XviewerPrintImageSetupPrivate *priv = setup->priv;
 
 	switch (prop_id) {
 	case PROP_IMAGE:
@@ -799,11 +799,11 @@ eog_print_image_setup_get_property (GObject    *object,
 }
 
 static void
-set_initial_values (EogPrintImageSetup *setup)
+set_initial_values (XviewerPrintImageSetup *setup)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 	GtkPageSetup *page_setup;
-	EogImage *image;
+	XviewerImage *image;
 	gdouble page_width, page_height;
 	gint pix_width, pix_height;
 	gdouble factor;
@@ -816,7 +816,7 @@ set_initial_values (EogPrintImageSetup *setup)
 
 	factor = get_scale_to_px_factor (setup);
 
-	eog_image_get_size (image, &pix_width, &pix_height);
+	xviewer_image_get_size (image, &pix_width, &pix_height);
 	width = (gdouble)pix_width/factor;
 	height = (gdouble)pix_height/factor;
 
@@ -829,7 +829,7 @@ set_initial_values (EogPrintImageSetup *setup)
 	gtk_range_set_increments (GTK_RANGE (priv->scaling), max_perc, 10*max_perc);
 	gtk_range_set_value (GTK_RANGE (priv->scaling), 100*max_perc);
 
-	eog_print_preview_set_scale (EOG_PRINT_PREVIEW (priv->preview), max_perc);
+	xviewer_print_preview_set_scale (XVIEWER_PRINT_PREVIEW (priv->preview), max_perc);
 	gtk_spin_button_set_range (GTK_SPIN_BUTTON (priv->width), 0, width);
 	gtk_spin_button_set_range (GTK_SPIN_BUTTON (priv->height), 0, height);
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON (priv->width), width);
@@ -854,9 +854,9 @@ set_initial_values (EogPrintImageSetup *setup)
 }
 
 static void
-connect_signals (EogPrintImageSetup *setup)
+connect_signals (XviewerPrintImageSetup *setup)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
 	priv = setup->priv;
 
@@ -885,18 +885,18 @@ connect_signals (EogPrintImageSetup *setup)
 }
 
 static void
-eog_print_image_setup_class_init (EogPrintImageSetupClass *class)
+xviewer_print_image_setup_class_init (XviewerPrintImageSetupClass *class)
 {
 	GObjectClass *object_class = (GObjectClass *)class;
 
-	object_class->set_property = eog_print_image_setup_set_property;
-	object_class->get_property = eog_print_image_setup_get_property;
+	object_class->set_property = xviewer_print_image_setup_set_property;
+	object_class->get_property = xviewer_print_image_setup_get_property;
 
 	g_object_class_install_property (object_class, PROP_IMAGE,
 					 g_param_spec_object ("image",
 							      _("Image"),
 							      _("The image whose printing properties will be set up"),
-							      EOG_TYPE_IMAGE,
+							      XVIEWER_TYPE_IMAGE,
 							      G_PARAM_READWRITE));
 
 	g_object_class_install_property (object_class, PROP_PAGE_SETUP,
@@ -908,20 +908,20 @@ eog_print_image_setup_class_init (EogPrintImageSetupClass *class)
 }
 
 static void
-eog_print_image_setup_init (EogPrintImageSetup *setup)
+xviewer_print_image_setup_init (XviewerPrintImageSetup *setup)
 {
 	GtkWidget *frame;
 	GtkWidget *grid;
 	GtkWidget *label;
 	GtkWidget *hscale;
 	GtkWidget *combobox;
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
 #ifdef HAVE__NL_MEASUREMENT_MEASUREMENT
 	gchar *locale_scale = NULL;
 #endif
 
-	priv = setup->priv = eog_print_image_setup_get_instance_private (setup);
+	priv = setup->priv = xviewer_print_image_setup_get_instance_private (setup);
 
 	priv->image = NULL;
 
@@ -1016,7 +1016,7 @@ eog_print_image_setup_init (EogPrintImageSetup *setup)
 	g_signal_connect (G_OBJECT (combobox), "changed",
 			  G_CALLBACK (on_unit_changed), setup);
 
-	priv->preview = eog_print_preview_new ();
+	priv->preview = xviewer_print_preview_new ();
 
 	/* FIXME: This shouldn't be set by hand */
 	gtk_widget_set_size_request (priv->preview, 250, 250);
@@ -1030,24 +1030,24 @@ eog_print_image_setup_init (EogPrintImageSetup *setup)
 
 
 /**
- * eog_print_image_setup_new:
- * @image: the #EogImage to print
+ * xviewer_print_image_setup_new:
+ * @image: the #XviewerImage to print
  * @page_setup: a #GtkPageSetup specifying the page where
  * the image will be print
  *
- * Creates a new #EogPrintImageSetup widget, to be used as a custom
+ * Creates a new #XviewerPrintImageSetup widget, to be used as a custom
  * widget in a #GtkPrintUnixDialog. This widgets allows to set
  * the image position and scale in a page.
  *
- * Returns: a new #EogPrintImageSetup
+ * Returns: a new #XviewerPrintImageSetup
  **/
 GtkWidget *
-eog_print_image_setup_new (EogImage *image, GtkPageSetup *page_setup)
+xviewer_print_image_setup_new (XviewerImage *image, GtkPageSetup *page_setup)
 {
 	GtkWidget *setup;
 	GtkWidget *preview;
 
-	setup = g_object_new (EOG_TYPE_PRINT_IMAGE_SETUP,
+	setup = g_object_new (XVIEWER_TYPE_PRINT_IMAGE_SETUP,
 			     "orientation", GTK_ORIENTATION_VERTICAL,
 			     "row-spacing", 18,
 			     "column-spacing", 18,
@@ -1056,37 +1056,37 @@ eog_print_image_setup_new (EogImage *image, GtkPageSetup *page_setup)
 			     "page-setup", page_setup,
 			     NULL);
 
-	set_initial_values (EOG_PRINT_IMAGE_SETUP (setup));
+	set_initial_values (XVIEWER_PRINT_IMAGE_SETUP (setup));
 
-	preview = EOG_PRINT_IMAGE_SETUP (setup)->priv->preview;
-	eog_print_preview_set_from_page_setup (EOG_PRINT_PREVIEW (preview),
+	preview = XVIEWER_PRINT_IMAGE_SETUP (setup)->priv->preview;
+	xviewer_print_preview_set_from_page_setup (XVIEWER_PRINT_PREVIEW (preview),
 					       page_setup);
 
-	connect_signals (EOG_PRINT_IMAGE_SETUP (setup));
+	connect_signals (XVIEWER_PRINT_IMAGE_SETUP (setup));
 
 	return setup;
 }
 
 /**
- * eog_print_image_setup_get_options:
- * @setup: a #EogPrintImageSetup
+ * xviewer_print_image_setup_get_options:
+ * @setup: a #XviewerPrintImageSetup
  * @left: a pointer where to store the image's left position
  * @top: a pointer where to store the image's top position
  * @scale: a pointer where to store the image's scale
  * @unit: a pointer where to store the #GtkUnit used by the @left and @top values.
  *
- * Gets the options set by the #EogPrintImageSetup.
+ * Gets the options set by the #XviewerPrintImageSetup.
  **/
 void
-eog_print_image_setup_get_options (EogPrintImageSetup *setup,
+xviewer_print_image_setup_get_options (XviewerPrintImageSetup *setup,
 				   gdouble *left,
 				   gdouble *top,
 				   gdouble *scale,
 				   GtkUnit *unit)
 {
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 
-	g_return_if_fail (EOG_IS_PRINT_IMAGE_SETUP (setup));
+	g_return_if_fail (XVIEWER_IS_PRINT_IMAGE_SETUP (setup));
 
 	priv = setup->priv;
 
@@ -1097,7 +1097,7 @@ eog_print_image_setup_get_options (EogPrintImageSetup *setup,
 }
 
 void
-eog_print_image_setup_update (GtkPrintOperation *operation,
+xviewer_print_image_setup_update (GtkPrintOperation *operation,
 			      GtkWidget         *custom_widget,
 			      GtkPageSetup      *page_setup,
 			      GtkPrintSettings  *print_settings,
@@ -1106,16 +1106,16 @@ eog_print_image_setup_update (GtkPrintOperation *operation,
 	GtkWidget *preview;
 	gdouble    pos_x;
 	gdouble    pos_y;
-	EogPrintImageSetup *setup;
+	XviewerPrintImageSetup *setup;
 
-	setup = EOG_PRINT_IMAGE_SETUP (custom_widget);
+	setup = XVIEWER_PRINT_IMAGE_SETUP (custom_widget);
 
 	setup->priv->page_setup = gtk_page_setup_copy (page_setup);
 
-	set_initial_values (EOG_PRINT_IMAGE_SETUP (setup));
+	set_initial_values (XVIEWER_PRINT_IMAGE_SETUP (setup));
 
-	preview = EOG_PRINT_IMAGE_SETUP (setup)->priv->preview;
-	eog_print_preview_set_from_page_setup (EOG_PRINT_PREVIEW (preview),
+	preview = XVIEWER_PRINT_IMAGE_SETUP (setup)->priv->preview;
+	xviewer_print_preview_set_from_page_setup (XVIEWER_PRINT_PREVIEW (preview),
 					       setup->priv->page_setup);
 
 	pos_x = gtk_spin_button_get_value (GTK_SPIN_BUTTON (setup->priv->left));
@@ -1124,5 +1124,5 @@ eog_print_image_setup_update (GtkPrintOperation *operation,
 		pos_x *= FACTOR_MM_TO_INCH;
 		pos_y *= FACTOR_MM_TO_INCH;
 	}
-	eog_print_preview_set_image_position (EOG_PRINT_PREVIEW (setup->priv->preview), pos_x, pos_y);
+	xviewer_print_preview_set_image_position (XVIEWER_PRINT_PREVIEW (setup->priv->preview), pos_x, pos_y);
 }

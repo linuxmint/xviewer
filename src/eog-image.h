@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Image
+/* Xviewer - Image
  *
  * Copyright (C) 2007 The Free Software Foundation
  *
@@ -19,14 +19,14 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_IMAGE_H__
-#define __EOG_IMAGE_H__
+#ifndef __XVIEWER_IMAGE_H__
+#define __XVIEWER_IMAGE_H__
 
-#include "eog-jobs.h"
-#include "eog-window.h"
-#include "eog-transform.h"
-#include "eog-image-save-info.h"
-#include "eog-enums.h"
+#include "xviewer-jobs.h"
+#include "xviewer-window.h"
+#include "xviewer-transform.h"
+#include "xviewer-image-save-info.h"
+#include "xviewer-enums.h"
 
 #include <glib.h>
 #include <glib-object.h>
@@ -34,7 +34,7 @@
 
 #ifdef HAVE_EXIF
 #include <libexif/exif-data.h>
-#include "eog-exif-util.h"
+#include "xviewer-exif-util.h"
 #endif
 
 #ifdef HAVE_LCMS
@@ -47,178 +47,178 @@
 
 G_BEGIN_DECLS
 
-#ifndef __EOG_IMAGE_DECLR__
-#define __EOG_IMAGE_DECLR__
-typedef struct _EogImage EogImage;
+#ifndef __XVIEWER_IMAGE_DECLR__
+#define __XVIEWER_IMAGE_DECLR__
+typedef struct _XviewerImage XviewerImage;
 #endif
-typedef struct _EogImageClass EogImageClass;
-typedef struct _EogImagePrivate EogImagePrivate;
+typedef struct _XviewerImageClass XviewerImageClass;
+typedef struct _XviewerImagePrivate XviewerImagePrivate;
 
-#define EOG_TYPE_IMAGE            (eog_image_get_type ())
-#define EOG_IMAGE(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), EOG_TYPE_IMAGE, EogImage))
-#define EOG_IMAGE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  EOG_TYPE_IMAGE, EogImageClass))
-#define EOG_IS_IMAGE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOG_TYPE_IMAGE))
-#define EOG_IS_IMAGE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  EOG_TYPE_IMAGE))
-#define EOG_IMAGE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOG_TYPE_IMAGE, EogImageClass))
-
-typedef enum {
-	EOG_IMAGE_ERROR_SAVE_NOT_LOCAL,
-	EOG_IMAGE_ERROR_NOT_LOADED,
-	EOG_IMAGE_ERROR_NOT_SAVED,
-	EOG_IMAGE_ERROR_VFS,
-	EOG_IMAGE_ERROR_FILE_EXISTS,
-	EOG_IMAGE_ERROR_TMP_FILE_FAILED,
-	EOG_IMAGE_ERROR_GENERIC,
-	EOG_IMAGE_ERROR_UNKNOWN
-} EogImageError;
-
-#define EOG_IMAGE_ERROR eog_image_error_quark ()
+#define XVIEWER_TYPE_IMAGE            (xviewer_image_get_type ())
+#define XVIEWER_IMAGE(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), XVIEWER_TYPE_IMAGE, XviewerImage))
+#define XVIEWER_IMAGE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),  XVIEWER_TYPE_IMAGE, XviewerImageClass))
+#define XVIEWER_IS_IMAGE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj), XVIEWER_TYPE_IMAGE))
+#define XVIEWER_IS_IMAGE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),  XVIEWER_TYPE_IMAGE))
+#define XVIEWER_IMAGE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  XVIEWER_TYPE_IMAGE, XviewerImageClass))
 
 typedef enum {
-	EOG_IMAGE_STATUS_UNKNOWN,
-	EOG_IMAGE_STATUS_LOADING,
-	EOG_IMAGE_STATUS_LOADED,
-	EOG_IMAGE_STATUS_SAVING,
-	EOG_IMAGE_STATUS_FAILED
-} EogImageStatus;
+	XVIEWER_IMAGE_ERROR_SAVE_NOT_LOCAL,
+	XVIEWER_IMAGE_ERROR_NOT_LOADED,
+	XVIEWER_IMAGE_ERROR_NOT_SAVED,
+	XVIEWER_IMAGE_ERROR_VFS,
+	XVIEWER_IMAGE_ERROR_FILE_EXISTS,
+	XVIEWER_IMAGE_ERROR_TMP_FILE_FAILED,
+	XVIEWER_IMAGE_ERROR_GENERIC,
+	XVIEWER_IMAGE_ERROR_UNKNOWN
+} XviewerImageError;
+
+#define XVIEWER_IMAGE_ERROR xviewer_image_error_quark ()
 
 typedef enum {
-  EOG_IMAGE_METADATA_NOT_READ,
-  EOG_IMAGE_METADATA_NOT_AVAILABLE,
-  EOG_IMAGE_METADATA_READY
-} EogImageMetadataStatus;
+	XVIEWER_IMAGE_STATUS_UNKNOWN,
+	XVIEWER_IMAGE_STATUS_LOADING,
+	XVIEWER_IMAGE_STATUS_LOADED,
+	XVIEWER_IMAGE_STATUS_SAVING,
+	XVIEWER_IMAGE_STATUS_FAILED
+} XviewerImageStatus;
 
-struct _EogImage {
+typedef enum {
+  XVIEWER_IMAGE_METADATA_NOT_READ,
+  XVIEWER_IMAGE_METADATA_NOT_AVAILABLE,
+  XVIEWER_IMAGE_METADATA_READY
+} XviewerImageMetadataStatus;
+
+struct _XviewerImage {
 	GObject parent;
 
-	EogImagePrivate *priv;
+	XviewerImagePrivate *priv;
 };
 
-struct _EogImageClass {
+struct _XviewerImageClass {
 	GObjectClass parent_class;
 
-	void (* changed) 	   (EogImage *img);
+	void (* changed) 	   (XviewerImage *img);
 
-	void (* size_prepared)     (EogImage *img,
+	void (* size_prepared)     (XviewerImage *img,
 				    int       width,
 				    int       height);
 
-	void (* thumbnail_changed) (EogImage *img);
+	void (* thumbnail_changed) (XviewerImage *img);
 
-	void (* save_progress)     (EogImage *img,
+	void (* save_progress)     (XviewerImage *img,
 				    gfloat    progress);
 
-	void (* next_frame)        (EogImage *img,
+	void (* next_frame)        (XviewerImage *img,
 				    gint delay);
 
-	void (* file_changed)      (EogImage *img);
+	void (* file_changed)      (XviewerImage *img);
 };
 
-GType	          eog_image_get_type	             (void) G_GNUC_CONST;
+GType	          xviewer_image_get_type	             (void) G_GNUC_CONST;
 
-GQuark            eog_image_error_quark              (void);
+GQuark            xviewer_image_error_quark              (void);
 
-EogImage         *eog_image_new                      (const char *txt_uri);
+XviewerImage         *xviewer_image_new                      (const char *txt_uri);
 
-EogImage         *eog_image_new_file                 (GFile *file);
+XviewerImage         *xviewer_image_new_file                 (GFile *file);
 
-gboolean          eog_image_load                     (EogImage   *img,
-					              EogImageData data2read,
-					              EogJob     *job,
+gboolean          xviewer_image_load                     (XviewerImage   *img,
+					              XviewerImageData data2read,
+					              XviewerJob     *job,
 					              GError    **error);
 
-void              eog_image_cancel_load              (EogImage   *img);
+void              xviewer_image_cancel_load              (XviewerImage   *img);
 
-gboolean          eog_image_has_data                 (EogImage   *img,
-					              EogImageData data);
+gboolean          xviewer_image_has_data                 (XviewerImage   *img,
+					              XviewerImageData data);
 
-void              eog_image_data_ref                 (EogImage   *img);
+void              xviewer_image_data_ref                 (XviewerImage   *img);
 
-void              eog_image_data_unref               (EogImage   *img);
+void              xviewer_image_data_unref               (XviewerImage   *img);
 
-void              eog_image_set_thumbnail            (EogImage   *img,
+void              xviewer_image_set_thumbnail            (XviewerImage   *img,
 					              GdkPixbuf  *pixbuf);
 
-gboolean          eog_image_save_as_by_info          (EogImage   *img,
-		      			              EogImageSaveInfo *source,
-		      			              EogImageSaveInfo *target,
+gboolean          xviewer_image_save_as_by_info          (XviewerImage   *img,
+		      			              XviewerImageSaveInfo *source,
+		      			              XviewerImageSaveInfo *target,
 		      			              GError    **error);
 
-gboolean          eog_image_save_by_info             (EogImage   *img,
-					              EogImageSaveInfo *source,
+gboolean          xviewer_image_save_by_info             (XviewerImage   *img,
+					              XviewerImageSaveInfo *source,
 					              GError    **error);
 
-GdkPixbuf*        eog_image_get_pixbuf               (EogImage   *img);
+GdkPixbuf*        xviewer_image_get_pixbuf               (XviewerImage   *img);
 
-GdkPixbuf*        eog_image_get_thumbnail            (EogImage   *img);
+GdkPixbuf*        xviewer_image_get_thumbnail            (XviewerImage   *img);
 
-void              eog_image_get_size                 (EogImage   *img,
+void              xviewer_image_get_size                 (XviewerImage   *img,
 					              gint       *width,
 					              gint       *height);
 
-goffset           eog_image_get_bytes                (EogImage   *img);
+goffset           xviewer_image_get_bytes                (XviewerImage   *img);
 
-gboolean          eog_image_is_modified              (EogImage   *img);
+gboolean          xviewer_image_is_modified              (XviewerImage   *img);
 
-void              eog_image_modified                 (EogImage   *img);
+void              xviewer_image_modified                 (XviewerImage   *img);
 
-const gchar*      eog_image_get_caption              (EogImage   *img);
+const gchar*      xviewer_image_get_caption              (XviewerImage   *img);
 
-const gchar      *eog_image_get_collate_key          (EogImage   *img);
+const gchar      *xviewer_image_get_collate_key          (XviewerImage   *img);
 
 #if HAVE_EXIF
-ExifData*      eog_image_get_exif_info            (EogImage   *img);
+ExifData*      xviewer_image_get_exif_info            (XviewerImage   *img);
 #endif
 
-gpointer          eog_image_get_xmp_info             (EogImage   *img);
+gpointer          xviewer_image_get_xmp_info             (XviewerImage   *img);
 
-GFile*            eog_image_get_file                 (EogImage   *img);
+GFile*            xviewer_image_get_file                 (XviewerImage   *img);
 
-gchar*            eog_image_get_uri_for_display      (EogImage   *img);
+gchar*            xviewer_image_get_uri_for_display      (XviewerImage   *img);
 
-EogImageStatus    eog_image_get_status               (EogImage   *img);
+XviewerImageStatus    xviewer_image_get_status               (XviewerImage   *img);
 
-EogImageMetadataStatus eog_image_get_metadata_status (EogImage   *img);
+XviewerImageMetadataStatus xviewer_image_get_metadata_status (XviewerImage   *img);
 
-void              eog_image_transform                (EogImage   *img,
-						      EogTransform *trans,
-						      EogJob     *job);
+void              xviewer_image_transform                (XviewerImage   *img,
+						      XviewerTransform *trans,
+						      XviewerJob     *job);
 
-void              eog_image_autorotate               (EogImage   *img);
+void              xviewer_image_autorotate               (XviewerImage   *img);
 
 #ifdef HAVE_LCMS
-cmsHPROFILE       eog_image_get_profile              (EogImage    *img);
+cmsHPROFILE       xviewer_image_get_profile              (XviewerImage    *img);
 
-void              eog_image_apply_display_profile    (EogImage    *img,
+void              xviewer_image_apply_display_profile    (XviewerImage    *img,
 						      cmsHPROFILE  display_profile);
 #endif
 
-void              eog_image_undo                     (EogImage   *img);
+void              xviewer_image_undo                     (XviewerImage   *img);
 
-GList		 *eog_image_get_supported_mime_types (void);
+GList		 *xviewer_image_get_supported_mime_types (void);
 
-gboolean          eog_image_is_supported_mime_type   (const char *mime_type);
+gboolean          xviewer_image_is_supported_mime_type   (const char *mime_type);
 
-gboolean          eog_image_is_animation             (EogImage *img);
+gboolean          xviewer_image_is_animation             (XviewerImage *img);
 
-gboolean          eog_image_start_animation          (EogImage *img);
+gboolean          xviewer_image_start_animation          (XviewerImage *img);
 
 #ifdef HAVE_RSVG
-gboolean          eog_image_is_svg                   (EogImage *img);
-RsvgHandle       *eog_image_get_svg                  (EogImage *img);
+gboolean          xviewer_image_is_svg                   (XviewerImage *img);
+RsvgHandle       *xviewer_image_get_svg                  (XviewerImage *img);
 #endif
 
-EogTransform     *eog_image_get_transform            (EogImage *img);
-EogTransform     *eog_image_get_autorotate_transform (EogImage *img);
+XviewerTransform     *xviewer_image_get_transform            (XviewerImage *img);
+XviewerTransform     *xviewer_image_get_autorotate_transform (XviewerImage *img);
 
-gboolean          eog_image_is_jpeg                  (EogImage *img);
+gboolean          xviewer_image_is_jpeg                  (XviewerImage *img);
 
-void              eog_image_file_changed             (EogImage *img);
+void              xviewer_image_file_changed             (XviewerImage *img);
 
-gboolean          eog_image_is_file_changed          (EogImage *img);
+gboolean          xviewer_image_is_file_changed          (XviewerImage *img);
 
-gboolean          eog_image_is_file_writable         (EogImage *img);
+gboolean          xviewer_image_is_file_writable         (XviewerImage *img);
 
 G_END_DECLS
 
-#endif /* __EOG_IMAGE_H__ */
+#endif /* __XVIEWER_IMAGE_H__ */

@@ -1,4 +1,4 @@
-/* Eye Of GNOME -- Print Dialog Custom Widget
+/* Xviewer -- Print Dialog Custom Widget
  *
  * Copyright (C) 2006-2007 The Free Software Foundation
  *
@@ -19,49 +19,49 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "eog-image.h"
+#include "xviewer-image.h"
 
-#ifndef EOG_PRINT_IMAGE_SETUP_H
-#define EOG_PRINT_IMAGE_SETUP_H
+#ifndef XVIEWER_PRINT_IMAGE_SETUP_H
+#define XVIEWER_PRINT_IMAGE_SETUP_H
 
 G_BEGIN_DECLS
 
-typedef struct _EogPrintImageSetup         EogPrintImageSetup;
-typedef struct _EogPrintImageSetupClass    EogPrintImageSetupClass;
-typedef struct _EogPrintImageSetupPrivate  EogPrintImageSetupPrivate;
+typedef struct _XviewerPrintImageSetup         XviewerPrintImageSetup;
+typedef struct _XviewerPrintImageSetupClass    XviewerPrintImageSetupClass;
+typedef struct _XviewerPrintImageSetupPrivate  XviewerPrintImageSetupPrivate;
 
-#define EOG_TYPE_PRINT_IMAGE_SETUP            (eog_print_image_setup_get_type ())
-#define EOG_PRINT_IMAGE_SETUP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOG_TYPE_PRINT_IMAGE_SETUP, EogPrintImageSetup))
-#define EOG_PRINT_IMAGE_SETUP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), EOG_TYPE_PRINT_IMAGE_SETUP, EogPrintImageSetupClass))
-#define EOG_IS_PRINT_IMAGE_SETUP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOG_TYPE_PRINT_IMAGE_SETUP))
-#define EOG_IS_PRINT_IMAGE_SETUP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EOG_TYPE_PRINT_IMAGE_SETUP))
-#define EOG_PRINT_IMAGE_SETUP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EOG_TYPE_PRINT_IMAGE_SETUP, EogPrintImageSetupClass))
+#define XVIEWER_TYPE_PRINT_IMAGE_SETUP            (xviewer_print_image_setup_get_type ())
+#define XVIEWER_PRINT_IMAGE_SETUP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XVIEWER_TYPE_PRINT_IMAGE_SETUP, XviewerPrintImageSetup))
+#define XVIEWER_PRINT_IMAGE_SETUP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XVIEWER_TYPE_PRINT_IMAGE_SETUP, XviewerPrintImageSetupClass))
+#define XVIEWER_IS_PRINT_IMAGE_SETUP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XVIEWER_TYPE_PRINT_IMAGE_SETUP))
+#define XVIEWER_IS_PRINT_IMAGE_SETUP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XVIEWER_TYPE_PRINT_IMAGE_SETUP))
+#define XVIEWER_PRINT_IMAGE_SETUP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XVIEWER_TYPE_PRINT_IMAGE_SETUP, XviewerPrintImageSetupClass))
 
-struct _EogPrintImageSetup {
+struct _XviewerPrintImageSetup {
 	GtkGrid parent_instance;
 
-	EogPrintImageSetupPrivate *priv;
+	XviewerPrintImageSetupPrivate *priv;
 };
 
-struct _EogPrintImageSetupClass {
+struct _XviewerPrintImageSetupClass {
 	GtkGridClass parent_class;
 };
 
 G_GNUC_INTERNAL
-GType		  eog_print_image_setup_get_type    (void) G_GNUC_CONST;
+GType		  xviewer_print_image_setup_get_type    (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-GtkWidget        *eog_print_image_setup_new         (EogImage     *image,
+GtkWidget        *xviewer_print_image_setup_new         (XviewerImage     *image,
 						     GtkPageSetup *page_setup);
 
 G_GNUC_INTERNAL
-void              eog_print_image_setup_get_options (EogPrintImageSetup *setup,
+void              xviewer_print_image_setup_get_options (XviewerPrintImageSetup *setup,
 						     gdouble            *left,
 						     gdouble            *top,
 						     gdouble            *scale,
 						     GtkUnit            *unit);
 G_GNUC_INTERNAL
-void              eog_print_image_setup_update      (GtkPrintOperation *operation,
+void              xviewer_print_image_setup_update      (GtkPrintOperation *operation,
 						     GtkWidget         *custom_widget,
 						     GtkPageSetup      *page_setup,
 						     GtkPrintSettings  *print_settings,
@@ -69,4 +69,4 @@ void              eog_print_image_setup_update      (GtkPrintOperation *operatio
 
 G_END_DECLS
 
-#endif /* EOG_PRINT_IMAGE_SETUP_H */
+#endif /* XVIEWER_PRINT_IMAGE_SETUP_H */

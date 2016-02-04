@@ -1,6 +1,6 @@
-# Brazilian Portuguese translation of eog.
+# Brazilian Portuguese translation of xviewer.
 # Copyright (C) 2000-2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the eog package.
+# This file is distributed under the same license as the xviewer package.
 # Eduardo Belloti <ebelloti@terra.com.br>, 2000.
 # Francisco Petrúcio Cavalcante Junior <fpcj@impa.br>, 2001.
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2002, 2006.
@@ -27,9 +27,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eog\n"
+"Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=general\n"
+"product=xviewer&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-01-04 20:10+0000\n"
 "PO-Revision-Date: 2014-01-21 14:56-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
@@ -81,350 +81,350 @@ msgstr "Remove a barra de ferramentas selecionada"
 msgid "Separator"
 msgstr "Separador"
 
-#: ../data/eog-app-menu.xml.h:1 ../src/eog-window.c:4027
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4027
 msgid "_View"
 msgstr "_Ver"
 
-#: ../data/eog-app-menu.xml.h:2 ../src/eog-window.c:4053
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4053
 msgid "_Toolbar"
 msgstr "Barra de _ferramentas"
 
-#: ../data/eog-app-menu.xml.h:3 ../src/eog-window.c:4056
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4056
 msgid "_Statusbar"
 msgstr "Barra de _status"
 
-#: ../data/eog-app-menu.xml.h:4 ../src/eog-window.c:4059
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4059
 msgid "_Image Gallery"
 msgstr "Galeria de _imagens"
 
-#: ../data/eog-app-menu.xml.h:5 ../src/eog-window.c:4062
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4062
 msgid "Side _Pane"
 msgstr "_Painel lateral"
 
-#: ../data/eog-app-menu.xml.h:6 ../src/eog-window.c:4041
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4041
 msgid "Prefere_nces"
 msgstr "_Preferências"
 
-#: ../data/eog-app-menu.xml.h:7 ../src/eog-window.c:2565
-#: ../src/eog-window.c:4030
+#: ../data/xviewer-app-menu.xml.h:7 ../src/xviewer-window.c:2565
+#: ../src/xviewer-window.c:4030
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: ../data/eog-app-menu.xml.h:8 ../src/eog-window.c:4047
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4047
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../data/eog-app-menu.xml.h:9
+#: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
 msgstr "_Sair"
 
-#: ../data/eog.appdata.xml.in.h:1
+#: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
-"The Eye of GNOME is the official image viewer for the GNOME desktop. It "
+"Xviewer is the official image viewer for the GNOME desktop. It "
 "integrates with the GTK+ look and feel of GNOME, and supports many image "
 "formats for viewing single images or images in a collection."
 msgstr ""
-"O Eye of GNOME é o visualizador de imagens oficial do ambiente GNOME. Ele se "
+"O Xviewer é o visualizador de imagens oficial do ambiente GNOME. Ele se "
 "integra com o visual do GTK+ do GNOME e possui suporte a muitos formatos de "
 "imagem para visualização de imagens singulares ou imagens em uma coleção."
 
-#: ../data/eog.appdata.xml.in.h:2
+#: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
-"The Eye of GNOME also allows to view the images in a fullscreen slideshow "
+"Xviewer also allows to view the images in a fullscreen slideshow "
 "mode or set an image as the desktop wallpaper. It reads the camera tags to "
 "automatically rotate your images in the correct portrait or landscape "
 "orientation."
 msgstr ""
-"O Eye of GNOME também permite a visualização de imagens em modo de "
+"O Xviewer também permite a visualização de imagens em modo de "
 "apresentação de slides em tela cheia ou definir uma imagem como plano de "
 "fundo da área de trabalho. Ele lê as etiquetas da câmera para girar "
 "automaticamente suas imagens na orientação correta - retrato ou paisagem."
 
-#: ../data/eog.desktop.in.in.h:1 ../src/eog-application.c:269
-#: ../src/eog-window.c:6144
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:269
+#: ../src/xviewer-window.c:6144
 msgid "Image Viewer"
 msgstr "Visualizador de imagens"
 
-#: ../data/eog.desktop.in.in.h:2
+#: ../data/xviewer.desktop.in.in.h:2
 msgid "Browse and rotate images"
 msgstr "Navegue e gire imagens"
 
-#. Extra keywords that can be used to search for eog in GNOME Shell and Unity
-#: ../data/eog.desktop.in.in.h:4
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Fotos;Apresentação de slides;Gráficos;"
 
-#: ../data/eog-image-properties-dialog.ui.h:1 ../src/eog-window.c:5020
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5020
 msgid "Image Properties"
 msgstr "Propriedades da imagem"
 
-#: ../data/eog-image-properties-dialog.ui.h:2
+#: ../data/xviewer-image-properties-dialog.ui.h:2
 msgid "_Previous"
 msgstr "_Anterior"
 
-#: ../data/eog-image-properties-dialog.ui.h:3
+#: ../data/xviewer-image-properties-dialog.ui.h:3
 msgid "_Next"
 msgstr "_Próxima"
 
-#: ../data/eog-image-properties-dialog.ui.h:4
-#: ../src/eog-metadata-sidebar.c:495
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "Name:"
 msgstr "Nome:"
 
-#: ../data/eog-image-properties-dialog.ui.h:5
-#: ../src/eog-metadata-sidebar.c:497
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
 msgid "Width:"
 msgstr "Largura:"
 
-#: ../data/eog-image-properties-dialog.ui.h:6
-#: ../src/eog-metadata-sidebar.c:499
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
 msgid "Height:"
 msgstr "Altura:"
 
-#: ../data/eog-image-properties-dialog.ui.h:7
-#: ../src/eog-metadata-sidebar.c:501
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
 msgid "Type:"
 msgstr "Tipo:"
 
-#: ../data/eog-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:8
 msgid "Bytes:"
 msgstr "Bytes:"
 
-#: ../data/eog-image-properties-dialog.ui.h:9
-#: ../src/eog-metadata-sidebar.c:505
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "Folder:"
 msgstr "Pasta:"
 
-#: ../data/eog-image-properties-dialog.ui.h:10
-#: ../src/eog-metadata-sidebar.c:493
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:493
 msgid "General"
 msgstr "Geral"
 
-#: ../data/eog-image-properties-dialog.ui.h:11
-#: ../src/eog-metadata-sidebar.c:530
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:530
 msgid "Aperture Value:"
 msgstr "Valor da abertura:"
 
-#: ../data/eog-image-properties-dialog.ui.h:12
-#: ../src/eog-metadata-sidebar.c:533
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:533
 msgid "Exposure Time:"
 msgstr "Tempo de exposição:"
 
-#: ../data/eog-image-properties-dialog.ui.h:13
-#: ../src/eog-metadata-sidebar.c:536
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:536
 msgid "Focal Length:"
 msgstr "Distância focal:"
 
-#: ../data/eog-image-properties-dialog.ui.h:14
-#: ../src/eog-metadata-sidebar.c:538
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Flash:"
 msgstr "Flash:"
 
-#: ../data/eog-image-properties-dialog.ui.h:15
-#: ../src/eog-metadata-sidebar.c:542
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:542
 msgid "ISO Speed Rating:"
 msgstr "Sensibilidade ISO"
 
-#: ../data/eog-image-properties-dialog.ui.h:16
-#: ../src/eog-metadata-sidebar.c:545
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:545
 msgid "Metering Mode:"
 msgstr "Modo de medição:"
 
-#: ../data/eog-image-properties-dialog.ui.h:17
-#: ../src/eog-metadata-sidebar.c:548
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:548
 msgid "Camera Model:"
 msgstr "Modelo da câmera:"
 
-#: ../data/eog-image-properties-dialog.ui.h:18
-#: ../src/eog-metadata-sidebar.c:550
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Date/Time:"
 msgstr "Data/Hora:"
 
-#: ../data/eog-image-properties-dialog.ui.h:19
-#: ../src/eog-metadata-sidebar.c:555
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:555
 msgid "Description:"
 msgstr "Descrição:"
 
-#: ../data/eog-image-properties-dialog.ui.h:20
-#: ../src/eog-metadata-sidebar.c:558
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:558
 msgid "Location:"
 msgstr "Localização:"
 
-#: ../data/eog-image-properties-dialog.ui.h:21
-#: ../src/eog-metadata-sidebar.c:561
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:561
 msgid "Keywords:"
 msgstr "Palavras-chave:"
 
-#: ../data/eog-image-properties-dialog.ui.h:22
-#: ../src/eog-metadata-sidebar.c:563
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Author:"
 msgstr "Autor:"
 
-#: ../data/eog-image-properties-dialog.ui.h:23
-#: ../src/eog-metadata-sidebar.c:566
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:566
 msgid "Copyright:"
 msgstr "Copyright:"
 
-#: ../data/eog-image-properties-dialog.ui.h:24
-#: ../src/eog-metadata-sidebar.c:569
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:569
 msgid "Details"
 msgstr "Detalhes"
 
-#: ../data/eog-image-properties-dialog.ui.h:25
-#: ../src/eog-metadata-sidebar.c:526
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:526
 msgid "Metadata"
 msgstr "Metadados"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:1
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
 msgstr "Salvar como"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:3
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> nome de arquivo original"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> contador"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:6
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
 msgid "_Filename format:"
 msgstr "_Formato do nome de arquivo:"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:7
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 msgid "_Destination folder:"
 msgstr "Pasta de _destino:"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:8
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "Choose a folder"
 msgstr "Escolha um diretório"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:9
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "File Path Specifications"
 msgstr "Especificações do caminho dos arquivos"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:10
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "_Start counter at:"
 msgstr "_Iniciar contador em:"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:11
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "_Replace spaces with underscores"
 msgstr "_Substituir espaços por sublinhado"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:12
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 msgid "Options"
 msgstr "Opções"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:13
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "Rename from:"
 msgstr "Renomear de:"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "To:"
 msgstr "Para:"
 
-#: ../data/eog-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
 msgstr "Visualização do nome de arquivo"
 
-#: ../data/eog-preferences-dialog.ui.h:1
+#: ../data/xviewer-preferences-dialog.ui.h:1
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../data/eog-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:2
 msgid "Image Enhancements"
 msgstr "Aprimoramento de imagens"
 
-#: ../data/eog-preferences-dialog.ui.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:3
 msgid "Smooth images when zoomed _out"
 msgstr "Suavizar imagens ao _reduzir"
 
-#: ../data/eog-preferences-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Smooth images when zoomed _in"
 msgstr "Suavizar imagens ao _ampliar"
 
-#: ../data/eog-preferences-dialog.ui.h:5
+#: ../data/xviewer-preferences-dialog.ui.h:5
 msgid "_Automatic orientation"
 msgstr "_Orientação automática"
 
-#: ../data/eog-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:6
 msgid "Background"
 msgstr "Plano de fundo"
 
-#: ../data/eog-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "As custom color:"
 msgstr "Como cor personalizada:"
 
-#: ../data/eog-preferences-dialog.ui.h:8
-#: ../data/org.gnome.eog.gschema.xml.in.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:8
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Cor do plano de fundo"
 
-#: ../data/eog-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "Transparent Parts"
 msgstr "Partes transparentes"
 
-#: ../data/eog-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:10
 msgid "As check _pattern"
 msgstr "Como _padrão quadriculado"
 
-#: ../data/eog-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "As custom c_olor:"
 msgstr "Como _cor personalizada:"
 
-#: ../data/eog-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "Color for Transparent Areas"
 msgstr "Cor para áreas transparentes"
 
-#: ../data/eog-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As _background"
 msgstr "Como plano de _fundo"
 
-#: ../data/eog-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Image View"
 msgstr "Visualização de imagens"
 
-#: ../data/eog-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "Image Zoom"
 msgstr "Zoom de imagem"
 
-#: ../data/eog-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "E_xpand images to fit screen"
 msgstr "_Ajustar imagens à tela"
 
-#: ../data/eog-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Sequence"
 msgstr "Sequência"
 
-#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in eog's preferences dialog.
-#: ../data/eog-preferences-dialog.ui.h:19
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "_Time between images:"
 msgstr "_Tempo entre as imagens:"
 
-#: ../data/eog-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "_Repetir a sequência"
 
-#: ../data/eog-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "Slideshow"
 msgstr "Apresentação de slides"
 
-#: ../data/eog-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "Plugins"
 msgstr "Plug-ins"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:1
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Orientação automática"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:2
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Gira ou não a imagem automaticamente com base na orientação EXIF."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:4
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -434,11 +434,11 @@ msgstr ""
 "background-color não for definida, a cor será determinada pelo tema GTK+ "
 "ativo."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:5
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Interpolar imagem"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:6
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -446,11 +446,11 @@ msgstr ""
 "Se a imagem deve ser interpolada ao reduzir. Isso leva a uma melhor "
 "qualidade mas é um pouco mais lento que imagens não interpoladas."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:7
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Extrapolar imagem"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:8
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -458,11 +458,11 @@ msgstr ""
 "Se a imagem deve ser extrapolada ao ampliar. Isso leva a uma qualidade "
 "embaçada e é um pouco mais lento do que não extrapoladar."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:9
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "Indicador de transparência"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:10
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
@@ -472,19 +472,19 @@ msgstr ""
 "CHECK_PATTERN, COLOR e NONE. Se COLOR for escolhido, então a chave de trans-"
 "color determina o valor da cor a ser usada."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:11
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "Ampliação através da roda do mouse"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:12
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Se a roda do mouse deve ou não ser usada para ampliar."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:13
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "Multiplicador de ampliação"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:15
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -497,11 +497,11 @@ msgstr ""
 "rolagem. Por exemplo, 0,05 resulta em um incremento de ampliação de 5% para "
 "cada evento de rolagem e 1,00 resulta em 100% de ampliação."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:16
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Cor de transparência"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:17
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -509,11 +509,11 @@ msgstr ""
 "Qual cor usar para indicar transparência, se a chave de transparência tiver "
 "o valor COLOR."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:18
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Usar uma cor de plano de fundo personalizada"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:19
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -523,20 +523,20 @@ msgstr ""
 "preencher a área atrás da imagem. Se não for definido, o atual tema GTK + "
 "irá determinar a cor de preenchimento."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:20
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "Voltar ao início da sequência de imagens"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:21
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Repete as sequências de imagens indefinidamente."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:23
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Permitir zoom inicial maior que 100%"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:24
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -544,11 +544,11 @@ msgstr ""
 "Se definido como FALSO, imagens pequenas não serão ampliadas inicialmente "
 "para se ajustarem ao tamanho da tela."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:25
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "Espera, em segundos, até mostrar a próxima imagem"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:26
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -557,19 +557,19 @@ msgstr ""
 "que a próxima seja mostrada automaticamente. Zero desabilita a navegação "
 "automática."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:27
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "Mostra/Oculta a barra de ferramentas da janela."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:28
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "Mostra/Oculta a barra de status da janela."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:29
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "Mostra/Oculta o painel da galeria de imagens."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:30
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -577,37 +577,37 @@ msgstr ""
 "Posicionamento do painel da coleção de imagens. Use 0 para baixo; 1 para a "
 "esquerda; 2 para cima; 3 para a direita."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:31
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Torna redimensionável o painel da coleção de imagens."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:32
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "Mostra/Oculta o painel lateral da janela."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:33
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Mostra/Oculta os botões de rolagem do painel da galeria de imagens."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:34
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "Fechar a janela principal sem perguntar se deseja salvar alterações."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:35
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "Mover para a lixeira sem perguntar"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:36
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:36
 msgid ""
-"If activated, Eye of GNOME won't ask for confirmation when moving images to "
+"If activated, Xviewer won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr ""
-"Se ativado, o Eye of GNOME não pedirá confirmação ao mover imagens para a "
+"Se ativado, o Xviewer não pedirá confirmação ao mover imagens para a "
 "lixeira. Ele ainda pedirá se algum dos arquivos não puder ser movido para a "
 "lixeira e em vez disso for excluído."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:37
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -615,7 +615,7 @@ msgstr ""
 "O seletor de arquivo deve mostrar a pasta de fotos do usuário se nenhuma "
 "imagem for carregada."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:38
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -627,13 +627,13 @@ msgstr ""
 "especial do usuário, XGD. Se desativado ou se a pasta de imagens não tive "
 "sido definida, será mostrado o diretório atual."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:39
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "A lista de metadados no diálogo de propriedades deve ter sua própria página."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:40
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -645,11 +645,11 @@ msgstr ""
 "diálogo mais utilizável em telas menores, por exemplo, como as utilizadas "
 "por netbooks. Se desativado, o widget será embutido na página \"Metadata\"."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:41
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Usar programa externo para editar imagens"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:42
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -659,18 +659,18 @@ msgstr ""
 "para editar imagens (quando o botão \"Editar imagem\" na barra de tarefa é "
 "clicado). Configure uma string vazia para desabilitar esta funcionalidade."
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:43
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Plug-ins ativos"
 
-#: ../data/org.gnome.eog.gschema.xml.in.h:44
+#: ../data/org.gnome.xviewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .eog-plugin file for obtaining the \"Location\" of a given "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
 "plugin."
 msgstr ""
 "Lista de plug-ins ativados. Não contém a sua \"Localização\". Veja o "
-"arquivo .eog-plugin para obter a \"Localização\" de um plug-in."
+"arquivo .xviewer-plugin para obter a \"Localização\" de um plug-in."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -680,12 +680,12 @@ msgstr "Tela cheia com clique duplo"
 msgid "Activate fullscreen mode with double-click"
 msgstr "Ativa o modo tela cheia com clique duplo"
 
-#: ../plugins/reload/eog-reload-plugin.c:74
+#: ../plugins/reload/xviewer-reload-plugin.c:74
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "Recarregar imagem"
 
-#: ../plugins/reload/eog-reload-plugin.c:76
+#: ../plugins/reload/xviewer-reload-plugin.c:76
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "Recarrega a imagem atual"
@@ -698,40 +698,40 @@ msgstr "Data na barra de status"
 msgid "Shows the image date in the window statusbar"
 msgstr "Mostra a data da imagem na barra de status da janela"
 
-#: ../src/eog-close-confirmation-dialog.c:167
+#: ../src/xviewer-close-confirmation-dialog.c:167
 msgid "Close _without Saving"
 msgstr "Fechar s_em salvar"
 
-#: ../src/eog-close-confirmation-dialog.c:173
-#: ../src/eog-error-message-area.c:119 ../src/eog-file-chooser.c:457
-#: ../src/eog-file-chooser.c:465 ../src/eog-file-chooser.c:473
-#: ../src/eog-window.c:3356 ../src/eog-window.c:3359 ../src/eog-window.c:3610
+#: ../src/xviewer-close-confirmation-dialog.c:173
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:457
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-file-chooser.c:473
+#: ../src/xviewer-window.c:3356 ../src/xviewer-window.c:3359 ../src/xviewer-window.c:3610
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../src/eog-close-confirmation-dialog.c:179 ../src/eog-file-chooser.c:466
-#: ../src/eog-window.c:4068
+#: ../src/xviewer-close-confirmation-dialog.c:179 ../src/xviewer-file-chooser.c:466
+#: ../src/xviewer-window.c:4068
 msgid "_Save"
 msgstr "_Salvar"
 
-#: ../src/eog-close-confirmation-dialog.c:185
+#: ../src/xviewer-close-confirmation-dialog.c:185
 msgid "Save _As"
 msgstr "Salvar _como"
 
-#: ../src/eog-close-confirmation-dialog.c:213
+#: ../src/xviewer-close-confirmation-dialog.c:213
 msgid "Question"
 msgstr "Pergunta"
 
-#: ../src/eog-close-confirmation-dialog.c:392
+#: ../src/xviewer-close-confirmation-dialog.c:392
 msgid "If you don't save, your changes will be lost."
 msgstr "Se você não salvá-la, suas alterações serão perdidas."
 
-#: ../src/eog-close-confirmation-dialog.c:429
+#: ../src/xviewer-close-confirmation-dialog.c:429
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Salvar alterações na imagem \"%s\" antes de fechar?"
 
-#: ../src/eog-close-confirmation-dialog.c:636
+#: ../src/xviewer-close-confirmation-dialog.c:636
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -741,119 +741,119 @@ msgstr[0] ""
 msgstr[1] ""
 "Há %d imagens com alterações não salvas. Salvar alterações antes de fechar?"
 
-#: ../src/eog-close-confirmation-dialog.c:653
+#: ../src/xviewer-close-confirmation-dialog.c:653
 msgid "S_elect the images you want to save:"
 msgstr "S_elecione as imagens para salvar:"
 
 #. Secondary label
-#: ../src/eog-close-confirmation-dialog.c:672
+#: ../src/xviewer-close-confirmation-dialog.c:672
 msgid "If you don't save, all your changes will be lost."
 msgstr "Se você não salvar, todas as suas alterações serão perdidas."
 
-#: ../src/eog-error-message-area.c:124 ../src/eog-window.c:847
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "_Recarregar"
 
-#: ../src/eog-error-message-area.c:129 ../src/eog-window.c:4074
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4074
 msgid "Save _As…"
 msgstr "Salvar _como…"
 
-#: ../src/eog-error-message-area.c:171
+#: ../src/xviewer-error-message-area.c:171
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Não foi possível carregar a imagem \"%s\"."
 
-#: ../src/eog-error-message-area.c:213
+#: ../src/xviewer-error-message-area.c:213
 #, c-format
 msgid "Could not save image '%s'."
 msgstr "Não foi possível salvar a imagem \"%s\"."
 
-#: ../src/eog-error-message-area.c:256
+#: ../src/xviewer-error-message-area.c:256
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Nenhuma imagem encontrada em \"%s\"."
 
-#: ../src/eog-error-message-area.c:263
+#: ../src/xviewer-error-message-area.c:263
 msgid "The given locations contain no images."
 msgstr "Os locais informados não contém imagens."
 
-#: ../src/eog-metadata-details.c:64
+#: ../src/xviewer-metadata-details.c:64
 msgid "Camera"
 msgstr "Câmera"
 
-#: ../src/eog-metadata-details.c:65
+#: ../src/xviewer-metadata-details.c:65
 msgid "Image Data"
 msgstr "Dados da imagem"
 
-#: ../src/eog-metadata-details.c:66
+#: ../src/xviewer-metadata-details.c:66
 msgid "Image Taking Conditions"
 msgstr "Condições da captura da imagem"
 
-#: ../src/eog-metadata-details.c:67
+#: ../src/xviewer-metadata-details.c:67
 msgid "GPS Data"
 msgstr "Dados GPS"
 
-#: ../src/eog-metadata-details.c:68
+#: ../src/xviewer-metadata-details.c:68
 msgid "Maker Note"
 msgstr "Nota do autor"
 
-#: ../src/eog-metadata-details.c:69
+#: ../src/xviewer-metadata-details.c:69
 msgid "Other"
 msgstr "Outras"
 
-#: ../src/eog-metadata-details.c:71
+#: ../src/xviewer-metadata-details.c:71
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eog-metadata-details.c:72
+#: ../src/xviewer-metadata-details.c:72
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eog-metadata-details.c:73
+#: ../src/xviewer-metadata-details.c:73
 msgid "XMP Rights Management"
 msgstr "Gerenciamento de direitos XMP"
 
-#: ../src/eog-metadata-details.c:74
+#: ../src/xviewer-metadata-details.c:74
 msgid "XMP Other"
 msgstr "XMP outro"
 
-#: ../src/eog-metadata-details.c:250
+#: ../src/xviewer-metadata-details.c:250
 msgid "Tag"
 msgstr "Etiqueta"
 
-#: ../src/eog-metadata-details.c:257
+#: ../src/xviewer-metadata-details.c:257
 msgid "Value"
 msgstr "Valor"
 
-#: ../src/eog-metadata-details.c:417
+#: ../src/xviewer-metadata-details.c:417
 msgid "North"
 msgstr "Norte"
 
-#: ../src/eog-metadata-details.c:420
+#: ../src/xviewer-metadata-details.c:420
 msgid "East"
 msgstr "Leste"
 
-#: ../src/eog-metadata-details.c:423
+#: ../src/xviewer-metadata-details.c:423
 msgid "West"
 msgstr "Oeste"
 
-#: ../src/eog-metadata-details.c:426
+#: ../src/xviewer-metadata-details.c:426
 msgid "South"
 msgstr "Sul"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eog-exif-util.c:120 ../src/eog-exif-util.c:160
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d de %B de %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
-#: ../src/eog-exif-util.c:154
+#: ../src/xviewer-exif-util.c:154
 msgid "%a, %d %B %Y"
 msgstr "%a, %d de %B de %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/eog-exif-util.c:251
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (objetiva)"
@@ -861,16 +861,16 @@ msgstr "%.1f (objetiva)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/eog-exif-util.c:262
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (filme 35mm)"
 
-#: ../src/eog-file-chooser.c:120
+#: ../src/xviewer-file-chooser.c:120
 msgid "File format is unknown or unsupported"
 msgstr "Formato de arquivo desconhecido ou sem suporte"
 
-#: ../src/eog-file-chooser.c:125
+#: ../src/xviewer-file-chooser.c:125
 msgid ""
 "Image Viewer could not determine a supported writable file format based on "
 "the filename."
@@ -878,207 +878,207 @@ msgstr ""
 "O visualizador de imagem não pôde determinar um formato de gravação de "
 "arquivo com suporte baseado no nome do arquivo."
 
-#: ../src/eog-file-chooser.c:126
+#: ../src/xviewer-file-chooser.c:126
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "Por favor tente uma extensão de arquivo diferente como .png ou .jpg."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/eog-file-chooser.c:161
+#: ../src/xviewer-file-chooser.c:161
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#: ../src/eog-file-chooser.c:213
+#: ../src/xviewer-file-chooser.c:213
 msgid "All files"
 msgstr "Todos os arquivos"
 
-#: ../src/eog-file-chooser.c:218
+#: ../src/xviewer-file-chooser.c:218
 msgid "Supported image files"
 msgstr "Arquivos de imagens suportados"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eog-file-chooser.c:290 ../src/eog-metadata-sidebar.c:232
-#: ../src/eog-metadata-sidebar.c:236 ../src/eog-properties-dialog.c:135
-#: ../src/eog-properties-dialog.c:137 ../src/eog-thumb-view.c:515
+#: ../src/xviewer-file-chooser.c:290 ../src/xviewer-metadata-sidebar.c:232
+#: ../src/xviewer-metadata-sidebar.c:236 ../src/xviewer-properties-dialog.c:135
+#: ../src/xviewer-properties-dialog.c:137 ../src/xviewer-thumb-view.c:515
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pixel"
 msgstr[1] "pixels"
 
-#: ../src/eog-file-chooser.c:458 ../src/eog-file-chooser.c:474
+#: ../src/xviewer-file-chooser.c:458 ../src/xviewer-file-chooser.c:474
 msgid "_Open"
 msgstr "_Abrir"
 
-#: ../src/eog-file-chooser.c:460
+#: ../src/xviewer-file-chooser.c:460
 msgid "Open Image"
 msgstr "Abrir imagem"
 
-#: ../src/eog-file-chooser.c:468
+#: ../src/xviewer-file-chooser.c:468
 msgid "Save Image"
 msgstr "Salvar imagem"
 
-#: ../src/eog-file-chooser.c:476
+#: ../src/xviewer-file-chooser.c:476
 msgid "Open Folder"
 msgstr "Abrir pasta"
 
-#: ../src/eog-image.c:613
+#: ../src/xviewer-image.c:613
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Transformação em imagem não carregada."
 
-#: ../src/eog-image.c:641
+#: ../src/xviewer-image.c:641
 #, c-format
 msgid "Transformation failed."
 msgstr "Falha na transformação."
 
-#: ../src/eog-image.c:1110
+#: ../src/xviewer-image.c:1110
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Não há suporte a EXIF para este formato de arquivo."
 
-#: ../src/eog-image.c:1259
+#: ../src/xviewer-image.c:1259
 #, c-format
 msgid "Image loading failed."
 msgstr "Falha ao carregar imagem."
 
-#: ../src/eog-image.c:1840 ../src/eog-image.c:1960
+#: ../src/xviewer-image.c:1840 ../src/xviewer-image.c:1960
 #, c-format
 msgid "No image loaded."
 msgstr "Nenhuma imagem carregada."
 
-#: ../src/eog-image.c:1848 ../src/eog-image.c:1969
+#: ../src/xviewer-image.c:1848 ../src/xviewer-image.c:1969
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "Você não possui as permissões necessárias para salvar o arquivo."
 
-#: ../src/eog-image.c:1858 ../src/eog-image.c:1980
+#: ../src/xviewer-image.c:1858 ../src/xviewer-image.c:1980
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Falha ao criar arquivo temporário."
 
-#: ../src/eog-image-jpeg.c:375
+#: ../src/xviewer-image-jpeg.c:375
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Não foi possível criar um arquivo temporário para salvar: %s"
 
-#: ../src/eog-image-jpeg.c:394
+#: ../src/xviewer-image-jpeg.c:394
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Não foi possível alocar memória para carregar o arquivo JPEG"
 
-#: ../src/eog-metadata-sidebar.c:245 ../src/eog-properties-dialog.c:152
+#: ../src/xviewer-metadata-sidebar.c:245 ../src/xviewer-properties-dialog.c:152
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: ../src/eog-metadata-sidebar.c:503
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "File size:"
 msgstr "Tamanho do arquivo:"
 
-#: ../src/eog-metadata-sidebar.c:519 ../src/eog-properties-dialog.c:669
-#: ../src/eog-window.c:4078
+#: ../src/xviewer-metadata-sidebar.c:519 ../src/xviewer-properties-dialog.c:669
+#: ../src/xviewer-window.c:4078
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Mostrar a pasta que contém este arquivo no gerenciador de arquivos"
 
-#: ../src/eog-preferences-dialog.c:109
+#: ../src/xviewer-preferences-dialog.c:109
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
 msgstr[0] "%lu segundo"
 msgstr[1] "%lu segundos"
 
-#: ../src/eog-print.c:371
+#: ../src/xviewer-print.c:371
 msgid "Image Settings"
 msgstr "Configurações da imagem"
 
-#: ../src/eog-print-image-setup.c:902
+#: ../src/xviewer-print-image-setup.c:902
 msgid "Image"
 msgstr "Imagem"
 
-#: ../src/eog-print-image-setup.c:903
+#: ../src/xviewer-print-image-setup.c:903
 msgid "The image whose printing properties will be set up"
 msgstr "A imagem cujas propriedades de impressão serão configuradas"
 
-#: ../src/eog-print-image-setup.c:909
+#: ../src/xviewer-print-image-setup.c:909
 msgid "Page Setup"
 msgstr "Configurações de impressão"
 
-#: ../src/eog-print-image-setup.c:910
+#: ../src/xviewer-print-image-setup.c:910
 msgid "The information for the page where the image will be printed"
 msgstr "As informações da página onde a imagem será impressa"
 
-#: ../src/eog-print-image-setup.c:936
+#: ../src/xviewer-print-image-setup.c:936
 msgid "Position"
 msgstr "Posição"
 
-#: ../src/eog-print-image-setup.c:940
+#: ../src/xviewer-print-image-setup.c:940
 msgid "_Left:"
 msgstr "_Esquerda:"
 
-#: ../src/eog-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:942
 msgid "_Right:"
 msgstr "_Direita:"
 
-#: ../src/eog-print-image-setup.c:943
+#: ../src/xviewer-print-image-setup.c:943
 msgid "_Top:"
 msgstr "Ci_ma:"
 
-#: ../src/eog-print-image-setup.c:944
+#: ../src/xviewer-print-image-setup.c:944
 msgid "_Bottom:"
 msgstr "_Baixo:"
 
-#: ../src/eog-print-image-setup.c:947
+#: ../src/xviewer-print-image-setup.c:947
 msgid "C_enter:"
 msgstr "Ce_ntralizar"
 
-#: ../src/eog-print-image-setup.c:952
+#: ../src/xviewer-print-image-setup.c:952
 msgid "None"
 msgstr "Nenhum"
 
-#: ../src/eog-print-image-setup.c:954
+#: ../src/xviewer-print-image-setup.c:954
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: ../src/eog-print-image-setup.c:956
+#: ../src/xviewer-print-image-setup.c:956
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../src/eog-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:958
 msgid "Both"
 msgstr "Ambos"
 
-#: ../src/eog-print-image-setup.c:974
+#: ../src/xviewer-print-image-setup.c:974
 msgid "Size"
 msgstr "Tamanho"
 
-#: ../src/eog-print-image-setup.c:977
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Width:"
 msgstr "_Largura:"
 
-#: ../src/eog-print-image-setup.c:979
+#: ../src/xviewer-print-image-setup.c:979
 msgid "_Height:"
 msgstr "_Altura:"
 
-#: ../src/eog-print-image-setup.c:982
+#: ../src/xviewer-print-image-setup.c:982
 msgid "_Scaling:"
 msgstr "E_scala:"
 
-#: ../src/eog-print-image-setup.c:993
+#: ../src/xviewer-print-image-setup.c:993
 msgid "_Unit:"
 msgstr "_Unidades:"
 
-#: ../src/eog-print-image-setup.c:998
+#: ../src/xviewer-print-image-setup.c:998
 msgid "Millimeters"
 msgstr "Milímetros"
 
-#: ../src/eog-print-image-setup.c:1000
+#: ../src/xviewer-print-image-setup.c:1000
 msgid "Inches"
 msgstr "Polegadas"
 
-#: ../src/eog-print-image-setup.c:1029
+#: ../src/xviewer-print-image-setup.c:1029
 msgid "Preview"
 msgstr "Visualizar"
 
-#: ../src/eog-save-as-dialog-helper.c:162
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "como está"
 
@@ -1092,25 +1092,25 @@ msgstr "como está"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eog-statusbar.c:126
+#: ../src/xviewer-statusbar.c:126
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eog-thumb-view.c:543
+#: ../src/xviewer-thumb-view.c:543
 msgid "Taken on"
 msgstr "Tirada em"
 
-#: ../src/eog-uri-converter.c:980
+#: ../src/xviewer-uri-converter.c:980
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Dois nomes de arquivos ou mais são iguais."
 
-#: ../src/eog-util.c:68
+#: ../src/xviewer-util.c:68
 msgid "Could not display help for Image Viewer"
 msgstr "Não foi possível exibir a ajuda do visualizador de imagens"
 
-#: ../src/eog-util.c:116
+#: ../src/xviewer-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (Unicode inválido)"
 
@@ -1120,21 +1120,21 @@ msgstr " (Unicode inválido)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eog-window.c:541
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i pixel  %s    %i%%"
 msgstr[1] "%i × %i pixels  %s    %i%%"
 
-#: ../src/eog-window.c:849 ../src/eog-window.c:2775
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2775
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Ocultar"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eog-window.c:859
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1143,7 +1143,7 @@ msgstr ""
 "A imagem \"%s\" foi modificada por um aplicativo externo.\n"
 "Você gostaria de recarregá-la?"
 
-#: ../src/eog-window.c:1023
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Usar \"%s\" para abrir o item selecionado"
@@ -1153,26 +1153,26 @@ msgstr "Usar \"%s\" para abrir o item selecionado"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eog-window.c:1179
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Salvando imagem \"%s\" (%u/%u)"
 
-#: ../src/eog-window.c:1574
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Abrindo imagem \"%s\""
 
-#: ../src/eog-window.c:1898
+#: ../src/xviewer-window.c:1898
 msgid "_Leave Fullscreen"
 msgstr "_Tela cheia"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/eog-window.c:2030
+#: ../src/xviewer-window.c:2030
 msgid "Viewing a slideshow"
 msgstr "Vendo uma apresentação de slides"
 
-#: ../src/eog-window.c:2259
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1181,31 +1181,31 @@ msgstr ""
 "Erro ao imprimir arquivo:\n"
 "%s"
 
-#: ../src/eog-window.c:2558
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "Editor de barra de ferramentas"
 
-#: ../src/eog-window.c:2561
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "_Restaurar padrão"
 
-#: ../src/eog-window.c:2563 ../src/eog-window.c:4035
+#: ../src/xviewer-window.c:2563 ../src/xviewer-window.c:4035
 msgid "_Close"
 msgstr "_Fechar"
 
-#: ../src/eog-window.c:2722 ../src/eog-window.c:2737
+#: ../src/xviewer-window.c:2722 ../src/xviewer-window.c:2737
 msgid "Error launching System Settings: "
 msgstr "Erro ao lançar as configurações do sistema: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
-#. clash with mnemonics from eog's menubar
-#: ../src/eog-window.c:2773
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2773
 msgid "_Open Background Preferences"
 msgstr "Abrir preferências de plan_o de fundo"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eog-window.c:2789
+#: ../src/xviewer-window.c:2789
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1214,11 +1214,11 @@ msgstr ""
 "A imagem \"%s\" foi definida como plano de fundo da área de trabalho.\n"
 "Você gostaria de mudar a sua aparência?"
 
-#: ../src/eog-window.c:3254
+#: ../src/xviewer-window.c:3254
 msgid "Saving image locally…"
 msgstr "Salvando a imagem localmente…"
 
-#: ../src/eog-window.c:3332
+#: ../src/xviewer-window.c:3332
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1227,7 +1227,7 @@ msgstr ""
 "Você realmente deseja remover\n"
 "\"%s\" permanentemente?"
 
-#: ../src/eog-window.c:3335
+#: ../src/xviewer-window.c:3335
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1242,41 +1242,41 @@ msgstr[1] ""
 "Você realmente deseja remover\n"
 "as %d imagens selecionadas permanentemente?"
 
-#: ../src/eog-window.c:3357 ../src/eog-window.c:3621
+#: ../src/xviewer-window.c:3357 ../src/xviewer-window.c:3621
 msgid "_Delete"
 msgstr "_Excluir"
 
-#: ../src/eog-window.c:3360 ../src/eog-window.c:3623
+#: ../src/xviewer-window.c:3360 ../src/xviewer-window.c:3623
 msgid "_Yes"
 msgstr "_Sim"
 
 #. add 'dont ask again' button
-#: ../src/eog-window.c:3364 ../src/eog-window.c:3615
+#: ../src/xviewer-window.c:3364 ../src/xviewer-window.c:3615
 msgid "Do _not ask again during this session"
 msgstr "_Não perguntar novamente durante esta sessão"
 
-#: ../src/eog-window.c:3408
+#: ../src/xviewer-window.c:3408
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Não foi possível obter o arquivo de imagem"
 
-#: ../src/eog-window.c:3424
+#: ../src/xviewer-window.c:3424
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Não foi possível obter informação de arquivo de imagem"
 
-#: ../src/eog-window.c:3440 ../src/eog-window.c:3682
+#: ../src/xviewer-window.c:3440 ../src/xviewer-window.c:3682
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Não foi possível excluir o arquivo"
 
 #. set dialog error message
-#: ../src/eog-window.c:3490 ../src/eog-window.c:3778
+#: ../src/xviewer-window.c:3490 ../src/xviewer-window.c:3778
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Erro ao excluir a imagem %s"
 
-#: ../src/eog-window.c:3583
+#: ../src/xviewer-window.c:3583
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1285,7 +1285,7 @@ msgstr ""
 "Você realmente deseja mover\n"
 "\"%s\" para a lixeira?"
 
-#: ../src/eog-window.c:3586
+#: ../src/xviewer-window.c:3586
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1294,7 +1294,7 @@ msgstr ""
 "Uma lixeira para \"%s\" não pôde ser encontrada. Deseja remover essa imagem "
 "permanentemente?"
 
-#: ../src/eog-window.c:3591
+#: ../src/xviewer-window.c:3591
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1309,7 +1309,7 @@ msgstr[1] ""
 "Você realmente deseja mover\n"
 "as %d imagens selecionadas para a lixeira?"
 
-#: ../src/eog-window.c:3596
+#: ../src/xviewer-window.c:3596
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1317,342 +1317,342 @@ msgstr ""
 "Algumas das imagens selecionadas não podem ser movidas para a lixeira e "
 "serão removidas permanentemente. Tem certeza que deseja prosseguir?"
 
-#: ../src/eog-window.c:3613 ../src/eog-window.c:4104 ../src/eog-window.c:4131
+#: ../src/xviewer-window.c:3613 ../src/xviewer-window.c:4104 ../src/xviewer-window.c:4131
 msgid "Move to _Trash"
 msgstr "Mover para a _lixeira"
 
-#: ../src/eog-window.c:3660 ../src/eog-window.c:3674
+#: ../src/xviewer-window.c:3660 ../src/xviewer-window.c:3674
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Não foi possível acessar a lixeira."
 
-#: ../src/eog-window.c:4025
+#: ../src/xviewer-window.c:4025
 msgid "_Image"
 msgstr "I_magem"
 
-#: ../src/eog-window.c:4026
+#: ../src/xviewer-window.c:4026
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/eog-window.c:4028
+#: ../src/xviewer-window.c:4028
 msgid "_Go"
 msgstr "_Ir"
 
-#: ../src/eog-window.c:4029
+#: ../src/xviewer-window.c:4029
 msgid "_Tools"
 msgstr "_Ferramentas"
 
-#: ../src/eog-window.c:4032
+#: ../src/xviewer-window.c:4032
 msgid "_Open…"
 msgstr "_Abrir…"
 
-#: ../src/eog-window.c:4033
+#: ../src/xviewer-window.c:4033
 msgid "Open a file"
 msgstr "Abre um arquivo"
 
-#: ../src/eog-window.c:4036
+#: ../src/xviewer-window.c:4036
 msgid "Close window"
 msgstr "Fecha a janela"
 
-#: ../src/eog-window.c:4038
+#: ../src/xviewer-window.c:4038
 msgid "T_oolbar"
 msgstr "Barra de _ferramentas"
 
-#: ../src/eog-window.c:4039
+#: ../src/xviewer-window.c:4039
 msgid "Edit the application toolbar"
 msgstr "Edita a barra de ferramentas do aplicativo"
 
-#: ../src/eog-window.c:4042
+#: ../src/xviewer-window.c:4042
 msgid "Preferences for Image Viewer"
 msgstr "Preferências do visualizador de imagens"
 
-#: ../src/eog-window.c:4044
+#: ../src/xviewer-window.c:4044
 msgid "_Contents"
 msgstr "S_umário"
 
-#: ../src/eog-window.c:4045
+#: ../src/xviewer-window.c:4045
 msgid "Help on this application"
 msgstr "Ajuda deste aplicativo"
 
-#: ../src/eog-window.c:4048
+#: ../src/xviewer-window.c:4048
 msgid "About this application"
 msgstr "Sobre este aplicativo"
 
-#: ../src/eog-window.c:4054
+#: ../src/xviewer-window.c:4054
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Altera a visibilidade da barra de ferramentas na janela atual"
 
-#: ../src/eog-window.c:4057
+#: ../src/xviewer-window.c:4057
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Altera a visibilidade da barra de status na janela atual"
 
-#: ../src/eog-window.c:4060
+#: ../src/xviewer-window.c:4060
 msgid "Changes the visibility of the image gallery pane in the current window"
 msgstr "Altera a visibilidade do painel da galeria de imagens na janela atual"
 
-#: ../src/eog-window.c:4063
+#: ../src/xviewer-window.c:4063
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Altera a visibilidade do painel lateral na janela atual"
 
-#: ../src/eog-window.c:4069
+#: ../src/xviewer-window.c:4069
 msgid "Save changes in currently selected images"
 msgstr "Salva alterações nas imagens atualmente selecionadas"
 
-#: ../src/eog-window.c:4071
+#: ../src/xviewer-window.c:4071
 msgid "Open _with"
 msgstr "Abrir _com"
 
-#: ../src/eog-window.c:4072
+#: ../src/xviewer-window.c:4072
 msgid "Open the selected image with a different application"
 msgstr "Abre a imagem selecionada com um aplicativo diferente"
 
-#: ../src/eog-window.c:4075
+#: ../src/xviewer-window.c:4075
 msgid "Save the selected images with a different name"
 msgstr "Salva as imagens selecionadas com um nome diferente"
 
-#: ../src/eog-window.c:4077
+#: ../src/xviewer-window.c:4077
 msgid "Show Containing _Folder"
 msgstr "Mostrar _pasta da imagem"
 
-#: ../src/eog-window.c:4080
+#: ../src/xviewer-window.c:4080
 msgid "_Print…"
 msgstr "_Imprimir…"
 
-#: ../src/eog-window.c:4081
+#: ../src/xviewer-window.c:4081
 msgid "Print the selected image"
 msgstr "Imprime a imagem selecionada"
 
-#: ../src/eog-window.c:4083
+#: ../src/xviewer-window.c:4083
 msgid "Prope_rties"
 msgstr "_Propriedades"
 
-#: ../src/eog-window.c:4084
+#: ../src/xviewer-window.c:4084
 msgid "Show the properties and metadata of the selected image"
 msgstr "Mostra as propriedades e metadados da imagem selecionada"
 
-#: ../src/eog-window.c:4086
+#: ../src/xviewer-window.c:4086
 msgid "_Undo"
 msgstr "Desfa_zer"
 
-#: ../src/eog-window.c:4087
+#: ../src/xviewer-window.c:4087
 msgid "Undo the last change in the image"
 msgstr "Desfaz a última alteração na imagem"
 
-#: ../src/eog-window.c:4089
+#: ../src/xviewer-window.c:4089
 msgid "Flip _Horizontal"
 msgstr "Virar _horizontalmente"
 
-#: ../src/eog-window.c:4090
+#: ../src/xviewer-window.c:4090
 msgid "Mirror the image horizontally"
 msgstr "Espelha a imagem horizontalmente"
 
-#: ../src/eog-window.c:4092
+#: ../src/xviewer-window.c:4092
 msgid "Flip _Vertical"
 msgstr "Virar _verticalmente"
 
-#: ../src/eog-window.c:4093
+#: ../src/xviewer-window.c:4093
 msgid "Mirror the image vertically"
 msgstr "Espelha a imagem verticalmente"
 
-#: ../src/eog-window.c:4095
+#: ../src/xviewer-window.c:4095
 msgid "_Rotate Clockwise"
 msgstr "Girar à _direita"
 
-#: ../src/eog-window.c:4096
+#: ../src/xviewer-window.c:4096
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Gira a imagem 90 graus para a direita"
 
-#: ../src/eog-window.c:4098
+#: ../src/xviewer-window.c:4098
 msgid "Rotate Counterc_lockwise"
 msgstr "Girar à e_squerda"
 
-#: ../src/eog-window.c:4099
+#: ../src/xviewer-window.c:4099
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Gira a imagem 90 graus para a esquerda"
 
-#: ../src/eog-window.c:4101
+#: ../src/xviewer-window.c:4101
 msgid "Set as Wa_llpaper"
 msgstr "Definir como p_lano de fundo"
 
-#: ../src/eog-window.c:4102
+#: ../src/xviewer-window.c:4102
 msgid "Set the selected image as the wallpaper"
 msgstr "Define a imagem selecionada como plano de fundo da área de trabalho"
 
-#: ../src/eog-window.c:4105
+#: ../src/xviewer-window.c:4105
 msgid "Move the selected image to the trash folder"
 msgstr "Move a imagem selecionada para a pasta da lixeira"
 
-#: ../src/eog-window.c:4107
+#: ../src/xviewer-window.c:4107
 msgid "_Delete Image"
 msgstr "_Excluir imagem"
 
-#: ../src/eog-window.c:4108
+#: ../src/xviewer-window.c:4108
 msgid "Delete the selected image"
 msgstr "Exclui a imagem selecionada"
 
-#: ../src/eog-window.c:4110
+#: ../src/xviewer-window.c:4110
 msgid "_Copy"
 msgstr "_Copiar"
 
-#: ../src/eog-window.c:4111
+#: ../src/xviewer-window.c:4111
 msgid "Copy the selected image to the clipboard"
 msgstr "Copia a imagem selecionada para a área de transferência"
 
-#: ../src/eog-window.c:4113 ../src/eog-window.c:4122 ../src/eog-window.c:4125
+#: ../src/xviewer-window.c:4113 ../src/xviewer-window.c:4122 ../src/xviewer-window.c:4125
 msgid "_Zoom In"
 msgstr "A_mpliar"
 
-#: ../src/eog-window.c:4114 ../src/eog-window.c:4123
+#: ../src/xviewer-window.c:4114 ../src/xviewer-window.c:4123
 msgid "Enlarge the image"
 msgstr "Aumenta a imagem"
 
-#: ../src/eog-window.c:4116 ../src/eog-window.c:4128
+#: ../src/xviewer-window.c:4116 ../src/xviewer-window.c:4128
 msgid "Zoom _Out"
 msgstr "_Reduzir"
 
-#: ../src/eog-window.c:4117 ../src/eog-window.c:4126 ../src/eog-window.c:4129
+#: ../src/xviewer-window.c:4117 ../src/xviewer-window.c:4126 ../src/xviewer-window.c:4129
 msgid "Shrink the image"
 msgstr "Encolhe a imagem"
 
-#: ../src/eog-window.c:4119
+#: ../src/xviewer-window.c:4119
 msgid "_Normal Size"
 msgstr "Tamanho _normal"
 
-#: ../src/eog-window.c:4120
+#: ../src/xviewer-window.c:4120
 msgid "Show the image at its normal size"
 msgstr "Mostra a imagem em seu tamanho normal"
 
-#: ../src/eog-window.c:4137
+#: ../src/xviewer-window.c:4137
 msgid "_Fullscreen"
 msgstr "_Tela cheia"
 
-#: ../src/eog-window.c:4138
+#: ../src/xviewer-window.c:4138
 msgid "Show the current image in fullscreen mode"
 msgstr "Mostra a imagem atual em modo de tela cheia"
 
-#: ../src/eog-window.c:4140
+#: ../src/xviewer-window.c:4140
 msgid "Pause Slideshow"
 msgstr "Pausar apresentação"
 
-#: ../src/eog-window.c:4141
+#: ../src/xviewer-window.c:4141
 msgid "Pause or resume the slideshow"
 msgstr "Pausa ou retoma a apresentação"
 
-#: ../src/eog-window.c:4143
+#: ../src/xviewer-window.c:4143
 msgid "_Best Fit"
 msgstr "_Melhor ajuste"
 
-#: ../src/eog-window.c:4144
+#: ../src/xviewer-window.c:4144
 msgid "Fit the image to the window"
 msgstr "Ajusta a imagem à janela"
 
-#: ../src/eog-window.c:4149 ../src/eog-window.c:4164
+#: ../src/xviewer-window.c:4149 ../src/xviewer-window.c:4164
 msgid "_Previous Image"
 msgstr "Imagem a_nterior"
 
-#: ../src/eog-window.c:4150
+#: ../src/xviewer-window.c:4150
 msgid "Go to the previous image of the gallery"
 msgstr "Vai para a imagem anterior da galeria"
 
-#: ../src/eog-window.c:4152
+#: ../src/xviewer-window.c:4152
 msgid "_Next Image"
 msgstr "Pró_xima imagem"
 
-#: ../src/eog-window.c:4153
+#: ../src/xviewer-window.c:4153
 msgid "Go to the next image of the gallery"
 msgstr "Vai para próxima imagem da galeria"
 
-#: ../src/eog-window.c:4155 ../src/eog-window.c:4167
+#: ../src/xviewer-window.c:4155 ../src/xviewer-window.c:4167
 msgid "_First Image"
 msgstr "_Primeira imagem"
 
-#: ../src/eog-window.c:4156
+#: ../src/xviewer-window.c:4156
 msgid "Go to the first image of the gallery"
 msgstr "Vai para a primeira imagem da galeria"
 
-#: ../src/eog-window.c:4158 ../src/eog-window.c:4170
+#: ../src/xviewer-window.c:4158 ../src/xviewer-window.c:4170
 msgid "_Last Image"
 msgstr "Ú_ltima imagem"
 
-#: ../src/eog-window.c:4159
+#: ../src/xviewer-window.c:4159
 msgid "Go to the last image of the gallery"
 msgstr "Vai para a última imagem da galeria"
 
-#: ../src/eog-window.c:4161
+#: ../src/xviewer-window.c:4161
 msgid "_Random Image"
 msgstr "Ima_gem aleatória"
 
-#: ../src/eog-window.c:4162
+#: ../src/xviewer-window.c:4162
 msgid "Go to a random image of the gallery"
 msgstr "Vai para uma imagem aleatória da galeria"
 
-#: ../src/eog-window.c:4320
+#: ../src/xviewer-window.c:4320
 msgid "S_lideshow"
 msgstr "Apresentação de s_lides"
 
-#: ../src/eog-window.c:4321
+#: ../src/xviewer-window.c:4321
 msgid "Start a slideshow view of the images"
 msgstr "Exibe as imagens como numa apresentação de slides"
 
-#: ../src/eog-window.c:4389
+#: ../src/xviewer-window.c:4389
 msgid "Previous"
 msgstr "Anterior"
 
-#: ../src/eog-window.c:4393
+#: ../src/xviewer-window.c:4393
 msgid "Next"
 msgstr "Próxima"
 
-#: ../src/eog-window.c:4397
+#: ../src/xviewer-window.c:4397
 msgid "Right"
 msgstr "Direita"
 
-#: ../src/eog-window.c:4400
+#: ../src/xviewer-window.c:4400
 msgid "Left"
 msgstr "Esquerda"
 
-#: ../src/eog-window.c:4403
+#: ../src/xviewer-window.c:4403
 msgid "Show Folder"
 msgstr "Mostrar pasta"
 
-#: ../src/eog-window.c:4406
+#: ../src/xviewer-window.c:4406
 msgid "In"
 msgstr "Ampliar"
 
-#: ../src/eog-window.c:4409
+#: ../src/xviewer-window.c:4409
 msgid "Out"
 msgstr "Reduzir"
 
-#: ../src/eog-window.c:4412
+#: ../src/xviewer-window.c:4412
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/eog-window.c:4415
+#: ../src/xviewer-window.c:4415
 msgid "Fit"
 msgstr "Ajustar"
 
-#: ../src/eog-window.c:4418
+#: ../src/xviewer-window.c:4418
 msgid "Gallery"
 msgstr "Galeria"
 
-#: ../src/eog-window.c:4435
+#: ../src/xviewer-window.c:4435
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Enviar para a lixeira"
 
-#: ../src/eog-window.c:4801
+#: ../src/xviewer-window.c:4801
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Editar a imagem atual usando %s"
 
-#: ../src/eog-window.c:4803
+#: ../src/xviewer-window.c:4803
 msgid "Edit Image"
 msgstr "Editar imagem"
 
-#: ../src/eog-window.c:6147
+#: ../src/xviewer-window.c:6147
 msgid "The GNOME image viewer."
 msgstr "Visualizador de imagens do GNOME."
 
-#: ../src/eog-window.c:6150
+#: ../src/xviewer-window.c:6150
 msgid "translator-credits"
 msgstr ""
 "Eduardo Belloti <ebelloti@terra.com.br>\n"
@@ -1710,7 +1710,7 @@ msgstr "Mostra a versão do aplicativo"
 msgid "[FILE…]"
 msgstr "[ARQUIVO…]"
 
-#. I18N: The '%s' is replaced with eog's command name.
+#. I18N: The '%s' is replaced with xviewer's command name.
 #: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
@@ -1728,10 +1728,10 @@ msgstr ""
 #~ msgid "_Switch image after:"
 #~ msgstr "_Alternar imagem após:"
 
-#~ msgid "Eye of GNOME Preferences"
+#~ msgid "Xviewer Preferences"
 #~ msgstr "Preferências do Visualizador de Imagens"
 
-#~ msgid "Eye of GNOME"
+#~ msgid "Xviewer"
 #~ msgstr "Visualizador de Imagens"
 
 #~ msgid "Running in fullscreen mode"

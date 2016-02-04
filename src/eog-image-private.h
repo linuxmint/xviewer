@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Image Private Data
+/* Xviewer - Image Private Data
  *
  * Copyright (C) 2007 The Free Software Foundation
  *
@@ -19,10 +19,10 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_IMAGE_PRIVATE_H__
-#define __EOG_IMAGE_PRIVATE_H__
+#ifndef __XVIEWER_IMAGE_PRIVATE_H__
+#define __XVIEWER_IMAGE_PRIVATE_H__
 
-#include "eog-image.h"
+#include "xviewer-image.h"
 
 #ifdef HAVE_RSVG
 #include <librsvg/rsvg.h>
@@ -34,12 +34,12 @@
 
 G_BEGIN_DECLS
 
-struct _EogImagePrivate {
+struct _XviewerImagePrivate {
 	GFile            *file;
 
-	EogImageStatus    status;
-	EogImageStatus    prev_status;
-	EogImageMetadataStatus metadata_status;
+	XviewerImageStatus    status;
+	XviewerImageStatus    prev_status;
+	XviewerImageMetadataStatus metadata_status;
 
 	gboolean          is_playing;
 	GdkPixbufAnimation     *anim;
@@ -94,10 +94,10 @@ struct _EogImagePrivate {
 
 	GSList           *undo_stack;
 
-	EogTransform     *trans;
-	EogTransform     *trans_autorotate;
+	XviewerTransform     *trans;
+	XviewerTransform     *trans_autorotate;
 };
 
 G_END_DECLS
 
-#endif /* __EOG_IMAGE_PRIVATE_H__ */
+#endif /* __XVIEWER_IMAGE_PRIVATE_H__ */

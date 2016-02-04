@@ -1,4 +1,4 @@
-/* Eye of Gnome - Print Operations
+/* Xviewer - Print Operations
  *
  * Copyright (C) 2005-2008 The Free Software Foundation
  *
@@ -19,31 +19,31 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOG_PRINT_H__
-#define __EOG_PRINT_H__
+#ifndef __XVIEWER_PRINT_H__
+#define __XVIEWER_PRINT_H__
 
-#include "eog-image.h"
+#include "xviewer-image.h"
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
 G_GNUC_INTERNAL
-GtkPrintOperation*    eog_print_operation_new (EogImage *image,
+GtkPrintOperation*    xviewer_print_operation_new (XviewerImage *image,
 					       GtkPrintSettings *print_settings,
 					       GtkPageSetup *page_setup);
 
 G_GNUC_INTERNAL
-GtkPageSetup*         eog_print_get_page_setup (void);
+GtkPageSetup*         xviewer_print_get_page_setup (void);
 
 G_GNUC_INTERNAL
-void                  eog_print_set_page_setup (GtkPageSetup *page_setup);
+void                  xviewer_print_set_page_setup (GtkPageSetup *page_setup);
 
 G_GNUC_INTERNAL
-GtkPrintSettings *    eog_print_get_print_settings (void);
+GtkPrintSettings *    xviewer_print_get_print_settings (void);
 
 G_GNUC_INTERNAL
-void                  eog_print_set_print_settings (GtkPrintSettings *print_settings);
+void                  xviewer_print_set_print_settings (GtkPrintSettings *print_settings);
 
 G_END_DECLS
 
-#endif /* __EOG_PRINT_H__ */
+#endif /* __XVIEWER_PRINT_H__ */

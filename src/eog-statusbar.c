@@ -1,4 +1,4 @@
-/* Eye of Gnome - Statusbar
+/* Xviewer - Statusbar
  *
  * Copyright (C) 2000-2006 The Free Software Foundation
  *
@@ -24,33 +24,33 @@
 #include "config.h"
 #endif
 
-#include "eog-statusbar.h"
+#include "xviewer-statusbar.h"
 
 #include <string.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-struct _EogStatusbarPrivate
+struct _XviewerStatusbarPrivate
 {
 	GtkWidget *progressbar;
 	GtkWidget *img_num_label;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogStatusbar, eog_statusbar, GTK_TYPE_STATUSBAR)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerStatusbar, xviewer_statusbar, GTK_TYPE_STATUSBAR)
 
 static void
-eog_statusbar_class_init (EogStatusbarClass *klass)
+xviewer_statusbar_class_init (XviewerStatusbarClass *klass)
 {
     /* empty */
 }
 
 static void
-eog_statusbar_init (EogStatusbar *statusbar)
+xviewer_statusbar_init (XviewerStatusbar *statusbar)
 {
-	EogStatusbarPrivate *priv;
+	XviewerStatusbarPrivate *priv;
 	GtkWidget *vbox;
 
-	statusbar->priv = eog_statusbar_get_instance_private (statusbar);
+	statusbar->priv = xviewer_statusbar_get_instance_private (statusbar);
 	priv = statusbar->priv;
 
 	priv->img_num_label = gtk_label_new (NULL);
@@ -95,19 +95,19 @@ eog_statusbar_init (EogStatusbar *statusbar)
 }
 
 GtkWidget *
-eog_statusbar_new (void)
+xviewer_statusbar_new (void)
 {
-	return GTK_WIDGET (g_object_new (EOG_TYPE_STATUSBAR, NULL));
+	return GTK_WIDGET (g_object_new (XVIEWER_TYPE_STATUSBAR, NULL));
 }
 
 void
-eog_statusbar_set_image_number (EogStatusbar *statusbar,
+xviewer_statusbar_set_image_number (XviewerStatusbar *statusbar,
                                 gint          num,
 				gint          tot)
 {
 	gchar *msg;
 
-	g_return_if_fail (EOG_IS_STATUSBAR (statusbar));
+	g_return_if_fail (XVIEWER_IS_STATUSBAR (statusbar));
 
 	/* Hide number display if values don't make sense */
 	if (G_UNLIKELY (num <= 0 || tot <= 0))
@@ -131,10 +131,10 @@ eog_statusbar_set_image_number (EogStatusbar *statusbar,
 }
 
 void
-eog_statusbar_set_progress (EogStatusbar *statusbar,
+xviewer_statusbar_set_progress (XviewerStatusbar *statusbar,
 			    gdouble       progress)
 {
-	g_return_if_fail (EOG_IS_STATUSBAR (statusbar));
+	g_return_if_fail (XVIEWER_IS_STATUSBAR (statusbar));
 
 	gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (statusbar->priv->progressbar),
 				       progress);

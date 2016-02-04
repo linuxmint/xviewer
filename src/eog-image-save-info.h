@@ -1,5 +1,5 @@
-#ifndef _EOG_IMAGE_SAVE_INFO_H_
-#define _EOG_IMAGE_SAVE_INFO_H_
+#ifndef _XVIEWER_IMAGE_SAVE_INFO_H_
+#define _XVIEWER_IMAGE_SAVE_INFO_H_
 
 #include <glib-object.h>
 #include <gio/gio.h>
@@ -7,22 +7,22 @@
 
 G_BEGIN_DECLS
 
-#ifndef __EOG_IMAGE_DECLR__
-#define __EOG_IMAGE_DECLR__
-typedef struct _EogImage EogImage;
+#ifndef __XVIEWER_IMAGE_DECLR__
+#define __XVIEWER_IMAGE_DECLR__
+typedef struct _XviewerImage XviewerImage;
 #endif
 
-#define EOG_TYPE_IMAGE_SAVE_INFO            (eog_image_save_info_get_type ())
-#define EOG_IMAGE_SAVE_INFO(o)         (G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_IMAGE_SAVE_INFO, EogImageSaveInfo))
-#define EOG_IMAGE_SAVE_INFO_CLASS(k)   (G_TYPE_CHECK_CLASS_CAST((k), EOG_TYPE_IMAGE_SAVE_INFO, EogImageSaveInfoClass))
-#define EOG_IS_IMAGE_SAVE_INFO(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_IMAGE_SAVE_INFO))
-#define EOG_IS_IMAGE_SAVE_INFO_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), EOG_TYPE_IMAGE_SAVE_INFO))
-#define EOG_IMAGE_SAVE_INFO_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), EOG_TYPE_IMAGE_SAVE_INFO, EogImageSaveInfoClass))
+#define XVIEWER_TYPE_IMAGE_SAVE_INFO            (xviewer_image_save_info_get_type ())
+#define XVIEWER_IMAGE_SAVE_INFO(o)         (G_TYPE_CHECK_INSTANCE_CAST ((o), XVIEWER_TYPE_IMAGE_SAVE_INFO, XviewerImageSaveInfo))
+#define XVIEWER_IMAGE_SAVE_INFO_CLASS(k)   (G_TYPE_CHECK_CLASS_CAST((k), XVIEWER_TYPE_IMAGE_SAVE_INFO, XviewerImageSaveInfoClass))
+#define XVIEWER_IS_IMAGE_SAVE_INFO(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), XVIEWER_TYPE_IMAGE_SAVE_INFO))
+#define XVIEWER_IS_IMAGE_SAVE_INFO_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), XVIEWER_TYPE_IMAGE_SAVE_INFO))
+#define XVIEWER_IMAGE_SAVE_INFO_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), XVIEWER_TYPE_IMAGE_SAVE_INFO, XviewerImageSaveInfoClass))
 
-typedef struct _EogImageSaveInfo EogImageSaveInfo;
-typedef struct _EogImageSaveInfoClass EogImageSaveInfoClass;
+typedef struct _XviewerImageSaveInfo XviewerImageSaveInfo;
+typedef struct _XviewerImageSaveInfoClass XviewerImageSaveInfoClass;
 
-struct _EogImageSaveInfo {
+struct _XviewerImageSaveInfo {
 	GObject parent;
 
 	GFile       *file;
@@ -36,22 +36,22 @@ struct _EogImageSaveInfo {
 	float        jpeg_quality; /* valid range: [0.0 ... 1.0] */
 };
 
-struct _EogImageSaveInfoClass {
+struct _XviewerImageSaveInfoClass {
 	GObjectClass parent_klass;
 };
 
-#define EOG_FILE_FORMAT_JPEG   "jpeg"
+#define XVIEWER_FILE_FORMAT_JPEG   "jpeg"
 
-GType             eog_image_save_info_get_type         (void) G_GNUC_CONST;
+GType             xviewer_image_save_info_get_type         (void) G_GNUC_CONST;
 
-EogImageSaveInfo *eog_image_save_info_new_from_image   (EogImage *image);
+XviewerImageSaveInfo *xviewer_image_save_info_new_from_image   (XviewerImage *image);
 
-EogImageSaveInfo *eog_image_save_info_new_from_uri     (const char      *uri,
+XviewerImageSaveInfo *xviewer_image_save_info_new_from_uri     (const char      *uri,
 							GdkPixbufFormat *format);
 
-EogImageSaveInfo *eog_image_save_info_new_from_file    (GFile           *file,
+XviewerImageSaveInfo *xviewer_image_save_info_new_from_file    (GFile           *file,
 							GdkPixbufFormat *format);
 
 G_END_DECLS
 
-#endif /* _EOG_IMAGE_SAVE_INFO_H_ */
+#endif /* _XVIEWER_IMAGE_SAVE_INFO_H_ */

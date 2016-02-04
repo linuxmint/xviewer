@@ -10,10 +10,10 @@
 #include <librsvg/rsvg.h>
 #endif
 
-#include "eog-config-keys.h"
-#include "eog-enum-types.h"
-#include "eog-scroll-view.h"
-#include "eog-debug.h"
+#include "xviewer-config-keys.h"
+#include "xviewer-enum-types.h"
+#include "xviewer-scroll-view.h"
+#include "xviewer-debug.h"
 #if 0
 #include "uta.h"
 #endif
@@ -63,24 +63,24 @@ enum {
 static gint view_signals [SIGNAL_LAST];
 
 typedef enum {
-	EOG_SCROLL_VIEW_CURSOR_NORMAL,
-	EOG_SCROLL_VIEW_CURSOR_HIDDEN,
-	EOG_SCROLL_VIEW_CURSOR_DRAG
-} EogScrollViewCursor;
+	XVIEWER_SCROLL_VIEW_CURSOR_NORMAL,
+	XVIEWER_SCROLL_VIEW_CURSOR_HIDDEN,
+	XVIEWER_SCROLL_VIEW_CURSOR_DRAG
+} XviewerScrollViewCursor;
 
 typedef enum {
-	EOG_ROTATION_0,
-	EOG_ROTATION_90,
-	EOG_ROTATION_180,
-	EOG_ROTATION_270,
-	N_EOG_ROTATIONS
-} EogRotationState;
+	XVIEWER_ROTATION_0,
+	XVIEWER_ROTATION_90,
+	XVIEWER_ROTATION_180,
+	XVIEWER_ROTATION_270,
+	N_XVIEWER_ROTATIONS
+} XviewerRotationState;
 
 typedef enum {
-	EOG_PAN_ACTION_NONE,
-	EOG_PAN_ACTION_NEXT,
-	EOG_PAN_ACTION_PREV
-} EogPanAction;
+	XVIEWER_PAN_ACTION_NONE,
+	XVIEWER_PAN_ACTION_NEXT,
+	XVIEWER_PAN_ACTION_PREV
+} XviewerPanAction;
 
 /* Drag 'n Drop */
 static GtkTargetEntry target_table[] = {
@@ -101,8 +101,8 @@ enum {
 	PROP_ZOOM_MULTIPLIER
 };
 
-/* Private part of the EogScrollView structure */
-struct _EogScrollViewPrivate {
+/* Private part of the XviewerScrollView structure */
+struct _XviewerScrollViewPrivate {
 	/* some widgets we rely on */
 	GtkWidget *display;
 	GtkAdjustment *hadj;
@@ -112,14 +112,14 @@ struct _EogScrollViewPrivate {
 	GtkWidget *menu;
 
 	/* actual image */
-	EogImage *image;
+	XviewerImage *image;
 	guint image_changed_id;
 	guint frame_changed_id;
 	GdkPixbuf *pixbuf;
 	cairo_surface_t *surface;
 
 	/* zoom mode, either ZOOM_MODE_FIT or ZOOM_MODE_FREE */
-	EogZoomMode zoom_mode;
+	XviewerZoomMode zoom_mode;
 
 	/* whether to allow zoom > 1.0 on zoom fit */
 	gboolean upscale;
@@ -137,7 +137,7 @@ struct _EogScrollViewPrivate {
 	/* Microtile arrays for dirty region.  This represents the dirty region
 	 * for interpolated drawing.
 	 */
-	EogUta *uta;
+	XviewerUta *uta;
 #endif
 
 	/* handler ID for paint idle callback */
@@ -166,11 +166,11 @@ struct _EogScrollViewPrivate {
 #endif
 
 	/* how to indicate transparency in images */
-	EogTransparencyStyle transp_style;
+	XviewerTransparencyStyle transp_style;
 	GdkRGBA transp_color;
 
 	/* the type of the cursor we are currently showing */
-	EogScrollViewCursor cursor;
+	XviewerScrollViewCursor cursor;
 
 	gboolean  use_bg_color;
 	GdkRGBA *background_color;
@@ -184,28 +184,28 @@ struct _EogScrollViewPrivate {
 	GtkGesture *rotate_gesture;
 #endif
 	gdouble initial_zoom;
-	EogRotationState rotate_state;
-	EogPanAction pan_action;
+	XviewerRotationState rotate_state;
+	XviewerPanAction pan_action;
 };
 
-static void scroll_by (EogScrollView *view, int xofs, int yofs);
-static void set_zoom_fit (EogScrollView *view);
-/* static void request_paint_area (EogScrollView *view, GdkRectangle *area); */
-static void set_minimum_zoom_factor (EogScrollView *view);
+static void scroll_by (XviewerScrollView *view, int xofs, int yofs);
+static void set_zoom_fit (XviewerScrollView *view);
+/* static void request_paint_area (XviewerScrollView *view, GdkRectangle *area); */
+static void set_minimum_zoom_factor (XviewerScrollView *view);
 static void view_on_drag_begin_cb (GtkWidget *widget, GdkDragContext *context,
 				   gpointer user_data);
 static void view_on_drag_data_get_cb (GtkWidget *widget,
 				      GdkDragContext*drag_context,
 				      GtkSelectionData *data, guint info,
 				      guint time, gpointer user_data);
-static void _set_zoom_mode_internal (EogScrollView *view, EogZoomMode mode);
-static gboolean eog_scroll_view_get_image_coords (EogScrollView *view, gint *x,
+static void _set_zoom_mode_internal (XviewerScrollView *view, XviewerZoomMode mode);
+static gboolean xviewer_scroll_view_get_image_coords (XviewerScrollView *view, gint *x,
                                                   gint *y, gint *width,
                                                   gint *height);
-static gboolean _eog_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b);
+static gboolean _xviewer_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b);
 
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogScrollView, eog_scroll_view, GTK_TYPE_GRID)
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerScrollView, xviewer_scroll_view, GTK_TYPE_GRID)
 
 
 /*===================================
@@ -214,7 +214,7 @@ G_DEFINE_TYPE_WITH_PRIVATE (EogScrollView, eog_scroll_view, GTK_TYPE_GRID)
   ---------------------------------*/
 
 static cairo_surface_t *
-create_surface_from_pixbuf (EogScrollView *view, GdkPixbuf *pixbuf)
+create_surface_from_pixbuf (XviewerScrollView *view, GdkPixbuf *pixbuf)
 {
 	cairo_surface_t *surface;
 	cairo_t *cr;
@@ -231,11 +231,11 @@ create_surface_from_pixbuf (EogScrollView *view, GdkPixbuf *pixbuf)
 	return surface;
 }
 
-/* Disconnects from the EogImage and removes references to it */
+/* Disconnects from the XviewerImage and removes references to it */
 static void
-free_image_resources (EogScrollView *view)
+free_image_resources (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -250,7 +250,7 @@ free_image_resources (EogScrollView *view)
 	}
 
 	if (priv->image != NULL) {
-		eog_image_data_unref (priv->image);
+		xviewer_image_data_unref (priv->image);
 		priv->image = NULL;
 	}
 
@@ -267,9 +267,9 @@ free_image_resources (EogScrollView *view)
 
 /* Computes the size in pixels of the scaled image */
 static void
-compute_scaled_size (EogScrollView *view, double zoom, int *width, int *height)
+compute_scaled_size (XviewerScrollView *view, double zoom, int *width, int *height)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -284,13 +284,13 @@ compute_scaled_size (EogScrollView *view, double zoom, int *width, int *height)
  * centered on the view.
  */
 static void
-compute_center_zoom_offsets (EogScrollView *view,
+compute_center_zoom_offsets (XviewerScrollView *view,
 			     double old_zoom, double new_zoom,
 			     int width, int height,
 			     double zoom_x_anchor, double zoom_y_anchor,
 			     int *xofs, int *yofs)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	int old_scaled_width, old_scaled_height;
 	int new_scaled_width, new_scaled_height;
 	double view_cx, view_cy;
@@ -332,9 +332,9 @@ compute_center_zoom_offsets (EogScrollView *view,
 
 /* Sets the scrollbar values based on the current scrolling offset */
 static void
-update_scrollbar_values (EogScrollView *view)
+update_scrollbar_values (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	int scaled_width, scaled_height;
 	gdouble page_size,page_increment,step_increment;
 	gdouble lower, upper;
@@ -397,7 +397,7 @@ update_scrollbar_values (EogScrollView *view)
 }
 
 static void
-eog_scroll_view_set_cursor (EogScrollView *view, EogScrollViewCursor new_cursor)
+xviewer_scroll_view_set_cursor (XviewerScrollView *view, XviewerScrollViewCursor new_cursor)
 {
 	GdkCursor *cursor = NULL;
 	GdkDisplay *display;
@@ -412,13 +412,13 @@ eog_scroll_view_set_cursor (EogScrollView *view, EogScrollViewCursor new_cursor)
 	view->priv->cursor = new_cursor;
 
 	switch (new_cursor) {
-		case EOG_SCROLL_VIEW_CURSOR_NORMAL:
+		case XVIEWER_SCROLL_VIEW_CURSOR_NORMAL:
 			gdk_window_set_cursor (gtk_widget_get_window (widget), NULL);
 			break;
-                case EOG_SCROLL_VIEW_CURSOR_HIDDEN:
+                case XVIEWER_SCROLL_VIEW_CURSOR_HIDDEN:
                         cursor = gdk_cursor_new (GDK_BLANK_CURSOR);
                         break;
-		case EOG_SCROLL_VIEW_CURSOR_DRAG:
+		case XVIEWER_SCROLL_VIEW_CURSOR_DRAG:
 			cursor = gdk_cursor_new_for_display (display, GDK_FLEUR);
 			break;
 	}
@@ -434,9 +434,9 @@ eog_scroll_view_set_cursor (EogScrollView *view, EogScrollViewCursor new_cursor)
  * specified allocation, or the current allocation if NULL is specified.
  */
 static void
-check_scrollbar_visibility (EogScrollView *view, GtkAllocation *alloc)
+check_scrollbar_visibility (XviewerScrollView *view, GtkAllocation *alloc)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	int bar_height;
 	int bar_width;
 	int img_width;
@@ -466,11 +466,11 @@ check_scrollbar_visibility (EogScrollView *view, GtkAllocation *alloc)
 	gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
 	bar_width = req.width;
 
-	eog_debug_message (DEBUG_WINDOW, "Widget Size allocate: %i, %i   Bar: %i, %i\n",
+	xviewer_debug_message (DEBUG_WINDOW, "Widget Size allocate: %i, %i   Bar: %i, %i\n",
 			   width, height, bar_width, bar_height);
 
 	hbar_visible = vbar_visible = FALSE;
-	if (priv->zoom_mode == EOG_ZOOM_MODE_SHRINK_TO_FIT)
+	if (priv->zoom_mode == XVIEWER_ZOOM_MODE_SHRINK_TO_FIT)
 		hbar_visible = vbar_visible = FALSE;
 	else if (img_width <= width && img_height <= height)
 		hbar_visible = vbar_visible = FALSE;
@@ -504,9 +504,9 @@ check_scrollbar_visibility (EogScrollView *view, GtkAllocation *alloc)
 #if 0
 /* Returns whether the zoom factor is 1.0 */
 static gboolean
-is_unity_zoom (EogScrollView *view)
+is_unity_zoom (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 	return DOUBLE_EQUAL (priv->zoom, 1.0);
@@ -515,9 +515,9 @@ is_unity_zoom (EogScrollView *view)
 
 /* Returns whether the image is zoomed in */
 static gboolean
-is_zoomed_in (EogScrollView *view)
+is_zoomed_in (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 	return priv->zoom - 1.0 > DOUBLE_EQUAL_MAX_DIFF;
@@ -525,9 +525,9 @@ is_zoomed_in (EogScrollView *view)
 
 /* Returns whether the image is zoomed out */
 static gboolean
-is_zoomed_out (EogScrollView *view)
+is_zoomed_out (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 	return DOUBLE_EQUAL_MAX_DIFF + priv->zoom - 1.0 < 0.0;
@@ -537,9 +537,9 @@ is_zoomed_out (EogScrollView *view)
  * the actual visible area.
  */
 static gboolean
-is_image_movable (EogScrollView *view)
+is_image_movable (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -550,9 +550,9 @@ is_image_movable (EogScrollView *view)
 /* Computes the image offsets with respect to the window */
 /*
 static void
-get_image_offsets (EogScrollView *view, int *xofs, int *yofs)
+get_image_offsets (XviewerScrollView *view, int *xofs, int *yofs)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	int scaled_width, scaled_height;
 	int width, height;
 
@@ -588,7 +588,7 @@ get_image_offsets (EogScrollView *view, int *xofs, int *yofs)
  * from the microtile array.
  */
 static void
-pull_rectangle (EogUta *uta, EogIRect *rect, int max_width, int max_height)
+pull_rectangle (XviewerUta *uta, XviewerIRect *rect, int max_width, int max_height)
 {
 	uta_find_first_glom_rect (uta, rect, max_width, max_height);
 	uta_remove_rect (uta, rect->x0, rect->y0, rect->x1, rect->y1);
@@ -598,15 +598,15 @@ pull_rectangle (EogUta *uta, EogIRect *rect, int max_width, int max_height)
  * intersects the dirty rectangle.
  */
 static void
-paint_background (EogScrollView *view, EogIRect *r, EogIRect *rect)
+paint_background (XviewerScrollView *view, XviewerIRect *r, XviewerIRect *rect)
 {
-	EogScrollViewPrivate *priv;
-	EogIRect d;
+	XviewerScrollViewPrivate *priv;
+	XviewerIRect d;
 
 	priv = view->priv;
 
-	eog_irect_intersect (&d, r, rect);
-	if (!eog_irect_empty (&d)) {
+	xviewer_irect_intersect (&d, r, rect);
+	if (!xviewer_irect_empty (&d)) {
 		gdk_window_clear_area (gtk_widget_get_window (priv->display),
 				       d.x0, d.y0,
 				       d.x1 - d.x0, d.y1 - d.y0);
@@ -615,27 +615,27 @@ paint_background (EogScrollView *view, EogIRect *r, EogIRect *rect)
 #endif
 
 static void
-get_transparency_params (EogScrollView *view, int *size, GdkRGBA *color1, GdkRGBA *color2)
+get_transparency_params (XviewerScrollView *view, int *size, GdkRGBA *color1, GdkRGBA *color2)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
 	/* Compute transparency parameters */
 	switch (priv->transp_style) {
-	case EOG_TRANSP_BACKGROUND: {
+	case XVIEWER_TRANSP_BACKGROUND: {
 		/* Simply return fully transparent color */
 		color1->red = color1->green = color1->blue = color1->alpha = 0.0;
 		color2->red = color2->green = color2->blue = color2->alpha = 0.0;
 		break;
 	}
 
-	case EOG_TRANSP_CHECKED:
+	case XVIEWER_TRANSP_CHECKED:
 		g_warn_if_fail (gdk_rgba_parse (color1, CHECK_GRAY));
 		g_warn_if_fail (gdk_rgba_parse (color2, CHECK_LIGHT));
 		break;
 
-	case EOG_TRANSP_COLOR:
+	case XVIEWER_TRANSP_COLOR:
 		*color1 = *color2 = priv->transp_color;
 		break;
 
@@ -648,7 +648,7 @@ get_transparency_params (EogScrollView *view, int *size, GdkRGBA *color1, GdkRGB
 
 
 static cairo_surface_t *
-create_background_surface (EogScrollView *view)
+create_background_surface (XviewerScrollView *view)
 {
 	int check_size;
 	GdkRGBA check_1;
@@ -682,7 +682,7 @@ create_background_surface (EogScrollView *view)
 #if 0
 #ifdef HAVE_RSVG
 static cairo_surface_t *
-create_background_surface (EogScrollView *view)
+create_background_surface (XviewerScrollView *view)
 {
 	int check_size;
 	guint32 check_1 = 0;
@@ -722,9 +722,9 @@ create_background_surface (EogScrollView *view)
 }
 
 static void
-draw_svg_background (EogScrollView *view, cairo_t *cr, EogIRect *render_rect, EogIRect *image_rect)
+draw_svg_background (XviewerScrollView *view, cairo_t *cr, XviewerIRect *render_rect, XviewerIRect *image_rect)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -744,13 +744,13 @@ draw_svg_background (EogScrollView *view, cairo_t *cr, EogIRect *render_rect, Eo
 }
 
 static cairo_surface_t *
-draw_svg_on_image_surface (EogScrollView *view, EogIRect *render_rect, EogIRect *image_rect)
+draw_svg_on_image_surface (XviewerScrollView *view, XviewerIRect *render_rect, XviewerIRect *image_rect)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	cairo_t *cr;
 	cairo_surface_t *surface;
 	cairo_matrix_t matrix, translate, scale;
-	EogTransform *transform;
+	XviewerTransform *transform;
 
 	priv = view->priv;
 
@@ -764,30 +764,30 @@ draw_svg_on_image_surface (EogScrollView *view, EogIRect *render_rect, EogIRect 
 	cairo_restore (cr);
 
 	cairo_matrix_init_identity (&matrix);
-	transform = eog_image_get_transform (priv->image);
+	transform = xviewer_image_get_transform (priv->image);
 	if (transform) {
 		cairo_matrix_t affine;
 		double image_offset_x = 0., image_offset_y = 0.;
 
-		eog_transform_get_affine (transform, &affine);
+		xviewer_transform_get_affine (transform, &affine);
 		cairo_matrix_multiply (&matrix, &affine, &matrix);
 
-		switch (eog_transform_get_transform_type (transform)) {
-		case EOG_TRANSFORM_ROT_90:
-		case EOG_TRANSFORM_FLIP_HORIZONTAL:
+		switch (xviewer_transform_get_transform_type (transform)) {
+		case XVIEWER_TRANSFORM_ROT_90:
+		case XVIEWER_TRANSFORM_FLIP_HORIZONTAL:
 			image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
 			break;
-		case EOG_TRANSFORM_ROT_270:
-		case EOG_TRANSFORM_FLIP_VERTICAL:
+		case XVIEWER_TRANSFORM_ROT_270:
+		case XVIEWER_TRANSFORM_FLIP_VERTICAL:
 			image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
 			break;
-		case EOG_TRANSFORM_ROT_180:
-		case EOG_TRANSFORM_TRANSPOSE:
-		case EOG_TRANSFORM_TRANSVERSE:
+		case XVIEWER_TRANSFORM_ROT_180:
+		case XVIEWER_TRANSFORM_TRANSPOSE:
+		case XVIEWER_TRANSFORM_TRANSVERSE:
 			image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
 			image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
 			break;
-		case EOG_TRANSFORM_NONE:
+		case XVIEWER_TRANSFORM_NONE:
 		default:
 			break;
 		}
@@ -805,16 +805,16 @@ draw_svg_on_image_surface (EogScrollView *view, EogIRect *render_rect, EogIRect 
 
 	cairo_set_matrix (cr, &matrix);
 
-	rsvg_handle_render_cairo (eog_image_get_svg (priv->image), cr);
+	rsvg_handle_render_cairo (xviewer_image_get_svg (priv->image), cr);
 	cairo_destroy (cr);
 
 	return surface;
 }
 
 static void
-draw_svg (EogScrollView *view, EogIRect *render_rect, EogIRect *image_rect)
+draw_svg (XviewerScrollView *view, XviewerIRect *render_rect, XviewerIRect *image_rect)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	cairo_t *cr;
 	cairo_surface_t *surface;
 	GdkWindow *window;
@@ -833,15 +833,15 @@ draw_svg (EogScrollView *view, EogIRect *render_rect, EogIRect *image_rect)
 
 /* Paints a rectangle of the dirty region */
 static void
-paint_rectangle (EogScrollView *view, EogIRect *rect, cairo_filter_t interp_type)
+paint_rectangle (XviewerScrollView *view, XviewerIRect *rect, cairo_filter_t interp_type)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	GdkPixbuf *tmp;
 	char *str;
 	GtkAllocation allocation;
 	int scaled_width, scaled_height;
 	int xofs, yofs;
-	EogIRect r, d;
+	XviewerIRect r, d;
 	int check_size;
 	guint32 check_1 = 0;
 	guint32 check_2 = 0;
@@ -877,7 +877,7 @@ paint_rectangle (EogScrollView *view, EogIRect *rect, cairo_filter_t interp_type
 	else
 		yofs = -priv->yofs;
 
-	eog_debug_message (DEBUG_WINDOW, "zoom %.2f, xofs: %i, yofs: %i scaled w: %i h: %i\n",
+	xviewer_debug_message (DEBUG_WINDOW, "zoom %.2f, xofs: %i, yofs: %i scaled w: %i h: %i\n",
 			   priv->zoom, xofs, yofs, scaled_width, scaled_height);
 
 	/* Draw background if necessary, in four steps */
@@ -934,8 +934,8 @@ paint_rectangle (EogScrollView *view, EogIRect *rect, cairo_filter_t interp_type
 	r.x1 = xofs + scaled_width;
 	r.y1 = yofs + scaled_height;
 
-	eog_irect_intersect (&d, &r, rect);
-	if (eog_irect_empty (&d))
+	xviewer_irect_intersect (&d, &r, rect);
+	if (xviewer_irect_empty (&d))
 		return;
 
 	switch (interp_type) {
@@ -946,11 +946,11 @@ paint_rectangle (EogScrollView *view, EogIRect *rect, cairo_filter_t interp_type
 		str = "ALIASED";
 	}
 
-	eog_debug_message (DEBUG_WINDOW, "%s: x0: %i,\t y0: %i,\t x1: %i,\t y1: %i\n",
+	xviewer_debug_message (DEBUG_WINDOW, "%s: x0: %i,\t y0: %i,\t x1: %i,\t y1: %i\n",
 			   str, d.x0, d.y0, d.x1, d.y1);
 
 #ifdef HAVE_RSVG
-	if (eog_image_is_svg (view->priv->image) && interp_type != CAIRO_FILTER_NEAREST) {
+	if (xviewer_image_is_svg (view->priv->image) && interp_type != CAIRO_FILTER_NEAREST) {
 		draw_svg (view, &d, &r);
 		return;
 	}
@@ -1027,19 +1027,19 @@ paint_rectangle (EogScrollView *view, EogIRect *rect, cairo_filter_t interp_type
 static gboolean
 paint_iteration_idle (gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
-	EogIRect rect;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
+	XviewerIRect rect;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 	g_assert (priv->uta != NULL);
 
 	pull_rectangle (priv->uta, &rect, PAINT_RECT_WIDTH, PAINT_RECT_HEIGHT);
 
-	if (eog_irect_empty (&rect)) {
-		eog_uta_free (priv->uta);
+	if (xviewer_irect_empty (&rect)) {
+		xviewer_uta_free (priv->uta);
 		priv->uta = NULL;
 	} else {
 		if (is_zoomed_in (view))
@@ -1063,15 +1063,15 @@ paint_iteration_idle (gpointer data)
  * with interpolation.  The area is in window coordinates.
  */
 static void
-request_paint_area (EogScrollView *view, GdkRectangle *area)
+request_paint_area (XviewerScrollView *view, GdkRectangle *area)
 {
-	EogScrollViewPrivate *priv;
-	EogIRect r;
+	XviewerScrollViewPrivate *priv;
+	XviewerIRect r;
 	GtkAllocation allocation;
 
 	priv = view->priv;
 
-	eog_debug_message (DEBUG_WINDOW, "x: %i, y: %i, width: %i, height: %i\n",
+	xviewer_debug_message (DEBUG_WINDOW, "x: %i, y: %i, width: %i, height: %i\n",
 			   area->x, area->y, area->width, area->height);
 
 	if (!gtk_widget_is_drawable (priv->display))
@@ -1083,7 +1083,7 @@ request_paint_area (EogScrollView *view, GdkRectangle *area)
 	r.x1 = MIN (allocation.width, area->x + area->width);
 	r.y1 = MIN (allocation.height, area->y + area->height);
 
-	eog_debug_message (DEBUG_WINDOW, "r: %i, %i, %i, %i\n", r.x0, r.y0, r.x1, r.y1);
+	xviewer_debug_message (DEBUG_WINDOW, "r: %i, %i, %i, %i\n", r.x0, r.y0, r.x1, r.y1);
 
 	if (r.x0 >= r.x1 || r.y0 >= r.y1)
 		return;
@@ -1102,7 +1102,7 @@ request_paint_area (EogScrollView *view, GdkRectangle *area)
 		 * It's sufficient to add only a antitaliased idle update
 		 */
 		priv->progressive_state = PROGRESSIVE_NONE;
-	else if (!priv->image || !eog_image_is_animation (priv->image))
+	else if (!priv->image || !xviewer_image_is_animation (priv->image))
 		/* do nearest neigbor before anti aliased version,
 		   except for animations to avoid a "blinking" effect. */
 		paint_rectangle (view, &r, CAIRO_FILTER_NEAREST);
@@ -1129,9 +1129,9 @@ request_paint_area (EogScrollView *view, GdkRectangle *area)
 
 /* Scrolls the view to the specified offsets.  */
 static void
-scroll_to (EogScrollView *view, int x, int y, gboolean change_adjustments)
+scroll_to (XviewerScrollView *view, int x, int y, gboolean change_adjustments)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	GtkAllocation allocation;
 	int xofs, yofs;
 	GdkWindow *window;
@@ -1178,8 +1178,8 @@ scroll_to (EogScrollView *view, int x, int y, gboolean change_adjustments)
 
 	/* Ensure that the uta has the full size */
 #if 0
-	twidth = (allocation.width + EOG_UTILE_SIZE - 1) >> EOG_UTILE_SHIFT;
-	theight = (allocation.height + EOG_UTILE_SIZE - 1) >> EOG_UTILE_SHIFT;
+	twidth = (allocation.width + XVIEWER_UTILE_SIZE - 1) >> XVIEWER_UTILE_SHIFT;
+	theight = (allocation.height + XVIEWER_UTILE_SIZE - 1) >> XVIEWER_UTILE_SHIFT;
 
 #if 0
 	if (priv->uta)
@@ -1242,9 +1242,9 @@ scroll_to (EogScrollView *view, int x, int y, gboolean change_adjustments)
  * about their new values.
  */
 static void
-scroll_by (EogScrollView *view, int xofs, int yofs)
+scroll_by (XviewerScrollView *view, int xofs, int yofs)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -1256,10 +1256,10 @@ scroll_by (EogScrollView *view, int xofs, int yofs)
 static void
 adjustment_changed_cb (GtkAdjustment *adj, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 	scroll_to (view, gtk_adjustment_get_value (priv->hadj),
@@ -1269,9 +1269,9 @@ adjustment_changed_cb (GtkAdjustment *adj, gpointer data)
 
 /* Drags the image to the specified position */
 static void
-drag_to (EogScrollView *view, int x, int y)
+drag_to (XviewerScrollView *view, int x, int y)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	int dx, dy;
 
 	priv = view->priv;
@@ -1286,9 +1286,9 @@ drag_to (EogScrollView *view, int x, int y)
 }
 
 static void
-set_minimum_zoom_factor (EogScrollView *view)
+set_minimum_zoom_factor (XviewerScrollView *view)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	view->priv->min_zoom = MAX (1.0 / gdk_pixbuf_get_width (view->priv->pixbuf),
 				    MAX(1.0 / gdk_pixbuf_get_height (view->priv->pixbuf),
@@ -1312,10 +1312,10 @@ set_minimum_zoom_factor (EogScrollView *view)
  * is %FALSE, then the center point of the image view will be used.
  **/
 static void
-set_zoom (EogScrollView *view, double zoom,
+set_zoom (XviewerScrollView *view, double zoom,
 	  gboolean have_anchor, int anchorx, int anchory)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	GtkAllocation allocation;
 	int xofs, yofs;
 	double x_rel, y_rel;
@@ -1335,7 +1335,7 @@ set_zoom (EogScrollView *view, double zoom,
 	if (DOUBLE_EQUAL (priv->zoom, priv->min_zoom) && zoom < priv->zoom)
 		return;
 
-	eog_scroll_view_set_zoom_mode (view, EOG_ZOOM_MODE_FREE);
+	xviewer_scroll_view_set_zoom_mode (view, XVIEWER_ZOOM_MODE_FREE);
 
 	gtk_widget_get_allocation (GTK_WIDGET (priv->display), &allocation);
 
@@ -1383,15 +1383,15 @@ set_zoom (EogScrollView *view, double zoom,
 
 /* Zooms the image to fit the available allocation */
 static void
-set_zoom_fit (EogScrollView *view)
+set_zoom_fit (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	GtkAllocation allocation;
 	double new_zoom;
 
 	priv = view->priv;
 
-	priv->zoom_mode = EOG_ZOOM_MODE_SHRINK_TO_FIT;
+	priv->zoom_mode = XVIEWER_ZOOM_MODE_SHRINK_TO_FIT;
 
 	if (!gtk_widget_get_mapped (GTK_WIDGET (view)))
 		return;
@@ -1428,8 +1428,8 @@ set_zoom_fit (EogScrollView *view)
 static gboolean
 display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 	GtkAllocation allocation;
 	gboolean do_zoom;
 	double zoom;
@@ -1437,7 +1437,7 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	int xofs, yofs;
 	GdkModifierType modifiers;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 	do_zoom = FALSE;
@@ -1561,12 +1561,12 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 
 /* Button press event handler for the image view */
 static gboolean
-eog_scroll_view_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer data)
+xviewer_scroll_view_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 	if (!gtk_widget_has_focus (priv->display))
@@ -1583,7 +1583,7 @@ eog_scroll_view_button_press_event (GtkWidget *widget, GdkEventButton *event, gp
 				break;
 
 			if (is_image_movable (view)) {
-				eog_scroll_view_set_cursor (view, EOG_SCROLL_VIEW_CURSOR_DRAG);
+				xviewer_scroll_view_set_cursor (view, XVIEWER_SCROLL_VIEW_CURSOR_DRAG);
 
 				priv->dragging = TRUE;
 				priv->drag_anchor_x = event->x;
@@ -1602,13 +1602,13 @@ eog_scroll_view_button_press_event (GtkWidget *widget, GdkEventButton *event, gp
 }
 
 static void
-eog_scroll_view_style_set (GtkWidget *widget, GtkStyle *old_style)
+xviewer_scroll_view_style_set (GtkWidget *widget, GtkStyle *old_style)
 {
 	GtkStyle *style;
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	style = gtk_widget_get_style (widget);
-	priv = EOG_SCROLL_VIEW (widget)->priv;
+	priv = XVIEWER_SCROLL_VIEW (widget)->priv;
 
 	gtk_widget_set_style (priv->display, style);
 }
@@ -1616,12 +1616,12 @@ eog_scroll_view_style_set (GtkWidget *widget, GtkStyle *old_style)
 
 /* Button release event handler for the image view */
 static gboolean
-eog_scroll_view_button_release_event (GtkWidget *widget, GdkEventButton *event, gpointer data)
+xviewer_scroll_view_button_release_event (GtkWidget *widget, GdkEventButton *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 	if (!priv->dragging)
@@ -1633,7 +1633,7 @@ eog_scroll_view_button_release_event (GtkWidget *widget, GdkEventButton *event, 
 			drag_to (view, event->x, event->y);
 			priv->dragging = FALSE;
 
-			eog_scroll_view_set_cursor (view, EOG_SCROLL_VIEW_CURSOR_NORMAL);
+			xviewer_scroll_view_set_cursor (view, XVIEWER_SCROLL_VIEW_CURSOR_NORMAL);
 			break;
 
 		default:
@@ -1645,18 +1645,18 @@ eog_scroll_view_button_release_event (GtkWidget *widget, GdkEventButton *event, 
 
 /* Scroll event handler for the image view.  We zoom with an event without
  * modifiers rather than scroll; we use the Shift modifier to scroll.
- * Rationale: images are not primarily vertical, and in EOG you scan scroll by
+ * Rationale: images are not primarily vertical, and in XVIEWER you scan scroll by
  * dragging the image with button 1 anyways.
  */
 static gboolean
-eog_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer data)
+xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 	double zoom_factor;
 	int xofs, yofs;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 	/* Compute zoom factor and scrolling offsets; we'll only use either of them */
@@ -1717,14 +1717,14 @@ eog_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer
 
 /* Motion event handler for the image view */
 static gboolean
-eog_scroll_view_motion_event (GtkWidget *widget, GdkEventMotion *event, gpointer data)
+xviewer_scroll_view_motion_event (GtkWidget *widget, GdkEventMotion *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 	gint x, y;
 	GdkModifierType mods;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
 #if GTK_CHECK_VERSION (3, 14, 0)
@@ -1749,13 +1749,13 @@ eog_scroll_view_motion_event (GtkWidget *widget, GdkEventMotion *event, gpointer
 static void
 display_map_event (GtkWidget *widget, GdkEvent *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
-	eog_debug (DEBUG_WINDOW);
+	xviewer_debug (DEBUG_WINDOW);
 
 	set_zoom_fit (view);
 	check_scrollbar_visibility (view, NULL);
@@ -1763,27 +1763,27 @@ display_map_event (GtkWidget *widget, GdkEvent *event, gpointer data)
 }
 
 static void
-eog_scroll_view_size_allocate (GtkWidget *widget, GtkAllocation *alloc)
+xviewer_scroll_view_size_allocate (GtkWidget *widget, GtkAllocation *alloc)
 {
-	EogScrollView *view;
+	XviewerScrollView *view;
 
-	view = EOG_SCROLL_VIEW (widget);
+	view = XVIEWER_SCROLL_VIEW (widget);
 	check_scrollbar_visibility (view, alloc);
 
-	GTK_WIDGET_CLASS (eog_scroll_view_parent_class)->size_allocate (widget
+	GTK_WIDGET_CLASS (xviewer_scroll_view_parent_class)->size_allocate (widget
 									,alloc);
 }
 
 static void
 display_size_change (GtkWidget *widget, GdkEventConfigure *event, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
-	if (priv->zoom_mode == EOG_ZOOM_MODE_SHRINK_TO_FIT) {
+	if (priv->zoom_mode == XVIEWER_ZOOM_MODE_SHRINK_TO_FIT) {
 		GtkAllocation alloc;
 
 		alloc.width = event->width;
@@ -1813,7 +1813,7 @@ display_size_change (GtkWidget *widget, GdkEventConfigure *event, gpointer data)
 
 
 static gboolean
-eog_scroll_view_focus_in_event (GtkWidget     *widget,
+xviewer_scroll_view_focus_in_event (GtkWidget     *widget,
 			    GdkEventFocus *event,
 			    gpointer data)
 {
@@ -1822,7 +1822,7 @@ eog_scroll_view_focus_in_event (GtkWidget     *widget,
 }
 
 static gboolean
-eog_scroll_view_focus_out_event (GtkWidget     *widget,
+xviewer_scroll_view_focus_out_event (GtkWidget     *widget,
 			     GdkEventFocus *event,
 			     gpointer data)
 {
@@ -1833,26 +1833,26 @@ eog_scroll_view_focus_out_event (GtkWidget     *widget,
 static gboolean
 display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 	GtkAllocation allocation;
 	int scaled_width, scaled_height;
 	int xofs, yofs;
 
 	g_return_val_if_fail (GTK_IS_DRAWING_AREA (widget), FALSE);
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (data), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (data), FALSE);
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 
 	priv = view->priv;
 
 	if (priv->pixbuf == NULL)
 		return TRUE;
 
-	eog_scroll_view_get_image_coords (view, &xofs, &yofs,
+	xviewer_scroll_view_get_image_coords (view, &xofs, &yofs,
 	                                  &scaled_width, &scaled_height);
 
-	eog_debug_message (DEBUG_WINDOW, "zoom %.2f, xofs: %i, yofs: %i scaled w: %i h: %i\n",
+	xviewer_debug_message (DEBUG_WINDOW, "zoom %.2f, xofs: %i, yofs: %i scaled w: %i h: %i\n",
 			   priv->zoom, xofs, yofs, scaled_width, scaled_height);
 
 	/* Paint the background */
@@ -1882,33 +1882,33 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 	cairo_clip (cr);
 
 #ifdef HAVE_RSVG
-	if (eog_image_is_svg (view->priv->image)) {
+	if (xviewer_image_is_svg (view->priv->image)) {
 		cairo_matrix_t matrix, translate, scale, original;
-		EogTransform *transform = eog_image_get_transform (priv->image);
+		XviewerTransform *transform = xviewer_image_get_transform (priv->image);
 		cairo_matrix_init_identity (&matrix);
 		if (transform) {
 			cairo_matrix_t affine;
 			double image_offset_x = 0., image_offset_y = 0.;
 
-			eog_transform_get_affine (transform, &affine);
+			xviewer_transform_get_affine (transform, &affine);
 			cairo_matrix_multiply (&matrix, &affine, &matrix);
 
-			switch (eog_transform_get_transform_type (transform)) {
-			case EOG_TRANSFORM_ROT_90:
-			case EOG_TRANSFORM_FLIP_HORIZONTAL:
+			switch (xviewer_transform_get_transform_type (transform)) {
+			case XVIEWER_TRANSFORM_ROT_90:
+			case XVIEWER_TRANSFORM_FLIP_HORIZONTAL:
 				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
 				break;
-			case EOG_TRANSFORM_ROT_270:
-			case EOG_TRANSFORM_FLIP_VERTICAL:
+			case XVIEWER_TRANSFORM_ROT_270:
+			case XVIEWER_TRANSFORM_FLIP_VERTICAL:
 				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
 				break;
-			case EOG_TRANSFORM_ROT_180:
-			case EOG_TRANSFORM_TRANSPOSE:
-			case EOG_TRANSFORM_TRANSVERSE:
+			case XVIEWER_TRANSFORM_ROT_180:
+			case XVIEWER_TRANSFORM_TRANSPOSE:
+			case XVIEWER_TRANSFORM_TRANSVERSE:
 				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
 				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
 				break;
-			case EOG_TRANSFORM_NONE:
+			case XVIEWER_TRANSFORM_NONE:
 			default:
 				break;
 			}
@@ -1924,7 +1924,7 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 		cairo_matrix_multiply (&matrix, &matrix, &original);
 		cairo_set_matrix (cr, &matrix);
 
-		rsvg_handle_render_cairo (eog_image_get_svg (priv->image), cr);
+		rsvg_handle_render_cairo (xviewer_image_get_svg (priv->image), cr);
 
 	} else
 #endif /* HAVE_RSVG */
@@ -1947,10 +1947,10 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 static void
 zoom_gesture_begin_cb (GtkGestureZoom   *gesture,
 		       GdkEventSequence *sequence,
-		       EogScrollView    *view)
+		       XviewerScrollView    *view)
 {
 	gdouble center_x, center_y;
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -1970,10 +1970,10 @@ zoom_gesture_begin_cb (GtkGestureZoom   *gesture,
 static void
 zoom_gesture_update_cb (GtkGestureZoom   *gesture,
 			GdkEventSequence *sequence,
-			EogScrollView    *view)
+			XviewerScrollView    *view)
 {
 	gdouble center_x, center_y, scale;
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 	scale = gtk_gesture_zoom_get_scale_delta (gesture);
@@ -1988,35 +1988,35 @@ zoom_gesture_update_cb (GtkGestureZoom   *gesture,
 static void
 zoom_gesture_end_cb (GtkGestureZoom   *gesture,
 		     GdkEventSequence *sequence,
-		     EogScrollView    *view)
+		     XviewerScrollView    *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 	priv->dragging = FALSE;
-        eog_scroll_view_set_cursor (view, EOG_SCROLL_VIEW_CURSOR_NORMAL);
+        xviewer_scroll_view_set_cursor (view, XVIEWER_SCROLL_VIEW_CURSOR_NORMAL);
 }
 
 static void
 rotate_gesture_begin_cb (GtkGesture       *gesture,
 			 GdkEventSequence *sequence,
-			 EogScrollView    *view)
+			 XviewerScrollView    *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
-	priv->rotate_state = EOG_TRANSFORM_NONE;
+	priv->rotate_state = XVIEWER_TRANSFORM_NONE;
 }
 
 static void
 pan_gesture_pan_cb (GtkGesturePan   *gesture,
 		    GtkPanDirection  direction,
 		    gdouble          offset,
-		    EogScrollView   *view)
+		    XviewerScrollView   *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	if (eog_scroll_view_scrollbars_visible (view)) {
+	if (xviewer_scroll_view_scrollbars_visible (view)) {
 		gtk_gesture_set_state (GTK_GESTURE (gesture),
 				       GTK_EVENT_SEQUENCE_DENIED);
 		return;
@@ -2025,15 +2025,15 @@ pan_gesture_pan_cb (GtkGesturePan   *gesture,
 #define PAN_ACTION_DISTANCE 200
 
 	priv = view->priv;
-	priv->pan_action = EOG_PAN_ACTION_NONE;
+	priv->pan_action = XVIEWER_PAN_ACTION_NONE;
 	gtk_gesture_set_state (GTK_GESTURE (gesture), GTK_EVENT_SEQUENCE_CLAIMED);
 
 	if (offset > PAN_ACTION_DISTANCE) {
 		if (direction == GTK_PAN_DIRECTION_LEFT ||
 		    gtk_widget_get_direction (GTK_WIDGET (view)) == GTK_TEXT_DIR_RTL)
-			priv->pan_action = EOG_PAN_ACTION_NEXT;
+			priv->pan_action = XVIEWER_PAN_ACTION_NEXT;
 		else
-			priv->pan_action = EOG_PAN_ACTION_PREV;
+			priv->pan_action = XVIEWER_PAN_ACTION_PREV;
 	}
 #undef PAN_ACTION_DISTANCE
 }
@@ -2041,21 +2041,21 @@ pan_gesture_pan_cb (GtkGesturePan   *gesture,
 static void
 pan_gesture_end_cb (GtkGesture       *gesture,
 		    GdkEventSequence *sequence,
-		    EogScrollView    *view)
+		    XviewerScrollView    *view)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	if (!gtk_gesture_handles_sequence (gesture, sequence))
 		return;
 
 	priv = view->priv;
 
-	if (priv->pan_action == EOG_PAN_ACTION_PREV)
+	if (priv->pan_action == XVIEWER_PAN_ACTION_PREV)
 		g_signal_emit (view, view_signals [SIGNAL_PREVIOUS_IMAGE], 0);
-	else if (priv->pan_action == EOG_PAN_ACTION_NEXT)
+	else if (priv->pan_action == XVIEWER_PAN_ACTION_NEXT)
 		g_signal_emit (view, view_signals [SIGNAL_NEXT_IMAGE], 0);
 
-	priv->pan_action = EOG_PAN_ACTION_NONE;
+	priv->pan_action = XVIEWER_PAN_ACTION_NONE;
 }
 #endif
 
@@ -2074,32 +2074,32 @@ scroll_view_check_angle (gdouble angle,
 	}
 }
 
-static EogRotationState
-scroll_view_get_rotate_state (EogScrollView *view,
+static XviewerRotationState
+scroll_view_get_rotate_state (XviewerScrollView *view,
 			      gdouble        delta)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
 #define THRESHOLD (G_PI / 16)
 	switch (priv->rotate_state) {
-	case EOG_ROTATION_0:
+	case XVIEWER_ROTATION_0:
 		if (scroll_view_check_angle (delta, G_PI * 7 / 4,
 					     G_PI / 4, THRESHOLD))
 			return priv->rotate_state;
 		break;
-	case EOG_ROTATION_90:
+	case XVIEWER_ROTATION_90:
 		if (scroll_view_check_angle (delta, G_PI / 4,
 					     G_PI * 3 / 4, THRESHOLD))
 			return priv->rotate_state;
 		break;
-	case EOG_ROTATION_180:
+	case XVIEWER_ROTATION_180:
 		if (scroll_view_check_angle (delta, G_PI * 3 / 4,
 					     G_PI * 5 / 4, THRESHOLD))
 			return priv->rotate_state;
 		break;
-	case EOG_ROTATION_270:
+	case XVIEWER_ROTATION_270:
 		if (scroll_view_check_angle (delta, G_PI * 5 / 4,
 					     G_PI * 7 / 4, THRESHOLD))
 			return priv->rotate_state;
@@ -2111,13 +2111,13 @@ scroll_view_get_rotate_state (EogScrollView *view,
 #undef THRESHOLD
 
 	if (scroll_view_check_angle (delta, G_PI / 4, G_PI * 3 / 4, 0))
-		return EOG_ROTATION_90;
+		return XVIEWER_ROTATION_90;
 	else if (scroll_view_check_angle (delta, G_PI * 3 / 4, G_PI * 5 / 4, 0))
-		return EOG_ROTATION_180;
+		return XVIEWER_ROTATION_180;
 	else if (scroll_view_check_angle (delta, G_PI * 5 / 4, G_PI * 7 / 4, 0))
-		return EOG_ROTATION_270;
+		return XVIEWER_ROTATION_270;
 
-	return EOG_ROTATION_0;
+	return XVIEWER_ROTATION_0;
 }
 
 #if GTK_CHECK_VERSION (3, 14, 0)
@@ -2125,11 +2125,11 @@ static void
 rotate_gesture_angle_changed_cb (GtkGestureRotate *rotate,
 				 gdouble           angle,
 				 gdouble           delta,
-				 EogScrollView    *view)
+				 XviewerScrollView    *view)
 {
-	EogRotationState rotate_state;
-	EogScrollViewPrivate *priv;
-	gint angle_diffs [N_EOG_ROTATIONS][N_EOG_ROTATIONS] = {
+	XviewerRotationState rotate_state;
+	XviewerScrollViewPrivate *priv;
+	gint angle_diffs [N_XVIEWER_ROTATIONS][N_XVIEWER_ROTATIONS] = {
 		{ 0,   90,  180, 270 },
 		{ 270, 0,   90,  180 },
 		{ 180, 270, 0,   90 },
@@ -2156,22 +2156,22 @@ rotate_gesture_angle_changed_cb (GtkGestureRotate *rotate,
    -----------------------------------*/
 /*
 static void
-image_loading_update_cb (EogImage *img, int x, int y, int width, int height, gpointer data)
+image_loading_update_cb (XviewerImage *img, int x, int y, int width, int height, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 	GdkRectangle area;
 	int xofs, yofs;
 	int sx0, sy0, sx1, sy1;
 
-	view = (EogScrollView*) data;
+	view = (XviewerScrollView*) data;
 	priv = view->priv;
 
-	eog_debug_message (DEBUG_IMAGE_LOAD, "x: %i, y: %i, width: %i, height: %i\n",
+	xviewer_debug_message (DEBUG_IMAGE_LOAD, "x: %i, y: %i, width: %i, height: %i\n",
 			   x, y, width, height);
 
 	if (priv->pixbuf == NULL) {
-		priv->pixbuf = eog_image_get_pixbuf (img);
+		priv->pixbuf = xviewer_image_get_pixbuf (img);
 		set_zoom_fit (view);
 		check_scrollbar_visibility (view, NULL);
 	}
@@ -2195,16 +2195,16 @@ image_loading_update_cb (EogImage *img, int x, int y, int width, int height, gpo
 
 
 static void
-image_loading_finished_cb (EogImage *img, gpointer data)
+image_loading_finished_cb (XviewerImage *img, gpointer data)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	view = (EogScrollView*) data;
+	view = (XviewerScrollView*) data;
 	priv = view->priv;
 
 	if (priv->pixbuf == NULL) {
-		priv->pixbuf = eog_image_get_pixbuf (img);
+		priv->pixbuf = xviewer_image_get_pixbuf (img);
 		priv->progressive_state = PROGRESSIVE_NONE;
 		set_zoom_fit (view);
 		check_scrollbar_visibility (view, NULL);
@@ -2221,11 +2221,11 @@ image_loading_finished_cb (EogImage *img, gpointer data)
 }
 
 static void
-image_loading_failed_cb (EogImage *img, char *msg, gpointer data)
+image_loading_failed_cb (XviewerImage *img, char *msg, gpointer data)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	priv = EOG_SCROLL_VIEW (data)->priv;
+	priv = XVIEWER_SCROLL_VIEW (data)->priv;
 
 	g_print ("loading failed: %s.\n", msg);
 
@@ -2240,11 +2240,11 @@ image_loading_failed_cb (EogImage *img, char *msg, gpointer data)
 }
 
 static void
-image_loading_cancelled_cb (EogImage *img, gpointer data)
+image_loading_cancelled_cb (XviewerImage *img, gpointer data)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	priv = EOG_SCROLL_VIEW (data)->priv;
+	priv = XVIEWER_SCROLL_VIEW (data)->priv;
 
 	if (priv->pixbuf != NULL) {
 		g_object_unref (priv->pixbuf);
@@ -2260,9 +2260,9 @@ image_loading_cancelled_cb (EogImage *img, gpointer data)
 /* Use when the pixbuf in the view is changed, to keep a
    reference to it and create its cairo surface. */
 static void
-update_pixbuf (EogScrollView *view, GdkPixbuf *pixbuf)
+update_pixbuf (XviewerScrollView *view, GdkPixbuf *pixbuf)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
 	priv = view->priv;
 
@@ -2280,12 +2280,12 @@ update_pixbuf (EogScrollView *view, GdkPixbuf *pixbuf)
 }
 
 static void
-image_changed_cb (EogImage *img, gpointer data)
+image_changed_cb (XviewerImage *img, gpointer data)
 {
-	update_pixbuf (EOG_SCROLL_VIEW (data), eog_image_get_pixbuf (img));
+	update_pixbuf (XVIEWER_SCROLL_VIEW (data), xviewer_image_get_pixbuf (img));
 
-	_set_zoom_mode_internal (EOG_SCROLL_VIEW (data),
-				 EOG_ZOOM_MODE_SHRINK_TO_FIT);
+	_set_zoom_mode_internal (XVIEWER_SCROLL_VIEW (data),
+				 XVIEWER_ZOOM_MODE_SHRINK_TO_FIT);
 }
 
 /*===================================
@@ -2293,31 +2293,31 @@ image_changed_cb (EogImage *img, gpointer data)
   ---------------------------------*/
 
 void
-eog_scroll_view_hide_cursor (EogScrollView *view)
+xviewer_scroll_view_hide_cursor (XviewerScrollView *view)
 {
-       eog_scroll_view_set_cursor (view, EOG_SCROLL_VIEW_CURSOR_HIDDEN);
+       xviewer_scroll_view_set_cursor (view, XVIEWER_SCROLL_VIEW_CURSOR_HIDDEN);
 }
 
 void
-eog_scroll_view_show_cursor (EogScrollView *view)
+xviewer_scroll_view_show_cursor (XviewerScrollView *view)
 {
-       eog_scroll_view_set_cursor (view, EOG_SCROLL_VIEW_CURSOR_NORMAL);
+       xviewer_scroll_view_set_cursor (view, XVIEWER_SCROLL_VIEW_CURSOR_NORMAL);
 }
 
 /* general properties */
 void
-eog_scroll_view_set_zoom_upscale (EogScrollView *view, gboolean upscale)
+xviewer_scroll_view_set_zoom_upscale (XviewerScrollView *view, gboolean upscale)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
 	if (priv->upscale != upscale) {
 		priv->upscale = upscale;
 
-		if (priv->zoom_mode == EOG_ZOOM_MODE_SHRINK_TO_FIT) {
+		if (priv->zoom_mode == XVIEWER_ZOOM_MODE_SHRINK_TO_FIT) {
 			set_zoom_fit (view);
 			gtk_widget_queue_draw (GTK_WIDGET (priv->display));
 		}
@@ -2325,12 +2325,12 @@ eog_scroll_view_set_zoom_upscale (EogScrollView *view, gboolean upscale)
 }
 
 void
-eog_scroll_view_set_antialiasing_in (EogScrollView *view, gboolean state)
+xviewer_scroll_view_set_antialiasing_in (XviewerScrollView *view, gboolean state)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	cairo_filter_t new_interp_type;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
@@ -2344,12 +2344,12 @@ eog_scroll_view_set_antialiasing_in (EogScrollView *view, gboolean state)
 }
 
 void
-eog_scroll_view_set_antialiasing_out (EogScrollView *view, gboolean state)
+xviewer_scroll_view_set_antialiasing_out (XviewerScrollView *view, gboolean state)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	cairo_filter_t new_interp_type;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
@@ -2363,9 +2363,9 @@ eog_scroll_view_set_antialiasing_out (EogScrollView *view, gboolean state)
 }
 
 static void
-_transp_background_changed (EogScrollView *view)
+_transp_background_changed (XviewerScrollView *view)
 {
-	EogScrollViewPrivate *priv = view->priv;
+	XviewerScrollViewPrivate *priv = view->priv;
 
 	if (priv->pixbuf != NULL && gdk_pixbuf_get_has_alpha (priv->pixbuf)) {
 		if (priv->background_surface) {
@@ -2379,17 +2379,17 @@ _transp_background_changed (EogScrollView *view)
 }
 
 void
-eog_scroll_view_set_transparency_color (EogScrollView *view, GdkRGBA *color)
+xviewer_scroll_view_set_transparency_color (XviewerScrollView *view, GdkRGBA *color)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
-	if (!_eog_gdk_rgba_equal0 (&priv->transp_color, color)) {
+	if (!_xviewer_gdk_rgba_equal0 (&priv->transp_color, color)) {
 		priv->transp_color = *color;
-		if (priv->transp_style == EOG_TRANSP_COLOR)
+		if (priv->transp_style == XVIEWER_TRANSP_COLOR)
 			_transp_background_changed (view);
 
 		g_object_notify (G_OBJECT (view), "transparency-color");
@@ -2397,12 +2397,12 @@ eog_scroll_view_set_transparency_color (EogScrollView *view, GdkRGBA *color)
 }
 
 void
-eog_scroll_view_set_transparency (EogScrollView        *view,
-				  EogTransparencyStyle  style)
+xviewer_scroll_view_set_transparency (XviewerScrollView        *view,
+				  XviewerTransparencyStyle  style)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 	
 	priv = view->priv;
 
@@ -2424,12 +2424,12 @@ static double preferred_zoom_levels[] = {
 static const gint n_zoom_levels = (sizeof (preferred_zoom_levels) / sizeof (double));
 
 void
-eog_scroll_view_zoom_in (EogScrollView *view, gboolean smooth)
+xviewer_scroll_view_zoom_in (XviewerScrollView *view, gboolean smooth)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	double zoom;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
@@ -2460,12 +2460,12 @@ eog_scroll_view_zoom_in (EogScrollView *view, gboolean smooth)
 }
 
 void
-eog_scroll_view_zoom_out (EogScrollView *view, gboolean smooth)
+xviewer_scroll_view_zoom_out (XviewerScrollView *view, gboolean smooth)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	double zoom;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
@@ -2494,9 +2494,9 @@ eog_scroll_view_zoom_out (EogScrollView *view, gboolean smooth)
 }
 
 static void
-eog_scroll_view_zoom_fit (EogScrollView *view)
+xviewer_scroll_view_zoom_fit (XviewerScrollView *view)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	set_zoom_fit (view);
 	check_scrollbar_visibility (view, NULL);
@@ -2504,25 +2504,25 @@ eog_scroll_view_zoom_fit (EogScrollView *view)
 }
 
 void
-eog_scroll_view_set_zoom (EogScrollView *view, double zoom)
+xviewer_scroll_view_set_zoom (XviewerScrollView *view, double zoom)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	set_zoom (view, zoom, FALSE, 0, 0);
 }
 
 double
-eog_scroll_view_get_zoom (EogScrollView *view)
+xviewer_scroll_view_get_zoom (XviewerScrollView *view)
 {
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (view), 0.0);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (view), 0.0);
 
 	return view->priv->zoom;
 }
 
 gboolean
-eog_scroll_view_get_zoom_is_min (EogScrollView *view)
+xviewer_scroll_view_get_zoom_is_min (XviewerScrollView *view)
 {
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (view), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (view), FALSE);
 
 	set_minimum_zoom_factor (view);
 
@@ -2531,36 +2531,36 @@ eog_scroll_view_get_zoom_is_min (EogScrollView *view)
 }
 
 gboolean
-eog_scroll_view_get_zoom_is_max (EogScrollView *view)
+xviewer_scroll_view_get_zoom_is_max (XviewerScrollView *view)
 {
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (view), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (view), FALSE);
 
 	return DOUBLE_EQUAL (view->priv->zoom, MAX_ZOOM_FACTOR);
 }
 
 static void
-display_next_frame_cb (EogImage *image, gint delay, gpointer data)
+display_next_frame_cb (XviewerImage *image, gint delay, gpointer data)
 {
- 	EogScrollViewPrivate *priv;
-	EogScrollView *view;
+ 	XviewerScrollViewPrivate *priv;
+	XviewerScrollView *view;
 
-	if (!EOG_IS_SCROLL_VIEW (data))
+	if (!XVIEWER_IS_SCROLL_VIEW (data))
 		return;
 
-	view = EOG_SCROLL_VIEW (data);
+	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
-	update_pixbuf (view, eog_image_get_pixbuf (image));
+	update_pixbuf (view, xviewer_image_get_pixbuf (image));
 
 	gtk_widget_queue_draw (GTK_WIDGET (priv->display)); 
 }
 
 void
-eog_scroll_view_set_image (EogScrollView *view, EogImage *image)
+xviewer_scroll_view_set_image (XviewerScrollView *view, XviewerImage *image)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
@@ -2576,13 +2576,13 @@ eog_scroll_view_set_image (EogScrollView *view, EogImage *image)
 
 	/* priv->progressive_state = PROGRESSIVE_NONE; */
 	if (image != NULL) {
-		eog_image_data_ref (image);
+		xviewer_image_data_ref (image);
 
 		if (priv->pixbuf == NULL) {
-			update_pixbuf (view, eog_image_get_pixbuf (image));
+			update_pixbuf (view, xviewer_image_get_pixbuf (image));
 			/* priv->progressive_state = PROGRESSIVE_NONE; */
 			_set_zoom_mode_internal (view,
-						 EOG_ZOOM_MODE_SHRINK_TO_FIT);
+						 XVIEWER_ZOOM_MODE_SHRINK_TO_FIT);
 
 		}
 #if 0
@@ -2597,8 +2597,8 @@ eog_scroll_view_set_image (EogScrollView *view, EogImage *image)
 
 		priv->image_changed_id = g_signal_connect (image, "changed",
 							   (GCallback) image_changed_cb, view);
-		if (eog_image_is_animation (image) == TRUE ) {
-			eog_image_start_animation (image);
+		if (xviewer_image_is_animation (image) == TRUE ) {
+			xviewer_image_start_animation (image);
 			priv->frame_changed_id = g_signal_connect (image, "next-frame", 
 								    (GCallback) display_next_frame_cb, view);
 		}
@@ -2610,19 +2610,19 @@ eog_scroll_view_set_image (EogScrollView *view, EogImage *image)
 }
 
 /**
- * eog_scroll_view_get_image:
- * @view: An #EogScrollView.
+ * xviewer_scroll_view_get_image:
+ * @view: An #XviewerScrollView.
  *
- * Gets the the currently displayed #EogImage.
+ * Gets the the currently displayed #XviewerImage.
  *
- * Returns: (transfer full): An #EogImage.
+ * Returns: (transfer full): An #XviewerImage.
  **/
-EogImage*
-eog_scroll_view_get_image (EogScrollView *view)
+XviewerImage*
+xviewer_scroll_view_get_image (XviewerScrollView *view)
 {
-	EogImage *img;
+	XviewerImage *img;
 
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (view), NULL);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (view), NULL);
 
 	img = view->priv->image;
 
@@ -2633,7 +2633,7 @@ eog_scroll_view_get_image (EogScrollView *view)
 }
 
 gboolean
-eog_scroll_view_scrollbars_visible (EogScrollView *view)
+xviewer_scroll_view_scrollbars_visible (XviewerScrollView *view)
 {
 	if (!gtk_widget_get_visible (GTK_WIDGET (view->priv->hbar)) &&
 	    !gtk_widget_get_visible (GTK_WIDGET (view->priv->vbar)))
@@ -2684,17 +2684,17 @@ sv_rgba_to_string_mapping (const GValue       *value,
 }
 
 static void
-eog_scroll_view_init (EogScrollView *view)
+xviewer_scroll_view_init (XviewerScrollView *view)
 {
 	GSettings *settings;
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	priv = view->priv = eog_scroll_view_get_instance_private (view);
-	settings = g_settings_new (EOG_CONF_VIEW);
+	priv = view->priv = xviewer_scroll_view_get_instance_private (view);
+	settings = g_settings_new (XVIEWER_CONF_VIEW);
 
 	priv->zoom = 1.0;
 	priv->min_zoom = MIN_ZOOM_FACTOR;
-	priv->zoom_mode = EOG_ZOOM_MODE_SHRINK_TO_FIT;
+	priv->zoom_mode = XVIEWER_ZOOM_MODE_SHRINK_TO_FIT;
 	priv->upscale = FALSE;
 	//priv->uta = NULL;
 	priv->interp_type_in = CAIRO_FILTER_BILINEAR;
@@ -2705,9 +2705,9 @@ eog_scroll_view_init (EogScrollView *view)
 	priv->pixbuf = NULL;
 	priv->surface = NULL;
 	/* priv->progressive_state = PROGRESSIVE_NONE; */
-	priv->transp_style = EOG_TRANSP_BACKGROUND;
+	priv->transp_style = XVIEWER_TRANSP_BACKGROUND;
 	g_warn_if_fail (gdk_rgba_parse(&priv->transp_color, CHECK_BLACK));
-	priv->cursor = EOG_SCROLL_VIEW_CURSOR_NORMAL;
+	priv->cursor = XVIEWER_SCROLL_VIEW_CURSOR_NORMAL;
 	priv->menu = NULL;
 	priv->override_bg_color = NULL;
 	priv->background_surface = NULL;
@@ -2744,19 +2744,19 @@ eog_scroll_view_init (EogScrollView *view)
 	g_signal_connect (G_OBJECT (priv->display), "map_event",
 			  G_CALLBACK (display_map_event), view);
 	g_signal_connect (G_OBJECT (priv->display), "button_press_event",
-			  G_CALLBACK (eog_scroll_view_button_press_event),
+			  G_CALLBACK (xviewer_scroll_view_button_press_event),
 			  view);
 	g_signal_connect (G_OBJECT (priv->display), "motion_notify_event",
-			  G_CALLBACK (eog_scroll_view_motion_event), view);
+			  G_CALLBACK (xviewer_scroll_view_motion_event), view);
 	g_signal_connect (G_OBJECT (priv->display), "button_release_event",
-			  G_CALLBACK (eog_scroll_view_button_release_event),
+			  G_CALLBACK (xviewer_scroll_view_button_release_event),
 			  view);
 	g_signal_connect (G_OBJECT (priv->display), "scroll_event",
-			  G_CALLBACK (eog_scroll_view_scroll_event), view);
+			  G_CALLBACK (xviewer_scroll_view_scroll_event), view);
 	g_signal_connect (G_OBJECT (priv->display), "focus_in_event",
-			  G_CALLBACK (eog_scroll_view_focus_in_event), NULL);
+			  G_CALLBACK (xviewer_scroll_view_focus_in_event), NULL);
 	g_signal_connect (G_OBJECT (priv->display), "focus_out_event",
-			  G_CALLBACK (eog_scroll_view_focus_out_event), NULL);
+			  G_CALLBACK (xviewer_scroll_view_focus_out_event), NULL);
 
 	g_signal_connect (G_OBJECT (view), "key_press_event",
 			  G_CALLBACK (display_key_press_event), view);
@@ -2781,23 +2781,23 @@ eog_scroll_view_init (EogScrollView *view)
 			 1, 0, 1, 1);
 	gtk_widget_set_vexpand (priv->vbar, TRUE);
 
-	g_settings_bind (settings, EOG_CONF_VIEW_USE_BG_COLOR, view,
+	g_settings_bind (settings, XVIEWER_CONF_VIEW_USE_BG_COLOR, view,
 			 "use-background-color", G_SETTINGS_BIND_DEFAULT);
-	g_settings_bind_with_mapping (settings, EOG_CONF_VIEW_BACKGROUND_COLOR,
+	g_settings_bind_with_mapping (settings, XVIEWER_CONF_VIEW_BACKGROUND_COLOR,
 				      view, "background-color",
 				      G_SETTINGS_BIND_DEFAULT,
 				      sv_string_to_rgba_mapping,
 				      sv_rgba_to_string_mapping, NULL, NULL);
-	g_settings_bind_with_mapping (settings, EOG_CONF_VIEW_TRANS_COLOR,
+	g_settings_bind_with_mapping (settings, XVIEWER_CONF_VIEW_TRANS_COLOR,
 				      view, "transparency-color",
 				      G_SETTINGS_BIND_GET,
 				      sv_string_to_rgba_mapping,
 				      sv_rgba_to_string_mapping, NULL, NULL);
-	g_settings_bind (settings, EOG_CONF_VIEW_TRANSPARENCY, view,
+	g_settings_bind (settings, XVIEWER_CONF_VIEW_TRANSPARENCY, view,
 			 "transparency-style", G_SETTINGS_BIND_GET);
-	g_settings_bind (settings, EOG_CONF_VIEW_EXTRAPOLATE, view,
+	g_settings_bind (settings, XVIEWER_CONF_VIEW_EXTRAPOLATE, view,
 			 "antialiasing-in", G_SETTINGS_BIND_GET);
-	g_settings_bind (settings, EOG_CONF_VIEW_INTERPOLATE, view,
+	g_settings_bind (settings, XVIEWER_CONF_VIEW_INTERPOLATE, view,
 			 "antialiasing-out", G_SETTINGS_BIND_GET);
 
 	g_object_unref (settings);
@@ -2838,19 +2838,19 @@ eog_scroll_view_init (EogScrollView *view)
 }
 
 static void
-eog_scroll_view_dispose (GObject *object)
+xviewer_scroll_view_dispose (GObject *object)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (object));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (object));
 
-	view = EOG_SCROLL_VIEW (object);
+	view = XVIEWER_SCROLL_VIEW (object);
 	priv = view->priv;
 
 #if 0
 	if (priv->uta != NULL) {
-		eog_uta_free (priv->uta);
+		xviewer_uta_free (priv->uta);
 		priv->uta = NULL;
 	}
 #endif
@@ -2894,19 +2894,19 @@ eog_scroll_view_dispose (GObject *object)
 	}
 #endif
 
-	G_OBJECT_CLASS (eog_scroll_view_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_scroll_view_parent_class)->dispose (object);
 }
 
 static void
-eog_scroll_view_get_property (GObject *object, guint property_id,
+xviewer_scroll_view_get_property (GObject *object, guint property_id,
 			      GValue *value, GParamSpec *pspec)
 {
-	EogScrollView *view;
-	EogScrollViewPrivate *priv;
+	XviewerScrollView *view;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (object));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (object));
 
-	view = EOG_SCROLL_VIEW (object);
+	view = XVIEWER_SCROLL_VIEW (object);
 	priv = view->priv;
 
 	switch (property_id) {
@@ -2950,48 +2950,48 @@ eog_scroll_view_get_property (GObject *object, guint property_id,
 }
 
 static void
-eog_scroll_view_set_property (GObject *object, guint property_id,
+xviewer_scroll_view_set_property (GObject *object, guint property_id,
 			      const GValue *value, GParamSpec *pspec)
 {
-	EogScrollView *view;
+	XviewerScrollView *view;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (object));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (object));
 
-	view = EOG_SCROLL_VIEW (object);
+	view = XVIEWER_SCROLL_VIEW (object);
 
 	switch (property_id) {
 	case PROP_ANTIALIAS_IN:
-		eog_scroll_view_set_antialiasing_in (view, g_value_get_boolean (value));
+		xviewer_scroll_view_set_antialiasing_in (view, g_value_get_boolean (value));
 		break;
 	case PROP_ANTIALIAS_OUT:
-		eog_scroll_view_set_antialiasing_out (view, g_value_get_boolean (value));
+		xviewer_scroll_view_set_antialiasing_out (view, g_value_get_boolean (value));
 		break;
 	case PROP_USE_BG_COLOR:
-		eog_scroll_view_set_use_bg_color (view, g_value_get_boolean (value));
+		xviewer_scroll_view_set_use_bg_color (view, g_value_get_boolean (value));
 		break;
 	case PROP_BACKGROUND_COLOR:
 	{
 		const GdkRGBA *color = g_value_get_boxed (value);
-		eog_scroll_view_set_background_color (view, color);
+		xviewer_scroll_view_set_background_color (view, color);
 		break;
 	}
 	case PROP_SCROLLWHEEL_ZOOM:
-		eog_scroll_view_set_scroll_wheel_zoom (view, g_value_get_boolean (value));
+		xviewer_scroll_view_set_scroll_wheel_zoom (view, g_value_get_boolean (value));
 		break;
 	case PROP_TRANSP_COLOR:
-		eog_scroll_view_set_transparency_color (view, g_value_get_boxed (value));
+		xviewer_scroll_view_set_transparency_color (view, g_value_get_boxed (value));
 		break;
 	case PROP_TRANSPARENCY_STYLE:
-		eog_scroll_view_set_transparency (view, g_value_get_enum (value));
+		xviewer_scroll_view_set_transparency (view, g_value_get_enum (value));
 		break;
 	case PROP_ZOOM_MODE:
-		eog_scroll_view_set_zoom_mode (view, g_value_get_enum (value));
+		xviewer_scroll_view_set_zoom_mode (view, g_value_get_enum (value));
 		break;
 	case PROP_ZOOM_MULTIPLIER:
-		eog_scroll_view_set_zoom_multiplier (view, g_value_get_double (value));
+		xviewer_scroll_view_set_zoom_multiplier (view, g_value_get_double (value));
 		break;
 	case PROP_IMAGE:
-		eog_scroll_view_set_image (view, g_value_get_object (value));
+		xviewer_scroll_view_set_image (view, g_value_get_object (value));
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -3000,7 +3000,7 @@ eog_scroll_view_set_property (GObject *object, guint property_id,
 
 
 static void
-eog_scroll_view_class_init (EogScrollViewClass *klass)
+xviewer_scroll_view_class_init (XviewerScrollViewClass *klass)
 {
 	GObjectClass *gobject_class;
 	GtkWidgetClass *widget_class;
@@ -3008,12 +3008,12 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 	gobject_class = (GObjectClass*) klass;
 	widget_class = (GtkWidgetClass*) klass;
 
-	gobject_class->dispose = eog_scroll_view_dispose;
-        gobject_class->set_property = eog_scroll_view_set_property;
-        gobject_class->get_property = eog_scroll_view_get_property;
+	gobject_class->dispose = xviewer_scroll_view_dispose;
+        gobject_class->set_property = xviewer_scroll_view_set_property;
+        gobject_class->get_property = xviewer_scroll_view_get_property;
 
 	/**
-	 * EogScrollView:antialiasing-in:
+	 * XviewerScrollView:antialiasing-in:
 	 *
 	 * If %TRUE the displayed image will be filtered in a second pass
 	 * while being zoomed in.
@@ -3023,7 +3023,7 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 		g_param_spec_boolean ("antialiasing-in", NULL, NULL, TRUE,
 				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 	/**
-	 * EogScrollView:antialiasing-out:
+	 * XviewerScrollView:antialiasing-out:
 	 *
 	 * If %TRUE the displayed image will be filtered in a second pass
 	 * while being zoomed out.
@@ -3034,7 +3034,7 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	/**
-	 * EogScrollView:background-color:
+	 * XviewerScrollView:background-color:
 	 *
 	 * This is the default background color used for painting the background
 	 * of the image view. If set to %NULL the color is determined by the
@@ -3052,7 +3052,7 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	/**
-	 * EogScrollView:zoom-multiplier:
+	 * XviewerScrollView:zoom-multiplier:
 	 *
 	 * The current zoom factor is multiplied with this value + 1.0 when
 	 * scrolling with the scrollwheel to determine the next zoom factor.
@@ -3064,7 +3064,7 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 				     G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	/**
-	 * EogScrollView:scrollwheel-zoom:
+	 * XviewerScrollView:scrollwheel-zoom:
 	 *
 	 * If %TRUE the scrollwheel will zoom the view, otherwise it will be
 	 * used for scrolling a zoomed image.
@@ -3075,20 +3075,20 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	/**
-	 * EogScrollView:image:
+	 * XviewerScrollView:image:
 	 *
-	 * This is the currently display #EogImage.
+	 * This is the currently display #XviewerImage.
 	 */
 	g_object_class_install_property (
 		gobject_class, PROP_IMAGE,
-		g_param_spec_object ("image", NULL, NULL, EOG_TYPE_IMAGE,
+		g_param_spec_object ("image", NULL, NULL, XVIEWER_TYPE_IMAGE,
 				     G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	/**
-	 * EogScrollView:transparency-color:
+	 * XviewerScrollView:transparency-color:
 	 *
 	 * This is the color used to fill the transparent parts of an image
-	 * if #EogScrollView:transparency-style is set to %EOG_TRANSP_COLOR.
+	 * if #XviewerScrollView:transparency-style is set to %XVIEWER_TRANSP_COLOR.
 	 */
 	g_object_class_install_property (
 		gobject_class, PROP_TRANSP_COLOR,
@@ -3097,38 +3097,38 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 				    G_PARAM_WRITABLE | G_PARAM_STATIC_NAME));
 	
 	/**
-	 * EogScrollView:transparency-style:
+	 * XviewerScrollView:transparency-style:
 	 *
 	 * Determines how to fill the shown image's transparent areas.
 	 */
 	g_object_class_install_property (
 		gobject_class, PROP_TRANSPARENCY_STYLE,
 		g_param_spec_enum ("transparency-style", NULL, NULL,
-				   EOG_TYPE_TRANSPARENCY_STYLE,
-				   EOG_TRANSP_CHECKED,
+				   XVIEWER_TYPE_TRANSPARENCY_STYLE,
+				   XVIEWER_TRANSP_CHECKED,
 				   G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	g_object_class_install_property (
 		gobject_class, PROP_ZOOM_MODE,
 		g_param_spec_enum ("zoom-mode", NULL, NULL,
-				   EOG_TYPE_ZOOM_MODE,
-				   EOG_ZOOM_MODE_SHRINK_TO_FIT,
+				   XVIEWER_TYPE_ZOOM_MODE,
+				   XVIEWER_ZOOM_MODE_SHRINK_TO_FIT,
 				   G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	view_signals [SIGNAL_ZOOM_CHANGED] =
 		g_signal_new ("zoom_changed",
-			      EOG_TYPE_SCROLL_VIEW,
+			      XVIEWER_TYPE_SCROLL_VIEW,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogScrollViewClass, zoom_changed),
+			      G_STRUCT_OFFSET (XviewerScrollViewClass, zoom_changed),
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__DOUBLE,
 			      G_TYPE_NONE, 1,
 			      G_TYPE_DOUBLE);
 	view_signals [SIGNAL_ROTATION_CHANGED] =
 		g_signal_new ("rotation-changed",
-			      EOG_TYPE_SCROLL_VIEW,
+			      XVIEWER_TYPE_SCROLL_VIEW,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogScrollViewClass, rotation_changed),
+			      G_STRUCT_OFFSET (XviewerScrollViewClass, rotation_changed),
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__DOUBLE,
 			      G_TYPE_NONE, 1,
@@ -3136,23 +3136,23 @@ eog_scroll_view_class_init (EogScrollViewClass *klass)
 
 	view_signals [SIGNAL_NEXT_IMAGE] =
 		g_signal_new ("next-image",
-			      EOG_TYPE_SCROLL_VIEW,
+			      XVIEWER_TYPE_SCROLL_VIEW,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogScrollViewClass, next_image),
+			      G_STRUCT_OFFSET (XviewerScrollViewClass, next_image),
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__VOID,
 			      G_TYPE_NONE, 0);
 	view_signals [SIGNAL_PREVIOUS_IMAGE] =
 		g_signal_new ("previous-image",
-			      EOG_TYPE_SCROLL_VIEW,
+			      XVIEWER_TYPE_SCROLL_VIEW,
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (EogScrollViewClass, previous_image),
+			      G_STRUCT_OFFSET (XviewerScrollViewClass, previous_image),
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__VOID,
 			      G_TYPE_NONE, 0);
 
-	widget_class->size_allocate = eog_scroll_view_size_allocate;
-	widget_class->style_set = eog_scroll_view_style_set;
+	widget_class->size_allocate = xviewer_scroll_view_size_allocate;
+	widget_class->style_set = xviewer_scroll_view_style_set;
 }
 
 static void
@@ -3160,15 +3160,15 @@ view_on_drag_begin_cb (GtkWidget        *widget,
 		       GdkDragContext   *context,
 		       gpointer          user_data)
 {
-	EogScrollView *view;
-	EogImage *image;
+	XviewerScrollView *view;
+	XviewerImage *image;
 	GdkPixbuf *thumbnail;
 	gint width, height;
 
-	view = EOG_SCROLL_VIEW (user_data);
+	view = XVIEWER_SCROLL_VIEW (user_data);
 	image = view->priv->image;
 
-	thumbnail = eog_image_get_thumbnail (image);
+	thumbnail = xviewer_image_get_thumbnail (image);
 
 	if  (thumbnail) {
 		width = gdk_pixbuf_get_width (thumbnail);
@@ -3186,16 +3186,16 @@ view_on_drag_data_get_cb (GtkWidget        *widget,
 			  guint             time,
 			  gpointer          user_data)
 {
-	EogScrollView *view;
-	EogImage *image;
+	XviewerScrollView *view;
+	XviewerImage *image;
 	gchar *uris[2];
 	GFile *file;
 
-	view = EOG_SCROLL_VIEW (user_data);
+	view = XVIEWER_SCROLL_VIEW (user_data);
 
 	image = view->priv->image;
 
-	file = eog_image_get_file (image);
+	file = xviewer_image_get_file (image);
 	uris[0] = g_file_get_uri (file);
 	uris[1] = NULL;
 
@@ -3206,11 +3206,11 @@ view_on_drag_data_get_cb (GtkWidget        *widget,
 }
 
 GtkWidget*
-eog_scroll_view_new (void)
+xviewer_scroll_view_new (void)
 {
 	GtkWidget *widget;
 
-	widget = g_object_new (EOG_TYPE_SCROLL_VIEW,
+	widget = g_object_new (XVIEWER_TYPE_SCROLL_VIEW,
 			       "can-focus", TRUE,
 			       "row-homogeneous", FALSE,
 			       "column-homogeneous", FALSE,
@@ -3220,7 +3220,7 @@ eog_scroll_view_new (void)
 }
 
 static void
-eog_scroll_view_popup_menu (EogScrollView *view, GdkEventButton *event)
+xviewer_scroll_view_popup_menu (XviewerScrollView *view, GdkEventButton *event)
 {
 	GtkWidget *popup;
 	int button, event_time;
@@ -3246,7 +3246,7 @@ view_on_button_press_event_cb (GtkWidget *view, GdkEventButton *event,
     /* Ignore double-clicks and triple-clicks */
     if (event->button == 3 && event->type == GDK_BUTTON_PRESS)
     {
-	    eog_scroll_view_popup_menu (EOG_SCROLL_VIEW (view), event);
+	    xviewer_scroll_view_popup_menu (XVIEWER_SCROLL_VIEW (view), event);
 
 	    return TRUE;
     }
@@ -3255,10 +3255,10 @@ view_on_button_press_event_cb (GtkWidget *view, GdkEventButton *event,
 }
 
 void
-eog_scroll_view_set_popup (EogScrollView *view,
+xviewer_scroll_view_set_popup (XviewerScrollView *view,
 			   GtkMenu *menu)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 	g_return_if_fail (view->priv->menu == NULL);
 
 	view->priv->menu = g_object_ref (menu);
@@ -3272,7 +3272,7 @@ eog_scroll_view_set_popup (EogScrollView *view,
 }
 
 static gboolean
-_eog_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b)
+_xviewer_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b)
 {
 	if (a == NULL || b == NULL)
 		return (a == b);
@@ -3281,11 +3281,11 @@ _eog_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b)
 }
 
 static gboolean
-_eog_replace_gdk_rgba (GdkRGBA **dest, const GdkRGBA *src)
+_xviewer_replace_gdk_rgba (GdkRGBA **dest, const GdkRGBA *src)
 {
 	GdkRGBA *old = *dest;
 
-	if (_eog_gdk_rgba_equal0 (old, src))
+	if (_xviewer_gdk_rgba_equal0 (old, src))
 		return FALSE;
 
 	if (old != NULL)
@@ -3297,10 +3297,10 @@ _eog_replace_gdk_rgba (GdkRGBA **dest, const GdkRGBA *src)
 }
 
 static void
-_eog_scroll_view_update_bg_color (EogScrollView *view)
+_xviewer_scroll_view_update_bg_color (XviewerScrollView *view)
 {
 	const GdkRGBA *selected;
-	EogScrollViewPrivate *priv = view->priv;
+	XviewerScrollViewPrivate *priv = view->priv;
 
 	if (priv->override_bg_color)
 		selected = priv->override_bg_color;
@@ -3309,7 +3309,7 @@ _eog_scroll_view_update_bg_color (EogScrollView *view)
 	else
 		selected = NULL;
 
-	if (priv->transp_style == EOG_TRANSP_BACKGROUND
+	if (priv->transp_style == XVIEWER_TRANSP_BACKGROUND
 	    && priv->background_surface != NULL) {
 		/* Delete the SVG background to have it recreated with
 		 * the correct color during the next SVG redraw */
@@ -3324,48 +3324,48 @@ _eog_scroll_view_update_bg_color (EogScrollView *view)
 }
 
 void
-eog_scroll_view_set_background_color (EogScrollView *view,
+xviewer_scroll_view_set_background_color (XviewerScrollView *view,
 				      const GdkRGBA *color)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
-	if (_eog_replace_gdk_rgba (&view->priv->background_color, color))
-		_eog_scroll_view_update_bg_color (view);
+	if (_xviewer_replace_gdk_rgba (&view->priv->background_color, color))
+		_xviewer_scroll_view_update_bg_color (view);
 }
 
 void
-eog_scroll_view_override_bg_color (EogScrollView *view,
+xviewer_scroll_view_override_bg_color (XviewerScrollView *view,
 				   const GdkRGBA *color)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
-	if (_eog_replace_gdk_rgba (&view->priv->override_bg_color, color))
-		_eog_scroll_view_update_bg_color (view);
+	if (_xviewer_replace_gdk_rgba (&view->priv->override_bg_color, color))
+		_xviewer_scroll_view_update_bg_color (view);
 }
 
 void
-eog_scroll_view_set_use_bg_color (EogScrollView *view, gboolean use)
+xviewer_scroll_view_set_use_bg_color (XviewerScrollView *view, gboolean use)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
 	if (use != priv->use_bg_color) {
 		priv->use_bg_color = use;
 
-		_eog_scroll_view_update_bg_color (view);
+		_xviewer_scroll_view_update_bg_color (view);
 
 		g_object_notify (G_OBJECT (view), "use-background-color");
 	}
 }
 
 void
-eog_scroll_view_set_scroll_wheel_zoom (EogScrollView *view,
+xviewer_scroll_view_set_scroll_wheel_zoom (XviewerScrollView *view,
 				       gboolean       scroll_wheel_zoom)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	if (view->priv->scroll_wheel_zoom != scroll_wheel_zoom) {
 	        view->priv->scroll_wheel_zoom = scroll_wheel_zoom;
@@ -3374,10 +3374,10 @@ eog_scroll_view_set_scroll_wheel_zoom (EogScrollView *view,
 }
 
 void
-eog_scroll_view_set_zoom_multiplier (EogScrollView *view,
+xviewer_scroll_view_set_zoom_multiplier (XviewerScrollView *view,
 				     gdouble        zoom_multiplier)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
         view->priv->zoom_multiplier = 1.0 + zoom_multiplier;
 
@@ -3386,13 +3386,13 @@ eog_scroll_view_set_zoom_multiplier (EogScrollView *view,
 
 /* Helper to cause a redraw even if the zoom mode is unchanged */
 static void
-_set_zoom_mode_internal (EogScrollView *view, EogZoomMode mode)
+_set_zoom_mode_internal (XviewerScrollView *view, XviewerZoomMode mode)
 {
 	gboolean notify = (mode != view->priv->zoom_mode);
 
 
-	if (mode == EOG_ZOOM_MODE_SHRINK_TO_FIT)
-		eog_scroll_view_zoom_fit (view);
+	if (mode == XVIEWER_ZOOM_MODE_SHRINK_TO_FIT)
+		xviewer_scroll_view_zoom_fit (view);
 	else
 		view->priv->zoom_mode = mode;
 	
@@ -3402,9 +3402,9 @@ _set_zoom_mode_internal (EogScrollView *view, EogZoomMode mode)
 
 
 void
-eog_scroll_view_set_zoom_mode (EogScrollView *view, EogZoomMode mode)
+xviewer_scroll_view_set_zoom_mode (XviewerScrollView *view, XviewerZoomMode mode)
 {
-	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
+	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
 	if (view->priv->zoom_mode == mode)
 		return;
@@ -3412,20 +3412,20 @@ eog_scroll_view_set_zoom_mode (EogScrollView *view, EogZoomMode mode)
 	_set_zoom_mode_internal (view, mode);
 }
 
-EogZoomMode
-eog_scroll_view_get_zoom_mode (EogScrollView *view)
+XviewerZoomMode
+xviewer_scroll_view_get_zoom_mode (XviewerScrollView *view)
 {
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (view),
-			      EOG_ZOOM_MODE_SHRINK_TO_FIT);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (view),
+			      XVIEWER_ZOOM_MODE_SHRINK_TO_FIT);
 
 	return view->priv->zoom_mode;
 }
 
 static gboolean
-eog_scroll_view_get_image_coords (EogScrollView *view, gint *x, gint *y,
+xviewer_scroll_view_get_image_coords (XviewerScrollView *view, gint *x, gint *y,
                                   gint *width, gint *height)
 {
-	EogScrollViewPrivate *priv = view->priv;
+	XviewerScrollViewPrivate *priv = view->priv;
 	GtkAllocation allocation;
 	gint scaled_width, scaled_height, xofs, yofs;
 
@@ -3463,8 +3463,8 @@ eog_scroll_view_get_image_coords (EogScrollView *view, gint *x, gint *y,
 }
 
 /**
- * eog_scroll_view_event_is_over_image:
- * @view: An #EogScrollView that has an image loaded.
+ * xviewer_scroll_view_event_is_over_image:
+ * @view: An #XviewerScrollView that has an image loaded.
  * @ev: A #GdkEvent which must have window-relative coordinates.
  *
  * Tells if @ev's originates from inside the image area. @view must be
@@ -3476,14 +3476,14 @@ eog_scroll_view_get_image_coords (EogScrollView *view, gint *x, gint *y,
  * Returns: %TRUE if @ev originates from over the image, %FALSE otherwise.
  */
 gboolean
-eog_scroll_view_event_is_over_image (EogScrollView *view, const GdkEvent *ev)
+xviewer_scroll_view_event_is_over_image (XviewerScrollView *view, const GdkEvent *ev)
 {
-	EogScrollViewPrivate *priv;
+	XviewerScrollViewPrivate *priv;
 	GdkWindow *window;
 	gdouble evx, evy;
 	gint x, y, width, height;
 
-	g_return_val_if_fail (EOG_IS_SCROLL_VIEW (view), FALSE);
+	g_return_val_if_fail (XVIEWER_IS_SCROLL_VIEW (view), FALSE);
 	g_return_val_if_fail (gtk_widget_get_realized(GTK_WIDGET(view)), FALSE);
 	g_return_val_if_fail (ev != NULL, FALSE);
 
@@ -3497,7 +3497,7 @@ eog_scroll_view_event_is_over_image (EogScrollView *view, const GdkEvent *ev)
 	if (G_UNLIKELY (!gdk_event_get_coords (ev, &evx, &evy)))
 		return FALSE;
 
-	if (!eog_scroll_view_get_image_coords (view, &x, &y, &width, &height))
+	if (!xviewer_scroll_view_get_image_coords (view, &x, &y, &width, &height))
 		return FALSE;
 
 	if (evx < x || evy < y || evx > (x + width) || evy > (y + height))

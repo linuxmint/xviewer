@@ -3,7 +3,7 @@ Feature: Screenshot tour
     @screenshot_tour1
     Scenario Outline: Main dialogs
      * Set locale to "<locale>"
-     * Make sure that eog is running
+     * Make sure that xviewer is running
      * Select and close "Image" menu
      * Select and close "Edit" menu
      * Select and close "View" menu
@@ -25,7 +25,7 @@ Feature: Screenshot tour
     @screenshot_tour2
     Scenario Outline: Main dialogs
      * Set locale to "<locale>"
-     * Make sure that eog is running
+     * Make sure that xviewer is running
      * Select and close "Image" menu
      * Select and close "Edit" menu
      * Select and close "View" menu

@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Image Properties Dialog
+/* Xviewer - Image Properties Dialog
  *
  * Copyright (C) 2006 The Free Software Foundation
  *
@@ -24,13 +24,13 @@
 #include "config.h"
 #endif
 
-#include "eog-properties-dialog.h"
-#include "eog-image.h"
-#include "eog-util.h"
-#include "eog-thumb-view.h"
+#include "xviewer-properties-dialog.h"
+#include "xviewer-image.h"
+#include "xviewer-util.h"
+#include "xviewer-thumb-view.h"
 
 #if HAVE_EXIF
-#include "eog-exif-util.h"
+#include "xviewer-exif-util.h"
 #endif
 
 #include <glib.h>
@@ -48,7 +48,7 @@
 #endif
 
 #if HAVE_METADATA
-#include "eog-metadata-details.h"
+#include "xviewer-metadata-details.h"
 #endif
 
 enum {
@@ -59,11 +59,11 @@ enum {
         PROP_PREV_ACTION
 };
 
-struct _EogPropertiesDialogPrivate {
-	EogThumbView   *thumbview;
+struct _XviewerPropertiesDialogPrivate {
+	XviewerThumbView   *thumbview;
 
 	gboolean        update_page;
-	EogPropertiesDialogPage current_page;
+	XviewerPropertiesDialogPage current_page;
 
 	GtkWidget      *notebook;
 	GtkWidget      *close_button;
@@ -111,11 +111,11 @@ struct _EogPropertiesDialogPrivate {
 	gboolean        netbook_mode;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (EogPropertiesDialog, eog_properties_dialog, GTK_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE (XviewerPropertiesDialog, xviewer_properties_dialog, GTK_TYPE_DIALOG);
 
 static void
-pd_update_general_tab (EogPropertiesDialog *prop_dlg,
-		       EogImage            *image)
+pd_update_general_tab (XviewerPropertiesDialog *prop_dlg,
+		       XviewerImage            *image)
 {
 	gchar *bytes_str, *dir_str;
 	gchar *width_str, *height_str;
@@ -127,13 +127,13 @@ pd_update_general_tab (EogPropertiesDialog *prop_dlg,
 	goffset bytes;
 
 	g_object_set (G_OBJECT (prop_dlg->priv->thumbnail_image),
-		      "pixbuf", eog_image_get_thumbnail (image),
+		      "pixbuf", xviewer_image_get_thumbnail (image),
 		      NULL);
 
 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->name_label),
-			    eog_image_get_caption (image));
+			    xviewer_image_get_caption (image));
 
-	eog_image_get_size (image, &width, &height);
+	xviewer_image_get_size (image, &width, &height);
 
 	width_str = g_strdup_printf ("%d %s", width,
 				     ngettext ("pixel", "pixels", width));
@@ -148,7 +148,7 @@ pd_update_general_tab (EogPropertiesDialog *prop_dlg,
 	g_free (height_str);
 	g_free (width_str);
 
-	file = eog_image_get_file (image);
+	file = xviewer_image_get_file (image);
 	file_info = g_file_query_info (file,
 				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
 				       0, NULL, NULL);
@@ -162,7 +162,7 @@ pd_update_general_tab (EogPropertiesDialog *prop_dlg,
 
 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->type_label), type_str);
 
-	bytes = eog_image_get_bytes (image);
+	bytes = xviewer_image_get_bytes (image);
 	bytes_str = g_format_size (bytes);
 
 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->bytes_label), bytes_str);
@@ -186,7 +186,7 @@ pd_update_general_tab (EogPropertiesDialog *prop_dlg,
 
 #if HAVE_EXEMPI
 static void
-eog_xmp_set_label (XmpPtr xmp,
+xviewer_xmp_set_label (XmpPtr xmp,
 		   const char *ns,
 		   const char *propname,
 		   GtkWidget *w)
@@ -241,10 +241,10 @@ eog_xmp_set_label (XmpPtr xmp,
 
 #if HAVE_METADATA
 static void
-pd_update_metadata_tab (EogPropertiesDialog *prop_dlg,
-			EogImage            *image)
+pd_update_metadata_tab (XviewerPropertiesDialog *prop_dlg,
+			XviewerImage            *image)
 {
-	EogPropertiesDialogPrivate *priv;
+	XviewerPropertiesDialogPrivate *priv;
 	GtkNotebook *notebook;
 #if HAVE_EXIF
 	ExifData    *exif_data;
@@ -253,7 +253,7 @@ pd_update_metadata_tab (EogPropertiesDialog *prop_dlg,
 	XmpPtr      xmp_data;
 #endif
 
-	g_return_if_fail (EOG_IS_PROPERTIES_DIALOG (prop_dlg));
+	g_return_if_fail (XVIEWER_IS_PROPERTIES_DIALOG (prop_dlg));
 
 	priv = prop_dlg->priv;
 
@@ -261,16 +261,16 @@ pd_update_metadata_tab (EogPropertiesDialog *prop_dlg,
 
 	if (TRUE
 #if HAVE_EXIF
-	    && !eog_image_has_data (image, EOG_IMAGE_DATA_EXIF)
+	    && !xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_EXIF)
 #endif
 #if HAVE_EXEMPI
-	    && !eog_image_has_data (image, EOG_IMAGE_DATA_XMP)
+	    && !xviewer_image_has_data (image, XVIEWER_IMAGE_DATA_XMP)
 #endif
 	    ) {
-		if (gtk_notebook_get_current_page (notebook) ==	EOG_PROPERTIES_DIALOG_PAGE_EXIF) {
+		if (gtk_notebook_get_current_page (notebook) ==	XVIEWER_PROPERTIES_DIALOG_PAGE_EXIF) {
 			gtk_notebook_prev_page (notebook);
-		} else if (gtk_notebook_get_current_page (notebook) == EOG_PROPERTIES_DIALOG_PAGE_DETAILS) {
-			gtk_notebook_set_current_page (notebook, EOG_PROPERTIES_DIALOG_PAGE_GENERAL);
+		} else if (gtk_notebook_get_current_page (notebook) == XVIEWER_PROPERTIES_DIALOG_PAGE_DETAILS) {
+			gtk_notebook_set_current_page (notebook, XVIEWER_PROPERTIES_DIALOG_PAGE_GENERAL);
 		}
 
 		if (gtk_widget_get_visible (priv->metadata_box)) {
@@ -292,33 +292,33 @@ pd_update_metadata_tab (EogPropertiesDialog *prop_dlg,
 	}
 
 #if HAVE_EXIF
-	exif_data = (ExifData *) eog_image_get_exif_info (image);
+	exif_data = (ExifData *) xviewer_image_get_exif_info (image);
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_aperture_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_aperture_label),
 				      exif_data, EXIF_TAG_FNUMBER);
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_exposure_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_exposure_label),
 				      exif_data, EXIF_TAG_EXPOSURE_TIME);
 
-	eog_exif_util_set_focal_length_label_text (GTK_LABEL (priv->exif_focal_label), exif_data);
+	xviewer_exif_util_set_focal_length_label_text (GTK_LABEL (priv->exif_focal_label), exif_data);
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_flash_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_flash_label),
 				      exif_data, EXIF_TAG_FLASH);
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_iso_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_iso_label),
 				      exif_data, EXIF_TAG_ISO_SPEED_RATINGS);
 
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_metering_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_metering_label),
 				      exif_data, EXIF_TAG_METERING_MODE);
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_model_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_model_label),
 				      exif_data, EXIF_TAG_MODEL);
 
-	eog_exif_util_set_label_text (GTK_LABEL (priv->exif_date_label),
+	xviewer_exif_util_set_label_text (GTK_LABEL (priv->exif_date_label),
 				      exif_data, EXIF_TAG_DATE_TIME_ORIGINAL);
 
-	eog_metadata_details_update (EOG_METADATA_DETAILS (priv->metadata_details),
+	xviewer_metadata_details_update (XVIEWER_METADATA_DETAILS (priv->metadata_details),
 				 exif_data);
 
 	/* exif_data_unref can handle NULL-values */
@@ -326,35 +326,35 @@ pd_update_metadata_tab (EogPropertiesDialog *prop_dlg,
 #endif
 
 #if HAVE_EXEMPI
-	xmp_data = (XmpPtr) eog_image_get_xmp_info (image);
+	xmp_data = (XmpPtr) xviewer_image_get_xmp_info (image);
 
  	if (xmp_data != NULL) {
-		eog_xmp_set_label (xmp_data,
+		xviewer_xmp_set_label (xmp_data,
 				   NS_IPTC4XMP,
 				   "Location",
 				   priv->xmp_location_label);
 
-		eog_xmp_set_label (xmp_data,
+		xviewer_xmp_set_label (xmp_data,
 				   NS_DC,
 				   "description",
 				   priv->xmp_description_label);
 
-		eog_xmp_set_label (xmp_data,
+		xviewer_xmp_set_label (xmp_data,
 				   NS_DC,
 				   "subject",
 				   priv->xmp_keywords_label);
 
-		eog_xmp_set_label (xmp_data,
+		xviewer_xmp_set_label (xmp_data,
 				   NS_DC,
         	                   "creator",
 				   priv->xmp_creator_label);
 
-		eog_xmp_set_label (xmp_data,
+		xviewer_xmp_set_label (xmp_data,
 				   NS_DC,
 				   "rights",
 				   priv->xmp_rights_label);
 
-		eog_metadata_details_xmp_update (EOG_METADATA_DETAILS (priv->metadata_details), xmp_data);
+		xviewer_metadata_details_xmp_update (XVIEWER_METADATA_DETAILS (priv->metadata_details), xmp_data);
 
 		xmp_free (xmp_data);
 	} else {
@@ -405,7 +405,7 @@ pd_exif_details_activated_cb (GtkExpander *expander,
 static void
 pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
 {
-	EogPropertiesDialogPrivate *priv = EOG_PROPERTIES_DIALOG (data)->priv;
+	XviewerPropertiesDialogPrivate *priv = XVIEWER_PROPERTIES_DIALOG (data)->priv;
 	GdkScreen *screen;
 	guint32 timestamp;
 
@@ -419,10 +419,10 @@ pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
 }
 
 static gboolean
-eog_properties_dialog_page_switch (GtkNotebook     *notebook,
+xviewer_properties_dialog_page_switch (GtkNotebook     *notebook,
 				   GtkWidget       *page,
 				   gint             page_index,
-				   EogPropertiesDialog *prop_dlg)
+				   XviewerPropertiesDialog *prop_dlg)
 {
 	if (prop_dlg->priv->update_page)
 		prop_dlg->priv->current_page = page_index;
@@ -431,12 +431,12 @@ eog_properties_dialog_page_switch (GtkNotebook     *notebook,
 }
 
 void
-eog_properties_dialog_set_netbook_mode (EogPropertiesDialog *dlg,
+xviewer_properties_dialog_set_netbook_mode (XviewerPropertiesDialog *dlg,
 					gboolean enable)
 {
-	EogPropertiesDialogPrivate *priv;
+	XviewerPropertiesDialogPrivate *priv;
 
-	g_return_if_fail (EOG_IS_PROPERTIES_DIALOG (dlg));
+	g_return_if_fail (XVIEWER_IS_PROPERTIES_DIALOG (dlg));
 
 	priv = dlg->priv;
 
@@ -459,7 +459,7 @@ eog_properties_dialog_set_netbook_mode (EogPropertiesDialog *dlg,
 				     priv->metadata_details_expander);
 		gtk_widget_show_all (priv->metadata_details_expander);
 
-		if (gtk_notebook_get_current_page (GTK_NOTEBOOK (priv->notebook)) == EOG_PROPERTIES_DIALOG_PAGE_DETAILS)
+		if (gtk_notebook_get_current_page (GTK_NOTEBOOK (priv->notebook)) == XVIEWER_PROPERTIES_DIALOG_PAGE_DETAILS)
 			gtk_notebook_prev_page (GTK_NOTEBOOK (priv->notebook));
 		gtk_widget_hide (priv->metadata_details_box);
 	}
@@ -467,19 +467,19 @@ eog_properties_dialog_set_netbook_mode (EogPropertiesDialog *dlg,
 }
 
 static void
-eog_properties_dialog_set_property (GObject      *object,
+xviewer_properties_dialog_set_property (GObject      *object,
 				    guint         prop_id,
 				    const GValue *value,
 				    GParamSpec   *pspec)
 {
-	EogPropertiesDialog *prop_dlg = EOG_PROPERTIES_DIALOG (object);
+	XviewerPropertiesDialog *prop_dlg = XVIEWER_PROPERTIES_DIALOG (object);
 
 	switch (prop_id) {
 		case PROP_THUMBVIEW:
 			prop_dlg->priv->thumbview = g_value_get_object (value);
 			break;
 		case PROP_NETBOOK_MODE:
-			eog_properties_dialog_set_netbook_mode (prop_dlg,
+			xviewer_properties_dialog_set_netbook_mode (prop_dlg,
 						   g_value_get_boolean (value));
 			break;
 		case PROP_NEXT_ACTION:
@@ -500,12 +500,12 @@ eog_properties_dialog_set_property (GObject      *object,
 }
 
 static void
-eog_properties_dialog_get_property (GObject    *object,
+xviewer_properties_dialog_get_property (GObject    *object,
 				    guint       prop_id,
 				    GValue     *value,
 				    GParamSpec *pspec)
 {
-	EogPropertiesDialog *prop_dlg = EOG_PROPERTIES_DIALOG (object);
+	XviewerPropertiesDialog *prop_dlg = XVIEWER_PROPERTIES_DIALOG (object);
 
 	switch (prop_id) {
 		case PROP_THUMBVIEW:
@@ -523,15 +523,15 @@ eog_properties_dialog_get_property (GObject    *object,
 }
 
 static void
-eog_properties_dialog_dispose (GObject *object)
+xviewer_properties_dialog_dispose (GObject *object)
 {
-	EogPropertiesDialog *prop_dlg;
-	EogPropertiesDialogPrivate *priv;
+	XviewerPropertiesDialog *prop_dlg;
+	XviewerPropertiesDialogPrivate *priv;
 
 	g_return_if_fail (object != NULL);
-	g_return_if_fail (EOG_IS_PROPERTIES_DIALOG (object));
+	g_return_if_fail (XVIEWER_IS_PROPERTIES_DIALOG (object));
 
-	prop_dlg = EOG_PROPERTIES_DIALOG (object);
+	prop_dlg = XVIEWER_PROPERTIES_DIALOG (object);
 	priv = prop_dlg->priv;
 
 	if (priv->thumbview) {
@@ -542,24 +542,24 @@ eog_properties_dialog_dispose (GObject *object)
 	g_free (priv->folder_button_uri);
 	priv->folder_button_uri = NULL;
 
-	G_OBJECT_CLASS (eog_properties_dialog_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xviewer_properties_dialog_parent_class)->dispose (object);
 }
 
 static void
-eog_properties_dialog_class_init (EogPropertiesDialogClass *klass)
+xviewer_properties_dialog_class_init (XviewerPropertiesDialogClass *klass)
 {
 	GObjectClass *g_object_class = (GObjectClass *) klass;
 
-	g_object_class->dispose = eog_properties_dialog_dispose;
-	g_object_class->set_property = eog_properties_dialog_set_property;
-	g_object_class->get_property = eog_properties_dialog_get_property;
+	g_object_class->dispose = xviewer_properties_dialog_dispose;
+	g_object_class->set_property = xviewer_properties_dialog_set_property;
+	g_object_class->get_property = xviewer_properties_dialog_get_property;
 
 	g_object_class_install_property (g_object_class,
 					 PROP_THUMBVIEW,
 					 g_param_spec_object ("thumbview",
 							      "Thumbview",
 							      "Thumbview",
-							      EOG_TYPE_THUMB_VIEW,
+							      XVIEWER_TYPE_THUMB_VIEW,
 							      G_PARAM_READWRITE |
 							      G_PARAM_CONSTRUCT_ONLY |
 							      G_PARAM_STATIC_NAME |
@@ -595,126 +595,126 @@ eog_properties_dialog_class_init (EogPropertiesDialogClass *klass)
 							      G_PARAM_STATIC_NICK |
 							      G_PARAM_STATIC_BLURB));
 
-	gtk_widget_class_set_template_from_resource ((GtkWidgetClass *) klass, "/org/gnome/eog/ui/eog-image-properties-dialog.ui");
+	gtk_widget_class_set_template_from_resource ((GtkWidgetClass *) klass, "/org/gnome/xviewer/ui/xviewer-image-properties-dialog.ui");
 
 	GtkWidgetClass *wklass = (GtkWidgetClass*) klass;
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     notebook);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     previous_button);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     next_button);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     close_button);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     thumbnail_image);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     general_box);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     name_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     width_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     height_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     type_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     bytes_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     folder_button);
 
 #if HAVE_EXIF
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_aperture_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_exposure_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_focal_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_flash_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_iso_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_metering_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_model_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     exif_date_label);
 #endif
 #if HAVE_EXEMPI
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_location_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_description_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_keywords_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_creator_label);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_rights_label);
 #else
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_box);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     xmp_box_label);
 #endif
 #ifdef HAVE_METADATA
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     metadata_box);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     metadata_details_expander);
 	gtk_widget_class_bind_template_child_private(wklass,
-						     EogPropertiesDialog,
+						     XviewerPropertiesDialog,
 						     metadata_details_box);
 
 	gtk_widget_class_bind_template_callback(wklass,
 						pd_exif_details_activated_cb);
 #endif
 	gtk_widget_class_bind_template_callback(wklass,
-						eog_properties_dialog_page_switch);
+						xviewer_properties_dialog_page_switch);
 	gtk_widget_class_bind_template_callback(wklass,
 						pd_folder_button_clicked_cb);
 
 }
 
 static void
-eog_properties_dialog_init (EogPropertiesDialog *prop_dlg)
+xviewer_properties_dialog_init (XviewerPropertiesDialog *prop_dlg)
 {
-	EogPropertiesDialogPrivate *priv;
+	XviewerPropertiesDialogPrivate *priv;
 #if HAVE_METADATA
 	GtkWidget *sw;
 #endif
 
-	prop_dlg->priv = eog_properties_dialog_get_instance_private (prop_dlg);
+	prop_dlg->priv = xviewer_properties_dialog_get_instance_private (prop_dlg);
 
 	priv = prop_dlg->priv;
 
@@ -750,7 +750,7 @@ eog_properties_dialog_init (EogPropertiesDialog *prop_dlg)
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
 
-	priv->metadata_details = eog_metadata_details_new ();
+	priv->metadata_details = xviewer_metadata_details_new ();
 	gtk_widget_set_size_request (priv->metadata_details, -1, 170);
 	gtk_widget_set_vexpand (priv->metadata_details, TRUE);
 	gtk_container_set_border_width (GTK_CONTAINER (sw), 6);
@@ -778,14 +778,14 @@ eog_properties_dialog_init (EogPropertiesDialog *prop_dlg)
 	/* Remove pages from back to front. Otherwise the page index
 	 * needs to be adjusted when deleting the next page. */
 	gtk_notebook_remove_page (GTK_NOTEBOOK (priv->notebook),
-				  EOG_PROPERTIES_DIALOG_PAGE_DETAILS);
+				  XVIEWER_PROPERTIES_DIALOG_PAGE_DETAILS);
 	gtk_notebook_remove_page (GTK_NOTEBOOK (priv->notebook),
-				  EOG_PROPERTIES_DIALOG_PAGE_EXIF);
+				  XVIEWER_PROPERTIES_DIALOG_PAGE_EXIF);
 #endif
 }
 
 /**
- * eog_properties_dialog_new:
+ * xviewer_properties_dialog_new:
  * @parent: 
  * @thumbview: 
  * @next_image_action: 
@@ -793,22 +793,22 @@ eog_properties_dialog_init (EogPropertiesDialog *prop_dlg)
  *
  * 
  *
- * Returns: (transfer full) (type EogPropertiesDialog): a new #EogPropertiesDialog
+ * Returns: (transfer full) (type XviewerPropertiesDialog): a new #XviewerPropertiesDialog
  **/
 GtkWidget *
-eog_properties_dialog_new (GtkWindow    *parent,
-			   EogThumbView *thumbview,
+xviewer_properties_dialog_new (GtkWindow    *parent,
+			   XviewerThumbView *thumbview,
 			   GtkAction    *next_image_action,
 			   GtkAction    *previous_image_action)
 {
 	GObject *prop_dlg;
 
 	g_return_val_if_fail (GTK_IS_WINDOW (parent), NULL);
-	g_return_val_if_fail (EOG_IS_THUMB_VIEW (thumbview), NULL);
+	g_return_val_if_fail (XVIEWER_IS_THUMB_VIEW (thumbview), NULL);
 	g_return_val_if_fail (GTK_IS_ACTION (next_image_action), NULL);
 	g_return_val_if_fail (GTK_IS_ACTION (previous_image_action), NULL);
 
-	prop_dlg = g_object_new (EOG_TYPE_PROPERTIES_DIALOG,
+	prop_dlg = g_object_new (XVIEWER_TYPE_PROPERTIES_DIALOG,
 			     	 "thumbview", thumbview,
 				 "next-action", next_image_action,
 				 "prev-action", previous_image_action,
@@ -822,10 +822,10 @@ eog_properties_dialog_new (GtkWindow    *parent,
 }
 
 void
-eog_properties_dialog_update (EogPropertiesDialog *prop_dlg,
-			      EogImage            *image)
+xviewer_properties_dialog_update (XviewerPropertiesDialog *prop_dlg,
+			      XviewerImage            *image)
 {
-	g_return_if_fail (EOG_IS_PROPERTIES_DIALOG (prop_dlg));
+	g_return_if_fail (XVIEWER_IS_PROPERTIES_DIALOG (prop_dlg));
 
 	prop_dlg->priv->update_page = FALSE;
 
@@ -841,10 +841,10 @@ eog_properties_dialog_update (EogPropertiesDialog *prop_dlg,
 }
 
 void
-eog_properties_dialog_set_page (EogPropertiesDialog *prop_dlg,
-			        EogPropertiesDialogPage page)
+xviewer_properties_dialog_set_page (XviewerPropertiesDialog *prop_dlg,
+			        XviewerPropertiesDialogPage page)
 {
-	g_return_if_fail (EOG_IS_PROPERTIES_DIALOG (prop_dlg));
+	g_return_if_fail (XVIEWER_IS_PROPERTIES_DIALOG (prop_dlg));
 
 	prop_dlg->priv->current_page = page;
 

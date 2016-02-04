@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Thumbnailing functions
+/* Xviewer - Thumbnailing functions
  *
  * Copyright (C) 2000-2008 The Free Software Foundation
  *
@@ -33,20 +33,20 @@
 #endif
 #include <libgnome-desktop/gnome-desktop-thumbnail.h>
 
-#include "eog-thumbnail.h"
-#include "eog-list-store.h"
-#include "eog-debug.h"
+#include "xviewer-thumbnail.h"
+#include "xviewer-list-store.h"
+#include "xviewer-debug.h"
 
-#define EOG_THUMB_ERROR eog_thumb_error_quark ()
+#define XVIEWER_THUMB_ERROR xviewer_thumb_error_quark ()
 
 static GnomeDesktopThumbnailFactory *factory = NULL;
 static GdkPixbuf *frame = NULL;
 
 typedef enum {
-	EOG_THUMB_ERROR_VFS,
-	EOG_THUMB_ERROR_GENERIC,
-	EOG_THUMB_ERROR_UNKNOWN
-} EogThumbError;
+	XVIEWER_THUMB_ERROR_VFS,
+	XVIEWER_THUMB_ERROR_GENERIC,
+	XVIEWER_THUMB_ERROR_UNKNOWN
+} XviewerThumbError;
 
 typedef struct {
 	char    *uri_str;
@@ -56,14 +56,14 @@ typedef struct {
 	gboolean thumb_exists;
 	gboolean failed_thumb_exists;
 	gboolean can_read;
-} EogThumbData;
+} XviewerThumbData;
 
 static GQuark
-eog_thumb_error_quark (void)
+xviewer_thumb_error_quark (void)
 {
 	static GQuark q = 0;
 	if (q == 0)
-		q = g_quark_from_static_string ("eog-thumb-error-quark");
+		q = g_quark_from_static_string ("xviewer-thumb-error-quark");
 
 	return q;
 }
@@ -72,8 +72,8 @@ static void
 set_vfs_error (GError **error, GError *ioerror)
 {
 	g_set_error (error,
-		     EOG_THUMB_ERROR,
-		     EOG_THUMB_ERROR_VFS,
+		     XVIEWER_THUMB_ERROR,
+		     XVIEWER_THUMB_ERROR_VFS,
 		     "%s", ioerror ? ioerror->message : "VFS error making a thumbnail");
 }
 
@@ -81,13 +81,13 @@ static void
 set_thumb_error (GError **error, int error_id, const char *string)
 {
 	g_set_error (error,
-		     EOG_THUMB_ERROR,
+		     XVIEWER_THUMB_ERROR,
 		     error_id,
 		     "%s", string);
 }
 
 static GdkPixbuf*
-get_valid_thumbnail (EogThumbData *data, GError **error)
+get_valid_thumbnail (XviewerThumbData *data, GError **error)
 {
 	GdkPixbuf *thumb = NULL;
 
@@ -108,7 +108,7 @@ get_valid_thumbnail (EogThumbData *data, GError **error)
 }
 
 static GdkPixbuf *
-create_thumbnail_from_pixbuf (EogThumbData *data,
+create_thumbnail_from_pixbuf (XviewerThumbData *data,
 			      GdkPixbuf *pixbuf,
 			      GError **error)
 {
@@ -131,7 +131,7 @@ create_thumbnail_from_pixbuf (EogThumbData *data,
 }
 
 static void
-eog_thumb_data_free (EogThumbData *data)
+xviewer_thumb_data_free (XviewerThumbData *data)
 {
 	if (data == NULL)
 		return;
@@ -140,20 +140,20 @@ eog_thumb_data_free (EogThumbData *data)
 	g_free (data->mime_type);
 	g_free (data->uri_str);
 
-	g_slice_free (EogThumbData, data);
+	g_slice_free (XviewerThumbData, data);
 }
 
-static EogThumbData*
-eog_thumb_data_new (GFile *file, GError **error)
+static XviewerThumbData*
+xviewer_thumb_data_new (GFile *file, GError **error)
 {
-	EogThumbData *data;
+	XviewerThumbData *data;
 	GFileInfo *file_info;
 	GError *ioerror = NULL;
 
 	g_return_val_if_fail (file != NULL, NULL);
 	g_return_val_if_fail (error != NULL && *error == NULL, NULL);
 
-	data = g_slice_new0 (EogThumbData);
+	data = g_slice_new0 (XviewerThumbData);
 
 	data->uri_str    = g_file_get_uri (file);
 	data->thumb_path = gnome_desktop_thumbnail_path_for_uri (data->uri_str, GNOME_DESKTOP_THUMBNAIL_SIZE_NORMAL);
@@ -188,7 +188,7 @@ eog_thumb_data_new (GFile *file, GError **error)
 		}
 	}
 	else {
-		eog_thumb_data_free (data);
+		xviewer_thumb_data_free (data);
 		data = NULL;
 		g_clear_error (&ioerror);
 	}
@@ -265,7 +265,7 @@ draw_frame_column (GdkPixbuf *frame_image,
 }
 
 static GdkPixbuf *
-eog_thumbnail_stretch_frame_image (GdkPixbuf *frame_image,
+xviewer_thumbnail_stretch_frame_image (GdkPixbuf *frame_image,
 				   gint left_offset,
 				   gint top_offset,
 				   gint right_offset,
@@ -378,7 +378,7 @@ eog_thumbnail_stretch_frame_image (GdkPixbuf *frame_image,
 }
 
 /**
- * eog_thumbnail_add_frame:
+ * xviewer_thumbnail_add_frame:
  * @thumbnail: a #GdkPixbuf
  *
  * Adds a frame to @thumbnail
@@ -386,7 +386,7 @@ eog_thumbnail_stretch_frame_image (GdkPixbuf *frame_image,
  * Returns: (transfer full): a new #GdkPixbuf, storing @thumbnail nicely framed.
  **/
 GdkPixbuf *
-eog_thumbnail_add_frame (GdkPixbuf *thumbnail)
+xviewer_thumbnail_add_frame (GdkPixbuf *thumbnail)
 {
 	GdkPixbuf *result_pixbuf;
 	gint source_width, source_height;
@@ -398,7 +398,7 @@ eog_thumbnail_add_frame (GdkPixbuf *thumbnail)
 	dest_width  = source_width  + 9;
 	dest_height = source_height + 9;
 
-	result_pixbuf = eog_thumbnail_stretch_frame_image (frame,
+	result_pixbuf = xviewer_thumbnail_stretch_frame_image (frame,
 							   3, 3, 6, 6,
 	                                	           dest_width,
 							   dest_height,
@@ -415,7 +415,7 @@ eog_thumbnail_add_frame (GdkPixbuf *thumbnail)
 }
 
 /**
- * eog_thumbnail_fit_to_size:
+ * xviewer_thumbnail_fit_to_size:
  * @thumbnail: a #GdkPixbuf
  * @dimension: the maximum width or height desired
  *
@@ -424,7 +424,7 @@ eog_thumbnail_add_frame (GdkPixbuf *thumbnail)
  * Returns: (transfer full): a new #GdkPixbuf
  **/
 GdkPixbuf *
-eog_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
+xviewer_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
 {
 	gint width, height;
 
@@ -452,8 +452,8 @@ eog_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
 }
 
 /**
- * eog_thumbnail_load:
- * @image: a #EogImage
+ * xviewer_thumbnail_load:
+ * @image: a #XviewerImage
  * @error: location to store the error ocurring or %NULL to ignore
  *
  * Loads the thumbnail for @image. In case of error, %NULL is returned
@@ -463,18 +463,18 @@ eog_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
  * @image or %NULL in case of error.
  **/
 GdkPixbuf*
-eog_thumbnail_load (EogImage *image, GError **error)
+xviewer_thumbnail_load (XviewerImage *image, GError **error)
 {
 	GdkPixbuf *thumb = NULL;
 	GFile *file;
-	EogThumbData *data;
+	XviewerThumbData *data;
 	GdkPixbuf *pixbuf = NULL;
 
 	g_return_val_if_fail (image != NULL, NULL);
 	g_return_val_if_fail (error != NULL && *error == NULL, NULL);
 
-	file = eog_image_get_file (image);
-	data = eog_thumb_data_new (file, error);
+	file = xviewer_image_get_file (image);
+	data = xviewer_thumb_data_new (file, error);
 	g_object_unref (file);
 
 	if (data == NULL)
@@ -482,8 +482,8 @@ eog_thumbnail_load (EogImage *image, GError **error)
 
 	if (!data->can_read ||
 	    (data->failed_thumb_exists && gnome_desktop_thumbnail_factory_has_valid_failed_thumbnail (factory, data->uri_str, data->mtime))) {
-		eog_debug_message (DEBUG_THUMBNAIL, "%s: bad permissions or valid failed thumbnail present",data->uri_str);
-		set_thumb_error (error, EOG_THUMB_ERROR_GENERIC, "Thumbnail creation failed");
+		xviewer_debug_message (DEBUG_THUMBNAIL, "%s: bad permissions or valid failed thumbnail present",data->uri_str);
+		set_thumb_error (error, XVIEWER_THUMB_ERROR_GENERIC, "Thumbnail creation failed");
 		return NULL;
 	}
 
@@ -491,49 +491,49 @@ eog_thumbnail_load (EogImage *image, GError **error)
 	thumb = get_valid_thumbnail (data, error);
 
 	if (thumb != NULL) {
-		eog_debug_message (DEBUG_THUMBNAIL, "%s: loaded from cache",data->uri_str);
+		xviewer_debug_message (DEBUG_THUMBNAIL, "%s: loaded from cache",data->uri_str);
 	} else if (gnome_desktop_thumbnail_factory_can_thumbnail (factory, data->uri_str, data->mime_type, data->mtime)) {
 		/* Only use the image pixbuf when it is up to date. */
-		if (!eog_image_is_file_changed (image))
-			pixbuf = eog_image_get_pixbuf (image);
+		if (!xviewer_image_is_file_changed (image))
+			pixbuf = xviewer_image_get_pixbuf (image);
 
 		if (pixbuf != NULL) {
 			/* generate a thumbnail from the in-memory image,
 			   if we have already loaded the image */
-			eog_debug_message (DEBUG_THUMBNAIL, "%s: creating from pixbuf",data->uri_str);
+			xviewer_debug_message (DEBUG_THUMBNAIL, "%s: creating from pixbuf",data->uri_str);
 			thumb = create_thumbnail_from_pixbuf (data, pixbuf, error);
 			g_object_unref (pixbuf);
 		} else {
 			/* generate a thumbnail from the file */
-			eog_debug_message (DEBUG_THUMBNAIL, "%s: creating from file",data->uri_str);
+			xviewer_debug_message (DEBUG_THUMBNAIL, "%s: creating from file",data->uri_str);
 			thumb = gnome_desktop_thumbnail_factory_generate_thumbnail (factory, data->uri_str, data->mime_type);
 		}
 
 		if (thumb != NULL) {
 			/* Save the new thumbnail */
 			gnome_desktop_thumbnail_factory_save_thumbnail (factory, thumb, data->uri_str, data->mtime);
-			eog_debug_message (DEBUG_THUMBNAIL, "%s: normal thumbnail saved",data->uri_str);
+			xviewer_debug_message (DEBUG_THUMBNAIL, "%s: normal thumbnail saved",data->uri_str);
 		} else {
 			/* Save a failed thumbnail, to stop further thumbnail attempts */
 			gnome_desktop_thumbnail_factory_create_failed_thumbnail (factory, data->uri_str, data->mtime);
-			eog_debug_message (DEBUG_THUMBNAIL, "%s: failed thumbnail saved",data->uri_str);
-			set_thumb_error (error, EOG_THUMB_ERROR_GENERIC, "Thumbnail creation failed");
+			xviewer_debug_message (DEBUG_THUMBNAIL, "%s: failed thumbnail saved",data->uri_str);
+			set_thumb_error (error, XVIEWER_THUMB_ERROR_GENERIC, "Thumbnail creation failed");
 		}
 	}
 
-	eog_thumb_data_free (data);
+	xviewer_thumb_data_free (data);
 
 	return thumb;
 }
 
 void
-eog_thumbnail_init (void)
+xviewer_thumbnail_init (void)
 {
 	if (factory == NULL) {
 		factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_NORMAL);
 	}
 
 	if (frame == NULL) {
-		frame = gdk_pixbuf_new_from_file (EOG_DATA_DIR "/pixmaps/thumbnail-frame.png", NULL);
+		frame = gdk_pixbuf_new_from_file (XVIEWER_DATA_DIR "/pixmaps/thumbnail-frame.png", NULL);
 	}
 }

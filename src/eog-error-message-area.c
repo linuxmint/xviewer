@@ -1,4 +1,4 @@
-/* Eye Of Gnome - Error Message Area
+/* Xviewer - Error Message Area
  *
  * Copyright (C) 2007 The Free Software Foundation
  *
@@ -26,8 +26,8 @@
 #include <config.h>
 #endif
 
-#include "eog-error-message-area.h"
-#include "eog-image.h"
+#include "xviewer-error-message-area.h"
+#include "xviewer-image.h"
 
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -35,11 +35,11 @@
 #include <gtk/gtk.h>
 
 typedef enum {
-	EOG_ERROR_MESSAGE_AREA_NO_BUTTONS    = 0,
-	EOG_ERROR_MESSAGE_AREA_CANCEL_BUTTON = 1 << 0,
-	EOG_ERROR_MESSAGE_AREA_RELOAD_BUTTON = 1 << 1,
-	EOG_ERROR_MESSAGE_AREA_SAVEAS_BUTTON = 1 << 2
-} EogErrorMessageAreaButtons;
+	XVIEWER_ERROR_MESSAGE_AREA_NO_BUTTONS    = 0,
+	XVIEWER_ERROR_MESSAGE_AREA_CANCEL_BUTTON = 1 << 0,
+	XVIEWER_ERROR_MESSAGE_AREA_RELOAD_BUTTON = 1 << 1,
+	XVIEWER_ERROR_MESSAGE_AREA_SAVEAS_BUTTON = 1 << 2
+} XviewerErrorMessageAreaButtons;
 
 static void
 set_message_area_text_and_icon (GtkInfoBar   *message_area,
@@ -106,7 +106,7 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 static GtkWidget *
 create_error_message_area (const gchar                 *primary_text,
 			   const gchar                 *secondary_text,
-			   EogErrorMessageAreaButtons   buttons)
+			   XviewerErrorMessageAreaButtons   buttons)
 {
 	GtkWidget *message_area;
 
@@ -114,20 +114,20 @@ create_error_message_area (const gchar                 *primary_text,
 	message_area = gtk_info_bar_new ();
 
 	/* add requested buttons to the message area */
-	if (buttons & EOG_ERROR_MESSAGE_AREA_CANCEL_BUTTON)
+	if (buttons & XVIEWER_ERROR_MESSAGE_AREA_CANCEL_BUTTON)
 		gtk_info_bar_add_button (GTK_INFO_BAR (message_area),
 					 _("_Cancel"),
-					 EOG_ERROR_MESSAGE_AREA_RESPONSE_CANCEL);
+					 XVIEWER_ERROR_MESSAGE_AREA_RESPONSE_CANCEL);
 
-	if (buttons & EOG_ERROR_MESSAGE_AREA_RELOAD_BUTTON)
+	if (buttons & XVIEWER_ERROR_MESSAGE_AREA_RELOAD_BUTTON)
 		gtk_info_bar_add_button (GTK_INFO_BAR (message_area),
 					 _("_Reload"),
-					 EOG_ERROR_MESSAGE_AREA_RESPONSE_RELOAD);
+					 XVIEWER_ERROR_MESSAGE_AREA_RESPONSE_RELOAD);
 
-	if (buttons & EOG_ERROR_MESSAGE_AREA_SAVEAS_BUTTON)
+	if (buttons & XVIEWER_ERROR_MESSAGE_AREA_SAVEAS_BUTTON)
 		gtk_info_bar_add_button (GTK_INFO_BAR (message_area),
 					 _("Save _As…"),
-					 EOG_ERROR_MESSAGE_AREA_RESPONSE_SAVEAS);
+					 XVIEWER_ERROR_MESSAGE_AREA_RESPONSE_SAVEAS);
 
 	/* set message type */
 	gtk_info_bar_set_message_type (GTK_INFO_BAR (message_area),
@@ -143,7 +143,7 @@ create_error_message_area (const gchar                 *primary_text,
 }
 
 /**
- * eog_image_load_error_message_area_new: (skip):
+ * xviewer_image_load_error_message_area_new: (skip):
  * @caption:
  * @error:
  *
@@ -152,7 +152,7 @@ create_error_message_area (const gchar                 *primary_text,
  * Returns: (transfer full): a new #GtkInfoBar
  **/
 GtkWidget *
-eog_image_load_error_message_area_new (const gchar  *caption,
+xviewer_image_load_error_message_area_new (const gchar  *caption,
 				       const GError *error)
 {
 	GtkWidget *message_area;
@@ -175,7 +175,7 @@ eog_image_load_error_message_area_new (const gchar  *caption,
 
 	message_area = create_error_message_area (error_message,
 						  message_details,
-						  EOG_ERROR_MESSAGE_AREA_CANCEL_BUTTON);
+						  XVIEWER_ERROR_MESSAGE_AREA_CANCEL_BUTTON);
 
 	g_free (pango_escaped_caption);
 	g_free (error_message);
@@ -185,7 +185,7 @@ eog_image_load_error_message_area_new (const gchar  *caption,
 }
 
 /**
- * eog_image_save_error_message_area_new: (skip):
+ * xviewer_image_save_error_message_area_new: (skip):
  * @caption:
  * @error:
  *
@@ -194,7 +194,7 @@ eog_image_load_error_message_area_new (const gchar  *caption,
  * Returns: (transfer full): a new #GtkInfoBar
  **/
 GtkWidget *
-eog_image_save_error_message_area_new (const gchar  *caption,
+xviewer_image_save_error_message_area_new (const gchar  *caption,
 				       const GError *error)
 {
 	GtkWidget *message_area;
@@ -217,8 +217,8 @@ eog_image_save_error_message_area_new (const gchar  *caption,
 
 	message_area = create_error_message_area (error_message,
 						  message_details,
-						  EOG_ERROR_MESSAGE_AREA_CANCEL_BUTTON |
-						  EOG_ERROR_MESSAGE_AREA_SAVEAS_BUTTON);
+						  XVIEWER_ERROR_MESSAGE_AREA_CANCEL_BUTTON |
+						  XVIEWER_ERROR_MESSAGE_AREA_SAVEAS_BUTTON);
 
 	g_free (pango_escaped_caption);
 	g_free (error_message);
@@ -228,7 +228,7 @@ eog_image_save_error_message_area_new (const gchar  *caption,
 }
 
 /**
- * eog_no_images_error_message_area_new: (skip):
+ * xviewer_no_images_error_message_area_new: (skip):
  * @file:
  *
  *
@@ -236,7 +236,7 @@ eog_image_save_error_message_area_new (const gchar  *caption,
  * Returns: (transfer full): a new #GtkInfoBar
  **/
 GtkWidget *
-eog_no_images_error_message_area_new (GFile *file)
+xviewer_no_images_error_message_area_new (GFile *file)
 {
 	GtkWidget *message_area;
 	gchar *error_message = NULL;
@@ -265,7 +265,7 @@ eog_no_images_error_message_area_new (GFile *file)
 
 	message_area = create_error_message_area (error_message,
 						  NULL,
-						  EOG_ERROR_MESSAGE_AREA_NO_BUTTONS);
+						  XVIEWER_ERROR_MESSAGE_AREA_NO_BUTTONS);
 
 	g_free (error_message);
 
