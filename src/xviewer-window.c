@@ -6168,39 +6168,10 @@ xviewer_window_show_about_dialog (XviewerWindow *window)
 {
 	g_return_if_fail (XVIEWER_IS_WINDOW (window));
 
-	static const char *authors[] = {
-		"Felix Riemann <friemann@gnome.org> (maintainer)",
-		"",
-		"Claudio Saavedra <csaavedra@igalia.com>",
-		"Lucas Rocha <lucasr@gnome.org>",
-		"Tim Gerla <tim+gnomebugs@gerla.net>",
-		"Philip Van Hoof <pvanhoof@gnome.org>",
-                "Paolo Borelli <pborelli@katamail.com>",
-		"Jens Finke <jens@triq.net>",
-		"Martin Baulig <martin@home-of-linux.org>",
-		"Arik Devens <arik@gnome.org>",
-		"Michael Meeks <mmeeks@gnu.org>",
-		"Federico Mena-Quintero <federico@gnome.org>",
-		"Lutz M\xc3\xbcller <urc8@rz.uni-karlsruhe.de>",
-		NULL
-	};
-
-	static const char *documenters[] = {
-		"Eliot Landrum <eliot@landrum.cx>",
-		"Federico Mena-Quintero <federico@gnome.org>",
-		"Sun GNOME Documentation Team <gdocteam@sun.com>",
-		"Tiffany Antopolski <tiffany@antopolski.com>",
-		NULL
-	};
-
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "program-name", _("Image Viewer"),
 			       "version", VERSION,
-			       "copyright", "Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.",
-			       "authors", authors,
-			       "documenters", documenters,
-			       "translator-credits", _("translator-credits"),
-			       "website", "https://wiki.gnome.org/Apps/Xviewer",
+			       "website", "https://github.com/linuxmint/xviewer",
 			       "logo-icon-name", "xviewer",
 			       "wrap-license", TRUE,
 			       "license-type", GTK_LICENSE_GPL_2_0,
