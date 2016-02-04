@@ -9,9 +9,4 @@ dist_actionicons_DATA = \
 	actions/xviewer-image-gallery.svg  \
 	actions/slideshow-play.svg
 
-noinst_DATA = \
-	apps/xviewer-onecanvas.svg
-
-EXTRA_DIST = $(noinst_DATA)
-
 -include $(top_srcdir)/git.mk

@@ -6197,7 +6197,6 @@ xviewer_window_show_about_dialog (XviewerWindow *window)
 			       "program-name", _("Image Viewer"),
 			       "version", VERSION,
 			       "copyright", "Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.",
-			       "comments",_("The GNOME image viewer."),
 			       "authors", authors,
 			       "documenters", documenters,
 			       "translator-credits", _("translator-credits"),
