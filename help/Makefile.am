@@ -17,13 +17,10 @@ HELP_MEDIA = \
 	figures/slideshow-prefs.png
 
 HELP_FILES = \
-	bug-filing.page				\
 	commandline.page			\
 	copy-paste.page				\
 	default.page				\
 	desktop-background.page			\
-	develop.page				\
-	documentation.page			\
 	edit.page				\
 	flip-rotate.page			\
 	format-change.page			\
@@ -49,7 +46,6 @@ HELP_FILES = \
 	shortcuts.page				\
 	slideshow.page				\
 	toolbar.page				\
-	translate.page				\
 	view.page				\
 	zoom.page
 
