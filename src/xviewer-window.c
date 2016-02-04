@@ -2711,21 +2711,16 @@ wallpaper_info_bar_response (GtkInfoBar *bar, gint response, XviewerWindow *wind
 {
 	if (response == GTK_RESPONSE_YES) {
 		GAppInfo *app_info;
-		gchar *path;
 		GError *error = NULL;
 
-		path = g_find_program_in_path ("unity-control-center");
-		if (path && g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Unity") == 0)
-			app_info = g_app_info_create_from_commandline ("unity-control-center appearance",
-								       "System Settings",
-								       G_APP_INFO_CREATE_NONE,
-								       &error);
+		if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Cinnamon") == 0 || g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "X-Cinnamon") == 0)
+			app_info = g_app_info_create_from_commandline ("cinnamon-settings backgrounds", "System Settings", G_APP_INFO_CREATE_NONE, &error);
+		else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "MATE") == 0)
+			app_info = g_app_info_create_from_commandline ("mate-appearance-properties --show-page=background", "System Settings", G_APP_INFO_CREATE_NONE, &error);
+		else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Unity") == 0)
+			app_info = g_app_info_create_from_commandline ("unity-control-center appearance", "System Settings", G_APP_INFO_CREATE_NONE, &error);
 		else
-			app_info = g_app_info_create_from_commandline ("gnome-control-center background",
-								       "System Settings",
-								       G_APP_INFO_CREATE_NONE,
-								       &error);
-		g_free (path);
+			app_info = g_app_info_create_from_commandline ("gnome-control-center background", "System Settings", G_APP_INFO_CREATE_NONE, &error);
 
 		if (error != NULL) {
 			g_warning ("%s%s", _("Error launching System Settings: "),
@@ -2772,9 +2767,23 @@ xviewer_window_set_wallpaper (XviewerWindow *window, const gchar *filename, cons
 	gchar *uri;
 
 	uri = g_filename_to_uri (filename, NULL, NULL);
-	settings = g_settings_new (XVIEWER_CONF_DESKTOP_WALLPAPER_SCHEMA);
-	g_settings_set_string (settings, XVIEWER_CONF_DESKTOP_WALLPAPER, uri);
-	g_object_unref (settings);
+
+	if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Cinnamon") == 0 || g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "X-Cinnamon") == 0) {
+		settings = g_settings_new ("org.cinnamon.desktop.background");
+		g_settings_set_string (settings, "picture-uri", uri);
+		g_object_unref (settings);
+	}
+	else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "MATE") == 0) {
+		settings = g_settings_new ("org.mate.background");
+		g_settings_set_string (settings, "picture-filename", uri);
+		g_object_unref (settings);
+	}
+	else {
+		settings = g_settings_new ("org.gnome.desktop.background");
+		g_settings_set_string (settings, "picture-uri", uri);
+		g_object_unref (settings);
+	}
+
 	g_free (uri);
 
 	/* I18N: When setting mnemonics for these strings, watch out to not

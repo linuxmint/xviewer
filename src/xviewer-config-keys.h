@@ -32,9 +32,6 @@
 #define XVIEWER_CONF_UI				XVIEWER_CONF_DOMAIN".ui"
 #define XVIEWER_CONF_VIEW				XVIEWER_CONF_DOMAIN".view"
 
-#define XVIEWER_CONF_DESKTOP_WALLPAPER_SCHEMA	"org.gnome.desktop.background"
-#define XVIEWER_CONF_DESKTOP_WALLPAPER		"picture-uri"
-
 #define XVIEWER_CONF_DESKTOP_LOCKDOWN_SCHEMA	"org.gnome.desktop.lockdown"
 #define XVIEWER_CONF_DESKTOP_CAN_PRINT		"disable-printing"
 #define XVIEWER_CONF_DESKTOP_CAN_SAVE		"disable-save-to-disk"
