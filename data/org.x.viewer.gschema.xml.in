@@ -1,11 +1,11 @@
 <schemalist>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer" path="/org/gnome/xviewer/">
-    <child name="view" schema="org.gnome.xviewer.view"/>
-    <child name="fullscreen" schema="org.gnome.xviewer.fullscreen"/>
-    <child name="ui" schema="org.gnome.xviewer.ui"/>
-    <child name="plugins" schema="org.gnome.xviewer.plugins"/>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.x.viewer" path="/org/x/viewer/">
+    <child name="view" schema="org.x.viewer.view"/>
+    <child name="fullscreen" schema="org.x.viewer.fullscreen"/>
+    <child name="ui" schema="org.x.viewer.ui"/>
+    <child name="plugins" schema="org.x.viewer.plugins"/>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer.view" path="/org/gnome/xviewer/view/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.x.viewer.view" path="/org/x/viewer/view/">
     <key name="autorotate" type="b">
       <default>true</default>
       <summary>Automatic orientation</summary>
@@ -26,7 +26,7 @@
       <summary>Extrapolate Image</summary>
       <description>Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images.</description>
     </key>
-    <key name="transparency" enum="org.gnome.xviewer.XviewerTransparencyStyle">
+    <key name="transparency" enum="org.x.viewer.XviewerTransparencyStyle">
       <default>'checked'</default>
       <summary>Transparency indicator</summary>
       <description>Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used.</description>
@@ -52,7 +52,7 @@
 	<description>If this is active, the color set by the background-color key will be used to fill the area behind the image. If it is not set, the current GTK+ theme will determine the fill color.</description>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer.fullscreen" path="/org/gnome/xviewer/fullscreen/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.x.viewer.fullscreen" path="/org/x/viewer/fullscreen/">
     <key name="loop" type="b">
       <default>true</default>
       <summary>Loop through the image sequence</summary>
@@ -69,7 +69,7 @@
       <description>A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero  disables the automatic browsing.</description>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.gnome.xviewer.ui" path="/org/gnome/xviewer/ui/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.x.viewer.ui" path="/org/x/viewer/ui/">
     <key name="toolbar" type="b">
       <default>true</default>
       <summary>Show/Hide the window toolbar.</summary>
@@ -82,7 +82,7 @@
       <default>false</default>
       <summary>Show/Hide the image gallery pane.</summary>
     </key>
-    <key name="image-gallery-position" enum="org.gnome.xviewer.XviewerWindowGalleryPos">
+    <key name="image-gallery-position" enum="org.x.viewer.XviewerWindowGalleryPos">
       <default>'bottom'</default>
       <summary>Image gallery pane position. Set to 0 for bottom;  1 for left; 2 for top; 3 for right.</summary>
     </key>
@@ -123,7 +123,7 @@
       <description>The desktop file name (including the ".desktop") of the application to use for editing images (when the "Edit Image" toolbar button is clicked). Set to the empty string to disable this feature.</description>
     </key>
   </schema>
-  <schema id="org.gnome.xviewer.plugins" path="/org/gnome/xviewer/plugins/">
+  <schema id="org.x.viewer.plugins" path="/org/x/viewer/plugins/">
     <key name="active-plugins" type="as">
       <default>['fullscreen']</default>
       <summary>Active plugins</summary>

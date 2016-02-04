@@ -341,7 +341,7 @@ msgid "As custom color:"
 msgstr "Som anpassad färg:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
@@ -399,169 +399,169 @@ msgstr "Bildspel"
 msgid "Plugins"
 msgstr "Insticksmoduler"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Automatisk orientering"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Huruvida bilden ska automatiskt roteras baserat på EXIF-orientering."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid "The color that is used to fill the area behind the image. If the use-background-color key is not set, the color is determined by the active GTK+ theme instead."
 msgstr "Färgen som används för att fylla området bakom bilden. Om nyckeln use-background-color inte har ställts in så kommer färgen bestämmas av det aktuella GTK+-temat istället."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Interpolera bild"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid "Whether the image should be interpolated on zoom-out. This leads to better quality but is somewhat slower than non-interpolated images."
 msgstr "Huruvida bilden ska interpoleras vid utzoomning. Detta leder till bättre kvalitet men är något långsammare än icke-interpolerade bilder."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Extrapolera bild"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid "Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images."
 msgstr "Huruvida bilden ska extrapoleras vid inzoomning. Detta leder till suddig kvalitet och är något långsammare än icke-extrapolerade bilder."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "Genomskinlighetsindikator"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid "Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used."
 msgstr "Bestämmer hur genomskinlighet ska indikeras. Giltiga värden är CHECK_PATTERN, COLOR och NONE. Om COLOR väljs avgör nyckeln trans-color det färgvärde som används."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "Rullhjulszoom"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Huruvida rullhjulet ska användas för att zooma."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "Zoomfaktor"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid "The multiplier to be applied when using the mouse scroll wheel for zooming. This value defines the zooming step used for each scroll event. For example, 0.05 results in a 5% zoom increment for each scroll event and 1.00 result in a 100% zoom increment."
 msgstr "Faktorn som används för zoom med musens rullhjul. Det här värdet definierar zoomsteget som används för varje rullhändelse. Till exempel betyder 0.05 en zoomökning på 5% för varje rullhändelse och 1.00 betyder 100% zoomökning."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Genomskinlighetsfärg"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid "If the transparency key has the value COLOR, then this key determines the color which is used for indicating transparency."
 msgstr "Om genomskinlighetsnyckeln har värdet COLOR avgör denna nyckel den färg som används för att indikera genomskinlighet."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Använd en anpassad bakgrundsfärg"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid "If this is active, the color set by the background-color key will be used to fill the area behind the image. If it is not set, the current GTK+ theme will determine the fill color."
 msgstr "Om denna är aktiv så kommer färgen som ställts in i nyckeln background-color att användas för att fylla området bakom bilden. Om den inte är inställd så kommer det aktuella GTK+-temat att bestämma fyllnadsfärgen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "Bildsekvensen blir slinga"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Huruvida bildsekvensen ska visas i en ändlös slinga."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Tillåt zoomning större än 100% i början"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid "If this is set to FALSE small images will not be stretched to fit into the screen initially."
 msgstr "Om detta är satt till FALSKT kommer små bilder inte att sträckas för att passa skärmen i början."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "Fördröjning i sekunder till nästa bild visas"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid "A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero disables the automatic browsing."
 msgstr "Ett värde större än 0 avgör antalet sekunder en bild blir kvar på skärmen till nästa bild automatiskt visas. Noll inaktiverar automatisk bläddring."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "Visa/dölj fönstrets verktygsrad."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "Visa/dölj fönstrets statusrad."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "Visa/dölj bildgalleripanelen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 for right."
 msgstr "Positionen för bildgalleripanelen. Ställ in till 0 för nederkant; 1 för vänster; 2 för överkant; 3 för höger."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Huruvida bildgalleripanelen ska vara möjlig att ändra storlek på."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "Visa/dölj fönstrets sidopanel."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Visa/dölj rullningsknapparna på bildgalleripanelen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "Stäng huvudfönstret utan att fråga om att spara ändringar."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "Kasta bilder i papperskorgen utan att fråga"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid "If activated, Xviewer won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead."
 msgstr "Om aktiverad så kommer inte Xviewer att fråga efter bekräftelse när bilder flyttas till papperskorgen. Den kommer dock att fråga om någon av filerna inte kan flyttas till papperskorgen och om de ska tas bort istället."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid "Whether the file chooser should show the user's pictures folder if no images are loaded."
 msgstr "Huruvida filväljaren ska visa användarens bildmapp om inga bilder har lästs in."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid "If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory."
 msgstr "Om aktiverad och ingen bild har lästs in i det aktiva fönstret så kommer filväljaren att visa användarens bildmapp med hjälp av speciella XDG-användarkataloger. Om inaktiverad eller om bildmappen inte har ställts in så kommer den aktuella arbetskatalogen att visas."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Huruvida listan över metadata i egenskapsdialogen ska ha sin egna sida."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid "If activated, the detailed metadata list in the properties dialog will be moved to its own page in the dialog. This should make the dialog more usable on smaller screens, e.g. as used by netbooks. If disabled, the widget will be embedded on the \"Metadata\" page."
 msgstr "Om aktiverad så kommer listan över detaljerad metadata i egenskapsdialogen att flyttas till sin egna sida i dialogrutan. Detta bör göra dialogrutan mer användbar på mindre skärmar, t.ex. som används av ultraportabla datorer. Om inaktiverad så kommer widgeten att bäddas in i \"Metadata\"-sidan."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Externa program att använda för att redigera bilder"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid "The desktop file name (including the \".desktop\") of the application to use for editing images (when the \"Edit Image\" toolbar button is clicked). Set to the empty string to disable this feature."
 msgstr "Skrivbordsfilnamnet (inklusive \".desktop\") av programmet att använda för att redigera bilder (när verktygsradsknappen \"Redigera bild\" klickas). Ställ in till en tom sträng för att inaktivera denna funktion."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Aktiva insticksmoduler"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid "List of active plugins. It doesn't contain the \"Location\" of the active plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given plugin."
 msgstr "Lista över aktiva insticksmoduler. Den innehåller inte \"Location\" för de aktiva insticksmodulerna. Se filen .xviewer-plugin för hur man tar fram \"Location\" för en viss insticksmodul."
 

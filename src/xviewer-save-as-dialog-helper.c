@@ -208,7 +208,7 @@ xviewer_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 	GtkWidget *label;
 
 
-	xml = gtk_builder_new_from_resource ("/org/gnome/xviewer/ui/xviewer-multiple-save-as-dialog.ui");
+	xml = gtk_builder_new_from_resource ("/org/x/viewer/ui/xviewer-multiple-save-as-dialog.ui");
 	gtk_builder_set_translation_domain (xml, GETTEXT_PACKAGE);
 
 	dlg = GTK_WIDGET (g_object_ref (gtk_builder_get_object (xml, "xviewer_multiple_save_as_dialog")));

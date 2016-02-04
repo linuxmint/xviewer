@@ -49,7 +49,7 @@
 #include <exempi/xmp.h>
 #endif
 
-#define APPLICATION_SERVICE_NAME "org.gnome.xviewer.ApplicationService"
+#define APPLICATION_SERVICE_NAME "org.x.viewer.ApplicationService"
 
 #define XVIEWER_CSS_FILE_PATH XVIEWER_DATA_DIR G_DIR_SEPARATOR_S "xviewer.css"
 
@@ -181,7 +181,7 @@ xviewer_application_init_app_menu (XviewerApplication *application)
 
 	builder = gtk_builder_new ();
 	gtk_builder_add_from_resource (builder,
-				       "/org/gnome/xviewer/ui/xviewer-app-menu.xml",
+				       "/org/x/viewer/ui/xviewer-app-menu.xml",
 				       &error);
 
 	if (error == NULL) {
@@ -269,7 +269,7 @@ xviewer_application_startup (GApplication *application)
 	xviewer_thumbnail_init ();
 
 	/* Load special style properties for XviewerThumbView's scrollbar */
-	css_file = g_file_new_for_uri ("resource:///org/gnome/xviewer/ui/xviewer.css");
+	css_file = g_file_new_for_uri ("resource:///org/x/viewer/ui/xviewer.css");
 	provider = gtk_css_provider_new ();
 	if (G_UNLIKELY (!gtk_css_provider_load_from_file(provider,
 							 css_file,

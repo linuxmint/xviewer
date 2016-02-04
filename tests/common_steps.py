@@ -20,7 +20,7 @@ import pyatspi
 
 
 def cleanup():
-    for schema in ['org.gnome.xviewer.fullscreen', 'org.gnome.xviewer.plugins', 'org.gnome.xviewer.ui', 'org.gnome.xviewer.view']:
+    for schema in ['org.x.viewer.fullscreen', 'org.x.viewer.plugins', 'org.x.viewer.ui', 'org.x.viewer.view']:
         system("gsettings reset-recursively %s" % schema)
 
     # Remove all the remains of other files

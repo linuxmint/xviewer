@@ -332,7 +332,7 @@ msgid "As custom color:"
 msgstr "बतौर पसंदीदा रंग:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.in.h:3
 msgid "Background Color"
 msgstr "पृष्ठभूमि रंग"
 
@@ -389,16 +389,16 @@ msgstr "स्लाइड-शो"
 msgid "Plugins"
 msgstr "प्लगइन्स"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.in.h:1
 msgid "Automatic orientation"
 msgstr "स्वचालित अभिमुखन"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "क्या EXIF अभिमुखन पर आधारित बिंब को स्वतः घुमाया जाना चाहिए या नहीं."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -408,11 +408,11 @@ msgstr ""
 "पृष्ठभूमि रंग सेट नहीं है, रंग सक्रिय GTK + बजाय विषय द्वारा निर्धारित किया "
 "जाता है."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.in.h:5
 msgid "Interpolate Image"
 msgstr "इंटरपोलेट छवि"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -421,11 +421,11 @@ msgstr ""
 "होगी परंतु "
 "यह नॉन अंतर्वेशित बिंब से कुछ धीमा होगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.in.h:7
 msgid "Extrapolate Image"
 msgstr "छवि बहिर्वेषित करें"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.in.h:8
 #| msgid ""
 #| "Whether the image should be extrapolated on zoom-in or not. This leads to "
 #| "blurry quality and is somewhat slower than non extrapolated images."
@@ -436,11 +436,11 @@ msgstr ""
 "क्या छवि ज़ूम पर बहिर्वेशन किया जाना चाहिए.यह धुँधली गुणवत्ता के लिए होता है "
 "और कुछ हद तक गैर बहिर्वेशन छवियों की तुलना में धीमी है."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.in.h:9
 msgid "Transparency indicator"
 msgstr "पारदर्शिता सूचक"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.in.h:10
 #| msgid ""
 #| "Determines how transparency should be indicated. Valid values are "
 #| "CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color "
@@ -454,20 +454,20 @@ msgstr ""
 "रंग, और कोई नहीं कर रहे हैं. यदि रंग को चुना है, तो पार रंग कुंजी"
 "रंग का इस्तेमाल मूल्य निर्धारित करता है."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "स्क्रॉल चक्र जूम"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr ""
 "क्या स्क्रॉल ह्वील को जूम करने या नहीं करने के लिए प्रयोग किया जाना चाहिए."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.in.h:13
 msgid "Zoom multiplier"
 msgstr "ज़ूम गुणक"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -480,11 +480,11 @@ msgstr ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.in.h:16
 msgid "Transparency color"
 msgstr "पारदर्शी रंग"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -493,11 +493,11 @@ msgstr ""
 "रंग पारदर्शिता "
 "को प्रदर्शित करने में उपयोग में लिया जाएगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.in.h:18
 msgid "Use a custom background color"
 msgstr "पसंदीदा पृष्ठभूमि रंग उपयोग करें"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -507,20 +507,20 @@ msgstr ""
 "क्षेत्र को भरने के लिए इस्तेमाल किया जाएगा.अगर यह सेट नहीं है, वर्तमान GTK + "
 "थीम रंग भरने का निर्धारण करेगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.in.h:20
 msgid "Loop through the image sequence"
 msgstr "छवि अनुक्रम में लूप करें"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "एक अंतहीन लूप में बिंब के शृंखला दिखाया जाए या नहीं."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "प्रारंभ में ही 100% से अधिक ज़ूम स्वीकारें"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -528,11 +528,11 @@ msgstr ""
 "यदि इसे गलत नियत किया जाता है तो छवियों को स्क्रीन के अनुरूप फैलाया नहीं "
 "जाएगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "अगली छवि दिखाने से पहले सेकण्डों में देरी"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -541,20 +541,20 @@ msgstr ""
 "रहेगा, जब तक "
 "कि अगला स्वचालित रूप से दिखेगा. शून्य स्वचालित ब्राउज़िंग को अक्षम कर देता है."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "विंडो टूलबार दिखाएँ/छुपाएँ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "विंिंडो स्थिति-पट् दिखाएँ/छुपाएँी."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.in.h:29
 #| msgid "Show/hide the image collection pane."
 msgid "Show/Hide the image gallery pane."
 msgstr "दिखाएँ / छिपाएँ छवि गैलरी फलक."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -563,28 +563,28 @@ msgstr ""
 "दाहिने के "
 "लिए 3."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.in.h:31
 #| msgid "Whether the image collection pane should be resizable or not."
 msgid "Whether the image gallery pane should be resizable."
 msgstr "क्या छवि गैलरी फलक बदलने योग्य होना चाहिए."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "विंडो बाजू-पट्टी छुपाएँ / दिखाएँ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "छवि दीर्घा पट्टी स्क्रॉल बटन दिखायें/छुपायें."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "परिवर्तनों को सहेजने के लिए पूछ के बिना मुख्य विंडो को बंद करें."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.in.h:35
 msgid "Trash images without asking"
 msgstr "छवि को बिना पूछे रद्दी में भेजें"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.in.h:36
 #| msgid ""
 #| "If activated Xviewer wont ask for confirmation when moving images to "
 #| "the trash. It will still ask if any of the files cannot be moved to the "
@@ -598,7 +598,7 @@ msgstr ""
 "हिल जाएगा.यह अभी भी अगर फाइल के किसी भी रद्दी में स्थानांतरित नहीं कर सकते "
 "हैं और बजाय नष्ट हो जाएगा पूछना होगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.in.h:37
 #| msgid ""
 #| "Whether the filechooser should show the user's pictures folder if no "
 #| "images are loaded."
@@ -609,7 +609,7 @@ msgstr ""
 "क्या फ़ाइल चयनक उपयोगकर्ता के चित्र फ़ोल्डर दिखाने के लिए अगर कोई छवियों को "
 "लोड कर रहे हैं चाहिए."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.in.h:38
 #| msgid ""
 #| "If activated and no image is loaded in the active window, the filechooser "
 #| "will display the user's pictures folder using the XDG special user "
@@ -626,12 +626,12 @@ msgstr ""
 "करेगा.अगर निष्क्रिय या तस्वीर फ़ोल्डर को सेट नहीं किया गया है, यह वर्तमान "
 "कार्य निर्देशिका दिखाई देगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "क्या इस विशेषता संवाद में मेटाडेटा सूची को इसका अपना पृष्ठ रखना चाहिए."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.in.h:40
 #| msgid ""
 #| "If activated the detailed metadata list in the properties dialog will be "
 #| "moved to its own page in the dialog. This should make the dialog more "
@@ -648,12 +648,12 @@ msgstr ""
 "चाहिए जैसा कि netbooks द्वारा इस्तेमाल किया गया है.यदि अक्षम, विजेट "
 "\"मेटाडाटा\" पेज पर एम्बेडेड हो जाएगा."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.in.h:41
 #| msgid "Error on deleting image %s"
 msgid "External program to use for editing images"
 msgstr "बाहरी संपादन छवियों के लिए उपयोग कार्यक्रम"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -663,11 +663,11 @@ msgstr ""
 "के लिए उपयोग करने के लिए आवेदन के डेस्कटॉप फ़ाइल नाम (\" डेस्कटॉप "
 "\"सहित).खाली स्ट्रिंग पर सेट करने के लिए इस सुविधा को अक्षम."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.in.h:43
 msgid "Active plugins"
 msgstr "प्लगिन सक्रिय"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "

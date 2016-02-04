@@ -286,7 +286,7 @@ msgid "Background"
 msgstr "পটভূমি"
 
 #: ../data/xviewer-preferences-dialog.ui.h:6
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.in.h:6
 #| msgid "As _background"
 msgid "Background Color"
 msgstr "পটভূমির রং"
@@ -374,7 +374,7 @@ msgstr "চিহ্নিত সময়ের পরে ছবি পরিব�
 msgid "seconds"
 msgstr "সেকেন্ড"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.in.h:1
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -382,28 +382,28 @@ msgstr ""
 "০-র থেকে বড় মান নির্দেশ করে কত সেকেন্ড অতিবাহিত হওয়ার পরে পর্দায় ছবি বদলানো "
 "হবে। ০ মান স্বয়ংক্রিয় ব্রাউজিং নিষ্ক্রিয় করে দেয়।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.in.h:2
 msgid "Active plugins"
 msgstr "সক্রিয় প্লাগ-ইন"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "প্রারম্ভ, বড় করে দেখার মাত্রা ১০০%-র বেশি নির্ধারণ করা যাবে"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.in.h:5
 msgid "Automatic orientation"
 msgstr "স্বয়ংক্রিয় দিশা নির্ধারণ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.in.h:7
 msgid "Close main window without asking to save changes."
 msgstr "পরিবর্তন সংরক্ষণ সম্বন্ধে জিজ্ঞাসা না করে প্রধান উইন্ডো বন্ধ করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.in.h:8
 msgid "Delay in seconds until showing the next image"
 msgstr "পরবর্তী ছবি প্রদর্শনের পূর্বে অতিবাহিত সময়, সেকেন্ড অনুযায়ী নির্ধারিত"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.in.h:9
 #| msgid ""
 #| "Determines how transparency should be indicated. Valid values are "
 #| "CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color "
@@ -417,18 +417,18 @@ msgstr ""
 "(চেকযুক্ত নকশা), COLOR (রং) ও NONE (কিছুই না)। COLOR বেছে নেওয়া হলে, trans-color "
 "কি-টির সাহায্যে ব্যবহৃত রঙের মান নির্ধারণ করা হয়।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.in.h:10
 #| msgid "Error on deleting image %s"
 msgid "External program to use for editing images"
 msgstr "ছবি সম্পাদনার জন্য ব্যবহৃত স্বতন্ত্র প্রোগ্রাম"
 
 # "ঠিক এর পরিবর্তে "নির্ধারণ" লিখ। আর "স্বচ্ছতা" বানানে এখানেও গোলমাল। এটা কি Yudit/Lekho এর Inconsistency ?
 # #হতে পারে - কিন্তু আমি Yudit ব্যবহার করি না - জি-এডিট
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.in.h:11
 msgid "Extrapolate Image"
 msgstr "ছবিকে প্রক্ষিপ্ত করা হবে"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.in.h:12
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -440,7 +440,7 @@ msgstr ""
 "ফোল্ডার প্রদর্শন করা হবে। যদি এই বৈশিষ্ট্য নিষ্ক্রিয় থাকে অথবা যদি এটি প্রস্তুত না করা "
 "হয় তাহলে বর্তমানে ব্যবহৃত ডিরেক্টরি প্রদর্শন করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.in.h:13
 #| msgid ""
 #| "If activated Xviewer wont ask for confirmation when moving images to "
 #| "the trash. It will still ask if any of the files cannot be moved to the "
@@ -454,7 +454,7 @@ msgstr ""
 "করা হবে না। শুধুমাত্র আবর্জনায় স্থানান্তর না করে সরাসরি কোনো ছবি মুছে ফেলার প্রয়োজন "
 "দেখা দিলে জিজ্ঞাসা করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:14
+#: ../data/org.x.viewer.gschema.xml.in.in.h:14
 #| msgid ""
 #| "If activated the detailed metadata list in the properties dialog will be "
 #| "moved to its own page in the dialog. This should make the dialog more "
@@ -472,7 +472,7 @@ msgstr ""
 "হলে, উইজেটটি \"মিটা-ডাটা\" পৃষ্ঠায় সংযোজন করা হবে।"
 
 # msgstr "আদর্শ আয়তনের চিত্রসমূহ সমগ্র পর্দা জুড়ে প্রদর্শন করা হোক"
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.in.h:15
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -480,7 +480,7 @@ msgstr ""
 "স্বচ্ছতা কীএর মান যদি রং হয়, তাহলে এই কীটি নির্ধারণ করে কোন রং ব্যবহার করে "
 "স্বচ্ছ্তা বোঝানো হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.in.h:16
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -489,7 +489,7 @@ msgstr ""
 "এটি সক্রিয় থাকলে, background-color কি দ্বারা নির্ধারিত রং সহযোগে ছবির পেছনের ফাঁকা অংশ "
 "ভরাট করা হবে। এটি নির্ধারিত না হলে, বর্তমান GTK+ থিম দ্বারা চিহ্নিত রং প্রয়োগ করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.in.h:17
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -497,7 +497,7 @@ msgstr ""
 "এটা যদি FALSE হিসাবে নির্ধারিত থাকে, তাহলে প্রাথমিকভাবে ছোট ছবিসমূহকে পুরো পর্দা "
 "জুড়ে দেখানো হবে না।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.in.h:18
 #| msgid ""
 #| "Image collection pane position. Set to 0 for bottom; 1 for left; 2 for "
 #| "top; 3 for right."
@@ -510,11 +510,11 @@ msgstr ""
 
 # "ঠিক এর পরিবর্তে "নির্ধারণ" লিখ। আর "স্বচ্ছতা" বানানে এখানেও গোলমাল। এটা কি Yudit/Lekho এর Inconsistency ?
 # #হতে পারে - কিন্তু আমি Yudit ব্যবহার করি না - জি-এডিট
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.in.h:19
 msgid "Interpolate Image"
 msgstr "ছবিকে প্রক্ষিপ্ত করা হবে"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.in.h:20
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
@@ -524,35 +524,35 @@ msgstr ""
 "\" উপস্থিত থাকে না। কোনো প্লাগ-ইনের \"অবস্থান (Location)\" জানার জন্য সংশ্লিষ্ট "
 "প্লাগ-ইনের .xviewer-plugin ফাইল দেখুন।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.in.h:21
 msgid "Loop through the image sequence"
 msgstr "ছবি ক্রমের মধ্য দিয়ে আবর্তন করো"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:22
+#: ../data/org.x.viewer.gschema.xml.in.in.h:22
 msgid "Scroll wheel zoom"
 msgstr "স্ক্রোল উইলের সাহায্যে বড় করে প্রদর্শন"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.in.h:23
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "ছবি সংকলনের পেইনের মধ্যে স্ক্রোল-বাটল প্রদর্শন/আড়াল করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.in.h:24
 msgid "Show/Hide the image gallery pane."
 msgstr "ছবি সংকলনের পেইন প্রদর্শন/আড়াল করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.in.h:25
 msgid "Show/Hide the window side pane."
 msgstr "উইন্ডোর মধ্যে পার্শ্ববর্তী পেইন প্রদর্শন/আড়াল করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.in.h:26
 msgid "Show/Hide the window statusbar."
 msgstr "উইন্ডো স্টাটাসবার প্রদর্শন/আড়াল করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "উইন্ডো টুলবার প্রদর্শন/আড়াল করা হবে।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.in.h:28
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -561,7 +561,7 @@ msgstr ""
 "ছবির পেছনের অংশ ভরাট করার জন্য ব্যবহৃত রং। use-background-color কি নির্ধারিত না হলে, "
 "সক্রিয় GTK+ থিম দ্বারা চিহ্নিত রং প্রয়োগ করা হয়।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.in.h:29
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -571,7 +571,7 @@ msgstr ""
 "ফাইলের নাম (\".desktop\" সহ উল্লিখিত)। এই বৈশিষ্ট্য নিষ্ক্রিয় করার জন্য ফাঁকা পংক্তি "
 "নির্ধারণ করুন।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.in.h:31
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -585,24 +585,24 @@ msgstr ""
 "নির্ধারণ করা হলে প্রদর্শন ক্ষেত্র ১০০% বৃদ্ধি হবে।"
 
 # #ধন্যবাদ :-)
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.in.h:32
 msgid "Transparency color"
 msgstr "স্বচ্ছতার রং"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.in.h:33
 msgid "Transparency indicator"
 msgstr "স্বচ্ছতা সূচক"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.in.h:34
 msgid "Trash images without asking"
 msgstr "জিজ্ঞাসা না করে ছবি মুছে ফেলা হবে"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.in.h:35
 #| msgid "Set as _Desktop Background"
 msgid "Use a custom background color"
 msgstr "পটভূমির স্বনির্ধারিত রং ব্যবহার করা হবে"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.in.h:36
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -610,11 +610,11 @@ msgstr ""
 "কোনো ছবি লোড না করা হলে, ফাইল নির্বাচন ব্যবস্থা দ্বারা ব্যবহারকারীর ছবির ফোল্ডার "
 "ব্যবহার করা হবে কি না।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.in.h:37
 msgid "Whether the image gallery pane should be resizable."
 msgstr "ছবি সংকলনের পেইনের মাপ পরিবর্তন করা যাবে কি না।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.in.h:38
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -622,7 +622,7 @@ msgstr ""
 "ছবি প্রদর্শনের মাত্রা বৃদ্ধির সময় ছবিটি বিক্ষিপ্ত করা হবে কিনা। এর ফলে ছবিটি ধোঁয়াটে "
 "দেখা দেয় ও বিক্ষিপ্ত না করা ছবির তুলনায় বেশি সময় ব্যয় হয়।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.in.h:39
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -630,25 +630,25 @@ msgstr ""
 "ছবি প্রদর্শনের মাত্রা হ্রাসের সময় ছবিটি প্রক্ষিপ্ত করা হবে কিনা। এর ফলে ছবিটি "
 "ধোঁয়াটে দেখা দেয় ও প্রক্ষিপ্ত না করা ছবির তুলনায় বেশি সময় ব্যয় হয়।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.in.h:40
 msgid "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "EXIF দিশার মানের উপর ভিত্তি করে ছবিটি স্বয়ংক্রিয়রূপে ঘোরানো হবে কি না।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.in.h:41
 msgid "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "বিভিন্ন বৈশিষ্ট্যের ডায়লগের মধ্যে উপস্থিত মিটাডাটা তালিকার ক্ষেত্রে স্বত্বন্ত্র পৃষ্ঠা "
 "উপলব্ধ করা হবে কি না।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.in.h:42
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "বড় করে ছবি প্রদর্শনের জন্য স্ক্রোল-উইল ব্যবহার করা হবে কি না।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.in.h:43
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "ছবির ধারা একটি অশেষ আবর্তন হিসাবে দেখানো হবে কিনা ।"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.in.h:44
 msgid "Zoom multiplier"
 msgstr "বিবর্ধনের মাত্রা"
 

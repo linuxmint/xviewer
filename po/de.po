@@ -356,7 +356,7 @@ msgid "As custom color:"
 msgstr "Als benutzerdefinierte Farbe:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Hintergrundfarbe"
 
@@ -413,18 +413,18 @@ msgstr "Diaschau"
 msgid "Plugins"
 msgstr "Plugins"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Automatische Drehung des Bildes"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
 "Legt fest, ob das Bild automatisch auf Grund der EXIF-Information gedreht "
 "wird."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -434,11 +434,11 @@ msgstr ""
 "wird. Falls der Schlüssel »background-color« nicht gesetzt ist, so wird die "
 "Farbe durch das aktuelle GTK+-Thema bestimmt."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Bild interpolieren"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -447,11 +447,11 @@ msgstr ""
 "einer besseren Bildqualität, ist jedoch etwas langsamer als eine nicht "
 "interpolierte Darstellung."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Bild interpolieren"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -460,11 +460,11 @@ msgstr ""
 "einer leicht verschwommenen Bildqualität und ist etwas langsamer als eine "
 "nicht interpolierte Darstellung."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "Transparenzanzeiger"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
@@ -474,20 +474,20 @@ msgstr ""
 "»CHECK_PATTERN«, »COLOR« sowie »NONE«. Falls Sie »COLOR« wählen, legt der "
 "»trans_color«-Schlüssel fest, welche Farbe verwendet werden soll."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "Vergrößerung per Mausrad"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Legt fest, ob das Mausrad zum Vergrößern verwendet wird."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "Vergrößerungsfaktor"
 
 # Raddrehung klingt irgendwie nach einer vollen Umdrehung.
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -500,11 +500,11 @@ msgstr ""
 "Rades verwendet wird. 0.05 vergrößert die Ansicht des Bildes um 5%, 1.00 um "
 "100%."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Transparenzfarbe"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -512,11 +512,11 @@ msgstr ""
 "Falls der Transparenzschlüssel den Wert »COLOR« hat, legt dieser Schlüssel "
 "fest, welche Farbe zum Anzeigen der Transparenz verwendet werden soll."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Benutzerdefinierte Hintergrundfarbe verwenden"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -527,20 +527,20 @@ msgstr ""
 "Falls der Wert nicht gesetzt ist, dann wird das aktuelle GTK+-Thema die "
 "Füllfarbe bestimmen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "Endlosschleife durch die Bildabfolge"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Legt fest, ob die Bilder in einer Endlosschleife angezeigt werden."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Anfangsvergrößerung größer als 100% erlauben"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -548,11 +548,11 @@ msgstr ""
 "Wenn dieser Wert auf FALSCH gesetzt ist, werden kleine Bilder anfangs nicht "
 "vergrößert, um auf den Bildschirm zu passen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "Verzögerung in Sekunden, bis das nächste Bild angezeigt wird"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -561,19 +561,19 @@ msgstr ""
 "automatisch auf das nächste weitergeschaltet wird. Null schaltet die "
 "automatische Weiterschaltung ab."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "Werkzeugleiste anzeigen/verbergen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "Statusleiste anzeigen/verbergen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "Bildersammlungsleiste anzeigen/verbergen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -581,28 +581,28 @@ msgstr ""
 "Die Position der Bildersammlungsleiste. Gültige Werte sind: 0 (unten), 1 "
 "(links), 2 (oben), 3 (rechts)"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr ""
 "Legt fest, ob die Größe der Bildersammlungsleiste angepasst werden kann."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "Seitenleiste anzeigen/verbergen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Bildlaufknöpfe der Bildersammlungsleiste zeigen/verbergen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "Hauptfenster ohne Nachfrage zum Speichern der Änderungen schließen."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "Bilder ohne nachfragen löschen"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -613,7 +613,7 @@ msgstr ""
 "das Bild nicht in den Papierkorb verschoben werden kann und stattdessen "
 "gelöscht wird."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -621,7 +621,7 @@ msgstr ""
 "Legt fest, ob die Dateiauswahl den Bilderordner des Benutzers anzeigen soll, "
 "wenn keine Bilder geladen sind."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -634,14 +634,14 @@ msgstr ""
 "auf »Falsch« gesetzt ist oder der Bilderordner nicht eingerichtet ist, wird "
 "der aktuelle Arbeitsordner angezeigt."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "Legt fest, ob die Liste der Metadaten im Eigenschaften-Dialog auf einer "
 "eigenen Seite angezeigt wird."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -655,11 +655,11 @@ msgstr ""
 "»Falsch« gesetzt ist, wird das Dialogelement auf der Seite »Metadaten« "
 "eingebettet."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Externe Anwendung für das Bearbeiten von Bildern"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -671,11 +671,11 @@ msgstr ""
 "wurde). Setzen Sie hier eine leere Zeichenkette, um dieses Funktionsmerkmal "
 "zu deaktivieren."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Aktivierte Plugins"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "

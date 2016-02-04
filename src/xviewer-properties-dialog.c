@@ -595,7 +595,7 @@ xviewer_properties_dialog_class_init (XviewerPropertiesDialogClass *klass)
 							      G_PARAM_STATIC_NICK |
 							      G_PARAM_STATIC_BLURB));
 
-	gtk_widget_class_set_template_from_resource ((GtkWidgetClass *) klass, "/org/gnome/xviewer/ui/xviewer-image-properties-dialog.ui");
+	gtk_widget_class_set_template_from_resource ((GtkWidgetClass *) klass, "/org/x/viewer/ui/xviewer-image-properties-dialog.ui");
 
 	GtkWidgetClass *wklass = (GtkWidgetClass*) klass;
 	gtk_widget_class_bind_template_child_private(wklass,

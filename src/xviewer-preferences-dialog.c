@@ -149,7 +149,7 @@ xviewer_preferences_dialog_class_init (XviewerPreferencesDialogClass *klass)
 	g_type_ensure (PEAS_GTK_TYPE_PLUGIN_MANAGER);
 
 	gtk_widget_class_set_template_from_resource (widget_class,
-						     "/org/gnome/xviewer/ui/xviewer-preferences-dialog.ui");
+						     "/org/x/viewer/ui/xviewer-preferences-dialog.ui");
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      XviewerPreferencesDialog,
 						      interpolate_check);

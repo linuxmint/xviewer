@@ -73,7 +73,7 @@ xviewer_plugin_engine_init (XviewerPluginEngine *engine)
 
 	engine->priv = xviewer_plugin_engine_get_instance_private (engine);
 
-	engine->priv->plugins_settings = g_settings_new ("org.gnome.xviewer.plugins");
+	engine->priv->plugins_settings = g_settings_new ("org.x.viewer.plugins");
 }
 
 XviewerPluginEngine *

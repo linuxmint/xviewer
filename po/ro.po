@@ -268,7 +268,7 @@ msgid "Background"
 msgstr "Fundal"
 
 #: ../data/xviewer-preferences-dialog.ui.h:6
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.in.h:6
 msgid "Background Color"
 msgstr "Culoare de fundal"
 
@@ -336,7 +336,7 @@ msgstr "_Schimbă imaginea după:"
 msgid "seconds"
 msgstr "secunde"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.in.h:1
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -345,30 +345,30 @@ msgstr ""
 "ecran înainte ca următoarea să fie afișată automat. Zero dezactivează "
 "navigarea automată."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.in.h:2
 msgid "Active plugins"
 msgstr "Module active"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Permite scalarea inițială mai mare de 100%"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.in.h:5
 msgid "Automatic orientation"
 msgstr "Orientare automată"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.in.h:7
 msgid "Close main window without asking to save changes."
 msgstr ""
 "Închide fereastra principală fără a întreba dacă se dorește salvarea "
 "modificărilor."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.in.h:8
 msgid "Delay in seconds until showing the next image"
 msgstr "Întârzierea în secunde până la afișarea următoarei imagini"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.in.h:9
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
@@ -378,15 +378,15 @@ msgstr ""
 "sunt CHECK_PATTERN, COLOR și NONE. Dacă este aleasă COLOR, atunci cheia "
 "„trans-color” determină valoarea utilizată a culorii."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.in.h:10
 msgid "External program to use for editing images"
 msgstr "Programul extern de utilizat la editarea imaginilor"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.in.h:11
 msgid "Extrapolate Image"
 msgstr "Extrapolează imaginea"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.in.h:12
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -398,7 +398,7 @@ msgstr ""
 "dosarul special XDG. Dacă este dezactivat sau dosarul de fotografii nu a "
 "fost definit, va afișa dosarul curent."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.in.h:13
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -408,7 +408,7 @@ msgstr ""
 "coșul de gunoi. Se va cere confirmare în cazul în care fișierele nu pot fi "
 "mutate în coșul de gunoi, iar în acest caz vor fi șterse."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:14
+#: ../data/org.x.viewer.gschema.xml.in.in.h:14
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -420,7 +420,7 @@ msgstr ""
 "mai utilizabil pe ecrane mici, cum ar fi netbook-urile. Dacă este "
 "dezactivată, widgetul va fi înglobat în pagina „Metadate”."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.in.h:15
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -428,7 +428,7 @@ msgstr ""
 "În cazul în care cheia de transparență are valoarea COLOR, atunci această "
 "cheie determină culoarea care este utilizată pentru a indica transparența."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.in.h:16
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -438,7 +438,7 @@ msgstr ""
 "pentru a umple zone din jurul imaginii. Dacă aceasta nu este definită, "
 "culoarea de umplere va fi definită de tema GTK+ activă."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.in.h:17
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -446,7 +446,7 @@ msgstr ""
 "Dacă aceasta este definită la „FALSE” atunci imaginile mici nu vor fi mărite "
 "pentru a se potrivi dimensiunii ecranului."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.in.h:18
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -454,11 +454,11 @@ msgstr ""
 "Poziția panoului galeriei de imagini. Definiți „0” pentru jos; „1” pentru "
 "stânga; „2” pentru sus; „3” pentru dreapta."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.in.h:19
 msgid "Interpolate Image"
 msgstr "Interpolează imaginea"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.in.h:20
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
@@ -467,36 +467,36 @@ msgstr ""
 "Lista modulelor active. Nu conține „locația” modulelor active. Vezi "
 "fișierul .xviewer-plugin pentru a determina „locația” unui modul activ."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.in.h:21
 msgid "Loop through the image sequence"
 msgstr "Repetă ciclul afișării secvenței de imagini"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:22
+#: ../data/org.x.viewer.gschema.xml.in.in.h:22
 msgid "Scroll wheel zoom"
 msgstr "Scalare cu rotița de derulare"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.in.h:23
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr ""
 "Arată/ascunde butoanele de derulare ale panoului de galeriei de imagini."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.in.h:24
 msgid "Show/Hide the image gallery pane."
 msgstr "Afișează/ascunde panoul pentru galeria de imagini."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.in.h:25
 msgid "Show/Hide the window side pane."
 msgstr "Arată/ascunde panoul lateral al ferestrei."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.in.h:26
 msgid "Show/Hide the window statusbar."
 msgstr "Afișează/ascunde bara de stare a ferestrei."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "Afișează/ascunde bara de unelte a ferestrei."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.in.h:28
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -506,7 +506,7 @@ msgstr ""
 "background-color” nu este definită, culoarea este definită de tema GTK+ "
 "activă."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.in.h:29
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -517,7 +517,7 @@ msgstr ""
 "imaginea” din bara de instrumente este apăsat). Definiți la un șir gol "
 "pentru a dezactiva această funcționalitate."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.in.h:31
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -531,23 +531,23 @@ msgstr ""
 "scalării pentru fiecare eveniment de derulare și 1.00 înseamnă o creștere "
 "100% a scalării."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.in.h:32
 msgid "Transparency color"
 msgstr "Culoare de transparență"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.in.h:33
 msgid "Transparency indicator"
 msgstr "Indicator de transparență"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.in.h:34
 msgid "Trash images without asking"
 msgstr "Mută imaginile la gunoi fără a mai întreba"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.in.h:35
 msgid "Use a custom background color"
 msgstr "Folosește o culoare de fundal personalizată"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.in.h:36
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -555,11 +555,11 @@ msgstr ""
 "Dacă dialogul de alegere fișiere ar trebui să afișeze dosarul de fotografii "
 "al utilizatorului când nu sunt imagini încărcate."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.in.h:37
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Dacă panoul galeriei de imagini să fie redimensionabil."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.in.h:38
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -567,7 +567,7 @@ msgstr ""
 "Dacă imaginea ar trebui să fie extrapolată la mărire. Aceasta implică o "
 "calitate mai bună, dar și o viteză scăzută pentru imaginile extrapolate."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.in.h:39
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -575,28 +575,28 @@ msgstr ""
 "Dacă imaginea ar trebui să fie interpolată la mărire. Aceasta implică o "
 "calitate mai bună, dar și o viteză scăzută față de imaginile neinterpolate."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.in.h:40
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
 "Imaginile sunt rotite automat în funcție de informațiile de orientare EXIF."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.in.h:41
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "Dacă lista de metadate din dialogul de proprietăți ar trebui să aibă pagină "
 "proprie."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.in.h:42
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Dacă rotița de derulare să fie folosită pentru scalare."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.in.h:43
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Dacă secvența de imagini să fie afișată într-un ciclu infinit."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.in.h:44
 msgid "Zoom multiplier"
 msgstr "Multiplicator scalare"
 

@@ -346,7 +346,7 @@ msgid "As custom color:"
 msgstr "Kaip pasirinktinė spalva:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Fono spalva"
 
@@ -403,18 +403,18 @@ msgstr "Skaidrių rodymas"
 msgid "Plugins"
 msgstr "Įskiepiai"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Automatinė orientacija"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
 "Ar paveikslėlis turėtų būti automatiškai paverstas atsižvelgiant į EXIF "
 "orientaciją."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -423,11 +423,11 @@ msgstr ""
 "Spalva, naudojama plotui už paveikslėlio užpildyti. Jei fono spalva "
 "nenurodyta, ji yra nustatoma iš naudojamos GTK+ temos."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Interpoliuoti paveikslėlį"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -436,11 +436,11 @@ msgstr ""
 "gaunama geresnė kokybė, tačiau yra šiek tiek lėčiau už neinterpoliuotus "
 "paveikslėlius."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Ekstrapoliuoti paveikslėlį"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -448,11 +448,11 @@ msgstr ""
 "Ar didinant paveikslėlis turėtų būti ekstrapoliuotas. Taip gaunama prastesnė "
 "kokybė ir yra šiek tiek lėčiau už neekstrapoliuotus paveikslėlius."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "Skaidrumo indikatorius"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
@@ -462,19 +462,19 @@ msgstr ""
 "CHECK_PATTERN, COLOR ir NONE. Jeigu pasirinkta COLOR, tada trans-color "
 "raktas nurodo naudojamos spalvos reikšmę."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "Slinkties ratuko mastelis"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Ar mastelio keitimui turėtų būti naudojamas slinkties ratukas."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "Mastelio daugiklis"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -487,11 +487,11 @@ msgstr ""
 "Pavyzdžiui, 0.05 – 5% mastelio didėjimas su kiekvienu slinkties įvykiu, o "
 "1.00 – 100%."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Skaidrumo spalva"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -499,11 +499,11 @@ msgstr ""
 "Jeigu skaidrumo raktas turi vertę COLOR, tada šis raktas nurodo spalvą kuri "
 "naudojama skaidrumui nustatyti."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Naudoti pasirinktąją fono spalvą"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -512,20 +512,20 @@ msgstr ""
 "Jei įjungta, fono spalva bus naudojama plotui už paveikslėlio užpildyti. Jei "
 "išjungta, naudojama GTK+ tema nustatys užpildymo spalvą."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "Rodyti ciklišką paveikslėlių seką"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Ar paveikslėlių seka turi būti rodoma nesibaigiančiu ciklu."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Leisti pradžioje didesnį mastelį negu 100%"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -533,11 +533,11 @@ msgstr ""
 "Jeigu ši reikšmė nustatyta į NEIGIAMĄ, maži paveikslėliai nebus ištempti "
 "tam, kad tilptų į ekraną."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "Delsa prieš parodant kitą paveikslėlį"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -545,19 +545,19 @@ msgstr ""
 "Reikšmė didesnė už 0 nurodo kiek sekundžių paveikslėlis išlieka ekrane iki "
 "parodomas kitas. Nulis – išjungti automatinį naršymą."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "Rodyti/slėpti lango įrankinę."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "Rodyti/slėpti lango būsenos juostą."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "Rodyti/slėpti paveikslėlių kolekcijos skydelį."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -565,27 +565,27 @@ msgstr ""
 "Paveikslėlių kolekcijos polangio pozicija. Nustatyti į 0 – apačia; 1 – "
 "kairė; 2 – viršus; 3 – dešinė."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Ar paveikslėlių kolekcijos polangis turi būti keičiamo dydžio."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "Rodyti/slėpti lango šoninį polangį."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Rodyti/slėpti paveikslėlių kolekcijos polangio slinkties mygtukus."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "Užverti pagrindinį langą neklausiant pakeitimų įrašymo."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "Mesti paveikslėlius į šiukšliadėžę neklausiant"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -595,7 +595,7 @@ msgstr ""
 "paveikslėlius į šiukšlinę. Bus klausiama patvirtinimo, jei bent vienas iš "
 "failų negali būti perkeltas į šiukšlinę, todėl bus ištrintas."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -603,7 +603,7 @@ msgstr ""
 "Ar failų parinkiklis turėtų rodyti naudotojo paveikslėlių aplanką, jei "
 "neįkeltas joks paveikslėlis."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -615,12 +615,12 @@ msgstr ""
 "aplankus. Jei išjungta arba paveikslėlių aplankas nesukonfigūruotas rodys "
 "darbinį aplanką."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Ar metaduomenų sąrašas savybių dialoge turėtų turėti savo puslapį."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -632,11 +632,11 @@ msgstr ""
 "ekrane, pvz. internetiniuose kompiuteriuose. Jei išjungta, metaduomenys bus "
 "rodomi „Metaduomenų“ puslapyje."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Išorinė programa paveikslėlių redagavimui"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -646,11 +646,11 @@ msgstr ""
 "„Redaguoti paveikslėlį“), darbastalio failo pavadinimas (įskaitant „."
 "desktop“). Nustatyti į tuščia simbolių eilutę šios savybės išjungimui."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Įjungti įskiepiai"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "

@@ -298,7 +298,7 @@ msgid "Background"
 msgstr "Позадина"
 
 #: ../data/xviewer-preferences-dialog.ui.h:6
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.in.h:6
 #| msgid "As _background"
 msgid "Background Color"
 msgstr "Боја на позадина"
@@ -380,32 +380,32 @@ msgstr "_Автоматска ориентација"
 msgid "_Loop sequence"
 msgstr "Секвенца на _повторување"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.in.h:1
 msgid "A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero disables the automatic browsing."
 msgstr "Вредност поголема од нула (0) одредува колку секунди сликата ќе биде покажана на екранот, пред да се премине на следната слика. Нула (0) оневозможува автоматско разгледување."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.in.h:2
 msgid "Active plugins"
 msgstr "Активни додатоци"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Дозволи иницијално зголемување поголемо од 100%"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.in.h:5
 msgid "Automatic orientation"
 msgstr "Автоматска ориентација"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.in.h:7
 msgid "Close main window without asking to save changes."
 msgstr "Затвори го главниот прозорец без прашување за зачувување на промените."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.in.h:8
 msgid "Delay in seconds until showing the next image"
 msgstr "Задоцнување во секунди до покажување на следната слика"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.in.h:9
 #| msgid ""
 #| "Determines how transparency should be indicated. Valid values are "
 #| "CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color "
@@ -413,161 +413,161 @@ msgstr "Задоцнување во секунди до покажување н�
 msgid "Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used."
 msgstr "Одредува како транспарентноста да биде индицирана Валидни вредности се CHECK_PATTERN, COLOR и NONE. ако изберете COLOR, тогаш клучот за trans-color ја одредува употребената вредност на бојата."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.in.h:10
 #| msgid "Error on deleting image %s"
 msgid "External program to use for editing images"
 msgstr "Надворешна програма за уредување на слики"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.in.h:11
 #| msgid "Interpolate Image"
 msgid "Extrapolate Image"
 msgstr "Екстраполирај слика"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.in.h:12
 msgid "If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory."
 msgstr "Ако е активиран и не е вчитана слика во активниот прозорец, избирачот на датотеки ќе ја прикаже папката со слики на корисникот со користење на специјалните кориснички директориуми од XDG. Ако е деактивиран или папката со слики не е поставена, ќе се прикаже тековниот работен директориум."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.in.h:13
 msgid "If activated, Xviewer won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead."
 msgstr "Ако е активирано, Xviewer нема да бара да потврдите кога некоја слика треба да се премести во ѓубрето. Сепак ќе бара потврда ако некоја датотека не може да се премести во ѓубрето и нема да може да се избрише."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:14
+#: ../data/org.x.viewer.gschema.xml.in.in.h:14
 msgid "If activated, the detailed metadata list in the properties dialog will be moved to its own page in the dialog. This should make the dialog more usable on smaller screens, e.g. as used by netbooks. If disabled, the widget will be embedded on the \"Metadata\" page."
 msgstr "Ако е активирано, дефинираната листа со мета податоци во дијалогот за својства ќе биде преместена на нејзина сопствена страница во дијалогот. Ова ќе го направи дијалогот полесен за употреба на мали екрани, пр. нетбук компјутери. Ако е оневозможено, елементот ќе биде вграден на страницата „Мета податоци“."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.in.h:15
 msgid "If the transparency key has the value COLOR, then this key determines the color which is used for indicating transparency."
 msgstr "Ако транспарентното копче ја има вредноста БОЈА, тогаш ова копче ја одредува бојата која е употребена за индицирана транспарентност."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.in.h:16
 msgid "If this is active, the color set by the background-color key will be used to fill the area behind the image. If it is not set, the current GTK+ theme will determine the fill color."
 msgstr "Ако ова е активно, бојата поставена од клучот background-color ќе се користи за пополнување на просторот позади сликата. Ако не е поставено, ќе се користи тековната тема на GTK+ за одредување на бојата за пополнување."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.in.h:17
 msgid "If this is set to FALSE small images will not be stretched to fit into the screen initially."
 msgstr "Ако ова е наместено како FALSE, тогаш малите слики нема да бидат растегнати при гледање."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.in.h:18
 #| msgid ""
 #| "Image collection pane position. Set to 0 for bottom; 1 for left; 2 for "
 #| "top; 3 for right."
 msgid "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 for right."
 msgstr "Позиција на површината за галерија. 0 за на дното; 1 за лево; 2 за горе; 3 за десно."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.in.h:19
 msgid "Interpolate Image"
 msgstr "Интерполирај слика"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.in.h:20
 msgid "List of active plugins. It doesn't contain the \"Location\" of the active plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given plugin."
 msgstr "Листа на активни додатоци. Не ја содржи „Локацијата“ на активните додатоци. Проверете ја датотеката .xviewer-plugin за да добиете „Локација“за одреден додаток."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.in.h:21
 msgid "Loop through the image sequence"
 msgstr "Повторувај ја секвенцата на слики"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:22
+#: ../data/org.x.viewer.gschema.xml.in.in.h:22
 msgid "Scroll wheel zoom"
 msgstr "Зумирање со придвижување на тркалцето на глушецот"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.in.h:23
 #| msgid "Show/hide the image collection pane scroll buttons."
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Покажи/скриј ги копчињата за лизгање на површината на галеријата."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.in.h:24
 #| msgid "Show/hide the image collection pane."
 msgid "Show/Hide the image gallery pane."
 msgstr "Покажи/скриј ја површината на галеријата."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.in.h:25
 #| msgid "Show/hide the window side pane."
 msgid "Show/Hide the window side pane."
 msgstr "Покажи/скриј го страничниот простор."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.in.h:26
 #| msgid "Show/hide the window statusbar."
 msgid "Show/Hide the window statusbar."
 msgstr "Покажи/скриј ја статусната лента на прозорецот."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.in.h:27
 #| msgid "Show/hide the window toolbar."
 msgid "Show/Hide the window toolbar."
 msgstr "Покажи/скриј го алатникот на прозорецот."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.in.h:28
 msgid "The color that is used to fill the area behind the image. If the use-background-color key is not set, the color is determined by the active GTK+ theme instead."
 msgstr "Бојата која ќе се користи за пополнување на површината позади сликата. Ако не е поставен клучот use-background-color, бојата се одредува од активната тема на GTK+."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.in.h:29
 msgid "The desktop file name (including the \".desktop\") of the application to use for editing images (when the \"Edit Image\" toolbar button is clicked). Set to the empty string to disable this feature."
 msgstr "Името на desktop датотеката (вклучувајќи го и „.desktop“) на апликацијата која се користи за уредување на слики (кога ќе биде кликнато копчето „Уреди ја сликата“ од лентата со алатки). Поставете го ова со празна вредност за оневозможнвуање на опцијата."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.in.h:31
 #, no-c-format
 msgid "The multiplier to be applied when using the mouse scroll wheel for zooming. This value defines the zooming step used for each scroll event. For example, 0.05 results in a 5% zoom increment for each scroll event and 1.00 result in a 100% zoom increment."
 msgstr "Множителот ќе биде применет кога се користи тркалцето на глушецот за зумирање. Оваа вредност ја дефинира стапката на зумирање при секое придвижување на тркалцето. На пример, 0.05 зголемува 5% за секое придвижување на тркалцето и 1.00 золемува 100%."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.in.h:32
 msgid "Transparency color"
 msgstr "Транспарентност боја "
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.in.h:33
 msgid "Transparency indicator"
 msgstr "Транспарентност индикатор"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.in.h:34
 msgid "Trash images without asking"
 msgstr "Фрли ги датотеките во ѓубрето без прашување"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.in.h:35
 #| msgid "As custom c_olor:"
 msgid "Use a custom background color"
 msgstr "Користи сопствена боја за позадина"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.in.h:36
 msgid "Whether the file chooser should show the user's pictures folder if no images are loaded."
 msgstr "Дали избирачот на датотеки да ја прикажува папката со слики на корисникот, ако не се вчитани слики."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.in.h:37
 #| msgid "Whether the image collection pane should be resizable or not."
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Дали површината за галеријата на слики да биде со променлива големина."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.in.h:38
 #| msgid ""
 #| "Whether the image should be interpolated on zoom or not. This leads to "
 #| "better quality but is somewhat slower than non interpolated images."
 msgid "Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images."
 msgstr "Дали сликата ќе биде екстраполирана при зголемување или не. Ова води кон подобар квалитет, но е побавно отколку неекстраполираните слики."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.in.h:39
 #| msgid ""
 #| "Whether the image should be interpolated on zoom or not. This leads to "
 #| "better quality but is somewhat slower than non interpolated images."
 msgid "Whether the image should be interpolated on zoom-out. This leads to better quality but is somewhat slower than non-interpolated images."
 msgstr "Дали сликата ќе биде интерполирана при зголемување или не. Ова води кон подобар квалитет, но е побавно отколку неинтерполираните слики."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.in.h:40
 msgid "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Дали сликата треба да се ротира автоматски врз основа на EXIF ориентацијата."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.in.h:41
 msgid "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Дали листата со мета податоци во дијалогот за својства ќе биде на своја сопствена страница."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.in.h:42
 #| msgid "Whether the scroll wheel should be used for zooming or not."
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Дали да се користи тркалцето за лизгање за зумирање."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.in.h:43
 #| msgid ""
 #| "Whether or not the sequence of images should be shown in an endless loop."
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Дали скевенцата на слики ќе се повторува бесконечно."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.in.h:44
 msgid "Zoom multiplier"
 msgstr "Множител на зумот"
 

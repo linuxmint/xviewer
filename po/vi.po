@@ -360,7 +360,7 @@ msgid "As custom color:"
 msgstr "Dùng màu tự chọn:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:10
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Màu nền"
 
@@ -417,16 +417,16 @@ msgstr "Trình chiếu ảnh"
 msgid "Plugins"
 msgstr "Phần bổ sung"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Tự động định hướng"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Có tự động xoay ảnh dựa vào hướng dẫn EXIF hay không."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -435,11 +435,11 @@ msgstr ""
 "Màu được dùng làm nền ảnh. Nếu không đặt khoá use-background-color, màu sẽ "
 "do sắc thái GTK+ xác định."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Nội suy ảnh"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -447,11 +447,11 @@ msgstr ""
 "Có nội suy ảnh khi thu nhỏ hay không. Tính năng này giúp nâng cao chất lượng "
 "ảnh, nhưng chạy chậm hơn ảnh không nội suy."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Ngoại suy ảnh"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -459,11 +459,11 @@ msgstr ""
 "Có ngoại suy ảnh khi phóng to hay không. Tính năng này giúp nâng cao chất "
 "lượng ảnh, nhưng chạy chậm hơn ảnh không ngoại suy."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "Chỉ thị trong suốt"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
@@ -473,19 +473,19 @@ msgstr ""
 "(ô bàn cờ), COLOR (màu sắc) và NONE (không). Nếu chọn COLOR, khoá \"trans-"
 "color\" sẽ xác định giá trị màu được dùng."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "Bánh xe cuộn thu/phóng"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Có dùng bánh xe cuộn để phóng to/thu nhỏ hay không."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "Số nhân phóng/thu"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -498,11 +498,11 @@ msgstr ""
 "hạn, giá trị 0.05 phóng to theo 5% mỗi sự kiện cuộn, còn giá trị 1.00 phóng "
 "to theo 100%."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Màu trong suốt"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -510,11 +510,11 @@ msgstr ""
 "Nếu khoá trong suốt có giá trị COLOR (màu sắc), khoá này sẽ xác định màu "
 "được dùng để biểu thị trạng thái trong suốt."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Dùng màu nền riêng"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -523,20 +523,20 @@ msgstr ""
 "Nếu bật, màu từ khoá background-color sẽ được dùng để tô nền ảnh. Nếu tắt, "
 "sắc thái GTK+ sẽ quyết định màu nền."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "Lặp lại cảnh ảnh"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Có hiển thị cảnh ảnh trong vòng lặp vô hạn hay không."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Cho phép phóng to hơn 100% từ ban đầu"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -544,11 +544,11 @@ msgstr ""
 "Nếu đặt là FALSE (sai), ảnh nhỏ sẽ không được kéo to ra để vừa màn hình ngay "
 "từ đầu."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "Thời gian chờ (giây) tới khi hiện ảnh tiếp theo"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -556,19 +556,19 @@ msgstr ""
 "Giá trị lớn hơn 0 xác định số giây hiển thị ảnh cho tới khi tự động hiển thị "
 "ảnh kế tiếp. Đặt là 0 để tắt khả năng duyệt tự động."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "Hiện/ẩn thanh công cụ cửa sổ."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "Hiện/ẩn thanh trạng thái cửa sổ."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "Hiện/ẩn khung trưng bày hợp ảnh."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -576,27 +576,27 @@ msgstr ""
 "Vị trí ô cửa sổ trưng bày ảnh. Đặt thành: 0 (bên dưới), 1 (bên trái), 2 (bên "
 "trên) hay 3 (bên phải)."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Có cho phép thay đổi kích thước ô tập hợp ảnh hay không."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "Hiện/ẩn khung lề cửa sổ."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Hiện/ẩn nút cuộn ở khung trưng bày ảnh."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "Đóng cửa sổ chính mà không hỏi lưu."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "Cho vào thùng rác không cần hỏi"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -605,13 +605,13 @@ msgstr ""
 "Nếu kích hoạt, Mắt GNOME sẽ không hỏi xác nhận khi cho ảnh vào thùng rác. Sẽ "
 "vẫn hỏi nếu bất kỳ ảnh nào không thể đưa vào thùng rác và sẽ bị xóa."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
 msgstr "Có hiện thư mục ảnh của người dùng khi không nạp ảnh hay không."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -622,12 +622,12 @@ msgstr ""
 "ảnh của người dùng theo đặc tả XDG. Nếu bỏ kích hoạt hoặc thư mục ảnh chưa "
 "được tạo, hiện ảnh trong thư mục hiện tại."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Có dùng trang riêng cho metadata trong hộp thoại thuộc tính không."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -639,11 +639,11 @@ msgstr ""
 "màn hình nhỏ, như netbook. Nếu tắt, toàn bộ sẽ được nhúng trong trang "
 "\"Metadata\"."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Chương trình dùng để sửa ảnh"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -652,11 +652,11 @@ msgstr ""
 "Tên tập tin desktop (bao gồm phần đuôi \".desktop\") của ứng dụng để hiệu "
 "chỉnh ảnh (khi nhấn nút \"Sửa ảnh\"). Đặt chuỗi rỗng để tắt tính năng này."
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Phần bổ sung hoạt động"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "

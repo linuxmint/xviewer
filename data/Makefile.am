@@ -13,10 +13,10 @@ appdatadir = $(datadir)/appdata
 appdata_in_files = xviewer.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
-gsettings_ENUM_NAMESPACE = org.gnome.xviewer
+gsettings_ENUM_NAMESPACE = org.x.viewer
 gsettings_ENUM_FILES = $(top_srcdir)/src/xviewer-scroll-view.h	\
                        $(top_srcdir)/src/xviewer-window.h
-gsettings_SCHEMAS = org.gnome.xviewer.gschema.xml
+gsettings_SCHEMAS = org.x.viewer.gschema.xml
 
 @GSETTINGS_RULES@
 

@@ -4934,7 +4934,7 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	gtk_ui_manager_insert_action_group (priv->ui_mgr, priv->actions_gallery, 0);
 
 	if (!gtk_ui_manager_add_ui_from_resource (priv->ui_mgr,
-						  "/org/gnome/xviewer/ui/xviewer-ui.xml",
+						  "/org/x/viewer/ui/xviewer-ui.xml",
 						  &error)) {
                 g_warning ("building menus failed: %s", error->message);
                 g_error_free (error);

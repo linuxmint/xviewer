@@ -341,7 +341,7 @@ po/Makefile.in
 data/Makefile
 data/xviewer.pc
 data/xviewer.desktop.in
-data/org.gnome.xviewer.gschema.xml
+data/org.x.viewer.gschema.xml
 data/pixmaps/Makefile
 data/icons/Makefile
 data/icons/16x16/Makefile

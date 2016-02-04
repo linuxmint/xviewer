@@ -342,7 +342,7 @@ msgid "As custom color:"
 msgstr "選択色:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "背景色"
 
@@ -399,174 +399,174 @@ msgstr "スライドショー"
 msgid "Plugins"
 msgstr "プラグイン"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "向きの自動調整"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "EXIF の向きに応じて自動的に画像の向きを調整します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid "The color that is used to fill the area behind the image. If the use-background-color key is not set, the color is determined by the active GTK+ theme instead."
 msgstr "画像の後ろの領域を塗りつぶすのに使われる色です。use-background-color キーが設定されていなければ、代わりにアクティブな GTK+ のテーマによって決定されます。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "画像の補正"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid "Whether the image should be interpolated on zoom-out. This leads to better quality but is somewhat slower than non-interpolated images."
 msgstr "画像を拡大する際に補間するかどうかを指定します。これによって画像がより良い品質になりますが、補間しない場合と比較して描画が多少遅くなります。"
 
 # FIXME: 以前は"Interpolate Image"だが、同じ意味では?
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "画像の補正"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid "Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images."
 msgstr "画像を拡大する際に補正するかどうかを指定します。これは画像がぼやけた状態になり、補正しない場合と比較して描画が多少遅くなります。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "透過する部分の表示方法"
 
 # 原文は trans-color だが、data/xviewer.schemas.in では trans_color なので、原文の
 # ミス
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid "Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used."
 msgstr "画像を透過する部分をどのように表示させるかを指定します。指定可能な値は CHECK_PATTERN、COLOR と NONE です。COLOR を選択した場合、キー trans_color には使用する色の値を指定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "ホイールを使ってズームする"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "画像の拡大/縮小でマウスホイールを使用できるかどうかを指定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "拡大率"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid "The multiplier to be applied when using the mouse scroll wheel for zooming. This value defines the zooming step used for each scroll event. For example, 0.05 results in a 5% zoom increment for each scroll event and 1.00 result in a 100% zoom increment."
 msgstr "マウスホイールのスクロールで画像を拡大/縮小する際に適用する倍率です。スクロールのイベントが発生するたびに、この値の乗数で拡大/縮小します。例えば、0.05 にするとスクロールのイベントが発生する度に 5% 単位で拡大し、1.00 にすると 100% 単位で拡大することになります。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "透過する部分の色"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid "If the transparency key has the value COLOR, then this key determines the color which is used for indicating transparency."
 msgstr "キー transparency が COLOR の場合、このキーは透過する部分に使用する色を表します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "背景にカスタム色を使用する"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid "If this is active, the color set by the background-color key will be used to fill the area behind the image. If it is not set, the current GTK+ theme will determine the fill color."
 msgstr "これがアクティブならば、background-color キーで設定された色が画像の後ろのエリアを満たすのに使われます。設定されてない場合、現在の GTK+ のテーマが色を決定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "一連の画像をループ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "一連の画像を無限ループで表示するかどうか指定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "初期表示で 100% より大きい倍率を許可する"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid "If this is set to FALSE small images will not be stretched to fit into the screen initially."
 msgstr "FALSE に設定すると、小さい画像が画面に合うよう拡大されなくなります。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "次の画像が表示されるまでの間隔 (秒)"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid "A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero disables the automatic browsing."
 msgstr " 0より大きい値は、次の画像が自動的に表示されるまで画像が画面上に表示される時間 (秒) を指定することになります。 0を指定すると自動閲覧を無効にします。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "ウィンドウにツールバーを表示するかどうか。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "ウィンドウにステータスバーを表示するかどうか。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "画像ギャラリーのペインを表示するかどうか。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 for right."
 msgstr "画像ギャラリーのペインの位置です。指定可能な値: 0 (下側)、1 (左側)、2 (上側)、3 (右側)"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "画像ギャラリーのペインの大きさを変更できるようにするかを指定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "ウィンドウにサイドペインを表示するかどうか。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "画像ギャラリーのペインにスクロールボタンを表示するかどうかを指定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "保存するか確認せずにメインウィンドウを閉じる。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "確認無しで画像を削除する"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid "If activated, Xviewer won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead."
 msgstr "この項目が有効な場合、Xviewer は画像をごみ箱に移動する際に確認をしません。ファイルがごみ箱に移動できない、あるいは削除できない場合には表示します。"
 
 # filechooser -> ファイルの選択画面 とした
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid "Whether the file chooser should show the user's pictures folder if no images are loaded."
 msgstr "画像が読み込まれていない場合、ファイルの選択画面でユーザーの画像フォルダーを表示するかどうか指定します。"
 
 # filechooser -> ファイルの選択画面 とした
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid "If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory."
 msgstr "この項目が有効でアクティブなウィンドウで画像が読み込まれていない場合は、XDG のユーザー固有ディレクトリを使って、ファイルの選択画面でユーザーの画像フォルダーを表示します。無効になっている、あるいは画像フォルダーが設定されていない場合は、現在のディレクトリを表示します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid "Whether the metadata list in the properties dialog should have its own page."
 msgstr "プロパティダイアログ中のメタデータ一覧を個別に表示するかどうかを指定します。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid "If activated, the detailed metadata list in the properties dialog will be moved to its own page in the dialog. This should make the dialog more usable on smaller screens, e.g. as used by netbooks. If disabled, the widget will be embedded on the \"Metadata\" page."
 msgstr "この項目が有効だと、プロパティダイアログ中の詳細なメタデータ一覧が、個別のダイアログで表示されるようになります。これにより、ネットブックなどで使われているような小さなスクリーンで、ダイアログがより使いやすくなります。無効になっている場合は、ウィジェットは \"メタデータ\" ページに埋め込まれます。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "画像を編集するのに使用する外部のプログラム"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid "The desktop file name (including the \".desktop\") of the application to use for editing images (when the \"Edit Image\" toolbar button is clicked). Set to the empty string to disable this feature."
 msgstr "(ツールバー「画像を編集」のボタンがクリックされた時に)画像を編集するのに使うアプリケーションの desktop ファイルの名前 (\".desktop\" を含む)。この機能を無効にするには空文字列を指定してください。"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "利用可能なプラグイン"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid "List of active plugins. It doesn't contain the \"Location\" of the active plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given plugin."
 msgstr "利用可能なプラグイン名の並びです。これらの文字列にはプラグインを格納したフォルダー名は含まれません。詳細は、指定したプラグインの \"フォルダー\" の中にある .xviewer-plugin ファイルを参照してみてください。"
 

@@ -315,7 +315,7 @@ msgid "As custom color:"
 msgstr "ជា​ពណ៌​ផ្ទាល់ខ្លួន ៖"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:3
+#: ../data/org.x.viewer.gschema.xml.in.in.h:3
 msgid "Background Color"
 msgstr "ពណ៌​ផ្ទៃខាងក្រោយ"
 
@@ -372,16 +372,16 @@ msgstr "ការ​បញ្ចាំង​ស្លាយ"
 msgid "Plugins"
 msgstr "កម្មវិធី​ជំនួយ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.in.h:1
 msgid "Automatic orientation"
 msgstr "ទិស​ស្វ័យប្រវត្តិ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "ថា​តើ​គួរតែ​បង្វិល​រូបភាព​ដោយ​ស្វ័យប្រវត្តិ​ដោយ​ផ្អែក​លើ​ទិស EXIF ដែរ​ឬ​ទេ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -390,11 +390,11 @@ msgstr ""
 "ពណ៌​ដែល​ត្រូវ​ប្រើ ដើម្បី​បំពេញ​ផ្ទៃ​នៅ​ពីក្រោយ​រូបភាព ។ ប្រសិនបើ​គ្រាប់ចុច​ប្រើ​ពណ៌​ផ្ទៃខាងក្រោយ​ មិន​ទាន់ត្រូវ​​បាន​"
 "កំណត់ ពណ៌​នឹង​ត្រូវ​បាន​កំណត់​ដោយ​ស្បែក GTK+ សកម្ម​ជំនួស​វិញ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.in.h:5
 msgid "Interpolate Image"
 msgstr "កែខៃ​​រូបភាព"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -402,11 +402,11 @@ msgstr ""
 "ថា​តើ​គួរតែ​កែខៃ​រូបភាព នៅ​ពេល​បង្រួម​ដែរ​ឬ​ទេ ។ វា​នឹង​នាំ​ទៅ​រក​គុណភាព​ដែល​ប្រសើរ ប៉ុន្តែ​ធ្វើឲ្យ​មាន​អ្វី​"
 "ម្យ៉ាង​ដែល​អន់​ជាង​រូបភាព​ដែល​មិនទាន់​បាន​កែខៃ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.in.h:7
 msgid "Extrapolate Image"
 msgstr "កែខៃ​រូបភាព"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -414,11 +414,11 @@ msgstr ""
 "ថា​តើ​គួរតែ​កែខៃ​រូបភាព នៅ​ពេល​ពង្រីក​ដែរ​ឬ​ទេ ។ វា​នាំ​ទៅ​រក​គុណភាព​ព្រិល និង​អ្វី​ម្យ៉ាង​ដែល​មាន​លក្ខណៈ​អន់​ជាង​"
 "រូបភាព​ដែល​មិន​ទាន់​បាន​កែខៃ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.in.h:9
 msgid "Transparency indicator"
 msgstr "ទ្រនិច​បង្ហាញ​ភាព​ថ្លា"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
@@ -427,19 +427,19 @@ msgstr ""
 "កំណត់​របៀប​ដែល​គួរ​បង្ហាញ​ភាព​ថ្លា ។ តម្លៃ​ត្រឹមត្រូវ​គឺ CHECK_PATTERN, COLOR និង NONE ។ ប្រសិនបើ​"
 "តម្លៃ COLOR ត្រូវ​បាន​ជ្រើស ពេល​នោះ​គ្រាប់ចុច​​ពណ៌​ថ្លា​​​នឹង​កំណត់​តម្លៃ​ពណ៌​ត្រូវ​ប្រើ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "ពង្រីក​កង់​រមូរ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "ថា​តើ​គួរតែ​ប្រើ​កង់​រមូរ​សម្រាប់​ការ​ពង្រីក​ដែរ​ឬ​ទេ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.in.h:13
 msgid "Zoom multiplier"
 msgstr "ឧបករណ៍​បង្កើន​ការ​ពង្រីក"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -451,11 +451,11 @@ msgstr ""
 "ត្រូវ​ប្រើ​សម្រាប់​ព្រឹត្តិការណ៍​រមូរ​នីមួយ​ៗ ។ ឧទាហរណ៍ ០.០៥ នាំឲ្យ​មាន​ការ​បង្កើន​ការ​ពង្រីក ៥% សម្រាប់​"
 "ព្រឹត្តិការណ៍​រមូរ​នីមួយ​ៗ និង ១.០០ នាំឲ្យ​មាន​ការ​បង្កើន​ការ​ពង្រីក ១០០% ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.in.h:16
 msgid "Transparency color"
 msgstr "ពណ៌​សម្រាប់​ភាព​ថ្លា"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -463,11 +463,11 @@ msgstr ""
 "ប្រសិនបើគ្រាប់ចុច​​ភាព​ថ្លា​មានតម្លៃ COLOR ពេលនោះ​គ្រាប់ចុច​​នឹង​កំណត់​ពណ៌​ដែល​ត្រូវ​ប្រើ​សម្រាប់​ការ​បង្ហាញ​ភាព​"
 "ថ្លា ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.in.h:18
 msgid "Use a custom background color"
 msgstr "ប្រើ​ពណ៌​ផ្ទៃខាងក្រោយ​ផ្ទាល់ខ្លួន"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -476,31 +476,31 @@ msgstr ""
 "ប្រសិនបើ​វា​សកម្ម ពណ៌​ដែល​បាន​កំណត់​តាម​គ្រាប់ចុច​ពណ៌​ផ្ទៃខាងក្រោយ​នឹង​ត្រូវ​បាន​ប្រើ ដើម្បី​បំពេញ​ផ្ទៃ​នៅ​ខាងក្រោយ​"
 "រូបភាព ។ ប្រសិនបើ​វា​មិន​ទាន់​ត្រូវ​បាន​កំណត់ ស្បែក GTK+ បច្ចុប្បន្ន​នឹង​កំណត់​ពណ៌​បំពេញ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.in.h:20
 msgid "Loop through the image sequence"
 msgstr "បង្វិល​តាម​លំដាប់​រូបភាព"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "ថា​តើ​គួរតែ​បង្ហាញ​លំដាប់​រូបភាព​នៅ​ក្នុង​រង្វិល​ជុំ​ដែល​មិន​ចេះ​ចប់​ដែរ​ឬទេ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "អនុញ្ញាត​ឲ្យ​ពង្រីក​ធំជាង ១០០%"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
 "ប្រសិនបើ​វា​​ត្រូវ​បាន​កំណត់​ទៅ​ជា​មិន​ពិត រូបភាព​តូច​ៗ​នឹង​មិន​ត្រូវ​បាន​ទាញ​ឲ្យ​វែង​ ដើម្បី​ឲ្យ​សម​នឹង​អេក្រង់​ទេ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "ពន្យារពេល​គិតជា​វិនាទី រហូតដល់​បង្ហាញ​រូបភាព​បន្ទាប់"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -508,46 +508,46 @@ msgstr ""
 "តម្លៃ​ធំជាង ០ កំណត់​វិនាទី​ដែល​រូបភាព​បង្ហាញ​នៅ​លើ​អេក្រង់ រហូតដល់​រូបភាព​បន្ទាប់​ត្រូវ​បាន​បង្ហាញ​ដោយ​"
 "ស្វ័យប្រវត្តិ ។ តម្លៃ​សូន្យ​បិទ​ការ​រុករក​ដោយ​ស្វ័យប្រវត្តិ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "បង្ហាញ/លាក់​របារ​ឧបករណ៍​បង្អួច ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "បង្ហាញ/លាក់​របារ​ស្ថានភាព​របស់​បង្អួច ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "បង្ហាញ/លាក់​ស្លាបព្រិល​វិចិត្រសាល​រូបភាព ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
 msgstr ""
 "ទីតាំង​ស្លាបព្រិល​វិចិត្រសាល​រូបភាព ។ កំណត់​ត្រឹម ០ សម្រាប់​ខាងក្រោម ១ ខាងឆ្វេង ២ ខាងលើ ៣ ខាងស្ដាំ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "ថា​តើ​គួរតែ​ប្ដូរ​ទំហំ​ស្លាបព្រិល​វិចិត្រសាល​រូបភាព ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "បង្ហាញ/លាក់​ស្លាបព្រិល​ចំហៀង​របស់​បង្អួច ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "បង្ហាញ/លាក់​ប៊ូតុង​រមូរ​ស្លាបព្រិល​វិចិត្រសាល​រូបភាព ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "បិទ​បង្អួច​មេ​ដោយ​មិន​ស្នើ​ឲ្យ​រក្សាទុក​ការ​ផ្លាស់ប្ដូរ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.in.h:35
 msgid "Trash images without asking"
 msgstr "លុប​រូបភាព​ដោយ​មិន​សួរ"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.in.h:36
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -557,14 +557,14 @@ msgstr ""
 "វា​នឹង​នៅតែ​សួរ ប្រសិនបើ​ជា​មាន​ឯកសារ​ណាមួយ​មិន​អាច​ត្រូវ​បាន​ផ្លាស់ទី​ទៅ​ធុងសំរាម ហើយ​វា​នឹង​ត្រូវ​បាន​លុប​ជំនួស​វិញ "
 "។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
 msgstr ""
 "ថា​តើ​កម្មវិធី​ជ្រើស​ឯកសារ​គួរតែ​បង្ហាញ​ថត​រូបភាព​របស់​អ្នកប្រើ​ដែរ​ឬ​ទេ ប្រសិន​បើ​គ្មាន​រូបភាព​ត្រូវ​បាន​ផ្ទុក ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -575,12 +575,12 @@ msgstr ""
 "ថត​រូបភាព​របស់​អ្នកប្រើ​ដោយ​ប្រើ​ថត​អ្នកប្រើ​ពិសេស​ជា XDG ។ ប្រសិនបើ​ត្រូវ​បាន​បើក​ ឬ​ថត​រូបភាព​មិន​ទាន់​ត្រូវ​"
 "បាន​រៀបចំ វា​នឹង​បង្ហាញ​ថត​ដែល​កំពុង​ដំណើរការ​បច្ចុប្បន្ន ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "ថា​តើ​បញ្ជី​ទិន្នន័យ​មេតា​នៅ​ក្នុង​ប្រអប់​លក្ខណសម្បត្តិ​គួរតែ​មាន​ទំព័រ​ខ្លួន​វា​ផ្ទាល់​ដែរ​ឬ​ទេ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -592,11 +592,11 @@ msgstr ""
 "ត្រូវ​បាន​ប្រើ​ដោយ netbooks ។ ប្រសិនបើ​ត្រូវ​បាន​បិទ ធាតុ​ក្រាហ្វិក​នឹង​ត្រូវ​បាន​បង្កប់​នៅ​លើ​ទំព័រ \"ទិន្នន័យ​"
 "មេតា\" ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.in.h:41
 msgid "External program to use for editing images"
 msgstr "កម្មវិធី​ខាងក្រៅ​ដែល​ត្រូវ​ប្រើ​សម្រាប់​ការ​កែសម្រួល​រូបភាព"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -606,11 +606,11 @@ msgstr ""
 "(នៅពេលប៊ូតុង​របារ​ឧបករណ៍ \"កែសម្រួល​រូបភាព\" ត្រូវ​បាន​ចុច) ។ កំណត់​ទៅជា​ខ្សែ​អក្សរ​ទទេ ដើម្បី​បិទ​លក្ខណ​"
 "ពិសេស​នេះ ។"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.in.h:43
 msgid "Active plugins"
 msgstr "កម្មវិធី​ជំនួយ​សកម្ម"
 
-#: ../data/org.gnome.xviewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "

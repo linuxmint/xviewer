@@ -26,7 +26,7 @@
 #ifndef __XVIEWER_CONFIG_KEYS_H__
 #define __XVIEWER_CONFIG_KEYS_H__
 
-#define XVIEWER_CONF_DOMAIN				"org.gnome.xviewer"
+#define XVIEWER_CONF_DOMAIN				"org.x.viewer"
 #define XVIEWER_CONF_FULLSCREEN			XVIEWER_CONF_DOMAIN".fullscreen"
 #define XVIEWER_CONF_PLUGINS			XVIEWER_CONF_DOMAIN".plugins"
 #define XVIEWER_CONF_UI				XVIEWER_CONF_DOMAIN".ui"
