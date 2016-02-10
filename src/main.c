@@ -53,7 +53,7 @@ _print_version_and_exit (const gchar *option_name,
 			 gpointer data,
 			 GError **error)
 {
-	g_print("%s %s\n", _("GNOME Image Viewer"), VERSION);
+	g_print("Xviewer %s\n", VERSION);
 	exit (EXIT_SUCCESS);
 	return TRUE;
 }
