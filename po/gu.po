@@ -6,38 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=xviewer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-25 20:46+0000\n"
-"PO-Revision-Date: 2012-07-30 11:27+0530\n"
-"Last-Translator: \n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: gu_IN <kde-i18n-doc@kde.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: \n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -79,45 +61,59 @@ msgstr "પસંદિત સાધનપટ્ટી દૂર કરો"
 msgid "Separator"
 msgstr "વિભાજક"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:3734
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
 msgstr "દેખાવ (_V)"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:3760
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
 msgid "_Toolbar"
 msgstr "સાધનદર્શકપટ્ટી (_T)"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:3763
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "સ્થિતિદર્શકપટ્ટી (_S)"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:3766
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "ચિત્ર ગૅલરિ (_I)"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:3769
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "બાજુ તકતી (_P)"
 
 # libgnomeui/gnome-app-helper.c:211
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:3748
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "પસંદગીઓ (_n)"
 
-#: ../data/xviewer-app-menu.xml.h:7 ../src/xviewer-window.c:3737
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "મદદ (_H)"
 
-#: ../data/xviewer-app-menu.xml.h:8
-#| msgid "Image Viewer"
-msgid "_About Image Viewer"
-msgstr "ચિત્ર દર્શક વિશે (_A)"
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "વિશે (_A)"
 
 #: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
 msgstr "બહાર નીકળો (_Q)"
 
-#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-window.c:5709 ../src/main.c:176
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "ચિત્ર દર્શક"
 
@@ -130,7 +126,7 @@ msgstr "ચિત્રો શોધો અને ફેરવો"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "ચિત્ર;સ્લાઇડ શો;ગ્રાફિક;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:4577
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "ચિત્ર ગુણધર્મો"
 
@@ -143,111 +139,117 @@ msgid "_Next"
 msgstr "આગળ (_N)"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../src/xviewer-metadata-sidebar.c:498
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "બંધ કરો (_C)"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
 msgid "Name:"
 msgstr "નામ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:5
-#: ../src/xviewer-metadata-sidebar.c:500
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
 msgid "Width:"
 msgstr "પહોળાઈ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:6
-#: ../src/xviewer-metadata-sidebar.c:502
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
 msgid "Height:"
 msgstr "ઊંચાઈ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:7
-#: ../src/xviewer-metadata-sidebar.c:504
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "પ્રકાર:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
 msgstr "બાઈટો:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-#: ../src/xviewer-metadata-sidebar.c:508
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "ફોલ્ડર:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:496
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "સામાન્ય"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-#: ../src/xviewer-metadata-sidebar.c:528
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "એપર્ચર કિંમત:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:531
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "દેખાડવાનો સમય:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:534
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "ફોકલ લંબાઈ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:536
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "ફ્લેશ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:540
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "ISO ઝડપ ક્રમ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:543
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "મીટર સ્થિતિ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:546
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "કેમેરા મોડેલ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:548
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "તારીખ/સમય:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:553
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "વર્ણન:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:556
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "સ્થાન:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:559
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "મુખ્ય શબ્દો:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:561
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "લેખક:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:564
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "કોપીરાઈટ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:567
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "વિગતો"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:524
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "મેટાડેટા"
 
@@ -255,55 +257,67 @@ msgstr "મેટાડેટા"
 msgid "Save As"
 msgstr "આ રીતે સંગ્રહ કરો"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "રદ કરો (_C)"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> મૂળ ફાઈલનામ"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> ગણક"
 
-# #-#-#-#-#  libgnomeui.HEAD.hi.po (libgnomeui-2.0.hi)  #-#-#-#-#
-# libgnomeui/gnome-file-entry.c:224 libgnomeui/gnome-icon-entry.c:188
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
-msgid "Filename format:"
-msgstr "ફાઈલનામ બંધારણ:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "ફોલ્ડર પસંદ કરો"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
-msgid "Destination folder:"
-msgstr "અંતિમ મુકામ ફોલ્ડર:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "ફાઈલ પથ સ્પષ્ટીકરણો"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
-msgid "Start counter at:"
-msgstr "ગણક અંહિ શરુ કરો:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
-msgid "Replace spaces with underscores"
-msgstr "ખાલી જગ્યાઓને અન્ડરસ્કોરથી બદલો"
-
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "વિકલ્પો"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "આમાંથી નામ બદલો:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "પ્રતિ:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
 msgstr "ફાઈલ નામ પૂર્વદર્શન"
 
@@ -312,155 +326,158 @@ msgstr "ફાઈલ નામ પૂર્વદર્શન"
 msgid "Preferences"
 msgstr "પસંદગીઓ"
 
-#: ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
 msgstr "ચિત્ર ઉન્નતીકરણ"
 
-#: ../data/xviewer-preferences-dialog.ui.h:3
-msgid "Smooth images when zoomed-_out"
-msgstr "જ્યારે ચિત્રો નાનામોટા કરવામાં આવે ત્યારે લીસા બનાવો (_o)"
-
-#: ../data/xviewer-preferences-dialog.ui.h:4
-msgid "Smooth images when zoomed-_in"
-msgstr "જ્યારે ચિત્રો નાનામોટા કરવામાં આવે ત્યારે લીસા બનાવો (_i)"
-
 #: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "આપોઆપ દિશાકરણ (_A)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
 msgstr "પાશ્વભાગ"
 
-#: ../data/xviewer-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "As custom color:"
 msgstr "વૈવિધ્યપૂર્ણ રંગ તરીકે:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.x.viewer.gschema.xml.in.in.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "પાશ્વભાગ રંગ"
 
-#: ../data/xviewer-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
 msgstr "પારદર્શક ભાગો"
 
-#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "ચકાસણી માટેના નમૂના તરીકે (_p)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "વૈવિધ્યપૂર્ણ રંગ તરીકે (_o):"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "પારદર્શક વિસ્તાર માટેનો રંગ"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
 msgstr "પાશ્વ ભાગ તરીકે (_b)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "ચિત્ર દર્શન"
 
-#: ../data/xviewer-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
 msgstr "ચિત્ર નાનુમોટુ કરો"
 
-#: ../data/xviewer-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
 msgstr "ચિત્રોને સ્ક્રીનમાં બંધબેસાડવા માટે વિસ્તૃત કરો (_x)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
 msgstr "ક્રમ"
 
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "ચિત્રો વચ્ચે સમય (_T):"
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "લૂપનો ક્રમ (_L)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
 msgstr "તકતી પ્રદર્શન"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
 msgstr "પ્લગઈનો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "આપોઆપ દિશાકરણ"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:2
-msgid "Whether the image should be rotated automatically based on EXIF orientation."
+#: ../data/org.x.viewer.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "EXIF દિશાના આધારે શું ચિત્ર આપોઆપ ફેરવવામાં આવવું જોઈએ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
-"રંગ કે જે ચિત્ર પાછળનાં વિસ્તારને ભરવા વાપરેલ છે. જો પાશ્વભાગ રંગ માટે વપરાતી કી સુયોજિત "
-"ન હોય તો, તેને બદલે રંગને સક્રિય GTK+ થીમ દ્દારા નક્કી થયેલ હશે."
+"રંગ કે જે ચિત્ર પાછળનાં વિસ્તારને ભરવા વાપરેલ છે. જો પાશ્વભાગ રંગ માટે "
+"વપરાતી કી સુયોજિત ન હોય તો, તેને બદલે રંગને સક્રિય GTK+ થીમ દ્દારા નક્કી "
+"થયેલ હશે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "ચિત્રમાં ભ્રામક ફેરફાર કરો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"ચિત્રને નાનું-મોટું કરતી વખતે ભ્રામક ફેરફાર કરવો જોઇએ કે નહિ. આ સારી ગુણવત્તા આપે છે પરંતુ "
-"અભ્રામક ચિત્રો કરતા થોડી ધીમી છે."
+"ચિત્રને નાનું-મોટું કરતી વખતે ભ્રામક ફેરફાર કરવો જોઇએ કે નહિ. આ સારી "
+"ગુણવત્તા આપે છે પરંતુ અભ્રામક ચિત્રો કરતા થોડી ધીમી છે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "ચિત્રમાં ભ્રામક ફેરફાર કરો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
 msgstr ""
-"ચિત્રને નાનું-મોટું કરતી વખતે ભ્રામક ફેરફાર કરવા કે નહિ. આ સારી ગુણવત્તા આપતુ નથી અને તુ "
-"અભ્રામક ચિત્ર કરતા થોડી ધીમી છે."
+"ચિત્રને નાનું-મોટું કરતી વખતે ભ્રામક ફેરફાર કરવા કે નહિ. આ સારી ગુણવત્તા "
+"આપતુ નથી અને તુ અભ્રામક ચિત્ર કરતા થોડી ધીમી છે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "પારદર્શકતા દર્શક"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
 msgstr ""
-"પારદર્શકતા કઈ રીતે દર્શાવાય છે તે નક્કી કરે છે. યોગ્ય મૂલ્યો CHECK_PATTERN, COLOR અને "
-"NONE છે. જો COLOR પસંદ થયેલ હોય તો, પારદર્શકતા રંગ કી નક્કી કરશે કે કયો રંગ વાપર્યો છે."
+"પારદર્શકતા કઈ રીતે દર્શાવાય છે તે નક્કી કરે છે. યોગ્ય મૂલ્યો CHECK_PATTERN, "
+"COLOR અને NONE છે. જો COLOR પસંદ થયેલ હોય તો, પારદર્શકતા રંગ કી નક્કી કરશે "
+"કે કયો રંગ વાપર્યો છે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "વ્હીલ નાનામોટાપણું સરકાવો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "શું સરક વ્હીલ નાનામોટાપણા માટે વાપરવું જોઈએ કે નહિં."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "ઝુમ ગુણક"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -468,180 +485,185 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
-"જ્યારે માઉસ સરક વ્હીલને નાનામોટાપણા માટે વાપરી રહ્યા હતા ત્યારે શું ગુણક લાગુ પાડવું જોઈએ. "
-"આ કિંમત નાનામોટાપણાંના પગલાંઓ વ્યાખ્યાયિત કરે છે દરેક સરક ઘટના માટે. ઉદાહરણ તરીકે, "
-"0.05 એ 5% નાનામોટાપણાના વધારામાં પરિણમે છે દરેક સરક ઘટના માટે અને 1.00 એ 100% "
-"નાનામોટાપણાના વધારામાં પરિણમે છે."
+"જ્યારે માઉસ સરક વ્હીલને નાનામોટાપણા માટે વાપરી રહ્યા હતા ત્યારે શું ગુણક "
+"લાગુ પાડવું જોઈએ. આ કિંમત નાનામોટાપણાંના પગલાંઓ વ્યાખ્યાયિત કરે છે દરેક સરક "
+"ઘટના માટે. ઉદાહરણ તરીકે, 0.05 એ 5% નાનામોટાપણાના વધારામાં પરિણમે છે દરેક સરક "
+"ઘટના માટે અને 1.00 એ 100% નાનામોટાપણાના વધારામાં પરિણમે છે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "પારદર્શકતા રંગ"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
-"જો પારદર્શકતા કીનું મૂલ્ય રંગ હશે, તો પારદર્શકતા દર્શાવવા કયો રંગ વપરાય છે તે આ કી નક્કી "
-"કરશે."
+"જો પારદર્શકતા કીનું મૂલ્ય રંગ હશે, તો પારદર્શકતા દર્શાવવા કયો રંગ વપરાય છે "
+"તે આ કી નક્કી કરશે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "વૈવિધ્ય પાશ્ર્વભાગ રંગને વાપરો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
-"જો આ સક્રિય હોય તો, પાશ્ર્વભાગ રંગ કી દ્દારા રંગ સુયોજન ચિત્ર પાછળનાં વિસ્તારને ભરવા "
-"વાપરેલ હશે. જો તે સુયોજિત ન હોય તો, વર્તમાન GTK+ થીમ રંગ ભરવા નક્કી કરેલ હશે."
+"જો આ સક્રિય હોય તો, પાશ્ર્વભાગ રંગ કી દ્દારા રંગ સુયોજન ચિત્ર પાછળનાં "
+"વિસ્તારને ભરવા વાપરેલ હશે. જો તે સુયોજિત ન હોય તો, વર્તમાન GTK+ થીમ રંગ ભરવા "
+"નક્કી કરેલ હશે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "ચિત્રના ક્રમ પ્રમાણે પુનરાવર્તન"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "અંતવિહીન પુનરાવર્તનમાં ચિત્રોને ક્રમબદ્ધ રીતે દર્શાવવા કે પછી નહિ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "શરુઆતમાં નાનુમોટુ કરવાનુ પ્રમાણ ૧૦૦% કરતાં વધુ કરવાની પરવાનગી આપો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"જો આ ખોટુ સુયોજિત થયેલ હોય તો નાના ચિત્રો શરુઆતમાં સ્ક્રીનમાં ખેંચીને બેસાડી શકાય એમ નથી."
+"જો આ ખોટુ સુયોજિત થયેલ હોય તો નાના ચિત્રો શરુઆતમાં સ્ક્રીનમાં ખેંચીને બેસાડી "
+"શકાય એમ નથી."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "પછીનું ચિત્ર બતાવવામાં આવે ત્યાં સુધી થતો વિલંબ સેકન્ડોમાં"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
-"૦ કરતાં મોટી કિંમત સ્ક્રીન પર પછીનુ ચિત્ર આવે ત્યાં સુધી ચિત્ર રહે તેટલી સેકન્ડો આપોઆપ રીતે "
-"નક્કી કરે છે. ૦ આપોઆપ શોધવાનું નિષ્ક્રિય કરે છે."
+"૦ કરતાં મોટી કિંમત સ્ક્રીન પર પછીનુ ચિત્ર આવે ત્યાં સુધી ચિત્ર રહે તેટલી "
+"સેકન્ડો આપોઆપ રીતે નક્કી કરે છે. ૦ આપોઆપ શોધવાનું નિષ્ક્રિય કરે છે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "વિન્ડો સાધનપટ્ટીને બતાવો/છુપાડો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "વિન્ડોની સ્થિતિદર્શકપટ્ટીને બતાવો/છુપાડો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "ચિત્ર ગૅલરિ તકતી બતાવો/છુપાવો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
 msgstr ""
-"ચિત્ર સંગ્રહ તકતી સ્થાન. તળિયા માટે 0 ને સુયોજિત કરો; ડાબા માટે 1; ટોચ માટે 2; જમણા "
-"માટે 3."
+"ચિત્ર સંગ્રહ તકતી સ્થાન. તળિયા માટે 0 ને સુયોજિત કરો; ડાબા માટે 1; ટોચ માટે "
+"2; જમણા માટે 3."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "શું ચિત્ર સંગ્રહ તકતીનું માપ બદલી શકાય તેવું હોવું જોઈએ કે નહિં."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "વિન્ડો બાજુ તકતી બતાવો/છુપાડો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "ચિત્ર ગૅલરિ તકતી સરકાવો બટનો બતાવો/છુપાવો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "બદલાવોને સંગ્રહવાનુ પૂછ્યા વગર મુખ્ય વિન્ડોને બંધ કરો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "પૂછ્યા વગર ચિત્રોને કચરાપેટીમાં નાંખો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
 msgstr ""
-"જો સક્રિય થયેલ Xviewer ખાતરી કરવા માટે પૂછતુ ન હોય તો જ્યારે ચિત્રો કચરાપેટીમાં "
-"ખસેડી રહ્યા હોય. તે હજુ પૂછશે જો ફાઇલોનાં કોઇપણ ને કચરાપેટીમાં ખસેડી શકતુ ન હોય તો અને તેને "
-"બદલે નીકાળેલ હોય તો."
+"જો સક્રિય થયેલ Xviewer ખાતરી કરવા માટે પૂછતુ ન હોય તો જ્યારે ચિત્રો "
+"કચરાપેટીમાં ખસેડી રહ્યા હોય. તે હજુ પૂછશે જો ફાઇલોનાં કોઇપણ ને કચરાપેટીમાં "
+"ખસેડી શકતુ ન હોય તો અને તેને બદલે નીકાળેલ હોય તો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
 msgstr ""
-"ક્યાંતો ફાઇલ પસંદકર્તા એ વપરાશકર્તાનાં ચિત્રોનું ફોલ્ડરને બતાવવુ જોઇએ જો ચિત્રો લોડ થયેલ ન "
-"હોય તો."
+"ક્યાંતો ફાઇલ પસંદકર્તા એ વપરાશકર્તાનાં ચિત્રોનું ફોલ્ડરને બતાવવુ જોઇએ જો "
+"ચિત્રો લોડ થયેલ ન હોય તો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
 msgstr ""
-"જો સક્રિય થયેલ હોય તો અને સક્રિય વિન્ડોમાં ચિત્ર લોડ ન થયેલ હોય તો, ફાઇલ પસંદકર્તા એ "
-"XDG વિશિષ્ટ વપરાશકર્તાની ડિરેક્ટરીઓની મદદથી વપરાશકર્તાનાં ચિત્રોનાં ફોલ્ડરને દર્શાવશે. "
-"જો સક્રિય થયેલ ન હોય તો અથવા ચિત્રોનું ફોલ્ડર સુયોજિત કરવામાં આવ્યુ ન હોય તો તે હાલની "
-"કામ કરતી ડિરેક્ટરીને બતાવશે."
+"જો સક્રિય થયેલ હોય તો અને સક્રિય વિન્ડોમાં ચિત્ર લોડ ન થયેલ હોય તો, ફાઇલ "
+"પસંદકર્તા એ XDG વિશિષ્ટ વપરાશકર્તાની ડિરેક્ટરીઓની મદદથી વપરાશકર્તાનાં "
+"ચિત્રોનાં ફોલ્ડરને દર્શાવશે. જો સક્રિય થયેલ ન હોય તો અથવા ચિત્રોનું ફોલ્ડર "
+"સુયોજિત કરવામાં આવ્યુ ન હોય તો તે હાલની કામ કરતી ડિરેક્ટરીને બતાવશે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:39
-msgid "Whether the metadata list in the properties dialog should have its own page."
-msgstr "ક્યાંતો ગુણધર્મો સંવાદ માં મેટાડેટા યાદી એ તેનાં પોતાનું પાનું હોવુ જોઇએ."
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+"ક્યાંતો ગુણધર્મો સંવાદ માં મેટાડેટા યાદી એ તેનાં પોતાનું પાનું હોવુ જોઇએ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
 "on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
 msgstr ""
-"જો ગુણધર્મો સંવાદમાં વિગત થયેલ મેટાડેટાની યાદી સક્રિય થયેલ હોય તો તે સંવાદમાં તેનાં પોતાનાં "
-"પાનાંમાં ખસેડેલ હશે. આ નાનામાં નાની સ્ક્રીનો પર સંવાદ વધારે ઉપયોગી બનવુ જોઇએ, દા.ત. "
-"નેટબુકો દ્દારા વપરાયેલ તરીકે. જો નિષ્ક્રિય થયેલ વિજેટ \"Metadata\" પાનાં પર એમ્બેડેડ થયેલ "
-"હશે."
+"જો ગુણધર્મો સંવાદમાં વિગત થયેલ મેટાડેટાની યાદી સક્રિય થયેલ હોય તો તે "
+"સંવાદમાં તેનાં પોતાનાં પાનાંમાં ખસેડેલ હશે. આ નાનામાં નાની સ્ક્રીનો પર સંવાદ "
+"વધારે ઉપયોગી બનવુ જોઇએ, દા.ત. નેટબુકો દ્દારા વપરાયેલ તરીકે. જો નિષ્ક્રિય "
+"થયેલ વિજેટ \"Metadata\" પાનાં પર એમ્બેડેડ થયેલ હશે."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "ચિત્રોને ફેરફાર કરવા માટે વાપરતા બહારનાં કાર્યક્રમ"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
 "to the empty string to disable this feature."
 msgstr ""
-"ચિત્રોમાં ફેરફાર કરવા માટે વપરાતુ કાર્યક્રમનું ડેસ્કટોપ ફાઇલ નામ (\".desktop\" ને સમાવી "
-"રહ્યા છે) (જ્યારે \"ચિત્રમાં ફેરફાર કરો\" સાધનપટ્ટી બટન ક્લિક થયેલ હોય). આ ગુણધર્મને "
-"નિષ્ક્રિય કરવા માટે ખાલી શબ્દમાળાને સુયોજિત કરો."
+"ચિત્રોમાં ફેરફાર કરવા માટે વપરાતુ કાર્યક્રમનું ડેસ્કટોપ ફાઇલ નામ "
+"(\".desktop\" ને સમાવી રહ્યા છે) (જ્યારે \"ચિત્રમાં ફેરફાર કરો\" સાધનપટ્ટી "
+"બટન ક્લિક થયેલ હોય). આ ગુણધર્મને નિષ્ક્રિય કરવા માટે ખાલી શબ્દમાળાને સુયોજિત "
+"કરો."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "સક્રિય પ્લગઈનો"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
 msgstr ""
-"સક્રિય પ્લગઈનોની યાદી. તે સક્રિય પ્લગઈનોનું \"સ્થાન\" સમાવતું નથી. આપેલ પ્લગઈનનું \"સ્થાન\" "
-"મેળવવા માટે .xviewer-plugin ફાઈલ જુઓ."
+"સક્રિય પ્લગઈનોની યાદી. તે સક્રિય પ્લગઈનોનું \"સ્થાન\" સમાવતું નથી. આપેલ "
+"પ્લગઈનનું \"સ્થાન\" મેળવવા માટે .xviewer-plugin ફાઈલ જુઓ."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -651,12 +673,12 @@ msgstr "બે-ક્લિક સાથે સંપૂર્ણસ્ક્ર
 msgid "Activate fullscreen mode with double-click"
 msgstr "બે-ક્લિક સાથે સંપૂર્ણસ્ક્રીન સ્થિતીને સક્રિય કરો"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:53
+#: ../plugins/reload/xviewer-reload-plugin.c:74
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "ચિત્ર પુન:લોડ કરો"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:55
+#: ../plugins/reload/xviewer-reload-plugin.c:76
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "હાલના ચિત્રને પુન:લોડ કરો"
@@ -669,48 +691,55 @@ msgstr "સ્થિતિદર્શકપટ્ટીમાં તારી�
 msgid "Shows the image date in the window statusbar"
 msgstr "વિન્ડોની સ્થિતિદર્શકપટ્ટીમાં તારીખના ચિત્રને બતાવો"
 
-#: ../src/xviewer-close-confirmation-dialog.c:171
+#: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "સંગ્રહ્યા વગર બંધ કરો (_w)"
 
-#: ../src/xviewer-close-confirmation-dialog.c:217
+# libgnomeui/gnome-app-helper.c:114
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "સંગ્રહ કરો (_S)"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
 msgstr "પ્રશ્ર્ન"
 
-#: ../src/xviewer-close-confirmation-dialog.c:398
+#: ../src/xviewer-close-confirmation-dialog.c:391
 msgid "If you don't save, your changes will be lost."
 msgstr "જો તમે સંગ્રહવા માંગતા ન હોય તો, તમારા બદલાવો ગુમ થઇ જશે."
 
-#: ../src/xviewer-close-confirmation-dialog.c:435
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "બંધ કરતા પહેલાં ચિત્ર \"%s\" નાં બદલાવોને સંગ્રહો?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:642
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
-msgid_plural "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "અસંગ્રહેલ ફેરફારો સાથે %d ચિત્ર છે. બંધ કરતા પહેલાં ફેરફારોને સંગ્રહવા માંગો છો?"
-msgstr[1] "અસંગ્રહેલ ફેરફારો સાથે %d ચિત્રો છે. બંધ કરતા પહેલાં ફેરફારોને સંગ્રહવા માંગો છો?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"અસંગ્રહેલ ફેરફારો સાથે %d ચિત્ર છે. બંધ કરતા પહેલાં ફેરફારોને સંગ્રહવા માંગો "
+"છો?"
+msgstr[1] ""
+"અસંગ્રહેલ ફેરફારો સાથે %d ચિત્રો છે. બંધ કરતા પહેલાં ફેરફારોને સંગ્રહવા "
+"માંગો છો?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:659
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "જે તમે સંગ્રહવા માંગો છો તે ચિત્રોને પસંદ કરો (_e):"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:678
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "જો તમે સંગ્રહવા માંગતા ન હોય તો, બધા તમારા બદલાવો ગુમ થઇ જશે."
 
-#: ../src/xviewer-error-message-area.c:119
-msgid "_Cancel"
-msgstr "રદ કરો (_C)"
-
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:836
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "પુન:લોડ કરો (_R)"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:3781
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "આ રીતે સંગ્રહ કરો (_A)..."
 
@@ -733,68 +762,68 @@ msgstr "'%s' માં કોઈ ચિત્રો મળ્યા નહિં
 msgid "The given locations contain no images."
 msgstr "આપેલ સ્થાનો કોઈ ચિત્રો સમાવતા નથી."
 
-#: ../src/xviewer-exif-details.c:69
+#: ../src/xviewer-metadata-details.c:65
 msgid "Camera"
 msgstr "કેમેરામ"
 
-#: ../src/xviewer-exif-details.c:70
+#: ../src/xviewer-metadata-details.c:66
 msgid "Image Data"
 msgstr "ચિત્ર માહિતી"
 
-#: ../src/xviewer-exif-details.c:71
+#: ../src/xviewer-metadata-details.c:67
 msgid "Image Taking Conditions"
 msgstr "ચિત્ર લેવાની શરતો"
 
-#: ../src/xviewer-exif-details.c:72
+#: ../src/xviewer-metadata-details.c:68
 msgid "GPS Data"
 msgstr "GPS માહિતી"
 
-#: ../src/xviewer-exif-details.c:73
+#: ../src/xviewer-metadata-details.c:69
 msgid "Maker Note"
 msgstr "બનાવનાર નોંધ"
 
-#: ../src/xviewer-exif-details.c:74
+#: ../src/xviewer-metadata-details.c:70
 msgid "Other"
 msgstr "બીજુ"
 
-#: ../src/xviewer-exif-details.c:76
+#: ../src/xviewer-metadata-details.c:72
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/xviewer-exif-details.c:77
+#: ../src/xviewer-metadata-details.c:73
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/xviewer-exif-details.c:78
+#: ../src/xviewer-metadata-details.c:74
 msgid "XMP Rights Management"
 msgstr "XMP હકો વ્યવસ્થાપન"
 
-#: ../src/xviewer-exif-details.c:79
+#: ../src/xviewer-metadata-details.c:75
 msgid "XMP Other"
 msgstr "XMP અન્ય"
 
-#: ../src/xviewer-exif-details.c:253
+#: ../src/xviewer-metadata-details.c:251
 msgid "Tag"
 msgstr "નિશાની"
 
 # src/gconf-editor-window.c:579
-#: ../src/xviewer-exif-details.c:260
+#: ../src/xviewer-metadata-details.c:258
 msgid "Value"
 msgstr "મૂલ્ય"
 
-#: ../src/xviewer-exif-details.c:422
+#: ../src/xviewer-metadata-details.c:436
 msgid "North"
 msgstr "ઉત્તર"
 
-#: ../src/xviewer-exif-details.c:425
+#: ../src/xviewer-metadata-details.c:439
 msgid "East"
 msgstr "પૂર્વ"
 
-#: ../src/xviewer-exif-details.c:428
+#: ../src/xviewer-metadata-details.c:442
 msgid "West"
 msgstr "પશ્ચિમ"
 
-#: ../src/xviewer-exif-details.c:431
+#: ../src/xviewer-metadata-details.c:445
 msgid "South"
 msgstr "દક્ષિણ"
 
@@ -823,115 +852,122 @@ msgstr "%.1f (lens)"
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm film)"
 
-#: ../src/xviewer-file-chooser.c:126
+#: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
 msgstr "ફાઈલ બંધારણ અજ્ઞાત કે બિનઆધારભૂત છે"
 
-#: ../src/xviewer-file-chooser.c:131
+#: ../src/xviewer-file-chooser.c:124
 msgid ""
 "Image Viewer could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
-"ઇમેજ દર્શક ફાઇલનામ પર આધારિત આધારભૂત લખી શકાય તેવી ફાઇલ બંધારણને નક્કી કરી શક્યા નહિં."
+"ઇમેજ દર્શક ફાઇલનામ પર આધારિત આધારભૂત લખી શકાય તેવી ફાઇલ બંધારણને નક્કી કરી "
+"શક્યા નહિં."
 
-#: ../src/xviewer-file-chooser.c:132
+#: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "મહેરબાની કરીને .png અથવા .jpg જેવું અલગ એક્સટેન્સન વાપરી જુઓ."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:167
+#: ../src/xviewer-file-chooser.c:160
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#: ../src/xviewer-file-chooser.c:219
+#: ../src/xviewer-file-chooser.c:212
 msgid "All files"
 msgstr "બધી ફાઈલો"
 
-#: ../src/xviewer-file-chooser.c:224
+#: ../src/xviewer-file-chooser.c:217
 msgid "Supported image files"
 msgstr "આધારભૂત ચિત્ર ફાઇલો"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:296 ../src/xviewer-metadata-sidebar.c:235
-#: ../src/xviewer-metadata-sidebar.c:239 ../src/xviewer-properties-dialog.c:138
-#: ../src/xviewer-properties-dialog.c:140 ../src/xviewer-thumb-view.c:519
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "પિક્સેલ"
 msgstr[1] "પિક્સેલો"
 
-#: ../src/xviewer-file-chooser.c:466
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:459
 msgid "Open Image"
 msgstr "ચિત્ર ખોલો"
 
-#: ../src/xviewer-file-chooser.c:474
+#: ../src/xviewer-file-chooser.c:467
 msgid "Save Image"
 msgstr "ચિત્રનો સંગ્રહ કરો"
 
-#: ../src/xviewer-file-chooser.c:482
+#: ../src/xviewer-file-chooser.c:475
 msgid "Open Folder"
 msgstr "ફોલ્ડર ખોલો"
 
-#: ../src/xviewer-image.c:616
+#: ../src/xviewer-image.c:613
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "નહિં લવાયેલ ઈમેજો પર પરિવહન."
 
-#: ../src/xviewer-image.c:644
+#: ../src/xviewer-image.c:641
 #, c-format
 msgid "Transformation failed."
 msgstr "રૂપાંતરણ નિષ્ફળ."
 
-#: ../src/xviewer-image.c:1105
+#: ../src/xviewer-image.c:1138
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "આ ફાઈલ બંધારણ માટે EXIF આધારભૂત નથી."
 
-#: ../src/xviewer-image.c:1254
+#: ../src/xviewer-image.c:1287
 #, c-format
 msgid "Image loading failed."
 msgstr "ચિત્ર લાવવામાં નિષ્ફળ."
 
-#: ../src/xviewer-image.c:1835 ../src/xviewer-image.c:1955
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
 #, c-format
 msgid "No image loaded."
 msgstr "કોઈ ચિત્ર લાવી શકાયું નહિ."
 
-#: ../src/xviewer-image.c:1843 ../src/xviewer-image.c:1964
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "તમારી પાસે ફાઇલને સંગ્રહવા માટે જરૂરી પરવાનગીઓ નથી."
 
-#: ../src/xviewer-image.c:1853 ../src/xviewer-image.c:1975
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "કામચલાઉ ફાઈલ બનાવવાનું નિષ્ફળ."
 
-#: ../src/xviewer-image-jpeg.c:375
+#: ../src/xviewer-image-jpeg.c:374
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "સંગ્રહવા માટે કામચલાઉ ફાઈલ બનાવી શકાઈ નહિ: %s"
 
-#: ../src/xviewer-image-jpeg.c:394
+#: ../src/xviewer-image-jpeg.c:393
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ફાઈલ લાવવા માટે મેમરી ફાળવી શકાઈ નહિ"
 
-#: ../src/xviewer-metadata-sidebar.c:248 ../src/xviewer-properties-dialog.c:155
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "અજ્ઞાત"
 
-#: ../src/xviewer-metadata-sidebar.c:506
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "File size:"
 msgstr "ફાઇલ માપ:"
 
-#: ../src/xviewer-metadata-sidebar.c:517 ../src/xviewer-properties-dialog.c:674
-#: ../src/xviewer-window.c:3785
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
 msgstr "ફોલ્ડરને બતાવો કે જે ફાઇલ સંચાલકમાં આ ફાઇલને સમાવે છે"
 
-#: ../src/xviewer-preferences-dialog.c:114
+#: ../src/xviewer-preferences-dialog.c:125
 #, c-format
 #| msgctxt "PrefDlgSlideSwitchPostfix"
 #| msgid "seconds"
@@ -944,95 +980,95 @@ msgstr[1] "%lu સેકંડ"
 msgid "Image Settings"
 msgstr "ચિત્ર સુયોજનો"
 
-#: ../src/xviewer-print-image-setup.c:906
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "ચિત્ર"
 
-#: ../src/xviewer-print-image-setup.c:907
+#: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
 msgstr "ચિત્ર કે જેના છાપન ગુણધર્મો સુયોજિત થશે"
 
-#: ../src/xviewer-print-image-setup.c:913
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr "પાનાં સુયોજન"
 
-#: ../src/xviewer-print-image-setup.c:914
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr "પાનાં માટેની જાણકારી કે જ્યાં ચિત્ર છાપવામાં આવશે"
 
-#: ../src/xviewer-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "સ્થાન"
 
-#: ../src/xviewer-print-image-setup.c:946
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "ડાબુ (_L):"
 
-#: ../src/xviewer-print-image-setup.c:948
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "જમણુ (_R):"
 
-#: ../src/xviewer-print-image-setup.c:949
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "ટોચ (_T):"
 
-#: ../src/xviewer-print-image-setup.c:950
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr "તળિયું (_B):"
 
-#: ../src/xviewer-print-image-setup.c:953
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "કેન્દ્ર (_e):"
 
-#: ../src/xviewer-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "કંઈ નહિં"
 
-#: ../src/xviewer-print-image-setup.c:960
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "આડુ"
 
-#: ../src/xviewer-print-image-setup.c:962
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "ઊભું"
 
-#: ../src/xviewer-print-image-setup.c:964
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "બંને"
 
-#: ../src/xviewer-print-image-setup.c:980
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "માપ"
 
-#: ../src/xviewer-print-image-setup.c:983
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "પહોળાઈ (_W):"
 
-#: ../src/xviewer-print-image-setup.c:985
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "ઊંચાઈ (_H):"
 
-#: ../src/xviewer-print-image-setup.c:988
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr "ખેંચવાનું (_S):"
 
-#: ../src/xviewer-print-image-setup.c:999
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr "એકમ (_U):"
 
-#: ../src/xviewer-print-image-setup.c:1004
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr "મીલિમીટરો"
 
-#: ../src/xviewer-print-image-setup.c:1006
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "ઈંચો"
 
-#: ../src/xviewer-print-image-setup.c:1035
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "પૂર્વદર્શન"
 
-#: ../src/xviewer-save-as-dialog-helper.c:161
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "આ રીતે"
 
@@ -1046,16 +1082,16 @@ msgstr "આ રીતે"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/xviewer-statusbar.c:131
+#: ../src/xviewer-statusbar.c:126
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:547
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "પર લેવાયેલ"
 
-#: ../src/xviewer-uri-converter.c:984
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "ઓછામાં ઓછા બે ફાઈલ નામો સરખા છે."
@@ -1074,21 +1110,21 @@ msgstr " (અયોગ્ય યુનિકોડ)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:530
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i પિક્સેલ  %s    %i%%"
 msgstr[1] "%i × %i પિક્સેલો  %s    %i%%"
 
-#: ../src/xviewer-window.c:838 ../src/xviewer-window.c:2729
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "છુપાડો (_d)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:848
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1097,7 +1133,7 @@ msgstr ""
 "ચિત્ર \"%s\" બહારનાં કાર્યક્રમ દ્દારા બદલી દેવામાં આવી છે.\n"
 "શું તમે તેને પુન:લોડ કરવા માંગો છો?"
 
-#: ../src/xviewer-window.c:1012
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "પસંદિત ચિત્ર ખોલવા માટે \"%s\" વાપરો"
@@ -1107,17 +1143,26 @@ msgstr "પસંદિત ચિત્ર ખોલવા માટે \"%s\" �
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1168
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "ચિત્ર \"%s\" (%u/%u) સંગ્રહી રહ્યા છીએ"
 
-#: ../src/xviewer-window.c:1550
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "ચિત્ર \"%s\" ને ખોલી રહ્યા છે"
 
-#: ../src/xviewer-window.c:2213
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1126,27 +1171,27 @@ msgstr ""
 "ફાઈલ છાપવામાં ભૂલ:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2512
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "સાધનપટ્ટી સંપાદક"
 
-#: ../src/xviewer-window.c:2515
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "મૂળભૂતમાં પુનઃસુયોજીત કરો (_R)"
 
-#: ../src/xviewer-window.c:2676 ../src/xviewer-window.c:2691
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "સિસ્ટમ સુયોજનોને શરૂ કરતી વખતે ભૂલ: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2727
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "પાશ્ર્વભાગ પસંદગીઓને ખોલો (_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2743
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1155,11 +1200,63 @@ msgstr ""
 "ચિત્ર \"%s\" એ ડેસ્કટોપ પાશ્ર્વભાગ તરીકે સુયોજિત કરી દેવામાં આવી છે.\n"
 "શું તમે તેના દેખાવને બદલવા માંગો છો?"
 
-#: ../src/xviewer-window.c:3210
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "ચિત્ર ને સ્થાનિક રીતે સંગ્રહ કરી રહ્યા છે..."
 
-#: ../src/xviewer-window.c:3290
+#: ../src/xviewer-window.c:3352
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr ""
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr ""
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr ""
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "ફાઇલ ને કાઢા શકાતી નથી"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "ચિત્ર %s ને કાઢવામાં ભૂલ"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1168,14 +1265,16 @@ msgstr ""
 "શું તમે ખરેખર \"%s\" ને કચરાપેટીમાં ખસેડવા\n"
 "માંગો છો?"
 
-#: ../src/xviewer-window.c:3293
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "\"%s\" માટે કચરાપેટી એ શોધી શકાતી નથી. શું તમે કાયમ માટે આ ચિત્રને દૂર કરવા માંગો છો?"
+msgstr ""
+"\"%s\" માટે કચરાપેટી એ શોધી શકાતી નથી. શું તમે કાયમ માટે આ ચિત્રને દૂર કરવા "
+"માંગો છો?"
 
-#: ../src/xviewer-window.c:3298
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1190,425 +1289,381 @@ msgstr[1] ""
 "શું તમે ખરેખર પસંદ કરેલ %d ચિત્રોને\n"
 "કચરાપેટીમાં ખસેડવા માંગો છો?"
 
-#: ../src/xviewer-window.c:3303
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
-"પસંદ થયેલ કેટલીક ચિત્રો ને કચરાપેટીમાં ખસેડી શકાતી નથી અને કાયમ માટે દૂર કરવી પડશે. શું તમે "
-"ખરેખર તેને આગળ વધારવા માંગો છો?"
+"પસંદ થયેલ કેટલીક ચિત્રો ને કચરાપેટીમાં ખસેડી શકાતી નથી અને કાયમ માટે દૂર "
+"કરવી પડશે. શું તમે ખરેખર તેને આગળ વધારવા માંગો છો?"
 
-#: ../src/xviewer-window.c:3320 ../src/xviewer-window.c:3811 ../src/xviewer-window.c:3835
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "કચરાપેટીમાં ખસેડો (_T)"
 
-#: ../src/xviewer-window.c:3322
-msgid "_Do not ask again during this session"
-msgstr "આ સત્ર દરમ્યાન ફરીથી પૂછો નહિં (_D)"
-
-#: ../src/xviewer-window.c:3367 ../src/xviewer-window.c:3381
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "કચરાપેટીને વાપરી શક્યા નહિં."
 
-#: ../src/xviewer-window.c:3389
-#, c-format
-msgid "Couldn't delete file"
-msgstr "ફાઇલ ને કાઢા શકાતી નથી"
-
-#: ../src/xviewer-window.c:3485
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "ચિત્ર %s ને કાઢવામાં ભૂલ"
-
-#: ../src/xviewer-window.c:3732
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "ચિત્ર (_I)"
 
-#: ../src/xviewer-window.c:3733
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "ફેરફાર (_E)"
 
-#: ../src/xviewer-window.c:3735
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "જાઓ (_G)"
 
-#: ../src/xviewer-window.c:3736
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "સાધનો (_T)"
 
-#: ../src/xviewer-window.c:3739
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "ખોલો (_O)..."
 
-#: ../src/xviewer-window.c:3740
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "ફાઈલને ખોલો"
 
-#: ../src/xviewer-window.c:3742
-msgid "_Close"
-msgstr "બંધ કરો (_C)"
-
-#: ../src/xviewer-window.c:3743
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "વિન્ડો બંધ કરો"
 
-#: ../src/xviewer-window.c:3745
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "સાધનપટ્ટી (_o)"
 
-#: ../src/xviewer-window.c:3746
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "કાર્યક્રમ સાધનપટ્ટીમાં ફેરફાર કરો"
 
-#: ../src/xviewer-window.c:3749
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "ઇમેજ દર્શક માટે પસંદગીઓ"
 
-#: ../src/xviewer-window.c:3751
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "સમાવિષ્ટ ભાગો (_C)"
 
-#: ../src/xviewer-window.c:3752
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "આ કાર્યક્રમ પરની મદદ"
 
-#: ../src/xviewer-window.c:3754
-msgid "_About"
-msgstr "વિશે (_A)"
-
-#: ../src/xviewer-window.c:3755
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "આ કાર્યક્રમ વિશે"
 
-#: ../src/xviewer-window.c:3761
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "વર્તમાન વિન્ડોમાં સાધનપટ્ટીનો દેખાવ બદલો"
 
-#: ../src/xviewer-window.c:3764
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "વર્તમાન વિન્ડોમાં સ્થિતિદર્શક પટ્ટીનો દેખાવ બદલો"
 
-#: ../src/xviewer-window.c:3767
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr "વર્તમાન વિન્ડોમાં ચિત્ર સંગ્રહ તકતીની દૃશ્યતા બદલે છે"
 
-#: ../src/xviewer-window.c:3770
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "વર્તમાન વિન્ડોમાં બાજુ તકતીની દૃશ્યતા બદલે છે"
 
-# libgnomeui/gnome-app-helper.c:114
-#: ../src/xviewer-window.c:3775
-msgid "_Save"
-msgstr "સંગ્રહ કરો (_S)"
-
-#: ../src/xviewer-window.c:3776
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "વર્તમાનમાં પસંદિત ચિત્રોમાં ફેરફારો સંગ્રહો"
 
-#: ../src/xviewer-window.c:3778
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "ની સાથે ખોલો (_w)"
 
-#: ../src/xviewer-window.c:3779
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "પસંદિત ચિત્રને અલગ કાર્યક્રમ સાથે ખોલો"
 
-#: ../src/xviewer-window.c:3782
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "પસંદિત ચિત્રોને અલગ નામ સાથે સંગ્રહો"
 
-#: ../src/xviewer-window.c:3784
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "ફોલ્ડર સમાવેશ બતાવો (_F)"
 
-#: ../src/xviewer-window.c:3787
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "છાપો (_P)..."
 
-#: ../src/xviewer-window.c:3788
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "પસંદિત ચિત્ર છાપો"
 
-#: ../src/xviewer-window.c:3790
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "ગુણધર્મો (_r)"
 
-#: ../src/xviewer-window.c:3791
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "પસંદિત ચિત્રના ગુણધર્મો અને મેટાડેટા બતાવો"
 
-#: ../src/xviewer-window.c:3793
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "છેલ્લી ક્રિયા રદ કરો (_U)"
 
-#: ../src/xviewer-window.c:3794
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "ચિત્રમાં છેલ્લા ફેરફારને રદ કરો"
 
-#: ../src/xviewer-window.c:3796
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "આડુ કરો (_H)"
 
-#: ../src/xviewer-window.c:3797
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "ચિત્રને આડી રીતે મીરર કરો"
 
-#: ../src/xviewer-window.c:3799
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "ઊભુ કરો (_V)"
 
-#: ../src/xviewer-window.c:3800
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "ચિત્રને ઊભી રીતે મીરર કરો"
 
-#: ../src/xviewer-window.c:3802
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "સમઘડી દિશામાં ફેરવો (_R)"
 
-#: ../src/xviewer-window.c:3803
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ચિત્રને ૯૦ ડિગ્રી જમણે ફેરવો"
 
-#: ../src/xviewer-window.c:3805
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "વિષમઘડી દિશામાં ફેરવો (_l)"
 
-#: ../src/xviewer-window.c:3806
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ચિત્રને ૯૦ ડિગ્રી ડાબે ફેરવો"
 
-#: ../src/xviewer-window.c:3808
-msgid "Set as _Desktop Background"
-msgstr "ડેસ્કટોપ પાશ્વ ભાગ તરીકે સુયોજિત કરો (_D)"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3809
-msgid "Set the selected image as the desktop background"
-msgstr "પસંદિત ચિત્રને ડેસ્કટોપ પાશ્ર્વ ભાગ તરીકે સુયોજીત કરો"
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3812
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "પસંદિત ચિત્રને કચરાપેટી ફોલ્ડરમાં ખસેડો"
 
-#: ../src/xviewer-window.c:3814
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "નકલ કરો (_C)"
 
-#: ../src/xviewer-window.c:3815
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "ક્લિપબોર્ડમાં પસંદ થયેલ ચિત્રની નકલ કરો"
 
-#: ../src/xviewer-window.c:3817 ../src/xviewer-window.c:3826 ../src/xviewer-window.c:3829
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "મોટું કરો (_Z)"
 
-#: ../src/xviewer-window.c:3818 ../src/xviewer-window.c:3827
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "ચિત્ર મોટું કરો"
 
-#: ../src/xviewer-window.c:3820 ../src/xviewer-window.c:3832
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "નાનું કરો (_O)"
 
-#: ../src/xviewer-window.c:3821 ../src/xviewer-window.c:3830 ../src/xviewer-window.c:3833
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "ચિત્રને સંકોચો"
 
-#: ../src/xviewer-window.c:3823
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "સામાન્ય માપ (_N)"
 
-#: ../src/xviewer-window.c:3824
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "ચિત્રને તેના સામાન્ય માપ પ્રમાણે બતાવો"
 
-#: ../src/xviewer-window.c:3841
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "પૂર્ણ સ્ક્રીન (_F)"
 
-#: ../src/xviewer-window.c:3842
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "વર્તમાન ચિત્રને પૂર્ણસ્ક્રીન સ્થિતિમાં બતાવો"
 
-#: ../src/xviewer-window.c:3844
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "તકતીપૂર્વદર્શન ને અટકાવો"
 
-#: ../src/xviewer-window.c:3845
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "તકતીપૂર્વદર્શનને અટકાવો અથવા પુન:શરૂ કરો"
 
-#: ../src/xviewer-window.c:3847
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "શ્રેષ્ઠ રીતે બેસતુ (_B)"
 
-#: ../src/xviewer-window.c:3848
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "ચિત્રને વિન્ડોમાં બેસાડો"
 
-#: ../src/xviewer-window.c:3853 ../src/xviewer-window.c:3868
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "પહેલાંનું ચિત્ર (_P)"
 
-#: ../src/xviewer-window.c:3854
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "ગૅલરિની પહેલાંની ચિત્રમાં જાઓ"
 
-#: ../src/xviewer-window.c:3856
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "આગળનું ચિત્ર (_N)"
 
-#: ../src/xviewer-window.c:3857
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "ગૅલરિની આગળની ચિત્રમાં જાઓ"
 
-#: ../src/xviewer-window.c:3859 ../src/xviewer-window.c:3871
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "પ્રથમ ચિત્ર (_F)"
 
-#: ../src/xviewer-window.c:3860
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "ગૅલરિની પહેલી ચિત્રમાં જાઓ"
 
-#: ../src/xviewer-window.c:3862 ../src/xviewer-window.c:3874
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "છેલ્લું ચિત્ર (_L)"
 
-#: ../src/xviewer-window.c:3863
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "ગૅલરિની અંતિમ ચિત્રમાં જાઓ"
 
-#: ../src/xviewer-window.c:3865
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "અસ્તવ્યસ્ત ચિત્ર (_R)"
 
-#: ../src/xviewer-window.c:3866
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "ગૅલરિની ગમે તે ચિત્રમાં જાઓ"
 
-#: ../src/xviewer-window.c:3880
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "તકતી પ્રદર્શન (_l)"
 
-#: ../src/xviewer-window.c:3881
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "ચિત્રોના તકતીપૂર્વદર્શનનો દેખાવ શરૂ કરો"
 
-#: ../src/xviewer-window.c:3949
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "પાછળ"
 
-#: ../src/xviewer-window.c:3953
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "આગળ"
 
-#: ../src/xviewer-window.c:3957
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "જમણું"
 
-#: ../src/xviewer-window.c:3960
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "ડાબે"
 
-#: ../src/xviewer-window.c:3963
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "ફોલ્ડર બતાવો"
 
-#: ../src/xviewer-window.c:3966
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "અંદર"
 
-#: ../src/xviewer-window.c:3969
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "બહાર"
 
-#: ../src/xviewer-window.c:3972
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "સામાન્ય"
 
-#: ../src/xviewer-window.c:3975
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "બંધબેસતું"
 
-#: ../src/xviewer-window.c:3978
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "ગૅલરિ"
 
-#: ../src/xviewer-window.c:3995
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "કચરાપેટી"
 
-#: ../src/xviewer-window.c:4361
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "%s મદદથી હાલની ચિત્રમાં ફેરફાર કરો"
 
-#: ../src/xviewer-window.c:4363
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "ચિત્રમાં ફેરફાર કરો"
 
-#: ../src/xviewer-window.c:5712
-msgid "The GNOME image viewer."
-msgstr "જીનોમ ચિત્ર દર્શક."
-
-#: ../src/xviewer-window.c:5715
-msgid "translator-credits"
-msgstr "અંકિત પટેલ <ankit644@yahoo.com>, શ્ર્વેતા કોઠારી <swkothar@redhat.com>"
-
-#: ../src/main.c:71
-msgid "GNOME Image Viewer"
-msgstr "GNOME ઇમેજ દર્શક"
-
-#: ../src/main.c:78
+#: ../src/main.c:63
 msgid "Open in fullscreen mode"
 msgstr "આખી સ્ક્રીન સ્થિતિમાં ખોલો"
 
-#: ../src/main.c:79
+#: ../src/main.c:64
 msgid "Disable image gallery"
 msgstr "ચિત્ર ગૅલરિને નિષ્ક્રિય કરો"
 
-#: ../src/main.c:80
+#: ../src/main.c:65
 msgid "Open in slideshow mode"
 msgstr "તકતીપૂર્વદર્શન સ્થિતિમાં ખોલો"
 
-#: ../src/main.c:81
+#: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "વર્તમાન ઘટના પુન:વાપરવાને બદલે નવી ઘટનાને શરૂ કરો"
 
-#: ../src/main.c:82
-msgid "Open in a single window, if multiple windows are open the first one is used"
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
 msgstr "એક વિન્ડોમાં ખોલો, જો પ્રથમ એક વપરાય છે ઘણી વિન્ડો ખુલ્લી હોય છે"
 
-#: ../src/main.c:84
+#: ../src/main.c:69
 msgid "Show the application's version"
 msgstr "કાર્યક્રમની આવૃત્તિને બતાવો"
 
-#: ../src/main.c:116
+#: ../src/main.c:99
 msgid "[FILE…]"
 msgstr "[FILE…]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:129
+#: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "ઉપલ્બધ આદેશ વાક્ય વિકલ્પોની સંપૂર્ણ યાદીને જોવા માટે '%s --help' ને ચલાવો."
-
-#~ msgctxt "PrefDlgSlideSwitchPrefix"
-#~ msgid "_Switch image after:"
-#~ msgstr "આના પછી ચિત્ર બદલો (_S):"
-
-#~ msgid "Xviewer Preferences"
-#~ msgstr "Xviewer ની પસંદગીઓ"
-
-#~ msgid "Running in fullscreen mode"
-#~ msgstr "આખી સ્ક્રીન સ્થિતિમાં ચલાવી રહ્યા છીએ"
-
-#~ msgid "_Retry"
-#~ msgstr "પુનઃપ્રયાસ (_R)"
-
-#~ msgid "Xviewer"
-#~ msgstr "Xviewer"
-
-#~ msgid "_Slideshow"
-#~ msgstr "તકતી પ્રદર્શન (_S)"
+msgstr ""
+"ઉપલ્બધ આદેશ વાક્ય વિકલ્પોની સંપૂર્ણ યાદીને જોવા માટે '%s --help' ને ચલાવો."

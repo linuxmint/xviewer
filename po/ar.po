@@ -12,18 +12,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer.HEAD.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-06 15:52+0200\n"
-"PO-Revision-Date: 2014-02-06 15:52+0200\n"
-"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
-"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.7.1-rc1\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
+"3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Project-Style: gnome\n"
+"Language: ar\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -65,36 +66,36 @@ msgstr "احذف شريط الأدوات المحدد"
 msgid "Separator"
 msgstr "فاصل"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4036
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
 msgstr "_عرض"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4062
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
 msgid "_Toolbar"
 msgstr "شريط الأ_دوات"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4065
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "شريط ال_حالة"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4068
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "معرض ال_صور"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4071
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "ال_لوحة الجانبية"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4050
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "التّف_ضيلات"
 
-#: ../data/xviewer-app-menu.xml.h:7 ../src/xviewer-window.c:2565
-#: ../src/xviewer-window.c:4039
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4056
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
 msgid "_About"
 msgstr "_عنْ"
 
@@ -104,21 +105,19 @@ msgstr "أ_نهِ"
 
 #: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
-"Xviewer is the official image viewer for the GNOME desktop. It "
-"integrates with the GTK+ look and feel of GNOME, and supports many image "
-"formats for viewing single images or images in a collection."
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
 msgstr ""
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
-"Xviewer also allows to view the images in a fullscreen slideshow "
-"mode or set an image as the desktop wallpaper. It reads the camera tags to "
-"automatically rotate your images in the correct portrait or landscape "
-"orientation."
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
 msgstr ""
 
-#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:269
-#: ../src/xviewer-window.c:6161
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "عارض الصّور"
 
@@ -131,7 +130,7 @@ msgstr "تصفح و أدر الصور"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "صورة;رسوميات;عرض شرائح;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5037
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "خصائص الصورة"
 
@@ -144,111 +143,117 @@ msgid "_Next"
 msgstr "ال_تّالي"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../src/xviewer-metadata-sidebar.c:495
-msgid "Name:"
-msgstr "الاسم:"
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "أ_غلق"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:5
 #: ../src/xviewer-metadata-sidebar.c:497
-msgid "Width:"
-msgstr "العرض:"
+msgid "Name:"
+msgstr "الاسم:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:6
 #: ../src/xviewer-metadata-sidebar.c:499
-msgid "Height:"
-msgstr "الارتفاع:"
+msgid "Width:"
+msgstr "العرض:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:7
 #: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "الارتفاع:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "النوع:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
 msgstr "بايتات:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-#: ../src/xviewer-metadata-sidebar.c:505
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "المجلد:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:493
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "عامّ"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-#: ../src/xviewer-metadata-sidebar.c:530
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "قيمة الفتحة:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:533
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "زمن التعرض:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:536
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "البعد البؤري:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:538
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "فلاش:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:542
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "ترتيب ISO للسرعة:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:545
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "نمط القياس:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:548
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "طراز الكاميرا:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:550
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "التّاريخ والوقت:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:555
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "الوصف:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:558
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "المكان:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:561
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "الكلمات الأساسية:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:563
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "المؤلف:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:566
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "حقوق النشر:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:569
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "التفاصيل"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:526
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "البيانات الإضافية"
 
@@ -256,53 +261,67 @@ msgstr "البيانات الإضافية"
 msgid "Save As"
 msgstr "احفظ باسم"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "أ_لغِ"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "احفظ با_سم"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "‏<b>‪%f‬‏:</b> اسم الملف الأصلي"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "‏<b>‪%n‬‏:</b> عدّاد"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "_Filename format:"
 msgstr "صيغة ا_سم الملف:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "_Destination folder:"
 msgstr "المجلد المق_صد:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "اختر مجلّدًا"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "مواصفات مسارات الملفّات"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 msgid "_Start counter at:"
 msgstr "ابدأ ال_عدّاد عند:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "_Replace spaces with underscores"
 msgstr "اس_تبدل الفراغات بشرطة تحتية"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "الخيارات"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "غيّر الاسم من:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "إلى:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
 msgstr "معاينة أسماء الملفّات"
 
@@ -310,85 +329,85 @@ msgstr "معاينة أسماء الملفّات"
 msgid "Preferences"
 msgstr "التّفضيلات"
 
-#: ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
 msgstr "تحسينات الصور"
 
-#: ../data/xviewer-preferences-dialog.ui.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:5
 msgid "Smooth images when zoomed _out"
 msgstr "اجعل الصور ناعمة عند _تبعيدها"
 
-#: ../data/xviewer-preferences-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:6
 msgid "Smooth images when zoomed _in"
 msgstr "اجعل الصور ناعمة عند _تقريبها"
 
-#: ../data/xviewer-preferences-dialog.ui.h:5
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "_توجه تلقائي"
 
-#: ../data/xviewer-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
 msgstr "خلفية"
 
-#: ../data/xviewer-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "As custom color:"
 msgstr "كلون مخصص:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:8
+#: ../data/xviewer-preferences-dialog.ui.h:10
 #: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "لون الخلفية"
 
-#: ../data/xviewer-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
 msgstr "الأجزاء الشّفافة"
 
-#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "ك_نمط التماس"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "ك_لون مخصص:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "لون المساحات الشفّافة"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
 msgstr "ك_خلفية"
 
-#: ../data/xviewer-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "عرض الصورة"
 
-#: ../data/xviewer-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
 msgstr "تقريب الصّورة"
 
-#: ../data/xviewer-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
 msgstr "وس_ع الصور لتلائم الشاشة"
 
-#: ../data/xviewer-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
 msgstr "متتالية"
 
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "ال_مدة بين الصور:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "متتالية _حلقيّة"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
 msgstr "عرض شرائح"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
 msgstr "ملحقات"
 
@@ -442,8 +461,8 @@ msgid ""
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
 msgstr ""
-"يحدد كيفيّة الإشارة للشّفافيّة. القيم الممكنة هي CHECK_PATTERN و COLOR و NONE. "
-"إن اختيرت القيمة COLOR فسيحدد مفتاح trans_color قيمة اللّون المستخدم."
+"يحدد كيفيّة الإشارة للشّفافيّة. القيم الممكنة هي CHECK_PATTERN و COLOR و "
+"NONE. إن اختيرت القيمة COLOR فسيحدد مفتاح trans_color قيمة اللّون المستخدم."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
@@ -478,8 +497,8 @@ msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
-"إذا كان لمفتاح الشّفافيّة القيمة COLOR، فسيحدد هذا المفتاح اللّون الذي سيستخدم "
-"للإشارة إلى الشّفافيّة."
+"إذا كان لمفتاح الشّفافيّة القيمة COLOR، فسيحدد هذا المفتاح اللّون الذي "
+"سيستخدم للإشارة إلى الشّفافيّة."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
@@ -510,7 +529,8 @@ msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"إذا عيّن هذا على أنّه \"خطأ\" فلن تمدّد الصّور الصّغيرة مبدئيًّا لملائمة الشّاشة."
+"إذا عيّن هذا على أنّه \"خطأ\" فلن تمدّد الصّور الصّغيرة مبدئيًّا لملائمة "
+"الشّاشة."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
@@ -521,8 +541,8 @@ msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
-"أي قيمة أكبر من 0 تحدّد الثّواني الذي تبقاها صورةٌ على الشّاشة حتّى عرض الصّورة "
-"التّالية تلقائيًّا. الصّفر يلغى التّصفح التّلقائي."
+"أي قيمة أكبر من 0 تحدّد الثّواني الذي تبقاها صورةٌ على الشّاشة حتّى عرض "
+"الصّورة التّالية تلقائيًّا. الصّفر يلغى التّصفح التّلقائي."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
@@ -565,18 +585,19 @@ msgstr "أرسل الصور إلى المهملات دون سؤال"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
 msgstr ""
-"إذا فُعّل فلن تسأل «عين جنوم» تأكيد نقل الصور إلى المهملات. لكن ستظل تسأل إذا "
-"تعذّر نقل أي ملف إلى المهملات وكان سيُحذف بدلا من هذا."
+"إذا فُعّل فلن تسأل «عين جنوم» تأكيد نقل الصور إلى المهملات. لكن ستظل تسأل "
+"إذا تعذّر نقل أي ملف إلى المهملات وكان سيُحذف بدلا من هذا."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
-msgstr "ما إذا كان مخير الملفات سيعرض مجلد صور المستخدم إذا لم تُحمّل أي صور."
+msgstr ""
+"ما إذا كان مخير الملفات سيعرض مجلد صور المستخدم إذا لم تُحمّل أي صور."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
@@ -623,8 +644,8 @@ msgstr "الملحقات النشِطة"
 #: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
 msgstr ""
 "قائمة الملحقات النشطة. لا تحتوي على قيمة \"المكان\" للملحقات النشطة. انظر "
 "ملف .xviewer-plugin لتحصل على \"مكان\" أي ملحق."
@@ -659,21 +680,10 @@ msgstr "أظهرالتاريخ في شريط حالة النّافذة"
 msgid "Close _without Saving"
 msgstr "أغلق _دون حفظ"
 
-#: ../src/xviewer-close-confirmation-dialog.c:172
-#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
-#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3365 ../src/xviewer-window.c:3368 ../src/xviewer-window.c:3619
-msgid "_Cancel"
-msgstr "أ_لغِ"
-
-#: ../src/xviewer-close-confirmation-dialog.c:178 ../src/xviewer-file-chooser.c:465
-#: ../src/xviewer-window.c:4077
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
 msgid "_Save"
 msgstr "ا_حفظ"
-
-#: ../src/xviewer-close-confirmation-dialog.c:184
-msgid "Save _As"
-msgstr "احفظ با_سم"
 
 #: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
@@ -683,12 +693,12 @@ msgstr "سؤال"
 msgid "If you don't save, your changes will be lost."
 msgstr "إذا لم تحفظ ستضيع جميع التغييرات."
 
-#: ../src/xviewer-close-confirmation-dialog.c:428
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "أأحفظ التغييرات على الصورة \"%s\" قبل الإغلاق؟"
 
-#: ../src/xviewer-close-confirmation-dialog.c:635
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -696,17 +706,21 @@ msgid_plural ""
 msgstr[0] "لا صور تحتوي تغييراتٍ غير محفوظة."
 msgstr[1] ""
 "هناك صورة واحدة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
-msgstr[2] "هناك صورتين تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
-msgstr[3] "هناك %d صور تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
-msgstr[4] "هناك %d صورة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
-msgstr[5] "هناك %d صورة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
+msgstr[2] ""
+"هناك صورتين تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
+msgstr[3] ""
+"هناك %d صور تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
+msgstr[4] ""
+"هناك %d صورة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
+msgstr[5] ""
+"هناك %d صورة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
 
-#: ../src/xviewer-close-confirmation-dialog.c:652
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "ا_ختر الصور التي تريد حفظها:"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:671
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "إذا لم تحفظ ستضيع جميع التغييرات."
 
@@ -714,7 +728,7 @@ msgstr "إذا لم تحفظ ستضيع جميع التغييرات."
 msgid "_Reload"
 msgstr "أ_عد التحميل"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4083
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "احفظ با_سم…"
 
@@ -737,67 +751,67 @@ msgstr "لا توجد صور في '%s'."
 msgid "The given locations contain no images."
 msgstr "الأمكنة المعطاة لا تحتوي على أية صور."
 
-#: ../src/xviewer-metadata-details.c:64
+#: ../src/xviewer-metadata-details.c:65
 msgid "Camera"
 msgstr "كاميرا"
 
-#: ../src/xviewer-metadata-details.c:65
+#: ../src/xviewer-metadata-details.c:66
 msgid "Image Data"
 msgstr "بيانات الصّورة"
 
-#: ../src/xviewer-metadata-details.c:66
+#: ../src/xviewer-metadata-details.c:67
 msgid "Image Taking Conditions"
 msgstr "ظروف أخذ الصّورة"
 
-#: ../src/xviewer-metadata-details.c:67
+#: ../src/xviewer-metadata-details.c:68
 msgid "GPS Data"
 msgstr "بيانات GPS"
 
-#: ../src/xviewer-metadata-details.c:68
+#: ../src/xviewer-metadata-details.c:69
 msgid "Maker Note"
 msgstr "ملحوظة الصانع"
 
-#: ../src/xviewer-metadata-details.c:69
+#: ../src/xviewer-metadata-details.c:70
 msgid "Other"
 msgstr "أخرى"
 
-#: ../src/xviewer-metadata-details.c:71
+#: ../src/xviewer-metadata-details.c:72
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/xviewer-metadata-details.c:72
+#: ../src/xviewer-metadata-details.c:73
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/xviewer-metadata-details.c:73
+#: ../src/xviewer-metadata-details.c:74
 msgid "XMP Rights Management"
 msgstr "إدارة حقوق XMP"
 
-#: ../src/xviewer-metadata-details.c:74
+#: ../src/xviewer-metadata-details.c:75
 msgid "XMP Other"
 msgstr "‏XMP أخرى"
 
-#: ../src/xviewer-metadata-details.c:250
+#: ../src/xviewer-metadata-details.c:251
 msgid "Tag"
 msgstr "وسم"
 
-#: ../src/xviewer-metadata-details.c:257
+#: ../src/xviewer-metadata-details.c:258
 msgid "Value"
 msgstr "القيمة"
 
-#: ../src/xviewer-metadata-details.c:417
+#: ../src/xviewer-metadata-details.c:436
 msgid "North"
 msgstr "شمال"
 
-#: ../src/xviewer-metadata-details.c:420
+#: ../src/xviewer-metadata-details.c:439
 msgid "East"
 msgstr "شرق"
 
-#: ../src/xviewer-metadata-details.c:423
+#: ../src/xviewer-metadata-details.c:442
 msgid "West"
 msgstr "غرب"
 
-#: ../src/xviewer-metadata-details.c:426
+#: ../src/xviewer-metadata-details.c:445
 msgid "South"
 msgstr "جنوب"
 
@@ -834,7 +848,8 @@ msgstr "نمط الملف مجهول أو غير مدعوم"
 msgid ""
 "Image Viewer could not determine a supported writable file format based on "
 "the filename."
-msgstr "لم يتمكن عارض الصور من تعيين نمط صور مدعوم قابل للكتابة من اسم الملف."
+msgstr ""
+"لم يتمكن عارض الصور من تعيين نمط صور مدعوم قابل للكتابة من اسم الملف."
 
 #: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
@@ -855,9 +870,10 @@ msgid "Supported image files"
 msgstr "ملفات الصور المدعومة"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:232
-#: ../src/xviewer-metadata-sidebar.c:236 ../src/xviewer-properties-dialog.c:135
-#: ../src/xviewer-properties-dialog.c:137 ../src/xviewer-thumb-view.c:515
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "بكسل"
@@ -893,27 +909,27 @@ msgstr "التحويل عند رفع صورة."
 msgid "Transformation failed."
 msgstr "فشل التحويل."
 
-#: ../src/xviewer-image.c:1110
+#: ../src/xviewer-image.c:1138
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "إكسيف (EXIF) غير مدعوم لهذا النسق من الملفّات."
 
-#: ../src/xviewer-image.c:1259
+#: ../src/xviewer-image.c:1287
 #, c-format
 msgid "Image loading failed."
 msgstr "فشل تحميل الصورة."
 
-#: ../src/xviewer-image.c:1840 ../src/xviewer-image.c:1960
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
 #, c-format
 msgid "No image loaded."
 msgstr "لم تحمّل صورة."
 
-#: ../src/xviewer-image.c:1848 ../src/xviewer-image.c:1969
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "لا تملك التصاريح الكافية لحفظ الملف."
 
-#: ../src/xviewer-image.c:1858 ../src/xviewer-image.c:1980
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "فشل إنشاء الملف المؤقّت."
@@ -928,20 +944,21 @@ msgstr "تعذّر إنشاء ملف مؤقّت لحفظ: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "تعذّر تخصيص ذاكرة لتحميل ملف JPEG"
 
-#: ../src/xviewer-metadata-sidebar.c:245 ../src/xviewer-properties-dialog.c:152
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "مجهول"
 
-#: ../src/xviewer-metadata-sidebar.c:503
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "File size:"
 msgstr "حجم الملف:"
 
-#: ../src/xviewer-metadata-sidebar.c:519 ../src/xviewer-properties-dialog.c:669
-#: ../src/xviewer-window.c:4087
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
 msgstr "اعرض المجلّد الذي يحوي هذا الملف في مدير الملفات"
 
-#: ../src/xviewer-preferences-dialog.c:109
+#: ../src/xviewer-preferences-dialog.c:125
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -956,91 +973,91 @@ msgstr[5] "%lu ثانية"
 msgid "Image Settings"
 msgstr "إعدادات الصورة"
 
-#: ../src/xviewer-print-image-setup.c:902
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "صورة"
 
-#: ../src/xviewer-print-image-setup.c:903
+#: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
 msgstr "الصورّة التي ستعد خصائص طباعتها"
 
-#: ../src/xviewer-print-image-setup.c:909
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr "إعداد الصفحة"
 
-#: ../src/xviewer-print-image-setup.c:910
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr "معلومات الصفحة حيث ستطبع الصورة"
 
-#: ../src/xviewer-print-image-setup.c:936
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "الموضع"
 
-#: ../src/xviewer-print-image-setup.c:940
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "_يسار:"
 
-#: ../src/xviewer-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "ي_مين:"
 
-#: ../src/xviewer-print-image-setup.c:943
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "أ_على:"
 
-#: ../src/xviewer-print-image-setup.c:944
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr "أ_سفل:"
 
-#: ../src/xviewer-print-image-setup.c:947
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "_مركز:"
 
-#: ../src/xviewer-print-image-setup.c:952
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "لا شيء"
 
-#: ../src/xviewer-print-image-setup.c:954
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "أفقيا"
 
-#: ../src/xviewer-print-image-setup.c:956
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "رأسيا"
 
-#: ../src/xviewer-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "كلاهما"
 
-#: ../src/xviewer-print-image-setup.c:974
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "المقاس"
 
-#: ../src/xviewer-print-image-setup.c:977
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "ال_عرض:"
 
-#: ../src/xviewer-print-image-setup.c:979
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "الا_رتفاع:"
 
-#: ../src/xviewer-print-image-setup.c:982
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr "ال_تحجيم:"
 
-#: ../src/xviewer-print-image-setup.c:993
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr "ال_وحدة:"
 
-#: ../src/xviewer-print-image-setup.c:998
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr "ملي مترات"
 
-#: ../src/xviewer-print-image-setup.c:1000
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "بوصات"
 
-#: ../src/xviewer-print-image-setup.c:1029
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "مُعاينة"
 
@@ -1063,11 +1080,11 @@ msgstr "كما هي"
 msgid "%d / %d"
 msgstr "‏%Id ‏\\ %Id"
 
-#: ../src/xviewer-thumb-view.c:543
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "أخذت على"
 
-#: ../src/xviewer-uri-converter.c:980
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "على الأقل هناك ملفان باسم واحد."
@@ -1097,7 +1114,7 @@ msgstr[3] "‏%i × %i بكسل  %s    %i%%"
 msgstr[4] "‏%i × %i بكسل  %s    %i%%"
 msgstr[5] "‏%i × %i بكسل  %s    %i%%"
 
-#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2784
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "أ_خفِ"
@@ -1159,23 +1176,19 @@ msgstr "محرر شريط الأدوات"
 msgid "_Reset to Default"
 msgstr "أ_عد الضبط للمبدئي"
 
-#: ../src/xviewer-window.c:2563 ../src/xviewer-window.c:4044
-msgid "_Close"
-msgstr "أ_غلق"
-
-#: ../src/xviewer-window.c:2731 ../src/xviewer-window.c:2746
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "حدث عطل أثناء بدء تفضيلات النظام: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2782
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "افتح تف_ضيلات الخلفية"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2798
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1184,11 +1197,11 @@ msgstr ""
 "لقد جعلت الصورة \"%s\" خلفية سطح المكتب.\n"
 "أتريد تغيير مظهرها؟"
 
-#: ../src/xviewer-window.c:3263
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "يحفظ الصورة محليا…"
 
-#: ../src/xviewer-window.c:3341
+#: ../src/xviewer-window.c:3352
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1197,7 +1210,7 @@ msgstr ""
 "أتريد فعلًا حذف الصورة \"%s\"\n"
 "نهائيًا؟"
 
-#: ../src/xviewer-window.c:3344
+#: ../src/xviewer-window.c:3355
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1224,41 +1237,41 @@ msgstr[5] ""
 "هل تريد فعلًا حذف %d صور\n"
 "محددة نهائيًا؟"
 
-#: ../src/xviewer-window.c:3366 ../src/xviewer-window.c:3630
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
 msgid "_Delete"
 msgstr "ا_حذف"
 
-#: ../src/xviewer-window.c:3369 ../src/xviewer-window.c:3632
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
 msgid "_Yes"
 msgstr "_نعم"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3373 ../src/xviewer-window.c:3624
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
 msgid "Do _not ask again during this session"
 msgstr "لا _تسأل ثانيا خلال هذه الجلسة"
 
-#: ../src/xviewer-window.c:3417
+#: ../src/xviewer-window.c:3428
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "تعذر جلب ملف الصورة"
 
-#: ../src/xviewer-window.c:3433
+#: ../src/xviewer-window.c:3444
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "تعذر جلب معلومات ملف الصورة"
 
-#: ../src/xviewer-window.c:3449 ../src/xviewer-window.c:3691
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
 #, c-format
 msgid "Couldn't delete file"
 msgstr "تعذر حذف الملف"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3499 ../src/xviewer-window.c:3787
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "خطأ أثناء حذف الصّورة %s"
 
-#: ../src/xviewer-window.c:3592
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1267,14 +1280,14 @@ msgstr ""
 "أتريد فعلًا نقل الصورة \"%s\"\n"
 "إلى المهملات؟"
 
-#: ../src/xviewer-window.c:3595
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "تعذّر العثور على مهملات ل\"%s\". أتريد إزالة هذه الصورة بشكل دائم؟"
 
-#: ../src/xviewer-window.c:3600
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1301,7 +1314,7 @@ msgstr[5] ""
 "هل تريد فعلًا نقل %d صور\n"
 "محددة إلى المهملات؟"
 
-#: ../src/xviewer-window.c:3605
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1309,352 +1322,340 @@ msgstr ""
 "بعض الصورة المختارة لا يمكن نقلها إلى المهملات وستحذف بشكل دائم. أمتأكد أنك "
 "تريد المتابعة؟"
 
-#: ../src/xviewer-window.c:3622 ../src/xviewer-window.c:4113 ../src/xviewer-window.c:4140
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "انقل إلى ال_مهملات"
 
-#: ../src/xviewer-window.c:3669 ../src/xviewer-window.c:3683
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "تعذّر الوصول إلى المهملات."
 
-#: ../src/xviewer-window.c:4034
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_صورة"
 
-#: ../src/xviewer-window.c:4035
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "_تحرير"
 
-#: ../src/xviewer-window.c:4037
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "ا_ذهب"
 
-#: ../src/xviewer-window.c:4038
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "أد_وات"
 
-#: ../src/xviewer-window.c:4041
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "ا_فتح…"
 
-#: ../src/xviewer-window.c:4042
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "افتح ملف"
 
-#: ../src/xviewer-window.c:4045
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "أغلق النّافذة"
 
-#: ../src/xviewer-window.c:4047
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "ش_ريط الأدوات"
 
-#: ../src/xviewer-window.c:4048
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "حرّر شريط الأدوات"
 
-#: ../src/xviewer-window.c:4051
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "تفضيلات عارض الصور"
 
-#: ../src/xviewer-window.c:4053
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "ال_محتويات"
 
-#: ../src/xviewer-window.c:4054
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "مساعدة حول هذا التّطبيق"
 
-#: ../src/xviewer-window.c:4057
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "عنْ هذا التّطبيق"
 
-#: ../src/xviewer-window.c:4063
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "تُغَيّر رؤية شريط الأدوات في النافذة الحالية"
 
-#: ../src/xviewer-window.c:4066
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "تُغَيّر رؤية شريط الحالة في النافذة الحالية"
 
-#: ../src/xviewer-window.c:4069
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr "تغيير رؤية لوح معرض الصور في النافذة الحالية"
 
-#: ../src/xviewer-window.c:4072
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "تغيير رؤية اللوح الجانبي في النافذة الحالية"
 
-#: ../src/xviewer-window.c:4078
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "احفظ التغييرات في الصور المحددة"
 
-#: ../src/xviewer-window.c:4080
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "افتح بـا_ستخدام"
 
-#: ../src/xviewer-window.c:4081
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "افتح الصورة المحددة بتطبيق آخر"
 
-#: ../src/xviewer-window.c:4084
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "احفظ الصورة المحددة باسم آخر"
 
-#: ../src/xviewer-window.c:4086
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "اعرض الم_جلّد الذي يحوي الملف"
 
-#: ../src/xviewer-window.c:4089
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "ا_طبع…"
 
-#: ../src/xviewer-window.c:4090
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "اطبع الصورة المحددة"
 
-#: ../src/xviewer-window.c:4092
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "خ_صائص"
 
-#: ../src/xviewer-window.c:4093
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "اعرض خصائص وبيانات الصورة المحددة"
 
-#: ../src/xviewer-window.c:4095
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_تراجع"
 
-#: ../src/xviewer-window.c:4096
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "تراجع عن آخر تغيير في الصورة"
 
-#: ../src/xviewer-window.c:4098
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "اقلب أ_فقيا"
 
-#: ../src/xviewer-window.c:4099
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "اعكس الصورة أفقيا"
 
-#: ../src/xviewer-window.c:4101
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "اقلب _رأسيا"
 
-#: ../src/xviewer-window.c:4102
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "اعكس الصورة رأسيا"
 
-#: ../src/xviewer-window.c:4104
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "ا_ستدر مع عقارب الساعة"
 
-#: ../src/xviewer-window.c:4105
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "أدِر الصورة 90 درجة لليمين"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "استدر _عكس عقارب الساعة"
 
-#: ../src/xviewer-window.c:4108
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "أدِر الصورة 90 درجة لليسار"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4121
 msgid "Set as Wa_llpaper"
 msgstr "اجعلها ال_خلفية"
 
-#: ../src/xviewer-window.c:4111
+#: ../src/xviewer-window.c:4122
 msgid "Set the selected image as the wallpaper"
 msgstr "اجعل الصورة المختارة الخلفية"
 
-#: ../src/xviewer-window.c:4114
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "انقل الصورة المحددة إلى مجلد المهملات"
 
-#: ../src/xviewer-window.c:4116
+#: ../src/xviewer-window.c:4127
 msgid "_Delete Image"
 msgstr "ا_حذف الصورة"
 
-#: ../src/xviewer-window.c:4117
+#: ../src/xviewer-window.c:4128
 msgid "Delete the selected image"
 msgstr "احذف الصورة المحددة"
 
-#: ../src/xviewer-window.c:4119
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "ا_نسخ"
 
-#: ../src/xviewer-window.c:4120
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "انسخ الصورة المحددة إلى الحافظة"
 
-#: ../src/xviewer-window.c:4122 ../src/xviewer-window.c:4131 ../src/xviewer-window.c:4134
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_قرّب"
 
-#: ../src/xviewer-window.c:4123 ../src/xviewer-window.c:4132
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "كبّر الصورة"
 
-#: ../src/xviewer-window.c:4125 ../src/xviewer-window.c:4137
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "_بعّد"
 
-#: ../src/xviewer-window.c:4126 ../src/xviewer-window.c:4135 ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "صغّر الصورة"
 
-#: ../src/xviewer-window.c:4128
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "حجم _عادي"
 
-#: ../src/xviewer-window.c:4129
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "اعرض الصورة في حجمها العادي"
 
-#: ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "_ملء الشّاشة"
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "اعرض الصورة الحالية في نمط ملء الشاشة"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "ألبث شرائح"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "ألبث أو استأنف عرض الشرائح"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "أفضل م_لاءمة"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "لائم الصورة مع النافذة"
 
-#: ../src/xviewer-window.c:4158 ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "الصّ_ورة السّابقة"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "اذهب للصّورة السّابقة في المعرض"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "الصّورة ال_تّالية"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "اذهب للصورة التالية في المعرض"
 
-#: ../src/xviewer-window.c:4164 ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "الصّورة ال_أولى"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "اذهب للصورة الأولى في المعرض"
 
-#: ../src/xviewer-window.c:4167 ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "الصّورة الأ_خيرة"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "اذهب للصورة الأخيرة في المعرض"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "صورة _عشوائية"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "اذهب لصورة عشوائية في المعرض"
 
-#: ../src/xviewer-window.c:4329
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "عرض _شرائح"
 
-#: ../src/xviewer-window.c:4330
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "ابدأ عرض شرائح للصور"
 
-#: ../src/xviewer-window.c:4402
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "السّابقة"
 
-#: ../src/xviewer-window.c:4407
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "التّالية"
 
-#: ../src/xviewer-window.c:4414
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "اليمين"
 
-#: ../src/xviewer-window.c:4417
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "اليسار"
 
-#: ../src/xviewer-window.c:4420
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "اعرض المجلّد"
 
-#: ../src/xviewer-window.c:4423
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "داخل"
 
-#: ../src/xviewer-window.c:4426
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "خارج"
 
-#: ../src/xviewer-window.c:4429
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "عادي"
 
-#: ../src/xviewer-window.c:4432
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "ملائمة"
 
-#: ../src/xviewer-window.c:4435
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "معرض"
 
-#: ../src/xviewer-window.c:4452
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "المهملات"
 
-#: ../src/xviewer-window.c:4818
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "حرر الصورة الحالية باستخدام %s"
 
-#: ../src/xviewer-window.c:4820
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "حرّر الصّورة"
-
-#: ../src/xviewer-window.c:6164
-msgid "The GNOME image viewer."
-msgstr "عارِض صور جنوم."
-
-#: ../src/xviewer-window.c:6167
-msgid "translator-credits"
-msgstr ""
-"فريق عربآيز للترجمة http://www.arabeyes.org:\n"
-"عرفات المديني <lumina@silverpen.de>\n"
-"عبدالعزيز العرفج <alarfaj0@yahoo.com>\n"
-"خالد حسني <khaledhosny@eglug.org>"
-
-#: ../src/main.c:56
-msgid "GNOME Image Viewer"
-msgstr "عارض صور جنوم"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
@@ -1690,153 +1691,3 @@ msgstr "[ملف…]"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "نفّذ '%s --help' لرؤية قائمة كاملة بخيارات سطر الأوامر المتوفرة."
-
-#~ msgid "_About Image Viewer"
-#~ msgstr "_عن عارض الصّور"
-
-#~ msgid "Set as _Desktop Background"
-#~ msgstr "اضبط كخلفية _سطح المكتب"
-
-#~ msgctxt "PrefDlgSlideSwitchPrefix"
-#~ msgid "_Switch image after:"
-#~ msgstr "_بدّل الصورة بعد:"
-
-#~ msgid "Xviewer Preferences"
-#~ msgstr "تفضيلات عين جنوم"
-
-#~ msgid "Running in fullscreen mode"
-#~ msgstr "شغل في نمط ملء الشاشة"
-
-#~ msgid "_Retry"
-#~ msgstr "أ_عد المحاولة"
-
-#~ msgid "Xviewer"
-#~ msgstr "عين جنوم"
-
-#~ msgid "_Slideshow"
-#~ msgstr "عرض _شرائح"
-
-#~ msgid "Error launching appearance preferences dialog: "
-#~ msgstr "حدث عطل أثناء بدء حوار تفضيلات المظهر:"
-
-#~ msgid "All Images"
-#~ msgstr "كل الصّور"
-
-#~ msgid "Plugin"
-#~ msgstr "ملحق"
-
-#~ msgid "Enabled"
-#~ msgstr "مفعّل"
-
-#~ msgid "C_onfigure"
-#~ msgstr "ا_ضبط"
-
-#~ msgid "A_ctivate"
-#~ msgstr "ن_شّط"
-
-#~ msgid "Ac_tivate All"
-#~ msgstr "ن_شّط الكل"
-
-#~ msgid "_Deactivate All"
-#~ msgstr "أ_خمِد الكل"
-
-#~ msgid "Active _Plugins:"
-#~ msgstr "الملحقات النشِ_طة:"
-
-#~ msgid "_About Plugin"
-#~ msgstr "_عنْ الملحق"
-
-#~ msgid "C_onfigure Plugin"
-#~ msgstr "ا_ضبط الملحق"
-
-#~ msgid ""
-#~ "This program is free software; you can redistribute it and/or modify it "
-#~ "under the terms of the GNU General Public License as published by the "
-#~ "Free Software Foundation; either version 2 of the License, or (at your "
-#~ "option) any later version.\n"
-#~ msgstr ""
-#~ "هذا البرنامج حر؛ بامكانك إعادة توزيعه و/أو تعديله تحت شروط الرخصة "
-#~ "العمومية العامة لجنو والتي نشرتها منظمة البرمجيات الحرة؛ سواء الإصدارة 2 "
-#~ "من الرخصة أو أي إصدارة بعدها حسب رغبتك.\n"
-
-#~ msgid ""
-#~ "This program is distributed in the hope that it will be useful, but "
-#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
-#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-#~ "Public License for more details.\n"
-#~ msgstr ""
-#~ "يوزّع هذا البرنامج على أمل أن يكون مفيدًا لمن يستخدمه دون أدنى مسؤولية؛ ولا "
-#~ "حتى أي ضمان يضمن صلاحية العرض في السوق أو توافقه مع أي استخدام محدد. "
-#~ "يمكنك مراجعة الرخصة العمومية العامة لجنو لمزيد من التفاصيل.\n"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program; if not, write to the Free Software Foundation, Inc., "
-#~ "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-#~ msgstr ""
-#~ "من المفترض أن تكون قد استلمت نسخة من رخصة جنو العامة مع البرنامج؛ في حال "
-#~ "عدم استلامك لذلك، يمكنك مكاتبة:\n"
-#~ "Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA "
-#~ "02111-1307, USA."
-
-#~ msgid "Collection"
-#~ msgstr "مجموعة"
-
-#~ msgid "Load Image"
-#~ msgstr "حمّل الصّورة"
-
-#~ msgid "_File"
-#~ msgstr "_ملف"
-
-#~ msgid "Set up the page properties for printing"
-#~ msgstr "اضبط خصائص الصفحة للطباعة"
-
-#~ msgid "<b>Details</b>"
-#~ msgstr "<b>تفاصيل</b>"
-
-#~ msgid "<b>Height:</b>"
-#~ msgstr "<b>الارتفاع:</b>"
-
-#~ msgid "<b>Name:</b>"
-#~ msgstr "<b>الاسم:</b>"
-
-#~ msgid "<b>Type:</b>"
-#~ msgstr "<b>النّوع:</b>"
-
-#~ msgid "<b>Width:</b>"
-#~ msgstr "<b>العرض:</b>"
-
-#~ msgid "Save _As..."
-#~ msgstr "احفظ _كـ..."
-
-#~ msgid "Open with \"%s\""
-#~ msgstr "افتح بـ \"%s\""
-
-#~ msgid "Dialogs"
-#~ msgstr "الحوارات"
-
-#~ msgid "File Open Dialog"
-#~ msgstr "حوار فتح ملف"
-
-#~ msgid "Image Properties Dialog"
-#~ msgstr "حوار خصائص الصورة"
-
-#~ msgid "Initially _display pictures folder if no image is loaded"
-#~ msgstr "مبدئيا، اعرض مجلد الصور إذا لم تحمل أي صورة"
-
-#~ msgid "_Use layout for small screens"
-#~ msgstr "استخدم _نسقا للشاشات الصغيرة"
-
-#~ msgid "Move to Trash"
-#~ msgstr "انقل إلى المهملات"
-
-#~ msgid "Only local images can be used as wallpapers"
-#~ msgstr "الصور المحلية فقط يمكن استخدامها كخلفيات"
-
-#~ msgid ""
-#~ "To be able to set this image as your wallpaper, please save it locally in "
-#~ "your computer"
-#~ msgstr "لتستطيع ضبط هذه الصورة كخلفية لك، رجاءً احفظها محليا في حاسوبك"
-
-#~ msgid "Page Set_up..."
-#~ msgstr "إ_عداد الصفحة..."

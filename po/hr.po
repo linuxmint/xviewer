@@ -5,18 +5,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-07 22:44+0200\n"
-"PO-Revision-Date: 2008-05-27 18:54+0000\n"
-"Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
-"net>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-10 21:54+0000\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2008-05-28 00:41+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -25,400 +24,459 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:919
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
-msgstr ""
+msgstr "Prikaži \"_%s\""
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1382
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
-msgstr ""
+msgstr "_Premjesti na alatnu traku"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1383
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
-msgstr ""
+msgstr "Premjesti odabranu stavku na alatnu traku"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1384
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
-msgstr ""
+msgstr "_Ukloni s alatne trake"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1385
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
-msgstr ""
+msgstr "Ukloni odabranu stavku s alatne trake"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1386
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
-msgstr ""
+msgstr "_Obriši alatnu traku"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1387
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
-msgstr ""
+msgstr "Ukloni odabranu alatnu traku"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
+msgstr "Razdjelnik"
+
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Pogled"
+
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_Alatna traka"
+
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "_Statusna traka"
+
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr "_Galerija slika"
+
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr "_Bočni panel"
+
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "Osobit_osti"
+
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_O programu"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "_Zatvori"
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
 msgstr ""
+"Xviewer je preglednik slika koji podržava mnoge formate. Može se koristiti "
+"za pregledavanje pojedinih slika ili kolekcije."
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:111
-msgid "Running in fullscreen mode"
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
 msgstr ""
+"Xviewer vam omogućuje pregled slika u načinu rada cjelozaslonske "
+"prezentacije ili postavljanje slike kao pozadine radne površine. Čita oznake "
+"kamere kako bi automatski zakrenuo vaše slike u ispravanu položenu ili "
+"uspravnu orijentaciju."
 
-#: ../plugins/fullscreen/fullscreen.xviewer-plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr ""
-
-#: ../plugins/fullscreen/fullscreen.xviewer-plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr ""
-
-#: ../plugins/reload/reload.xviewer-plugin.desktop.in.h:1
-#: ../plugins/reload/xviewer-reload-plugin.c:38
-#, fuzzy
-msgid "Reload Image"
-msgstr "Učitavanje slike"
-
-#: ../plugins/reload/reload.xviewer-plugin.desktop.in.h:2
-#: ../plugins/reload/xviewer-reload-plugin.c:40
-msgid "Reload current image"
-msgstr ""
-
-#: ../plugins/statusbar-date/statusbar-date.xviewer-plugin.desktop.in.h:1
-#, fuzzy
-msgid "Date in statusbar"
-msgstr "Prikaži/sakrij statusnu traku prozora."
-
-#: ../plugins/statusbar-date/statusbar-date.xviewer-plugin.desktop.in.h:2
-#, fuzzy
-msgid "Shows the image date in the window statusbar"
-msgstr "Prikaži/sakrij statusnu traku prozora."
-
-#: ../data/xviewer.desktop.in.in.h:1
-msgid "Browse and rotate images"
-msgstr ""
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
+msgid "Image Viewer"
+msgstr "Preglednik slika"
 
 #: ../data/xviewer.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "Image Viewer"
+msgid "Browse and rotate images"
+msgstr "Pretražite i zakrenite slike"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:1
-msgid "<b>Aperture Value:</b>"
-msgstr ""
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "Slika;Prezentacija;Grafika;"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:2
-msgid "<b>Author:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:3
-msgid "<b>Bytes:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:4
-msgid "<b>Camera Model:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:5
-msgid "<b>Copyright:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:6
-msgid "<b>Date/Time:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:7
-msgid "<b>Description:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:8
-msgid "<b>Details</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:9
-msgid "<b>Exposure Time:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:10
-msgid "<b>Flash:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:11
-msgid "<b>Focal Length:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:12
-msgid "<b>Height:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:13
-msgid "<b>ISO Speed Rating:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:14
-msgid "<b>Keywords:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:15
-msgid "<b>Location:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:16
-msgid "<b>Metering Mode:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:17
-msgid "<b>Name:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:18
-msgid "<b>Type:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:19
-msgid "<b>Width:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:20
-msgid "General"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:21
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
-msgstr ""
+msgstr "Svojstva slike"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:22
-msgid "Metadata"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:23
-msgid "_Next"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:24
+#: ../data/xviewer-image-properties-dialog.ui.h:2
 msgid "_Previous"
-msgstr ""
+msgstr "_Prijašnje"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:1
-msgid "<b>File Name Preview</b>"
-msgstr "<B>Pregled imena datoteke</B>"
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_Sljedeće"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:2
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Specifikacija putanje datoteke</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "_Zatvori"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:3
-msgid "<b>Options</b>"
-msgstr "<b>Postavke</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr "Naziv:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:5
-#, no-c-format
-msgid "<small><i><b>%f:</b> original filename</i></small>"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr "Širina:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:7
-#, no-c-format
-msgid "<small><i><b>%n:</b> counter</i></small>"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "Visina:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:8
-msgid "Choose a folder"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr "Vrsta:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:9
-msgid "Destination folder:"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "Bajtovi:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:10
-msgid "Filename format:"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr "Mapa:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:11
-msgid "Rename from:"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "Općenito"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:12
-msgid "Replace spaces with underscores"
-msgstr ""
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr "Vrijednost promjera leće:"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:13
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr "Vrijeme ekspozicije:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr "Žarišna duljina:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr "Bljeskalica:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr "Ocjena ISO brzine:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr "Način mjerenja:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr "Model kamere:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr "Datum/Vrijeme:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr "Opis:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr "Lokacija:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr "Ključne riječi:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr "Autor:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr "Autorsko pravo:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr "Pojedinosti"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr "Metapodaci"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
-msgstr "Spremi _kao..."
+msgstr "Spremi kao"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:14
-msgid "Start counter at:"
-msgstr "Postavi brojač na:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "_Odustani"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "Spremi _kao"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> izvorni naziv datoteke"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> brojač"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr "_Format naziva datoteke:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr "_Odredišna mapa:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "Odaberi mapu"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr "Specifikacije putanje datoteke"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr "_Počni brojanje od:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr "_Zamijeni razmake s podcrtama"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr "Mogućnosti"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr "Preimenuj iz:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "Do:"
 
-#: ../data/xviewer-preferences-dialog.glade.h:1
-msgid "<b>Image Enhancements</b>"
-msgstr ""
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "Pregled naziva datoteke"
 
-#: ../data/xviewer-preferences-dialog.glade.h:2
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Povećanje/umanjenje slike</b>"
+#: ../data/xviewer-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Osobitosti"
 
-#: ../data/xviewer-preferences-dialog.glade.h:3
-msgid "<b>Sequence</b>"
-msgstr "<b>Sekvenca</b>"
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr "Poboljšanja slike"
 
-#: ../data/xviewer-preferences-dialog.glade.h:4
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Prozirni dijelovi</b>"
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr "Ugladi sliku kada se _umanjuje"
 
-#: ../data/xviewer-preferences-dialog.glade.h:5
-msgid "As _background"
-msgstr "_Kao pozadina"
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr "Ugladi sliku kada se _uvećava"
 
-#: ../data/xviewer-preferences-dialog.glade.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:7
+msgid "_Automatic orientation"
+msgstr "_Automatska orijentacija"
+
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "Pozadina"
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr "Kao prilagođena boja:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Boja pozadine"
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr "Prozirni dijelovi"
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "Kao uzorak za _provjeru"
 
-#: ../data/xviewer-preferences-dialog.glade.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "Kao prilagođena _boja:"
 
-#: ../data/xviewer-preferences-dialog.glade.h:8
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
-msgstr "Boja i prozirna područja"
+msgstr "Boja za prozirna područja"
 
-#: ../data/xviewer-preferences-dialog.glade.h:9
-msgid "E_xpand images to fit screen"
-msgstr ""
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "_Kao pozadina"
 
-#: ../data/xviewer-preferences-dialog.glade.h:10
-msgid "Xviewer Preferences"
-msgstr "Xviewer postavke"
-
-#: ../data/xviewer-preferences-dialog.glade.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "Prikaz slike"
 
-#: ../data/xviewer-preferences-dialog.glade.h:12
-msgid "Plugins"
-msgstr ""
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "Uvećanje slike"
 
-#: ../data/xviewer-preferences-dialog.glade.h:13
-msgid "Slideshow"
-msgstr ""
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "P_roširi sliku da pristaje na zaslon"
 
-#: ../data/xviewer-preferences-dialog.glade.h:14
-msgid "Smooth images when _zoomed"
-msgstr ""
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "Redoslijed"
 
-#: ../data/xviewer-preferences-dialog.glade.h:15
-msgid "_Automatic orientation"
-msgstr ""
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr "_Vrijeme između slika:"
 
-#: ../data/xviewer-preferences-dialog.glade.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
-msgstr "_Sekvenca petlje"
+msgstr "_Slijed ponavljanja"
 
-#: ../data/xviewer-preferences-dialog.glade.h:17
-msgid "_Switch image after:"
-msgstr "_Zamijeni sliku nakon:"
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Prezentacija"
 
-#: ../data/xviewer-preferences-dialog.glade.h:18
-msgid "seconds"
-msgstr "proizvod loše kvalitete"
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Priključci"
 
-#: ../data/xviewer.schemas.in.h:1
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Vrijednost veća od 0 određuje koliko sekundi se slika prikazuje na zaslonu "
-"prije nego se automatski pojavi slijedeća. Nula isključuje automatsko "
-"pregledavanje."
-
-#: ../data/xviewer.schemas.in.h:2
-msgid "Active plugins"
-msgstr ""
-
-#: ../data/xviewer.schemas.in.h:4
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Omogući uvećanje veće od početnih 100%"
-
-#: ../data/xviewer.schemas.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
+msgstr "Automatska orijentacija"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "Treba li se slika automatski zakretati na temelju EXIF orijentacije."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
 msgstr ""
+"Boja korištena za ispunu područja iza slike. Ako ključ koristi-pozadinsku-"
+"boju nije postavljen, boju će odrediti trenutna GTK+ tema."
 
-#: ../data/xviewer.schemas.in.h:6
-msgid "Delay in seconds until showing the next image"
-msgstr "Kašnjenje u sekundama prije prikazivanja sljedeće slike"
+#: ../data/org.x.viewer.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Interpoliraj sliku"
 
-#: ../data/xviewer.schemas.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Treba li slika biti interpolirana na smanjenju. Ovo vodi prema boljoj "
+"kvaliteti, ali je nešto sporije nego neinterpolirane slike."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Ekstrapoliraj sliku"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Treba li slika biti ekstrapolirana pri uvećanju. Ovo vodi do mutnije "
+"kvalitete i ponešto je sporije od neekstrapolirane slike."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Pokazatelj prozirnosti"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"Određuje kako se pokazuje prozirnost. Ispravne vrijednosti suCHECK_PATTERN, "
-"COLOR i NONE. Ako je odabrana COLOR, tada trans_color ključodređuje "
-"vrijednost korištene boje."
+"Određuje kako bi prozirnost trebala biti naznačena. Važeće vrijednosti su "
+"KOCKASTI_UZORAK, BOJA i NIŠTA. Ako je odabrana BOJA, ključ trans-boja "
+"određuje korištenu boju."
 
-#: ../data/xviewer.schemas.in.h:8
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"Ako je vrijednost ključa prozirnosti COLOR, tada ovaj ključ određuje boju "
-"koja se koristi za naznačivanje prozirnosti."
-
-#: ../data/xviewer.schemas.in.h:9
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Ako je ovo isključno male slike neće biti rastegnute na najveću moguću "
-"veličinu zaslona."
-
-#: ../data/xviewer.schemas.in.h:10
-msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
-msgstr ""
-
-#: ../data/xviewer.schemas.in.h:11
-msgid "Interpolate Image"
-msgstr "Interpolacija slike"
-
-#: ../data/xviewer.schemas.in.h:12
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
-msgstr ""
-
-#: ../data/xviewer.schemas.in.h:13
-msgid "Loop through the image sequence"
-msgstr "Petlja kroz niz slika"
-
-#: ../data/xviewer.schemas.in.h:14
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
-msgstr ""
+msgstr "Uvećanje kotačićem miša"
 
-#: ../data/xviewer.schemas.in.h:15
-msgid "Show/hide the image collection pane scroll buttons."
-msgstr ""
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "Treba li se kotačić koristiti za povećavanje/smanjivanje."
 
-#: ../data/xviewer.schemas.in.h:16
-msgid "Show/hide the image collection pane."
-msgstr "Prikaži/sakrij informacije okna slike."
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Faktor uvećanja/smanjenja"
 
-#: ../data/xviewer.schemas.in.h:17
-msgid "Show/hide the window side pane."
-msgstr ""
-
-#: ../data/xviewer.schemas.in.h:18
-msgid "Show/hide the window statusbar."
-msgstr "Prikaži/sakrij statusnu traku prozora."
-
-#: ../data/xviewer.schemas.in.h:19
-msgid "Show/hide the window toolbar."
-msgstr "Prikaži/sakrij statusnu alatnu traku."
-
-#: ../data/xviewer.schemas.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -426,427 +484,805 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
+"Faktor uvećavanja/smanjenja za korištenje kotačića na mišu. Ova vrijednost "
+"određuje korak uvećanja za svako pomicanje kotačića miša. Npr. 0.05 daje "
+"pomake od 5% za svaki pokret kotačića, a 1.00 za 100%"
 
-#: ../data/xviewer.schemas.in.h:22
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Boja prozirnosti"
 
-#: ../data/xviewer.schemas.in.h:23
-msgid "Transparency indicator"
-msgstr "Naznačivanje prozirnosti"
-
-#: ../data/xviewer.schemas.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Da li niz slika treba biti prikazan u beskonačnoj petlji."
-
-#: ../data/xviewer.schemas.in.h:25
-msgid "Whether the image collection pane should be resizable or not."
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
 msgstr ""
+"Ako je vrijednost ključa prozirnosti COLOR, tada ovaj ključ određuje boju "
+"koja se koristi za naznačivanje prozirnosti."
 
-#: ../data/xviewer.schemas.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "Koristi prilagođenu boju pozadine"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
 msgstr ""
-"Treba li slika biti interpolirana prilikom uvećanja/umanjenja ili ne. To "
-"vodi prema boljoj kvaliteti, ali je nešto sporije od neinterpoliranih slika."
+"Ako je ovo aktivno, boja podešena ključem pozadinska-boja bit će ispuniti "
+"područje iza slike. Ako nije postavljeno, trenutna GTK+ tema će odrediti "
+"boju ispune."
 
-#: ../data/xviewer.schemas.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Ponovi slijed slika od početka."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "Treba li slijed slika biti prikazan kao beskonačno ponavljanje."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Omogući uvećanje veće od početnih 100%"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
 msgstr ""
+"Ako je ovo isključno male slike neće biti rastegnute na najveću moguću "
+"veličinu zaslona."
 
-#: ../data/xviewer.schemas.in.h:28
-msgid "Whether the scroll wheel should be used for zooming or not."
-msgstr ""
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Kašnjenje u sekundama prije prikazivanja sljedeće slike"
 
-#: ../data/xviewer.schemas.in.h:29
-msgid "Zoom multiplier"
-msgstr ""
-
-#: ../src/xviewer-file-chooser.c:125
-msgid "File format is unknown or unsupported"
-msgstr ""
-
-#: ../src/xviewer-file-chooser.c:130
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
-"Xviewer could not determine a supported writable file format based on "
-"the filename."
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
+"Vrijednost veća od 0 određuje koliko sekundi se slika prikazuje na zaslonu "
+"prije nego se automatski pojavi sljedeća. Nula onemogućuje automatsko "
+"pregledavanje."
 
-#: ../src/xviewer-file-chooser.c:131
-msgid "Please try a different file extension like .png or .jpg."
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Prikaži/Sakrij alatnu traku prozora."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Pokaži/Sakrij statusnu traku prozora."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "Prikaži/Sakrij traku galerije slika"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
 msgstr ""
+"Položaj trake galerije slika. Postavite 0 za dno; 1 za lijevo; 2 za vrh; 3 "
+"za desno."
 
-#: ../src/xviewer-file-chooser.c:163
-msgid "All Files"
-msgstr "Sve datoteke"
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "Treba li se moći promijeniti veličina trake galerije slika."
 
-#: ../src/xviewer-file-chooser.c:168
-msgid "All Images"
-msgstr "Sve slike"
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Prikaži/Sakrij bočnu traku prozora."
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:189
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "Prikaži/Sakrij tipke klizanja trake galerije slika"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "Zatvori glavni prozor bez upita za spremanje promjena."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "Premjesti slike u smeće bez potvrde"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"Ako je aktivirano, Xviewer neće pitati za potvrdu pri premještanju slika u "
+"smeće, ali će svejedno pitati za potvrdu brisanja ako se neka od datoteka ne "
+"može premjestiti u smeće."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+"Treba li odabiratelj datoteka prikazati korisničku mapu za slike ako nijedna "
+"slika nije učitana."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"Ako je aktivirano i nema učitane slike u aktivnom prozoru, odabiratelj "
+"datoteka će prikazati direktorij slika korisnika pomoću XDG posebnih "
+"direktorija korisnika. Ako je deaktivirano ili direktorij slika nije "
+"podešen, prikazat će trenutni radni direktorij."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+"Treba li popis metapodataka u dijalogu svojstava imati vlastitu stranicu."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"Ako je aktivirano, opširan popis metapodataka u dijalogu svojstava će biti "
+"premještena na svoju stranicu u dijalogu. Ovo bi trebalo učiniti dijaloge "
+"upotrebljivijim na manjim zaslonima kakve recimo, koriste prijenosnici. Ako "
+"je onemogućeno, widget će biti ugrađen na stranici \"Metapodataka\""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Vanjski program koji se koristi za uređivanje slika"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"Naziv datoteke radne površine (uključujući \".desktop\") aplikacije koja se "
+"koristi za uređivanje slika (kada se na alatnoj traci klikne na  \"Uredi "
+"sliku\"). Vrijednost ostaviti praznu za isključivanje ove funkcije."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Aktivni priključci"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+"Popis aktivnih priključaka. Ne sadrži \"Lokaciju\" uključenih priključaka. "
+"Pogledajte .xviewer-plugin datoteku da biste doznali \"Lokaciju\" danog "
+"priključka."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Cijelozaslonski prikaz s dvostrukim klikom"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Aktiviraj cijelozaslonski prikaz dvostrukim klikom"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Ponovno učitaj sliku"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Učitaj ponovno trenutnu sliku"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Datum u statusnoj traci"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Prikazuje datum slike u statusnoj traci prozora"
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr "Zatvori _bez spremanja"
+
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Spremi"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr "Pitanje"
+
+#: ../src/xviewer-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr "Ukoliko ne spremite, vaše promjene biti će izgubljene."
+
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
-msgid "%s (*.%s)"
-msgstr "%s (*.%s)"
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "Želite li spremi promjene na slici \"%s\" prije zatvaranja?"
 
-#. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:285 ../src/xviewer-properties-dialog.c:133
-#: ../src/xviewer-properties-dialog.c:135 ../src/xviewer-thumb-view.c:444
-#: ../src/xviewer-window.c:720
-msgid "pixel"
-msgid_plural "pixels"
+#: ../src/xviewer-close-confirmation-dialog.c:652
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Otvorena je %d slika s nespremljenim promjenama. Želite li spremiti promjene "
+"prije zatvaranja?"
 msgstr[1] ""
+"Otvorene su %d slike s nespremljenim promjenama. Želite li spremiti promjene "
+"prije zatvaranja?"
+msgstr[2] ""
+"Otvoreno je %d slika s nespremljenim promjenama. Želite li spremiti promjene "
+"prije zatvaranja?"
 
-#: ../src/xviewer-file-chooser.c:436
-msgid "Load Image"
-msgstr "Učitavanje slike"
+#: ../src/xviewer-close-confirmation-dialog.c:669
+msgid "S_elect the images you want to save:"
+msgstr "O_daberite slike koje želite spremiti:"
 
-#: ../src/xviewer-file-chooser.c:444
-msgid "Save Image"
-msgstr "Spremi sliku"
+#. Secondary label
+#: ../src/xviewer-close-confirmation-dialog.c:688
+msgid "If you don't save, all your changes will be lost."
+msgstr "Ako ne spremite, sve promjene bit će izgubljene."
 
-#: ../src/xviewer-file-chooser.c:452
-msgid "Open Folder"
-msgstr "Otvori mapu"
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+msgid "_Reload"
+msgstr "_Učitaj ponovno"
 
-#: ../src/xviewer-image.c:530
-msgid "Transformation on unloaded image."
-msgstr "Transformacije neučitane slike."
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr "Spremi _kao..."
 
-#: ../src/xviewer-image.c:558
-msgid "Transformation failed."
-msgstr ""
-
-#: ../src/xviewer-image.c:947
-msgid "EXIF not supported for this file format."
-msgstr "EXIF nije podržan za ovaj format datoteke."
-
-#: ../src/xviewer-image.c:1067
-msgid "Image loading failed."
-msgstr ""
-
-#: ../src/xviewer-image.c:1469 ../src/xviewer-image.c:1571
-msgid "No image loaded."
-msgstr "Nema učitane slike."
-
-#: ../src/xviewer-image.c:1479 ../src/xviewer-image.c:1583
-msgid "Temporary file creation failed."
-msgstr "Kreiranje privremene datoteke nije uspjelo."
-
-#: ../src/xviewer-image-jpeg.c:361
+#: ../src/xviewer-error-message-area.c:171
 #, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "Nisam mogao stvoriti privremenu datoteku za spremanje: %s"
+msgid "Could not load image '%s'."
+msgstr "Nemoguće učitavanje slike '%s'."
 
-#: ../src/xviewer-image-jpeg.c:380
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Ne mogu pronaći dovoljno memorije za učitavanje JPEG datoteke"
+#: ../src/xviewer-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "Nemoguće spremanje slike '%s'."
 
-#: ../src/xviewer-exif-details.c:68
+#: ../src/xviewer-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "Nema pronađenih slika u '%s'."
+
+#: ../src/xviewer-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr "Dane lokacije ne sadrže slike."
+
+#: ../src/xviewer-metadata-details.c:65
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../src/xviewer-exif-details.c:69
+#: ../src/xviewer-metadata-details.c:66
 msgid "Image Data"
 msgstr "Podaci slike"
 
-#: ../src/xviewer-exif-details.c:70
+#: ../src/xviewer-metadata-details.c:67
 msgid "Image Taking Conditions"
 msgstr "Uvjeti fotografiranja"
 
-#: ../src/xviewer-exif-details.c:71
-msgid "Maker Note"
-msgstr "Napomena tvorca"
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr "GPS podaci"
 
-#: ../src/xviewer-exif-details.c:72
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Napomena autora"
+
+#: ../src/xviewer-metadata-details.c:70
 msgid "Other"
 msgstr "Ostalo"
 
-#: ../src/xviewer-exif-details.c:74
+#: ../src/xviewer-metadata-details.c:72
 msgid "XMP Exif"
-msgstr ""
+msgstr "XMP Exif"
 
-#: ../src/xviewer-exif-details.c:75
+#: ../src/xviewer-metadata-details.c:73
 msgid "XMP IPTC"
-msgstr ""
+msgstr "XMP IPTC"
 
-#: ../src/xviewer-exif-details.c:76
+#: ../src/xviewer-metadata-details.c:74
 msgid "XMP Rights Management"
-msgstr ""
+msgstr "XMP upravljanje pravima"
 
-#: ../src/xviewer-exif-details.c:77
+#: ../src/xviewer-metadata-details.c:75
 msgid "XMP Other"
-msgstr ""
+msgstr "XMP drugo"
 
-#: ../src/xviewer-exif-details.c:251
+#: ../src/xviewer-metadata-details.c:251
 msgid "Tag"
 msgstr "Oznaka"
 
-#: ../src/xviewer-exif-details.c:258
+#: ../src/xviewer-metadata-details.c:258
 msgid "Value"
 msgstr "Vrijednost"
 
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr "Sjever"
+
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr "Istok"
+
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr "Zapad"
+
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr "Jug"
+
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:58 ../src/xviewer-exif-util.c:96
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
 msgid "%a, %d %B %Y  %X"
-msgstr ""
+msgstr "%a, %d %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
-#: ../src/xviewer-exif-util.c:90
+#: ../src/xviewer-exif-util.c:154
 msgid "%a, %d %B %Y"
-msgstr ""
-
-#: ../src/xviewer-error-message-area.c:110
-msgid "_Retry"
-msgstr ""
-
-#: ../src/xviewer-error-message-area.c:134
-#, c-format
-msgid "Could not load image '%s'."
-msgstr ""
-
-#: ../src/xviewer-error-message-area.c:161
-#, c-format
-msgid "No images found in '%s'."
-msgstr ""
-
-#: ../src/xviewer-error-message-area.c:167
-msgid "The given locations contain no images."
-msgstr ""
-
-#: ../src/xviewer-print.c:197
-msgid "Image Settings"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:840
-msgid "Image"
-msgstr "Slika"
-
-#: ../src/xviewer-print-image-setup.c:841
-msgid "The image whose printing properties will be setup"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:847
-msgid "Page Setup"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:848
-msgid "The information for the page where the image will be printed"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:876
-msgid "Position"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:881
-msgid "_Left:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:882
-msgid "_Right:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:883
-msgid "_Top:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:884
-msgid "_Bottom:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:886
-msgid "C_enter:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:891
-msgid "None"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:893
-msgid "Horizontal"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:895
-msgid "Vertical"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:897
-msgid "Both"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:913
-msgid "Size"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:918
-msgid "_Width:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:920
-msgid "_Height:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:923
-msgid "_Scaling:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:936
-msgid "_Unit:"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:941
-msgid "Millimeters"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:943
-msgid "Inches"
-msgstr ""
-
-#: ../src/xviewer-print-image-setup.c:973
-msgid "Preview"
-msgstr "Pregled"
-
-#: ../src/xviewer-properties-dialog.c:150 ../src/xviewer-properties-dialog.c:151
-msgid "Unknown"
-msgstr ""
+msgstr "%a, %d %B %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/xviewer-properties-dialog.c:229
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
-msgstr ""
+msgstr "%.1f  (leća)"
 
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/xviewer-properties-dialog.c:240
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
-msgstr ""
+msgstr "%.1f (35mm film)"
 
-#: ../src/xviewer-save-as-dialog-helper.c:159
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Vrsta datoteke je nepoznata ili nije podržana"
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Preglednik slika nije uspio prepoznati podržanu, zapisivu vrstu datoteke na "
+"temelju njezinog naziva."
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "Probajte drugačiji nastavak vrste datoteke kao .png ili .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/xviewer-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr "Sve datoteke"
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr "Podržane slikovne datoteke"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "piksel"
+msgstr[1] "piksela"
+msgstr[2] "piksela"
+
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr "_Otvori..."
+
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr "Otvori sliku"
+
+#: ../src/xviewer-file-chooser.c:467
+msgid "Save Image"
+msgstr "Spremi sliku"
+
+#: ../src/xviewer-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Otvori mapu"
+
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Pretvorba neučitane slike."
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Pretvorba nije uspjela."
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF nije podržan za ovaj format datoteke."
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Učitavanje slike nije uspjelo."
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Nema učitane slike."
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "Nemate potrebne ovlasti za spremanje datoteke."
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Stvaranje privremene datoteke nije uspjelo."
+
+#: ../src/xviewer-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Neuspjelo stvaranje privremene datoteke za spremanje: %s"
+
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "Nema dovoljno memorije za učitavanje JPEG datoteke"
+
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr "Veličina datoteke:"
+
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr "Prikaži mapu koja sadrži ovu datoteku u upravitelju datotekama"
+
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu sekunda"
+msgstr[1] "%lu sekunde"
+msgstr[2] "%lu sekundi"
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "Postavke slike"
+
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "Slika"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr "Slika čije će postavke ispisa biti podešene"
+
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Postavke stranice"
+
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Informacije stranice na koju će slika biti ispisana"
+
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr "Položaj"
+
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr "_Lijevo:"
+
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr "_Desno:"
+
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr "_Vrh:"
+
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "_Dno:"
+
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "_Sredina:"
+
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr "Nijedan"
+
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Vodoravno"
+
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Okomito"
+
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr "Oboje"
+
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "Veličina"
+
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr "_Širina:"
+
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr "_Visina:"
+
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "_Promjena veličine:"
+
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_Jedinica:"
+
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "Milimetara"
+
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr "Inča"
+
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Pregled"
+
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "kako je"
 
-#: ../src/xviewer-thumb-view.c:470
-msgid "Taken on"
-msgstr ""
-
-#: ../src/xviewer-uri-converter.c:1013
-msgid "At least two file names are equal."
-msgstr "Najmanje dva imena datoteka su identična."
-
-#: ../src/xviewer-util.c:63
-msgid "Could not display help for Xviewer"
-msgstr "Ne mogu prikazati pomoć za Xviewer"
-
-#: ../src/xviewer-util.c:111
-msgid " (invalid Unicode)"
-msgstr ""
-
-#: ../src/xviewer-window.c:1131
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/xviewer-statusbar.c:126
 #, c-format
-msgid "Open with \"%s\""
-msgstr ""
+msgid "%d / %d"
+msgstr "%d / %d"
 
-#: ../src/xviewer-window.c:1132
+#: ../src/xviewer-thumb-view.c:544
+msgid "Taken on"
+msgstr "Fotografirano"
+
+#: ../src/xviewer-uri-converter.c:982
+#, c-format
+msgid "At least two file names are equal."
+msgstr "Najmanje dva naziva datoteka su identična."
+
+#: ../src/xviewer-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr "Nije moguće prikazati pomoć Preglednika slika"
+
+#: ../src/xviewer-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (neispravni Unikôd)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/xviewer-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i piksel %s %i%%"
+msgstr[1] "%i × %i piksela %s %i%%"
+msgstr[2] "%i × %i piksela %s %i%%"
+
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "Sa_krij"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+"Sliku \"%s\" je promijenila vanjska aplikacija.\n"
+"Želite li ju ponovno učitati?"
+
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
-msgstr ""
+msgstr "Koristi \"%s\" za otvaranje odabrane slike"
 
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1247
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
-msgstr ""
+msgstr "Spremanje slike \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1590
+#: ../src/xviewer-window.c:1574
 #, c-format
-msgid "Loading image \"%s\""
-msgstr ""
+msgid "Opening image \"%s\""
+msgstr "Otvaranje slike \"%s\""
 
-#: ../src/xviewer-window.c:2286
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "Napusti cijelozaslonski prikaz"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "Gledanje prezentacije"
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr ""
+"Greška ispisa datoteke:\n"
+"%s"
 
-#: ../src/xviewer-window.c:2414
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
-msgstr ""
+msgstr "Uređivač alatne trake"
 
-#: ../src/xviewer-window.c:2417
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
-msgstr ""
+msgstr "_Vrati na zadano"
 
-#: ../src/xviewer-window.c:2503
-msgid "translator-credits"
-msgstr ""
-"lokalizacija@linux.hr\n"
-"  Automatski Prijevod <>\n"
-"  Denis Lackovic <delacko@linux.hr>\n"
-"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
-"  Željko Brajdić <zorz@iskon.hr>\n"
-"\n"
-"Launchpad Contributions:\n"
-"  Danijel Šnajder https://launchpad.net/~phantomlord\n"
-"  Ivica Petrinic https://launchpad.net/~i-pula\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
-"admins\n"
-"  Miroslav Sabljić https://launchpad.net/~civija"
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
+msgid "Error launching System Settings: "
+msgstr "Greška pokretanja postavki sustava: "
 
-#: ../src/xviewer-window.c:2506
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2791
+msgid "_Open Background Preferences"
+msgstr "_Otvori postavke pozadine"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:2807
+#, c-format
 msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
+"Slika \"%s\" je bila postavljena kao pozadina na radnoj površini.\n"
+"Želite li promijeniti njezin izgled?"
 
-#: ../src/xviewer-window.c:2510
+#: ../src/xviewer-window.c:3274
+msgid "Saving image locally…"
+msgstr "Spremanje slike lokalno..."
+
+#: ../src/xviewer-window.c:3352
+#, c-format
 msgid ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
 msgstr ""
+"Sigurno želite ukloniti\n"
+"\"%s\" trajno?"
 
-#: ../src/xviewer-window.c:2514
+#: ../src/xviewer-window.c:3355
+#, c-format
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"Sigurno želite ukloniti\n"
+"odabranu sliku trajno?"
+msgstr[1] ""
+"Sigurno želite ukloniti\n"
+"%d odabrane slike trajno?"
+msgstr[2] ""
+"Sigurno želite ukloniti\n"
+"%d odabranih slika trajno?"
 
-#: ../src/xviewer-window.c:2527 ../src/main.c:192
-msgid "Xviewer"
-msgstr "Xviewer"
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr "_Obriši"
 
-#: ../src/xviewer-window.c:2530
-msgid "The GNOME image viewer."
-msgstr ""
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr "_Da"
 
-#: ../src/xviewer-window.c:2913
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr "Ne _pitaj više tijekom ove sesije"
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "Nemoguće preuzimanje datoteke slike"
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "Nemoguće preuzimanje informacije datoteke slike"
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "Nemoguće obrisati datoteku"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Greška pri brisanju slike %s"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr ""
-"Jeste li sigurni na želite premjestiti\n"
+"Sigurno želite premjestiti\n"
 "\"%s\" u smeće?"
 
-#: ../src/xviewer-window.c:2916
+#: ../src/xviewer-window.c:3606
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr "Smeće za \"%s\" nije pronađeno. Želite li trajno ukloniti sliku?"
+
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -855,416 +1291,392 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Jeste li sigurni da želite izbrisati\n"
-"%d odabranu sliku?"
+"Sigurno želite premjestiti\n"
+"odabranu sliku u smeće?"
 msgstr[1] ""
-"Jeste li sigurni da želite izbrisati\n"
-"%d odabrane slike?"
+"Sigurno želite premjestiti\n"
+"%d odabrane slike u smeće?"
 msgstr[2] ""
-"Jeste li sigurni da želite izbrisati\n"
-"%d odabranih slika?"
+"Sigurno želite premjestiti\n"
+"%d odabranih slika u smeće?"
 
-#: ../src/xviewer-window.c:2931
-msgid "Move to Trash"
-msgstr "Pošalji u smeće"
+#: ../src/xviewer-window.c:3616
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"Neke od odabranih slika se ne mogu premjestiti u smeće pa će biti trajno "
+"uklonjene.  Želite li nastaviti?"
 
-#: ../src/xviewer-window.c:2959 ../src/xviewer-window.c:2973 ../src/xviewer-window.c:2979
-msgid "Couldn't access trash."
-msgstr "Ne mogu pristupiti smeću."
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
+msgid "Move to _Trash"
+msgstr "Premjesti u _smeće"
 
-#: ../src/xviewer-window.c:3045
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
-msgid "Error on deleting image %s"
-msgstr "Greška pri brisanju datoteke %s"
+msgid "Couldn't access trash."
+msgstr "Nemoguć pristup smeću."
 
-#: ../src/xviewer-window.c:3252
-msgid "_File"
-msgstr "_Datoteka"
-
-#: ../src/xviewer-window.c:3253
-msgid "_Edit"
-msgstr "_Uredi"
-
-#: ../src/xviewer-window.c:3254
-msgid "_View"
-msgstr "_Prikaz"
-
-#: ../src/xviewer-window.c:3255
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Slika"
 
-#: ../src/xviewer-window.c:3256
+#: ../src/xviewer-window.c:4046
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
-msgstr "_Kreni"
+msgstr "_Idi"
 
-#: ../src/xviewer-window.c:3257
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
-msgstr ""
+msgstr "_Alati"
 
-#: ../src/xviewer-window.c:3258
-msgid "_Help"
-msgstr "_Pomoć"
-
-#: ../src/xviewer-window.c:3260
-msgid "_Open..."
+#: ../src/xviewer-window.c:4052
+msgid "_Open…"
 msgstr "_Otvori..."
 
-#: ../src/xviewer-window.c:3261
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Otvori datoteku"
 
-#: ../src/xviewer-window.c:3263
-msgid "_Close"
-msgstr "_Zatvori"
-
-#: ../src/xviewer-window.c:3264
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Zatvori prozor"
 
-#: ../src/xviewer-window.c:3266
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
-msgstr ""
+msgstr "A_latna traka"
 
-#: ../src/xviewer-window.c:3267
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
-msgstr ""
+msgstr "Uredi alatnu traku"
 
-#: ../src/xviewer-window.c:3269
-msgid "Prefere_nces"
-msgstr "_Postavke"
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr "Osobitosti preglednika slika"
 
-#: ../src/xviewer-window.c:3270
-msgid "Preferences for Xviewer"
-msgstr "Postavke za Xviewer"
-
-#: ../src/xviewer-window.c:3272
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
-msgstr "_Sadržaj"
+msgstr "_Priručnik"
 
-#: ../src/xviewer-window.c:3273
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
-msgstr ""
+msgstr "Pomoć za ovu aplikaciju"
 
-#: ../src/xviewer-window.c:3275 ../src/xviewer-plugin-manager.c:506
-msgid "_About"
-msgstr "_O programu..."
-
-#: ../src/xviewer-window.c:3276
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "O ovoj aplikaciji"
 
-#: ../src/xviewer-window.c:3281
-msgid "_Toolbar"
-msgstr "_Alatna traka"
-
-#: ../src/xviewer-window.c:3282
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Mijenja vidljivost alatne trake u trenutnom prozoru"
 
-#: ../src/xviewer-window.c:3284
-msgid "_Statusbar"
-msgstr "_Statusna traka"
-
-#: ../src/xviewer-window.c:3285
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
-msgstr "Mijenja vidljivost trake statusa u trenutnom prozoru"
+msgstr "Mijenja vidljivost statusne trake u trenutnom prozoru"
 
-#: ../src/xviewer-window.c:3287
-msgid "_Image Collection"
-msgstr "_Kolekcija slika"
-
-#: ../src/xviewer-window.c:3288
+#: ../src/xviewer-window.c:4080
 msgid ""
-"Changes the visibility of the image collection pane in the current window"
-msgstr "Mijenja vidljivost okna kolekcije slika u trenutnom prozoru"
+"Changes the visibility of the image gallery pane in the current window"
+msgstr "Mijenja vidljivost panela galerije slika u trenutnom prozoru"
 
-#: ../src/xviewer-window.c:3290
-msgid "Side _Pane"
-msgstr ""
-
-#: ../src/xviewer-window.c:3291
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
-msgstr ""
+msgstr "Mijenja vidljivost bočnog panela u trenutnom prozoru"
 
-#: ../src/xviewer-window.c:3296
-msgid "_Save"
-msgstr "_Spremi"
-
-#: ../src/xviewer-window.c:3297
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
-msgstr ""
+msgstr "Spremi promjene u trenutno odabranim slikama"
 
-#: ../src/xviewer-window.c:3299
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
-msgstr ""
+msgstr "Otvori _s"
 
-#: ../src/xviewer-window.c:3300
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
-msgstr ""
+msgstr "Otvori odabranu sliku s drugom aplikacijom"
 
-#: ../src/xviewer-window.c:3302
-msgid "Save _As..."
-msgstr "Spremi _kao..."
-
-#: ../src/xviewer-window.c:3303
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
-msgstr ""
+msgstr "Spremi odabrane slike pod drugim nazivom"
 
-#: ../src/xviewer-window.c:3305
-msgid "Page Set_up..."
-msgstr ""
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr "Prikaži sadržajnu _mapu"
 
-#: ../src/xviewer-window.c:3306
-msgid "Setup the page properties for printing"
-msgstr ""
-
-#: ../src/xviewer-window.c:3308
-msgid "_Print..."
+#: ../src/xviewer-window.c:4100
+msgid "_Print…"
 msgstr "_Ispis..."
 
-#: ../src/xviewer-window.c:3309
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
-msgstr ""
+msgstr "Ispiši odabranu sliku"
 
-#: ../src/xviewer-window.c:3311
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
-msgstr ""
+msgstr "Svoj_stva"
 
-#: ../src/xviewer-window.c:3312
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
-msgstr ""
+msgstr "Prikaži svojstva i metapodatke odabrane slike"
 
-#: ../src/xviewer-window.c:3314
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
-msgstr "_Vrati"
+msgstr "_Poništi"
 
-#: ../src/xviewer-window.c:3315
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
-msgstr ""
+msgstr "Poništi zadnju promjenu na slici"
 
-#: ../src/xviewer-window.c:3317
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
-msgstr "Zrcali _vodoravno"
+msgstr "Zakreni _vodoravno"
 
-#: ../src/xviewer-window.c:3318
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
-msgstr ""
+msgstr "Zrcali sliku vodoravno"
 
-#: ../src/xviewer-window.c:3320
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
-msgstr "Zrcali _okomito"
+msgstr "Zakreni _okomito"
 
-#: ../src/xviewer-window.c:3321
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
-msgstr ""
+msgstr "Zrcali sliku okomito"
 
-#: ../src/xviewer-window.c:3323
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
-msgstr "Zakreni u smjeru _kazaljke na satu"
+msgstr "_Zakreni u smjeru kazaljke sata"
 
-#: ../src/xviewer-window.c:3324
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
-msgstr ""
+msgstr "Zakreni sliku 90 stupnjeva u desno"
 
-#: ../src/xviewer-window.c:3326
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
-msgstr ""
+msgstr "Zakreni suprotn_o kazaljci sata"
 
-#: ../src/xviewer-window.c:3327
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
-msgstr ""
+msgstr "Zakreni sliku 90 stupnjeva u lijevo"
 
-#: ../src/xviewer-window.c:3329
-msgid "Set As _Wallpaper"
-msgstr "Postavi kao _pozadinu"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr "Postavi kao poz_adinu"
 
-#: ../src/xviewer-window.c:3330
-msgid "Set the selected image as the desktop wallpaper"
-msgstr ""
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr "Postavi odabranu sliku kao pozadinu radne površine"
 
-#: ../src/xviewer-window.c:3332 ../src/xviewer-window.c:3356
-msgid "Move to _Trash"
-msgstr "Premjesti u sm_eće"
-
-#: ../src/xviewer-window.c:3333
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
-msgstr ""
+msgstr "Premjesti odabranu sliku u smeće"
 
-#: ../src/xviewer-window.c:3335 ../src/xviewer-window.c:3347 ../src/xviewer-window.c:3350
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr "_Obriši sliku"
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr "Obriši odabranu sliku"
+
+#: ../src/xviewer-window.c:4130
+msgid "_Copy"
+msgstr "_Kopiraj"
+
+#: ../src/xviewer-window.c:4131
+msgid "Copy the selected image to the clipboard"
+msgstr "Kopiraj odabranu sliku u međuspremnik"
+
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Uvećaj"
 
-#: ../src/xviewer-window.c:3336 ../src/xviewer-window.c:3348
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
-msgstr ""
+msgstr "Uvećaj sliku"
 
-#: ../src/xviewer-window.c:3338 ../src/xviewer-window.c:3353
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "U_manji"
 
-#: ../src/xviewer-window.c:3339 ../src/xviewer-window.c:3351 ../src/xviewer-window.c:3354
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
-msgstr ""
+msgstr "Smanji sliku"
 
-#: ../src/xviewer-window.c:3341
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
-msgstr "_Normalna Veličina"
+msgstr "_Normalna veličina"
 
-#: ../src/xviewer-window.c:3342
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
-msgstr ""
+msgstr "Prikaži sliku u njenoj izvornoj veličini"
 
-#: ../src/xviewer-window.c:3344
-msgid "Best _Fit"
+#: ../src/xviewer-window.c:4157
+msgid "_Fullscreen"
+msgstr "_Cijelozaslonski prikaz"
+
+#: ../src/xviewer-window.c:4158
+msgid "Show the current image in fullscreen mode"
+msgstr "Prikaži trenutnu sliku preko cijelog zaslona"
+
+#: ../src/xviewer-window.c:4160
+msgid "Pause Slideshow"
+msgstr "Pauziraj prezentaciju"
+
+#: ../src/xviewer-window.c:4161
+msgid "Pause or resume the slideshow"
+msgstr "Pauziraj ili nastavi prezentaciju"
+
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
 msgstr "_Najbolje pristajanje"
 
-#: ../src/xviewer-window.c:3345
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
-msgstr ""
+msgstr "Prilagodi sliku prozoru"
 
-#: ../src/xviewer-window.c:3362
-msgid "_Full Screen"
-msgstr "_Puni zaslon"
-
-#: ../src/xviewer-window.c:3363
-msgid "Show the current image in fullscreen mode"
-msgstr ""
-
-#: ../src/xviewer-window.c:3368 ../src/xviewer-window.c:3380
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
-msgstr "_Prethodna slika"
+msgstr "_Prijašnja slika"
 
-#: ../src/xviewer-window.c:3369
-msgid "Go to the previous image of the collection"
-msgstr ""
+#: ../src/xviewer-window.c:4170
+msgid "Go to the previous image of the gallery"
+msgstr "Idi na prijašnju sliku u galeriji"
 
-#: ../src/xviewer-window.c:3371
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "_Sljedeća slika"
 
-#: ../src/xviewer-window.c:3372
-msgid "Go to the next image of the collection"
-msgstr ""
+#: ../src/xviewer-window.c:4173
+msgid "Go to the next image of the gallery"
+msgstr "Idi na sljedeću sliku u galeriji"
 
-#: ../src/xviewer-window.c:3374 ../src/xviewer-window.c:3383
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "_Prva slika"
 
-#: ../src/xviewer-window.c:3375
-msgid "Go to the first image of the collection"
-msgstr ""
+#: ../src/xviewer-window.c:4176
+msgid "Go to the first image of the gallery"
+msgstr "Idi na prvu sliku u galeriji"
 
-#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3386
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "_Zadnja slika"
 
-#: ../src/xviewer-window.c:3378
-msgid "Go to the last image of the collection"
-msgstr ""
+#: ../src/xviewer-window.c:4179
+msgid "Go to the last image of the gallery"
+msgstr "Idi na zadnju sliku u galeriji"
 
-#: ../src/xviewer-window.c:3392
-msgid "_Slideshow"
-msgstr "Sli_deshow"
+#: ../src/xviewer-window.c:4181
+msgid "_Random Image"
+msgstr "_Naizmjenična slika"
 
-#: ../src/xviewer-window.c:3393
+#: ../src/xviewer-window.c:4182
+msgid "Go to a random image of the gallery"
+msgstr "Prikaži naizmjenično slike u galeriji"
+
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr "Prezentaci_ja"
+
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
-msgstr ""
+msgstr "Pokreni prezentaciju slika"
 
-#: ../src/xviewer-window.c:3459
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
-msgstr "Prethodna"
+msgstr "Prijašnje"
 
-#: ../src/xviewer-window.c:3463
+#: ../src/xviewer-window.c:4418
 msgid "Next"
-msgstr "Sljedeća"
+msgstr "Sljedeće"
 
-#: ../src/xviewer-window.c:3467
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Desno"
 
-#: ../src/xviewer-window.c:3470
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Lijevo"
 
-#: ../src/xviewer-window.c:3473
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr "Prikaži mapu"
+
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Povećaj"
 
-#: ../src/xviewer-window.c:3476
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Smanji"
 
-#: ../src/xviewer-window.c:3479
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
-msgstr "Obično"
+msgstr "Normalna"
 
-#: ../src/xviewer-window.c:3482
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Prilagodi"
 
-#: ../src/xviewer-window.c:3485
-msgid "Collection"
-msgstr "Kolekcija"
+#: ../src/xviewer-window.c:4446
+msgid "Gallery"
+msgstr "Galerija"
 
-#: ../src/xviewer-plugin-manager.c:52
-msgid "Plugin"
-msgstr ""
+#: ../src/xviewer-window.c:4463
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "Smeće"
 
-#: ../src/xviewer-plugin-manager.c:53
-msgid "Enabled"
-msgstr ""
+#: ../src/xviewer-window.c:4829
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "Uredi trenutnu sliku koristeći %s"
 
-#: ../src/xviewer-plugin-manager.c:514
-msgid "C_onfigure"
-msgstr ""
+#: ../src/xviewer-window.c:4831
+msgid "Edit Image"
+msgstr "Uredi sliku"
 
-#: ../src/xviewer-plugin-manager.c:524
-msgid "A_ctivate"
-msgstr ""
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "Otvori preko cijelog zaslona"
 
-#: ../src/xviewer-plugin-manager.c:536
-msgid "Ac_tivate All"
-msgstr ""
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr "Onemogući galeriju slika"
 
-#: ../src/xviewer-plugin-manager.c:541
-msgid "_Deactivate All"
-msgstr ""
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr "Otvori u prezentacijskom načinu"
 
-#: ../src/xviewer-plugin-manager.c:832
-msgid "Active _Plugins:"
-msgstr ""
-
-#: ../src/xviewer-plugin-manager.c:861
-msgid "_About Plugin"
-msgstr ""
-
-#: ../src/xviewer-plugin-manager.c:868
-msgid "C_onfigure Plugin"
-msgstr ""
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr "Pokreni novi primjerak aplikacije umjesto ponovne upotrebe postojeće"
 
 #: ../src/main.c:67
-msgid "Open in fullscreen mode"
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
 msgstr ""
-
-#: ../src/main.c:68
-msgid "Disable image collection"
-msgstr ""
+"Otvoriti u zasebnom prozoru, ako je više prozora otvoreno prvi će biti "
+"korišten"
 
 #: ../src/main.c:69
-msgid "Open in slide show mode"
-msgstr ""
+msgid "Show the application's version"
+msgstr "Prikaži inačicu aplikacije"
 
-#: ../src/main.c:71
-msgid "Start a new instance instead of reusing an existing one"
-msgstr ""
-
-#: ../src/main.c:73
-msgid "[FILE...]"
+#: ../src/main.c:99
+msgid "[FILE…]"
 msgstr "[DATOTEKA...]"
 
-#: ../src/main.c:223
-msgid "Xviewer Image Viewer"
+#. I18N: The '%s' is replaced with xviewer's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-
-#~ msgid "File exists"
-#~ msgstr "Datoteka postoji"
+"Pokrenite '%s --help' za prikaz svih dostupnih mogućnosti naredbenog retka."

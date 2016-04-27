@@ -1,68 +1,123 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003.
-# Sveinn í Felli <sv1@fellsnet.is>, 2015.
+# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xviewer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-05 04:30+0000\n"
-"PO-Revision-Date: 2015-02-17 04:29+0000\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-04-09 15:44+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
-"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: is\n"
 
-#: ../data/xviewer-app-menu.xml.h:1
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "Birta \"_%s\""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_Færa á verkfærastiku"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "Færa valda hlutinn á verkfærastikuna"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "_Fjarlægja af verkfærastiku"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "Fjarlægja valið atriði af verkfærastiku"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "_Eyða verkfærastiku"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "Fjarlægja völdu verkfærastikuna"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "Aðgreinir"
+
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "S_koða"
+
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_Tólstika"
+
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "_Stöðustika"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../data/fullscreen-toolbar.ui.h:20
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "_Myndasafn"
 
-#: ../data/xviewer-app-menu.xml.h:3
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "_Hliðarstika"
 
-#: ../data/xviewer-app-menu.xml.h:4
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "_Kjörstillingar"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "_Hjálp"
 
-#: ../data/xviewer-app-menu.xml.h:6
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
 msgid "_About"
 msgstr "_Um hugbúnaðinn"
 
-#: ../data/xviewer-app-menu.xml.h:7
+#: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
 msgstr "H_ætta"
 
 #: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
-"Xviewer is the official image viewer for the GNOME desktop. It "
-"integrates with the GTK+ look and feel of GNOME, and supports many image "
-"formats for viewing single images or images in a collection."
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
 msgstr ""
+"Xviewer myndarýnirinn er  myndaskoðari sem styður mörg myndskráasnið. Hægt "
+"er að nota hann hvort sem er til skoðunar á stökum myndum eða myndasöfnum."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
-"Xviewer also allows to view the images in a fullscreen slideshow "
-"mode or set an image as the desktop wallpaper. It reads the camera tags to "
-"automatically rotate your images in the correct portrait or landscape "
-"orientation."
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
 msgstr ""
+"Xviewer myndarýnirinn gerir einnig kleift að skoða myndir sem skyggnusýningu "
+"á öllum skjánum eða að setja mynd sem bakgrunn skjáborðs. Ennfremur les hann "
+"merki frá myndavélum þannig að myndum sé snúið sjálfvirkt lárétt eða "
+"lóðrétt, eftir því hvernig þær voru teknar."
 
-#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:325
-#: ../src/xviewer-window.c:5475
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Myndarýnir"
 
@@ -75,41 +130,7 @@ msgstr "Skoða og snúa myndum"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Mynd;Skyggnusýning;Myndefni;"
 
-#: ../data/xviewer-gear-menu.ui.h:1
-msgid "_Open…"
-msgstr "_Opna…"
-
-#: ../data/xviewer-gear-menu.ui.h:2
-msgid "Open _With"
-msgstr "Opna _með"
-
-#: ../data/xviewer-gear-menu.ui.h:3 ../data/popup-menus.ui.h:2
-#: ../src/xviewer-close-confirmation-dialog.c:178 ../src/xviewer-file-chooser.c:465
-msgid "_Save"
-msgstr "Vi_sta"
-
-#: ../data/xviewer-gear-menu.ui.h:4 ../data/popup-menus.ui.h:3
-#: ../src/xviewer-error-message-area.c:129
-msgid "Save _As…"
-msgstr "Vist_a sem..."
-
-#: ../data/xviewer-gear-menu.ui.h:5 ../data/popup-menus.ui.h:4
-msgid "_Print…"
-msgstr "_Prenta..."
-
-#: ../data/xviewer-gear-menu.ui.h:6 ../data/popup-menus.ui.h:8
-msgid "Set as Wa_llpaper"
-msgstr "Setja sem bakgrunnsmynd"
-
-#: ../data/xviewer-gear-menu.ui.h:7
-msgid "Sli_deshow"
-msgstr "Sky_ggnusýning"
-
-#: ../data/xviewer-gear-menu.ui.h:8 ../data/popup-menus.ui.h:7
-msgid "Prope_rties"
-msgstr "_Eiginleikar"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:1
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Eiginleikar myndar"
 
@@ -122,23 +143,28 @@ msgid "_Next"
 msgstr "_Næsta"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
 msgid "_Close"
 msgstr "_Loka"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
 msgid "Name:"
 msgstr "Heiti:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
 msgid "Width:"
 msgstr "Breidd:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
 msgid "Height:"
 msgstr "Hæð:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "Tegund:"
 
@@ -147,70 +173,87 @@ msgid "Bytes:"
 msgstr "Bæti:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "Mappa:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "Almennt"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "Gildi ljósops:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "Lýsingartími:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "Brennivídd:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "Leifturljós:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "ISO hraði:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "Mælihamur:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "Gerð myndavélar:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "Dagsetning og tími:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "Lýsing:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "Staðsetning:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "Stikkorð:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "Höfundur:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "Höfundarréttur:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "Nánar"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "Lýsigögn"
 
@@ -222,7 +265,8 @@ msgstr "Vista sem"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3170 ../src/xviewer-window.c:3173 ../src/xviewer-window.c:3426
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
 msgid "_Cancel"
 msgstr "_Hætta við"
 
@@ -367,136 +411,6 @@ msgstr "Skyggnusýning"
 msgid "Plugins"
 msgstr "Viðbætur"
 
-#: ../data/fullscreen-toolbar.ui.h:1
-#| msgid "Go to the next image of the gallery"
-msgid "Go to the first image of the gallery"
-msgstr "Fara á fyrstu myndina í safninu"
-
-#: ../data/fullscreen-toolbar.ui.h:2
-msgid "_First Image"
-msgstr "_Fyrsta mynd"
-
-#: ../data/fullscreen-toolbar.ui.h:3 ../src/xviewer-scroll-view.c:2960
-msgid "Go to the previous image of the gallery"
-msgstr "Fara á fyrri mynd í safninu"
-
-#: ../data/fullscreen-toolbar.ui.h:4
-msgid "_Previous Image"
-msgstr "Fy_rri mynd"
-
-#: ../data/fullscreen-toolbar.ui.h:5 ../src/xviewer-scroll-view.c:2948
-msgid "Go to the next image of the gallery"
-msgstr "Fara á næstu mynd í safninu"
-
-#: ../data/fullscreen-toolbar.ui.h:6
-msgid "_Next Image"
-msgstr "_Næsta mynd"
-
-#: ../data/fullscreen-toolbar.ui.h:7
-#| msgid "Go to the next image of the gallery"
-msgid "Go to the last image of the gallery"
-msgstr "Fara á síðustu myndina í safninu"
-
-#: ../data/fullscreen-toolbar.ui.h:8
-msgid "_Last Image"
-msgstr "_Síðasta mynd"
-
-#: ../data/fullscreen-toolbar.ui.h:9
-msgid "Enlarge the image"
-msgstr "Stækka myndina"
-
-#: ../data/fullscreen-toolbar.ui.h:10
-msgid "_Zoom In"
-msgstr "Renna _að"
-
-#: ../data/fullscreen-toolbar.ui.h:11
-msgid "Shrink the image"
-msgstr "Minnka myndina"
-
-#: ../data/fullscreen-toolbar.ui.h:12
-msgid "Zoom _Out"
-msgstr "Renna _frá"
-
-#: ../data/fullscreen-toolbar.ui.h:13
-msgid "_Normal Size"
-msgstr "_Venjuleg stærð"
-
-#: ../data/fullscreen-toolbar.ui.h:14
-msgid "_Best Fit"
-msgstr "_Passar best"
-
-#: ../data/fullscreen-toolbar.ui.h:15 ../src/xviewer-scroll-view.c:2975
-msgid "Rotate the image 90 degrees to the left"
-msgstr "Snúa myndinni 90 gráður til vinstri"
-
-#: ../data/fullscreen-toolbar.ui.h:16
-msgid "Rotate Counter_clockwise"
-msgstr "Snúa ran_gsælis"
-
-#: ../data/fullscreen-toolbar.ui.h:17 ../src/xviewer-scroll-view.c:2986
-msgid "Rotate the image 90 degrees to the right"
-msgstr "Snúa myndinni 90 gráður til hægri"
-
-#: ../data/fullscreen-toolbar.ui.h:18
-msgid "_Rotate Clockwise"
-msgstr "Snúa _réttsælis"
-
-#: ../data/fullscreen-toolbar.ui.h:19
-msgid "Changes the visibility of the image gallery pane in the current window"
-msgstr "Breytir sýnileika myndasafnsspjalds í þessum glugga"
-
-#: ../data/fullscreen-toolbar.ui.h:21
-msgid "Pause or resume the slideshow"
-msgstr "Gera hlé eða halda áfram með myndasýningu"
-
-#: ../data/metadata-sidebar.ui.h:1 ../src/xviewer-print-image-setup.c:969
-msgid "Size"
-msgstr "Stærð"
-
-#: ../data/metadata-sidebar.ui.h:2
-msgid "Type"
-msgstr "Tegund"
-
-#: ../data/metadata-sidebar.ui.h:3
-msgid "File Size"
-msgstr "Skráarstærð"
-
-#: ../data/metadata-sidebar.ui.h:4
-msgid "Folder"
-msgstr "Mappa"
-
-#: ../data/metadata-sidebar.ui.h:5
-msgid "Aperture"
-msgstr "Ljósop"
-
-#: ../data/metadata-sidebar.ui.h:6
-msgid "Exposure"
-msgstr "Lýsing"
-
-#: ../data/metadata-sidebar.ui.h:7
-msgid "ISO"
-msgstr "ISO"
-
-#: ../data/metadata-sidebar.ui.h:8
-msgid "Metering"
-msgstr "Mælihamur"
-
-#: ../data/metadata-sidebar.ui.h:9 ../src/xviewer-metadata-details.c:65
-msgid "Camera"
-msgstr "Myndavél"
-
-#: ../data/metadata-sidebar.ui.h:10
-msgid "Date"
-msgstr "Dagsetning"
-
-#: ../data/metadata-sidebar.ui.h:11
-msgid "Time"
-msgstr "Tími"
-
-#: ../data/metadata-sidebar.ui.h:12
-msgid "Focal Length"
-msgstr "Brennivídd"
-
 #: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Sjálfvirk stefna"
@@ -512,28 +426,35 @@ msgid ""
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
+"Liturinn sem notaður er til að fylla svæðið á bakvið myndina. Ef lykillinn "
+"'use-background-color' er ekki stilltur, verður liturinn tilgreindur af "
+"virku GTK+ þema."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Skjóta inn í mynd (interpolate - brúun)"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:6
-#, fuzzy
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Hvort að innreikna eigi mynd við notkun á súmmi eður ei. "
+msgstr ""
+"Hvort brúa eigi mynd (interpolate - skjóta inn línum) þegar aðdráttur en "
+"minnkaður. Þetta gefur betri gæði en er eitthvað hægvirkara en þegar brúun "
+"er ekki notuð á myndirnar."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Innreikna í mynd (extrapolate - bryggjun)"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:8
-#, fuzzy
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Hvort að innreikna eigi mynd við notkun á súmmi eður ei. "
+msgstr ""
+"Hvort bryggja eigi mynd (extrapolate - reikna út nálæga mynddíla) þegar "
+"aðdráttur er aukinn. Þetta gefur móskukenndari myndgæði og er eitthvað "
+"hægvirkara en þegar bryggjun er ekki notuð á myndirnar."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
@@ -569,6 +490,10 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
+"Margföldun sem á að nota við aðdrátt með skrunhjóli músar. Þetta gildi "
+"skilgreinir aðdráttarbreytingu við hvert þrep í snúningi skrunhjólsins. Sem "
+"dæmi, 0,05 gefur 5% aðdráttarbreytingu fyrir hvert þrep og 1,00 gefur 100% "
+"aðdráttarbreytingu."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
@@ -592,6 +517,9 @@ msgid ""
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
+"Ef þetta er virkt verður liturinn sem skilgreindur er af lyklinum 'use-"
+"background-color' notaður til að fylla svæðið á bakvið myndina. Ef þetta er "
+"ekki stillt, verður liturinn tilgreindur af virku GTK+ þemunni."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
@@ -599,7 +527,7 @@ msgstr "Endurtaka myndarununa"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr ""
+msgstr "Hvort eigi að sýna myndaröð í óendanlegri endurtekningu."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
@@ -611,6 +539,8 @@ msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
+"Ef þetta er EKKI virkt verða smærri myndir ekki teygðar til að passa á skjá "
+"í upphafi."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
@@ -621,52 +551,61 @@ msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
+"Gildi stærra en 0 segir til um í hve margar sekúndur mynd er á skjánum áður "
+"en henni er skipt út fyrir þá næstu. 0 gerir sjáfvirka vöfrun óvirka."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Birta/Fela verkfærastiku gluggans."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "Sýna/fela stöðustiku þessa glugga."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "Birta eða fela myndasafnsspjald."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
 msgstr ""
 "Staðsetning myndasafnsspjalds. Settu 0 fyrir neðst; 1 fyrir vinstri; 2 fyrir "
-"efst; 3 "
-"fyrir hægri."
+"efst; 3 fyrir hægri."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "Hvort eigi að vera hægt að breyta stærð myndasafnsspjalds."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "Birta eða fela hliðarspjald."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Birta eða fela skrunhnappa á myndasafnsspjaldi."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "Loka aðalglugga án þess að spyrja hvort eigi að vista."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "Henda myndum án þess að spyrja"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:35
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr ""
-
 #: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"Ef þetta er virkt, mun Xviewer myndarýnirinn ekki spyrja um staðfestingu "
+"þegar myndum er hent í ruslið. Eftir sem áður verður spurt um staðfestingu "
+"ef ekki er hægt að setja myndir í ruslið og þeim því endanlega eytt í "
+"staðinn."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -674,67 +613,65 @@ msgstr ""
 "Hvort skráarvafri eigi að myndamöppu notandans ef engar myndir eru hlaðnar "
 "inn."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
 msgstr ""
+"Ef þetta er virkt og engin mynd er hlaðin inn í virka glugganum, mun "
+"skráaveljarinn birta myndamöppu notandans eins og hún er skilgreind í XDG-"
+"sérmöppum notandans. Ef þetta er óvirkt eða myndamappa notanda er ekki "
+"uppsett, mun núverandi vinnumappa birtast."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
+"Hvort listi með lýsigögnum í stillingarglugganum eigi að vera með sína eigin "
+"síðu."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
 "on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
 msgstr ""
+"Ef þetta er virkt, verður nákvæmur listi með lýsigögnum í "
+"stillingarglugganum færður yfir í sína eigin síðu í glugganum. Þetta er "
+"gagnlegt á minni skjám eins og á fartölvum og slíku. Ef þetta er óvirkt "
+"verður listinn innifalinn á síðunni \"Lýsigögn\"."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Utanaðkomandi forrit til breytinga á myndum"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" button is clicked). Set to the "
-"empty string to disable this feature."
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
 msgstr ""
+"Heiti skjáborðsskrár (ásamt \".desktop\" endingunni) forritsins sem á að "
+"nota við myndvinnslu (þegar smellt er á \"Breyta mynd\" hnapp á "
+"verkfærastiku). Settu þetta sem auðan streng til að gera þennan eiginleika "
+"óvirkan."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Virkar viðbætur"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
 msgstr ""
 "Listi yfir virkar viðbætur. Hann sýnir ekki \"staðsetningu\" virku "
 "viðbótanna. Skoðaðu skrána .xviewer-plugin til að finna \"staðsetningu\" "
 "tiltekinnar viðbótar."
-
-#: ../data/popup-menus.ui.h:1
-msgid "Open _with"
-msgstr "Opna _með"
-
-#: ../data/popup-menus.ui.h:5
-msgid "_Copy"
-msgstr "_Afrita"
-
-#: ../data/popup-menus.ui.h:6 ../src/xviewer-window.c:3429
-msgid "Move to _Trash"
-msgstr "_Henda í ruslið"
-
-#: ../data/popup-menus.ui.h:9
-msgid "Show Containing _Folder"
-msgstr "Birta umlykjandi _möppu"
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -744,11 +681,12 @@ msgstr "Fylla skjá með því að tvísmella"
 msgid "Activate fullscreen mode with double-click"
 msgstr "Láta mynd fylla út skjáinn með því að tvísmella"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:150
+#: ../plugins/reload/xviewer-reload-plugin.c:74
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "Endurhlaða mynd"
 
+#: ../plugins/reload/xviewer-reload-plugin.c:76
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "Hleður núverandi mynd aftur inn"
@@ -764,6 +702,11 @@ msgstr "Birtir dagsetningu myndarinnar í stöðustikunni"
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "_Loka án þess að vista"
+
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "Vi_sta"
 
 #: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
@@ -797,9 +740,13 @@ msgstr "V_eldu myndirnar sem þú vilt vista:"
 msgid "If you don't save, all your changes will be lost."
 msgstr "Ef þú vistar ekki munu allar breytingar glatast."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:885
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "Endu_rhlaða"
+
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr "Vist_a sem..."
 
 #: ../src/xviewer-error-message-area.c:171
 #, c-format
@@ -820,14 +767,83 @@ msgstr "Engar myndir fundust í ‚%s‘."
 msgid "The given locations contain no images."
 msgstr "Gefin staðsetning innihélt engar myndir."
 
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "Myndavél"
+
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "Myndgögn"
+
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Skilyrði við myndatöku"
+
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr "GPS gögn"
+
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "MakerNote"
+
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "Annað"
+
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP EXIF"
+
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
+
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "XMP réttindastýring"
+
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr "XMP annað"
+
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "Merki"
+
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Gildi"
+
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr "Norður"
+
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr "Austur"
+
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr "Vestur"
+
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr "Suður"
+
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:183 ../src/xviewer-exif-util.c:185
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d. %B %Y  %X"
 
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d. %B %Y"
+
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/xviewer-exif-util.c:274
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (linsa)"
@@ -835,7 +851,7 @@ msgstr "%.1f (linsa)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/xviewer-exif-util.c:285
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm filma)"
@@ -870,7 +886,9 @@ msgid "Supported image files"
 msgstr "Studdar myndskrár"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
 #: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
@@ -938,86 +956,19 @@ msgstr "Gat ekki búið til bráðabirgðaskrá vegna vistunar: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ekki tókst að tileinka minni fyrir hleðslu á JPEG skrá"
 
-#: ../src/xviewer-metadata-details.c:66
-msgid "Image Data"
-msgstr "Myndgögn"
-
-#: ../src/xviewer-metadata-details.c:67
-msgid "Image Taking Conditions"
-msgstr "Skilyrði við myndatöku"
-
-#: ../src/xviewer-metadata-details.c:68
-msgid "GPS Data"
-msgstr "GPS gögn"
-
-#: ../src/xviewer-metadata-details.c:69
-msgid "Maker Note"
-msgstr "MakerNote"
-
-#: ../src/xviewer-metadata-details.c:70
-msgid "Other"
-msgstr "Annað"
-
-#: ../src/xviewer-metadata-details.c:72
-msgid "XMP Exif"
-msgstr "XMP EXIF"
-
-#: ../src/xviewer-metadata-details.c:73
-msgid "XMP IPTC"
-msgstr "XMP IPTC"
-
-#: ../src/xviewer-metadata-details.c:74
-msgid "XMP Rights Management"
-msgstr "XMP réttindastýring"
-
-#: ../src/xviewer-metadata-details.c:75
-msgid "XMP Other"
-msgstr "XMP annað"
-
-#: ../src/xviewer-metadata-details.c:251
-msgid "Tag"
-msgstr "Merki"
-
-#: ../src/xviewer-metadata-details.c:258
-msgid "Value"
-msgstr "Gildi"
-
-#: ../src/xviewer-metadata-details.c:436
-msgid "North"
-msgstr "Norður"
-
-#: ../src/xviewer-metadata-details.c:439
-msgid "East"
-msgstr "Austur"
-
-#: ../src/xviewer-metadata-details.c:442
-msgid "West"
-msgstr "Vestur"
-
-#: ../src/xviewer-metadata-details.c:445
-msgid "South"
-msgstr "Suður"
-
-#  Pixel size of image: width x height in pixel
-#: ../src/xviewer-metadata-sidebar.c:109
-#, c-format
-msgid "%i × %i pixel"
-msgid_plural "%i × %i pixels"
-msgstr[0] "%i x %i mynddíll"
-msgstr[1] "%i × %i mynddílar"
-
-#: ../src/xviewer-metadata-sidebar.c:120 ../src/xviewer-properties-dialog.c:156
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "Óþekkt"
 
-#: ../src/xviewer-metadata-sidebar.c:189
-msgid "%a, %d %B %Y"
-msgstr "%a, %d. %B %Y"
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr "Skráarstærð:"
 
-#: ../src/xviewer-metadata-sidebar.c:193
-#, c-format
-msgid "%X"
-msgstr "%X"
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr "Sýna möppuna sem inniheldur þessa skrá í skráarstjóra"
 
 #: ../src/xviewer-preferences-dialog.c:125
 #, c-format
@@ -1086,6 +1037,10 @@ msgstr "Lóðrétt"
 msgid "Both"
 msgstr "Bæði"
 
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "Stærð"
+
 #: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "_Breidd:"
@@ -1113,10 +1068,6 @@ msgstr "Tommur"
 #: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "Forskoðun"
-
-#: ../src/xviewer-properties-dialog.c:745
-msgid "Show the folder which contains this file in the file manager"
-msgstr "Sýna möppuna sem inniheldur þessa skrá í skráarstjóra"
 
 #: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
@@ -1161,21 +1112,21 @@ msgstr " (ógilt Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:542
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i mynddíll  %s    %i%%"
 msgstr[1] "%i × %i mynddílar  %s    %i%%"
 
-#: ../src/xviewer-window.c:887 ../src/xviewer-window.c:2573
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Fela"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:897
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1184,36 +1135,36 @@ msgstr ""
 "Myndini \"%s\" var breytt af öðru forriti.\n"
 "Viltu endurhlaða henni inn?"
 
+#: ../src/xviewer-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr "Nota „%s“ til að opna myndina sem er valin"
+
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1135
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Vista myndina „%s“ (%u/%u)"
 
-#: ../src/xviewer-window.c:1539
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Opna mynd \"%s\""
 
-#: ../src/xviewer-window.c:1823
+#: ../src/xviewer-window.c:1898
 msgid "_Leave Fullscreen"
 msgstr "_Hætta í skjáfylli"
 
-#: ../src/xviewer-window.c:1829
-#| msgid "_Leave Fullscreen"
-msgid "Leave fullscreen mode"
-msgstr "Hætta í skjáfylli"
-
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:1943
+#: ../src/xviewer-window.c:2030
 msgid "Viewing a slideshow"
 msgstr "Skoðun skyggnusýninga"
 
-#: ../src/xviewer-window.c:2162
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1222,17 +1173,27 @@ msgstr ""
 "Villa við að prenta skrána:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2522 ../src/xviewer-window.c:2537
+#: ../src/xviewer-window.c:2558
+msgid "Toolbar Editor"
+msgstr "Breyta verkfærastikunni"
+
+#: ../src/xviewer-window.c:2561
+msgid "_Reset to Default"
+msgstr "_Endurstilla"
+
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "Villa við að ræsa kerfisstillingar: "
 
-#: ../src/xviewer-window.c:2571
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "_Opna kjörstillingar fyrir bakgrunn"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2587
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1241,11 +1202,11 @@ msgstr ""
 "Myndin \"%s\" hefur verið sett sem bakgrunnur skjáborðsins\n"
 "Viltu breyta framsetningu hennar?"
 
-#: ../src/xviewer-window.c:3068
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "Vista mynd á tölvunni..."
 
-#: ../src/xviewer-window.c:3146
+#: ../src/xviewer-window.c:3352
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1254,7 +1215,7 @@ msgstr ""
 "Ertu viss um að þú viljir fjarlægja\n"
 "\"%s\" endanlega?"
 
-#: ../src/xviewer-window.c:3149
+#: ../src/xviewer-window.c:3355
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1269,41 +1230,41 @@ msgstr[1] ""
 "Ertu viss um að þú viljir fjarlægja\n"
 "endanlega %d valdar myndir?"
 
-#: ../src/xviewer-window.c:3171 ../src/xviewer-window.c:3437
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
 msgid "_Delete"
 msgstr "_Eyða"
 
-#: ../src/xviewer-window.c:3174 ../src/xviewer-window.c:3439
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
 msgid "_Yes"
 msgstr "_Já"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3178 ../src/xviewer-window.c:3431
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
 msgid "Do _not ask again during this session"
 msgstr "Ekki spyrja aftur í þessari setu"
 
-#: ../src/xviewer-window.c:3222
+#: ../src/xviewer-window.c:3428
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Ekki tókst að ná í myndskrá"
 
-#: ../src/xviewer-window.c:3238
+#: ../src/xviewer-window.c:3444
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Ekki tókst að ná í upplýsingar úr myndskrá"
 
-#: ../src/xviewer-window.c:3254 ../src/xviewer-window.c:3498
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Gat ekki eytt skrá"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3304 ../src/xviewer-window.c:3598
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Villa við að eyða mynd %s"
 
-#: ../src/xviewer-window.c:3399
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1312,14 +1273,15 @@ msgstr ""
 "Ert þú viss um að þú viljir flytja\n"
 "\"%s\" í ruslið?"
 
-#: ../src/xviewer-window.c:3402
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr ""
+"Ruslmappa fyrir \"%s\" fannst ekki. Viltu eyða þessari mynd varanlega?"
 
-#: ../src/xviewer-window.c:3407
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1334,49 +1296,352 @@ msgstr[1] ""
 "Ert þú viss um að þú viljir flytja\n"
 "%d valdar mynd í ruslið?"
 
-#: ../src/xviewer-window.c:3412
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
-"Sumt af myndunum er ekki hægt að setja í ruslið og verður því endanlega eytt. "
-"Ertu viss um að þú viljir halda áfram?"
+"Sumt af myndunum er ekki hægt að setja í ruslið og verður því endanlega "
+"eytt. Ertu viss um að þú viljir halda áfram?"
 
-#: ../src/xviewer-window.c:3476 ../src/xviewer-window.c:3490
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
+msgid "Move to _Trash"
+msgstr "_Henda í ruslið"
+
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Fékk ekki aðgang að ruslinu."
 
-#: ../src/xviewer-window.c:4156
-#| msgid "Print image to the printer"
-msgid "Fit the image to the window"
-msgstr "Láta myndina passa í gluggann"
+#: ../src/xviewer-window.c:4045
+msgid "_Image"
+msgstr "_Mynd"
 
-#: ../src/xviewer-window.c:4163 ../src/xviewer-window.c:4209
-#| msgid "Reload current image"
-msgid "Shrink or enlarge the current image"
-msgstr "Stækka eða minnka myndina"
+#: ../src/xviewer-window.c:4046
+msgid "_Edit"
+msgstr "Sýs_l"
 
-#: ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4048
+msgid "_Go"
+msgstr "_Fara"
+
+#: ../src/xviewer-window.c:4049
+msgid "_Tools"
+msgstr "_Verkfæri"
+
+#: ../src/xviewer-window.c:4052
+msgid "_Open…"
+msgstr "_Opna…"
+
+#: ../src/xviewer-window.c:4053
+msgid "Open a file"
+msgstr "Opna skrá"
+
+#: ../src/xviewer-window.c:4056
+msgid "Close window"
+msgstr "Loka glugga"
+
+#: ../src/xviewer-window.c:4058
+msgid "T_oolbar"
+msgstr "_Verkfærastika"
+
+#: ../src/xviewer-window.c:4059
+msgid "Edit the application toolbar"
+msgstr "Breyta verkfærastiku forritsins"
+
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr "Kjörstillingar myndaskoðara"
+
+#: ../src/xviewer-window.c:4064
+msgid "_Contents"
+msgstr "_Innihald"
+
+#: ../src/xviewer-window.c:4065
+msgid "Help on this application"
+msgstr "Skoða hjálp fyrir þetta forrit"
+
+#: ../src/xviewer-window.c:4068
+msgid "About this application"
+msgstr "Um þetta forrit"
+
+#: ../src/xviewer-window.c:4074
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr "Breytir sýnileika verkfærastiku í þessum glugga"
+
+#: ../src/xviewer-window.c:4077
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr "Breytir sýnileika stöðustiku í þessum glugga"
+
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
+msgstr "Breytir sýnileika myndasafnsspjalds í þessum glugga"
+
+#: ../src/xviewer-window.c:4083
+msgid "Changes the visibility of the side pane in the current window"
+msgstr "Breytir sýnileika hliðarspjalds í þessum glugga"
+
+#: ../src/xviewer-window.c:4089
+msgid "Save changes in currently selected images"
+msgstr "Vista breytingar í völdum myndum"
+
+#: ../src/xviewer-window.c:4091
+msgid "Open _with"
+msgstr "Opna _með"
+
+#: ../src/xviewer-window.c:4092
+msgid "Open the selected image with a different application"
+msgstr "Opna myndina sem er valin með öðru forriti"
+
+#: ../src/xviewer-window.c:4095
+msgid "Save the selected images with a different name"
+msgstr "Vista valdar myndir undir öðru nafni"
+
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr "Birta umlykjandi _möppu"
+
+#: ../src/xviewer-window.c:4100
+msgid "_Print…"
+msgstr "_Prenta..."
+
+#: ../src/xviewer-window.c:4101
+msgid "Print the selected image"
+msgstr "Prenta myndina sem er valin út"
+
+#: ../src/xviewer-window.c:4103
+msgid "Prope_rties"
+msgstr "_Eiginleikar"
+
+#: ../src/xviewer-window.c:4104
+msgid "Show the properties and metadata of the selected image"
+msgstr "Birta eiginleika og lýsigögn hjá völdum myndum"
+
+#: ../src/xviewer-window.c:4106
+msgid "_Undo"
+msgstr "Aft_urkalla"
+
+#: ../src/xviewer-window.c:4107
+msgid "Undo the last change in the image"
+msgstr "Kalla aftur síðustu breytingu á myndinni"
+
+#: ../src/xviewer-window.c:4109
+msgid "Flip _Horizontal"
+msgstr "Velta Lá_rétt"
+
+#: ../src/xviewer-window.c:4110
+msgid "Mirror the image horizontally"
+msgstr "Spegla myndinni lárétt"
+
+#: ../src/xviewer-window.c:4112
+msgid "Flip _Vertical"
+msgstr "Velta _Lóðrétt"
+
+#: ../src/xviewer-window.c:4113
+msgid "Mirror the image vertically"
+msgstr "Spegla myndinni lóðrétt"
+
+#: ../src/xviewer-window.c:4115
+msgid "_Rotate Clockwise"
+msgstr "Snúa _réttsælis"
+
+#: ../src/xviewer-window.c:4116
+msgid "Rotate the image 90 degrees to the right"
+msgstr "Snúa myndinni 90 gráður til hægri"
+
+#: ../src/xviewer-window.c:4118
+msgid "Rotate Counterc_lockwise"
+msgstr "Snúa rangsæ_lis"
+
+#: ../src/xviewer-window.c:4119
+msgid "Rotate the image 90 degrees to the left"
+msgstr "Snúa myndinni 90 gráður til vinstri"
+
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr "Setja sem bakgrunnsmynd"
+
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr "Nota valda mynd sem bakgrunn skjáborðsins"
+
+#: ../src/xviewer-window.c:4125
+msgid "Move the selected image to the trash folder"
+msgstr "Henda valinni skrá í ruslið"
+
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr "_Eyða mynd"
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr "Eyða valinni mynd"
+
+#: ../src/xviewer-window.c:4130
+msgid "_Copy"
+msgstr "_Afrita"
+
+#: ../src/xviewer-window.c:4131
+msgid "Copy the selected image to the clipboard"
+msgstr "Afrita valda mynd á klippispjaldið"
+
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
+msgid "_Zoom In"
+msgstr "Renna _að"
+
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
+msgid "Enlarge the image"
+msgstr "Stækka myndina"
+
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
+msgid "Zoom _Out"
+msgstr "Renna _frá"
+
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
+msgid "Shrink the image"
+msgstr "Minnka myndina"
+
+#: ../src/xviewer-window.c:4139
+msgid "_Normal Size"
+msgstr "_Venjuleg stærð"
+
+#: ../src/xviewer-window.c:4140
+msgid "Show the image at its normal size"
+msgstr "Sýna myndinni í venjulegri stærð"
+
+#: ../src/xviewer-window.c:4157
+msgid "_Fullscreen"
+msgstr "_Heilskjár"
+
+#: ../src/xviewer-window.c:4158
 #| msgid "Open in fullscreen mode"
 msgid "Show the current image in fullscreen mode"
 msgstr "Láta þessa mynd fylla allan skjáinn"
 
-#: ../src/xviewer-window.c:4338
-msgid "Properties"
-msgstr "Eiginleikar"
+#: ../src/xviewer-window.c:4160
+msgid "Pause Slideshow"
+msgstr "Gera hlé á myndasýningu"
 
-#: ../src/xviewer-window.c:5478
-msgid "The GNOME image viewer."
-msgstr "GNOME myndaskoðarinn."
+#: ../src/xviewer-window.c:4161
+msgid "Pause or resume the slideshow"
+msgstr "Gera hlé eða halda áfram með myndasýningu"
 
-#: ../src/xviewer-window.c:5481
-msgid "translator-credits"
-msgstr "Sveinn í Felli, sv1@fellsnet.is, 2015"
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
+msgstr "_Passar best"
 
-#: ../src/main.c:56
-msgid "GNOME Image Viewer"
-msgstr "GNOME myndarýnir"
+#: ../src/xviewer-window.c:4164
+#| msgid "Print image to the printer"
+msgid "Fit the image to the window"
+msgstr "Láta myndina passa í gluggann"
+
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
+msgid "_Previous Image"
+msgstr "Fy_rri mynd"
+
+#: ../src/xviewer-window.c:4170
+msgid "Go to the previous image of the gallery"
+msgstr "Fara á fyrri mynd í safninu"
+
+#: ../src/xviewer-window.c:4172
+msgid "_Next Image"
+msgstr "_Næsta mynd"
+
+#: ../src/xviewer-window.c:4173
+msgid "Go to the next image of the gallery"
+msgstr "Fara á næstu mynd í safninu"
+
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
+msgid "_First Image"
+msgstr "_Fyrsta mynd"
+
+#: ../src/xviewer-window.c:4176
+#| msgid "Go to the next image of the gallery"
+msgid "Go to the first image of the gallery"
+msgstr "Fara á fyrstu myndina í safninu"
+
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
+msgid "_Last Image"
+msgstr "_Síðasta mynd"
+
+#: ../src/xviewer-window.c:4179
+#| msgid "Go to the next image of the gallery"
+msgid "Go to the last image of the gallery"
+msgstr "Fara á síðustu myndina í safninu"
+
+#: ../src/xviewer-window.c:4181
+msgid "_Random Image"
+msgstr "Slem_bin mynd"
+
+#: ../src/xviewer-window.c:4182
+msgid "Go to a random image of the gallery"
+msgstr "Birta tilviljanakennda mynd úr safninu"
+
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr "S_kyggnusýning"
+
+#: ../src/xviewer-window.c:4341
+msgid "Start a slideshow view of the images"
+msgstr "Skoða myndinar í skyggnusýningu"
+
+#: ../src/xviewer-window.c:4413
+msgid "Previous"
+msgstr "Fyrri"
+
+#: ../src/xviewer-window.c:4418
+msgid "Next"
+msgstr "Næsta"
+
+#: ../src/xviewer-window.c:4425
+msgid "Right"
+msgstr "Hægri"
+
+#: ../src/xviewer-window.c:4428
+msgid "Left"
+msgstr "Vinstri"
+
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr "Birta möppu"
+
+#: ../src/xviewer-window.c:4434
+msgid "In"
+msgstr "Inn"
+
+#: ../src/xviewer-window.c:4437
+msgid "Out"
+msgstr "Út"
+
+#: ../src/xviewer-window.c:4440
+msgid "Normal"
+msgstr "Venjulegt"
+
+#: ../src/xviewer-window.c:4443
+msgid "Fit"
+msgstr "Passa"
+
+#: ../src/xviewer-window.c:4446
+msgid "Gallery"
+msgstr "Myndasafn"
+
+#: ../src/xviewer-window.c:4463
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "Rusl"
+
+#: ../src/xviewer-window.c:4829
+#, c-format
+msgid "Edit the current image using %s"
+msgstr "Breyta þessari mynd með %s"
+
+#: ../src/xviewer-window.c:4831
+msgid "Edit Image"
+msgstr "Breyta myndinni"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
@@ -1415,337 +1680,3 @@ msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Keyrðu '%s --help' til að sjá lista með öllum mögulegum valkostum "
 "skipanalínunnar."
-
-#~ msgid "_View"
-#~ msgstr "S_koða"
-
-#~ msgid "View many different types of images"
-#~ msgstr "Skoða margar mismunandi gerðir af myndum"
-
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "<b>Image Interpolation</b>"
-#~ msgstr "<b>Innreikningur myndar</b>"
-
-#, fuzzy
-#~ msgid "Saving Image"
-#~ msgstr "Vista mynd"
-
-#, fuzzy
-#~ msgid "Show _next image automatically after:"
-#~ msgstr ""
-#~ "Sýna næstu mynd sjálfkrafa:\n"
-#~ "(0 til slá frá)"
-
-#, fuzzy
-#~ msgid "_Browse"
-#~ msgstr "_Loka"
-
-#, fuzzy
-#~ msgid "_Interpolate image on zoom"
-#~ msgstr "Innreikna mynd"
-
-#~ msgid "Open images in a new window"
-#~ msgstr "Opna myndir í nýjum glugga"
-
-#~ msgid "Show/hide the window toolbar."
-#~ msgstr "Sýna/fela tólstiku"
-
-#, fuzzy
-#~ msgid ""
-#~ "Whether opening an image should create a new window instead of replacing "
-#~ "the image in the current window."
-#~ msgstr ""
-#~ "Hvort að opna eigi mynd í nýjum glugga í stað fyrir að útskipta mynd í "
-#~ "núverandi glugga."
-
-#~ msgid "All Images"
-#~ msgstr "Allar Myndir"
-
-#~ msgid "empty file"
-#~ msgstr "tóm skrá"
-
-#~ msgid "File exists"
-#~ msgstr "Skráin er þegar til"
-
-#~ msgid "Filename"
-#~ msgstr "Skráarnafn"
-
-#~ msgid "Attribute"
-#~ msgstr "Egind"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "_Skrá"
-
-#, fuzzy
-#~ msgid "Cancel saving ..."
-#~ msgstr "Hætta við vistun"
-
-#, fuzzy
-#~ msgid "Comment"
-#~ msgstr "_Innihald"
-
-#, fuzzy
-#~ msgid "Second"
-#~ msgstr "sek"
-
-#~ msgid "Xviewer"
-#~ msgstr "Xviewer"
-
-#, fuzzy
-#~ msgid "File exists. Do you want to overwrite it?"
-#~ msgstr "Viltu yfirskrifa %s?"
-
-#~ msgid "_File"
-#~ msgstr "_Skrá"
-
-#~ msgid "_Edit"
-#~ msgstr "Sýs_l"
-
-#~ msgid "_New"
-#~ msgstr "_Nýtt"
-
-#~ msgid "Open a new window"
-#~ msgstr "Opna nýjan glugga"
-
-#~ msgid "_Open..."
-#~ msgstr "_Opna..."
-
-#~ msgid "Open a file"
-#~ msgstr "Opna skrá"
-
-#, fuzzy
-#~ msgid "Open _Directory..."
-#~ msgstr "_Opna Möppu..."
-
-#~ msgid "Open a directory"
-#~ msgstr "Opna Möppu"
-
-#~ msgid "Close window"
-#~ msgstr "Loka glugga"
-
-#, fuzzy
-#~ msgid "Preferences for Xviewer"
-#~ msgstr "Stillingar fyrir xviewer íhluti"
-
-#~ msgid "_Contents"
-#~ msgstr "_Innihald"
-
-#~ msgid "Help On this application"
-#~ msgstr "Skoða hjálp fyrir þetta forrit"
-
-#~ msgid "_Toolbar"
-#~ msgstr "_Tólstika"
-
-#~ msgid "_Undo"
-#~ msgstr "Aft_urkalla"
-
-#~ msgid "Flip _Horizontal"
-#~ msgstr "Velta Lá_rétt"
-
-#~ msgid "Flip _Vertical"
-#~ msgstr "Velta _Lóðrétt"
-
-#, fuzzy
-#~ msgid "Rotat_e 180°"
-#~ msgstr "Snúa um 180 grá_ður"
-
-#, fuzzy
-#~ msgid ""
-#~ "You are about to open %i windows simultaneously. Do you want to open them "
-#~ "in a collection instead?"
-#~ msgstr ""
-#~ "Þú ert við það að opna %i glugga samtímis. Viltu opna þá sem í staðin sem "
-#~ "safn?"
-
-#~ msgid "Open multiple single windows?"
-#~ msgstr "Opna marga einstaka glugga?"
-
-#~ msgid "Single Windows"
-#~ msgstr "Einstakir gluggar"
-
-#, fuzzy
-#~ msgid "File not found."
-#~ msgid_plural "Files not found."
-#~ msgstr[0] "Skrá(r) fannst/fundust ekki"
-#~ msgstr[1] "Skrá(r) fannst/fundust ekki"
-
-#~ msgid "XVIEWER Image Collection Viewer"
-#~ msgstr "XVIEWER safnmyndarýnir"
-
-#~ msgid "XVIEWER Image collection view factory"
-#~ msgstr "Versmiðja XVIEWER safnmyndarýnis"
-
-#, fuzzy
-#~ msgid "View as I_mage Collection"
-#~ msgstr "Myndasafn"
-
-#, fuzzy
-#~ msgid "View as Image Collection"
-#~ msgstr "Myndasafn"
-
-#~ msgid "Saving finished"
-#~ msgstr "Vistun lokið"
-
-#~ msgid "Collection View"
-#~ msgstr "Safnsýn"
-
-#~ msgid "Images: %i/%i"
-#~ msgstr "Myndir: %i/%i"
-
-#~ msgid "Window Title"
-#~ msgstr "Titill glugga"
-
-#~ msgid "Status Text"
-#~ msgstr "Tilkynningartexti"
-
-#~ msgid "Progress of Image Loading"
-#~ msgstr "Staða á hleðslu myndar"
-
-#~ msgid "XVIEWER Image viewer factory"
-#~ msgstr "Verksmiðja XVIEWER myndarýnis"
-
-#~ msgid "Embeddable XVIEWER Image"
-#~ msgstr "Innfelld XVIEWER mynd"
-
-#~ msgid "Images can only be saved as local files."
-#~ msgstr "Myndir er einungis hægt að vista sem staðbundar skrár."
-
-#~ msgid "Page"
-#~ msgstr "Síða"
-
-#  First page of notebook: Paper selection and margins.
-#~ msgid "Paper"
-#~ msgstr "Pappír"
-
-#~ msgid "Adjust to "
-#~ msgstr "Stillla að"
-
-#~ msgid "Cutting help"
-#~ msgstr "Aðstoð við klippingar"
-
-#~ msgid "Down, then right"
-#~ msgstr "Niður, og svo til hægri"
-
-#~ msgid "Fit to page"
-#~ msgstr "Falla að síðustærð"
-
-#~ msgid "Horizontally by "
-#~ msgstr "Lárétt um"
-
-#~ msgid "Margins"
-#~ msgstr "Spássíur"
-
-#~ msgid "Ordering help"
-#~ msgstr "Aðstoð við uppröðun"
-
-#~ msgid "Overlap"
-#~ msgstr "Skörun"
-
-#~ msgid "Overlap help"
-#~ msgstr "Aðstoð við skörun"
-
-#~ msgid "Page order"
-#~ msgstr "Síðuuppröðun"
-
-#~ msgid "Right, then down"
-#~ msgstr "Niður, og svo til hægri"
-
-#~ msgid "Scale"
-#~ msgstr "Skali"
-
-#~ msgid "Show"
-#~ msgstr "Sýna"
-
-#~ msgid "Vertically by "
-#~ msgstr "Lóðrétt um"
-
-#~ msgid "The name of the file or data to print"
-#~ msgstr "Nafn skráar eða gangs sem á að prenta"
-
-#~ msgid "New"
-#~ msgstr "Nýtt"
-
-#~ msgid "Open in new window"
-#~ msgstr "Opna í nýjum glugga"
-
-#~ msgid "Quit the program"
-#~ msgstr "Hætta í forritinu"
-
-#~ msgid "translator_credits-PLEASE_ADD_YOURSELF_HERE"
-#~ msgstr "Samúel Jón Gunnarsson  <sammi@techattack.nu>"
-
-#~ msgid "Fit"
-#~ msgstr "Passa"
-
-#~ msgid "In"
-#~ msgstr "Inn"
-
-#~ msgid "Normal"
-#~ msgstr "Venjulegt"
-
-#~ msgid "Out"
-#~ msgstr "Út"
-
-#~ msgid "Full Screen"
-#~ msgstr "Heilskjásýn"
-
-#~ msgid "Previews the image to be printed"
-#~ msgstr "Sýnir forsýn fyrir þá mynd sem á að prenta"
-
-#~ msgid "Print Previe_w..."
-#~ msgstr "Pren_taraforsýn..."
-
-#~ msgid "Rotate Left"
-#~ msgstr "Snúa til visnstri"
-
-#~ msgid "Rotate Right"
-#~ msgstr "Snúa til hægri"
-
-#~ msgid "Setup the page settings for your current printer"
-#~ msgstr "Stilla pappírsstærðir fyrir prentarann þinn"
-
-#~ msgid "/Rotate C_lockwise"
-#~ msgstr "/Snúa til _hægri"
-
-#~ msgid "/Rotate Counte_r Clockwise"
-#~ msgstr "/Snúa til _vinstri"
-
-#~ msgid "/_Zoom In"
-#~ msgstr "/_Súma inn"
-
-#~ msgid "/Zoom _Out"
-#~ msgstr "/Súma ú_t"
-
-#~ msgid "/_Normal Size"
-#~ msgstr "/Ve_njuleg Stærð"
-
-#~ msgid "/Best _Fit"
-#~ msgstr "/Besta _Snið"
-
-#~ msgid "/_Close"
-#~ msgstr "/_Loka"
-
-#~ msgid "Loading of image %s failed."
-#~ msgstr "Hleðsla myndar %s mistókst."
-
-#~ msgid ""
-#~ "Loading of image %s failed.\n"
-#~ "Reason: %s."
-#~ msgstr ""
-#~ "Hleðsla myndar %s mistókst.\n"
-#~ "Ástæða: %s."
-
-#~ msgid "Image successfully saved"
-#~ msgstr "Vistun myndar tókst"
-
-#~ msgid "Statusbar Text"
-#~ msgstr "Texti tólstiku"
-
-#~ msgid "Desired Window Width"
-#~ msgstr "Ósk um breidd glugga"
-
-#~ msgid "Desired Window Height"
-#~ msgstr "Ósk um hæð glugga"

@@ -12,15 +12,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-09 00:07+0200\n"
-"PO-Revision-Date: 2014-02-24 07:51+0100\n"
-"Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
-"Language: ca-XV\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: ca-XV\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -62,36 +64,36 @@ msgstr "Suprimeix la barra d'eines seleccionada"
 msgid "Separator"
 msgstr "Separador"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4038
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
 msgstr "_Visualitza"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4064
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
 msgid "_Toolbar"
 msgstr "Barra d'_eines"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4067
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "Barra d'e_stat"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4070
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "Col·lecció d'_imatges"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4073
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "_Subfinestra lateral"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4052
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "Preferè_ncies"
 
-#: ../data/xviewer-app-menu.xml.h:7 ../src/xviewer-window.c:2565
-#: ../src/xviewer-window.c:4041
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4058
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
 msgid "_About"
 msgstr "_Quant a"
 
@@ -101,29 +103,23 @@ msgstr "S_urt"
 
 #: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
-"Xviewer is the official image viewer for the GNOME desktop. It "
-"integrates with the GTK+ look and feel of GNOME, and supports many image "
-"formats for viewing single images or images in a collection."
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
 msgstr ""
-"L'Xviewer és el visualitzador d'imatges oficial per a l'escriptori "
-"GNOME. S'integra amb l'aparença GTK+ del GNOME i és compatible amb molts "
-"formats d'imatge per a la visualització d'imatges independents o "
-"col·leccions d'imatges."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
-"Xviewer also allows to view the images in a fullscreen slideshow "
-"mode or set an image as the desktop wallpaper. It reads the camera tags to "
-"automatically rotate your images in the correct portrait or landscape "
-"orientation."
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
 msgstr ""
 "L'Xviewer també permet visualitzar les imatges en mode de presentació a "
 "pantalla completa o establir una imatge com a fons d'escriptori. Llig les "
 "etiquetes de la càmera per girar automàticament les imatges en l'orientació "
 "vertical o horitzontal."
 
-#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:291
-#: ../src/xviewer-window.c:6163
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Visualitzador d'imatges"
 
@@ -136,7 +132,7 @@ msgstr "Navegueu per imatges i gireu-les"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Fotografia;Diapositives;Gràfics;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5039
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Propietats de la imatge"
 
@@ -149,111 +145,117 @@ msgid "_Next"
 msgstr "_Següent"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../src/xviewer-metadata-sidebar.c:494
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "_Tanca"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
 msgid "Name:"
 msgstr "Nom:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:5
-#: ../src/xviewer-metadata-sidebar.c:496
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
 msgid "Width:"
 msgstr "Amplada:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:6
-#: ../src/xviewer-metadata-sidebar.c:498
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
 msgid "Height:"
 msgstr "Alçada:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:7
-#: ../src/xviewer-metadata-sidebar.c:500
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "Tipus:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
 msgstr "Bytes:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-#: ../src/xviewer-metadata-sidebar.c:504
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "Carpeta:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:492
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "General"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-#: ../src/xviewer-metadata-sidebar.c:529
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "Valor de l'obertura:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:532
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "Temps d'exposició:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:535
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "Longitud focal:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:537
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "Flaix:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:541
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "Valoració ISO de la velocitat:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:544
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "Mode de mesurament:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:547
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "Model de la càmera:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:549
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "Data i hora:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:554
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "Descripció:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:557
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "Ubicació:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:560
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "Paraules clau:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:562
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "Autor:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:565
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "Copyright:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:568
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "Detalls"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:525
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "Metadades"
 
@@ -265,7 +267,8 @@ msgstr "Anomena i guarda"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3367 ../src/xviewer-window.c:3370 ../src/xviewer-window.c:3621
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
@@ -328,85 +331,85 @@ msgstr "Previsualització del nom del fitxer"
 msgid "Preferences"
 msgstr "Preferències"
 
-#: ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
 msgstr "Millores de la imatge"
 
-#: ../data/xviewer-preferences-dialog.ui.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:5
 msgid "Smooth images when zoomed _out"
 msgstr "Suavitza les imatges en _reduir-les"
 
-#: ../data/xviewer-preferences-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:6
 msgid "Smooth images when zoomed _in"
 msgstr "Suavitza les imatges en _ampliar-les"
 
-#: ../data/xviewer-preferences-dialog.ui.h:5
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "Orientació _automàtica"
 
-#: ../data/xviewer-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
 msgstr "Fons"
 
-#: ../data/xviewer-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "As custom color:"
 msgstr "Com a color personalitzat:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:8
+#: ../data/xviewer-preferences-dialog.ui.h:10
 #: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Color de fons"
 
-#: ../data/xviewer-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
 msgstr "Parts transparents"
 
-#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "Com a _patró de quadrats"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "Com a c_olor personalitzat:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "Color per a àrees transparents"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
 msgstr "Com a _fons"
 
-#: ../data/xviewer-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "Visualització de la imatge"
 
-#: ../data/xviewer-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
 msgstr "Ampliació de la imatge"
 
-#: ../data/xviewer-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
 msgstr "Ajusta totes les imatges a la _pantalla"
 
-#: ../data/xviewer-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
 msgstr "Seqüència"
 
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "_Temps entre imatges:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "Seqüència en buc_le"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
 msgstr "Projecció de diapositives"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
 msgstr "Connectors"
 
@@ -417,7 +420,8 @@ msgstr "Orientació automàtica"
 #: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr "Si la imatge s'ha de girar automàticament d'acord amb les dades EXIF."
+msgstr ""
+"Si la imatge s'ha de girar automàticament d'acord amb les dades EXIF."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
@@ -489,10 +493,10 @@ msgid ""
 "a 100% zoom increment."
 msgstr ""
 "El factor de multiplicació que s'ha d'aplicar quan es faça servir la rodeta "
-"del ratolí per ampliar o reduir. Este valor defineix el pas d'ampliació/"
-"reducció que es farà a cada esdeveniment de la rodeta. Per exemple, 0.05 "
-"significa que a cada esdeveniment de rodeta s'ampliarà o es reduirà un 5%, "
-"1.00 serà una ampliació/reducció del 100%."
+"del ratolí per ampliar o reduir. Este valor defineix el pas "
+"d'ampliació/reducció que es farà a cada esdeveniment de la rodeta. Per "
+"exemple, 0.05 significa que a cada esdeveniment de rodeta s'ampliarà o es "
+"reduirà un 5%, 1.00 serà una ampliació/reducció del 100%."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
@@ -577,7 +581,8 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
-msgstr "Si s'ha de poder redimensionar la subfinestra de col·lecció d'imatges."
+msgstr ""
+"Si s'ha de poder redimensionar la subfinestra de col·lecció d'imatges."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
@@ -600,13 +605,13 @@ msgstr "Envia les imatges a la paperera sense confirmar"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
 msgstr ""
-"Si està activat, l'Xviewer no sol·licitarà confirmació en enviar "
-"imatges a la paperera. Tot i això, la demanarà si algun dels fitxers no es "
-"pot enviar a la paperera i s'ha de suprimir."
+"Si està activat, l'Xviewer no sol·licitarà confirmació en enviar imatges a "
+"la paperera. Tot i això, la demanarà si algun dels fitxers no es pot enviar "
+"a la paperera i s'ha de suprimir."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
@@ -669,8 +674,8 @@ msgstr "Connectors actius"
 #: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
 msgstr ""
 "Llista de connectors actius. No conté la «Location» (ubicació) dels "
 "connectors actius. Vegeu el fitxer .xviewer-plugin per obtindre la "
@@ -707,8 +712,8 @@ msgstr "Mostra la data de la imatge a la barra d'estat"
 msgid "Close _without Saving"
 msgstr "Tanca _sense guardar"
 
-#: ../src/xviewer-close-confirmation-dialog.c:178 ../src/xviewer-file-chooser.c:465
-#: ../src/xviewer-window.c:4079
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
 msgid "_Save"
 msgstr "Al_ça"
 
@@ -720,12 +725,12 @@ msgstr "Pregunta"
 msgid "If you don't save, your changes will be lost."
 msgstr "Es perdran els canvis si no els guardeu."
 
-#: ../src/xviewer-close-confirmation-dialog.c:428
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Abans de tancar voleu guardar els canvis a la imatge «%s»?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:635
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -737,12 +742,12 @@ msgstr[1] ""
 "Hi ha %d imatges que té canvis sense guardar. Voleu guardar-los abans de "
 "tancar?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:652
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "S_eleccioneu les imatges que voleu guardar:"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:671
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "Es perdran tots els canvis si no els guardeu."
 
@@ -751,7 +756,7 @@ msgstr "Es perdran tots els canvis si no els guardeu."
 msgid "_Reload"
 msgstr "_Torna a carregar"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4085
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "_Anomena i guarda…"
 
@@ -895,9 +900,10 @@ msgid "Supported image files"
 msgstr "Fitxers d'imatge"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:231
-#: ../src/xviewer-metadata-sidebar.c:235 ../src/xviewer-properties-dialog.c:134
-#: ../src/xviewer-properties-dialog.c:136 ../src/xviewer-thumb-view.c:515
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "píxel"
@@ -966,16 +972,17 @@ msgstr "No s'ha pogut crear el fitxer temporal per guardar: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "No s'ha pogut assignar memòria per carregar el fitxer JPEG"
 
-#: ../src/xviewer-metadata-sidebar.c:244 ../src/xviewer-properties-dialog.c:151
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: ../src/xviewer-metadata-sidebar.c:502
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "File size:"
 msgstr "Mida del fitxer:"
 
-#: ../src/xviewer-metadata-sidebar.c:518 ../src/xviewer-properties-dialog.c:703
-#: ../src/xviewer-window.c:4089
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Mostra la carpeta que conté este fitxer en el gestor de fitxers"
 
@@ -990,91 +997,92 @@ msgstr[1] "%lu segons"
 msgid "Image Settings"
 msgstr "Paràmetres de la imatge"
 
-#: ../src/xviewer-print-image-setup.c:902
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "Imatge"
 
-#: ../src/xviewer-print-image-setup.c:903
+#: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
-msgstr "La imatge de la qual se'n configuraran les propietats de la impressió"
+msgstr ""
+"La imatge de la qual se'n configuraran les propietats de la impressió"
 
-#: ../src/xviewer-print-image-setup.c:909
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr "Configuració de la pàgina"
 
-#: ../src/xviewer-print-image-setup.c:910
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr "La informació de la pàgina on s'imprimirà la imatge"
 
-#: ../src/xviewer-print-image-setup.c:936
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "Posició"
 
-#: ../src/xviewer-print-image-setup.c:940
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "_Esquerra:"
 
-#: ../src/xviewer-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "_Dreta:"
 
-#: ../src/xviewer-print-image-setup.c:943
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "_Superior:"
 
-#: ../src/xviewer-print-image-setup.c:944
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr "_Inferior:"
 
-#: ../src/xviewer-print-image-setup.c:947
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "_Centre:"
 
-#: ../src/xviewer-print-image-setup.c:952
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "Cap"
 
-#: ../src/xviewer-print-image-setup.c:954
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "Horitzontal"
 
-#: ../src/xviewer-print-image-setup.c:956
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../src/xviewer-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "Ambdós"
 
-#: ../src/xviewer-print-image-setup.c:974
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "Mida"
 
-#: ../src/xviewer-print-image-setup.c:977
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "_Amplada:"
 
-#: ../src/xviewer-print-image-setup.c:979
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "A_lçària:"
 
-#: ../src/xviewer-print-image-setup.c:982
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr "_Escalat:"
 
-#: ../src/xviewer-print-image-setup.c:993
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr "_Unitat:"
 
-#: ../src/xviewer-print-image-setup.c:998
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr "Mil·límetres"
 
-#: ../src/xviewer-print-image-setup.c:1000
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "Polzades"
 
-#: ../src/xviewer-print-image-setup.c:1029
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "Previsualització"
 
@@ -1097,11 +1105,11 @@ msgstr "com està"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:543
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "Presa al"
 
-#: ../src/xviewer-uri-converter.c:980
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Hi ha dos noms de fitxer iguals com a mínim."
@@ -1127,7 +1135,7 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i píxel  %s    %i%%"
 msgstr[1] "%i × %i píxels  %s    %i%%"
 
-#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2784
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Oculta"
@@ -1189,23 +1197,19 @@ msgstr "Editor de la barra d'eines"
 msgid "_Reset to Default"
 msgstr "_Reinicia als predeterminats"
 
-#: ../src/xviewer-window.c:2563 ../src/xviewer-window.c:4046
-msgid "_Close"
-msgstr "_Tanca"
-
-#: ../src/xviewer-window.c:2731 ../src/xviewer-window.c:2746
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "S'ha produït un error en iniciar els paràmetres del sistema: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2782
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "Obri les preferències del _fons de pantalla"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2798
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1214,11 +1218,11 @@ msgstr ""
 "S'ha establit la imatge «%s» com a fons d'escriptori.\n"
 "Voleu modificar-ne l'aparença?"
 
-#: ../src/xviewer-window.c:3265
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "S'està guardant la imatge en local…"
 
-#: ../src/xviewer-window.c:3343
+#: ../src/xviewer-window.c:3352
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1227,7 +1231,7 @@ msgstr ""
 "Segur de voler suprimir\n"
 "«%s»?"
 
-#: ../src/xviewer-window.c:3346
+#: ../src/xviewer-window.c:3355
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1242,41 +1246,41 @@ msgstr[1] ""
 "Segur que voleu moure les\n"
 "%d imatges seleccionades a la paperera?"
 
-#: ../src/xviewer-window.c:3368 ../src/xviewer-window.c:3632
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
 msgid "_Delete"
 msgstr "_Suprimeix"
 
-#: ../src/xviewer-window.c:3371 ../src/xviewer-window.c:3634
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
 msgid "_Yes"
 msgstr "_Sí"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3375 ../src/xviewer-window.c:3626
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
 msgid "Do _not ask again during this session"
 msgstr "No _ho tornes a demanar en esta sessió"
 
-#: ../src/xviewer-window.c:3419
+#: ../src/xviewer-window.c:3428
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "No s'ha pogut recuperar el fitxer d'imatge"
 
-#: ../src/xviewer-window.c:3435
+#: ../src/xviewer-window.c:3444
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "No s'ha pogut recuperar la informació del fitxer d'imatge"
 
-#: ../src/xviewer-window.c:3451 ../src/xviewer-window.c:3693
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
 #, c-format
 msgid "Couldn't delete file"
 msgstr "No s'ha pogut suprimir el fitxer"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3501 ../src/xviewer-window.c:3789
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "S'ha produït un error en eliminar la imatge %s"
 
-#: ../src/xviewer-window.c:3594
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1285,7 +1289,7 @@ msgstr ""
 "Esteu segur de voler moure\n"
 "«%s» a la paperera?"
 
-#: ../src/xviewer-window.c:3597
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1294,7 +1298,7 @@ msgstr ""
 "No s'ha pogut trobar una paperera per a «%s». Voleu suprimir esta imatge "
 "permanentment?"
 
-#: ../src/xviewer-window.c:3602
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1309,7 +1313,7 @@ msgstr[1] ""
 "Esteu segur que voleu moure les\n"
 "%d imatges seleccionades a la paperera?"
 
-#: ../src/xviewer-window.c:3607
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1317,355 +1321,344 @@ msgstr ""
 "No es poden moure a la paperera algunes de les imatges seleccionades, de "
 "manera que se suprimiran permanentment. Segur que voleu continuar?"
 
-#: ../src/xviewer-window.c:3624 ../src/xviewer-window.c:4115 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "Mou a la _paperera"
 
-#: ../src/xviewer-window.c:3671 ../src/xviewer-window.c:3685
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "No s'ha pogut accedir a la paperera."
 
-#: ../src/xviewer-window.c:4036
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Imatge"
 
-#: ../src/xviewer-window.c:4037
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/xviewer-window.c:4039
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "_Vés"
 
-#: ../src/xviewer-window.c:4040
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "_Eines"
 
-#: ../src/xviewer-window.c:4043
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "_Obri…"
 
-#: ../src/xviewer-window.c:4044
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Obri un fitxer"
 
-#: ../src/xviewer-window.c:4047
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Tanca la finestra"
 
-#: ../src/xviewer-window.c:4049
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "Barra d'_eines"
 
-#: ../src/xviewer-window.c:4050
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Edita la barra d'eines de l'aplicació"
 
-#: ../src/xviewer-window.c:4053
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "Preferències del visualitzador d'imatges"
 
-#: ../src/xviewer-window.c:4055
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: ../src/xviewer-window.c:4056
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Ajuda per a esta aplicació"
 
-#: ../src/xviewer-window.c:4059
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Quant a esta aplicació"
 
-#: ../src/xviewer-window.c:4065
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Canvia la visibilitat de la barra d'eines de la finestra actual"
 
-#: ../src/xviewer-window.c:4068
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Canvia la visibilitat de la barra d'estat de la finestra actual"
 
-#: ../src/xviewer-window.c:4071
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 "Canvia la visibilitat de la subfinestra de col·lecció d'imatges de la "
 "finestra actual"
 
-#: ../src/xviewer-window.c:4074
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
-msgstr "Canvia la visibilitat de la subfinestra lateral en la finestra actual"
+msgstr ""
+"Canvia la visibilitat de la subfinestra lateral en la finestra actual"
 
-#: ../src/xviewer-window.c:4080
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "Guarda els canvis de les imatges seleccionades"
 
-#: ../src/xviewer-window.c:4082
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "Obri a_mb"
 
-#: ../src/xviewer-window.c:4083
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "Obri la imatge seleccionada amb una aplicació diferent"
 
-#: ../src/xviewer-window.c:4086
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "Guarda les imatges seleccionades amb un nom diferent"
 
-#: ../src/xviewer-window.c:4088
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "Mostra la _carpeta contenidora"
 
-#: ../src/xviewer-window.c:4091
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "_Imprimeix…"
 
-#: ../src/xviewer-window.c:4092
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "Imprimeix la imatge seleccionada"
 
-#: ../src/xviewer-window.c:4094
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "P_ropietats"
 
-#: ../src/xviewer-window.c:4095
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "Mostra les propietats i les metadades de la imatge seleccionada"
 
-#: ../src/xviewer-window.c:4097
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Desfés"
 
-#: ../src/xviewer-window.c:4098
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "Desfés l'últim canvi a la imatge"
 
-#: ../src/xviewer-window.c:4100
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "Inverteix _horitzontalment"
 
-#: ../src/xviewer-window.c:4101
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "Capgira horitzontalment la imatge"
 
-#: ../src/xviewer-window.c:4103
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "Inverteix _verticalment"
 
-#: ../src/xviewer-window.c:4104
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "Capgira verticalment la imatge"
 
-#: ../src/xviewer-window.c:4106
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "_Gira cap a la dreta"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Gira la imatge 90 graus en sentit horari"
 
-#: ../src/xviewer-window.c:4109
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "Gira cap a _l'esquerra"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Gira la imatge 90 graus en sentit antihorari"
 
-#: ../src/xviewer-window.c:4112
+#: ../src/xviewer-window.c:4121
 msgid "Set as Wa_llpaper"
 msgstr "Estableix com a _fons d'escriptori"
 
-#: ../src/xviewer-window.c:4113
+#: ../src/xviewer-window.c:4122
 msgid "Set the selected image as the wallpaper"
 msgstr "Estableix la imatge seleccionada com a fons d'escriptori"
 
-#: ../src/xviewer-window.c:4116
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "Mou la imatge seleccionada a la paperera"
 
-#: ../src/xviewer-window.c:4118
+#: ../src/xviewer-window.c:4127
 msgid "_Delete Image"
 msgstr "_Suprimeix la imatge"
 
-#: ../src/xviewer-window.c:4119
+#: ../src/xviewer-window.c:4128
 msgid "Delete the selected image"
 msgstr "Suprimeix la imatge seleccionada"
 
-#: ../src/xviewer-window.c:4121
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "_Copia"
 
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "Copia l'element seleccionat al porta-retalls"
 
-#: ../src/xviewer-window.c:4124 ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4136
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "A_mplia"
 
-#: ../src/xviewer-window.c:4125 ../src/xviewer-window.c:4134
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "Amplia la imatge"
 
-#: ../src/xviewer-window.c:4127 ../src/xviewer-window.c:4139
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Re_dueix"
 
-#: ../src/xviewer-window.c:4128 ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4140
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "Encongeix la imatge"
 
-#: ../src/xviewer-window.c:4130
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "Mida _normal"
 
-#: ../src/xviewer-window.c:4131
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "Mostra la imatge en la seua mida normal"
 
-#: ../src/xviewer-window.c:4148
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "Pantalla _completa"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "Mostra la imatge actual en mode pantalla completa"
 
-#: ../src/xviewer-window.c:4151
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "Fes una pausa a la projecció de diapositives"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "Fes una pausa o reprén la projecció de diapositives"
 
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "Millor a_just"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "Ajusta la imatge a la finestra"
 
-#: ../src/xviewer-window.c:4160 ../src/xviewer-window.c:4175
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "Imatge _prèvia"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "Vés a la imatge prèvia de la col·lecció"
 
-#: ../src/xviewer-window.c:4163
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "Imatge _següent"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "Vés a la imatge següent de la col·lecció"
 
-#: ../src/xviewer-window.c:4166 ../src/xviewer-window.c:4178
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "P_rimera imatge"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "Vés a la primera imatge de la col·lecció"
 
-#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "_Darrera imatge"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "Vés a l'última imatge de la col·lecció"
 
 # Ha de ser indeterminat (josep)
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "Imatge _aleatòria"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "Vés a una imatge aleatòria de la col·lecció"
 
-#: ../src/xviewer-window.c:4331
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "Projecció de _diapositives"
 
-#: ../src/xviewer-window.c:4332
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "Inicia una projecció de les imatges"
 
-#: ../src/xviewer-window.c:4404
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Prèvia"
 
-#: ../src/xviewer-window.c:4409
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Següent"
 
-#: ../src/xviewer-window.c:4416
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Dreta"
 
-#: ../src/xviewer-window.c:4419
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Esquerra"
 
-#: ../src/xviewer-window.c:4422
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "Mostra la carpeta"
 
-#: ../src/xviewer-window.c:4425
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Apropa"
 
-#: ../src/xviewer-window.c:4428
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Allunya"
 
-#: ../src/xviewer-window.c:4431
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/xviewer-window.c:4434
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Ajusta"
 
-#: ../src/xviewer-window.c:4437
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "Col·lecció d'imatges"
 
-#: ../src/xviewer-window.c:4454
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Llença-la a la paperera"
 
-#: ../src/xviewer-window.c:4820
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Edita la imatge actual amb el %s"
 
-#: ../src/xviewer-window.c:4822
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "Edita la imatge"
-
-#: ../src/xviewer-window.c:6166
-msgid "The GNOME image viewer."
-msgstr "El visualitzador d'imatges del GNOME."
-
-#: ../src/xviewer-window.c:6169
-msgid "translator-credits"
-msgstr ""
-"Softcatalà <tradgnome@softcatala.org>\n"
-"Jordi Mallach <jordi@sindominio.net>\n"
-"Jordi Mas i Hernàndez <jmas@softcatala.org>"
-
-# Xviewer és un nom propi. jm
-#: ../src/main.c:56
-msgid "GNOME Image Viewer"
-msgstr "Visualitzador d'imatges del GNOME"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
@@ -1705,6 +1698,3 @@ msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Executeu «%s --help» per veure la llista completa d'opcions disponibles de "
 "la línia d'ordes."
-
-#~ msgid "_About Image Viewer"
-#~ msgstr "_Quant al visualitzador d'imatges"

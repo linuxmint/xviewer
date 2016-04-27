@@ -11,16 +11,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-24 04:32+0000\n"
-"PO-Revision-Date: 2014-03-28 07:33+0100\n"
-"Last-Translator: Rune Karlsson <kraputsniq@live.com>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-10 21:13+0000\n"
+"Last-Translator: kristian <Unknown>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
-"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: sv\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -62,44 +66,36 @@ msgstr "Ta bort markerad verktygsrad"
 msgid "Separator"
 msgstr "Avgränsare"
 
-#: ../data/xviewer-app-menu.xml.h:1
-#: ../src/xviewer-window.c:4038
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
 msgstr "_Visa"
 
-#: ../data/xviewer-app-menu.xml.h:2
-#: ../src/xviewer-window.c:4064
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
 msgid "_Toolbar"
 msgstr "_Verktygsrad"
 
-#: ../data/xviewer-app-menu.xml.h:3
-#: ../src/xviewer-window.c:4067
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "_Statusrad"
 
-#: ../data/xviewer-app-menu.xml.h:4
-#: ../src/xviewer-window.c:4070
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "Bil_dgalleri"
 
-#: ../data/xviewer-app-menu.xml.h:5
-#: ../src/xviewer-window.c:4073
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "Sido_panel"
 
-#: ../data/xviewer-app-menu.xml.h:6
-#: ../src/xviewer-window.c:4052
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "_Inställningar"
 
-#: ../data/xviewer-app-menu.xml.h:7
-#: ../src/xviewer-window.c:2565
-#: ../src/xviewer-window.c:4041
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../data/xviewer-app-menu.xml.h:8
-#: ../src/xviewer-window.c:4058
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
 msgid "_About"
 msgstr "_Om"
 
@@ -108,16 +104,25 @@ msgid "_Quit"
 msgstr "_Avsluta"
 
 #: ../data/xviewer.appdata.xml.in.h:1
-msgid "Xviewer is the official image viewer for the GNOME desktop. It integrates with the GTK+ look and feel of GNOME, and supports many image formats for viewing single images or images in a collection."
-msgstr "Xviewer är den officiella bildvisaren för GNOME-skrivbordet. Den integrerar med utseendet och känslan GTK+ i GNOME, och stöder många bildformat för visning av enstaka bilder eller hela bildsamlingar."
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+"Xviewer är en bildvisare som stöder många format. Den kan användas för att "
+"visa enskilda bilder eller bilder i en bildkollektion."
 
 #: ../data/xviewer.appdata.xml.in.h:2
-msgid "Xviewer also allows to view the images in a fullscreen slideshow mode or set an image as the desktop wallpaper. It reads the camera tags to automatically rotate your images in the correct portrait or landscape orientation."
-msgstr "Xviewer kan också visa bilderna som ett bildspel i helskärmsläge eller använda en bild som skrivbordsbakgrund. Bildvisaren läser av kamerataggarna för att automatiskt rotera dina bilder till stående eller liggande format."
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+"Xviewer kan också visa bilderna som ett bildspel i helskärmsläge eller "
+"använda en bild som skrivbordsbakgrund. Bildvisaren läser av kamerataggarna "
+"för att automatiskt rotera dina bilder till stående eller liggande format."
 
-#: ../data/xviewer.desktop.in.in.h:1
-#: ../src/xviewer-application.c:269
-#: ../src/xviewer-window.c:6163
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Bildvisare"
 
@@ -130,8 +135,7 @@ msgstr "Bläddra och rotera bilder"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Bild;Bildspel;Grafik;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1
-#: ../src/xviewer-window.c:5039
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Bildegenskaper"
 
@@ -144,111 +148,117 @@ msgid "_Next"
 msgstr "_Nästa"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../src/xviewer-metadata-sidebar.c:495
-msgid "Name:"
-msgstr "Namn:"
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "S_täng"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:5
 #: ../src/xviewer-metadata-sidebar.c:497
-msgid "Width:"
-msgstr "Bredd:"
+msgid "Name:"
+msgstr "Namn:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:6
 #: ../src/xviewer-metadata-sidebar.c:499
-msgid "Height:"
-msgstr "Höjd:"
+msgid "Width:"
+msgstr "Bredd:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:7
 #: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "Höjd:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "Typ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
 msgstr "Byte:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-#: ../src/xviewer-metadata-sidebar.c:505
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "Mapp:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:493
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "Allmänt"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-#: ../src/xviewer-metadata-sidebar.c:530
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "Bländarvärde:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:533
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "Exponeringstid:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:536
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "Brännvidd:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:538
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "Blixt:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:542
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "ISO-känslighet:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:545
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "Mätarläge:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:548
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "Kameramodell:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:550
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "Datum/tid:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:555
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "Beskrivning:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:558
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "Plats:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:561
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "Nyckelord:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:563
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "Upphovsman:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:566
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "Copyright:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:569
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:526
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "Metadata"
 
@@ -256,57 +266,72 @@ msgstr "Metadata"
 msgid "Save As"
 msgstr "Spara som"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "_Avbryt"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+#| msgid "Save As"
+msgid "Save _As"
+msgstr "Spara so_m"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> ursprungligt filnamn"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> räknare"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 #| msgid "Filename format:"
 msgid "_Filename format:"
 msgstr "_Filnamnsformat:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 #| msgid "Destination folder:"
 msgid "_Destination folder:"
 msgstr "_Målmapp:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "Välj en mapp"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "Specifikationer för filsökväg"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 #| msgid "Start counter at:"
 msgid "_Start counter at:"
 msgstr "_Starta räknare vid:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 #| msgid "Replace spaces with underscores"
 msgid "_Replace spaces with underscores"
 msgstr "E_rsätt blanksteg med understreck"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "Alternativ"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "Byt namn från:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "Till:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
 msgstr "Förhandsvisning av filnamn"
 
@@ -314,88 +339,88 @@ msgstr "Förhandsvisning av filnamn"
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
 msgstr "Bildförbättringar"
 
-#: ../data/xviewer-preferences-dialog.ui.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:5
 #| msgid "Smooth images when zoomed-_out"
 msgid "Smooth images when zoomed _out"
 msgstr "Mjuka upp bilder när de är _utzoomade"
 
-#: ../data/xviewer-preferences-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:6
 #| msgid "Smooth images when zoomed-_in"
 msgid "Smooth images when zoomed _in"
 msgstr "Mjuka upp bilder när de är _inzoomade"
 
-#: ../data/xviewer-preferences-dialog.ui.h:5
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "_Automatisk orientering"
 
-#: ../data/xviewer-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
 msgstr "Bakgrund"
 
-#: ../data/xviewer-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "As custom color:"
 msgstr "Som anpassad färg:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:8
+#: ../data/xviewer-preferences-dialog.ui.h:10
 #: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
-#: ../data/xviewer-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
 msgstr "Genomskinliga delar"
 
-#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "Som rut_mönster"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "Som anpassad f_ärg:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "Färg för genomskinliga områden"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
 msgstr "Som _bakgrund"
 
-#: ../data/xviewer-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "Bildvy"
 
-#: ../data/xviewer-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
 msgstr "Bildzoomning"
 
-#: ../data/xviewer-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
 msgstr "E_xpandera bilder till att passa skärmen"
 
-#: ../data/xviewer-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
 msgstr "Sekvens"
 
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "_Tid mellan bilderna:"
 
 # Osäker
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "_Slingsekvens"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
 msgstr "Bildspel"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
 msgstr "Insticksmoduler"
 
@@ -404,36 +429,57 @@ msgid "Automatic orientation"
 msgstr "Automatisk orientering"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:2
-msgid "Whether the image should be rotated automatically based on EXIF orientation."
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Huruvida bilden ska automatiskt roteras baserat på EXIF-orientering."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:4
-msgid "The color that is used to fill the area behind the image. If the use-background-color key is not set, the color is determined by the active GTK+ theme instead."
-msgstr "Färgen som används för att fylla området bakom bilden. Om nyckeln use-background-color inte har ställts in så kommer färgen bestämmas av det aktuella GTK+-temat istället."
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+"Färgen som används för att fylla området bakom bilden. Om nyckeln use-"
+"background-color inte har ställts in så kommer färgen bestämmas av det "
+"aktuella GTK+-temat istället."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Interpolera bild"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:6
-msgid "Whether the image should be interpolated on zoom-out. This leads to better quality but is somewhat slower than non-interpolated images."
-msgstr "Huruvida bilden ska interpoleras vid utzoomning. Detta leder till bättre kvalitet men är något långsammare än icke-interpolerade bilder."
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Huruvida bilden ska interpoleras vid utzoomning. Detta leder till bättre "
+"kvalitet men är något långsammare än icke-interpolerade bilder."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "Extrapolera bild"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:8
-msgid "Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images."
-msgstr "Huruvida bilden ska extrapoleras vid inzoomning. Detta leder till suddig kvalitet och är något långsammare än icke-extrapolerade bilder."
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Huruvida bilden ska extrapoleras vid inzoomning. Detta leder till suddig "
+"kvalitet och är något långsammare än icke-extrapolerade bilder."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "Genomskinlighetsindikator"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:10
-msgid "Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used."
-msgstr "Bestämmer hur genomskinlighet ska indikeras. Giltiga värden är CHECK_PATTERN, COLOR och NONE. Om COLOR väljs avgör nyckeln trans-color det färgvärde som används."
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"Bestämmer hur genomskinlighet ska indikeras. Giltiga värden är "
+"CHECK_PATTERN, COLOR och NONE. Om COLOR väljs avgör nyckeln trans-color det "
+"färgvärde som används."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
@@ -449,24 +495,41 @@ msgstr "Zoomfaktor"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
-msgid "The multiplier to be applied when using the mouse scroll wheel for zooming. This value defines the zooming step used for each scroll event. For example, 0.05 results in a 5% zoom increment for each scroll event and 1.00 result in a 100% zoom increment."
-msgstr "Faktorn som används för zoom med musens rullhjul. Det här värdet definierar zoomsteget som används för varje rullhändelse. Till exempel betyder 0.05 en zoomökning på 5% för varje rullhändelse och 1.00 betyder 100% zoomökning."
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+"Faktorn som används för zoom med musens rullhjul. Det här värdet definierar "
+"zoomsteget som används för varje rullhändelse. Till exempel betyder 0.05 en "
+"zoomökning på 5% för varje rullhändelse och 1.00 betyder 100% zoomökning."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Genomskinlighetsfärg"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:17
-msgid "If the transparency key has the value COLOR, then this key determines the color which is used for indicating transparency."
-msgstr "Om genomskinlighetsnyckeln har värdet COLOR avgör denna nyckel den färg som används för att indikera genomskinlighet."
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"Om genomskinlighetsnyckeln har värdet COLOR avgör denna nyckel den färg som "
+"används för att indikera genomskinlighet."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Använd en anpassad bakgrundsfärg"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:19
-msgid "If this is active, the color set by the background-color key will be used to fill the area behind the image. If it is not set, the current GTK+ theme will determine the fill color."
-msgstr "Om denna är aktiv så kommer färgen som ställts in i nyckeln background-color att användas för att fylla området bakom bilden. Om den inte är inställd så kommer det aktuella GTK+-temat att bestämma fyllnadsfärgen."
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"Om denna är aktiv så kommer färgen som ställts in i nyckeln background-color "
+"att användas för att fylla området bakom bilden. Om den inte är inställd så "
+"kommer det aktuella GTK+-temat att bestämma fyllnadsfärgen."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
@@ -482,16 +545,24 @@ msgid "Allow zoom greater than 100% initially"
 msgstr "Tillåt zoomning större än 100% i början"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:24
-msgid "If this is set to FALSE small images will not be stretched to fit into the screen initially."
-msgstr "Om detta är satt till FALSKT kommer små bilder inte att sträckas för att passa skärmen i början."
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Om detta är satt till FALSKT kommer små bilder inte att sträckas för att "
+"passa skärmen i början."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "Fördröjning i sekunder till nästa bild visas"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:26
-msgid "A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "Ett värde större än 0 avgör antalet sekunder en bild blir kvar på skärmen till nästa bild automatiskt visas. Noll inaktiverar automatisk bläddring."
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Ett värde större än 0 avgör antalet sekunder en bild blir kvar på skärmen "
+"till nästa bild automatiskt visas. Noll inaktiverar automatisk bläddring."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
@@ -506,8 +577,12 @@ msgid "Show/Hide the image gallery pane."
 msgstr "Visa/dölj bildgalleripanelen."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:30
-msgid "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 for right."
-msgstr "Positionen för bildgalleripanelen. Ställ in till 0 för nederkant; 1 för vänster; 2 för överkant; 3 för höger."
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"Positionen för bildgalleripanelen. Ställ in till 0 för nederkant; 1 för "
+"vänster; 2 för överkant; 3 för höger."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
@@ -530,40 +605,80 @@ msgid "Trash images without asking"
 msgstr "Kasta bilder i papperskorgen utan att fråga"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:36
-msgid "If activated, Xviewer won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead."
-msgstr "Om aktiverad så kommer inte Xviewer att fråga efter bekräftelse när bilder flyttas till papperskorgen. Den kommer dock att fråga om någon av filerna inte kan flyttas till papperskorgen och om de ska tas bort istället."
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"Om aktiverad så kommer inte Xviewer att fråga efter bekräftelse när bilder "
+"flyttas till papperskorgen. Den kommer dock att fråga om någon av filerna "
+"inte kan flyttas till papperskorgen och om de ska tas bort istället."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
-msgid "Whether the file chooser should show the user's pictures folder if no images are loaded."
-msgstr "Huruvida filväljaren ska visa användarens bildmapp om inga bilder har lästs in."
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+"Huruvida filväljaren ska visa användarens bildmapp om inga bilder har lästs "
+"in."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:38
-msgid "If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory."
-msgstr "Om aktiverad och ingen bild har lästs in i det aktiva fönstret så kommer filväljaren att visa användarens bildmapp med hjälp av speciella XDG-användarkataloger. Om inaktiverad eller om bildmappen inte har ställts in så kommer den aktuella arbetskatalogen att visas."
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+"Om aktiverad och ingen bild har lästs in i det aktiva fönstret så kommer "
+"filväljaren att visa användarens bildmapp med hjälp av speciella XDG-"
+"användarkataloger. Om inaktiverad eller om bildmappen inte har ställts in så "
+"kommer den aktuella arbetskatalogen att visas."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:39
-msgid "Whether the metadata list in the properties dialog should have its own page."
-msgstr "Huruvida listan över metadata i egenskapsdialogen ska ha sin egna sida."
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+"Huruvida listan över metadata i egenskapsdialogen ska ha sin egna sida."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:40
-msgid "If activated, the detailed metadata list in the properties dialog will be moved to its own page in the dialog. This should make the dialog more usable on smaller screens, e.g. as used by netbooks. If disabled, the widget will be embedded on the \"Metadata\" page."
-msgstr "Om aktiverad så kommer listan över detaljerad metadata i egenskapsdialogen att flyttas till sin egna sida i dialogrutan. Detta bör göra dialogrutan mer användbar på mindre skärmar, t.ex. som används av ultraportabla datorer. Om inaktiverad så kommer widgeten att bäddas in i \"Metadata\"-sidan."
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"Om aktiverad så kommer listan över detaljerad metadata i egenskapsdialogen "
+"att flyttas till sin egna sida i dialogrutan. Detta bör göra dialogrutan mer "
+"användbar på mindre skärmar, t.ex. som används av ultraportabla datorer. Om "
+"inaktiverad så kommer widgeten att bäddas in i \"Metadata\"-sidan."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Externa program att använda för att redigera bilder"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:42
-msgid "The desktop file name (including the \".desktop\") of the application to use for editing images (when the \"Edit Image\" toolbar button is clicked). Set to the empty string to disable this feature."
-msgstr "Skrivbordsfilnamnet (inklusive \".desktop\") av programmet att använda för att redigera bilder (när verktygsradsknappen \"Redigera bild\" klickas). Ställ in till en tom sträng för att inaktivera denna funktion."
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"Skrivbordsfilnamnet (inklusive \".desktop\") av programmet att använda för "
+"att redigera bilder (när verktygsradsknappen \"Redigera bild\" klickas). "
+"Ställ in till en tom sträng för att inaktivera denna funktion."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "Aktiva insticksmoduler"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:44
-msgid "List of active plugins. It doesn't contain the \"Location\" of the active plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given plugin."
-msgstr "Lista över aktiva insticksmoduler. Den innehåller inte \"Location\" för de aktiva insticksmodulerna. Se filen .xviewer-plugin för hur man tar fram \"Location\" för en viss insticksmodul."
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+"Lista över aktiva insticksmoduler. Den innehåller inte \"Location\" för de "
+"aktiva insticksmodulerna. Se filen .xviewer-plugin för hur man tar fram "
+"\"Location\" för en viss insticksmodul."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -595,27 +710,10 @@ msgstr "Visar bildens datum i fönsterstatusraden."
 msgid "Close _without Saving"
 msgstr "Stäng _utan att spara"
 
-#: ../src/xviewer-close-confirmation-dialog.c:172
-#: ../src/xviewer-error-message-area.c:119
-#: ../src/xviewer-file-chooser.c:456
-#: ../src/xviewer-file-chooser.c:464
-#: ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3367
-#: ../src/xviewer-window.c:3370
-#: ../src/xviewer-window.c:3621
-msgid "_Cancel"
-msgstr "_Avbryt"
-
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465
-#: ../src/xviewer-window.c:4079
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
 msgid "_Save"
 msgstr "_Spara"
-
-#: ../src/xviewer-close-confirmation-dialog.c:184
-#| msgid "Save As"
-msgid "Save _As"
-msgstr "Spara so_m"
 
 #: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
@@ -625,34 +723,36 @@ msgstr "Fråga"
 msgid "If you don't save, your changes will be lost."
 msgstr "Om du inte sparar så kommer dina ändringar att gå förlorade."
 
-#: ../src/xviewer-close-confirmation-dialog.c:428
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Spara ändringar i bilden \"%s\" innan stängning?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:635
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
-msgid_plural "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "Det finns %d bild med osparade ändringar. Spara ändringarna innan stängning?"
-msgstr[1] "Det finns %d bilder med osparade ändringar. Spara ändringarna innan stängning?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"Det finns %d bild med osparade ändringar. Spara ändringarna innan stängning?"
+msgstr[1] ""
+"Det finns %d bilder med osparade ändringar. Spara ändringarna innan "
+"stängning?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:652
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "_Markera bilderna som du vill spara:"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:671
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "Om du inte sparar så kommer alla dina ändringar att gå förlorade."
 
-#: ../src/xviewer-error-message-area.c:124
-#: ../src/xviewer-window.c:847
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "_Läs om"
 
-#: ../src/xviewer-error-message-area.c:129
-#: ../src/xviewer-window.c:4085
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "Spara so_m..."
 
@@ -741,8 +841,7 @@ msgid "South"
 msgstr "Syd"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:120
-#: ../src/xviewer-exif-util.c:160
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
@@ -771,8 +870,12 @@ msgid "File format is unknown or unsupported"
 msgstr "Filformatet är okänt eller stöds inte"
 
 #: ../src/xviewer-file-chooser.c:124
-msgid "Image Viewer could not determine a supported writable file format based on the filename."
-msgstr "Bildvisare kunde inte fastställa ett skrivbart filformat som stöds baserat på filnamnet."
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Bildvisare kunde inte fastställa ett skrivbart filformat som stöds baserat "
+"på filnamnet."
 
 #: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
@@ -793,19 +896,16 @@ msgid "Supported image files"
 msgstr "Bildfiler som stöds"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:289
-#: ../src/xviewer-metadata-sidebar.c:232
-#: ../src/xviewer-metadata-sidebar.c:236
-#: ../src/xviewer-properties-dialog.c:134
-#: ../src/xviewer-properties-dialog.c:136
-#: ../src/xviewer-thumb-view.c:515
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "bildpunkt"
 msgstr[1] "bildpunkter"
 
-#: ../src/xviewer-file-chooser.c:457
-#: ../src/xviewer-file-chooser.c:473
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
 #| msgid "_Open…"
 msgid "_Open"
 msgstr "_Öppna"
@@ -832,30 +932,27 @@ msgstr "Transformering på oinläst bild."
 msgid "Transformation failed."
 msgstr "Transformering misslyckades."
 
-#: ../src/xviewer-image.c:1116
+#: ../src/xviewer-image.c:1138
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF stöds inte för detta filformat."
 
-#: ../src/xviewer-image.c:1265
+#: ../src/xviewer-image.c:1287
 #, c-format
 msgid "Image loading failed."
 msgstr "Bildinläsning misslyckades."
 
-#: ../src/xviewer-image.c:1846
-#: ../src/xviewer-image.c:1966
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
 #, c-format
 msgid "No image loaded."
 msgstr "Ingen bild inläst."
 
-#: ../src/xviewer-image.c:1854
-#: ../src/xviewer-image.c:1975
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "Du har inte den behörighet som krävs för att spara filen."
 
-#: ../src/xviewer-image.c:1864
-#: ../src/xviewer-image.c:1986
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Skapandet av temporär fil misslyckades."
@@ -870,23 +967,22 @@ msgstr "Kunde inte skapa temporär fil för sparande: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Kunde inte allokera minne för inläsning av JPEG-fil"
 
-#: ../src/xviewer-metadata-sidebar.c:245
-#: ../src/xviewer-properties-dialog.c:151
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "Okänt"
 
-#: ../src/xviewer-metadata-sidebar.c:503
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "File size:"
 msgstr "Filstorlek:"
 
-#: ../src/xviewer-metadata-sidebar.c:519
-#: ../src/xviewer-properties-dialog.c:666
-#: ../src/xviewer-window.c:4089
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Visa mappen som innehåller denna fil i filhanteraren"
 
 # Antar att detta är i sammanhanget "...every [] seconds"
-#: ../src/xviewer-preferences-dialog.c:109
+#: ../src/xviewer-preferences-dialog.c:125
 #, c-format
 #| msgctxt "PrefDlgSlideSwitchPostfix"
 #| msgid "seconds"
@@ -899,91 +995,91 @@ msgstr[1] "%lu sekunder"
 msgid "Image Settings"
 msgstr "Bildinställningar"
 
-#: ../src/xviewer-print-image-setup.c:902
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "Bild"
 
-#: ../src/xviewer-print-image-setup.c:903
+#: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
 msgstr "Bilden vars utskriftsegenskaper ska konfigureras"
 
-#: ../src/xviewer-print-image-setup.c:909
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr "Sidinställningar"
 
-#: ../src/xviewer-print-image-setup.c:910
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr "Informationen för sidan där bilden kommer att skrivas ut"
 
-#: ../src/xviewer-print-image-setup.c:936
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "Position"
 
-#: ../src/xviewer-print-image-setup.c:940
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "_Vänster:"
 
-#: ../src/xviewer-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "_Höger:"
 
-#: ../src/xviewer-print-image-setup.c:943
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "Ö_verkant:"
 
-#: ../src/xviewer-print-image-setup.c:944
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr "_Nederkant:"
 
-#: ../src/xviewer-print-image-setup.c:947
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "C_entrum:"
 
-#: ../src/xviewer-print-image-setup.c:952
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "Ingen"
 
-#: ../src/xviewer-print-image-setup.c:954
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "Horisontellt"
 
-#: ../src/xviewer-print-image-setup.c:956
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "Vertikalt"
 
-#: ../src/xviewer-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "Båda"
 
-#: ../src/xviewer-print-image-setup.c:974
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "Storlek"
 
-#: ../src/xviewer-print-image-setup.c:977
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "_Bredd:"
 
-#: ../src/xviewer-print-image-setup.c:979
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "_Höjd:"
 
-#: ../src/xviewer-print-image-setup.c:982
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr "_Skalning:"
 
-#: ../src/xviewer-print-image-setup.c:993
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr "_Enhet:"
 
-#: ../src/xviewer-print-image-setup.c:998
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr "Millimeter"
 
-#: ../src/xviewer-print-image-setup.c:1000
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "Tum"
 
-#: ../src/xviewer-print-image-setup.c:1029
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "Förhandsgranska"
 
@@ -1006,11 +1102,11 @@ msgstr "som det är"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:543
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "Taget den"
 
-#: ../src/xviewer-uri-converter.c:980
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Minst två filnamn är identiska."
@@ -1036,8 +1132,7 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i bildpunkt  %s    %i%%"
 msgstr[1] "%i × %i bildpunkter  %s    %i%%"
 
-#: ../src/xviewer-window.c:849
-#: ../src/xviewer-window.c:2784
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Dö_lj"
@@ -1101,25 +1196,19 @@ msgstr "Redigerare för verktygsrad"
 msgid "_Reset to Default"
 msgstr "_Återställ till standard"
 
-#: ../src/xviewer-window.c:2563
-#: ../src/xviewer-window.c:4046
-msgid "_Close"
-msgstr "S_täng"
-
-#: ../src/xviewer-window.c:2731
-#: ../src/xviewer-window.c:2746
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "Fel vid start av systeminställningar: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2782
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "_Öppna bakgrundsinställningar"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2798
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1128,11 +1217,11 @@ msgstr ""
 "Bilden \"%s\" har ställts in som skrivbordsbakgrund.\n"
 "Vill du ändra dess utseende?"
 
-#: ../src/xviewer-window.c:3265
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "Sparar bilden lokalt..."
 
-#: ../src/xviewer-window.c:3343
+#: ../src/xviewer-window.c:3352
 #, c-format
 #| msgid ""
 #| "Are you sure you want to move\n"
@@ -1144,7 +1233,7 @@ msgstr ""
 "Är du säker att du permanent vill radera\n"
 "\"%s\"?"
 
-#: ../src/xviewer-window.c:3346
+#: ../src/xviewer-window.c:3355
 #, c-format
 #| msgid ""
 #| "Are you sure you want to move\n"
@@ -1165,49 +1254,44 @@ msgstr[1] ""
 "Är du säker att du permanent vill radera\n"
 "de %d markerade bilderna?"
 
-#: ../src/xviewer-window.c:3368
-#: ../src/xviewer-window.c:3632
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
 msgid "_Delete"
 msgstr "_Ta bort"
 
-#: ../src/xviewer-window.c:3371
-#: ../src/xviewer-window.c:3634
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
 msgid "_Yes"
 msgstr "_Ja"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3375
-#: ../src/xviewer-window.c:3626
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
 #| msgid "_Do not ask again during this session"
 msgid "Do _not ask again during this session"
 msgstr "Fråga _inte igen under denna session"
 
-#: ../src/xviewer-window.c:3419
+#: ../src/xviewer-window.c:3428
 #, c-format
 #| msgid "Couldn't delete file"
 msgid "Couldn't retrieve image file"
 msgstr "Kunde inte hämta bildfilen"
 
-#: ../src/xviewer-window.c:3435
+#: ../src/xviewer-window.c:3444
 #, c-format
 #| msgid "Couldn't create temporary file for saving: %s"
 msgid "Couldn't retrieve image file information"
 msgstr "Kunde inte hämta information om bildfilen"
 
-#: ../src/xviewer-window.c:3451
-#: ../src/xviewer-window.c:3693
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Kunde inte ta bort filen"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3501
-#: ../src/xviewer-window.c:3789
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Fel vid borttagning av bilden %s"
 
-#: ../src/xviewer-window.c:3594
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1216,12 +1300,16 @@ msgstr ""
 "Är du säker att du vill flytta\n"
 "\"%s\" till papperskorgen?"
 
-#: ../src/xviewer-window.c:3597
+#: ../src/xviewer-window.c:3606
 #, c-format
-msgid "A trash for \"%s\" couldn't be found. Do you want to remove this image permanently?"
-msgstr "En papperskorg för \"%s\" kunde inte hittas. Vill du ta bort denna bild permanent?"
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+"En papperskorg för \"%s\" kunde inte hittas. Vill du ta bort denna bild "
+"permanent?"
 
-#: ../src/xviewer-window.c:3602
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1236,376 +1324,352 @@ msgstr[1] ""
 "Är du säker att du vill flytta de\n"
 "%d markerade bilderna till papperskorgen?"
 
-#: ../src/xviewer-window.c:3607
-msgid "Some of the selected images can't be moved to the trash and will be removed permanently. Are you sure you want to proceed?"
-msgstr "Några av de markerade bilderna kan inte flyttas till papperskorgen och kommer att tas bort permanent. Är du säker på att du vill fortsätta?"
+#: ../src/xviewer-window.c:3616
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+"Några av de markerade bilderna kan inte flyttas till papperskorgen och "
+"kommer att tas bort permanent. Är du säker på att du vill fortsätta?"
 
-#: ../src/xviewer-window.c:3624
-#: ../src/xviewer-window.c:4115
-#: ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "Flytta till _papperskorgen"
 
-#: ../src/xviewer-window.c:3671
-#: ../src/xviewer-window.c:3685
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Kunde inte komma åt papperskorgen."
 
-#: ../src/xviewer-window.c:4036
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Bild"
 
-#: ../src/xviewer-window.c:4037
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "_Redigera"
 
-#: ../src/xviewer-window.c:4039
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "_Gå"
 
-#: ../src/xviewer-window.c:4040
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "Ver_ktyg"
 
-#: ../src/xviewer-window.c:4043
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "_Öppna..."
 
-#: ../src/xviewer-window.c:4044
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Öppna en fil"
 
-#: ../src/xviewer-window.c:4047
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Stäng fönster"
 
-#: ../src/xviewer-window.c:4049
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "Ve_rktygsrad"
 
-#: ../src/xviewer-window.c:4050
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Redigera programmets verktygsrad"
 
-#: ../src/xviewer-window.c:4053
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "Inställningar för Bildvisare"
 
-#: ../src/xviewer-window.c:4055
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Innehåll"
 
-#: ../src/xviewer-window.c:4056
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Hjälp för det här programmet"
 
-#: ../src/xviewer-window.c:4059
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Om det här programmet"
 
-#: ../src/xviewer-window.c:4065
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Ändrar synligheten för verktygsraden i det aktuella fönstret"
 
-#: ../src/xviewer-window.c:4068
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Ändrar synligheten för statusraden i det aktuella fönstret"
 
-#: ../src/xviewer-window.c:4071
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr "Ändrar synligheten för bildgalleripanelen i det aktuella fönstret"
 
-#: ../src/xviewer-window.c:4074
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Ändrar synligheten för sidopanelen i det aktuella fönstret"
 
-#: ../src/xviewer-window.c:4080
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "Spara ändringar i markerade bilder"
 
-#: ../src/xviewer-window.c:4082
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "Öppna _med"
 
-#: ../src/xviewer-window.c:4083
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "Öppna markerad bild med ett annat program"
 
-#: ../src/xviewer-window.c:4086
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "Spara markerade bilder med ett annat namn"
 
-#: ../src/xviewer-window.c:4088
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "Visa innehållande _mapp"
 
-#: ../src/xviewer-window.c:4091
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "Skriv _ut..."
 
-#: ../src/xviewer-window.c:4092
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "Skriv ut markerad bild"
 
-#: ../src/xviewer-window.c:4094
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "Ege_nskaper"
 
-#: ../src/xviewer-window.c:4095
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "Visa egenskaperna och metadata för markerad bild"
 
-#: ../src/xviewer-window.c:4097
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Ångra"
 
-#: ../src/xviewer-window.c:4098
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "Ångra senaste ändringen i bilden"
 
-#: ../src/xviewer-window.c:4100
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "Vänd _vågrätt"
 
-#: ../src/xviewer-window.c:4101
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "Spegla bilden horisontellt"
 
-#: ../src/xviewer-window.c:4103
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "Vänd _lodrätt"
 
-#: ../src/xviewer-window.c:4104
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "Spegla bilden vertikalt"
 
-#: ../src/xviewer-window.c:4106
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "_Rotera medurs"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Rotera bilden 90 grader åt höger"
 
-#: ../src/xviewer-window.c:4109
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotera _moturs"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Rotera bilden 90 grader åt vänster"
 
-#: ../src/xviewer-window.c:4112
+#: ../src/xviewer-window.c:4121
 #| msgid "Set As _Wallpaper"
 msgid "Set as Wa_llpaper"
 msgstr "Använd som skriv_bordsunderlägg"
 
-#: ../src/xviewer-window.c:4113
+#: ../src/xviewer-window.c:4122
 #| msgid "Set the selected image as the desktop background"
 msgid "Set the selected image as the wallpaper"
 msgstr "Använd markerad bild som skrivbordsbakgrund"
 
-#: ../src/xviewer-window.c:4116
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "Flytta markerat bild till papperskorgen"
 
-#: ../src/xviewer-window.c:4118
+#: ../src/xviewer-window.c:4127
 #| msgid "_Next Image"
 msgid "_Delete Image"
 msgstr "_Radera bild"
 
-#: ../src/xviewer-window.c:4119
+#: ../src/xviewer-window.c:4128
 #| msgid "Print the selected image"
 msgid "Delete the selected image"
 msgstr "Radera markerad bild"
 
-#: ../src/xviewer-window.c:4121
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "_Kopiera"
 
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopiera den markerade bilden till urklipp"
 
-#: ../src/xviewer-window.c:4124
-#: ../src/xviewer-window.c:4133
-#: ../src/xviewer-window.c:4136
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Zooma in"
 
-#: ../src/xviewer-window.c:4125
-#: ../src/xviewer-window.c:4134
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "Förstora bilden"
 
-#: ../src/xviewer-window.c:4127
-#: ../src/xviewer-window.c:4139
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Zooma _ut"
 
-#: ../src/xviewer-window.c:4128
-#: ../src/xviewer-window.c:4137
-#: ../src/xviewer-window.c:4140
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "Förminska bilden"
 
-#: ../src/xviewer-window.c:4130
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "_Normal storlek"
 
-#: ../src/xviewer-window.c:4131
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "Visa bilden i sin normala storlek"
 
-#: ../src/xviewer-window.c:4148
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "_Helskärmsläge"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "Visa aktuell bild i helskärmsläge"
 
-#: ../src/xviewer-window.c:4151
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "Pausa bildspelet"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "Pausa eller återuppta bildspelet"
 
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "Bästa _anpassning"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "Anpassa bilden till fönstret"
 
-#: ../src/xviewer-window.c:4160
-#: ../src/xviewer-window.c:4175
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "_Föregående bild"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "Gå till föregående bild i galleriet"
 
-#: ../src/xviewer-window.c:4163
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "_Nästa bild"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "Gå till nästa bild i galleriet"
 
-#: ../src/xviewer-window.c:4166
-#: ../src/xviewer-window.c:4178
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "_Första bilden"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "Gå till första bilden i galleriet"
 
-#: ../src/xviewer-window.c:4169
-#: ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "_Sista bilden"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "Gå till sista bilden i galleriet"
 
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "S_lumpmässig bild"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "Gå till en slumpmässig bild i galleriet"
 
-#: ../src/xviewer-window.c:4331
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "Bi_ldspel"
 
-#: ../src/xviewer-window.c:4332
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "Starta ett bildspel av bilderna"
 
-#: ../src/xviewer-window.c:4404
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Föregående"
 
-#: ../src/xviewer-window.c:4409
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Nästa"
 
-#: ../src/xviewer-window.c:4416
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Höger"
 
-#: ../src/xviewer-window.c:4419
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Vänster"
 
-#: ../src/xviewer-window.c:4422
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "Visa mapp"
 
-#: ../src/xviewer-window.c:4425
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "In"
 
-#: ../src/xviewer-window.c:4428
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Ut"
 
-#: ../src/xviewer-window.c:4431
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/xviewer-window.c:4434
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Anpassa"
 
-#: ../src/xviewer-window.c:4437
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "Galleri"
 
-#: ../src/xviewer-window.c:4454
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Papperskorg"
 
-#: ../src/xviewer-window.c:4820
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Redigera aktuell bild med %s"
 
-#: ../src/xviewer-window.c:4822
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "Redigera bild"
-
-#: ../src/xviewer-window.c:6166
-msgid "The GNOME image viewer."
-msgstr "GNOME-bildvisaren."
-
-#: ../src/xviewer-window.c:6169
-msgid "translator-credits"
-msgstr ""
-"Daniel Nylander <po@danielnylander.se>\n"
-"Christian Rose\n"
-"Martin Norbäck\n"
-"Tomas Ögren\n"
-"Andreas Hydén\n"
-"\n"
-"Skicka synpunkter om översättningen till\n"
-"<tp-sv@listor.tp-sv.se>."
-
-#: ../src/main.c:56
-msgid "GNOME Image Viewer"
-msgstr "GNOME-bildvisaren"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
@@ -1624,8 +1688,10 @@ msgid "Start a new instance instead of reusing an existing one"
 msgstr "Starta en ny instans istället för att återanvända en befintlig"
 
 #: ../src/main.c:67
-msgid "Open in a single window, if multiple windows are open the first one is used"
-msgstr "Öppna i ett enda fönster, om flera fönster öppnas så används det första"
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+"Öppna i ett enda fönster, om flera fönster öppnas så används det första"
 
 #: ../src/main.c:69
 msgid "Show the application's version"
@@ -1639,744 +1705,6 @@ msgstr "[FIL…]"
 #: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "Kör \"%s --help\" för att se en komplett lista över tillgängliga kommandoradsflaggor."
-
-#~ msgctxt "PrefDlgSlideSwitchPrefix"
-
-#~ msgid "_Switch image after:"
-#~ msgstr "_Byt bild efter:"
-
-#~ msgid "Set as _Desktop Background"
-#~ msgstr "Ange som skrivbords_bakgrund"
-
-#~ msgid "Xviewer Preferences"
-#~ msgstr "Inställningar för Xviewer"
-
-#~ msgid "Xviewer"
-#~ msgstr "Xviewer"
-
-#~ msgid "Running in fullscreen mode"
-#~ msgstr "Kör i helskärmsläge"
-
-#~ msgid "_Retry"
-#~ msgstr "_Försök igen"
-
-#~ msgid "_Slideshow"
-#~ msgstr "_Bildspel"
-
-#~ msgid "Error launching appearance preferences dialog: "
-#~ msgstr "Fel vid start av dialogrutan för utseendeinställningar: "
-
-#~ msgid "All Images"
-#~ msgstr "Alla bilder"
-
-#~ msgid "Plugin"
-#~ msgstr "Insticksmodul"
-
-#~ msgid "Enabled"
-#~ msgstr "Aktiverad"
-
-#~ msgid "C_onfigure"
-#~ msgstr "K_onfigurera"
-
-#~ msgid "A_ctivate"
-#~ msgstr "A_ktivera"
-
-#~ msgid "Ac_tivate All"
-#~ msgstr "Ak_tivera alla"
-
-#~ msgid "_Deactivate All"
-#~ msgstr "_Inaktivera alla"
-
-#~ msgid "Active _Plugins:"
-#~ msgstr "Aktiva insticks_moduler:"
-
-#~ msgid "_About Plugin"
-#~ msgstr "_Om Insticksmodul"
-
-#~ msgid "C_onfigure Plugin"
-#~ msgstr "K_onfigurera Insticksmodul"
-
-#~ msgid "Load Image"
-#~ msgstr "Läs in bild"
-
-#~ msgid ""
-#~ "This program is free software; you can redistribute it and/or modify it "
-#~ "under the terms of the GNU General Public License as published by the "
-#~ "Free Software Foundation; either version 2 of the License, or (at your "
-#~ "option) any later version.\n"
-#~ msgstr ""
-#~ "Detta program är fri programvara. Du kan distribuera det och/eller "
-#~ "modifiera det under villkoren i GNU General Public License, publicerad av "
-#~ "Free Software Foundation, antingen version 2 eller (om du så vill) någon "
-#~ "senare version.\n"
-
-#~ msgid ""
-#~ "This program is distributed in the hope that it will be useful, but "
-#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
-#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-#~ "Public License for more details.\n"
-#~ msgstr ""
-#~ "Detta program distribueras i hopp om att det ska vara användbart, men "
-#~ "UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti om "
-#~ "SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General "
-#~ "Public License för ytterligare information.\n"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program; if not, write to the Free Software Foundation, Inc., "
-#~ "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-#~ msgstr ""
-#~ "Du bör ha fått en kopia av GNU General Public License tillsammans med "
-#~ "detta program. Om inte, skriv till Free Software Foundation, Inc., 59 "
-#~ "Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-
-#~ msgid "_File"
-#~ msgstr "_Arkiv"
-
-#~ msgid "Set up the page properties for printing"
-#~ msgstr "Konfigurera sidinställningarna för utskrift"
-
-#~ msgid "Collection"
-#~ msgstr "Bildsamling"
-
-#~ msgid "<b>Details</b>"
-#~ msgstr "<b>Detaljer</b>"
-
-#~ msgid "<b>Height:</b>"
-#~ msgstr "<b>Höjd:</b>"
-
-#~ msgid "<b>Name:</b>"
-#~ msgstr "<b>Namn:</b>"
-
-#~ msgid "<b>Type:</b>"
-#~ msgstr "<b>Typ:</b>"
-
-#~ msgid "<b>Width:</b>"
-#~ msgstr "<b>Bredd:</b>"
-
-#~ msgid "<b>File Name Preview</b>"
-#~ msgstr "<b>Förhandsvisning av filnamn</b>"
-
-#~ msgid "<b>File Path Specifications</b>"
-#~ msgstr "<b>Specifikationer för filsökväg</b>"
-
-#~ msgid "<b>Options</b>"
-#~ msgstr "<b>Alternativ</b>"
-
-#~ msgid "_Open..."
-#~ msgstr "_Öppna..."
-
-#~ msgid "Save _As..."
-#~ msgstr "Spara so_m..."
-
-#~ msgid "_Print..."
-#~ msgstr "S_kriv ut..."
-
-#~ msgid "Dialogs"
-#~ msgstr "Dialogrutor"
-
-#~ msgid "File Open Dialog"
-#~ msgstr "Filöppningsdialog"
-
-#~ msgid "Image Properties Dialog"
-#~ msgstr "Bildegenskapsdialog"
-
-#~ msgid "Initially _display pictures folder if no image is loaded"
-#~ msgstr "Visa initial b_idlmapp om ingen bild har lästs in"
-
-#~ msgid "_Use layout for small screens"
-#~ msgstr "A_nvänd layout för små skärmar"
-
-#~ msgid "Open with \"%s\""
-#~ msgstr "Öppna med \"%s\""
-
-#~ msgid "Move to Trash"
-#~ msgstr "Flytta till papperskorgen"
-
-#~ msgid "Page Set_up..."
-#~ msgstr "Sid_inställningar..."
-
-#~ msgid "Only local images can be used as wallpapers"
-#~ msgstr "Endast lokala bilder kan användas som skrivbordsbakgrunder"
-
-#~ msgid ""
-#~ "To be able to set this image as your wallpaper, please save it locally in "
-#~ "your computer"
-#~ msgstr ""
-#~ "Spara den lokalt på din dator för att det ska gå att ange denna bild som "
-#~ "skrivbordsbakgrund"
-
-#, fuzzy
-#~ msgid "Error saving print settings file: %s"
-#~ msgstr ""
-#~ "Fel vid utskrift av fil:\n"
-#~ "%s"
-
-#~ msgid "File exists"
-#~ msgstr "Filen finns"
-
-#~ msgid "<b>Location:</b>\t"
-#~ msgstr "<b>Plats:</b>\t"
-
-#~ msgid "Last collection window geometry"
-#~ msgstr "Geometri för senaste bildsamlingsfönstret"
-
-#~ msgid "Last singleton window geometry"
-#~ msgstr "Geometri för senaste singleton-fönstret"
-
-#~ msgid "Open images in a new window"
-#~ msgstr "Öppna bilder i ett nytt fönster"
-
-#~ msgid ""
-#~ "Whether opening an image should create a new window instead of replacing "
-#~ "the image in the current window."
-#~ msgstr ""
-#~ "Huruvida öppnandet av en bild ska skapa ett nytt fönster istället för att "
-#~ "ersätta bilden i det aktuella fönstret."
-
-#~ msgid "The GNOME image viewing and cataloging program."
-#~ msgstr "GNOME-programmet för bildvisning och bildkatalogisering."
-
-#~ msgid "\n"
-#~ msgstr "\n"
-
-#~ msgid "%f"
-#~ msgstr "%f"
-
-#~ msgid "<b>Position</b>"
-#~ msgstr "<b>Position</b>"
-
-#~ msgid "<b>Size</b>"
-#~ msgstr "<b>Storlek</b>"
-
-#~ msgid "Bottom"
-#~ msgstr "Nederkant"
-
-#~ msgid "Image Collection"
-#~ msgstr "Bildsamling"
-
-#~ msgid "Top"
-#~ msgstr "Överkant"
-
-#~ msgid "Use fixed size"
-#~ msgstr "Använd fast storlek"
-
-#~ msgid "label"
-#~ msgstr "etikett"
-
-#~ msgid "%s x %s pixels"
-
-#~ msgid_plural "%s x %s pixels"
-#~ msgstr[0] "%s × %s bildpunkt"
-#~ msgstr[1] "%s × %s bildpunkter"
-
-#~ msgid "_Browse"
-#~ msgstr "_Bläddra"
-
-#~ msgid "Show/hide image information for collection."
-#~ msgstr "Visa/dölj bildinformation för bildsamling."
-
-#~ msgid "Show/hide image information for single image."
-#~ msgstr "Visa/dölj bildinformation för enstaka bild."
-
-#~ msgid "Filename"
-#~ msgstr "Filnamn"
-
-#~ msgid "Counter"
-#~ msgstr "Räknare"
-
-#~ msgid "Comment"
-#~ msgstr "Kommentar"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Time"
-#~ msgstr "Tid"
-
-#~ msgid "Day"
-#~ msgstr "Dag"
-
-#~ msgid "Month"
-#~ msgstr "Månad"
-
-#~ msgid "Year"
-#~ msgstr "År"
-
-#~ msgid "Hour"
-#~ msgstr "Timme"
-
-#~ msgid "Minute"
-#~ msgstr "Minut"
-
-#~ msgid "Second"
-#~ msgstr "Sekund"
-
-#~ msgid "Option not available."
-#~ msgstr "Alternativet inte tillgängligt."
-
-#~ msgid ""
-#~ "To use this function you need the libexif library. Please install libexif "
-#~ "(http://libexif.sf.net) and recompile Xviewer."
-#~ msgstr ""
-#~ "För att använda denna funktion behöver du biblioteket libexif. Installera "
-#~ "libexif (http://libexif.sf.net) och kompilera om Xviewer."
-
-#~ msgid "%i x %i pixels  %s    %i%%"
-
-#~ msgid_plural "%i x %i pixels  %s    %i%%"
-#~ msgstr[0] "%i × %i bildpunkt  %s    %i%%"
-#~ msgstr[1] "%i × %i bildpunkter  %s    %i%%"
-
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "EXIF"
-#~ msgstr "EXIF"
-
-#~ msgid "Width"
-#~ msgstr "Bredd"
-
-#~ msgid "Height"
-#~ msgstr "Höjd"
-
-#~ msgid "Attribute"
-#~ msgstr "Attribut"
-
-#~ msgid "File"
-#~ msgstr "Fil"
-
-#~ msgid "Open in new window"
-#~ msgstr "Öppna i nytt fönster"
-
-#~ msgid "Cancel saving ..."
-#~ msgstr "Avbryt sparande..."
-
-#~ msgid ""
-#~ "Could not display help for Xviewer.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Kunde inte visa hjälp för Xviewer.\n"
-#~ "%s"
-
-#~ msgid "Overwrite file %s?"
-#~ msgstr "Skriv över filen %s?"
-
-#~ msgid "File exists. Do you want to overwrite it?"
-#~ msgstr "Filen finns. Vill du skriva över den?"
-
-#~ msgid "Skip"
-#~ msgstr "Hoppa över"
-
-#~ msgid "Overwrite"
-#~ msgstr "Skriv över"
-
-#~ msgid "Error on saving %s."
-#~ msgstr "Fel vid sparande av %s."
-
-#~ msgid "Couldn't determine destination uri."
-#~ msgstr "Kunde inte avgöra destinations-uri."
-
-#~ msgid "Please use an appropriate filename suffix or select a file format."
-#~ msgstr "Använd en lämplig filnamnsändelse eller välj ett filformat."
-
-#~ msgid "Error on saving images."
-#~ msgstr "Fel vid sparande av bilder."
-
-#~ msgid "Reason: %s"
-#~ msgstr "Orsak: %s"
-
-#~ msgid "Image _Information"
-#~ msgstr "Bild_information"
-
-#~ msgid "Close"
-#~ msgstr "Stäng"
-
-#~ msgid "Save"
-#~ msgstr "Spara"
-
-#~ msgid "Undo"
-#~ msgstr "Ångra"
-
-#~ msgid "User interface description not found."
-#~ msgstr "Beskrivningen av användargränssnittet hittades inte."
-
-#~ msgid "Unable to create Xviewer user interface"
-#~ msgstr "Kan inte skapa användargränssnitt för Xviewer"
-
-#~ msgid "File not found."
-
-#~ msgid_plural "Files not found."
-#~ msgstr[0] "Filen hittades inte."
-#~ msgstr[1] "Filerna hittades inte."
-
-#~ msgid "Empty"
-#~ msgstr "Tom"
-
-#~ msgid "View different types of images"
-#~ msgstr "Visa olika typer av bilder"
-
-#~ msgid "Slide Show"
-#~ msgstr "Bildspel"
-
-#~ msgid "<b>Image Interpolation</b>"
-#~ msgstr "<b>Bildinterpolation</b>"
-
-#~ msgid "Allow _zoom greater than 100% initially"
-#~ msgstr "Tillåt _zoomning större än 100% i början"
-
-#~ msgid "."
-#~ msgstr "."
-
-#~ msgid "Print Preview"
-#~ msgstr "Förhandsgranskning"
-
-#~ msgid "Rotat_e 180°"
-#~ msgstr "Rot_era 180°"
-
-#~ msgid "Show next image _automatically"
-#~ msgstr "Visa nästa bild _automatiskt"
-
-#~ msgid ""
-#~ "If this is set to TRUE images will be switched after number of seconds "
-#~ "determined by the 'full_screen/seconds' key."
-#~ msgstr ""
-#~ "Om detta är satt till SANT kommer bilder att bytas efter det antal "
-#~ "sekunder som anges av nyckeln \"full_screen/seconds\"."
-
-#~ msgid "_New Window"
-#~ msgstr "_Nytt fönster"
-
-#~ msgid "Open a new window"
-#~ msgstr "Öppna ett nytt fönster"
-
-#~ msgid "Open _Folder..."
-#~ msgstr "Öppna _mapp..."
-
-#~ msgid "Delete"
-#~ msgstr "Ta bort"
-
-#~ msgid "New"
-#~ msgstr "Ny"
-
-#~ msgid "Open multiple single windows?"
-#~ msgstr "Öppna flera enkla fönster?"
-
-#~ msgid ""
-#~ "You are about to open %i windows simultaneously. Do you want to open them "
-#~ "in a collection instead?"
-
-#~ msgid_plural ""
-#~ "You are about to open %i windows simultaneously. Do you want to open them "
-#~ "in a collection instead?"
-#~ msgstr[0] ""
-#~ "Du kommer att öppna %i fönster samtidigt. Vill du öppna dem i en "
-#~ "bildsamling istället?"
-#~ msgstr[1] ""
-#~ "Du kommer att öppna %i fönster samtidigt. Vill du öppna dem i en "
-#~ "bildsamling istället?"
-
-#~ msgid "Single Windows"
-#~ msgstr "Enkla fönster"
-
-#~ msgid "View many different types of images"
-#~ msgstr "Visa många olika typer av bilder"
-
-#~ msgid "%s x %s pixel"
-
-#~ msgid_plural "%s x %s pixels"
-#~ msgstr[0] "%s × %s bildpunkt"
-#~ msgstr[1] "%s × %s bildpunkter"
-
-#~ msgid ""
-#~ "You are about to open %i window simultaneously. Do you want to open it in "
-#~ "a collection instead?"
-
-#~ msgid_plural ""
-#~ "You are about to open %i windows simultaneously. Do you want to open them "
-#~ "in a collection instead?"
-#~ msgstr[0] ""
-#~ "Du kommer att öppna %i fönster samtidigt. Vill du öppna det i en "
-#~ "bildsamling istället?"
-#~ msgstr[1] ""
-#~ "Du kommer att öppna %i fönster samtidigt. Vill du öppna dem i en "
-#~ "bildsamling istället?"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Image _View"
-#~ msgstr "Bild_vy"
-
-#~ msgid "Show _next image automatically after:"
-#~ msgstr "Visa _nästa bild automatiskt efter:"
-
-#~ msgid "Sli_de Show"
-#~ msgstr "Bil_dspel"
-
-#~ msgid "empty file"
-#~ msgstr "tom fil"
-
-#~ msgid "Filenames are not disjunct."
-#~ msgstr "Filnamnen skiljer sig inte."
-
-#~ msgid "_New"
-#~ msgstr "_Ny"
-
-#~ msgid "Change the visibility of the information pane in the current window"
-#~ msgstr "Ändra synligheten för informationspanelen i det aktuella fönstret"
-
-#~ msgid "Open folder"
-#~ msgstr "Öppna mapp"
-
-#~ msgid "Change the visibility of the toolbar in the current window"
-#~ msgstr "Ändra synligheten för verktygsraden i det aktuella fönstret"
-
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Ändra synligheten för statusraden i det aktuella fönstret"
-
-#~ msgid "Image Information"
-#~ msgstr "Bildinformation"
-
-#~ msgid "(invalid Unicode)"
-#~ msgstr "(ogiltig Unicode)"
-
-#~ msgid "invalid Unicode"
-#~ msgstr "ogiltig Unicode"
-
-#~ msgid "Invalid Unicode"
-#~ msgstr "Ogiltig Unicode"
-
-#~ msgid "Open _Directory..."
-#~ msgstr "Öppna _katalog..."
-
-#~ msgid "Open a directory"
-#~ msgstr "Öppna en katalog"
-
-#~ msgid "Images: %i/%i"
-#~ msgstr "Bilder: %i/%i"
-
-#~ msgid "Close all windows and quit"
-#~ msgstr "Stäng alla fönster och avsluta"
-
-#~ msgid "Destination Folder"
-#~ msgstr "Målmapp"
-
-#~ msgid "Filename Format"
-#~ msgstr "Filnamnsformat"
-
-#~ msgid "Save A_s"
-#~ msgstr "Spara so_m"
-
-#~ msgid "Save _as"
-#~ msgstr "Spara so_m"
-
-#~ msgid "_Browse..."
-#~ msgstr "_Bläddra..."
-
-#~ msgid "Cancel saving..."
-#~ msgstr "Avbryt sparande..."
-
-#~ msgid "Cancel saving"
-#~ msgstr "Avbryt sparande"
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "Översättare:\n"
-#~ "Christian Rose\n"
-#~ "Martin Norbäck\n"
-#~ "Tomas Ögren\n"
-#~ "Andreas Hydén\n"
-#~ "Rapportera fel i översättningen till sv@li.org"
-
-#~ msgid "Overwrite file %s"
-#~ msgstr "Skriv över filen %s"
-
-#~ msgid "_Open Directory..."
-#~ msgstr "_Öppna katalog..."
-
-#~ msgid "Open Directory..."
-#~ msgstr "Öppna katalog..."
-
-#~ msgid "Rotate Clockwise"
-#~ msgstr "Rotera medurs"
-
-#~ msgid "Rotate Counter Clockwise"
-#~ msgstr "Rotera moturs"
-
-#~ msgid "Rotate 180°"
-#~ msgstr "Rotera 180°"
-
-#~ msgid "XVIEWER Image Collection Viewer"
-#~ msgstr "XVIEWER-bildsamlingsvisare"
-
-#~ msgid "XVIEWER Image collection view factory"
-#~ msgstr "XVIEWER-bildsamlingsvisarfabrik"
-
-#~ msgid "Rotate 180 _Degrees"
-#~ msgstr "Rotera 180 _grader"
-
-#~ msgid "Rotate C_lockwise"
-#~ msgstr "Rotera me_durs"
-
-#~ msgid "Rotate Counte_r Clockwise"
-#~ msgstr "Rotera mo_turs"
-
-#~ msgid "Saving finished"
-#~ msgstr "Sparande slutfört"
-
-#~ msgid "Collection View"
-#~ msgstr "Bildsamlingsvy"
-
-#~ msgid "Window Title"
-#~ msgstr "Fönstertitel"
-
-#~ msgid "Status Text"
-#~ msgstr "Statustext"
-
-#~ msgid "Progress of Image Loading"
-#~ msgstr "Förlopp för bildinläsning"
-
-#~ msgid "XVIEWER Image viewer factory"
-#~ msgstr "XVIEWER-bildvisarfabrik"
-
-#~ msgid "Embeddable XVIEWER Image"
-#~ msgstr "Inbäddbar XVIEWER-bild"
-
-#~ msgid "Page"
-#~ msgstr "Sida"
-
-#~ msgid "Paper"
-#~ msgstr "Papper"
-
-#~ msgid "% of original size"
-#~ msgstr "% av originalstorleken"
-
-#~ msgid "Adjust to "
-#~ msgstr "Justera till "
-
-#~ msgid "Cutting help"
-#~ msgstr "Klippningshjälp"
-
-#~ msgid "Down, then right"
-#~ msgstr "Ner, sedan höger"
-
-#~ msgid "Fit to page"
-#~ msgstr "Anpassa till sida"
-
-#~ msgid "Horizontally by "
-#~ msgstr "Vågrätt efter "
-
-#~ msgid "Margins"
-#~ msgstr "Marginaler"
-
-#~ msgid "Ordering help"
-#~ msgstr "Sorteringshjälp"
-
-#~ msgid "Overlap"
-#~ msgstr "Överlappning"
-
-#~ msgid "Overlap help"
-#~ msgstr "Överlappningshjälp"
-
-#~ msgid "Page order"
-#~ msgstr "Sidordning"
-
-#~ msgid "Right, then down"
-#~ msgstr "Höger, sedan ner"
-
-#~ msgid "Scale"
-#~ msgstr "Skala"
-
-#~ msgid "Show"
-#~ msgstr "Visa"
-
-#~ msgid "Vertically by "
-#~ msgstr "Lodrätt efter "
-
-#~ msgid "The name of the file or data to print"
-#~ msgstr "Namnet på filen eller data att skriva ut"
-
-#~ msgid "Quit the program"
-#~ msgstr "Avsluta programmet"
-
-#~ msgid "translator_credits-PLEASE_ADD_YOURSELF_HERE"
-#~ msgstr ""
-#~ "Christian Rose\n"
-#~ "Tomas Ögren\n"
-#~ "Martin Norbäck\n"
-#~ "Richard Hult\n"
-#~ "Andreas Hydén\n"
-#~ "Skicka synpunkter på översättningen till sv@li.org"
-
-#~ msgid "Full Screen"
-#~ msgstr "Helskärm"
-
-#~ msgid "Previews the image to be printed"
-#~ msgstr "Visar en förhandsgranskning av bilden som ska skrivas ut"
-
-#~ msgid "Print Previe_w..."
-#~ msgstr "_Förhandsgranska..."
-
-#~ msgid "Rotate Left"
-#~ msgstr "Rotera vänster"
-
-#~ msgid "Rotate Right"
-#~ msgstr "Rotera höger"
-
-#~ msgid "/Rotate C_lockwise"
-#~ msgstr "/Rotera me_durs"
-
-#~ msgid "/Rotate Counte_r Clockwise"
-#~ msgstr "/Rotera mo_turs"
-
-#~ msgid "/_Zoom In"
-#~ msgstr "/_Zooma in"
-
-#~ msgid "/Zoom _Out"
-#~ msgstr "/Zooma _ut"
-
-#~ msgid "/_Normal Size"
-#~ msgstr "/_Normal storlek"
-
-#~ msgid "/Best _Fit"
-#~ msgstr "/Bästa _anpassning"
-
-#~ msgid "/_Close"
-#~ msgstr "/S_täng"
-
-#~ msgid "Loading of image %s failed."
-#~ msgstr "Inläsning av bilden %s misslyckades."
-
-#~ msgid ""
-#~ "Loading of image %s failed.\n"
-#~ "Reason: %s."
-#~ msgstr ""
-#~ "Inläsning av bilden %s misslyckades.\n"
-#~ "Orsak: %s."
-
-#~ msgid "Loading failed"
-#~ msgstr "Inläsning misslyckades"
-
-#~ msgid "Image successfully saved"
-#~ msgstr "Sparande av bilden lyckades"
-
-#~ msgid "Statusbar Text"
-#~ msgstr "Statusradstext"
-
-#~ msgid "Desired Window Width"
-#~ msgstr "Önskad fönsterbredd"
-
-#~ msgid "Desired Window Height"
-#~ msgstr "Önskad fönsterhöjd"
-
-#~ msgid ""
-#~ "Wether opening an image should create a new window instead of replacing "
-#~ "the image in the current window."
-#~ msgstr ""
-#~ "Huruvida öppnandet av en bild ska skapa ett nytt fönster istället för att "
-#~ "ersätta bilden i det aktuella fönstret."
+msgstr ""
+"Kör \"%s --help\" för att se en komplett lista över tillgängliga "
+"kommandoradsflaggor."

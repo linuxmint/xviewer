@@ -8,1169 +8,1589 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 19:50+0200\n"
-"PO-Revision-Date: 2003-01-14 11:02+EDT\n"
-"Last-Translator: Ge'ez Frontier Foundation <locales@geez.org>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-04-20 22:59+0000\n"
+"Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <locales@geez.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
-#: xviewer.desktop.in.h:1
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr "ማሳያ “_%s”"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr "_ወደ እቃ መደርደሪያው ማንቀሳቀሻ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr "የተመረጠውን እቃ ወደ እቃ መደርደሪያው ማንቀሳቀሻ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr "ከ እቃ መደርደሪያው ላይ _ማስወገጃ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr "የተመረጠውን እቃ ከ እቃ መደርደሪያው ላይ ማስወገጃ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr "እቃ መደርደሪያውን _ማጥፊያ"
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr "የተመረጠውን የ እቃ መደርደሪያ ማስወገጃ"
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr "መለያያ"
+
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_ተመልከት"
+
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_እቃ መደርደሪያ"
+
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "_ሁኔታዎች መደርደሪያ"
+
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr "የ _ምስል አዳራሽ"
+
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr "የ ጎን _ክፍል"
+
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "_ምርጫዎች"
+
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_መረጃ"
+
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_ስለ"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "_ውጣ"
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "የምስል ተመልካች"
 
-#: xviewer.desktop.in.h:2
-msgid "View many different types of images"
-msgstr "የተለያዩ ዓይነት ምስሎችን ተመልከቱ"
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "ምስሎችን መቃኛ እና ማዞሪያ"
 
-#: xviewer.glade.h:1
-msgid "    "
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "ምስሎች:ተንሸራታች ማሳያ:ንድፎች"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
+msgid "Image Properties"
+msgstr "የ ምስል ባህሪዎች"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_ቀደም ያለው"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_ይቀጥሉ"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "_ዝጋ"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr "ስም:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr "ስፋት:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "እርዝመት:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr "አይነት:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "ባይትስ:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr "ፎልደር:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "ባጠቃላይ"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
 msgstr ""
 
-#: xviewer.glade.h:2
-msgid "*"
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
 msgstr ""
 
-#: xviewer.glade.h:3
-msgid "."
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
 msgstr ""
 
-#: xviewer.glade.h:4
-msgid "<b>File Name Preview</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
 msgstr ""
 
-#: xviewer.glade.h:5
-msgid "<b>File Path Specifications</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
 msgstr ""
 
-#: xviewer.glade.h:6
-#, fuzzy
-msgid "<b>Image Interpolation</b>"
-msgstr "ድርድር Interpolation"
-
-#: xviewer.glade.h:7
-msgid "<b>Image Zoom</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
 msgstr ""
 
-#: xviewer.glade.h:8
-#, fuzzy
-msgid "<b>Options</b>"
-msgstr "ድርድር Interpolation"
-
-#: xviewer.glade.h:9
-msgid "<b>Sequence</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
 msgstr ""
 
-#: xviewer.glade.h:10
-msgid "<b>Transparent Parts</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr "ቀን/ሰአት:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr "መግለጫ:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr "አካባቢ:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr "ቁልፍ ቃሎች:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr "ደራሲው:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr "የ ቅጂ መብት:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr "ዝርዝሮች"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
 msgstr ""
 
-#: xviewer.glade.h:12
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "ማስቀመጫ እንደ"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "_መሰረዣ"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "ማስቀመጫ _እንደ"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
-msgid "Allow _zoom greater than 100% initially"
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> ዋናው የ ፋይል ስም"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> መቁጠሪያ"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr "የ _ፋይል ስም አቀራረብ:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr "_መድረሻው ፎልደር:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "ፎልደር ይምረጡ"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
 msgstr ""
 
-#: xviewer.glade.h:13
-msgid "As _background"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
 msgstr ""
 
-#: xviewer.glade.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr "ምርጫዎች"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr "እንደገና መሰየሚያ:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
+msgid "To:"
+msgstr "ለ:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "የ ፋይል ስም ቅድመ እይታ"
+
+#: ../data/xviewer-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "ምርጫዎች"
+
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:7
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "መደብ"
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "የ መደብ ቀለም"
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr ""
 
-#: xviewer.glade.h:15
-msgid "As custom c_olor"
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
 msgstr ""
 
-#: xviewer.glade.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr ""
 
-#: xviewer.glade.h:17
-#, fuzzy
-msgid "Destination Folder:"
-msgstr "ፋይል ክፈት"
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "እንደ _መደብ"
 
-#: xviewer.glade.h:18
-msgid "Xviewer Preferences"
-msgstr "የኖም ዐይን ምርጫዎች"
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "ምስል መመልከቻ"
 
-#: xviewer.glade.h:19
-#, fuzzy
-msgid "Filename Format:"
-msgstr "_ፋይል"
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "ምስል ማሳያ"
 
-#: xviewer.glade.h:20
-#, fuzzy
-msgid "Image _View"
-msgstr "የምስል ተመልካች"
-
-#: xviewer.glade.h:21
-msgid "Rename From:"
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
 msgstr ""
 
-#: xviewer.glade.h:22
-msgid "Replace spaces by underscore"
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
 msgstr ""
 
-#: xviewer.glade.h:23
-#, fuzzy
-msgid "Save As"
-msgstr "በ_ሌላ ስም አስቀምጥ..."
-
-#: xviewer.glade.h:24
-#, fuzzy
-msgid "Saving Image"
-msgstr "ምስሉን አስቀምት"
-
-#: xviewer.glade.h:25
-msgid "Show _next image automatically after:"
-msgstr ""
-
-#: xviewer.glade.h:26
-msgid "Sli_de Show"
-msgstr ""
-
-#: xviewer.glade.h:27
-msgid "Start counter at:"
-msgstr ""
-
-#: xviewer.glade.h:28
-#, fuzzy
-msgid "To:"
-msgstr "ወደ ላይ፦"
-
-#: xviewer.glade.h:29
-#, fuzzy
-msgid "_Browse"
-msgstr "_ዝጋ"
-
-#: xviewer.glade.h:30
-#, fuzzy
-msgid "_Interpolate image on zoom"
-msgstr "_Interpolation"
-
-#: xviewer.glade.h:31
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr ""
 
-#: xviewer.glade.h:32
-msgid "seconds"
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "ተንሸራታች ማሳያ"
+
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "ተሰኪዎች"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:1
+msgid "Automatic orientation"
 msgstr ""
 
-#: xviewer.schemas.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
 
-#: xviewer.schemas.in.h:3
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
+#: ../data/org.x.viewer.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
 msgstr ""
 
-#: xviewer.schemas.in.h:4
-msgid "Delay in seconds until showing the next image"
+#: ../data/org.x.viewer.gschema.xml.in.h:5
+msgid "Interpolate Image"
 msgstr ""
 
-#: xviewer.schemas.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
 
-#: xviewer.schemas.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
 
-#: xviewer.schemas.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
 
-#: xviewer.schemas.in.h:8
-msgid "Interpolate Image"
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
 msgstr ""
 
-#: xviewer.schemas.in.h:9
-msgid "Loop through the image sequence"
-msgstr ""
-
-#: xviewer.schemas.in.h:10
-msgid "Open images in a new window"
-msgstr "በአዲስ መስኮት ውስጥ ምስልን ክፈት"
-
-#: xviewer.schemas.in.h:11
-msgid "Show/hide the window statusbar."
-msgstr ""
-
-#: xviewer.schemas.in.h:12
-msgid "Show/hide the window toolbar."
-msgstr ""
-
-#: xviewer.schemas.in.h:13
-msgid "Transparency color"
-msgstr ""
-
-#: xviewer.schemas.in.h:14
-msgid "Transparency indicator"
-msgstr ""
-
-#: xviewer.schemas.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
-"Whether opening an image should create a new window instead of replacing the "
-"image in the current window."
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 
-#: xviewer.schemas.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "ማሳያ/መደበቂያ የ መስኮት እቃ መደርደሪያ"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "ማሳያ/መደበቂያ የ መስኮት ሁኔታ መደርደሪያ"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "ማሳያ/መደበቂያ የ ምስል አዳራሽ ክፍል"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"የ ምስል አዳራሽ ክፍል ቦታ: ማሰናጃ ለ 0 ከ ታች በኩል: 1 በ ግራ በኩል: 2 ከ ላይ በኩል: 3 በ ቀኝ በኩል"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
 msgstr ""
 
-#: xviewer.schemas.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "ማሳያ/መደበቂያ የ መስኮት ክፍል በ ጎን በኩል"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr "ማሳያ/መደበቂያ የ ምስል አዳራሽ ክፍል ክፍል መሸብለያ ቁልፍ"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "ምስሎችን ወደ ቆሻሻ መላኪያ ምንም ሳይጠየቁ"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
 msgstr ""
 
-#: libxviewer/xviewer-file-selection.c:124
-msgid "All Files"
+#: ../data/org.x.viewer.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
 msgstr ""
 
-#: libxviewer/xviewer-file-selection.c:129
-#, fuzzy
-msgid "All Images"
-msgstr "ምስል"
+#: ../data/org.x.viewer.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "ንቁ ተሰኪዎች"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "ሁለት ጊዜ-ሲጫኑ በ ሙሉ ገጽ ማሳያ"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "ሁለት ጊዜ-ሲጫኑ የ ሙሉ ገጽ ማስጀመሪያ"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "ምስል እንደገና መጫኛ"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "የ አሁኑን ምስል እንደገና መጫኛ"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "ቀን በ ሁኔታ መደርደሪያ ላይ"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "የ ምስል ቀን በ መስኮት ሁኔታ መደርደሪያ ላይ ማሳያ"
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr "መዝጊያ  _ምንም ሳያስቀምጡ"
+
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_ማሰቀመጫ"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr "ጥያቄ"
+
+#: ../src/xviewer-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr "እርስዎ ካላስቀመጡ ለውጦቹ በሙሉ ይጠፋሉ"
+
+#: ../src/xviewer-close-confirmation-dialog.c:437
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr "ላስቀምጥ ለውጦቹን በ ምስሉ ላይ \"%s\" ከ መዘጋቱ በፊት?"
+
+#: ../src/xviewer-close-confirmation-dialog.c:652
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:669
+msgid "S_elect the images you want to save:"
+msgstr "ይ_ምረጡ ምስሎች እርስዎ ማስቀመጥ የሚፈልጉትን"
+
+#. Secondary label
+#: ../src/xviewer-close-confirmation-dialog.c:688
+msgid "If you don't save, all your changes will be lost."
+msgstr "እርስዎ ካላስቀመጡ: ለውጦቹ በሙሉ ይጠፋሉ"
+
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+msgid "_Reload"
+msgstr "_እንደገና መጫኛ"
+
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr "ማስቀመጫ _እንደ…"
+
+#: ../src/xviewer-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "ምስሉን እንደገና መጫን አልተቻለም '%s'."
+
+#: ../src/xviewer-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "ምስሉን ማስቀመጥ አልተቻለም '%s'."
+
+#: ../src/xviewer-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "ምንም ምስሎች አልተገኙም '%s'."
+
+#: ../src/xviewer-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "ካሜራ"
+
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "የ ምስል ዳታ"
+
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "ሌላ"
+
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "ቁራጭ"
+
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "ዋጋ"
+
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr "ሰሜን"
+
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr "ምስራቅ"
+
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr "ምዕራብ"
+
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr "ደቡብ"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/xviewer-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr "%.1f (lens)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/xviewer-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr "%.1f (35ሚሚ ፊልም)"
+
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "የ ፋይል አቀራረቡ አይታወቅም ወይንም የ ተደገፈ አይደለም"
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "እባክዎን ሌላ የ ፋይል ተቀጥያ ይሞክሩ እንደ .png ወይንም .jpg."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: libxviewer/xviewer-file-selection.c:147
+#: ../src/xviewer-file-chooser.c:160
 #, c-format
 msgid "%s (*.%s)"
-msgstr ""
+msgstr "%s (*.%s)"
+
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr "ሁሉንም ፋይሎች"
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr "የ ተደገፉ የ ፋይል አይነቶች"
 
 #. Pixel size of image: width x height in pixel
-#: libxviewer/xviewer-file-selection.c:240
-#, c-format
-msgid "%s x %s pixel"
-msgstr ""
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "ፒክስል"
+msgstr[1] "ፒክስሎች"
 
-#: libxviewer/xviewer-file-selection.c:396
-msgid "Load Image"
-msgstr "ምስልን ጫን"
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr "_መክፈቻ"
 
-#: libxviewer/xviewer-file-selection.c:404
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr "ምስል መክፈቻ"
+
+#: ../src/xviewer-file-chooser.c:467
 msgid "Save Image"
 msgstr "ምስሉን አስቀምት"
 
-#: libxviewer/xviewer-file-selection.c:412
-#, fuzzy
+#: ../src/xviewer-file-chooser.c:475
 msgid "Open Folder"
-msgstr "ፋይል ክፈት"
+msgstr "ፎልደር መክፋቻ"
 
-#: libxviewer/xviewer-image-jpeg.c:330 libxviewer/xviewer-image-jpeg.c:569
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr ""
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr ""
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr ""
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "ምስል መጫን አልተቻለም"
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr ""
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr ""
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr ""
+
+#: ../src/xviewer-image-jpeg.c:374
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr ""
 
-#: libxviewer/xviewer-image-jpeg.c:349 libxviewer/xviewer-image-jpeg.c:590
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr ""
 
-#: libxviewer/xviewer-image.c:814
-msgid "empty file"
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
+msgstr "ያልታወቀ"
+
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr "የ ፋይሉ መጠን:"
+
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: libxviewer/xviewer-image.c:1247 libxviewer/xviewer-image.c:1458
-msgid "File exists"
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu ሰከንድ"
+msgstr[1] "%lu ሰከንዶች"
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "ምስል ማሰናጃዎች"
+
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "ምስል"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
 msgstr ""
 
-#: libxviewer/xviewer-image.c:1400 libxviewer/xviewer-image.c:1526
-msgid "No image loaded."
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "ገጽ ማሰናጃ"
+
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
 msgstr ""
 
-#: libxviewer/xviewer-image.c:1409 libxviewer/xviewer-image.c:1535
-msgid "Temporary file creation failed."
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr "አካባቢ"
 
-#: libxviewer/xviewer-info-view-exif.c:26
-msgid "Camera"
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr "በ _ግራ:"
 
-#: libxviewer/xviewer-info-view-exif.c:27
-#, fuzzy
-msgid "Image Data"
-msgstr "የምስል ስፋት"
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr "በ _ቀኝ:"
 
-#: libxviewer/xviewer-info-view-exif.c:28
-#, fuzzy
-msgid "Image Taking Conditions"
-msgstr "የምስል ምስል ስብስብ"
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr "ከ _ላይ:"
 
-#: libxviewer/xviewer-info-view-exif.c:29
-msgid "Maker Note"
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "ከ _ታች:"
 
-#: libxviewer/xviewer-info-view-exif.c:30
-#, fuzzy
-msgid "Other"
-msgstr "መወሰን አቃተው / ማመንታት"
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "መ_ሀከል:"
 
-#: libxviewer/xviewer-info-view-exif.c:212
-msgid "Tag"
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr "ምንም"
 
-#: libxviewer/xviewer-info-view-exif.c:220 libxviewer/xviewer-info-view-file.c:96
-#, fuzzy
-msgid "Value"
-msgstr "መለኪያ"
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "በ አግድም"
 
-#. only used for internal purpose
-#: libxviewer/xviewer-info-view-file.c:25 libxviewer/xviewer-uri-converter.h:45
-#, fuzzy
-msgid "Filename"
-msgstr "_ፋይል"
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr "በ ቁመት"
 
-#: libxviewer/xviewer-info-view-file.c:26
-#, fuzzy
-msgid "Width"
-msgstr "የምስል ስፋት"
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr "ሁለቱንም"
 
-#: libxviewer/xviewer-info-view-file.c:27
-#, fuzzy
-msgid "Height"
-msgstr "ብርሃን"
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "መጠን"
 
-#: libxviewer/xviewer-info-view-file.c:28
-#, fuzzy
-msgid "Filesize"
-msgstr "_ፋይል"
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr "_ስፋት:"
 
-#: libxviewer/xviewer-info-view-file.c:88
-msgid "Attribute"
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr "_እርዝመት:"
 
-#: libxviewer/xviewer-info-view.c:92
-#, fuzzy
-msgid "File"
-msgstr "_ፋይል"
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "_መመጠኛ:"
 
-#: libxviewer/xviewer-info-view.c:101
-msgid "EXIF"
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_መለኪያ:"
 
-#: libxviewer/xviewer-info-view.c:108
-msgid "IPTC"
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "ሚሊ ሜትሮች"
 
-#: libxviewer/xviewer-save-as-dialog-helper.c:137
-msgid "Option not available."
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr "ኢንች"
 
-#: libxviewer/xviewer-save-as-dialog-helper.c:138
-msgid ""
-"To use this function you need the libexif library. Please install libexif "
-"(http://libexif.sf.net) and recompile Xviewer."
-msgstr ""
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "ቅድመ እይታ"
 
-#: libxviewer/xviewer-save-as-dialog-helper.c:214
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr ""
 
-#: libxviewer/xviewer-save-dialog-helper.c:162
-#, fuzzy, c-format
-msgid "Saving image %s."
-msgstr "ምስሉን አስቀምት"
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/xviewer-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr "%d / %d"
 
-#: libxviewer/xviewer-save-dialog-helper.c:208
-#, fuzzy
-msgid "Cancel saving ..."
-msgstr "ተወው"
-
-#: libxviewer/xviewer-uri-converter.c:1023
-msgid "Filenames are not disjunct."
+#: ../src/xviewer-thumb-view.c:544
+msgid "Taken on"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:46
-#, fuzzy
-msgid "Counter"
-msgstr "መሀከል"
-
-#: libxviewer/xviewer-uri-converter.h:47
-#, fuzzy
-msgid "Comment"
-msgstr "_ይዞታዎች"
-
-#: libxviewer/xviewer-uri-converter.h:48
-#, fuzzy
-msgid "Date"
-msgstr "መወሰን አቃተው / ማመንታት"
-
-#: libxviewer/xviewer-uri-converter.h:49
-#, fuzzy
-msgid "Time"
-msgstr "_ድርድር"
-
-#: libxviewer/xviewer-uri-converter.h:50
-#, fuzzy
-msgid "Day"
-msgstr "አሳይ"
-
-#: libxviewer/xviewer-uri-converter.h:51
-msgid "Month"
+#: ../src/xviewer-uri-converter.c:982
+#, c-format
+msgid "At least two file names are equal."
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:52
-msgid "Year"
+#: ../src/xviewer-util.c:68
+msgid "Could not display help for Image Viewer"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:53
-msgid "Hour"
-msgstr ""
+#: ../src/xviewer-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (ዋጋ የሌለው ዩኒኮድ)"
 
-#: libxviewer/xviewer-uri-converter.h:54
-#, fuzzy
-msgid "Minute"
-msgstr "Midtone"
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/xviewer-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] "%i × %i ፒክስል  %s    %i%%"
+msgstr[1] "%i × %i ፒክስሎች  %s    %i%%"
 
-#: libxviewer/xviewer-uri-converter.h:55
-msgid "Second"
-msgstr ""
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "መደ_በቂያ"
 
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: shell/xviewer-window.c:314
-msgid "translator-credits"
-msgstr ""
-
-#: shell/xviewer-window.c:319 shell/xviewer-window.c:2167 shell/xviewer-window.c:2482
-#: shell/main.c:498
-msgid "Xviewer"
-msgstr "የኖም ዐይን"
-
-#: shell/xviewer-window.c:322
-msgid "The GNOME image viewing and cataloging program."
-msgstr "የኖም ምስል መመልከቻ እና ፕሮግራም መዘርዘሪያ"
-
-#: shell/xviewer-window.c:359
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
-"Could not display help for Xviewer.\n"
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/xviewer-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/xviewer-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr "ምስል በ ማስቀመጥ ላይ \"%s\" (%u/%u)"
+
+#: ../src/xviewer-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr "ምስል በ መክፈት ላይ \"%s\""
+
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "ከ ሙሉ መመልከቻው _መውጫ"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "የ ተንሸራታች ማሳያ መመልከቻ"
+
+#: ../src/xviewer-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
 "%s"
 msgstr ""
-"ለኖም ዐይን መረጃ ማሳየት አልተቻለም።\n"
+"ስህተት ፋይል በ ማተም ላይ:\n"
 "%s"
 
-#: shell/xviewer-window.c:626
+#: ../src/xviewer-window.c:2558
+msgid "Toolbar Editor"
+msgstr "የ እቃ መደርደሪያ ማረሚያ"
+
+#: ../src/xviewer-window.c:2561
+msgid "_Reset to Default"
+msgstr "_እንደ ነበር መመለሻ ወደ ነባሩ"
+
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
+msgid "Error launching System Settings: "
+msgstr ""
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2791
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:2807
 #, c-format
-msgid "Overwrite file %s?"
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
 
-#: shell/xviewer-window.c:627
-msgid "File exists. Do you want to overwrite it?"
+#: ../src/xviewer-window.c:3274
+msgid "Saving image locally…"
 msgstr ""
 
-#: shell/xviewer-window.c:636 shell/xviewer-window.c:649
-msgid "Skip"
-msgstr ""
-
-#: shell/xviewer-window.c:637
-msgid "Overwrite"
-msgstr ""
-
-#: shell/xviewer-window.c:642
+#: ../src/xviewer-window.c:3352
 #, c-format
-msgid "Error on saving %s."
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
 msgstr ""
 
-#: shell/xviewer-window.c:650 shell/xviewer-window.c:1034
-msgid "Retry"
-msgstr ""
-
-#: shell/xviewer-window.c:1023
+#: ../src/xviewer-window.c:3355
 #, c-format
-msgid "Couldn't determine file format of %s"
-msgstr ""
-
-#: shell/xviewer-window.c:1024
-msgid "Please use an appropriate filename suffix or select a file format."
-msgstr ""
-
-#: shell/xviewer-window.c:1166
-#, fuzzy
-msgid "Error on saving images."
-msgstr "ምስሉን አስቀምት"
-
-#: shell/xviewer-window.c:1399
-#, c-format
-msgid "Do you really want to move %i image to trash?"
-msgid_plural "Do you really want to move %i images to trash?"
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/xviewer-window.c:1437
-msgid "Couldn't access trash."
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr "_ማጥፊያ"
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr "_አዎ"
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
 msgstr ""
 
-#: shell/xviewer-window.c:1511
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "የ ምስል ፋይል ፈልጎ ማግኘት አልተቻለም"
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "የ ምስል ፋይል መረጃ ፈልጎ ማግኘት አልተቻለም"
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "ፋይል ማጥፋት አልተቻለም"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr ""
 
-#. [image width] x [image height] pixel  [bytes]    [zoom in percent]
-#: shell/xviewer-window.c:2096
+#: ../src/xviewer-window.c:3603
 #, c-format
-msgid "%i x %i pixel  %s    %i%%"
-msgstr ""
-
-#: shell/xviewer-window.c:2233
-msgid "_File"
-msgstr "_ፋይል"
-
-#: shell/xviewer-window.c:2234
-msgid "_Edit"
-msgstr "_አስተካክል"
-
-#: shell/xviewer-window.c:2235
-msgid "_View"
-msgstr "_ተመልከት"
-
-#: shell/xviewer-window.c:2236
-msgid "_Help"
-msgstr "_መረጃ"
-
-#: shell/xviewer-window.c:2237
-msgid "_New"
-msgstr "_አዲስ"
-
-#: shell/xviewer-window.c:2237
-msgid "Open a new window"
-msgstr "አዲስ መስኮት ክፈት"
-
-#: shell/xviewer-window.c:2238
-msgid "_Open..."
-msgstr "_ክፈት..."
-
-#: shell/xviewer-window.c:2238
-msgid "Open a file"
-msgstr "ፋይል ክፈት"
-
-#: shell/xviewer-window.c:2239
-#, fuzzy
-msgid "Open _Directory..."
-msgstr "_ክፈት..."
-
-#: shell/xviewer-window.c:2239
-#, fuzzy
-msgid "Open a directory"
-msgstr "ፋይል ክፈት"
-
-#: shell/xviewer-window.c:2240
-msgid "_Close"
-msgstr "_ዝጋ"
-
-#: shell/xviewer-window.c:2240
-msgid "Close window"
-msgstr "መስኮቱን ዝጋ"
-
-#: shell/xviewer-window.c:2241
-msgid "Prefere_nces"
-msgstr "_ምርጫዎች"
-
-#: shell/xviewer-window.c:2241
-#, fuzzy
-msgid "Preferences for Xviewer"
-msgstr "የኖም ዐይን"
-
-#: shell/xviewer-window.c:2242
-msgid "_Contents"
-msgstr "_ይዞታዎች"
-
-#: shell/xviewer-window.c:2242
-msgid "Help On this application"
-msgstr "መረጃ በዚህ መጠቀሚያ ፕሮግራም ላይ"
-
-#: shell/xviewer-window.c:2243
-msgid "_About"
-msgstr "_ስለ"
-
-#: shell/xviewer-window.c:2243
-msgid "About this application"
-msgstr "ስለዚህ ፕሮግራም"
-
-#: shell/xviewer-window.c:2248
-msgid "_Toolbar"
-msgstr ""
-
-#: shell/xviewer-window.c:2249
-#, fuzzy
-msgid "_Statusbar"
-msgstr "የስታተስ ባር ጽሑፍ"
-
-#: shell/xviewer-window.c:2254
-#, fuzzy
-msgid "_Save"
-msgstr "በሌላ ስም አስቀምጥ"
-
-#: shell/xviewer-window.c:2255
-#, fuzzy
-msgid "Save _As"
-msgstr "በ_ሌላ ስም አስቀምጥ..."
-
-#: shell/xviewer-window.c:2257
-msgid "_Undo"
-msgstr ""
-
-#: shell/xviewer-window.c:2259
-#, fuzzy
-msgid "Flip _Horizontal"
-msgstr "በአግድም"
-
-#: shell/xviewer-window.c:2260
-#, fuzzy
-msgid "Flip _Vertical"
-msgstr "በቁመት"
-
-#: shell/xviewer-window.c:2262
-msgid "_Rotate Clockwise"
-msgstr ""
-
-#: shell/xviewer-window.c:2263
-msgid "Rotate Counter C_lockwise"
-msgstr ""
-
-#: shell/xviewer-window.c:2264
-#, fuzzy
-msgid "Rotat_e 180°"
-msgstr "በ180 ያሽከርክሩ"
-
-#: shell/xviewer-window.c:2266
-msgid "Delete"
-msgstr ""
-
-#: shell/xviewer-window.c:2268
-#, fuzzy
-msgid "_Full Screen"
-msgstr "ሙሉ እስክሪን"
-
-#: shell/xviewer-window.c:2269
-msgid "_Zoom In"
-msgstr "ከ_ቅርበት ዕይታ"
-
-#: shell/xviewer-window.c:2270
-msgid "Zoom _Out"
-msgstr "ከ_ርቀት ዕይታ"
-
-#: shell/xviewer-window.c:2271
-msgid "_Normal Size"
-msgstr "የ_ተለመደ መጠን"
-
-#: shell/xviewer-window.c:2272
-msgid "Best _Fit"
-msgstr ""
-
-#: shell/main.c:236
-#, fuzzy, c-format
 msgid ""
-"You are about to open %i windows simultaneously. Do you want to open them in "
-"a collection instead?"
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
 msgstr ""
-"%i መስኮቶችን እኩል ለመክፈት እየተዘጋጁ ነው።\n"
-"በዚህ ፋንታ አሰባስቦ እንዲከፍተው ይፈልጋሉ?"
 
-#: shell/main.c:240
-#, fuzzy
-msgid "Open multiple single windows?"
-msgstr "በአዲስ መስኮት ውስጥ ክፈት"
+#: ../src/xviewer-window.c:3606
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
 
-#: shell/main.c:244
-msgid "Single Windows"
-msgstr "ነጠላ መስኮቶች"
-
-#: shell/main.c:246
-msgid "Collection"
-msgstr "ስብስብ"
-
-#: shell/main.c:298
-msgid "File not found."
-msgid_plural "Files not found."
+#: ../src/xviewer-window.c:3611
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/util.c:52
+#: ../src/xviewer-window.c:3616
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
+msgid "Move to _Trash"
+msgstr "ወደ _ቆሻሻ ማንቀሳቀሻ"
+
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
-msgid "Could not open `%s'"
-msgstr "`%s'ን መክፈት አልተቻለም"
-
-#~ msgid "XVIEWER Image Collection Viewer"
-#~ msgstr "የXVIEWER ምስል ስብስብ ተመልካች"
-
-#~ msgid "XVIEWER Image collection view factory"
-#~ msgstr "የXVIEWER ምስል ስብስብ መመልከቻ ፋብሪካ"
-
-#, fuzzy
-#~ msgid "View as I_mage Collection"
-#~ msgstr "የምስል ምስል ስብስብ"
-
-#, fuzzy
-#~ msgid "View as Image Collection"
-#~ msgstr "የምስል ምስል ስብስብ"
-
-#, fuzzy
-#~ msgid "Next Image"
-#~ msgstr "ምስሉን አስቀምት"
-
-#, fuzzy
-#~ msgid "Previous Image"
-#~ msgstr "ምስሉ ይታተም"
-
-#, fuzzy
-#~ msgid "Collection View"
-#~ msgstr "ስብስብ"
-
-#~ msgid "Window Title"
-#~ msgstr "የመስኮት አርእስት"
-
-#, fuzzy
-#~ msgid "Status Text"
-#~ msgstr "የስታተስ ባር ጽሑፍ"
-
-#~ msgid "XVIEWER Image"
-#~ msgstr "የXVIEWER ምስል"
-
-#~ msgid "XVIEWER Image Viewer"
-#~ msgstr "የXVIEWER ምስል ተመልካች"
-
-#~ msgid "XVIEWER Image viewer factory"
-#~ msgstr "የXVIEWER ምስል የተመልካች ፋብሪካ"
-
-#~ msgid "Image"
-#~ msgstr "ምስል"
-
-#, fuzzy
-#~ msgid "Page"
-#~ msgstr "ገጾች"
-
-#, fuzzy
-#~ msgid "Preview"
-#~ msgstr "የቅድመ ህትመት ዕይታ"
-
-#, fuzzy
-#~ msgid "Millimeter"
-#~ msgstr "ሚሊ ሜትር"
-
-#~ msgid "Paper"
-#~ msgstr "ወረቀት"
-
-#~ msgid "% of original size"
-#~ msgstr "%% የመጀመሪያው መጠን"
-
-#, fuzzy
-#~ msgid "Adjust to "
-#~ msgstr "ወደ...አስተካክል፦"
-
-#, fuzzy
-#~ msgid "Cutting help"
-#~ msgstr "መረጃውን ቆርጠህ አትም"
-
-#~ msgid "Down, then right"
-#~ msgstr "ወደ ታች ካዛ በስተቀኝ"
-
-#~ msgid "Fit to page"
-#~ msgstr "በገጹ ልክ"
-
-#~ msgid "Horizontally"
-#~ msgstr "በአግድም"
-
-#, fuzzy
-#~ msgid "Horizontally by "
-#~ msgstr "በአግድም"
-
-#~ msgid "Margins"
-#~ msgstr "ህዳጎች"
-
-#, fuzzy
-#~ msgid "Overlap"
-#~ msgstr "ድርርቦሽ"
-
-#, fuzzy
-#~ msgid "Overlap help"
-#~ msgstr "መረጃውን ደርበህ አትም"
-
-#~ msgid "Page order"
-#~ msgstr "የገጽ ንጽጽር"
-
-#~ msgid "Right, then down"
-#~ msgstr "በስተቀኝ ካዛ ወደ ታች"
-
-#~ msgid "Scale"
-#~ msgstr "መለኪያ"
-
-#~ msgid "Vertically"
-#~ msgstr "በቁመት"
-
-#, fuzzy
-#~ msgid "Vertically by "
-#~ msgstr "በቁመት"
-
-#~ msgid "Cancel"
-#~ msgstr "ተወው"
-
-#~ msgid "New"
-#~ msgstr "አዲስ"
-
-#~ msgid "Open"
-#~ msgstr "ክፈት"
-
-#~ msgid "Open in new window"
-#~ msgstr "በአዲስ መስኮት ውስጥ ክፈት"
-
-#~ msgid "Open in this window"
-#~ msgstr "በዚህኛው መስኮት ውስጥ ክፈት"
-
-#~ msgid "Quit the program"
-#~ msgstr "ከፕሮግራሙ ውጣ"
-
-#~ msgid "_Quit"
-#~ msgstr "_ውጣ"
-
-#~ msgid "translator_credits-PLEASE_ADD_YOURSELF_HERE"
-#~ msgstr "ዘግዕዝ Frontier Foundation"
-
-#~ msgid "Fit"
-#~ msgstr "ልክ"
-
-#~ msgid "In"
-#~ msgstr "ቅርበት"
-
-#~ msgid "Normal"
-#~ msgstr "የተለመደ"
-
-#~ msgid "Out"
-#~ msgstr "ርቀት"
-
-#, fuzzy
-#~ msgid "Full Screen"
-#~ msgstr "ሙሉ እስክሪን"
-
-#~ msgid "Previews the image to be printed"
-#~ msgstr "የሚታተመውን የምስሉ ቅድመ ዕይታ ያሳያል"
-
-#~ msgid "Print Previe_w..."
-#~ msgstr "የቅድመ ህትመት ዕይታ..."
-
-#~ msgid "Print Set_up"
-#~ msgstr "የህትመት _ቅንጅት"
-
-#~ msgid "Print image to the printer"
-#~ msgstr "ወደማተሚያው ምስሉን አትም"
-
-#~ msgid "Setup the page settings for your current printer"
-#~ msgstr "የገጹን አቀማመጥ አሁን ላለው ማተሚያ አስተካክሉ"
-
-#~ msgid "_Print..."
-#~ msgstr "_አትም..."
-
-#~ msgid "/_Zoom In"
-#~ msgstr "/ከ_ቅርበት ዕይታ"
-
-#~ msgid "/Zoom _Out"
-#~ msgstr "/ከ_ርቀት ዕይታ"
-
-#~ msgid "/_Normal Size"
-#~ msgstr "/የ_ተለመደ መጠን"
-
-#~ msgid "/_Close"
-#~ msgstr "/_ዝጋ"
-
-#, fuzzy
-#~ msgid "Loading of image %s failed."
-#~ msgstr "የምስሉ ሕትመት አልተሳካም"
-
-#, fuzzy
-#~ msgid ""
-#~ "Loading of image %s failed.\n"
-#~ "Reason: %s."
-#~ msgstr "የምስሉ ሕትመት አልተሳካም"
-
-#~ msgid "Image Height"
-#~ msgstr "የምስል እርዝማኔ"
-
-#~ msgid "Statusbar Text"
-#~ msgstr "የስታተስ ባር ጽሑፍ"
-
-#, fuzzy
-#~ msgid "Could not find files"
-#~ msgstr "`%s'ን መክፈት አልተቻለም"
-
-#~ msgid "Copyright (C) 2000-2002 The Free Software Foundation"
-#~ msgstr "የቅጂው መብት 2000-2002 The Free Software Foundation"
-
-#~ msgid "Couldn't initialize GnomeVFS!\n"
-#~ msgstr "ኖምVFS ማስጀመር አልቻልኩም!\n"
-
-#~ msgid "pts"
-#~ msgstr "ነጥቦች"
-
-#~ msgid "points"
-#~ msgstr "ነጥቦች"
-
-#~ msgid "mm"
-#~ msgstr "ሚ/ሜ"
-
-#~ msgid "cm"
-#~ msgstr "ሴ/ሜ"
-
-#~ msgid "centimeter"
-#~ msgstr "ሴንቲ ሜትር"
-
-#~ msgid "inch"
-#~ msgstr "ኢንች"
-
-#~ msgid "Print Setup"
-#~ msgstr "የህትመት ቅንጅት"
-
-#~ msgid "Print"
-#~ msgstr "አትም"
-
-#~ msgid "Print preview"
-#~ msgstr "የቅድመ ህትመት ዕይታ"
-
-#~ msgid "Units: "
-#~ msgstr "ክፍሎች፦"
-
-#~ msgid "Paper size:"
-#~ msgstr "የወረከት መጠን፦"
-
-#~ msgid "Orientation"
-#~ msgstr "አቀማመጥ"
-
-#~ msgid "Portrait"
-#~ msgstr "በቁም"
-
-#~ msgid "Landscape"
-#~ msgstr "አግድም"
-
-#~ msgid "Left:"
-#~ msgstr "ግራ፦"
-
-#~ msgid "Right:"
-#~ msgstr "ቀኝ፦"
-
-#~ msgid "Bottom:"
-#~ msgstr "ወደ ታች፦"
-
-#~ msgid "Overlap horizontally by "
-#~ msgstr "በአግድም በ... ተደራርቧል"
-
-#~ msgid "Overlap vertically by "
-#~ msgstr "በቁም በ... ተደራርቧል"
-
-#~ msgid "Printing"
-#~ msgstr "በማተም ላይ"
-
-#~ msgid "Helpers"
-#~ msgstr "ረዳቶች"
-
-#~ msgid "Xviewer Image Viewer"
-#~ msgstr "የኖም ዐይን የምስል ተመልካች"
-
-#~ msgid "By c_olor"
-#~ msgstr "በ_ቀለሙ"
-
-#~ msgid "Pick a color"
-#~ msgstr "ቀለም ምረጡ"
-
-#~ msgid "check type"
-#~ msgstr "ዓይነቱን አጣራ"
-
-#~ msgid "dither type"
-#~ msgstr "የመወሰን አቃተው ዓይነት"
-
-#~ msgid "BMP"
-#~ msgstr "BMP"
-
-#~ msgid "GIF"
-#~ msgstr "GIF"
-
-#~ msgid "ICO"
-#~ msgstr "ICO"
-
-#~ msgid "JPEG"
-#~ msgstr "JPEG"
-
-#~ msgid "PNG"
-#~ msgstr "PNG"
-
-#~ msgid "PNM"
-#~ msgstr "PNM"
-
-#~ msgid "RAS"
-#~ msgstr "RAS"
-
-#~ msgid "SVG"
-#~ msgstr "SVG"
-
-#~ msgid "TGA"
-#~ msgstr "TGA"
-
-#~ msgid "TIFF"
-#~ msgstr "TIFF"
-
-#~ msgid "XBM"
-#~ msgstr "XBM"
-
-#~ msgid "XPM"
-#~ msgstr "XPM"
-
-#~ msgid ""
-#~ "You are about to open %i windows\n"
-#~ "simultanously. Do you want to continue?"
-#~ msgstr ""
-#~ "%i መስኮቶችን እኩል ለመክፈት እየተዘጋጁ ነው።\n"
-#~ "መቀጠል ይፈልጋሉ?"
-
-#~ msgid ""
-#~ "Could not access %s\n"
-#~ "Xviewer will not be able to display this file."
-#~ msgstr ""
-#~ "%sን ማስጀመር አልተቻለም።\n"
-#~ "የኖም ዐይን ይህንን ፋይል ለማሳየት አይችልም። "
-
-#~ msgid ""
-#~ "The following files cannot be displayed because Xviewer was not able "
-#~ "to access them:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "የኖም ዐይን ማስጀመር ስላልቻለ የሚከተሉት ፋይሎች ሊታዩ አይችሉም፦\n"
-#~ "%s"
-
-#~ msgid "Could not initialize GnomeVFS!\n"
-#~ msgstr "ኖምVFS ማስጀመር አልቻልኩም!\n"
-
-#~ msgid "Could not initialize Bonobo!\n"
-#~ msgstr "bonobo ማስጀመር አልቻልኩም!\n"
-
-#~ msgid "Could not save image as '%s': %s."
-#~ msgstr "ምስሉን በ'%s': %s ስም ማስቀመጥ አልቻለም።"
-
-#~ msgid ""
-#~ "Could not display help for the preferences dialog.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "ለምርጫዎቹ ልውውጥ መረጃ ማሳየት አልተቻለም።\n"
-#~ "%s"
-
-#~ msgid "Change preferences"
-#~ msgstr "ምርጫዎቹን ቀይሩ"
-
-#~ msgid "Close"
-#~ msgstr "ዝጋ"
-
-#~ msgid "_New Window"
-#~ msgstr "አዲስ _መስኮት"
-
-#~ msgid "1:1"
-#~ msgstr "1:1"
-
-#~ msgid "Zoom _1:1"
-#~ msgstr "በቅርበት አሳይ _1:1"
-
-#~ msgid "Zoom to _Fit"
-#~ msgstr "በመስኮቱ _ልክ አጉላ"
-
-#~ msgid "Check _size"
-#~ msgstr "_መጠኑን አጣራ"
-
-#~ msgid "Check _type"
-#~ msgstr "_ዓይነቱን አጣራ"
-
-#~ msgid "Large"
-#~ msgstr "ትልቅ"
-
-#~ msgid "Medium"
-#~ msgstr "መሀከለኛ"
-
-#~ msgid "Print Pre_view"
-#~ msgstr "የቅድመ ህትመት ዕይታ"
-
-#~ msgid "Print S_etup"
-#~ msgstr "የህትመት ቅንጅት"
-
-#~ msgid "Small"
-#~ msgstr "ትንሽ"
-
-#~ msgid "_Bilinear"
-#~ msgstr "_Bilinear"
-
-#~ msgid "_Black"
-#~ msgstr "ጥቁር"
-
-#~ msgid "_Dark"
-#~ msgstr "_ጨለማ"
-
-#~ msgid "_Dither"
-#~ msgstr "_Dither"
-
-#~ msgid "_Gray"
-#~ msgstr "_ግራጫ"
-
-#~ msgid "_Hyperbolic"
-#~ msgstr "_ሞላላ ቅርጽ"
-
-#~ msgid "_Light"
-#~ msgstr "_ብርሃን"
-
-#~ msgid "_Maximum (high color)"
-#~ msgstr "_ከፍተኛ መጠን (ደማቅ ቀለም)"
-
-#~ msgid "_Midtone"
-#~ msgstr "_Midtone"
-
-#~ msgid "_White"
-#~ msgstr "_ነጭ"
-
-#~ msgid "Check Type"
-#~ msgstr "ዓይነቱን አጣራ"
-
-#~ msgid "Check Size"
-#~ msgstr "መጠኑን አጣራ"
-
-#~ msgid "Bilinear Interpolation"
-#~ msgstr "Bilinear Interpolation"
-
-#~ msgid "Hyperbolic Interpolation"
-#~ msgstr "የሞላላ ቅርጹ Interpolation"
-
-#~ msgid "No dithering"
-#~ msgstr "ያለ dithering"
-
-#~ msgid "Dark"
-#~ msgstr "ጨለማ"
-
-#~ msgid "Black"
-#~ msgstr "ጥቁር"
-
-#~ msgid "Gray"
-#~ msgstr "ግራጫ"
-
-#~ msgid "White"
-#~ msgstr "ነጭ"
-
-#~ msgid "_Interpolation:"
-#~ msgstr "_Interpolation፦"
-
-#~ msgid "_Dither:"
-#~ msgstr "መወሰን _አቃተው / ማመንታት፦"
-
-#~ msgid "Check _type:"
-#~ msgstr "_ዓይነቱን አጣራ፦"
-
-#~ msgid "Check _size:"
-#~ msgstr "_መጠኑን አጣራ፦"
+msgid "Couldn't access trash."
+msgstr ""
+
+#: ../src/xviewer-window.c:4045
+msgid "_Image"
+msgstr "_ምስል"
+
+#: ../src/xviewer-window.c:4046
+msgid "_Edit"
+msgstr "_አስተካክል"
+
+#: ../src/xviewer-window.c:4048
+msgid "_Go"
+msgstr "_መሄጃ"
+
+#: ../src/xviewer-window.c:4049
+msgid "_Tools"
+msgstr "_መሳሪያዎች"
+
+#: ../src/xviewer-window.c:4052
+msgid "_Open…"
+msgstr "_መክፈቻ…"
+
+#: ../src/xviewer-window.c:4053
+msgid "Open a file"
+msgstr "ፋይል ክፈት"
+
+#: ../src/xviewer-window.c:4056
+msgid "Close window"
+msgstr "መስኮቱን ዝጋ"
+
+#: ../src/xviewer-window.c:4058
+msgid "T_oolbar"
+msgstr "እ_ቃ መደርደሪያ"
+
+#: ../src/xviewer-window.c:4059
+msgid "Edit the application toolbar"
+msgstr "የ መተግበሪያ እቃ መደርደሪያ ማረሚያ"
+
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr "የ ምስል መመልከቻ ምርጫዎች"
+
+#: ../src/xviewer-window.c:4064
+msgid "_Contents"
+msgstr "_ይዞታዎች"
+
+#: ../src/xviewer-window.c:4065
+msgid "Help on this application"
+msgstr ""
+
+#: ../src/xviewer-window.c:4068
+msgid "About this application"
+msgstr "ስለዚህ ፕሮግራም"
+
+#: ../src/xviewer-window.c:4074
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4077
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4083
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4089
+msgid "Save changes in currently selected images"
+msgstr ""
+
+#: ../src/xviewer-window.c:4091
+msgid "Open _with"
+msgstr "መክፈቻ _በ"
+
+#: ../src/xviewer-window.c:4092
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/xviewer-window.c:4095
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4100
+msgid "_Print…"
+msgstr "_ማተሚያ..."
+
+#: ../src/xviewer-window.c:4101
+msgid "Print the selected image"
+msgstr "የ ተመረጠውን ምስል ማተሚያ"
+
+#: ../src/xviewer-window.c:4103
+msgid "Prope_rties"
+msgstr "ባህሪ_ዎች"
+
+#: ../src/xviewer-window.c:4104
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4106
+msgid "_Undo"
+msgstr "_መተው"
+
+#: ../src/xviewer-window.c:4107
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4109
+msgid "Flip _Horizontal"
+msgstr ""
+
+#: ../src/xviewer-window.c:4110
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/xviewer-window.c:4112
+msgid "Flip _Vertical"
+msgstr ""
+
+#: ../src/xviewer-window.c:4113
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/xviewer-window.c:4115
+msgid "_Rotate Clockwise"
+msgstr ""
+
+#: ../src/xviewer-window.c:4116
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
+
+#: ../src/xviewer-window.c:4118
+msgid "Rotate Counterc_lockwise"
+msgstr ""
+
+#: ../src/xviewer-window.c:4119
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
+
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
+
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
+
+#: ../src/xviewer-window.c:4125
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
+msgid "_Copy"
+msgstr "_ኮፒ"
+
+#: ../src/xviewer-window.c:4131
+msgid "Copy the selected image to the clipboard"
+msgstr ""
+
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
+msgid "_Zoom In"
+msgstr "ከ_ቅርበት ዕይታ"
+
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
+msgid "Zoom _Out"
+msgstr "ከ_ርቀት ዕይታ"
+
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
+msgid "Shrink the image"
+msgstr "ምስል ማሳነሻ"
+
+#: ../src/xviewer-window.c:4139
+msgid "_Normal Size"
+msgstr "የ_ተለመደ መጠን"
+
+#: ../src/xviewer-window.c:4140
+msgid "Show the image at its normal size"
+msgstr ""
+
+#: ../src/xviewer-window.c:4157
+msgid "_Fullscreen"
+msgstr "_በሙሉ ገጽ መመልከቻ"
+
+#: ../src/xviewer-window.c:4158
+msgid "Show the current image in fullscreen mode"
+msgstr ""
+
+#: ../src/xviewer-window.c:4160
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4161
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
+msgstr "በ _ጥሩ ልክ"
+
+#: ../src/xviewer-window.c:4164
+msgid "Fit the image to the window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
+msgid "_Previous Image"
+msgstr "_ያለፈው ምስል"
+
+#: ../src/xviewer-window.c:4170
+msgid "Go to the previous image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4172
+msgid "_Next Image"
+msgstr "_የሚቀጥለው ምስል"
+
+#: ../src/xviewer-window.c:4173
+msgid "Go to the next image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
+msgid "_First Image"
+msgstr "የ _መጀመሪያው ምስል"
+
+#: ../src/xviewer-window.c:4176
+msgid "Go to the first image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
+msgid "_Last Image"
+msgstr "የ _መጨረሻው ምስል"
+
+#: ../src/xviewer-window.c:4179
+msgid "Go to the last image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4181
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4182
+msgid "Go to a random image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr "ተ_ንሸራታች ማሳያ"
+
+#: ../src/xviewer-window.c:4341
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/xviewer-window.c:4413
+msgid "Previous"
+msgstr "ቀደም ያለው"
+
+#: ../src/xviewer-window.c:4418
+msgid "Next"
+msgstr "የሚቀጥለው"
+
+#: ../src/xviewer-window.c:4425
+msgid "Right"
+msgstr "በ ቀኝ"
+
+#: ../src/xviewer-window.c:4428
+msgid "Left"
+msgstr "በ ግራ"
+
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr "ፎልደር ማሳያ"
+
+#: ../src/xviewer-window.c:4434
+msgid "In"
+msgstr "ቅርበት"
+
+#: ../src/xviewer-window.c:4437
+msgid "Out"
+msgstr "ርቀት"
+
+#: ../src/xviewer-window.c:4440
+msgid "Normal"
+msgstr "የተለመደ"
+
+#: ../src/xviewer-window.c:4443
+msgid "Fit"
+msgstr "ልክ"
+
+#: ../src/xviewer-window.c:4446
+msgid "Gallery"
+msgstr "አዳራሽ"
+
+#: ../src/xviewer-window.c:4463
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr "ቆሻሻ"
+
+#: ../src/xviewer-window.c:4829
+#, c-format
+msgid "Edit the current image using %s"
+msgstr ""
+
+#: ../src/xviewer-window.c:4831
+msgid "Edit Image"
+msgstr "ምስል ማረሚያ"
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr "በ ሙሉ መመልከቻ ዘዴ መክፈቻ"
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr ""
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with xviewer's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

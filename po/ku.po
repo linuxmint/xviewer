@@ -8,14 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-04 18:42+0100\n"
-"PO-Revision-Date: 2008-01-04 18:58+0100\n"
-"Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Kurdish <gnu-ku-wergerandin@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -24,370 +26,444 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:938
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
 msgstr "\"_%s\" nîşan bide"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
 msgstr "Di darikê amûran de bigu_hêze"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
 msgstr ""
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
 msgstr "Ji Darikê Amûran _Rake"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
 msgstr ""
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1405
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
 msgstr "Darikê amûran _jê bibe"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1406
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
 msgstr ""
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:491
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
 msgstr "Veqetîner"
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:111
-msgid "Running in fullscreen mode"
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Dîtin"
+
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_Darika amûran"
+
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "_Darika rewşê"
+
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
 msgstr ""
 
-#: ../data/xviewer.desktop.in.in.h:1
-msgid "Browse and rotate images"
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
 msgstr ""
 
-#: ../data/xviewer.desktop.in.in.h:2
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "_Vebijêrk"
+
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_Alîkarî"
+
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_Der barê"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Nîşanderê Wêneyan"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:1
-msgid "<b>Aperture Value:</b>"
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
 msgstr ""
 
-#: ../data/xviewer-image-properties-dialog.glade.h:2
-msgid "<b>Author:</b>"
-msgstr "<b>Nivîskar:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:3
-msgid "<b>Bytes:</b>"
-msgstr "<b>Bayt:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:4
-msgid "<b>Camera Model:</b>"
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
 msgstr ""
 
-#: ../data/xviewer-image-properties-dialog.glade.h:5
-msgid "<b>Copyright:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:6
-msgid "<b>Date/Time:</b>"
-msgstr "<b>Roj/Dem:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Rave:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:8
-msgid "<b>Details</b>"
-msgstr "<b>Kîtekît</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:9
-msgid "<b>Exposure Time:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:10
-msgid "<b>Flash:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:11
-msgid "<b>Focal Length:</b>"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:12
-msgid "<b>Height:</b>"
-msgstr "<b>Bilindahî:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:13
-#, fuzzy
-msgid "<b>ISO Speed Rating:</b>"
-msgstr "<b>Vebijêrk</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:14
-#, fuzzy
-msgid "<b>Keywords:</b>"
-msgstr "<b>Vebijêrk</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:15
-msgid "<b>Location:</b>"
-msgstr "<b>Cih:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:16
-#, fuzzy
-msgid "<b>Metering Mode:</b>"
-msgstr "<b>Dor</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:17
-msgid "<b>Name:</b>"
-msgstr "<b>Nav:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:18
-msgid "<b>Type:</b>"
-msgstr "<b>Cure</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:19
-msgid "<b>Width:</b>"
-msgstr "<b>Firehî:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:20
-msgid "General"
-msgstr "Giştî"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:21
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Taybetmendiyên Wêneyê"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:22
-msgid "Metadata"
-msgstr ""
-
-#: ../data/xviewer-image-properties-dialog.glade.h:23
-msgid "_Next"
-msgstr "P_êş"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:24
+#: ../data/xviewer-image-properties-dialog.ui.h:2
 msgid "_Previous"
 msgstr "P_aş"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:1
-msgid "<b>File Name Preview</b>"
-msgstr "<b>Pêşdîtina Navê Pel</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "P_êş"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:2
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Diyarkirinên Riya Pel</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "_Bigire"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:3
-msgid "<b>Options</b>"
-msgstr "<b>Vebijêrk</b>"
-
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:5
-#, no-c-format
-msgid "<small><i><b>%f:</b> original filename</i></small>"
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
 msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:7
-#, no-c-format
-msgid "<small><i><b>%n:</b> counter</i></small>"
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
 msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:8
-msgid "Choose a folder"
-msgstr "Peldankekê hilbijêre"
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:9
-msgid "Destination folder:"
-msgstr "Peldanka hedef:"
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:10
-msgid "Filename format:"
-msgstr "Formata navê pelan"
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:11
-#, fuzzy
-msgid "Rename from:"
-msgstr "Ji Nû Vê Binavîne:"
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:12
-#, fuzzy
-msgid "Replace spaces with underscores"
-msgstr "Valahiyan bi jêrexetan biguherîne"
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "Giştî"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:13
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
 msgstr "Cuda tomar bike"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:14
-msgid "Start counter at:"
-msgstr "Destpêka jimarkerê:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "Tomar bike _wekî"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "Peldankekê hilbijêre"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "Ji kê re dişîne:"
 
-#: ../data/xviewer-preferences-dialog.glade.h:1
-msgid "<b>Image Enhancements</b>"
-msgstr "<b>Baştirkirina Wêneyan</b>"
-
-#: ../data/xviewer-preferences-dialog.glade.h:2
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Nêzîkkirina Wêne</b>"
-
-#: ../data/xviewer-preferences-dialog.glade.h:3
-msgid "<b>Sequence</b>"
-msgstr "<b>Dor</b>"
-
-#: ../data/xviewer-preferences-dialog.glade.h:4
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Beşên Şeffaf</b>"
-
-#: ../data/xviewer-preferences-dialog.glade.h:5
-msgid "As _background"
-msgstr "Wekî _rûerd"
-
-#: ../data/xviewer-preferences-dialog.glade.h:6
-msgid "As check _pattern"
-msgstr "Wekî _nîgarê textê kişikê"
-
-#: ../data/xviewer-preferences-dialog.glade.h:7
-msgid "As custom c_olor:"
-msgstr "Wekî r_engekî taybet:"
-
-#: ../data/xviewer-preferences-dialog.glade.h:8
-msgid "Color for Transparent Areas"
-msgstr "Ji bo Qadên Şeffad Reng"
-
-#: ../data/xviewer-preferences-dialog.glade.h:9
-msgid "E_xpand images to fit screen"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:10
-msgid "Xviewer Preferences"
-msgstr "Vebijêrkên Çavê GNOME'yê"
+#: ../data/xviewer-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:11
-msgid "Image View"
-msgstr "Nîşandana Wêneyan"
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:12
-msgid "Plugins"
-msgstr "Pêvek"
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:13
-msgid "Slideshow"
-msgstr "Pêşandana Slaytê"
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:14
-#, fuzzy
-msgid "Smooth images when _zoomed"
-msgstr "Dî mezinkirinê de zelal_kirina wêne"
-
-#: ../data/xviewer-preferences-dialog.glade.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Wekî _nîgarê textê kişikê"
+
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Wekî r_engekî taybet:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Ji bo Qadên Şeffad Reng"
+
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Wekî _rûerd"
+
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Nîşandana Wêneyan"
+
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr ""
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "_Xelekbar"
 
-#: ../data/xviewer-preferences-dialog.glade.h:17
-msgid "_Switch image after:"
-msgstr "Maweya _guherandina wêneyan:"
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Pêşandana Slaytê"
 
-#: ../data/xviewer-preferences-dialog.glade.h:18
-msgid "seconds"
-msgstr "çirke"
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Pêvek"
 
-#: ../data/xviewer.schemas.in.h:1
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-
-#: ../data/xviewer.schemas.in.h:2
-msgid "Active plugins"
-msgstr "Pêvekên çalak"
-
-#: ../data/xviewer.schemas.in.h:4
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Di destpêkê de destûrê bide nêzîkkirina ji %100î mezintir"
-
-#: ../data/xviewer.schemas.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:6
-msgid "Delay in seconds until showing the next image"
-msgstr "Berî ku wêne were nîşandan wê çend çirkeyan were rawestandin"
-
-#: ../data/xviewer.schemas.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:9
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Heke hilbijartî be, wêneyên biçûk wekî standard di dîmenderê de nayê "
-"bicihkirin."
-
-#: ../data/xviewer.schemas.in.h:10
-msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
-msgstr ""
-
-#: ../data/xviewer.schemas.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Zelalkirina wêne"
 
-#: ../data/xviewer.schemas.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:13
-msgid "Loop through the image sequence"
-msgstr "Fira bi xelekirina wêneyan"
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:14
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Nîşandera zelaliyê"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:15
-#, fuzzy
-msgid "Show/hide the image collection pane scroll buttons."
-msgstr "Panela koleksiyona dîmenan nîşan bide/veşêre."
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:16
-msgid "Show/hide the image collection pane."
-msgstr "Panela koleksiyona dîmenan nîşan bide/veşêre."
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:17
-msgid "Show/hide the window side pane."
-msgstr "Darikê kelekê yê paceyê nîşan bide/veşêre."
-
-#: ../data/xviewer.schemas.in.h:18
-msgid "Show/hide the window statusbar."
-msgstr "Darikê rewşê yê paceyê nîşan bide/veşêre."
-
-#: ../data/xviewer.schemas.in.h:19
-msgid "Show/hide the window toolbar."
-msgstr "Darikê amûran yên paceyan nîşan bide/veşêre."
-
-#: ../data/xviewer.schemas.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -396,318 +472,609 @@ msgid ""
 "a 100% zoom increment."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:22
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Rengê zelaliyê"
 
-#: ../data/xviewer.schemas.in.h:23
-msgid "Transparency indicator"
-msgstr "Nîşandera zelaliyê"
-
-#: ../data/xviewer.schemas.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:25
-#, fuzzy
-msgid "Whether the image collection pane should be resizable or not."
-msgstr "Panela koleksiyona dîmenan nîşan bide/veşêre."
+#: ../data/org.x.viewer.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Fira bi xelekirina wêneyan"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Di destpêkê de destûrê bide nêzîkkirina ji %100î mezintir"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Heke hilbijartî be, wêneyên biçûk wekî standard di dîmenderê de nayê "
+"bicihkirin."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Berî ku wêne were nîşandan wê çend çirkeyan were rawestandin"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:28
-msgid "Whether the scroll wheel should be used for zooming or not."
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
 msgstr ""
 
-#: ../data/xviewer.schemas.in.h:29
-msgid "Zoom multiplier"
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
 msgstr ""
 
-#: ../src/xviewer-file-chooser.c:121
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Pêvekên çalak"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr ""
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Tomar bike"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:437
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:652
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:669
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/xviewer-close-confirmation-dialog.c:688
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+msgid "_Reload"
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "Barkirina wêneyê '%s' bi ser neket."
+
+#: ../src/xviewer-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr "Wêne di '%s' de nehate dîtin."
+
+#: ../src/xviewer-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "Kamera"
+
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "Daneya Wêne"
+
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Şertên Tomarkirina Wêneyan"
+
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Nîşeya Afirîner"
+
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "Wekî Din"
+
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP Exif"
+
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
+
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "Gerînendetiya Mafên XMP"
+
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr "XMP Wekî Din"
+
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "Etîket"
+
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Nirx"
+
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/xviewer-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/xviewer-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
 msgstr ""
 
-#: ../src/xviewer-file-chooser.c:126
+#: ../src/xviewer-file-chooser.c:124
 msgid ""
-"Xviewer could not determine a supported writable file format based on "
+"Image Viewer could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
 
-#: ../src/xviewer-file-chooser.c:127
+#: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
 msgstr ""
 
-#: ../src/xviewer-file-chooser.c:159
-msgid "All Files"
-msgstr "Hemû Pel"
-
-#: ../src/xviewer-file-chooser.c:164
-msgid "All Images"
-msgstr "Hemû Wêne"
-
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:185
+#: ../src/xviewer-file-chooser.c:160
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr ""
+
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:281 ../src/xviewer-thumb-view.c:439
-#: ../src/xviewer-window.c:677
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pîksel"
 msgstr[1] "pîksel"
 
-#: ../src/xviewer-file-chooser.c:423
-msgid "Load Image"
-msgstr "Wêneyê bar bike"
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
 
-#: ../src/xviewer-file-chooser.c:431
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:467
 msgid "Save Image"
 msgstr "Wêneyê Tomar Bike"
 
-#: ../src/xviewer-file-chooser.c:439
+#: ../src/xviewer-file-chooser.c:475
 msgid "Open Folder"
 msgstr "Peldankê veke"
 
-#: ../src/xviewer-image.c:527
+#: ../src/xviewer-image.c:613
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Li ser wêneyê nehatiye barkirin de veguherîn."
 
-#: ../src/xviewer-image.c:555
-#, fuzzy, c-format
+#: ../src/xviewer-image.c:641
+#, c-format
 msgid "Transformation failed."
-msgstr "Li ser wêneyê nehatiye barkirin de veguherîn."
+msgstr ""
 
-#: ../src/xviewer-image.c:1067
+#: ../src/xviewer-image.c:1138
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Ji bo vî celebê dosyeyan EXIF nayê piştrastkirin."
 
-#: ../src/xviewer-image.c:1184
+#: ../src/xviewer-image.c:1287
 #, c-format
 msgid "Image loading failed."
 msgstr "Barkirina wêneyê bi ser neket."
 
-#: ../src/xviewer-image.c:1455 ../src/xviewer-image.c:1684
-#, c-format
-msgid "File exists"
-msgstr "Dosya heyî"
-
-#: ../src/xviewer-image.c:1618 ../src/xviewer-image.c:1754
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
 #, c-format
 msgid "No image loaded."
 msgstr "Wêne nehate barkirin."
 
-#: ../src/xviewer-image.c:1627 ../src/xviewer-image.c:1766
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr ""
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Afirandina dosiyên demîn biserneket."
 
-#: ../src/xviewer-image-jpeg.c:357
+#: ../src/xviewer-image-jpeg.c:374
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Ji bo tomarkirinê dosyeya derbasdar nehate çêkirin: %s"
 
-#: ../src/xviewer-image-jpeg.c:376
+#: ../src/xviewer-image-jpeg.c:393
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ji bo karibe dosyeya JPEG bar bike bîr jê re nehate veqetandin"
 
-#: ../src/xviewer-exif-details.c:68
-msgid "Camera"
-msgstr "Kamera"
-
-#: ../src/xviewer-exif-details.c:69
-msgid "Image Data"
-msgstr "Daneya Wêne"
-
-#: ../src/xviewer-exif-details.c:70
-msgid "Image Taking Conditions"
-msgstr "Şertên Tomarkirina Wêneyan"
-
-#: ../src/xviewer-exif-details.c:71
-msgid "Maker Note"
-msgstr "Nîşeya Afirîner"
-
-#: ../src/xviewer-exif-details.c:72
-msgid "Other"
-msgstr "Wekî Din"
-
-#: ../src/xviewer-exif-details.c:74
-msgid "XMP Exif"
-msgstr "XMP Exif"
-
-#: ../src/xviewer-exif-details.c:75
-msgid "XMP IPTC"
-msgstr "XMP IPTC"
-
-#: ../src/xviewer-exif-details.c:76
-msgid "XMP Rights Management"
-msgstr "Gerînendetiya Mafên XMP"
-
-#: ../src/xviewer-exif-details.c:77
-msgid "XMP Other"
-msgstr "XMP Wekî Din"
-
-#: ../src/xviewer-exif-details.c:249
-msgid "Tag"
-msgstr "Etîket"
-
-#: ../src/xviewer-exif-details.c:256
-msgid "Value"
-msgstr "Nirx"
-
-#: ../src/xviewer-exif-util.c:58 ../src/xviewer-exif-util.c:74
-#: ../src/xviewer-exif-util.c:96
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "Nenas"
 
-#: ../src/xviewer-error-message-area.c:110
-msgid "_Retry"
-msgstr "_Dîsa Biceribîne"
-
-#: ../src/xviewer-error-message-area.c:134
-#, c-format
-msgid "Could not load image '%s'."
-msgstr "Barkirina wêneyê '%s' bi ser neket."
-
-#: ../src/xviewer-error-message-area.c:160
-#, c-format
-msgid "No images found in '%s'."
-msgstr "Wêne di '%s' de nehate dîtin."
-
-#: ../src/xviewer-error-message-area.c:165
-msgid "The given locations contain no images."
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:806
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "Mîhengê _Wêneyan"
+
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "Wêne"
 
-#: ../src/xviewer-print-image-setup.c:807
-msgid "The image whose printing properties will be setup"
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:813
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:814
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:838
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "Cih"
 
-#: ../src/xviewer-print-image-setup.c:843
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "_Çep:"
 
-#: ../src/xviewer-print-image-setup.c:844
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "_Rast:"
 
-#: ../src/xviewer-print-image-setup.c:845
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "_Ser:"
 
-#: ../src/xviewer-print-image-setup.c:846
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:848
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "_Navîn:"
 
-#: ../src/xviewer-print-image-setup.c:853
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "Ne yek"
 
-#: ../src/xviewer-print-image-setup.c:855
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "Berwar"
 
-#: ../src/xviewer-print-image-setup.c:857
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "Serdirêjahî"
 
-#: ../src/xviewer-print-image-setup.c:859
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "Her du"
 
-#: ../src/xviewer-print-image-setup.c:875
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "Mezinahî"
 
-#: ../src/xviewer-print-image-setup.c:880
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "_Firehî:"
 
-#: ../src/xviewer-print-image-setup.c:882
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "_Bilindahî:"
 
-#: ../src/xviewer-print-image-setup.c:885
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:898
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:903
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:905
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "Înç"
 
-#: ../src/xviewer-print-image-setup.c:925
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "Pêşdîtin"
 
-#: ../src/xviewer-save-as-dialog-helper.c:160
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "wekî heyî"
 
-#: ../src/xviewer-thumb-view.c:452
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/xviewer-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr ""
+
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr ""
 
-#: ../src/xviewer-uri-converter.c:1015
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Qet nebe navê du heb pelan wekî hev in."
 
-#: ../src/xviewer-util.c:63
-msgid "Could not display help for Xviewer"
+#: ../src/xviewer-util.c:68
+msgid "Could not display help for Image Viewer"
 msgstr ""
 
-#: ../src/xviewer-util.c:111
+#: ../src/xviewer-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (Unikoda Nederbasdar)"
 
-#: ../src/xviewer-window.c:1069
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/xviewer-window.c:541
 #, c-format
-msgid "Open with \"%s\""
-msgstr "Bi \"%s\" veke"
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/xviewer-window.c:1070
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr ""
@@ -717,581 +1084,514 @@ msgstr ""
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1183
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Wêneya \"%s\" (%u/%u) tê tomarkirin."
 
-#: ../src/xviewer-window.c:1522
+#: ../src/xviewer-window.c:1574
 #, c-format
-msgid "Loading image \"%s\""
-msgstr "Wêneya \"%s\" tê barkirin."
+msgid "Opening image \"%s\""
+msgstr ""
 
-#: ../src/xviewer-window.c:2334
-msgid "Image Settings"
-msgstr "Mîhengê _Wêneyan"
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
 
-#: ../src/xviewer-window.c:2348
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "Dema pel hatiye çapkirin çewtî çêbû:\n"
+msgstr ""
+"Dema pel hatiye çapkirin çewtî çêbû:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2474
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "Edîtorê Darikên Amûran"
 
-#: ../src/xviewer-window.c:2477
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr ""
 
-#: ../src/xviewer-window.c:2561
-msgid "translator-credits"
-msgstr "Erdal Ronahî <erdal.ronahi@gmail.com>"
-
-#: ../src/xviewer-window.c:2564
-msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
+msgid "Error launching System Settings: "
 msgstr ""
 
-#: ../src/xviewer-window.c:2568
-msgid ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2791
+msgid "_Open Background Preferences"
 msgstr ""
 
-#: ../src/xviewer-window.c:2572
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:2807
+#, c-format
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
 
-#: ../src/xviewer-window.c:2585 ../src/main.c:186
-msgid "Xviewer"
-msgstr "Çavê GNOME'yê"
+#: ../src/xviewer-window.c:3274
+msgid "Saving image locally…"
+msgstr ""
 
-#: ../src/xviewer-window.c:2588
-msgid "The GNOME image viewer."
-msgstr "Sepana nîşandana wêneyên GNOME."
+#: ../src/xviewer-window.c:3352
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
 
-#: ../src/xviewer-window.c:2961
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr ""
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr ""
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr ""
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Dema wêneyê %s jê dibir çewtî çêbû"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "Tu dixwazî pelê \"%s\" biavêjî çopê?"
 
-#: ../src/xviewer-window.c:2964
+#: ../src/xviewer-window.c:3606
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "the selected image to the trash?"
+msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3616
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
 msgstr ""
-"Tu dixwazî wêneya hilbijartî\n"
-"biavêjî çopê?"
-"Tu dixwazî %d wêneyên hilbijartî\n"
-"biavêjî çopê?"
 
-#: ../src/xviewer-window.c:2979
-msgid "Move to Trash"
-msgstr "Biavêje Sergo"
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
+msgid "Move to _Trash"
+msgstr "Biavêjî _Çopê"
 
-#: ../src/xviewer-window.c:3025
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Xwe negihand qutiya çopê."
 
-#: ../src/xviewer-window.c:3109
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "Dema wêneyê %s jê dibir çewtî çêbû"
-
-#: ../src/xviewer-window.c:3316
-msgid "_File"
-msgstr "_Dosya"
-
-#: ../src/xviewer-window.c:3317
-msgid "_Edit"
-msgstr "_Biguherîne"
-
-#: ../src/xviewer-window.c:3318
-msgid "_View"
-msgstr "_Dîtin"
-
-#: ../src/xviewer-window.c:3319
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Wêne"
 
-#: ../src/xviewer-window.c:3320
+#: ../src/xviewer-window.c:4046
+msgid "_Edit"
+msgstr "_Biguherîne"
+
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "_Biçe"
 
-#: ../src/xviewer-window.c:3321
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "_Amûr"
 
-#: ../src/xviewer-window.c:3322
-msgid "_Help"
-msgstr "_Alîkarî"
+#: ../src/xviewer-window.c:4052
+msgid "_Open…"
+msgstr ""
 
-#: ../src/xviewer-window.c:3324
-msgid "_Open..."
-msgstr "_Veke..."
-
-#: ../src/xviewer-window.c:3325
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Dosiyekê veke"
 
-#: ../src/xviewer-window.c:3327
-msgid "_Close"
-msgstr "_Bigire"
-
-#: ../src/xviewer-window.c:3328
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Paceyê bigire"
 
-#: ../src/xviewer-window.c:3330
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "_Darikê amûran"
 
-#: ../src/xviewer-window.c:3331
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Darikê amurên sepanê bi dawî bîne"
 
-#: ../src/xviewer-window.c:3333
-msgid "Prefere_nces"
-msgstr "_Vebijêrk"
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr ""
 
-#: ../src/xviewer-window.c:3334
-msgid "Preferences for Xviewer"
-msgstr "Mîhengên Çaveya GNOME'yê"
-
-#: ../src/xviewer-window.c:3336
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Naverok"
 
-#: ../src/xviewer-window.c:3337
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Alîkariya ji bo vê sepanê"
 
-#: ../src/xviewer-window.c:3339 ../src/xviewer-plugin-manager.c:507
-msgid "_About"
-msgstr "_Der barê"
-
-#: ../src/xviewer-window.c:3340
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Der barê vê sepanê"
 
-#: ../src/xviewer-window.c:3345
-msgid "_Toolbar"
-msgstr "_Darika amûran"
-
-#: ../src/xviewer-window.c:3346
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Guhertina stûnê amûran di paceya heyî de"
 
-#: ../src/xviewer-window.c:3348
-msgid "_Statusbar"
-msgstr "_Darika rewşê"
-
-#: ../src/xviewer-window.c:3349
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Guhertina stûna rewşê di paceya heyî de"
 
-#: ../src/xviewer-window.c:3351
-msgid "_Image Collection"
-msgstr "Koleksiyona _wêneyan"
-
-#: ../src/xviewer-window.c:3352
+#: ../src/xviewer-window.c:4080
 msgid ""
-"Changes the visibility of the image collection pane in the current window"
+"Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 
-#: ../src/xviewer-window.c:3354
-msgid "Side _Pane"
-msgstr ""
-
-#: ../src/xviewer-window.c:3355
-#, fuzzy
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
-msgstr "Guhertina stûna rewşê di paceya heyî de"
+msgstr ""
 
-#: ../src/xviewer-window.c:3360
-msgid "_Save"
-msgstr "_Tomar bike"
+#: ../src/xviewer-window.c:4089
+msgid "Save changes in currently selected images"
+msgstr ""
 
-#: ../src/xviewer-window.c:3363
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "Veke _bi"
 
-#: ../src/xviewer-window.c:3366
-msgid "Save _As..."
-msgstr "_Cuda Tomar Bike..."
-
-#: ../src/xviewer-window.c:3369
-msgid "Page Set_up..."
+#: ../src/xviewer-window.c:4092
+msgid "Open the selected image with a different application"
 msgstr ""
 
-#: ../src/xviewer-window.c:3372
-msgid "_Print..."
-msgstr "_Çapkirin..."
+#: ../src/xviewer-window.c:4095
+msgid "Save the selected images with a different name"
+msgstr ""
 
-#: ../src/xviewer-window.c:3375
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4100
+msgid "_Print…"
+msgstr ""
+
+#: ../src/xviewer-window.c:4101
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "_Taybetmendî"
 
-#: ../src/xviewer-window.c:3378
+#: ../src/xviewer-window.c:4104
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Vegerîne"
 
-#: ../src/xviewer-window.c:3381
+#: ../src/xviewer-window.c:4107
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "_Berwar Bizivîrîne"
 
-#: ../src/xviewer-window.c:3384
+#: ../src/xviewer-window.c:4110
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "_Serdirêjahiyê Bizivirîne"
 
-#: ../src/xviewer-window.c:3387
+#: ../src/xviewer-window.c:4113
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "Aliyê Saetê de _Bizivîrîne"
 
-#: ../src/xviewer-window.c:3390
+#: ../src/xviewer-window.c:4116
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
+
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr ""
 
-#: ../src/xviewer-window.c:3393
-msgid "Set As _Wallpaper"
-msgstr "Bike _Kaxiza Dîwer"
+#: ../src/xviewer-window.c:4119
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
 
-#: ../src/xviewer-window.c:3396 ../src/xviewer-window.c:3420
-msgid "Move to _Trash"
-msgstr "Biavêjî _Çopê"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3399 ../src/xviewer-window.c:3411 ../src/xviewer-window.c:3414
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
+
+#: ../src/xviewer-window.c:4125
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
+msgid "_Copy"
+msgstr ""
+
+#: ../src/xviewer-window.c:4131
+msgid "Copy the selected image to the clipboard"
+msgstr ""
+
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Nêzîktir"
 
-#: ../src/xviewer-window.c:3402 ../src/xviewer-window.c:3417
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "_Dûrtir"
 
-#: ../src/xviewer-window.c:3405
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "_Mezinahiya asayî"
 
-#: ../src/xviewer-window.c:3408
-msgid "Best _Fit"
+#: ../src/xviewer-window.c:4140
+msgid "Show the image at its normal size"
 msgstr ""
 
-#: ../src/xviewer-window.c:3426
-msgid "_Full Screen"
-msgstr "Dîmendera _Tijî"
+#: ../src/xviewer-window.c:4157
+msgid "_Fullscreen"
+msgstr ""
 
-#: ../src/xviewer-window.c:3432 ../src/xviewer-window.c:3444
+#: ../src/xviewer-window.c:4158
+msgid "Show the current image in fullscreen mode"
+msgstr ""
+
+#: ../src/xviewer-window.c:4160
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4161
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
+msgstr ""
+
+#: ../src/xviewer-window.c:4164
+msgid "Fit the image to the window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "Wêneya _berê"
 
-#: ../src/xviewer-window.c:3435
+#: ../src/xviewer-window.c:4170
+msgid "Go to the previous image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "Wêneya _piştre"
 
-#: ../src/xviewer-window.c:3438 ../src/xviewer-window.c:3447
+#: ../src/xviewer-window.c:4173
+msgid "Go to the next image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "Wêneya _yekemîn"
 
-#: ../src/xviewer-window.c:3441 ../src/xviewer-window.c:3450
+#: ../src/xviewer-window.c:4176
+msgid "Go to the first image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "Wêneya _dawî"
 
-#: ../src/xviewer-window.c:3456
-msgid "_Slideshow"
-msgstr "_Pêşandana Slaytê"
+#: ../src/xviewer-window.c:4179
+msgid "Go to the last image of the gallery"
+msgstr ""
 
-#: ../src/xviewer-window.c:3523
+#: ../src/xviewer-window.c:4181
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4182
+msgid "Go to a random image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4341
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Paş"
 
-#: ../src/xviewer-window.c:3527
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Pêş"
 
-#: ../src/xviewer-window.c:3531
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Rast"
 
-#: ../src/xviewer-window.c:3534
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Çep"
 
-#: ../src/xviewer-window.c:3537
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Nêzîk"
 
-#: ../src/xviewer-window.c:3540
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Dûr"
 
-#: ../src/xviewer-window.c:3543
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Asayî"
 
-#: ../src/xviewer-window.c:3546
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Tam"
 
-#: ../src/xviewer-window.c:3549
-msgid "Collection"
-msgstr "Koleksiyon"
-
-#: ../src/xviewer-plugin-manager.c:53
-msgid "Plugin"
-msgstr "Pêvek"
-
-#: ../src/xviewer-plugin-manager.c:54
-msgid "Enabled"
-msgstr "Çalakkirî"
-
-#: ../src/xviewer-plugin-manager.c:515
-msgid "C_onfigure"
-msgstr "_Veavakirin"
-
-#: ../src/xviewer-plugin-manager.c:525
-msgid "A_ctivate"
-msgstr "Çala_kkirin"
-
-#: ../src/xviewer-plugin-manager.c:537
-msgid "Ac_tivate All"
-msgstr "Hemûyan _Çalak bike"
-
-#: ../src/xviewer-plugin-manager.c:542
-msgid "_Deactivate All"
-msgstr "Hemûyan _Neçalak bike"
-
-#: ../src/xviewer-plugin-manager.c:833
-msgid "Active _Plugins:"
+#: ../src/xviewer-window.c:4446
+msgid "Gallery"
 msgstr ""
 
-#: ../src/xviewer-plugin-manager.c:862
-msgid "_About Plugin"
-msgstr "_Der barê Pêvekê De"
-
-#: ../src/xviewer-plugin-manager.c:869
-msgid "C_onfigure Plugin"
+#: ../src/xviewer-window.c:4463
+msgctxt "action (to trash)"
+msgid "Trash"
 msgstr ""
 
-#: ../src/main.c:64
+#: ../src/xviewer-window.c:4829
+#, c-format
+msgid "Edit the current image using %s"
+msgstr ""
+
+#: ../src/xviewer-window.c:4831
+msgid "Edit Image"
+msgstr ""
+
+#: ../src/main.c:63
 msgid "Open in fullscreen mode"
 msgstr ""
 
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr ""
+
 #: ../src/main.c:65
-msgid "Disable image collection"
-msgstr "Koleksiyona wêneyan neçalak bike"
+msgid "Open in slideshow mode"
+msgstr ""
 
 #: ../src/main.c:66
-msgid "Open in slide show mode"
+msgid "Start a new instance instead of reusing an existing one"
 msgstr ""
 
 #: ../src/main.c:67
-msgid "[FILE...]"
-msgstr "[DOSYE...]"
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
 
-#: ../src/main.c:217
-#, fuzzy
-msgid "Xviewer Image Viewer"
-msgstr "Vebijêrkên Çavê GNOME'yê"
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr ""
 
-#~ msgid "    "
-#~ msgstr "    "
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr ""
 
-#~ msgid "Saving Image"
-#~ msgstr "Tomarkirina Wêneyan"
-
-#~ msgid "_Browse"
-#~ msgstr "_Bigere..."
-
-#~ msgid "Last collection window geometry"
-#~ msgstr "Geometriya paceya koleksiyona herî dawî"
-
-#~ msgid "Last singleton window geometry"
-#~ msgstr "Avakirina paceya pêşîn a endezeya heyî"
-
-#~ msgid "Open images in a new window"
-#~ msgstr "Wêneyan di paceya nû de veke"
-
-#~ msgid "Show/hide image information for collection."
-#~ msgstr "Ji bo koleksiyonan agahiya wêneyan nîşan bide/veşêre."
-
-#~ msgid "Show/hide image information for single image."
-#~ msgstr "Ji bo wêneyekî agahiya wêne nîşan bide/veşêre."
-
-#~ msgid "Filename"
-#~ msgstr "Navê Pel"
-
-#~ msgid "Width"
-#~ msgstr "Firehî"
-
-#~ msgid "Height"
-#~ msgstr "Bilindahî"
-
-#~ msgid "Filesize"
-#~ msgstr "Mezinahiya dosiyê"
-
-#~ msgid "Attribute"
-#~ msgstr "Taybetmendî"
-
-#~ msgid "File"
-#~ msgstr "Pel"
-
-#~ msgid "EXIF"
-#~ msgstr "EXIF"
-
-#~ msgid "%s x %s pixels"
-#~ msgid_plural "%s x %s pixels"
-#~ msgstr[0] "%s x %s pîksel"
-#~ msgstr[1] "%s x %s pîksel"
-
-#~ msgid "Open in new window"
-#~ msgstr "Di paceya nû de veke"
-
-#~ msgid "Counter"
-#~ msgstr "Jimarker"
-
-#~ msgid "Comment"
-#~ msgstr "Şîrove"
-
-#~ msgid "Date"
-#~ msgstr "Dîrok"
-
-#~ msgid "Time"
-#~ msgstr "Dem"
-
-#~ msgid "Day"
-#~ msgstr "Roj"
-
-#~ msgid "Month"
-#~ msgstr "Meh"
-
-#~ msgid "Year"
-#~ msgstr "Sal"
-
-#~ msgid "Hour"
-#~ msgstr "Saet"
-
-#~ msgid "Minute"
-#~ msgstr "Xulek"
-
-#~ msgid "Second"
-#~ msgstr "Çirke"
-
-#~ msgid "Option not available."
-#~ msgstr "Vebijêrk ne derbasdar e."
-
-#~ msgid "Cancel saving ..."
-#~ msgstr "Tomarkirinê betal bike ..."
-
-#~ msgid "Overwrite file %s?"
-#~ msgstr "Bila li ser dosyeya %s were nivîsîn?"
-
-#~ msgid "File exists. Do you want to overwrite it?"
-#~ msgstr "Dosye heye. Tu dixwazî li ser dosyeya heyî binivîse?"
-
-#~ msgid "Skip"
-#~ msgstr "Derbas be"
-
-#~ msgid "Overwrite"
-#~ msgstr "Li ser binivîse"
-
-#~ msgid "Error on saving %s."
-#~ msgstr "Dema dosyeya %s dihate tomarkirin çewtî çêbû."
-
-#~ msgid "Couldn't determine destination uri."
-#~ msgstr "Navnîşana pêşwazkar nehate dîtin."
-
-#~ msgid "Couldn't determine file format of %s"
-#~ msgstr "Celebê dosyeya %s nehate diyarkirin"
-
-#~ msgid "Please use an appropriate filename suffix or select a file format."
-#~ msgstr ""
-#~ "Ji kerema xwe re yan navekî guncav yên pelan bikar bîne yan jî teşeya pel "
-#~ "hilbijêre."
-
-#~ msgid "Error on saving images."
-#~ msgstr "Dema wêne tomar dikir çewtî derket."
-
-#~ msgid "%i x %i pixels  %s    %i%%"
-#~ msgid_plural "%i x %i pixels  %s    %i%%"
-#~ msgstr[0] "%i x %i pîksel %s %i%%"
-#~ msgstr[1] "%i x %i pîksel %s %i%%"
-
-#~ msgid "Reason: %s"
-#~ msgstr "Sedem: %s"
-
-#~ msgid "Image _Information"
-#~ msgstr "_Agahiya Wêneyê"
-
-#~ msgid "Open"
-#~ msgstr "Veke"
-
-#~ msgid "Close"
-#~ msgstr "Bigire"
-
-#~ msgid "Save"
-#~ msgstr "Tomar bike"
-
-#~ msgid "Undo"
-#~ msgstr "Vegerîne"
-
-#~ msgid "User interface description not found."
-#~ msgstr "Pênasa yekeya navberê ya bikarhêner nehate dîtin."
-
-#~ msgid "Unable to create Xviewer user interface"
-#~ msgstr "Afirandina navrûyê Çavê GNOME'ê serneket"
-
-#~ msgid "File not found."
-#~ msgid_plural "Files not found."
-#~ msgstr[0] "Dosya nehatiye dîtin."
-#~ msgstr[1] "Dosya nehatine dîtin."
-
-#~ msgid "Empty"
-#~ msgstr "Vala"
-
-#~ msgid "View different types of images"
-#~ msgstr "Cureyên wêneyan yên cuda nîşan bide"
-
-#~ msgid "."
-#~ msgstr "."
-
-#~ msgid "<b>Image Interpolation</b>"
-#~ msgstr "<b>Zelaliya wêne</b>"
-
-#~ msgid "Allow _zoom greater than 100% initially"
-#~ msgstr "Di destpêkê de destûrê bide nêzîkkirina ji %100î mezintir"
-
-#~ msgid "Slide Show"
-#~ msgstr "Pêşana Slaytê"
-
-#~ msgid "Print"
-#~ msgstr "Çapkirin"
-
-#~ msgid "Rotat_e 180°"
-#~ msgstr "180° Bi_zivirîne"
-
-#~ msgid "Save _As"
-#~ msgstr "Tomar bike _wekî"
-
-#~ msgid "Delete"
-#~ msgstr "Jê bibe"
-
-#~ msgid "New"
-#~ msgstr "Nû"
+#. I18N: The '%s' is replaced with xviewer's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

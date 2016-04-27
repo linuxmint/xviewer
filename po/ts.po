@@ -5,19 +5,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&ke"
-"ywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-09-19 18:10+0000\n"
-"PO-Revision-Date: 2011-09-20 05:55+0200\n"
-"Last-Translator: Ernest Mashele <mashern@tuks.co.za>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: ts\n"
-"Language: ts\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Project-Style: gnome\n"
+"Language: ts\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -26,32 +28,32 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:988
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
 msgstr "Komba “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1479
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
 msgstr "_Fambisa eka xivandla xa switirhi"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1480
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
 msgstr "Fambisa lexi hlawuriweke eka xivandla xa switirhi"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1481
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
 msgstr "_Susa eka xivandla xa switirhi"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1482
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
 msgstr "Susa lexi hlawuriweke eka xivandla xa switirhi"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1483
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
 msgstr "_Susa xivandla xa switirhi"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1484
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
 msgstr "Susa xivandla xa switirhi lexi hlawuriweke"
 
@@ -59,442 +61,361 @@ msgstr "Susa xivandla xa switirhi lexi hlawuriweke"
 msgid "Separator"
 msgstr "Xihambanisi"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Yisa eka nkombiso wo tata hi kutlhava ka mbirhi"
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Vona"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "Nkombiso wo tata hi kutlhava ka mbirhi"
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_Xiyenge xa switirhi"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:53
-#: ../plugins/reload/reload.plugin.desktop.in.h:1
-msgid "Reload Image"
-msgstr "Panga xifaniso nakambe"
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "_Xiyenge xa le hansi xa furemu"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:55
-#: ../plugins/reload/reload.plugin.desktop.in.h:2
-msgid "Reload current image"
-msgstr "Panga nakambe xifaniso lexi"
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr "Xiyenge xa _swifaniso"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
-msgid "Date in statusbar"
-msgstr "Siku eka xiyenge xa le hansi xa furemi"
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr "Xiyenge xa le _tlhelo"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Xi komba siku ra xifaniso eka xiyenge xa le hansi xa furemi"
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "Swo ti_hlawulela"
 
-#: ../data/xviewer.desktop.in.in.h:1
-msgid "Browse and rotate images"
-msgstr "Lavalava na ku hundzuluxa swifaniso"
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_Mpfuno"
 
-#: ../data/xviewer.desktop.in.in.h:2 ../src/xviewer-window.c:2636 ../src/main.c:152
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_Mayelana"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Xikomba Swifaniso"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1
-msgid "Aperture Value:"
-msgstr "Xilawula rivoningo:"
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Lavalava na ku hundzuluxa swifaniso"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:2
-msgid "Author:"
-msgstr "Mutsari:"
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr ""
 
-#: ../data/xviewer-image-properties-dialog.ui.h:3
-msgid "Bytes:"
-msgstr "Tibayiti:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:4
-msgid "Camera Model:"
-msgstr "Rixaka ra Khamera:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:5
-msgid "Copyright:"
-msgstr "Timpfanelo ta mutsari:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:6
-msgid "Date/Time:"
-msgstr "Siku/Nkarhi:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:7
-msgid "Description:"
-msgstr "Nhlamuselo:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:8
-msgid "Details"
-msgstr "Vuxokoxoko"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-msgid "Exposure Time:"
-msgstr "Nkarhi wo hlangana ni rivoningo:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-msgid "Flash:"
-msgstr "Ntsayito:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-msgid "Focal Length:"
-msgstr "Mpfhuka wo vona:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-msgid "General"
-msgstr "Angarhela"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-msgid "Height:"
-msgstr "Vulehi:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-msgid "ISO Speed Rating:"
-msgstr "Mpimo wa rivilo ku ya hi ISO:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Swihlawulekisi Swa Xifaniso"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-msgid "Keywords:"
-msgstr "Marito-nkulu:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-msgid "Location:"
-msgstr "Ndhawu:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-msgid "Metadata"
-msgstr "Switiviwa swa switiviwa"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-msgid "Metering Mode:"
-msgstr "Mapimelo:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-msgid "Name:"
-msgstr "Vito:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-msgid "Type:"
-msgstr "Muxaka:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-msgid "Width:"
-msgstr "Vuanami:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-msgid "_Next"
-msgstr "Leswi _landzelaka"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../data/xviewer-image-properties-dialog.ui.h:2
 msgid "_Previous"
 msgstr "Leswi nga _hundza"
 
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "Leswi _landzelaka"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "_Pfala"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr "Vito:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr "Vuanami:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "Vulehi:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr "Muxaka:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "Tibayiti:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "Angarhela"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr "Xilawula rivoningo:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr "Nkarhi wo hlangana ni rivoningo:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr "Mpfhuka wo vona:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr "Ntsayito:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr "Mpimo wa rivilo ku ya hi ISO:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr "Mapimelo:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr "Rixaka ra Khamera:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr "Siku/Nkarhi:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr "Nhlamuselo:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr "Ndhawu:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr "Marito-nkulu:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr "Mutsari:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr "Timpfanelo ta mutsari:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr "Vuxokoxoko"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr "Switiviwa swa switiviwa"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Hlayisa tani hi"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "_Tshika"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> vito ra fayili yo sungula kona"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:4
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> xihlayi"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "Hlawula folidara"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
-msgid "Destination folder:"
-msgstr "Xiyenge lexi ku yisiwaka eka xona:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
-msgid "File Name Preview"
-msgstr "Vona Malangutelo Ya Vito Ra Fayili"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "Swipimelo Swa Ndhawu/Ndlela Ya Fayili"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
-msgid "Filename format:"
-msgstr "Malangutele ya vito va fayili:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "Swo tihlawulela"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "Ncinca vito kusuka eka:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
-msgid "Replace spaces with underscores"
-msgstr "Pfala pfuleko exikarhi ka marito hi _"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
-msgid "Save As"
-msgstr "Hlayisa tani hi"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
-msgid "Start counter at:"
-msgstr "Sungula xihlayi eka:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "Eka:"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "Vona Malangutelo Ya Vito Ra Fayili"
+
 #: ../data/xviewer-preferences-dialog.ui.h:1
-msgid "As _background"
-msgstr "Tani hi muvala wa le _hansi"
-
-#: ../data/xviewer-preferences-dialog.ui.h:2
-msgid "As check _pattern"
-msgstr "Tani hi mavala ya _cheke/swibokisana"
-
-#: ../data/xviewer-preferences-dialog.ui.h:3
-msgid "As custom c_olor:"
-msgstr "Tani hi _muhlovo wo tihlawulela:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:4
-msgid "As custom color:"
-msgstr "Tani hi muhlovo wo tihlawulela:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:5
-msgid "Background"
-msgstr "Xitandzhaku"
-
-#: ../data/xviewer-preferences-dialog.ui.h:6
-#: ../data/org.x.viewer.gschema.xml.in.in.h:6
-msgid "Background Color"
-msgstr "Muvala wa le Hansi"
-
-#: ../data/xviewer-preferences-dialog.ui.h:7
-msgid "Color for Transparent Areas"
-msgstr "Muhlovo wa swiyenge leswi vonikelaka"
-
-#: ../data/xviewer-preferences-dialog.ui.h:8
-msgid "E_xpand images to fit screen"
-msgstr "_Kurisa swifaniso ku ringanela nkombiso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:9
-msgid "Image Enhancements"
-msgstr "Vuantswisi Bya Swifaniso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:10
-msgid "Image View"
-msgstr "Kombiso Wa Xifaniso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:11
-msgid "Image Zoom"
-msgstr "Ntshineto Wa Xifaniso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:12
-msgid "Plugins"
-msgstr "Switirhi swa engetelo"
-
-#. I18N: This sentence will be displayed after a GtkSpinButton to select a number of seconds in xviewer's preferences dialog. The context is applied to avoid ambiguity with possible similar translations. See bug 654548 for details.
-#: ../data/xviewer-preferences-dialog.ui.h:14
-msgctxt "PrefDlgSlideSwitchPostfix"
-msgid "seconds"
-msgstr "tisekene"
-
-#. I18N: This sentence will be displayed before a GtkSpinButton to select a number of seconds in xviewer's preferences dialog. The context is applied to avoid ambiguity with possible similar translations. See bug 654548 for details.
-#: ../data/xviewer-preferences-dialog.ui.h:16
-msgctxt "PrefDlgSlideSwitchPrefix"
-msgid "_Switch image after:"
-msgstr "_Ncinca xifaniso endzhaku ka:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Preferences"
 msgstr "Swo tihlawulela"
 
-#: ../data/xviewer-preferences-dialog.ui.h:18
-msgid "Sequence"
-msgstr "Landzelelana"
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr "Vuantswisi Bya Swifaniso"
 
-#: ../data/xviewer-preferences-dialog.ui.h:19
-msgid "Slideshow"
-msgstr "Nkombiso wo ncinca-ncinca"
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
-msgid "Smooth images when zoomed-_in"
-msgstr "Rhetisa swifaniso loko swi _kurisiwile"
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
-msgid "Smooth images when zoomed-_out"
-msgstr "Rhetisa swifaniso loko swi _ntsananisiwile"
-
-#: ../data/xviewer-preferences-dialog.ui.h:22
-msgid "Transparent Parts"
-msgstr "Swiyenge leswi vonikelaka"
-
-#: ../data/xviewer-preferences-dialog.ui.h:23
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "_Matshamelo hi woxe"
 
-#: ../data/xviewer-preferences-dialog.ui.h:24
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "Xitandzhaku"
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr "Tani hi muhlovo wo tihlawulela:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Muvala wa le Hansi"
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr "Swiyenge leswi vonikelaka"
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Tani hi mavala ya _cheke/swibokisana"
+
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Tani hi _muhlovo wo tihlawulela:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Muhlovo wa swiyenge leswi vonikelaka"
+
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Tani hi muvala wa le _hansi"
+
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Kombiso Wa Xifaniso"
+
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "Ntshineto Wa Xifaniso"
+
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "_Kurisa swifaniso ku ringanela nkombiso"
+
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "Landzelelana"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "_Ku ncinca ka ku landzelelana"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:1
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Nhlanyo leyi kulu ka 0 yi komba nkarhi lowu xifaniso xi nga ta tshama eka "
-"nkombiso ku nga si nghena xin'wanyana hi xoxe. Tandza ri sivela ku ncinca ka "
-"xifaniso hi xoxe."
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Nkombiso wo ncinca-ncinca"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:2
-msgid "Active plugins"
-msgstr "Switirhisiwa swa engetelo leswi pfuriweke"
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Switirhi swa engetelo"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:4
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Pfumelela nkuriso lowu hundzaka 100% emasunguleni"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Ku hlawula matshamelo hi xoxe"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:7
-msgid "Close main window without asking to save changes."
-msgstr "Pfala furemi-nkulu u nga vutisani ku hlayisa leswi ncinciweke."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:8
-msgid "Delay in seconds until showing the next image"
-msgstr "Yimanyana hi tisekene u nga si komba xifaniso lexi landzelaka"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
-msgstr ""
-"Kuma ndlela leyi ku vonikela ku nga ta kombisiwaka ha kona. Ku pfumeleriwa "
-"ntsena CHECK_PATTERN, COLOR kumbe NONE. Loko COLOR yi hlawuriwile, xiphemu "
-"lexi yimelaka ku vonikela xi tirhisiwa ku kuma muhlovo."
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "Loko kuri xifaniso xita jikisiwa ya hi matshamelo ya EXIF"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:10
-msgid "External program to use for editing images"
-msgstr "Xithirhi xa lehandle xo hlela swifaniso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:11
-msgid "Extrapolate Image"
-msgstr "Vhubha vukulu bya xifaniso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:12
-msgid ""
-"If activated and no image is loaded in the active window, the file chooser "
-"will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up, it "
-"will show the current working directory."
-msgstr ""
-"Loko xi pfuriwile kuri hava xifaniso lexi nga pangiwa eka furemu leri, "
-"xihlawula-tifayili xi ta khomba folidara ya swifaniso ya mutirhisi xi "
-"tirhisa tifolidara ta XDG. Loko xi pfariwile kumbe folidara ya swifaniso a "
-"se endliwa, xi ta folidara leyi kunga ku tirheliweni ka yona."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:13
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr ""
-"Loko xi pfuriwile, Tihlo ra GNOME, xi nge kombeli mpfulelo wo yisa swifaniso "
-"etaleni. Xi ta vutisa loko tifayili tifanele ku yisiwa etaleni kumbe ku "
-"susiwa hi ku hetiseka ntsena."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:14
-msgid ""
-"If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
-"be embedded on the \"Metadata\" page."
-msgstr ""
-"Loko xi pfuriwile, nongonoko wa switiviwa swa switiviwa hinkwaswo eka furemu "
-"ra swihlawulekisi ri ta yisiwa eka pheji ya rona. Leswi swi endla leswaku "
-"furemu ri tirhiseka eka mikombiso leyi ntsongo, xikombiso i ti-netbook. "
-"Loko xi timiwile, xiyenye lexi xi ta engeteriwa eka pheji ra \"Switiviwa swa "
-"switiviwa\"."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:15
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"Loko xivandla xa vunikelo xi ri COLOR, xi tirhisiwa ku kuma muhlovo lowu nga "
-"ta tirhisa tani hi ku vonikela."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:16
-msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
-"will determine the fill color."
-msgstr ""
-"Loko lexi xi pfuriwile, muhlovo wale hansi wu ta tirhisa ku funengetaka "
-"xiyenge xa le ndzhaku xa xifaniso. Loko muhlovo wale hansi wu nga boxiwanga, "
-"ku ta tirhisiwa muhlovo wa GTK+ wa nkhaviso."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:17
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Loko ku boxiwile FALSE swifaniso leswi ntsongo a swi nge tsanyusiwi ku "
-"ringanela eka nkombiso."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:18
-msgid ""
-"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
-"for right."
-msgstr ""
-"Ndhawu ya xiyenge xa swifaniso. Tirhisa 0 ku yisa ehansi; 1 ku yisa "
-"eximatsini; 2 ku yisa ehenhla; 3 ku yisa exineneni."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:19
-msgid "Interpolate Image"
-msgstr "Hlahluvela vululu bya xifaniso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:20
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
-msgstr ""
-"Nxaxamelo wa switirhi swa engetelo. A yi na ti \"Ndhawu\" ta switirhi leswi "
-"pfuriweke. Vona fayili ya .xviewer-plugin ku tiva \"Ndhawu\" ya xitirhi xo karhi."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:21
-msgid "Loop through the image sequence"
-msgstr "Fambisa endzeni ka nxaxameto wa swifaniso leswi landzelelanaka"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:22
-msgid "Scroll wheel zoom"
-msgstr "Ntshineto hi vhilwa ra mawusi"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:23
-msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr "Komba/Tumbeta tibatheni to yisa ehansi/ehenhla ta xiyenge xa swifaniso."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:24
-msgid "Show/Hide the image gallery pane."
-msgstr "Komba/Tumbeta xiyenge xa swifaniso."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:25
-msgid "Show/Hide the window side pane."
-msgstr "Komba/Tumbeta xiyenge xa furemu xele tlhelo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:26
-msgid "Show/Hide the window statusbar."
-msgstr "Komba/Tumbeta xiyenge xa furemu xele hansi."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:27
-msgid "Show/Hide the window toolbar."
-msgstr "Komba/Tumbeta xiyenge xa switirhi."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -504,17 +425,59 @@ msgstr ""
 "wale hansi wu nga boxiwanga, muhlovo wu kumeka eka muhlovo wa GTK+ leyi nga "
 "ku tirhisiweni."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:29
-msgid ""
-"The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
-"to the empty string to disable this feature."
-msgstr ""
-"Vito ra fayili ya desikithopi (ku katsa na \".desktop\") ya xitirhi xo hlela "
-"swifaniso (Loko kunupu ya \"Hlela Xifaniso\" ku suka eka xiyenge xa switirhi "
-"yi tlhaviwa). U nga faki ncumu loko u tsakela u tima."
+#: ../data/org.x.viewer.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Hlahluvela vululu bya xifaniso"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Loko kuri vukulu bya xifaniso byi hlahluveriwa loko xi tshinetiwa endzaku. "
+"Leswi swi antswisa xifani, kambe swi nga teka nkarhi ku tlula swifaniso "
+"swin'wana leswi hlahluveriweke vukulu."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Vhubha vukulu bya xifaniso"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Loko kuri vukulu bya xifaniso byi nga vhubhiwa endzaku ka ntshineto. Leswi "
+"swi endla xifaniso yi nga vonakali kahle, xi teka nkarhi ku tlula swifaniso "
+"swin'wana swo fana."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Xiyimela muhlovo wo vonikela"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"Kuma ndlela leyi ku vonikela ku nga ta kombisiwaka ha kona. Ku pfumeleriwa "
+"ntsena CHECK_PATTERN, COLOR kumbe NONE. Loko COLOR yi hlawuriwile, xiphemu "
+"lexi yimelaka ku vonikela xi tirhisiwa ku kuma muhlovo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "Ntshineto hi vhilwa ra mawusi"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "Loko kuri vhilwa ra xikondlwana/mawusi rita tirhisiwa ku kurisa."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Nhlayo yo kurisa"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -527,23 +490,120 @@ msgstr ""
 "yi endla nkuriso hi 5% eka fambiso wa vhilwa ra mawusu, 1.00 yi endla "
 "nkuriso hi 100%."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Muhlovo wo vonikela"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:33
-msgid "Transparency indicator"
-msgstr "Xiyimela muhlovo wo vonikela"
+#: ../data/org.x.viewer.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"Loko xivandla xa vunikelo xi ri COLOR, xi tirhisiwa ku kuma muhlovo lowu nga "
+"ta tirhisa tani hi ku vonikela."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:34
-msgid "Trash images without asking"
-msgstr "Yisa swifaniso etaleni u nga vutisani"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Tirhisa muhlovo wa le hansi wo tihlawulela"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"Loko lexi xi pfuriwile, muhlovo wale hansi wu ta tirhisa ku funengetaka "
+"xiyenge xa le ndzhaku xa xifaniso. Loko muhlovo wale hansi wu nga boxiwanga, "
+"ku ta tirhisiwa muhlovo wa GTK+ wa nkhaviso."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Fambisa endzeni ka nxaxameto wa swifaniso leswi landzelelanaka"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+"Loko kuri swifaniso leswi landzelelanaka swi ta kombiwa hi laha ku nga "
+"heriki."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Pfumelela nkuriso lowu hundzaka 100% emasunguleni"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Loko ku boxiwile FALSE swifaniso leswi ntsongo a swi nge tsanyusiwi ku "
+"ringanela eka nkombiso."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Yimanyana hi tisekene u nga si komba xifaniso lexi landzelaka"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Nhlanyo leyi kulu ka 0 yi komba nkarhi lowu xifaniso xi nga ta tshama eka "
+"nkombiso ku nga si nghena xin'wanyana hi xoxe. Tandza ri sivela ku ncinca ka "
+"xifaniso hi xoxe."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Komba/Tumbeta xiyenge xa switirhi."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Komba/Tumbeta xiyenge xa furemu xele hansi."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "Komba/Tumbeta xiyenge xa swifaniso."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"Ndhawu ya xiyenge xa swifaniso. Tirhisa 0 ku yisa ehansi; 1 ku yisa "
+"eximatsini; 2 ku yisa ehenhla; 3 ku yisa exineneni."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "Loko kuri xiyenge xa swifaniso xa kuriseka."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Komba/Tumbeta xiyenge xa furemu xele tlhelo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+"Komba/Tumbeta tibatheni to yisa ehansi/ehenhla ta xiyenge xa swifaniso."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr "Pfala furemi-nkulu u nga vutisani ku hlayisa leswi ncinciweke."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "Yisa swifaniso etaleni u nga vutisani"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"Loko xi pfuriwile, Tihlo ra GNOME, xi nge kombeli mpfulelo wo yisa swifaniso "
+"etaleni. Xi ta vutisa loko tifayili tifanele ku yisiwa etaleni kumbe ku "
+"susiwa hi ku hetiseka ntsena."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -551,271 +611,140 @@ msgstr ""
 "Loko kuri xihlawula-tifayili xi komba folidara ya swifaniso ya mutirhisi "
 "loko kuri hava swifaniso leswi nga pangiwa."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:37
-msgid "Whether the image gallery pane should be resizable."
-msgstr "Loko kuri xiyenge xa swifaniso xa kuriseka."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
 msgstr ""
-"Loko kuri vukulu bya xifaniso byi nga vhubhiwa endzaku ka ntshineto. Leswi "
-"swi endla xifaniso yi nga vonakali kahle, xi teka nkarhi ku tlula swifaniso "
-"swin'wana swo fana."
+"Loko xi pfuriwile kuri hava xifaniso lexi nga pangiwa eka furemu leri, "
+"xihlawula-tifayili xi ta khomba folidara ya swifaniso ya mutirhisi xi "
+"tirhisa tifolidara ta XDG. Loko xi pfariwile kumbe folidara ya swifaniso a "
+"se endliwa, xi ta folidara leyi kunga ku tirheliweni ka yona."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:39
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"Loko kuri vukulu bya xifaniso byi hlahluveriwa loko xi tshinetiwa endzaku. "
-"Leswi swi antswisa xifani, kambe swi nga teka nkarhi ku tlula swifaniso "
-"swin'wana leswi hlahluveriweke vukulu."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:40
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr "Loko kuri xifaniso xita jikisiwa ya hi matshamelo ya EXIF"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "Loko kuri nongonoko wa switiviwa swa switiviwa eka xiyenge xa swihlawulekisi "
 "swi na pheji ra swona."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:42
-msgid "Whether the scroll wheel should be used for zooming."
-msgstr "Loko kuri vhilwa ra xikondlwana/mawusi rita tirhisiwa ku kurisa."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:43
-msgid "Whether the sequence of images should be shown in an endless loop."
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
 msgstr ""
-"Loko kuri swifaniso leswi landzelelanaka swi ta kombiwa hi laha ku nga "
-"heriki."
+"Loko xi pfuriwile, nongonoko wa switiviwa swa switiviwa hinkwaswo eka furemu "
+"ra swihlawulekisi ri ta yisiwa eka pheji ya rona. Leswi swi endla leswaku "
+"furemu ri tirhiseka eka mikombiso leyi ntsongo, xikombiso i ti-netbook. Loko "
+"xi timiwile, xiyenye lexi xi ta engeteriwa eka pheji ra \"Switiviwa swa "
+"switiviwa\"."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:44
-msgid "Zoom multiplier"
-msgstr "Nhlayo yo kurisa"
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Xithirhi xa lehandle xo hlela swifaniso"
 
-#: ../src/xviewer-close-confirmation-dialog.c:171
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"Vito ra fayili ya desikithopi (ku katsa na \".desktop\") ya xitirhi xo hlela "
+"swifaniso (Loko kunupu ya \"Hlela Xifaniso\" ku suka eka xiyenge xa switirhi "
+"yi tlhaviwa). U nga faki ncumu loko u tsakela u tima."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Switirhisiwa swa engetelo leswi pfuriweke"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+"Nxaxamelo wa switirhi swa engetelo. A yi na ti \"Ndhawu\" ta switirhi leswi "
+"pfuriweke. Vona fayili ya .xviewer-plugin ku tiva \"Ndhawu\" ya xitirhi xo "
+"karhi."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Nkombiso wo tata hi kutlhava ka mbirhi"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Yisa eka nkombiso wo tata hi kutlhava ka mbirhi"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Panga xifaniso nakambe"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Panga nakambe xifaniso lexi"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Siku eka xiyenge xa le hansi xa furemi"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Xi komba siku ra xifaniso eka xiyenge xa le hansi xa furemi"
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "Pfala u nga _hlayisani"
 
-#: ../src/xviewer-close-confirmation-dialog.c:217
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Hlayisa"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
 msgstr "Xivutiso"
 
-#: ../src/xviewer-close-confirmation-dialog.c:398
+#: ../src/xviewer-close-confirmation-dialog.c:391
 msgid "If you don't save, your changes will be lost."
 msgstr "Loko u nga hlayisi, ku ncinca ku ta lahleka."
 
-#: ../src/xviewer-close-confirmation-dialog.c:435
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Hlayisa ku ncinca eka xifaniso \"%s\" u nga se pfala?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:643
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
 "Kuna xifaniso(%d) lexi nga ncinca lexi nga hlayisiwanga. Hlayisa ku ncinca u "
-"nga se pfala? "
+"nga se pfala?"
 msgstr[1] ""
-"Kuna swifaniso swa %d leswi nga ncinca leswi nga hlayisiwanga. Hlayisa ku ncinca "
-"u nga se pfala?"
+"Kuna swifaniso swa %d leswi nga ncinca leswi nga hlayisiwanga. Hlayisa ku "
+"ncinca u nga se pfala?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:660
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "_Hlawula swifaniso leswi u tsakelaka ku hlayisa:"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:678
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "Loko u nga hlayisi, ku ncinca hinkwako ku ta lahleka."
 
-#: ../src/xviewer-file-chooser.c:126
-msgid "File format is unknown or unsupported"
-msgstr "Xixaka ra fayili a ri tiveki"
-
-#: ../src/xviewer-file-chooser.c:131
-msgid ""
-"Image Viewer could not determine a supported writable file format based on "
-"the filename."
-msgstr ""
-"Xikomba Xifaniso xi tsandzeke vhubha rixaka ra fayili leyi nga ku nga "
-"tsaleriwa eka yona ku suka eka vito ra fayili."
-
-#: ../src/xviewer-file-chooser.c:132
-msgid "Please try a different file extension like .png or .jpg."
-msgstr "Ringeta mahetelelo ya fayili yo hambana yo fana na .png kumbe .jpg."
-
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:167
-#, c-format
-msgid "%s (*.%s)"
-msgstr "%s (*.%s)"
-
-#: ../src/xviewer-file-chooser.c:219
-msgid "All files"
-msgstr "Tifayi hinkwato"
-
-#: ../src/xviewer-file-chooser.c:224
-msgid "Supported image files"
-msgstr "Tifayi leti tivekaka"
-
-#. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:296 ../src/xviewer-properties-dialog.c:137
-#: ../src/xviewer-properties-dialog.c:139 ../src/xviewer-thumb-view.c:443
-msgid "pixel"
-msgid_plural "pixels"
-msgstr[0] "pixel"
-msgstr[1] "pixels"
-
-#: ../src/xviewer-file-chooser.c:447
-msgid "Open Image"
-msgstr "Pfula xifaniso"
-
-#: ../src/xviewer-file-chooser.c:455
-msgid "Save Image"
-msgstr "Hlayisa xifaniso"
-
-#: ../src/xviewer-file-chooser.c:463
-msgid "Open Folder"
-msgstr "Pfula folidara"
-
-#: ../src/xviewer-image.c:606
-#, c-format
-msgid "Transformation on unloaded image."
-msgstr "Kuncinciwa ka xifaniso lexi nga pfariwa."
-
-#: ../src/xviewer-image.c:634
-#, c-format
-msgid "Transformation failed."
-msgstr "Tsandzekile kuncinciwa."
-
-#: ../src/xviewer-image.c:1095
-#, c-format
-msgid "EXIF not supported for this file format."
-msgstr "EXIF a yi tiveki eka rixaka ra fayili leyi."
-
-#: ../src/xviewer-image.c:1244
-#, c-format
-msgid "Image loading failed."
-msgstr "Tsandzeke ku panga xifaniso."
-
-#: ../src/xviewer-image.c:1717 ../src/xviewer-image.c:1827
-#, c-format
-msgid "No image loaded."
-msgstr "Ku hava xifaniso lexi pangiweke."
-
-#: ../src/xviewer-image.c:1725 ../src/xviewer-image.c:1836
-#, c-format
-msgid "You do not have the permissions necessary to save the file."
-msgstr "U hava mpfumelelo lowu ringaneleke ku hlayisa xifaniso lexi."
-
-#: ../src/xviewer-image.c:1735 ../src/xviewer-image.c:1847
-#, c-format
-msgid "Temporary file creation failed."
-msgstr "Tsandzeke ku endla fayili ya nkarhi-nyana."
-
-#: ../src/xviewer-image-jpeg.c:373
-#, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "Tsandzeke ku endla fayili ya nkarhi-nyana yo hlasilela kon: %s"
-
-#: ../src/xviewer-image-jpeg.c:392
-#, c-format
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr ""
-"Tsandzeka ku veka etlhelo vundzeni lebyi lavekaka u panga fayili ya JPEG"
-
-#: ../src/xviewer-exif-details.c:69
-msgid "Camera"
-msgstr "Khamera"
-
-#: ../src/xviewer-exif-details.c:70
-msgid "Image Data"
-msgstr "Switiviwa swa xifaniso"
-
-#: ../src/xviewer-exif-details.c:71
-msgid "Image Taking Conditions"
-msgstr "Swipimelo swo teka xifaniso"
-
-#: ../src/xviewer-exif-details.c:72
-msgid "GPS Data"
-msgstr "Switiviwa swa GPS"
-
-#: ../src/xviewer-exif-details.c:73
-msgid "Maker Note"
-msgstr "Tsalwa ra Muaki"
-
-#: ../src/xviewer-exif-details.c:74
-msgid "Other"
-msgstr "Swin'wana"
-
-#: ../src/xviewer-exif-details.c:76
-msgid "XMP Exif"
-msgstr "XMP Exif"
-
-#: ../src/xviewer-exif-details.c:77
-msgid "XMP IPTC"
-msgstr "XMP IPTC"
-
-#: ../src/xviewer-exif-details.c:78
-msgid "XMP Rights Management"
-msgstr "Ku lawula ka mpfumelelo eka XMP"
-
-#: ../src/xviewer-exif-details.c:79
-msgid "XMP Other"
-msgstr "Swin'wana hi XMP"
-
-#: ../src/xviewer-exif-details.c:253
-msgid "Tag"
-msgstr "Thege"
-
-#: ../src/xviewer-exif-details.c:260
-msgid "Value"
-msgstr "Ntsengo"
-
-#: ../src/xviewer-exif-details.c:422
-msgid "North"
-msgstr "N'walungu"
-
-#: ../src/xviewer-exif-details.c:425
-msgid "East"
-msgstr "Vuxeni"
-
-#: ../src/xviewer-exif-details.c:428
-msgid "West"
-msgstr "Vupeladyambu"
-
-#: ../src/xviewer-exif-details.c:431
-msgid "South"
-msgstr "Dzonga"
-
-#. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:118 ../src/xviewer-exif-util.c:158
-msgid "%a, %d %B %Y  %X"
-msgstr "%a, %d %B %Y  %X"
-
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
-#: ../src/xviewer-exif-util.c:152
-msgid "%a, %d %B %Y"
-msgstr "%a, %d %B %Y"
-
-#: ../src/xviewer-error-message-area.c:119
-msgid "_Cancel"
-msgstr "_Tshika"
-
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:825
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "Panga _nakambe"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:3842
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "Hlayisa tani _hi…"
 
@@ -838,105 +767,83 @@ msgstr "Ku hava swifaniso eka '%s'."
 msgid "The given locations contain no images."
 msgstr "Ku hava swifaniso eka ndhawu leyi nga boxiwa."
 
-#: ../src/xviewer-print.c:219
-msgid "Image Settings"
-msgstr "Malulamiselo ya xifaniso"
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "Khamera"
 
-#: ../src/xviewer-print-image-setup.c:834
-msgid "Image"
-msgstr "Xifaniso"
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "Switiviwa swa xifaniso"
 
-#: ../src/xviewer-print-image-setup.c:835
-msgid "The image whose printing properties will be set up"
-msgstr "Xifaniso lexi ndlela yo printa ya xona yi nga ta lulamisiwa"
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Swipimelo swo teka xifaniso"
 
-#: ../src/xviewer-print-image-setup.c:841
-msgid "Page Setup"
-msgstr "Ndzulamiso wa pheji"
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr "Switiviwa swa GPS"
 
-#: ../src/xviewer-print-image-setup.c:842
-msgid "The information for the page where the image will be printed"
-msgstr "Vuxokoxoko bya pheji leri xifaniso xi nga ta printiwa kona"
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Tsalwa ra Muaki"
 
-#: ../src/xviewer-print-image-setup.c:870
-msgid "Position"
-msgstr "Xiyimo"
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "Swin'wana"
 
-#: ../src/xviewer-print-image-setup.c:875
-msgid "_Left:"
-msgstr "_Eximatsini:"
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP Exif"
 
-#: ../src/xviewer-print-image-setup.c:876
-msgid "_Right:"
-msgstr "_Xinene:"
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
 
-#: ../src/xviewer-print-image-setup.c:877
-msgid "_Top:"
-msgstr "_Ehenhla:"
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "Ku lawula ka mpfumelelo eka XMP"
 
-#: ../src/xviewer-print-image-setup.c:878
-msgid "_Bottom:"
-msgstr "E_hansi:"
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr "Swin'wana hi XMP"
 
-#: ../src/xviewer-print-image-setup.c:880
-msgid "C_enter:"
-msgstr "Xi_karhi:"
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "Thege"
 
-#: ../src/xviewer-print-image-setup.c:885
-msgid "None"
-msgstr "Ku hava"
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Ntsengo"
 
-#: ../src/xviewer-print-image-setup.c:887
-msgid "Horizontal"
-msgstr "Vuandlalo"
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr "N'walungu"
 
-#: ../src/xviewer-print-image-setup.c:889
-msgid "Vertical"
-msgstr "Ku ya ehenhla"
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr "Vuxeni"
 
-#: ../src/xviewer-print-image-setup.c:891
-msgid "Both"
-msgstr "Hivumbirhi"
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr "Vupeladyambu"
 
-#: ../src/xviewer-print-image-setup.c:907
-msgid "Size"
-msgstr "Vukulu"
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr "Dzonga"
 
-#: ../src/xviewer-print-image-setup.c:912
-msgid "_Width:"
-msgstr "Vua_nami:"
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
 
-#: ../src/xviewer-print-image-setup.c:914
-msgid "_Height:"
-msgstr "Vu_lehi:"
-
-#: ../src/xviewer-print-image-setup.c:917
-msgid "_Scaling:"
-msgstr "Ku _kurisa kumbe ku hunguta:"
-
-#: ../src/xviewer-print-image-setup.c:930
-msgid "_Unit:"
-msgstr "_Mapimelo:"
-
-#: ../src/xviewer-print-image-setup.c:935
-msgid "Millimeters"
-msgstr "Milimitara"
-
-#: ../src/xviewer-print-image-setup.c:937
-msgid "Inches"
-msgstr "Tiinci"
-
-#: ../src/xviewer-print-image-setup.c:967
-msgid "Preview"
-msgstr "Xivonela mahlweni"
-
-#: ../src/xviewer-properties-dialog.c:154
-msgid "Unknown"
-msgstr "Tiviwiki"
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/xviewer-properties-dialog.c:232
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (lense)"
@@ -944,12 +851,227 @@ msgstr "%.1f (lense)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/xviewer-properties-dialog.c:243
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm ya filimi)"
 
-#: ../src/xviewer-save-as-dialog-helper.c:161
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Xixaka ra fayili a ri tiveki"
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Xikomba Xifaniso xi tsandzeke vhubha rixaka ra fayili leyi nga ku nga "
+"tsaleriwa eka yona ku suka eka vito ra fayili."
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "Ringeta mahetelelo ya fayili yo hambana yo fana na .png kumbe .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/xviewer-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr "Tifayi hinkwato"
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr "Tifayi leti tivekaka"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "pixel"
+msgstr[1] "pixels"
+
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr "Pfula xifaniso"
+
+#: ../src/xviewer-file-chooser.c:467
+msgid "Save Image"
+msgstr "Hlayisa xifaniso"
+
+#: ../src/xviewer-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Pfula folidara"
+
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Kuncinciwa ka xifaniso lexi nga pfariwa."
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Tsandzekile kuncinciwa."
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF a yi tiveki eka rixaka ra fayili leyi."
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Tsandzeke ku panga xifaniso."
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Ku hava xifaniso lexi pangiweke."
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "U hava mpfumelelo lowu ringaneleke ku hlayisa xifaniso lexi."
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Tsandzeke ku endla fayili ya nkarhi-nyana."
+
+#: ../src/xviewer-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Tsandzeke ku endla fayili ya nkarhi-nyana yo hlasilela kon: %s"
+
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr ""
+"Tsandzeka ku veka etlhelo vundzeni lebyi lavekaka u panga fayili ya JPEG"
+
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
+msgstr "Tiviwiki"
+
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr ""
+
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr "Pfula folidara leyi nga na fayili leyi pfuriweke hi xilawuri xa tifa"
+
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "Malulamiselo ya xifaniso"
+
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "Xifaniso"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr "Xifaniso lexi ndlela yo printa ya xona yi nga ta lulamisiwa"
+
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Ndzulamiso wa pheji"
+
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Vuxokoxoko bya pheji leri xifaniso xi nga ta printiwa kona"
+
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr "Xiyimo"
+
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr "_Eximatsini:"
+
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr "_Xinene:"
+
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr "_Ehenhla:"
+
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "E_hansi:"
+
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "Xi_karhi:"
+
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr "Ku hava"
+
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Vuandlalo"
+
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Ku ya ehenhla"
+
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr "Hivumbirhi"
+
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "Vukulu"
+
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr "Vua_nami:"
+
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr "Vu_lehi:"
+
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "Ku _kurisa kumbe ku hunguta:"
+
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_Mapimelo:"
+
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "Milimitara"
+
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr "Tiinci"
+
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Xivonela mahlweni"
+
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "tani hi"
 
@@ -963,16 +1085,16 @@ msgstr "tani hi"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/xviewer-statusbar.c:124
+#: ../src/xviewer-statusbar.c:126
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:471
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "Tekiwe hi"
 
-#: ../src/xviewer-uri-converter.c:984
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Kuna mavito ma tifayili ma mbirhi lama ringanaka."
@@ -991,21 +1113,21 @@ msgstr " (khodi ya Unicode yoka yi nga tiveki)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:525
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i pixel  %s    %i%%"
 msgstr[1] "%i × %i pixels  %s    %i%%"
 
-#: ../src/xviewer-window.c:827 ../src/xviewer-window.c:2784
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "T_umbeta"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:837
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1014,7 +1136,7 @@ msgstr ""
 "Xifaniso \"%s\" xi ncinciwile hi xithirhi xele handle.\n"
 "U nga tsakela ku panga nakambe?"
 
-#: ../src/xviewer-window.c:1001
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Tirhisa \"%s\" ku pfula xifaniso lexi hlawuriweke"
@@ -1024,17 +1146,26 @@ msgstr "Tirhisa \"%s\" ku pfula xifaniso lexi hlawuriweke"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1157
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Eku hlayiseni ka xifaniso \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1528
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Eku pfuleni ka xifaniso \"%s\""
 
-#: ../src/xviewer-window.c:2205
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1043,35 +1174,27 @@ msgstr ""
 "Xihoxo eku kandziyiseni ka:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2523
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "Xilulamisa Yiyenge Xa Switirhi"
 
-#: ../src/xviewer-window.c:2526
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "_Vuyisela emasunguleni"
 
-#: ../src/xviewer-window.c:2631
-msgid "translator-credits"
-msgstr "Ntiviso wa Vahundzuluxi"
-
-#: ../src/xviewer-window.c:2639
-msgid "The GNOME image viewer."
-msgstr "Xikomba xifaniso xa GNOME."
-
-#: ../src/xviewer-window.c:2731 ../src/xviewer-window.c:2746
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "Xihoxo eku sunguleni ka ndzulamiso ya sisiteme: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2782
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "Pfula Swo _Tihlawulela Swa Muhlovo Wa Le Hansi"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2798
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1080,11 +1203,63 @@ msgstr ""
 "Xifaniso \"%s\" xi tirhisiwe tani hi muhlovo wa le hansi.\n"
 "U nga tsakela ku ncinca makhombelo ya xona?"
 
-#: ../src/xviewer-window.c:3271
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "E ku hlayiseni ka xifaniso kwala ka khompyuta…"
 
-#: ../src/xviewer-window.c:3351
+#: ../src/xviewer-window.c:3352
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr ""
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr ""
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr ""
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "Tsandzeka ku sula fayili"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Xihoxo eku suleni ka xifaniso %s"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1093,7 +1268,7 @@ msgstr ""
 "Wa tiyisisa leswaku u lava ku yisa\n"
 "\"%s\" etaleni?"
 
-#: ../src/xviewer-window.c:3354
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1102,7 +1277,7 @@ msgstr ""
 "Tsandzeka ku kuma tala ra \"%s\". U nga tsakela ku susa xifaniso leyi hi ku "
 "hetiseka?"
 
-#: ../src/xviewer-window.c:3359
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1117,7 +1292,7 @@ msgstr[1] ""
 "Wa tiyisisa leswaku u tsakela ku siya\n"
 "swifaniso swa %d leswi hlawuriweke etaleni?"
 
-#: ../src/xviewer-window.c:3364
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1125,417 +1300,375 @@ msgstr ""
 "Tsandzeka ku yisa swifaniso swin'wana leswi hlawuriweke etaleni, swi ta "
 "susiwa hi ku hetiseka. U nga tsakela ku ya emahlweni?"
 
-#: ../src/xviewer-window.c:3381 ../src/xviewer-window.c:3872 ../src/xviewer-window.c:3896
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "Yisa e_taleni"
 
-#: ../src/xviewer-window.c:3383
-msgid "_Do not ask again during this session"
-msgstr "_U nga vutisi kambe eka tirho lowu"
-
-#: ../src/xviewer-window.c:3428 ../src/xviewer-window.c:3442
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Tsandzeka ku vona tala."
 
-#: ../src/xviewer-window.c:3450
-#, c-format
-msgid "Couldn't delete file"
-msgstr "Tsandzeka ku sula fayili"
-
-#: ../src/xviewer-window.c:3546
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "Xihoxo eku suleni ka xifaniso %s"
-
-#: ../src/xviewer-window.c:3793
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Xifaniso"
 
-#: ../src/xviewer-window.c:3794
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "_Hlela"
 
-#: ../src/xviewer-window.c:3795
-msgid "_View"
-msgstr "_Vona"
-
-#: ../src/xviewer-window.c:3796
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "_Famba"
 
-#: ../src/xviewer-window.c:3797
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "_Switirho"
 
-#: ../src/xviewer-window.c:3798
-msgid "_Help"
-msgstr "_Mpfuno"
-
-#: ../src/xviewer-window.c:3800
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "_Pfula…"
 
-#: ../src/xviewer-window.c:3801
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Pfula fayili"
 
-#: ../src/xviewer-window.c:3803
-msgid "_Close"
-msgstr "_Pfala"
-
-#: ../src/xviewer-window.c:3804
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Pfala furemu"
 
-#: ../src/xviewer-window.c:3806
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "_Xiyenge xa switirhi"
 
-#: ../src/xviewer-window.c:3807
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Hlela xiyenge ya switirhi"
 
-#: ../src/xviewer-window.c:3809
-msgid "Prefere_nces"
-msgstr "Swo ti_hlawulela"
-
-#: ../src/xviewer-window.c:3810
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "Swo tihlawulela swa Xikomba Xifaniso"
 
-#: ../src/xviewer-window.c:3812
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Leswi nga ndzeni"
 
-#: ../src/xviewer-window.c:3813
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Pfuno eka xitirhi lexi"
 
-#: ../src/xviewer-window.c:3815
-msgid "_About"
-msgstr "_Mayelana"
-
-#: ../src/xviewer-window.c:3816
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Mayelana na xitirhi lexi"
 
-#: ../src/xviewer-window.c:3821
-msgid "_Toolbar"
-msgstr "_Xiyenge xa switirhi"
-
-#: ../src/xviewer-window.c:3822
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Ncinca ku vonakala ka xiyenge xa switirhi eka furemu leri"
 
-#: ../src/xviewer-window.c:3824
-msgid "_Statusbar"
-msgstr "_Xiyenge xa le hansi xa furemu"
-
-#: ../src/xviewer-window.c:3825
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Ncinca ku vonakala ka xiyenge xa le hansi eka furemu leri"
 
-#: ../src/xviewer-window.c:3827
-msgid "_Image Gallery"
-msgstr "Xiyenge xa _swifaniso"
-
-#: ../src/xviewer-window.c:3828
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr "Ncinca ku vonakala ka xiyenge xa swifaniso eka furemu leri"
 
-#: ../src/xviewer-window.c:3830
-msgid "Side _Pane"
-msgstr "Xiyenge xa le _tlhelo"
-
-#: ../src/xviewer-window.c:3831
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Ncinca ku vonakala ka xiyenge xa le tlhelo eka furemu leri"
 
-#: ../src/xviewer-window.c:3836
-msgid "_Save"
-msgstr "_Hlayisa"
-
-#: ../src/xviewer-window.c:3837
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "Hlayisa ku ncinca eka swifaniso leswi nga hlawuriwa"
 
-#: ../src/xviewer-window.c:3839
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "_Pfula hi"
 
-#: ../src/xviewer-window.c:3840
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "Pfula xifaniso lexi nga hlawuriwa hi xitirhi xo hambana"
 
-#: ../src/xviewer-window.c:3843
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "Hlayisa xifaniso lexi nga hlawuriwa eka vito ro hambana"
 
-#: ../src/xviewer-window.c:3845
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "Pfula folidara leyi nga _rhwala"
 
-#: ../src/xviewer-window.c:3846
-msgid "Show the folder which contains this file in the file manager"
-msgstr "Pfula folidara leyi nga na fayili leyi pfuriweke hi xilawuri xa tifa"
-
-#: ../src/xviewer-window.c:3848
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "_Printa…"
 
-#: ../src/xviewer-window.c:3849
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "Printa xifaniso lexi hlawuriweke"
 
-#: ../src/xviewer-window.c:3851
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "Swi_hlawulekisi"
 
-#: ../src/xviewer-window.c:3852
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
-msgstr "Komba swihlawulekisi na switiviwa swa switiviwa swa xifaniso lexi hlawuriweke"
+msgstr ""
+"Komba swihlawulekisi na switiviwa swa switiviwa swa xifaniso lexi hlawuriweke"
 
-#: ../src/xviewer-window.c:3854
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "Tlhelela e_ndzhaku"
 
-#: ../src/xviewer-window.c:3855
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "Tlherisa ku ncinca loku nga hundza"
 
-#: ../src/xviewer-window.c:3857
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "Hundzuluxa Hi _Vuandlalo"
 
-#: ../src/xviewer-window.c:3858
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "Hundzuluxa hi vuandlalo tani hi xivoni"
 
-#: ../src/xviewer-window.c:3860
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "Hundzuluxa ku ya e_henhla"
 
-#: ../src/xviewer-window.c:3861
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "Hundzuluxa ku ya ehenhla tani hi xivoni"
 
-#: ../src/xviewer-window.c:3863
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "Jikisa ku ya hi mafambelo ya _Wachi"
 
-#: ../src/xviewer-window.c:3864
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Jikisa hi tidigiri ta 90 ku ya exineneni"
 
-#: ../src/xviewer-window.c:3866
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "Jikisa ku ya ku h_ambana na wachi"
 
-#: ../src/xviewer-window.c:3867
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Jikisa hi tidigiri ta 90 ku ya eximatsini"
 
-#: ../src/xviewer-window.c:3869
-msgid "Set as _Desktop Background"
-msgstr "Lulamisa Xitandzhaku xa _Desikithopo"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3870
-msgid "Set the selected image as the desktop background"
-msgstr "Lulamisa xifaniso lexi hlawuriweke tani ni hi xitandzhaku xa desikithopo"
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3873
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "Yisa xifaniso lexi hlawuriweke eka folidara ya le taleni"
 
-#: ../src/xviewer-window.c:3875
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "_Kopa"
 
-#: ../src/xviewer-window.c:3876
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopela xifaniso lexi hlawuriweke eka clipboard"
 
-#: ../src/xviewer-window.c:3878 ../src/xviewer-window.c:3887 ../src/xviewer-window.c:3890
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Tshineta"
 
-#: ../src/xviewer-window.c:3879 ../src/xviewer-window.c:3888
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "Kurisa xifaniso"
 
-#: ../src/xviewer-window.c:3881 ../src/xviewer-window.c:3893
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Tshineta N_dzhaku"
 
-#: ../src/xviewer-window.c:3882 ../src/xviewer-window.c:3891 ../src/xviewer-window.c:3894
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "Ntsananisa xifaniso"
 
-#: ../src/xviewer-window.c:3884
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "Mpimo wa _ntolovelo"
 
-#: ../src/xviewer-window.c:3885
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "Komba xifaniso hi mpimo wa xona"
 
-#: ../src/xviewer-window.c:3902
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "Nkombiso wo _tala"
 
-#: ../src/xviewer-window.c:3903
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "Komba xifaniso lexi eka nkombiso wo tala"
 
-#: ../src/xviewer-window.c:3905
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "Yimisanyana nkombiso wo ncinca-ncinca"
 
-#: ../src/xviewer-window.c:3906
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "Yimanyana kumbe yana mahlweni na nkombiso wo ncinca-ncinca"
 
-#: ../src/xviewer-window.c:3908
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "_Vonakisa hinkwaxo"
 
-#: ../src/xviewer-window.c:3909
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "Ringanisa xifaniso na furemu"
 
-#: ../src/xviewer-window.c:3914 ../src/xviewer-window.c:3929
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "Xifaniso lexi nga _Hundza"
 
-#: ../src/xviewer-window.c:3915
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "Yana eka xifaniso lexi nga hundza eka xiyenge xa swifaniso"
 
-#: ../src/xviewer-window.c:3917
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "_Xifaniso lexi landzelaka"
 
-#: ../src/xviewer-window.c:3918
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "Yana eka xifaniso lexi landzelaka eka xiyenge xa swifaniso"
 
-#: ../src/xviewer-window.c:3920 ../src/xviewer-window.c:3932
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "Xifaniso xo _Sungula"
 
-#: ../src/xviewer-window.c:3921
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "Yana eka xifaniso xo sungula eka xiyenge xa swifaniso"
 
-#: ../src/xviewer-window.c:3923 ../src/xviewer-window.c:3935
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "Xifaniso ro _Hetelela"
 
-#: ../src/xviewer-window.c:3924
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "Yana eka xifaniso xo hetelela eka xiyenge xa swifaniso"
 
-#: ../src/xviewer-window.c:3926
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "_Xifaniso xihi kumbe xihi"
 
-#: ../src/xviewer-window.c:3927
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "Yana eka xifaniso xihi kumbe xihi eka xiyenge xa swifaniso"
 
-#: ../src/xviewer-window.c:3941
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "K_ombiso wo ncinca-ncinca"
 
-#: ../src/xviewer-window.c:3942
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "Sungula kombiso wo ncinca-ncica wa swifaniso"
 
-#: ../src/xviewer-window.c:4008
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Leswi nga hundza"
 
-#: ../src/xviewer-window.c:4012
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Leswi landzelaka"
 
-#: ../src/xviewer-window.c:4016
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Exineneni"
 
-#: ../src/xviewer-window.c:4019
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Eximatsini"
 
-#: ../src/xviewer-window.c:4022
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "Kombisa Folidara"
 
-#: ../src/xviewer-window.c:4025
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Ndzeni"
 
-#: ../src/xviewer-window.c:4028
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Handle"
 
-#: ../src/xviewer-window.c:4031
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Tolovelekeke"
 
-#: ../src/xviewer-window.c:4034
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Ringanela"
 
-#: ../src/xviewer-window.c:4037
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "Xivandla xa swifaniso"
 
-#: ../src/xviewer-window.c:4040
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Tala"
 
-#: ../src/xviewer-window.c:4408
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Hlela xifaniso lexi hi %s"
 
-#: ../src/xviewer-window.c:4410
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "Hlela xifaniso"
 
 #: ../src/main.c:63
-msgid "GNOME Image Viewer"
-msgstr "Xikomba Xifaniso Xa GNOME"
-
-#: ../src/main.c:70
 msgid "Open in fullscreen mode"
 msgstr "Pfula eka nkombiso wo tala"
 
-#: ../src/main.c:71
+#: ../src/main.c:64
 msgid "Disable image gallery"
 msgstr "Pfala xiyenge xa swifaniso"
 
-#: ../src/main.c:72
+#: ../src/main.c:65
 msgid "Open in slideshow mode"
 msgstr "Pfula hindlela ya nkombiso"
 
-#: ../src/main.c:73
+#: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Sungula xin'wana e handle ko xitirhi lexi nga kona"
 
-#: ../src/main.c:75
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+
+#: ../src/main.c:69
 msgid "Show the application's version"
 msgstr "Komba ntsariso wa xitirhi"
 
-#: ../src/main.c:108
+#: ../src/main.c:99
 msgid "[FILE…]"
 msgstr "[FILE..]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:121
+#: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "Nghenisa '%s --help' ku kuma nxanxamelo wa swihlawulekisi leswi nga tirhisiwaka."
+msgstr ""
+"Nghenisa '%s --help' ku kuma nxanxamelo wa swihlawulekisi leswi nga "
+"tirhisiwaka."

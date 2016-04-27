@@ -6,16 +6,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer gnome-2-12\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-13 08:13+0000\n"
-"PO-Revision-Date: 2013-02-16 12:29+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
-"Language-Team: GNOME Uighur Translation Project <gnome-uighur@yahoogroups.com>\n"
-"Language: \n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"Language-Team: GNOME Uighur Translation Project <gnome-"
+"uighur@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: \n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -57,43 +62,58 @@ msgstr "تاللانغان قورال بالداقنى چىقىرىۋېتىدۇ"
 msgid "Separator"
 msgstr "ئايرىغۇچ"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:3783
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
 msgstr "كۆرۈنۈش(_V)"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:3809
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
 msgid "_Toolbar"
 msgstr "قورال بالداق(_T)"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:3812
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "ھالەت بالداق(_S)"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:3815
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "سۈرەت يىغقۇچ(_I)"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:3818
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "يان كۆزنەكچە(_P)"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:3797
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "مايىللىق(_N)"
 
-#: ../data/xviewer-app-menu.xml.h:7 ../src/xviewer-window.c:3786
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "ياردەم(_H)"
 
-#: ../data/xviewer-app-menu.xml.h:8
-msgid "_About Image Viewer"
-msgstr "سۈرەت كۆرگۈ ھەققىدە(_A)"
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "ھەققىدە(_A)"
 
 #: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
 msgstr "ئاخىرلاشتۇر(_Q)"
 
-#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-window.c:5734 ../src/main.c:173
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "سۈرەت كۆرگۈ"
 
@@ -106,7 +126,7 @@ msgstr "سۈرەتكە كۆز يۈگۈرت ۋە ئايلاندۇر"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Picture;Slideshow;Graphics;سۈرەت;تام تەسۋىر;گرافىك;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:4626
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "سۈرەت خاسلىقى"
 
@@ -119,111 +139,117 @@ msgid "_Next"
 msgstr "كېيىنكى(_N)"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../src/xviewer-metadata-sidebar.c:498
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "ياپ(_C)"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
 msgid "Name:"
 msgstr "ئاتى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:5
-#: ../src/xviewer-metadata-sidebar.c:500
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
 msgid "Width:"
 msgstr "كەڭلىك:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:6
-#: ../src/xviewer-metadata-sidebar.c:502
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
 msgid "Height:"
 msgstr "ئېگىزلىك:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:7
-#: ../src/xviewer-metadata-sidebar.c:504
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "تىپى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
 msgstr "بايت:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-#: ../src/xviewer-metadata-sidebar.c:508
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "قىسقۇچ:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:496
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "ئادەتتىكى"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-#: ../src/xviewer-metadata-sidebar.c:528
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "نۇر چەمبەر قىممىتى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:531
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "نۇر ئۆتۈش ۋاقتى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:534
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "فوكۇس ئارىلىقى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:536
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "چاقماق لامپا:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:540
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "ISO سۈرئەت نىسبىتى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:543
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "ئۆلچەش ھالىتى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:546
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "كامېرا تىپى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:548
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "چېسلا/ۋاقىت:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:553
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "چۈشەندۈرۈش:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:556
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "ئورنى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:559
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "ھالقىلىق سۆز:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:561
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "ئاپتور:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:564
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "نەشر ھوقۇقى:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:567
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "تەپسىلاتلار"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:524
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "مېتا سانلىق-مەلۇماتى"
 
@@ -231,53 +257,67 @@ msgstr "مېتا سانلىق-مەلۇماتى"
 msgid "Save As"
 msgstr "باشقا ئاتتا ساقلا"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "ئەمەلدىن قالدۇر(_C)"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> ئەسلى ھۆججەت ئاتى"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> سانىغۇچ"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
-msgid "Filename format:"
-msgstr "ھۆججەت ئاتىنىڭ فورماتى:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "قىسقۇچ تاللاڭ"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
-msgid "Destination folder:"
-msgstr "نىشان قىسقۇچ:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "ھۆججەت يولىنىڭ ئۆلچىمى"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
-msgid "Start counter at:"
-msgstr "سانىغۇچنىڭ باش نومۇرى:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
-msgid "Replace spaces with underscores"
-msgstr "بوشلۇقنى ئاستى سىزىققا ئالماشتۇر"
-
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "تاللانما"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "ئات ئۆزگەرتىش ئورنى:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "خەت تاپشۇرۇۋالغۇچى："
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
 msgstr "ھۆججەت ئاتىنى ئالدىن كۆزەت"
 
@@ -285,299 +325,345 @@ msgstr "ھۆججەت ئاتىنى ئالدىن كۆزەت"
 msgid "Preferences"
 msgstr "مايىللىق"
 
-#: ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
 msgstr "سۈرەت كۈچەيتىش"
 
-#: ../data/xviewer-preferences-dialog.ui.h:3
-msgid "Smooth images when zoomed-_out"
-msgstr "كېڭەيتكەندە سۈرەتنى سىلىقلا(_O)"
-
-#: ../data/xviewer-preferences-dialog.ui.h:4
-msgid "Smooth images when zoomed-_in"
-msgstr "تارايتقاندا سۈرەتنى سىلىقلا(_I)"
-
 #: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "يۆنىلىشنى ئۆزلۈكىدىن تەڭشە(_A)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
 msgstr "تەگلىك"
 
-#: ../data/xviewer-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "As custom color:"
 msgstr "ئىختىيارى رەڭ سۈپىتىدە:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:8
-#: ../data/org.x.viewer.gschema.xml.in.in.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "تەگلىك رەڭگى"
 
-#: ../data/xviewer-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
 msgstr "سۈزۈك قىسمى"
 
-#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "شەكىل تەكشۈر(_P)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "ئىختىيارى رەڭ سۈپىتىدە(_O):"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "سۈزۈك رايوننىڭ رەڭگى"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
 msgstr "تەگلىككە ئوخشاش(_B)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "سۈرەت كۆرۈنۈش"
 
-#: ../data/xviewer-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
 msgstr "سۈرەت كېڭەيت تارايت"
 
-#: ../data/xviewer-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
 msgstr "سۈرەتنى يېيىپ ئېكرانغا ماسلاشتۇر(_X)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
 msgstr "تەرتىپ"
 
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "سۈرەتلەرنىڭ ئالمىشىش ۋاقتى(_T):"
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "دەۋرىيلىك تەرتىپى(_L)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
 msgstr "تام تەسۋىرى"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
 msgstr "قىستۇرما"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:1
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "يۆنىلىشنى ئۆزلۈكىدىن تەڭشە"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:2
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "EXIF يۆنىلىشىگە ئاساسەن سۈرەتنى ئۆزلۈكىدىن ئايلاندۇرامدۇ يوق."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:4
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "بۇ رەڭ سۈرەتنىڭ ئارقىسىنى تولدۇرۇشقا ئىشلىتىلىدۇ. ئەگەر تەگلىك رەڭگى تەڭشەلمىسە ئاكتىپ GTK باش تېمىسىنىڭ ئىچىدە بەلگىلىنىدۇ."
+msgstr ""
+"بۇ رەڭ سۈرەتنىڭ ئارقىسىنى تولدۇرۇشقا ئىشلىتىلىدۇ. ئەگەر تەگلىك رەڭگى "
+"تەڭشەلمىسە ئاكتىپ GTK باش تېمىسىنىڭ ئىچىدە بەلگىلىنىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "قىممەت قىستۇرۇلغان سۈرەت"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "سۈرەت تارايتىشنى مۆلچەرلەمدۇ يوق. بۇنداق بولغاندا سۈپەت ياخشىراق بولىدۇ ئەمما قىممەت قىستۇرۇلغان سۈرەتتىن ئاستا بولىدۇ."
+msgstr ""
+"سۈرەت تارايتىشنى مۆلچەرلەمدۇ يوق. بۇنداق بولغاندا سۈپەت ياخشىراق بولىدۇ "
+"ئەمما قىممەت قىستۇرۇلغان سۈرەتتىن ئاستا بولىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
 msgstr "مۆلچەر سۈرەت"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "سۈرەت كېڭەيتىشنى مۆلچەرلەمدۇ يوق. بۇنداق بولغاندا تۇتۇق سۈپەتلىك ۋە مۆلچەر سۈرەتتىن ئاستا بولىدۇ."
+msgstr ""
+"سۈرەت كېڭەيتىشنى مۆلچەرلەمدۇ يوق. بۇنداق بولغاندا تۇتۇق سۈپەتلىك ۋە مۆلچەر "
+"سۈرەتتىن ئاستا بولىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
 msgstr "سۈزۈكلۈك كۆرسەتكۈچى"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
-msgstr "سۈزۈك رايوننى قانداق بەلگىلەشنى جەزملەيدۇ. ئىشلەتكىلى بولىدىغان قىممەتلەردىن CHECK_PATTERN، COLOR ۋە NONE بار. ئەگەر COLOR تاللانسا ئۇنداقتا trans-color قىممىتى ئىشلىتىدىغان رەڭ قىممىتىنى بەلگىلەيدۇ."
+msgstr ""
+"سۈزۈك رايوننى قانداق بەلگىلەشنى جەزملەيدۇ. ئىشلەتكىلى بولىدىغان قىممەتلەردىن "
+"CHECK_PATTERN، COLOR ۋە NONE بار. ئەگەر COLOR تاللانسا ئۇنداقتا trans-color "
+"قىممىتى ئىشلىتىدىغان رەڭ قىممىتىنى بەلگىلەيدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "چاشقىنەك غالتەكتە كېڭەيت تارايت"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
-msgstr "چاشقىنەك غالتىكىنى ئىشلىتىپ كېڭەيتىش ياكى تارايتىشنى كونترول قىلامدۇ يوق."
+msgstr ""
+"چاشقىنەك غالتىكىنى ئىشلىتىپ كېڭەيتىش ياكى تارايتىشنى كونترول قىلامدۇ يوق."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:13
+#: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
 msgstr "كېڭەيت-تارايت نىسبىتى"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
 "This value defines the zooming step used for each scroll event. For example, "
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
-msgstr "چاشقىنەك غالتىكىدە كېڭەيتىپ تارايتقاندىكى نىسبەتنى ئىشلىتىدۇ. بۇ قىممەت ھەر قېتىملىق دومىلىتىشتىكى كېڭەيتىش تارايتىش دەرىجىسىنى بەلگىلەيدۇ. مەسىلەن، 0.05 ھەر قېتىملىق كېڭەيت-تارايت مەشغۇلاتىدا 5% چوڭايتىدۇ ياكى كىچىكلىتىدۇ، 1.00 بولسا 100% چوڭايتىدۇ ياكى كىچىكلىتىدۇ."
+msgstr ""
+"چاشقىنەك غالتىكىدە كېڭەيتىپ تارايتقاندىكى نىسبەتنى ئىشلىتىدۇ. بۇ قىممەت ھەر "
+"قېتىملىق دومىلىتىشتىكى كېڭەيتىش تارايتىش دەرىجىسىنى بەلگىلەيدۇ. مەسىلەن، "
+"0.05 ھەر قېتىملىق كېڭەيت-تارايت مەشغۇلاتىدا 5% چوڭايتىدۇ ياكى كىچىكلىتىدۇ، "
+"1.00 بولسا 100% چوڭايتىدۇ ياكى كىچىكلىتىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "سۈزۈك رەڭ"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr "ئەگەر سۈزۈك كۇنۇپكا قىممىتى COLOR بولسا، بۇ كۇنۇپكا قىممىتى سۈزۈك رايوننىڭ رەڭگىنى جەزملەيدۇ."
+msgstr ""
+"ئەگەر سۈزۈك كۇنۇپكا قىممىتى COLOR بولسا، بۇ كۇنۇپكا قىممىتى سۈزۈك رايوننىڭ "
+"رەڭگىنى جەزملەيدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "ئىختىيارى تەگلىك رەڭ ئىشلەت"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "ئەگەر بۇ تەگلىكنىڭ ئاكتىپ رەڭ تەڭشىكى بولسا سۈرەت تەگلىكىنى تولدۇرۇشقا ئىشلىتىلىدۇ. ئەگەر نۆۋەتتىكى GTK باش تېمىسى بولمىسا تولدۇرۇش رەڭگى بەلگىلىنىدۇ."
+msgstr ""
+"ئەگەر بۇ تەگلىكنىڭ ئاكتىپ رەڭ تەڭشىكى بولسا سۈرەت تەگلىكىنى تولدۇرۇشقا "
+"ئىشلىتىلىدۇ. ئەگەر نۆۋەتتىكى GTK باش تېمىسى بولمىسا تولدۇرۇش رەڭگى "
+"بەلگىلىنىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
 msgstr "رەسىم تەرتىپى بويىچە دەۋرىيلىنىش"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "سۈرەت قاتارى چەكسىز دەۋرىيلىنىپ كۆرسىتىلەمدۇ يوق."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "دەسلەپكى كەڭ-تارلىقىنى 100% دىن چوڭايتىشقا يول قوي"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "ئەگەر FALSE قىلىپ تەڭشەلسە ئۇنداقتا كىچىك سۈرەت ئېكران چوڭلۇقىدا چوڭايتىلمايدۇ."
+msgstr ""
+"ئەگەر FALSE قىلىپ تەڭشەلسە ئۇنداقتا كىچىك سۈرەت ئېكران چوڭلۇقىدا "
+"چوڭايتىلمايدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
 msgstr "كېيىنكى سۈرەتنى كۆرسەتكۈچە كېچىكتۈرۈش ۋاقتى"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "0 دىن چوڭ بولغان قىممەت كېيىنكى سۈرەتنى ئۆزلۈكىدىن كۆرسىتىشتىن ئىلگىرى نۆۋەتتىكى سۈرەتنى ئېكراندا تۇرغۇزۇش ۋاقتىنى بەلگىلەيدۇ. 0 ئۆزلۈكىدىن كۆرسىتىشنى چەكلەيدۇ."
+msgstr ""
+"0 دىن چوڭ بولغان قىممەت كېيىنكى سۈرەتنى ئۆزلۈكىدىن كۆرسىتىشتىن ئىلگىرى "
+"نۆۋەتتىكى سۈرەتنى ئېكراندا تۇرغۇزۇش ۋاقتىنى بەلگىلەيدۇ. 0 ئۆزلۈكىدىن "
+"كۆرسىتىشنى چەكلەيدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
 msgstr "كۆزنەك قورال بالداقنى كۆرسەت/يوشۇر."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid "Show/Hide the window statusbar."
 msgstr "كۆزنەك ھالەت بالداقنى كۆرسەت/يوشۇر."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
 msgstr "سۈرەت يىغقۇچ كۆزنەكچىنى كۆرسەت/يوشۇر."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
-msgstr "سۈرەت يىغقۇچ تاختىسىنىڭ ئورنى. 0 گە تەڭشەلسە ئاستى؛ 1 گە تەڭشەلسە سول؛ 2 گە تەڭشەلسە ئۈستى؛ 3 كە تەڭشەلسە ئوڭ."
+msgstr ""
+"سۈرەت يىغقۇچ تاختىسىنىڭ ئورنى. 0 گە تەڭشەلسە ئاستى؛ 1 گە تەڭشەلسە سول؛ 2 گە "
+"تەڭشەلسە ئۈستى؛ 3 كە تەڭشەلسە ئوڭ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr "سۈرەت يىغقۇچ كۆزنەكچىنى ئۆزگەرتىشكە بولامدۇ يوق."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
 msgstr "كۆزنەك يان كۆزنەكچىنى كۆرسەت/يوشۇر."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "سۈرەت يىغقۇچ كۆزنەكچىدىكى سۈرگۈچ توپچىنى كۆرسەت/يوشۇر."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
 msgstr "ئۆزگەرتىشنى ساقلاشنى سورىمايلا ئاساسىي كۆزنەكنى ياپ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
 msgstr "سۈرەتنى سورىمايلا ئەخلەتخانىغا يۆتكە"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr "ئەگەر قوزغىتىلسا گىنوم كۆزى سۈرەتنى ئەخلەتخانىغا يۆتكىگەندە جەزملەشنى تەلەپ قىلمايدۇ. ئەمما ھۆججەتنى ئەخلەتخانىغا يۆتكىيەلمەي ئۆچۈرىدىغان بولسا يەنىلا جەزملەشنى سورايدۇ."
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"ئەگەر قوزغىتىلسا گىنوم كۆزى سۈرەتنى ئەخلەتخانىغا يۆتكىگەندە جەزملەشنى تەلەپ "
+"قىلمايدۇ. ئەمما ھۆججەتنى ئەخلەتخانىغا يۆتكىيەلمەي ئۆچۈرىدىغان بولسا يەنىلا "
+"جەزملەشنى سورايدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
-msgstr "ئەگەر سۈرەت يۈكلەنمىگەن بولسا ھۆججەت تاللىغۇچ ئىشلەتكۈچىنىڭ سۈرەت قىسقۇچىنى كۆرسىتەمدۇ يوق."
+msgstr ""
+"ئەگەر سۈرەت يۈكلەنمىگەن بولسا ھۆججەت تاللىغۇچ ئىشلەتكۈچىنىڭ سۈرەت قىسقۇچىنى "
+"كۆرسىتەمدۇ يوق."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "ئەگەر قوزغىتىلسا ھەمدە ئاكتىپلانغان كۆزنەكتە سۈرەت يۈكلىمىسە، ھۆججەت تاللىغۇچ XDG بەلگىلىگەن ئىشلەتكۈچى قىسقۇچىنى ئىشلىتىپ ئىشلەتكۈچىنىڭ سۈرەت قىسقۇچىنى كۆرسىتىدۇ. ئەگەر چەكلەنگەن ياكى سۈرەت قىسقۇچ تەڭشەلمىگەن بولسا ئۇ نۆۋەتتىكى خىزمەت مۇندەرىجىنى كۆرسىتىدۇ."
+msgstr ""
+"ئەگەر قوزغىتىلسا ھەمدە ئاكتىپلانغان كۆزنەكتە سۈرەت يۈكلىمىسە، ھۆججەت "
+"تاللىغۇچ XDG بەلگىلىگەن ئىشلەتكۈچى قىسقۇچىنى ئىشلىتىپ ئىشلەتكۈچىنىڭ سۈرەت "
+"قىسقۇچىنى كۆرسىتىدۇ. ئەگەر چەكلەنگەن ياكى سۈرەت قىسقۇچ تەڭشەلمىگەن بولسا ئۇ "
+"نۆۋەتتىكى خىزمەت مۇندەرىجىنى كۆرسىتىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
-msgstr "خاسلىق سۆزلەشكۈسىدىكى مېتا سانلىق-مەلۇمات تىزىمىنىڭ ئۆزىنىڭ بېتى بارمۇ يوق."
+msgstr ""
+"خاسلىق سۆزلەشكۈسىدىكى مېتا سانلىق-مەلۇمات تىزىمىنىڭ ئۆزىنىڭ بېتى بارمۇ يوق."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
 "on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "ئەگەر قوزغىتىلسا خاسلىق سۆزلەشكۈسىدىكى ئەسلى سانلىق-مەلۇمات تىزىملىكى سۆزلەشكۈدىكى باشقا مۇستەقىل بەتكە يۆتكىلىدۇ. بۇنداق بولغاندا كىچىك ئېكراندا بۇ سۆزلەشكۈنىڭ ئىشلىتىشچانلىقىنى ئاشۇرىدۇ، مەسىلەن، تور يان كومپيۇتېر. ئەگەر چەكلەنسە بۇ تۇلۇق \"Metadata\" بېتىگە سىڭدۈرۈلىدۇ."
+msgstr ""
+"ئەگەر قوزغىتىلسا خاسلىق سۆزلەشكۈسىدىكى ئەسلى سانلىق-مەلۇمات تىزىملىكى "
+"سۆزلەشكۈدىكى باشقا مۇستەقىل بەتكە يۆتكىلىدۇ. بۇنداق بولغاندا كىچىك ئېكراندا "
+"بۇ سۆزلەشكۈنىڭ ئىشلىتىشچانلىقىنى ئاشۇرىدۇ، مەسىلەن، تور يان كومپيۇتېر. ئەگەر "
+"چەكلەنسە بۇ تۇلۇق \"Metadata\" بېتىگە سىڭدۈرۈلىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "سۈرەت تەھرىرلەشكە ئىشلىتىدىغان سىرتقى پروگرامما"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
 "to the empty string to disable this feature."
-msgstr "«سۈرەت تەھرىر» قورال بالداق توپچىنى چەككەندە چاقىرىدىغان سۈرەت تەھرىرلەشتە ئىشلىتىدىغان ئۈستەلئۈستى ھۆججەت ئاتى (\".desktop\" كېڭەيتىلگەن ئاتىنى ئۆز ئىچىگە ئالىدۇ). بوش قالدۇرۇلسا بۇ ئىقتىدار چەكلىنىدۇ."
+msgstr ""
+"«سۈرەت تەھرىر» قورال بالداق توپچىنى چەككەندە چاقىرىدىغان سۈرەت تەھرىرلەشتە "
+"ئىشلىتىدىغان ئۈستەلئۈستى ھۆججەت ئاتى (\".desktop\" كېڭەيتىلگەن ئاتىنى ئۆز "
+"ئىچىگە ئالىدۇ). بوش قالدۇرۇلسا بۇ ئىقتىدار چەكلىنىدۇ."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
 msgstr "ئاكتىپ قىستۇرما"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
-msgstr "ئاكتىپلانغان قىستۇرمىلار تىزىملىكى. ئۇ ئاكتىپلانغان قىستۇرمىنىڭ ئورنىنى ئۆز ئىچىگە ئالمايدۇ. xviewer-plugin ھۆججەتتىن پايدىلىنىپ مۇناسىپ قىستۇرمىنىڭ ئورنىغا ئېرىشىڭ."
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+"ئاكتىپلانغان قىستۇرمىلار تىزىملىكى. ئۇ ئاكتىپلانغان قىستۇرمىنىڭ ئورنىنى ئۆز "
+"ئىچىگە ئالمايدۇ. xviewer-plugin ھۆججەتتىن پايدىلىنىپ مۇناسىپ قىستۇرمىنىڭ "
+"ئورنىغا ئېرىشىڭ."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -605,48 +691,50 @@ msgstr "ھالەت بالداقتا چېسلا كۆرسەت"
 msgid "Shows the image date in the window statusbar"
 msgstr "كۆزنەك ھالەت بالدىقىدا سۈرەتنىڭ چېسلاسىنى كۆرسىتىدۇ"
 
-#: ../src/xviewer-close-confirmation-dialog.c:171
+#: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "ساقلىماي تاقا(_W)"
 
-#: ../src/xviewer-close-confirmation-dialog.c:217
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "ساقلا(_S)"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
 msgstr "سوئال"
 
-#: ../src/xviewer-close-confirmation-dialog.c:398
+#: ../src/xviewer-close-confirmation-dialog.c:391
 msgid "If you don't save, your changes will be lost."
 msgstr "ئەگەر ساقلىمىسىڭىز، ئۆزگەرتىشلىرىڭىز يوقىلىدۇ."
 
-#: ../src/xviewer-close-confirmation-dialog.c:435
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "تاقاشتىن بۇرۇن ئۆزگىرىشلەرنى «%s» سۈرەتكە ساقلىسۇنمۇ؟"
 
-#: ../src/xviewer-close-confirmation-dialog.c:642
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "%d سۈرەتنىڭ ئۆزگەرتىشلىرى تېخى ساقلانمىدى. تاقاشتىن ئىلگىرى ساقلىسۇنمۇ؟"
+msgstr[0] ""
+"%d سۈرەتنىڭ ئۆزگەرتىشلىرى تېخى ساقلانمىدى. تاقاشتىن ئىلگىرى ساقلىسۇنمۇ؟"
 
-#: ../src/xviewer-close-confirmation-dialog.c:659
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "ساقلايدىغان سۈرەتلەرنى تاللاڭ(_E):"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:678
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "ئەگەر ساقلىمىسىڭىز، ئۆزگەرتىشلىرىڭىزنىڭ ھەممىسى يوقىلىدۇ."
 
-#: ../src/xviewer-error-message-area.c:119
-msgid "_Cancel"
-msgstr "ئەمەلدىن قالدۇر(_C)"
-
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:839
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "قايتا يۈكلە(_R)"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:3830
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "باشقا ئاتتا ساقلا(_A)…"
 
@@ -669,67 +757,67 @@ msgstr "‹%s› دا سۈرەت تېپىلمىدى."
 msgid "The given locations contain no images."
 msgstr "بېرىلگەن ئورۇندا سۈرەت يوق."
 
-#: ../src/xviewer-exif-details.c:69
+#: ../src/xviewer-metadata-details.c:65
 msgid "Camera"
 msgstr "كامېرا"
 
-#: ../src/xviewer-exif-details.c:70
+#: ../src/xviewer-metadata-details.c:66
 msgid "Image Data"
 msgstr "سۈرەت سانلىق-مەلۇمات"
 
-#: ../src/xviewer-exif-details.c:71
+#: ../src/xviewer-metadata-details.c:67
 msgid "Image Taking Conditions"
 msgstr "سۈرەتكە ئېرىشىش شەرتى"
 
-#: ../src/xviewer-exif-details.c:72
+#: ../src/xviewer-metadata-details.c:68
 msgid "GPS Data"
 msgstr "GPS سانلىق-مەلۇماتى"
 
-#: ../src/xviewer-exif-details.c:73
+#: ../src/xviewer-metadata-details.c:69
 msgid "Maker Note"
 msgstr "ياسىغۇچىنىڭ ئىلاۋىسى"
 
-#: ../src/xviewer-exif-details.c:74
+#: ../src/xviewer-metadata-details.c:70
 msgid "Other"
 msgstr "باشقا"
 
-#: ../src/xviewer-exif-details.c:76
+#: ../src/xviewer-metadata-details.c:72
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/xviewer-exif-details.c:77
+#: ../src/xviewer-metadata-details.c:73
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/xviewer-exif-details.c:78
+#: ../src/xviewer-metadata-details.c:74
 msgid "XMP Rights Management"
 msgstr "XMP ھوقۇق باشقۇرۇش"
 
-#: ../src/xviewer-exif-details.c:79
+#: ../src/xviewer-metadata-details.c:75
 msgid "XMP Other"
 msgstr "XMP باشقا"
 
-#: ../src/xviewer-exif-details.c:253
+#: ../src/xviewer-metadata-details.c:251
 msgid "Tag"
 msgstr "خەتكۈش"
 
-#: ../src/xviewer-exif-details.c:260
+#: ../src/xviewer-metadata-details.c:258
 msgid "Value"
 msgstr "قىممەت"
 
-#: ../src/xviewer-exif-details.c:422
+#: ../src/xviewer-metadata-details.c:436
 msgid "North"
 msgstr "شىمال"
 
-#: ../src/xviewer-exif-details.c:425
+#: ../src/xviewer-metadata-details.c:439
 msgid "East"
 msgstr "شەرق"
 
-#: ../src/xviewer-exif-details.c:428
+#: ../src/xviewer-metadata-details.c:442
 msgid "West"
 msgstr "غەرب"
 
-#: ../src/xviewer-exif-details.c:431
+#: ../src/xviewer-metadata-details.c:445
 msgid "South"
 msgstr "جەنۇب"
 
@@ -758,113 +846,122 @@ msgstr "%.1f (lens)"
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm film)"
 
-#: ../src/xviewer-file-chooser.c:126
+#: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
 msgstr "ھۆججەت فورماتى نامەلۇم ياكى قوللىمايدۇ"
 
-#: ../src/xviewer-file-chooser.c:131
+#: ../src/xviewer-file-chooser.c:124
 msgid ""
 "Image Viewer could not determine a supported writable file format based on "
 "the filename."
-msgstr "ھۆججەت ئاتىغا ئاساسەن يېزىشنى قوللايدىغان ھۆججەت پىچىمىنى سۈرەت كۆرگۈ بەلگىلىيەلمىدى."
+msgstr ""
+"ھۆججەت ئاتىغا ئاساسەن يېزىشنى قوللايدىغان ھۆججەت پىچىمىنى سۈرەت كۆرگۈ "
+"بەلگىلىيەلمىدى."
 
-#: ../src/xviewer-file-chooser.c:132
+#: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
 msgstr ".png ياكى .jpg غا ئوخشاش ھۆججەت كېڭەيتىلمە ئاتلىرىنى سىناڭ."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:167
+#: ../src/xviewer-file-chooser.c:160
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#: ../src/xviewer-file-chooser.c:219
+#: ../src/xviewer-file-chooser.c:212
 msgid "All files"
 msgstr "ھەممە ھۆججەتلەر"
 
-#: ../src/xviewer-file-chooser.c:224
+#: ../src/xviewer-file-chooser.c:217
 msgid "Supported image files"
 msgstr "قوللايدىغان سۈرەت ھۆججەتلەر"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:296 ../src/xviewer-metadata-sidebar.c:235
-#: ../src/xviewer-metadata-sidebar.c:239 ../src/xviewer-properties-dialog.c:138
-#: ../src/xviewer-properties-dialog.c:140 ../src/xviewer-thumb-view.c:519
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "چېكىت"
 
-#: ../src/xviewer-file-chooser.c:466
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:459
 msgid "Open Image"
 msgstr "سۈرەت ئاچ"
 
-#: ../src/xviewer-file-chooser.c:474
+#: ../src/xviewer-file-chooser.c:467
 msgid "Save Image"
 msgstr "سۈرەت ساقلا"
 
-#: ../src/xviewer-file-chooser.c:482
+#: ../src/xviewer-file-chooser.c:475
 msgid "Open Folder"
 msgstr "قىسقۇچ ئاچ"
 
-#: ../src/xviewer-image.c:615
+#: ../src/xviewer-image.c:613
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "ئوقۇلمىغان سۈرەتتىكى ئۆزگەرتىش"
 
-#: ../src/xviewer-image.c:643
+#: ../src/xviewer-image.c:641
 #, c-format
 msgid "Transformation failed."
 msgstr "ئۆزگەرتىش مەغلۇپ بولدى."
 
-#: ../src/xviewer-image.c:1104
+#: ../src/xviewer-image.c:1138
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "مەزكۇر فورماتتىكى ھۆججەتكە نىسبەتەن EXIF تەمىنلەنمىگەن."
 
-#: ../src/xviewer-image.c:1253
+#: ../src/xviewer-image.c:1287
 #, c-format
 msgid "Image loading failed."
 msgstr "سۈرەت يۈكلىيەلمىدى."
 
-#: ../src/xviewer-image.c:1834 ../src/xviewer-image.c:1954
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
 #, c-format
 msgid "No image loaded."
 msgstr "سۈرەت يۈكلەنمىدى."
 
-#: ../src/xviewer-image.c:1842 ../src/xviewer-image.c:1963
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "سىزدە ھۆججەتنى ساقلاش ئىمتىيازىڭىز يوق."
 
-#: ../src/xviewer-image.c:1852 ../src/xviewer-image.c:1974
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "ۋاقىتلىق ھۆججەت قۇرالمىدى."
 
-#: ../src/xviewer-image-jpeg.c:375
+#: ../src/xviewer-image-jpeg.c:374
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "ساقلاشتا كېرەك بولىدىغان ۋاقىتلىق ھۆججەتنى قۇرالمىدى: %s"
 
-#: ../src/xviewer-image-jpeg.c:394
+#: ../src/xviewer-image-jpeg.c:393
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ھۆججەتنى يۈكلەشكە ئەسلەك تەقسىملىيەلمىدى"
 
-#: ../src/xviewer-metadata-sidebar.c:248 ../src/xviewer-properties-dialog.c:155
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: ../src/xviewer-metadata-sidebar.c:506
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "File size:"
 msgstr "ھۆججەت چوڭلۇقى:"
 
-#: ../src/xviewer-metadata-sidebar.c:517 ../src/xviewer-properties-dialog.c:674
-#: ../src/xviewer-window.c:3834
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
-msgstr "ھۆججەت باشقۇرغۇدا بۇ ھۆججەتنى ئوز ئىچىگە ئالغان مۇندەرىجىنى كۆرسىتىدۇ"
+msgstr ""
+"ھۆججەت باشقۇرغۇدا بۇ ھۆججەتنى ئوز ئىچىگە ئالغان مۇندەرىجىنى كۆرسىتىدۇ"
 
-#: ../src/xviewer-preferences-dialog.c:114
+#: ../src/xviewer-preferences-dialog.c:125
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -874,95 +971,95 @@ msgstr[0] "%lu سېكۇنت"
 msgid "Image Settings"
 msgstr "سۈرەت تەڭشەك"
 
-#: ../src/xviewer-print-image-setup.c:906
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "سۈرەت"
 
-#: ../src/xviewer-print-image-setup.c:907
+#: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
 msgstr "باسىدىغان سۈرەت خاسلىقى  تەڭشىلىدۇ"
 
-#: ../src/xviewer-print-image-setup.c:913
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr "بەت تەڭشەك"
 
-#: ../src/xviewer-print-image-setup.c:914
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr "باسماقچى بولغان سۈرەتنىڭ بەت ئۇچۇرى"
 
-#: ../src/xviewer-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "ئورنى"
 
-#: ../src/xviewer-print-image-setup.c:946
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "سول(_L):"
 
-#: ../src/xviewer-print-image-setup.c:948
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "ئوڭ(_R):"
 
-#: ../src/xviewer-print-image-setup.c:949
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "ئۈستى(_T):"
 
-#: ../src/xviewer-print-image-setup.c:950
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr "ئاستى(_B):"
 
-#: ../src/xviewer-print-image-setup.c:953
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "ئوتتۇرا(_E):"
 
-#: ../src/xviewer-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "يوق"
 
-#: ../src/xviewer-print-image-setup.c:960
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "توغرا"
 
-#: ../src/xviewer-print-image-setup.c:962
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "تىك"
 
-#: ../src/xviewer-print-image-setup.c:964
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "ئىككىلىسى"
 
-#: ../src/xviewer-print-image-setup.c:980
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "چوڭلۇقى"
 
-#: ../src/xviewer-print-image-setup.c:983
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "كەڭلىك(_W):"
 
-#: ../src/xviewer-print-image-setup.c:985
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "ئېگىزلىك(_H):"
 
-#: ../src/xviewer-print-image-setup.c:988
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr "كۆرسىتىش نىسبىتى(_S):"
 
-#: ../src/xviewer-print-image-setup.c:999
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr "بىرلىكى(_U):"
 
-#: ../src/xviewer-print-image-setup.c:1004
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr "مىللىمېتىر"
 
-#: ../src/xviewer-print-image-setup.c:1006
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "دىيۇيم"
 
-#: ../src/xviewer-print-image-setup.c:1035
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "ئالدىن كۆزەت"
 
-#: ../src/xviewer-save-as-dialog-helper.c:161
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "ئۆزگەرمەيدۇ"
 
@@ -976,16 +1073,16 @@ msgstr "ئۆزگەرمەيدۇ"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/xviewer-statusbar.c:131
+#: ../src/xviewer-statusbar.c:126
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:547
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "تارتىلغان ۋاقتى"
 
-#: ../src/xviewer-uri-converter.c:984
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "ھېچ بولمىغاندا ئىككى ھۆججەتنىڭ ئاتى ئوخشاش."
@@ -1004,27 +1101,28 @@ msgstr " (ئىناۋەتسىز يۇنىكود)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:533
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i چېكىت  %s    %i%%"
 
-#: ../src/xviewer-window.c:841 ../src/xviewer-window.c:2778
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "يوشۇر(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:851
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr "«%s» سۈرەت سىرتقى پروگرامما تەرىپىدىن ئۆزگەرتىلدى. ئۇنى قايتا يۈكلەمسىز؟"
+msgstr ""
+"«%s» سۈرەت سىرتقى پروگرامما تەرىپىدىن ئۆزگەرتىلدى. ئۇنى قايتا يۈكلەمسىز؟"
 
-#: ../src/xviewer-window.c:1015
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "تاللىغان سۈرەتنى «%s» دا ئاچ"
@@ -1034,76 +1132,137 @@ msgstr "تاللىغان سۈرەتنى «%s» دا ئاچ"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1171
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "سۈرەت ساقلا «%s» (%u/%u)"
 
-#: ../src/xviewer-window.c:1553
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "«%s» سۈرەتنى ئېچىۋاتىدۇ"
 
-#: ../src/xviewer-window.c:2037
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
 msgid "Viewing a slideshow"
 msgstr "تام تەسۋىرىنى كۆرسەت"
 
-#: ../src/xviewer-window.c:2262
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "ھۆججەت بېسىش خاتالىقى:\n"
+msgstr ""
+"ھۆججەت بېسىش خاتالىقى:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2561
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "قورال بالداق تەھرىرلىگۈچ"
 
-#: ../src/xviewer-window.c:2564
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "كۆڭۈلدىكىگە قايتۇر(_R)"
 
-#: ../src/xviewer-window.c:2725 ../src/xviewer-window.c:2740
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "سىستېما تەڭشىكىنى ئىجرا قىلىۋاتقاندا خاتالىق كۆرۈلدى. "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2776
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "تەگلىك مايىللىقىنى ئاچ(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2792
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "بۇ  «%s» سۈرەت ئۈستەلئۈستى تەگلىككە تەڭشىلىدۇ.\n"
+msgstr ""
+"بۇ  «%s» سۈرەت ئۈستەلئۈستى تەگلىككە تەڭشىلىدۇ.\n"
 "بۇ كۆرۈنۈشنى راستىنىلا ئۆزگەرتەمسىز؟"
 
-#: ../src/xviewer-window.c:3259
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "سۈرەتنى يەرلىك دىسكىدا ساقلا…"
 
-#: ../src/xviewer-window.c:3339
+#: ../src/xviewer-window.c:3352
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr ""
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr ""
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr ""
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "ھۆججەت ئۆچۈرەلمىدى"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "%s سۈرەتنى ئۆچۈرۈشتە خاتالىق كۆرۈلدى"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "سىز راستىنىلا «%s» سۈرەتنى\n"
+msgstr ""
+"سىز راستىنىلا «%s» سۈرەتنى\n"
 "ئەخلەتخانىغا يۆتكەمسىز؟"
 
-#: ../src/xviewer-window.c:3342
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "«%s» نى تاشلايدىغان ئەخلەتخانا تېپىلمىدى. بۇ سۈرەتنى مەڭگۈلۈك چىقىرىۋېتەمسىز؟"
+msgstr ""
+"«%s» نى تاشلايدىغان ئەخلەتخانا تېپىلمىدى. بۇ سۈرەتنى مەڭگۈلۈك چىقىرىۋېتەمسىز؟"
 
-#: ../src/xviewer-window.c:3347
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1111,663 +1270,388 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "تاللانغان %d سۈرەتنى\n"
+msgstr[0] ""
+"تاللانغان %d سۈرەتنى\n"
 "راستىنىلا ئەخلەتخانىغا يۆتكەمسىز؟"
 
-#: ../src/xviewer-window.c:3352
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "تاللانغان بەزى سۈرەتلەر ئەخلەتخانىغا يۆتكەلمەي مەڭگۈلۈك ئۆچۈرۈلىدۇ. راستىنىلا مۇشۇ مەشغۇلاتنى ئىجرا قىلامسىز؟"
+msgstr ""
+"تاللانغان بەزى سۈرەتلەر ئەخلەتخانىغا يۆتكەلمەي مەڭگۈلۈك ئۆچۈرۈلىدۇ. "
+"راستىنىلا مۇشۇ مەشغۇلاتنى ئىجرا قىلامسىز؟"
 
-#: ../src/xviewer-window.c:3369 ../src/xviewer-window.c:3860 ../src/xviewer-window.c:3884
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "ئەخلەتخانىغا يۆتكە(_T)"
 
-#: ../src/xviewer-window.c:3371
-msgid "_Do not ask again during this session"
-msgstr "بۇ ئەڭگىمە جەريانىدا قايتا سورىما(_D)"
-
-#: ../src/xviewer-window.c:3416 ../src/xviewer-window.c:3430
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ئەخلەتخانىنى زىيارەت قىلالمىدى."
 
-#: ../src/xviewer-window.c:3438
-#, c-format
-msgid "Couldn't delete file"
-msgstr "ھۆججەت ئۆچۈرەلمىدى"
-
-#: ../src/xviewer-window.c:3534
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "%s سۈرەتنى ئۆچۈرۈشتە خاتالىق كۆرۈلدى"
-
-#: ../src/xviewer-window.c:3781
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "سۈرەت(_I)"
 
-#: ../src/xviewer-window.c:3782
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "تەھرىر(_E)"
 
-#: ../src/xviewer-window.c:3784
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "يۆتكەل(_G)"
 
-#: ../src/xviewer-window.c:3785
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "قوراللار(_T)"
 
-#: ../src/xviewer-window.c:3788
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "ئاچ(_O)…"
 
-#: ../src/xviewer-window.c:3789
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "ھۆججەت ئاچىدۇ"
 
-#: ../src/xviewer-window.c:3791
-msgid "_Close"
-msgstr "ياپ(_C)"
-
-#: ../src/xviewer-window.c:3792
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "كۆزنەك ياپ"
 
-#: ../src/xviewer-window.c:3794
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "قورال بالداق(_O)"
 
-#: ../src/xviewer-window.c:3795
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "پروگرامما قورال بالداق تەھرىر"
 
-#: ../src/xviewer-window.c:3798
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "سۈرەت كۆرگۈچنىڭ مايىللىقى"
 
-#: ../src/xviewer-window.c:3800
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "مەزمۇنلار(_C)"
 
-#: ../src/xviewer-window.c:3801
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "بۇ پروگراممىنىڭ ياردىمى"
 
-#: ../src/xviewer-window.c:3803
-msgid "_About"
-msgstr "ھەققىدە(_A)"
-
-#: ../src/xviewer-window.c:3804
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "بۇ پروگرامما ھەققىدە"
 
-#: ../src/xviewer-window.c:3810
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "نۆۋەتتىكى كۆزنەكتىكى قورال بالداقنىڭ كۆرۈنۈشچانلىقىنى ئۆزگەرتىدۇ"
 
-#: ../src/xviewer-window.c:3813
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "نۆۋەتتىكى كۆزنەكتىكى ھالەت بالداق كۆرۈنۈشچانلىقىنى ئۆزگەرتىدۇ"
 
-#: ../src/xviewer-window.c:3816
-msgid "Changes the visibility of the image gallery pane in the current window"
-msgstr "نۆۋەتتىكى كۆزنەكتىكى سۈرەت يىغقۇچ كۆزنەكچىنىڭ كۆرۈنۈشچانلىقى ئۆزگەرتىلىدۇ"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
+msgstr ""
+"نۆۋەتتىكى كۆزنەكتىكى سۈرەت يىغقۇچ كۆزنەكچىنىڭ كۆرۈنۈشچانلىقى ئۆزگەرتىلىدۇ"
 
-#: ../src/xviewer-window.c:3819
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "نۆۋەتتىكى كۆزنەكتىكى يان كۆزنەكچىنىڭ كۆرۈنۈشچانلىقى ئۆزگەرتىلىدۇ"
 
-#: ../src/xviewer-window.c:3824
-msgid "_Save"
-msgstr "ساقلا(_S)"
-
-#: ../src/xviewer-window.c:3825
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "نۆۋەتتە تاللانغان سۈرەتكە ئۆزگەرتىش ساقلىنىدۇ"
 
-#: ../src/xviewer-window.c:3827
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "ئاچقۇز(_W)"
 
-#: ../src/xviewer-window.c:3828
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "تاللانغان سۈرەتنى ئوخشىمايدىغان پروگراممىدا ئاچىدۇ"
 
-#: ../src/xviewer-window.c:3831
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "تاللانغان سۈرەتلەرنى ئوخشاش بولمىغان ئاتتا ساقلايدۇ"
 
-#: ../src/xviewer-window.c:3833
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "قىسقۇچنى كۆرسەت(_F)"
 
-#: ../src/xviewer-window.c:3836
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "باس(_P)…"
 
-#: ../src/xviewer-window.c:3837
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "تاللانغان سۈرەتنى باسىدۇ"
 
-#: ../src/xviewer-window.c:3839
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "خاسلىق(_R)"
 
-#: ../src/xviewer-window.c:3840
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "تاللانغان سۈرەتنىڭ مېتا سانلىق-مەلۇماتى ۋە خاسلىقىنى كۆرسىتىدۇ"
 
-#: ../src/xviewer-window.c:3842
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "يېنىۋال(_U)"
 
-#: ../src/xviewer-window.c:3843
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "سۈرەتنىڭ ئاخىرقى ئۆزگەرتىشىدىن يېنىۋالىدۇ"
 
-#: ../src/xviewer-window.c:3845
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "توغرىسىغا ئۆرۈ(_H)"
 
-#: ../src/xviewer-window.c:3846
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "سۈرەت توغرىسىغا ئۆرۈلىدۇ"
 
-#: ../src/xviewer-window.c:3848
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "بويىغا ئۆرۈ(_V)"
 
-#: ../src/xviewer-window.c:3849
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "سۈرەت بويىغا ئۆرۈلىدۇ"
 
-#: ../src/xviewer-window.c:3851
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "ئوڭغا چۆرگىلەت(_R)"
 
-#: ../src/xviewer-window.c:3852
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "سۈرەتنى ئوڭغا 90 گرادۇس ئايلاندۇرىدۇ"
 
-#: ../src/xviewer-window.c:3854
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "سولغا چۆرگىلەت(_L)"
 
-#: ../src/xviewer-window.c:3855
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "سۈرەتنى سولغا 90 گرادۇس ئايلاندۇرىدۇ"
 
-#: ../src/xviewer-window.c:3857
+#: ../src/xviewer-window.c:4121
 msgid "Set as Wa_llpaper"
 msgstr "تام قەغىزى قىلىپ بەلگىلە(_L)"
 
-#: ../src/xviewer-window.c:3858
+#: ../src/xviewer-window.c:4122
 msgid "Set the selected image as the wallpaper"
 msgstr "تاللانغان سۈرەتنى تام قەغىزى قىلىپ بەلگىلەيدۇ"
 
-#: ../src/xviewer-window.c:3861
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "تاللانغان سۈرەتنى ئەخلەتخانا قىسقۇچقا يۆتكەيدۇ"
 
-#: ../src/xviewer-window.c:3863
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "كۆچۈر(_C)"
 
-#: ../src/xviewer-window.c:3864
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "تاللىغان سۈرەتنى چاپلاش تاختىسىغا كۆچۈرىدۇ"
 
-#: ../src/xviewer-window.c:3866 ../src/xviewer-window.c:3875 ../src/xviewer-window.c:3878
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "چوڭايت(_Z)"
 
-#: ../src/xviewer-window.c:3867 ../src/xviewer-window.c:3876
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "سۈرەتنى چوڭايتىدۇ"
 
-#: ../src/xviewer-window.c:3869 ../src/xviewer-window.c:3881
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "كىچىكلەت(_O)"
 
-#: ../src/xviewer-window.c:3870 ../src/xviewer-window.c:3879 ../src/xviewer-window.c:3882
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "سۈرەتنى كىچىكلىتىدۇ"
 
-#: ../src/xviewer-window.c:3872
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "ئادەتتىكى چوڭلۇقى(_N)"
 
-#: ../src/xviewer-window.c:3873
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "سۈرەتنى ئەسلى چوڭلۇقتا كۆرسىتىدۇ"
 
-#: ../src/xviewer-window.c:3890
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "تولۇق ئېكران( _F)"
 
-#: ../src/xviewer-window.c:3891
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "نۆۋەتتىكى سۈرەتنى پۈتۈن ئېكران ھالىتىدە كۆرسىتىدۇ"
 
-#: ../src/xviewer-window.c:3893
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "تام تەسۋىرنى ۋاقىتلىق توختات"
 
-#: ../src/xviewer-window.c:3894
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "تام تەسۋىرنى ۋاقىتلىق توختات ياكى داۋاملاشتۇر"
 
-#: ../src/xviewer-window.c:3896
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "ئەڭ ياخشى(_B)"
 
-#: ../src/xviewer-window.c:3897
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "سۈرەتنى كۆزنەككە ماسلاشتۇرىدۇ"
 
-#: ../src/xviewer-window.c:3902 ../src/xviewer-window.c:3917
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "ئالدىنقى سۈرەت(_P)"
 
-#: ../src/xviewer-window.c:3903
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "يىغقۇچتىكى ئالدىنقى سۈرەتكە يۆتكىلىدۇ"
 
-#: ../src/xviewer-window.c:3905
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "كېيىنكى سۈرەت(_N)"
 
-#: ../src/xviewer-window.c:3906
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "يىغقۇچتىكى كېيىنكى سۈرەتكە يۆتكىلىدۇ"
 
-#: ../src/xviewer-window.c:3908 ../src/xviewer-window.c:3920
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "بىرىنچى سۈرەت(_F)"
 
-#: ../src/xviewer-window.c:3909
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "يىغقۇچتىكى بىرىنچى سۈرەتكە يۆتكىلىدۇ"
 
-#: ../src/xviewer-window.c:3911 ../src/xviewer-window.c:3923
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "ئاخىرقى سۈرەت(_L)"
 
-#: ../src/xviewer-window.c:3912
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "يىغقۇچتىكى ئاخىرقى سۈرەتكە يۆتكىلىدۇ"
 
-#: ../src/xviewer-window.c:3914
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "خالىغان سۈرەت(_R)"
 
-#: ../src/xviewer-window.c:3915
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "يىغقۇچتىكى خالىغان سۈرەتكە يۆتكىلىدۇ"
 
-#: ../src/xviewer-window.c:3929
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "تام تەسۋىرى(_L)"
 
-#: ../src/xviewer-window.c:3930
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "سۈرەتنى تام تەسۋىر كۆرۈنۈشتە كۆرسىتىشنى باشلايدۇ"
 
-#: ../src/xviewer-window.c:3998
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "ئالدىنقى"
 
-#: ../src/xviewer-window.c:4002
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "كېيىنكى"
 
-#: ../src/xviewer-window.c:4006
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "ئوڭ"
 
-#: ../src/xviewer-window.c:4009
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "سول"
 
-#: ../src/xviewer-window.c:4012
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "قىسقۇچنى كۆرسەت"
 
-#: ../src/xviewer-window.c:4015
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "ئىچى"
 
-#: ../src/xviewer-window.c:4018
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "سىرتى"
 
-#: ../src/xviewer-window.c:4021
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "نورمال"
 
-#: ../src/xviewer-window.c:4024
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "لايىق"
 
-#: ../src/xviewer-window.c:4027
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "سۈرەت يىغقۇچ"
 
-#: ../src/xviewer-window.c:4044
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ئەخلەتخانا"
 
-#: ../src/xviewer-window.c:4410
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "%s نى ئىشلىتىپ نۆۋەتتىكى سۈرەتنى تەھرىرلە"
 
-#: ../src/xviewer-window.c:4412
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "سۈرەت تەھرىرلەش"
 
-#: ../src/xviewer-window.c:5737
-msgid "The GNOME image viewer."
-msgstr "گىنوم سۈرەت كۆرگۈچ."
-
-#: ../src/xviewer-window.c:5740
-msgid "translator-credits"
-msgstr "Gheyret Kenji <gheyret@gmail.com>\n"
-"Sahran<sahran@live.com>\n"
-"Muhemmed Erdem <misran_erdem@hotmail.com>"
-
-#: ../src/main.c:71
-msgid "GNOME Image Viewer"
-msgstr "گىنوم سۈرەت كۆرگۈچى"
-
-#: ../src/main.c:78
+#: ../src/main.c:63
 msgid "Open in fullscreen mode"
 msgstr "پۈتۈن ئېكران ھالەتتە ئاچ"
 
-#: ../src/main.c:79
+#: ../src/main.c:64
 msgid "Disable image gallery"
 msgstr "سۈرەت يىغقۇچنى ئىناۋەتسىز قىل"
 
-#: ../src/main.c:80
+#: ../src/main.c:65
 msgid "Open in slideshow mode"
 msgstr "تام تەسۋىر ھالەتتە ئاچ"
 
-#: ../src/main.c:81
+#: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "نۆۋەتتىكى ئۈلگىنى قايتا ئىشلەتمەي بەلكى يېڭى ئۈلگىنى قوزغات"
 
-#: ../src/main.c:82
+#: ../src/main.c:67
 msgid ""
 "Open in a single window, if multiple windows are open the first one is used"
-msgstr "بىر يەككە كۆزنەكتە ئاچىدۇ، ئەگەر بىر قانچە كۆزنەك ئېچىلغان بولسا تۇنجىسىنى ئىشلىتىدۇ"
+msgstr ""
+"بىر يەككە كۆزنەكتە ئاچىدۇ، ئەگەر بىر قانچە كۆزنەك ئېچىلغان بولسا تۇنجىسىنى "
+"ئىشلىتىدۇ"
 
-#: ../src/main.c:84
+#: ../src/main.c:69
 msgid "Show the application's version"
 msgstr "پروگراممىنىڭ نەشرىنى كۆرسەت"
 
-#: ../src/main.c:116
+#: ../src/main.c:99
 msgid "[FILE…]"
 msgstr "[ھۆججەت…]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:129
+#: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "'%s --help' ئىجرا قىلىنسا بۇيرۇق قۇرى تاللانمىسىنىڭ تولۇق تىزىمى كۆرۈنىدۇ."
-
-#~ msgid "Xviewer Preferences"
-#~ msgstr "Xviewer نىڭ مايىللىقى"
-
-#~ msgid "_Switch image after:"
-#~ msgstr "سۈرەت ئالماشتۇرۇش ۋاقتى(_S):"
-
-#~ msgid "Xviewer"
-#~ msgstr "GNOME كۆزى"
-
-#~ msgid "Set as _Desktop Background"
-#~ msgstr "ئۈستەلئۈستى تەگلىككە تەڭشە(_D)"
-
-#~ msgid "_Retry"
-#~ msgstr "قايتا سىنا(_R)"
-
-#~ msgid "Running in fullscreen mode"
-#~ msgstr "پۈتۈن ئېكران ھالەتتە ئىجرا قىلىنىدۇ"
-
-#~ msgid "_Slideshow"
-#~ msgstr "تام تەسۋىر كۆرسەت(_S)"
-
-#~ msgid "All Images"
-#~ msgstr "ھەممە سۈرەتلەر"
-
-#~ msgid "Plugin"
-#~ msgstr "قىستۇرما"
-
-#~ msgid "Enabled"
-#~ msgstr "قوزغىتىلغان"
-
-#~ msgid "C_onfigure"
-#~ msgstr "سەپلىمە(_O)"
-
-#~ msgid "A_ctivate"
-#~ msgstr "ئاكتىپلا(_C)"
-
-#~ msgid "Ac_tivate All"
-#~ msgstr "ھەممىنى ئاكتىپلا(_T)"
-
-#~ msgid "_Deactivate All"
-#~ msgstr "ھەممىنى ئاكتىپلىما(_D)"
-
-#~ msgid "Active _Plugins:"
-#~ msgstr "قىستۇرمىنى ئاكتىپلا(_P):"
-
-#~ msgid "_About Plugin"
-#~ msgstr "قىستۇرما ھەققىدە(_A)"
-
-#~ msgid "C_onfigure Plugin"
-#~ msgstr "قىستۇرما سەپلىمە(_O)"
-
-#~ msgid ""
-#~ "This program is free software; you can redistribute it and/or modify it "
-#~ "under the terms of the GNU General Public License as published by the "
-#~ "Free Software Foundation; either version 2 of the License, or (at your "
-#~ "option) any later version.\n"
-#~ msgstr ""
-#~ "بۇ پروگرامما ئەركىن يۇمشاق دېتال؛ سىز ئەركىن يۇمشاق دېتال ۋەخپىسى "
-#~ "تارقاتقان GNU ئادەتتىكى ئاممىۋى ئىجازەتنامە بويىچە ئۇنى قايتا تارقىتىپ "
-#~ "ياكى ئۆزگەرتەلەيسىز؛ سىز شۇ ئىجازەت كېلىشىمىنىڭ ئىككىنچى نەشرى ياكى "
-#~ "يۇقىرى نەشرىنى ئىشلەتسىڭىز بولىدۇ.\n"
-
-#~ msgid ""
-#~ "This program is distributed in the hope that it will be useful, but "
-#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
-#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-#~ "Public License for more details.\n"
-#~ msgstr ""
-#~ "بۇ پروگراممىنى تارقىتىشتىكى مەقسەت سىزگە قۇلايلىق ئېلىپ كېلىش، ئەمما سودا "
-#~ "ياكى باشقا ئالاھىدە قوللىنىشقا نىسبەتەن ھېچقانداق كاپالەت يوق.  GNU "
-#~ "ئادەتتىكى ئاممىۋى ئىجازەت كېلىشىمىنى كۆرۈپ تېخىمۇ كۆپ تەپسىلاتقا "
-#~ "ئېرىشىڭ.\n"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program; if not, write to the Free Software Foundation, Inc., "
-#~ "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-#~ msgstr ""
-#~ "سىز  بۇ پروگراممىنى تاپشۇرۇۋېلىش بىلەن بىللە GNU ئادەتتىكى ئاممىۋى "
-#~ "ئىجازەت كېلىشىمىنىڭ كۆچۈرۈلمىسىدىن بىر نۇسخا تاپشۇرۇۋالىسىز؛ ئەگەر "
-#~ "تاپشۇرۇۋالمىغان بولسىڭىز ئەركىن يۇمشاق دېتال فوندىغا خەت يېزىڭ. مەنزىل:  "
-#~ "Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA "
-#~ "02111-1307, USA"
-
-#~ msgid "Collection"
-#~ msgstr "توپلام"
-
-#~ msgid "View different types of images"
-#~ msgstr "ئوخشىمىغان تىپتىكى رەسىملەرنى كۆرۈش"
-
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "."
-#~ msgstr "."
-
-#~ msgid "<b>Image Interpolation</b>"
-#~ msgstr "رەسىم تولۇقلاش"
-
-#~ msgid "Allow _zoom greater than 100% initially"
-#~ msgstr "(_Z)  دەسلەپكى يىراق-يېقىنلىقى 100% دىن چوڭ بولسا بولىدۇ"
-
-#~ msgid "Saving Image"
-#~ msgstr "رەسىمنى ساقلاش"
-
-#~ msgid "Sli_de Show"
-#~ msgstr "ئارقىمۇ-ئارقا كۆرسىتىش"
-
-#~ msgid "_Browse"
-#~ msgstr "(_B) كۆرۈش"
-
-#~ msgid "_Interpolate image on zoom"
-#~ msgstr "يىراق-يېقىن قىلىنغان رەسىمنى تولۇقلاش"
-
-#~ msgid "Last collection window geometry"
-#~ msgstr "ئەڭ ئاخىرقى توپ رامكىنىڭ گېئومېتىرىيىسى"
-
-#~ msgid "Last singleton window geometry"
-#~ msgstr "ئەڭ ئاخىرقى ئايرىم رامكىنىڭ گېئومېتىرىيىسى"
-
-#~ msgid "Show/hide image information for single image."
-#~ msgstr "ئايرىم رەسىمنىڭ ئۇچۇرلىرىنى كۆرسىتىش/ يوشۇرۇش."
-
-#~ msgid "%s x %s pixels"
-#~ msgid_plural "%s x %s pixels"
-#~ msgstr[0] "چېكىت %s x %s"
-
-#~ msgid "File exists"
-#~ msgstr "ھۆججەت مەۋجۇت"
-
-#~ msgid "Filename"
-#~ msgstr "ھۆججەت نامى"
-
-#~ msgid "Attribute"
-#~ msgstr "خاسلىقلىرى"
-
-#~ msgid "File"
-#~ msgstr "ھۆججەت"
-
-#~ msgid "EXIF"
-#~ msgstr "EXIF"
-
-#~ msgid "Option not available."
-#~ msgstr "بۇ تاللانمىنى ئىشلەتكىلى بولمايدۇ"
-
-#~ msgid "Cancel saving ..."
-#~ msgstr "...ساقلاش ئىناۋەتسىز"
-
-#~ msgid "Comment"
-#~ msgstr "ئىزاھات"
-
-#~ msgid "Date"
-#~ msgstr "چېسلا"
-
-#~ msgid "Time"
-#~ msgstr "ۋاقىت"
-
-#~ msgid "Day"
-#~ msgstr "كۈن"
-
-#~ msgid "Year"
-#~ msgstr "يىل"
-
-#~ msgid "Hour"
-#~ msgstr "سائەت"
-
-#~ msgid "Minute"
-#~ msgstr "مىنۇت"
-
-#~ msgid "Second"
-#~ msgstr "سېكۇنت"
-
-#~ msgid ""
-#~ "Could not display help for Xviewer.\n"
-#~ "%s"
-#~ msgstr "نىڭ ياردەمچى ھۆججىتىنى كۆرسەتكىلى بولمىدى Xviewer%s"
-
-#~ msgid "Overwrite file %s?"
-#~ msgstr "نى ئۈستىلەپ يازامسىز؟ %s ھۆججەت "
-
-#~ msgid "File exists. Do you want to overwrite it?"
-#~ msgstr "ھۆججەت مەۋجۇت. ئۈستىلەپ يازامسىز؟"
-
-#~ msgid "Skip"
-#~ msgstr "ئۆتكۈزۈۋېتىش"
-
-#~ msgid "Overwrite"
-#~ msgstr "ئۈستىلەپ يېزىش"
-
-#~ msgid "Error on saving %s."
-#~ msgstr "نى ساقلاشتا خاتالىق كۆرۈلدى %s"
-
-#~ msgid "Couldn't determine destination uri."
-#~ msgstr "نىڭ فورماتىنى بىلگىلى بولمىدى %s"
-
-#~ msgid "Please use an appropriate filename suffix or select a file format."
-#~ msgstr "مۇۋاپىق كېڭەيتمە نام ئىشلىتىڭ ياكى ھۆججەتنىڭ فورماتىنى تاللاڭ"
-
-#~ msgid "Error on saving images."
-#~ msgstr ". ھۆججەتنى ساقلاشتا خاتالىق كۆرۈلدى"
-
-#~ msgid "Reason: %s"
-#~ msgstr "سەۋەبى: %s"
-
-#~ msgid "_File"
-#~ msgstr "(_F)ھۆججەت"
-
-#~ msgid "_New Window"
-#~ msgstr "ئايرىم رامكىلار"
-
-#~ msgid "Open a new window"
-#~ msgstr "يېڭى رامكا ئېچىش"
-
-#~ msgid "_Open..."
-#~ msgstr "(_O)...ئېچىش"
-
-#~ msgid "Open _Folder..."
-#~ msgstr "(_F)...قىسقۇچ ئېچىش"
-
-#~ msgid "Rotat_e 180°"
-#~ msgstr "180° چۆرۈش(_E)"
-
-#~ msgid "Delete"
-#~ msgstr "ئۆچۈرۈش"
-
-#~ msgid "Image _Information"
-#~ msgstr "(_I) رەسىم ئۇچۇرلىرى"
-
-#~ msgid "New"
-#~ msgstr "(_N)يېڭى"
-
-#~ msgid "Close"
-#~ msgstr "(_C)يېپىش"
-
-#~ msgid "Save"
-#~ msgstr "(_S)ساقلاش"
-
-#~ msgid "Undo"
-#~ msgstr "(_U)يېنىۋېلىش"
-
-#~ msgid "Open multiple single windows?"
-#~ msgstr "ئايرىم-ئايرىم رامكىدا ئاچامسىز؟ "
-
-#~ msgid "Single Windows"
-#~ msgstr "ئايرىم رامكىلار"
-
-#~ msgid "File not found."
-#~ msgid_plural "Files not found."
-#~ msgstr[0] "ھۆججەت تېپىلمىدى"
-#~ msgstr[1] "ھۆججەتلەر تېپىلمىدى"
+msgstr ""
+"'%s --help' ئىجرا قىلىنسا بۇيرۇق قۇرى تاللانمىسىنىڭ تولۇق تىزىمى كۆرۈنىدۇ."

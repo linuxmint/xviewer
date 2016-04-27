@@ -10,183 +10,475 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 19:50+0200\n"
-"PO-Revision-Date: 2004-03-09 10:37+0100\n"
-"Last-Translator: Sanlig Badral <Badral@openmn.org>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Mongolian <openmn-core@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
-#: xviewer.desktop.in.h:1
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
+#, c-format
+msgid "Show “_%s”"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
+msgid "_Move on Toolbar"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
+msgid "Move the selected item on the toolbar"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
+msgid "_Remove from Toolbar"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
+msgid "Remove the selected item from the toolbar"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
+msgid "_Delete Toolbar"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
+msgid "Remove the selected toolbar"
+msgstr ""
+
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
+msgid "Separator"
+msgstr ""
+
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Харах"
+
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_Багаж самбар"
+
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "_Төлөв самбар"
+
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr ""
+
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr ""
+
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "_Тохируулгууд"
+
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_Тусламж"
+
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_Тухай"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "_Гарах"
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Зураг харагч"
 
-#: xviewer.desktop.in.h:2
-msgid "View many different types of images"
-msgstr "Зургийн олон төрлийг үзэх"
-
-#: xviewer.glade.h:1
-msgid "    "
-msgstr "    "
-
-#: xviewer.glade.h:2
-msgid "*"
-msgstr "*"
-
-#: xviewer.glade.h:3
-msgid "."
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
 msgstr ""
 
-#: xviewer.glade.h:4
-msgid "<b>File Name Preview</b>"
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
 msgstr ""
 
-#: xviewer.glade.h:5
-msgid "<b>File Path Specifications</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
+msgid "Image Properties"
 msgstr ""
 
-#: xviewer.glade.h:6
-msgid "<b>Image Interpolation</b>"
-msgstr "<b>Зураг засвар</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr ""
 
-#: xviewer.glade.h:7
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Зургийн маштаб</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr ""
 
-#: xviewer.glade.h:8
-#, fuzzy
-msgid "<b>Options</b>"
-msgstr "<b>Зураг засвар</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "Х_аах"
 
-#: xviewer.glade.h:9
-msgid "<b>Sequence</b>"
-msgstr "<b>Дараалал</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr ""
 
-#: xviewer.glade.h:10
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Тунгалаг хэсэг</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr ""
 
-#: xviewer.glade.h:12
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
-msgid "Allow _zoom greater than 100% initially"
-msgstr "_маштабыг 100% аас илүү болгохыг зөшөөрөх"
+msgid "<b>%f:</b> original filename"
+msgstr ""
 
-#: xviewer.glade.h:13
-msgid "As _background"
-msgstr "_Дэвсгэрээр"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
-#: xviewer.glade.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
+msgid "To:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:7
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "_Дөрвөлжин хээгээр"
 
-#: xviewer.glade.h:15
-msgid "As custom c_olor"
-msgstr "Хэрэглэгчийн тогтоосон ө_нгөөр"
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr ""
 
-#: xviewer.glade.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "Тунгалаг мужийн өнгө"
 
-#: xviewer.glade.h:17
-#, fuzzy
-msgid "Destination Folder:"
-msgstr "Хавтас нээх"
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "_Дэвсгэрээр"
 
-#: xviewer.glade.h:18
-msgid "Xviewer Preferences"
-msgstr "Gnome тохиргооны нүд"
-
-#: xviewer.glade.h:19
-#, fuzzy
-msgid "Filename Format:"
-msgstr "Файлын нэр"
-
-#: xviewer.glade.h:20
-msgid "Image _View"
-msgstr "Зураг _харах"
-
-#: xviewer.glade.h:21
-msgid "Rename From:"
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
 msgstr ""
 
-#: xviewer.glade.h:22
-msgid "Replace spaces by underscore"
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
 msgstr ""
 
-#: xviewer.glade.h:23
-#, fuzzy
-msgid "Save As"
-msgstr "Дараахи нэрэн дор _хадгалах..."
-
-#: xviewer.glade.h:24
-#, fuzzy
-msgid "Saving Image"
-msgstr "Зургийг хадгалаж байна"
-
-#: xviewer.glade.h:25
-msgid "Show _next image automatically after:"
-msgstr "Д_араагийн зургийг автоматаар харуулах:"
-
-#: xviewer.glade.h:26
-msgid "Sli_de Show"
-msgstr "Ү_зүүлэн харуулах"
-
-#: xviewer.glade.h:27
-msgid "Start counter at:"
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
 msgstr ""
 
-#: xviewer.glade.h:28
-#, fuzzy
-msgid "To:"
-msgstr "Дээд хүрээний өргөн:"
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr ""
 
-#: xviewer.glade.h:29
-#, fuzzy
-msgid "_Browse"
-msgstr "Х_аах"
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr ""
 
-#: xviewer.glade.h:30
-msgid "_Interpolate image on zoom"
-msgstr "Зургийн _интерполяц хийх"
-
-#: xviewer.glade.h:31
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "Да_вталтын дараалал"
 
-#: xviewer.glade.h:32
-msgid "seconds"
-msgstr "секунтүүд"
-
-#: xviewer.schemas.in.h:1
-#, fuzzy
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
 msgstr ""
-"Утга 0 ээс илүү бол дараагийн зураг автоматаар харагдах хүртэлх секунтыг  "
-"танина. Тэг бол автомат харуулалт идэвхгүйжнэ."
 
-#: xviewer.schemas.in.h:3
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "_Маштабыг 100% аас илүү болгохыг зөшөөрөх"
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr ""
 
-#: xviewer.schemas.in.h:4
-msgid "Delay in seconds until showing the next image"
-msgstr "Дараагийн зургийг харуулах хүртэл хүлээх хугацаа"
+#: ../data/org.x.viewer.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr ""
 
-#: xviewer.schemas.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Зургийн интерполяц хийх"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Тунгалагийн заалт"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"Тунгалаг чанар хэрхэн харагдахыг тохируулж өгнө. Хүчинтэй хэмжээсүүд нь "
-"CHECK_PATTERN COLOR болон БАЙХГҮЙ. Хэрэв COLOR сонгогдсон бол trans_color "
-"Түлхүүр нь ямар өнгө хэрэглэгдэхийг тодорхойлно."
 
-#: xviewer.schemas.in.h:6
+#: ../data/org.x.viewer.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "Тунгалагийн өнгө"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -194,1023 +486,1112 @@ msgstr ""
 "Хэрэв тунгалагийг заасан түлхүүр нь COLOR утгатай байвал тунгалагийг "
 "тодорхойлоход аль өнгийг ашиглахыг зааж өгнө."
 
-#: xviewer.schemas.in.h:7
-#, fuzzy
+#: ../data/org.x.viewer.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Зургийн дарааллаар циклдэх"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "_Маштабыг 100% аас илүү болгохыг зөшөөрөх"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"Хэрэв энэ FALSE бол жижиг зургууд анхдагч дэлгэцэнд олон тавигдаж дүүргэхгүй."
 
-#: xviewer.schemas.in.h:8
-msgid "Interpolate Image"
-msgstr "Зургийн интерполяц хийх"
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Дараагийн зургийг харуулах хүртэл хүлээх хугацаа"
 
-#: xviewer.schemas.in.h:9
-msgid "Loop through the image sequence"
-msgstr "Зургийн дарааллаар циклдэх"
-
-#: xviewer.schemas.in.h:10
-msgid "Open images in a new window"
-msgstr "Зургуудыг шинэ цонхнуудад нээх"
-
-#: xviewer.schemas.in.h:11
-msgid "Show/hide the window statusbar."
-msgstr "Цонхны төлөв самбар харуулах/далдлах."
-
-#: xviewer.schemas.in.h:12
-msgid "Show/hide the window toolbar."
-msgstr "Цонхны багаж самбар харуулах/далдлах."
-
-#: xviewer.schemas.in.h:13
-msgid "Transparency color"
-msgstr "Тунгалагийн өнгө"
-
-#: xviewer.schemas.in.h:14
-msgid "Transparency indicator"
-msgstr "Тунгалагийн заалт"
-
-#: xviewer.schemas.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:26
 msgid ""
-"Whether opening an image should create a new window instead of replacing the "
-"image in the current window."
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
-"Зураг нээхдээ энэ цонхонд сольж харуулахын оронд  шинэ цонхонд нээж харуулах "
-"эсэх."
 
-#: xviewer.schemas.in.h:16
-msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Зургуудын төгсгөлгүй циклээр цувуулан харагдах эсвэл үгүй эсэх."
-
-#: xviewer.schemas.in.h:17
-msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
 msgstr ""
-"Зургийг томруулахад интерполяц хийх эсэх. Энэ нь зургийн чанарыг сайжруулах "
-"үйлчилгээтэй ч интерполяц хийгээгүй зургуудаа бодвол удаан байх талтай."
 
-#: libxviewer/xviewer-file-selection.c:124
-msgid "All Files"
-msgstr "Бүх файлууд"
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr ""
 
-#: libxviewer/xviewer-file-selection.c:129
-msgid "All Images"
-msgstr "Бүх зураг"
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr ""
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Хадгалах"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:437
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:652
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:669
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/xviewer-close-confirmation-dialog.c:688
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+msgid "_Reload"
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:171
+#, c-format
+msgid "Could not load image '%s'."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:256
+#, c-format
+msgid "No images found in '%s'."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:263
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Утга"
+
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr ""
+
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/xviewer-exif-util.c:251
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/xviewer-exif-util.c:262
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: libxviewer/xviewer-file-selection.c:147
+#: ../src/xviewer-file-chooser.c:160
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr ""
+
 #. Pixel size of image: width x height in pixel
-#: libxviewer/xviewer-file-selection.c:240
-#, c-format
-msgid "%s x %s pixel"
-msgstr "%s x %s пиксел"
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] ""
+msgstr[1] ""
 
-#: libxviewer/xviewer-file-selection.c:396
-msgid "Load Image"
-msgstr "Зургийг нээх"
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
 
-#: libxviewer/xviewer-file-selection.c:404
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:467
 msgid "Save Image"
 msgstr "Зургийг хадгалах"
 
-#: libxviewer/xviewer-file-selection.c:412
+#: ../src/xviewer-file-chooser.c:475
 msgid "Open Folder"
 msgstr "Хавтас нээх"
 
-#: libxviewer/xviewer-image-jpeg.c:330 libxviewer/xviewer-image-jpeg.c:569
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr ""
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr ""
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr ""
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr ""
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Зураг ачаалагдсангүй."
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr ""
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr ""
+
+#: ../src/xviewer-image-jpeg.c:374
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Түр хадгалах файл үүсгэх боломжгүй: %s"
 
-#: libxviewer/xviewer-image-jpeg.c:349 libxviewer/xviewer-image-jpeg.c:590
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "JPEG файл ачаалахын тулд санах ой нөөцлөгдөх боломжгүй байна "
+msgstr "JPEG файл ачаалахын тулд санах ой нөөцлөгдөх боломжгүй байна"
 
-#: libxviewer/xviewer-image.c:814
-msgid "empty file"
-msgstr "Хоосон файл"
-
-#: libxviewer/xviewer-image.c:1247 libxviewer/xviewer-image.c:1458
-msgid "File exists"
-msgstr "Файл хэдийнэ байна"
-
-#: libxviewer/xviewer-image.c:1400 libxviewer/xviewer-image.c:1526
-msgid "No image loaded."
-msgstr "Зураг ачаалагдсангүй."
-
-#: libxviewer/xviewer-image.c:1409 libxviewer/xviewer-image.c:1535
-msgid "Temporary file creation failed."
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
 msgstr ""
 
-#: libxviewer/xviewer-info-view-exif.c:26
-#, fuzzy
-msgid "Camera"
-msgstr "Нэр"
-
-#: libxviewer/xviewer-info-view-exif.c:27
-#, fuzzy
-msgid "Image Data"
-msgstr "Зургийн өргөний хэмжээ"
-
-#: libxviewer/xviewer-info-view-exif.c:28
-#, fuzzy
-msgid "Image Taking Conditions"
-msgstr "Зургийн цомог"
-
-#: libxviewer/xviewer-info-view-exif.c:29
-msgid "Maker Note"
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
 msgstr ""
 
-#: libxviewer/xviewer-info-view-exif.c:30
-#, fuzzy
-msgid "Other"
-msgstr "Торлог"
-
-#: libxviewer/xviewer-info-view-exif.c:212
-msgid "Tag"
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: libxviewer/xviewer-info-view-exif.c:220 libxviewer/xviewer-info-view-file.c:96
-msgid "Value"
-msgstr "Утга"
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] ""
+msgstr[1] ""
 
-#. only used for internal purpose
-#: libxviewer/xviewer-info-view-file.c:25 libxviewer/xviewer-uri-converter.h:45
-msgid "Filename"
-msgstr "Файлын нэр"
-
-#: libxviewer/xviewer-info-view-file.c:26
-msgid "Width"
-msgstr "Өргөн"
-
-#: libxviewer/xviewer-info-view-file.c:27
-msgid "Height"
-msgstr "Өндөр"
-
-#: libxviewer/xviewer-info-view-file.c:28
-msgid "Filesize"
-msgstr "Файлын хэмжээ"
-
-#: libxviewer/xviewer-info-view-file.c:88
-msgid "Attribute"
-msgstr "Аттрибут"
-
-#: libxviewer/xviewer-info-view.c:92
-#, fuzzy
-msgid "File"
-msgstr "_Файл"
-
-#: libxviewer/xviewer-info-view.c:101
-msgid "EXIF"
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
 msgstr ""
 
-#: libxviewer/xviewer-info-view.c:108
-msgid "IPTC"
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "Зураг"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
 msgstr ""
 
-#: libxviewer/xviewer-save-as-dialog-helper.c:137
-msgid "Option not available."
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
 msgstr ""
 
-#: libxviewer/xviewer-save-as-dialog-helper.c:138
-msgid ""
-"To use this function you need the libexif library. Please install libexif "
-"(http://libexif.sf.net) and recompile Xviewer."
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
 msgstr ""
 
-#: libxviewer/xviewer-save-as-dialog-helper.c:214
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Хэвлэх жинхэнэ хэлбэр"
+
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr ""
 
-#: libxviewer/xviewer-save-dialog-helper.c:162
-#, fuzzy, c-format
-msgid "Saving image %s."
-msgstr "Зургийг хадгалаж байна"
-
-#: libxviewer/xviewer-save-dialog-helper.c:208
-#, fuzzy
-msgid "Cancel saving ..."
-msgstr "Хадгалахаа болих"
-
-#: libxviewer/xviewer-uri-converter.c:1023
-msgid "Filenames are not disjunct."
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/xviewer-statusbar.c:126
+#, c-format
+msgid "%d / %d"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:46
-#, fuzzy
-msgid "Counter"
-msgstr "Голлуулах"
-
-#: libxviewer/xviewer-uri-converter.h:47
-#, fuzzy
-msgid "Comment"
-msgstr "А_гуулга"
-
-#: libxviewer/xviewer-uri-converter.h:48
-msgid "Date"
+#: ../src/xviewer-thumb-view.c:544
+msgid "Taken on"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:49
-msgid "Time"
+#: ../src/xviewer-uri-converter.c:982
+#, c-format
+msgid "At least two file names are equal."
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:50
-msgid "Day"
+#: ../src/xviewer-util.c:68
+msgid "Could not display help for Image Viewer"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:51
-msgid "Month"
+#: ../src/xviewer-util.c:116
+msgid " (invalid Unicode)"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:52
-msgid "Year"
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/xviewer-window.c:541
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
+msgctxt "MessageArea"
+msgid "Hi_de"
 msgstr ""
 
-#: libxviewer/xviewer-uri-converter.h:53
-msgid "Hour"
-msgstr ""
-
-#: libxviewer/xviewer-uri-converter.h:54
-msgid "Minute"
-msgstr ""
-
-#: libxviewer/xviewer-uri-converter.h:55
-#, fuzzy
-msgid "Second"
-msgstr "секунтүүд"
-
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: shell/xviewer-window.c:314
-msgid "translator-credits"
-msgstr ""
-
-#: shell/xviewer-window.c:319 shell/xviewer-window.c:2167 shell/xviewer-window.c:2482
-#: shell/main.c:498
-msgid "Xviewer"
-msgstr "Гноме-н нүд"
-
-#: shell/xviewer-window.c:322
-msgid "The GNOME image viewing and cataloging program."
-msgstr "GNOME-ийн зураг үзэх болон каталогжуулах программ"
-
-#: shell/xviewer-window.c:359
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
-"Could not display help for Xviewer.\n"
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/xviewer-window.c:1023
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/xviewer-window.c:1179
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr ""
+
+#: ../src/xviewer-window.c:1574
+#, c-format
+msgid "Opening image \"%s\""
+msgstr ""
+
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:2259
+#, c-format
+msgid ""
+"Error printing file:\n"
 "%s"
 msgstr ""
-"Гноме-н нүдийн \"Тусламж\"-ийг харуулж чадсангүй .\n"
-"%s"
 
-#: shell/xviewer-window.c:626
+#: ../src/xviewer-window.c:2558
+msgid "Toolbar Editor"
+msgstr ""
+
+#: ../src/xviewer-window.c:2561
+msgid "_Reset to Default"
+msgstr ""
+
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
+msgid "Error launching System Settings: "
+msgstr ""
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2791
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:2807
 #, c-format
-msgid "Overwrite file %s?"
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
 
-#: shell/xviewer-window.c:627
-#, fuzzy
-msgid "File exists. Do you want to overwrite it?"
-msgstr "Та %s -г дарж бичихийг хүсэж байна уу?"
-
-#: shell/xviewer-window.c:636 shell/xviewer-window.c:649
-msgid "Skip"
+#: ../src/xviewer-window.c:3274
+msgid "Saving image locally…"
 msgstr ""
 
-#: shell/xviewer-window.c:637
-msgid "Overwrite"
-msgstr ""
-
-#: shell/xviewer-window.c:642
+#: ../src/xviewer-window.c:3352
 #, c-format
-msgid "Error on saving %s."
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
 msgstr ""
 
-#: shell/xviewer-window.c:650 shell/xviewer-window.c:1034
-msgid "Retry"
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
 msgstr ""
 
-#: shell/xviewer-window.c:1023
-#, fuzzy, c-format
-msgid "Couldn't determine file format of %s"
-msgstr "Түр хадгалах файл үүсгэх боломжгүй: %s"
-
-#: shell/xviewer-window.c:1024
-msgid "Please use an appropriate filename suffix or select a file format."
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
 msgstr ""
 
-#: shell/xviewer-window.c:1166
-#, fuzzy
-msgid "Error on saving images."
-msgstr "Зургийг хадгалаж байна"
-
-#: shell/xviewer-window.c:1399
-#, fuzzy, c-format
-msgid "Do you really want to move %i image to trash?"
-msgid_plural "Do you really want to move %i images to trash?"
-msgstr[0] "Та %s -г дарж бичихийг хүсэж байна уу?"
-msgstr[1] "Та %s -г дарж бичихийг хүсэж байна уу?"
-
-#: shell/xviewer-window.c:1437
-msgid "Couldn't access trash."
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
 msgstr ""
 
-#: shell/xviewer-window.c:1511
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr ""
 
-#. [image width] x [image height] pixel  [bytes]    [zoom in percent]
-#: shell/xviewer-window.c:2096
+#: ../src/xviewer-window.c:3603
 #, c-format
-msgid "%i x %i pixel  %s    %i%%"
-msgstr "%i x %i пиксэл  %s    %i%%"
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
 
-#: shell/xviewer-window.c:2233
-msgid "_File"
-msgstr "_Файл"
+#: ../src/xviewer-window.c:3606
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
 
-#: shell/xviewer-window.c:2234
+#: ../src/xviewer-window.c:3611
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3616
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
+msgid "Move to _Trash"
+msgstr ""
+
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
+#, c-format
+msgid "Couldn't access trash."
+msgstr ""
+
+#: ../src/xviewer-window.c:4045
+msgid "_Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "_Боловсруулах"
 
-#: shell/xviewer-window.c:2235
-msgid "_View"
-msgstr "_Харах"
+#: ../src/xviewer-window.c:4048
+msgid "_Go"
+msgstr ""
 
-#: shell/xviewer-window.c:2236
-msgid "_Help"
-msgstr "_Тусламж"
+#: ../src/xviewer-window.c:4049
+msgid "_Tools"
+msgstr ""
 
-#: shell/xviewer-window.c:2237
-msgid "_New"
-msgstr "_Шинэ"
+#: ../src/xviewer-window.c:4052
+msgid "_Open…"
+msgstr ""
 
-#: shell/xviewer-window.c:2237
-msgid "Open a new window"
-msgstr "Шинэ цонх нээх"
-
-#: shell/xviewer-window.c:2238
-msgid "_Open..."
-msgstr "_Нээх..."
-
-#: shell/xviewer-window.c:2238
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Файл нээх"
 
-#: shell/xviewer-window.c:2239
-#, fuzzy
-msgid "Open _Directory..."
-msgstr "Лавлах _нээх..."
-
-#: shell/xviewer-window.c:2239
-msgid "Open a directory"
-msgstr "Лавлах нээх"
-
-#: shell/xviewer-window.c:2240
-msgid "_Close"
-msgstr "Х_аах"
-
-#: shell/xviewer-window.c:2240
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Цонх хаах"
 
-#: shell/xviewer-window.c:2241
-msgid "Prefere_nces"
-msgstr "_Тохируулгууд"
+#: ../src/xviewer-window.c:4058
+msgid "T_oolbar"
+msgstr ""
 
-#: shell/xviewer-window.c:2241
-msgid "Preferences for Xviewer"
-msgstr "Гноме нүдний тохируулгууд"
+#: ../src/xviewer-window.c:4059
+msgid "Edit the application toolbar"
+msgstr ""
 
-#: shell/xviewer-window.c:2242
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr ""
+
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "А_гуулга"
 
-#: shell/xviewer-window.c:2242
-msgid "Help On this application"
-msgstr "Энэ х. программын талаархи тусламж"
+#: ../src/xviewer-window.c:4065
+msgid "Help on this application"
+msgstr ""
 
-#: shell/xviewer-window.c:2243
-msgid "_About"
-msgstr "_Тухай"
-
-#: shell/xviewer-window.c:2243
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Энэ х. программын талаар"
 
-#: shell/xviewer-window.c:2248
-msgid "_Toolbar"
-msgstr "_Багаж самбар"
+#: ../src/xviewer-window.c:4074
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr ""
 
-#: shell/xviewer-window.c:2249
-msgid "_Statusbar"
-msgstr "_Төлөв самбар"
+#: ../src/xviewer-window.c:4077
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr ""
 
-#: shell/xviewer-window.c:2254
-msgid "_Save"
-msgstr "_Хадгалах"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
+msgstr ""
 
-#: shell/xviewer-window.c:2255
-#, fuzzy
-msgid "Save _As"
-msgstr "Дараахи нэрэн дор _хадгалах..."
+#: ../src/xviewer-window.c:4083
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
 
-#: shell/xviewer-window.c:2257
+#: ../src/xviewer-window.c:4089
+msgid "Save changes in currently selected images"
+msgstr ""
+
+#: ../src/xviewer-window.c:4091
+msgid "Open _with"
+msgstr ""
+
+#: ../src/xviewer-window.c:4092
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/xviewer-window.c:4095
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4100
+msgid "_Print…"
+msgstr ""
+
+#: ../src/xviewer-window.c:4101
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4103
+msgid "Prope_rties"
+msgstr ""
+
+#: ../src/xviewer-window.c:4104
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Буцаад"
 
-#: shell/xviewer-window.c:2259
+#: ../src/xviewer-window.c:4107
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "_Хэвтээгээр тольдох"
 
-#: shell/xviewer-window.c:2260
+#: ../src/xviewer-window.c:4110
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "_Босоогоор тольдох"
 
-#: shell/xviewer-window.c:2262
-#, fuzzy
-msgid "_Rotate Clockwise"
-msgstr "Цагийн зүүний _дагуу эргүүлэх"
-
-#: shell/xviewer-window.c:2263
-#, fuzzy
-msgid "Rotate Counter C_lockwise"
-msgstr "Цагийн зүүний _эсрэг эргүүлэх"
-
-#: shell/xviewer-window.c:2264
-#, fuzzy
-msgid "Rotat_e 180°"
-msgstr "180° _эргүүлэх"
-
-#: shell/xviewer-window.c:2266
-msgid "Delete"
+#: ../src/xviewer-window.c:4113
+msgid "Mirror the image vertically"
 msgstr ""
 
-#: shell/xviewer-window.c:2268
-msgid "_Full Screen"
-msgstr "_Дэлгэц дүүрэн"
+#: ../src/xviewer-window.c:4115
+msgid "_Rotate Clockwise"
+msgstr ""
 
-#: shell/xviewer-window.c:2269
+#: ../src/xviewer-window.c:4116
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
+
+#: ../src/xviewer-window.c:4118
+msgid "Rotate Counterc_lockwise"
+msgstr ""
+
+#: ../src/xviewer-window.c:4119
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
+
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
+
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
+
+#: ../src/xviewer-window.c:4125
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
+msgid "_Copy"
+msgstr ""
+
+#: ../src/xviewer-window.c:4131
+msgid "Copy the selected image to the clipboard"
+msgstr ""
+
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Томсгох"
 
-#: shell/xviewer-window.c:2270
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Агшаах"
 
-#: shell/xviewer-window.c:2271
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "_Энгийн хэмжээ"
 
-#: shell/xviewer-window.c:2272
-msgid "Best _Fit"
-msgstr "Үзэмжийг тохируулах"
-
-#: shell/main.c:236
-#, fuzzy, c-format
-msgid ""
-"You are about to open %i windows simultaneously. Do you want to open them in "
-"a collection instead?"
+#: ../src/xviewer-window.c:4140
+msgid "Show the image at its normal size"
 msgstr ""
-"Та эдгээр %i цонхуудыг нэгэн зэрэг нээх гэж байна. Та үүний оронд эдгээрийг "
-"нэг цомогт нээх үү?"
 
-#: shell/main.c:240
-msgid "Open multiple single windows?"
-msgstr "Олон дан цонхонд нээх үү?"
+#: ../src/xviewer-window.c:4157
+msgid "_Fullscreen"
+msgstr ""
 
-#: shell/main.c:244
-msgid "Single Windows"
-msgstr "Дан цонхууд"
+#: ../src/xviewer-window.c:4158
+msgid "Show the current image in fullscreen mode"
+msgstr ""
 
-#: shell/main.c:246
-msgid "Collection"
-msgstr "Цомог"
+#: ../src/xviewer-window.c:4160
+msgid "Pause Slideshow"
+msgstr ""
 
-#: shell/main.c:298
-#, fuzzy
-msgid "File not found."
-msgid_plural "Files not found."
-msgstr[0] "Файлууд олдлоо."
-msgstr[1] "Файлууд олдлоо."
+#: ../src/xviewer-window.c:4161
+msgid "Pause or resume the slideshow"
+msgstr ""
 
-#: shell/util.c:52
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
+msgstr ""
+
+#: ../src/xviewer-window.c:4164
+msgid "Fit the image to the window"
+msgstr ""
+
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
+msgid "_Previous Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4170
+msgid "Go to the previous image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4172
+msgid "_Next Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4173
+msgid "Go to the next image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
+msgid "_First Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4176
+msgid "Go to the first image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
+msgid "_Last Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4179
+msgid "Go to the last image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4181
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4182
+msgid "Go to a random image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4341
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/xviewer-window.c:4413
+msgid "Previous"
+msgstr "Өмнөх"
+
+#: ../src/xviewer-window.c:4418
+msgid "Next"
+msgstr "Дараачийн"
+
+#: ../src/xviewer-window.c:4425
+msgid "Right"
+msgstr ""
+
+#: ../src/xviewer-window.c:4428
+msgid "Left"
+msgstr ""
+
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4434
+msgid "In"
+msgstr "Томоор"
+
+#: ../src/xviewer-window.c:4437
+msgid "Out"
+msgstr "Жижгээр"
+
+#: ../src/xviewer-window.c:4440
+msgid "Normal"
+msgstr "Энгийн"
+
+#: ../src/xviewer-window.c:4443
+msgid "Fit"
+msgstr "Тааруулах"
+
+#: ../src/xviewer-window.c:4446
+msgid "Gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4463
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
+
+#: ../src/xviewer-window.c:4829
 #, c-format
-msgid "Could not open `%s'"
-msgstr "`%s' нээгдсэнгүй"
-
-#~ msgid "XVIEWER Image Collection Viewer"
-#~ msgstr "XVIEWER-зургийн цомог харагч"
-
-#~ msgid "XVIEWER Image collection view factory"
-#~ msgstr "XVIEWER-зургийн цомгийн үзвэр боловсруулагч"
-
-#~ msgid "View as I_mage Collection"
-#~ msgstr "_Зургийн цомгоор харах"
-
-#~ msgid "View as Image Collection"
-#~ msgstr "Зургийн цомгоор харах"
-
-#~ msgid "Next"
-#~ msgstr "Дараачийн"
-
-#~ msgid "Next Image"
-#~ msgstr "Дараачийн зураг"
-
-#~ msgid "Previous"
-#~ msgstr "Өмнөх"
-
-#~ msgid "Previous Image"
-#~ msgstr "Өмнөх зураг"
-
-#~ msgid "Slide Show"
-#~ msgstr "Диафильм"
-
-#~ msgid "Saving finished"
-#~ msgstr "Хадгалалт дууслаа"
-
-#~ msgid "Move to Trash"
-#~ msgstr "Хогийн саванд хая"
-
-#~ msgid "Collection View"
-#~ msgstr "Цомог харах"
-
-#~ msgid "Images: %i/%i"
-#~ msgstr "Зураг: %i/%i"
-
-#~ msgid "Window Title"
-#~ msgstr "Цонхны нэр"
-
-#~ msgid "Status Text"
-#~ msgstr "Статус текст"
-
-#~ msgid "Progress of Image Loading"
-#~ msgstr "Зураг ачаалах прогресс"
-
-#~ msgid "XVIEWER Image"
-#~ msgstr "XVIEWER-Зураг"
-
-#~ msgid "XVIEWER Image Viewer"
-#~ msgstr "XVIEWER-Зургийн үзүүлэн"
-
-#~ msgid "XVIEWER Image viewer factory"
-#~ msgstr "XVIEWER-зургийн үзүллэнгийн боловсруулагч"
-
-#~ msgid "Embeddable XVIEWER Image"
-#~ msgstr "Хүрээлүүлсэн XVIEWER-Зураг"
-
-#~ msgid "Image"
-#~ msgstr "Зураг"
-
-#~ msgid "Images can only be saved as local files."
-#~ msgstr "Зургууд зөвхөн локал буюу дотоод файлаар л хадгалагдана."
-
-#~ msgid "Unsupported image type for saving."
-#~ msgstr "Хадгалахад дэмжигдээгүй зургийн файл төрөл"
-
-#~ msgid "Page"
-#~ msgstr "Хуудас"
-
-#~ msgid "Preview"
-#~ msgstr "Хэвлэх жинхэнэ хэлбэр"
-
-#~ msgid "Millimeter"
-#~ msgstr "Миллиметр"
-
-#~ msgid "Paper"
-#~ msgstr "Цаас"
-
-#~ msgid "% of original size"
-#~ msgstr "Эх хувийн хэмжээний %"
-
-#~ msgid "Adjust to "
-#~ msgstr "Дараах хэлбэрт тохируулах:"
-
-#~ msgid "Cutting help"
-#~ msgstr "Зүсэх заавар"
-
-#~ msgid "Down, then right"
-#~ msgstr "Эхлээд доош нь дараа нь баруун гар тийш"
-
-#~ msgid "Fit to page"
-#~ msgstr "Хуудсанд багтаах"
-
-#~ msgid "Horizontally"
-#~ msgstr "Хэвтээ"
-
-#~ msgid "Horizontally by "
-#~ msgstr "Хэвтээгээр"
-
-#~ msgid "Margins"
-#~ msgstr "Хүрээ"
-
-#~ msgid "Ordering help"
-#~ msgstr "Эрэмбэлэх тусламж"
-
-#~ msgid "Overlap"
-#~ msgstr "Давхарлах"
-
-#~ msgid "Overlap help"
-#~ msgstr "Давхарлах заавар"
-
-#~ msgid "Page order"
-#~ msgstr "Хуудасны дараалал"
-
-#~ msgid "Right, then down"
-#~ msgstr "Эхлээд баруун гар тийш дараа нь доош нь"
-
-#~ msgid "Scale"
-#~ msgstr "Шугам татах"
-
-#~ msgid "Show"
-#~ msgstr "Харуулах"
-
-#~ msgid "Vertically"
-#~ msgstr "Босоо"
-
-#~ msgid "Vertically by "
-#~ msgstr "Босоогоор"
-
-#~ msgid "The name of the file or data to print"
-#~ msgstr "Файл эсвэл хэвлэх өгөгдлийн нэр"
-
-#~ msgid "Cancel"
-#~ msgstr "Таслан зогсоох"
-
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Идэвхитэй цонхны төлөв самбарын харагдац өөрчилөх"
-
-#~ msgid "Change the visibility of the toolbar in the current window"
-#~ msgstr "Идэвхитэй цонхны багаж самбарын харагдац өөрчилөх"
-
-#~ msgid "New"
-#~ msgstr "Шинэ"
-
-#~ msgid "Open"
-#~ msgstr "Нээх"
-
-#~ msgid "Open in new window"
-#~ msgstr "Шинэ цонхонд нээх"
-
-#~ msgid "Open in this window"
-#~ msgstr "Энэ цонхондоо нээх"
-
-#~ msgid "Quit the program"
-#~ msgstr "Программаас гарах"
-
-#~ msgid "_Quit"
-#~ msgstr "_Гарах"
-
-#~ msgid "translator_credits-PLEASE_ADD_YOURSELF_HERE"
-#~ msgstr "Санлигийн Бадрал <badral@openmn.org>"
-
-#~ msgid "Fit"
-#~ msgstr "Тааруулах"
-
-#~ msgid "In"
-#~ msgstr "Томоор"
-
-#~ msgid "Normal"
-#~ msgstr "Энгийн"
-
-#~ msgid "Out"
-#~ msgstr "Жижгээр"
-
-#~ msgid "Full Screen"
-#~ msgstr "Дэлгэц дүүрэн"
-
-#~ msgid "Previews the image to be printed"
-#~ msgstr "Хэвлэхээр завдаж байгаа зургийг урьдчилан үзүүлэх"
-
-#~ msgid "Print Previe_w..."
-#~ msgstr "_Хэвлэх хэлбэр..."
-
-#~ msgid "Print Set_up"
-#~ msgstr "Хэвлэлтийн ф_ормат"
-
-#~ msgid "Print image to the printer"
-#~ msgstr "Зургийг хэвлэгчид илгээх"
-
-#~ msgid "Rotate Left"
-#~ msgstr "Зүүнтээ эргүүлэх"
-
-#~ msgid "Rotate Right"
-#~ msgstr "Баруунтаа эргүүлэх"
-
-#~ msgid "Setup the page settings for your current printer"
-#~ msgstr "Одоо идэвхтэй байгаа хэвлэгчийн Хуудасны форматыг тохируулах"
-
-#~ msgid "_Print..."
-#~ msgstr "_Хэвлэх..."
-
-#~ msgid "/Rotate C_lockwise"
-#~ msgstr "/Цагийн зүүний дагуу эргүүлэх"
-
-#~ msgid "/Rotate Counte_r Clockwise"
-#~ msgstr "/Цагийн зүүний эсрэг эргүүлэх"
-
-#~ msgid "/_Zoom In"
-#~ msgstr "/_Томсгох"
-
-#~ msgid "/Zoom _Out"
-#~ msgstr "/_Агшаах"
-
-#~ msgid "/_Normal Size"
-#~ msgstr "/_Энгийн хэмжээ"
-
-#~ msgid "/Best _Fit"
-#~ msgstr "/Үзэмжийг т_охируулах"
-
-#~ msgid "/_Close"
-#~ msgstr "/Х_аах"
-
-#~ msgid "Loading of image %s failed."
-#~ msgstr "%s зургийг ачаалж чадсангүй."
-
-#~ msgid ""
-#~ "Loading of image %s failed.\n"
-#~ "Reason: %s."
-#~ msgstr ""
-#~ "%s зургийг ачаалж чадсангүй.\n"
-#~ "Шалтгаан нь: %s."
-
-#~ msgid "Loading failed"
-#~ msgstr "Ачаалж чадсангүй"
-
-#~ msgid "Image successfully saved"
-#~ msgstr "Зураг амжилттай хадгалагдлаа"
-
-#~ msgid "Image saving failed"
-#~ msgstr "Зураг хадгалагдсангүй"
-
-#~ msgid "Image Height"
-#~ msgstr "Зургийн өндрийн хэмжээ"
-
-#~ msgid "Statusbar Text"
-#~ msgstr "Төлөв самбарын текст"
-
-#~ msgid "Desired Window Width"
-#~ msgstr "Цонхны хүссэн өргөн"
-
-#~ msgid "Desired Window Height"
-#~ msgstr "Цонхны хүссэн өндөр"
-
-#~ msgid "dialog1"
-#~ msgstr "Диалог1"
-
-#~ msgid "Could not find files"
-#~ msgstr "Файлууд олдсонгүй"
-
-#~ msgid "Don't use zoom larger than 100%"
-#~ msgstr "100% аас илүү томруулахгүй"
-
-#~ msgid "_Interpolate image on zoom (better quality but slower)"
-#~ msgstr "Зургийг томруулахдаа _интерполяц хийх (илүү чанартай ч удах талтай)"
-
-#~ msgid "By Extension"
-#~ msgstr "Өргөтгөлөөр"
-
-#~ msgid "Unsupported image file format for saving."
-#~ msgstr "Хадгалахад дэмжигдээгүй зургийн файл формат"
-
-#~ msgid "Determine File Type:"
-#~ msgstr "Файлын форматыг зааж өгөх:"
-
-#~ msgid "Automatically pick window size"
-#~ msgstr "Цонхны хэмжээг автоматаар сонгох"
-
-#~ msgid "Default zoom factor for the full screen view"
-#~ msgstr "Дэлгэц дүүрэн харуулахад томруулах харьцааг стандартаар сонгох"
-
-#~ msgid ""
-#~ "Default zoom factor for the full screen view. Possible values are: 0 (use "
-#~ "1:1 zoom factor), 1 (use the same zoom factor as the image window), 2 "
-#~ "(fit the image to the screen)."
-#~ msgstr ""
-#~ "Дэлгэц дүүрэн харуулахад томруулах харьцааг стандартаар сонгохБоломжит "
-#~ "хэмжээнүүд нь бол: 0 (1:1 харьцаа), 1 (уг зурагны өөрийнх нь хэмжээний "
-#~ "харьцааг сонгох), 2 (зургийг дэлгэцэнд нь тааруулах)."
-
-#~ msgid "Fit standard-sized images to the screen"
-#~ msgstr "Стандарт хэмжээ бүхий зурагнуудыг дэлгэцэнд багтаана"
-
-#~ msgid "Put a bevel around the screen"
-#~ msgstr "Дэлгэцийг гадна хөвөөг дагуулан хүрээ татах"
-
-#~ msgid "Scrollbar policy for the full screen view"
-#~ msgstr ""
-#~ "Дэлгэц дүүрэн үзүүлэхэд дэлгэцийн баруун болон доод хөвөөнд гүйлгэх "
-#~ "цонхыг ашиглана"
-
-#~ msgid ""
-#~ "Whether image windows should pick their size and zooming factor "
-#~ "automatically based on the size of the image. If this option is not set, "
-#~ "image windows will get whatever size the window manager assigns to them."
-#~ msgstr ""
-#~ "Зургийн нүдний хэмжээ болон тосгох харьцаа нь зургийн өөрийнх нь "
-#~ "хэмжээнээс хамаарах эсэх. Хэрэв энэ харьцааг тогтоож өгөөгүй бол зургийн "
-#~ "нүд нь цонхны менежерээс өгөгдсөн хэмжээг авна."
-
-#~ msgid ""
-#~ "Whether the full screen view should display a bevel along the edges of "
-#~ "the screen."
-#~ msgstr ""
-#~ "Дэлгэц дүүрэн үзүүлэх горимд зургийн гадуур хүрээ татах эсвэл үгүйг "
-#~ "тодорхойлно."
-
-#~ msgid ""
-#~ "Whether to display scrollbars on the full screen view. Possible values "
-#~ "are: 1 (automatic; only display scrollbars if the image is larger than "
-#~ "the window), 2 (never display scrollbars)."
-#~ msgstr ""
-#~ "Гүйлгэх цонх нь дэлгэц дүүрэн үзүүлэх горимд ажиллах эсэх. Боломжит "
-#~ "утгууд: 1 (автоматаар; Зураг цонхноосоо илүү гарах бол гүйлгэх цонхыг "
-#~ "идэвхжүүлэх), 2 (гүйлгэх цонхыг ерөөс үзүүлэхгүй)."
-
-#~ msgid ""
-#~ "Whether to fit standard-sized images to the screen when in full screen "
-#~ "mode. These are images with sizes like 320x240, 640x480, 800x800, etc. "
-#~ "This selects whether such images should be scaled to fit the screen "
-#~ "regardless of the setting for the default zoom factor of the full screen "
-#~ "view."
-#~ msgstr ""
-#~ "Зургийн стандарт хэмжээ нь дэлгэц дүүрэн үзүүлэхтэй ижил тохируулахЭдгээр "
-#~ "зургуудын хэмуээ нь 320x240, 640x480, 800x800,г.м. Ийм хэмжээний зургууд "
-#~ "дэлгэц дүүрэн үзүүлэх хэмжээний тохируулгаас хамааралгүй дэлгэцэнд "
-#~ "зохицуулан гарна."
-
-#~ msgid "Copyright (C) 2000-2002 The Free Software Foundation"
-#~ msgstr "© 2000-2002 The Free Software Foundation"
-
-#~ msgid "Couldn't initialize GnomeVFS!\n"
-#~ msgstr "GnomeVFS-ийгээ таньсангүй !\n"
-
-#~ msgid "pts"
-#~ msgstr "pts"
-
-#~ msgid "points"
-#~ msgstr "Цэг"
-
-#~ msgid "mm"
-#~ msgstr "mm"
-
-#~ msgid "cm"
-#~ msgstr "cm"
-
-#~ msgid "centimeter"
-#~ msgstr "Сантиметр"
-
-#~ msgid "inch"
-#~ msgstr "Ямх"
-
-#~ msgid "Print Setup"
-#~ msgstr "Хэвлэлийн тохируулга"
-
-#~ msgid "Print"
-#~ msgstr "Хэвлэх"
-
-#~ msgid "Print preview"
-#~ msgstr "Хэвлэх жинхэнэ хэлбэр"
-
-#~ msgid "Units: "
-#~ msgstr "Бүхэл нэгжүүд: "
-
-#~ msgid "Paper size:"
-#~ msgstr "Цаасны хэмжээ:"
-
-#~ msgid "Orientation"
-#~ msgstr "Хэвлэх баримжаа"
-
-#~ msgid "Portrait"
-#~ msgstr "Босоо формат"
-
-#~ msgid "Landscape"
-#~ msgstr "Хэвтээ формат"
-
-#~ msgid "Left:"
-#~ msgstr "Зүүн хүрээний өргөн:"
-
-#~ msgid "Right:"
-#~ msgstr "Баруун хүрээний өргөн:"
-
-#~ msgid "Bottom:"
-#~ msgstr "Доод хүрээний өргөн::"
-
-#~ msgid "Overlap horizontally by "
-#~ msgstr "Дараах хэмжээгээр хэвтээ чиглэлд өнгөлж давхарлах"
-
-#~ msgid "Overlap vertically by "
-#~ msgstr "Дараах хэмжээгээр босоо чиглэлд өнгөлж давхарлах"
-
-#~ msgid "Printing"
-#~ msgstr "Хэвлэх"
-
-#~ msgid "Helpers"
-#~ msgstr "Туслагчид"
-
-#~ msgid "Xviewer Image Viewer"
-#~ msgstr "Gnome-зургийн харагчийн нүд"
-
-#~ msgid "By c_olor"
-#~ msgstr "_Өнгөөр"
-
-#~ msgid "Indicate Transparency"
-#~ msgstr "Тунгалагийн зааж өгөх"
-
-#~ msgid "Pick a color"
-#~ msgstr "Нэг өнгө сонго"
-
-#~ msgid "interpolation type"
-#~ msgstr "Интерполяцийн төрөл"
-
-#~ msgid "the type of interpolation to use"
-#~ msgstr "Хэрэглэх итерполяцийн төрөл"
-
-#~ msgid "check type"
-#~ msgstr "Шатрын хөлөг_хээн төрөл"
-
-#~ msgid "the type of chequering to use"
-#~ msgstr "Шатарласан хээний төрөл"
-
-#~ msgid "the size of chequers to use"
-#~ msgstr "Шатарласан хээн хэмжээ"
-
-#~ msgid "dither type"
-#~ msgstr "Торлогийн төрөл"
-
-#~ msgid "BMP"
-#~ msgstr "BMP"
-
-#~ msgid "GIF"
-#~ msgstr "GIF"
-
-#~ msgid "ICO"
-#~ msgstr "ICO"
-
-#~ msgid "JPEG"
-#~ msgstr "JPEG"
-
-#~ msgid "PNG"
-#~ msgstr "PNG"
-
-#~ msgid "PNM"
-#~ msgstr "PNM"
-
-#~ msgid "RAS"
-#~ msgstr "RAS"
-
-#~ msgid "SVG"
-#~ msgstr "SVG"
-
-#~ msgid "TGA"
-#~ msgstr "TGA"
-
-#~ msgid "TIFF"
-#~ msgstr "TIFF"
-
-#~ msgid "XBM"
-#~ msgstr "XBM"
-
-#~ msgid "XPM"
-#~ msgstr "XPM"
-
-#~ msgid ""
-#~ "You are about to open %i windows\n"
-#~ "simultanously. Do you want to continue?"
-#~ msgstr ""
-#~ "Та %i цонхуудыг\n"
-#~ "зэрэг нээх гэж байна. Үргэлжлүүлэх үү?"
-
-#~ msgid ""
-#~ "Could not access %s\n"
-#~ "Xviewer will not be able to display this file."
-#~ msgstr ""
-#~ "Файл %s-д хандаж чадсангүй.\n"
-#~ "Xviewer энэ файлыг үзүүлэх боломжгүй байна."
-
-#~ msgid ""
-#~ "The following files cannot be displayed because Xviewer was not able "
-#~ "to access them:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Дараахи файлуудад хандаж чадаагүй учраас Xviewer энэ файлыг үзүүлэх "
-#~ "боломжгүй байна.:\n"
-#~ "%s"
-
-#~ msgid "Could not initialize GnomeVFS!\n"
-#~ msgstr "GnomeVFS танигдсангүй!\n"
-
-#~ msgid "Could not initialize Bonobo!\n"
-#~ msgstr "Bonobo танигдсангүй!\n"
-
-#~ msgid "Could not save image as '%s': %s."
-#~ msgstr "Зургийг %s хадгалж чадсангүй: %s"
+msgid "Edit the current image using %s"
+msgstr ""
+
+#: ../src/xviewer-window.c:4831
+msgid "Edit Image"
+msgstr ""
+
+#: ../src/main.c:63
+msgid "Open in fullscreen mode"
+msgstr ""
+
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr ""
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with xviewer's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

@@ -6,14 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-23 09:34+0000\n"
-"PO-Revision-Date: 2008-09-23 17:00+0200\n"
-"Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -22,402 +24,445 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:919
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
 msgstr "Shfaq “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1382
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
 msgstr "_Lëviz tek paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1383
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
 msgstr "Lëviz elementin e zgjedhur tek paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1384
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
 msgstr "_Hiq nga paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1385
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
 msgstr "Heq elementin e zgjedhur nga paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1386
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
 msgstr "_Fshi panelin e instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1387
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
 msgstr "Heq panelin e zgjedhur të instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
 msgstr "Ndarës"
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:111
-msgid "Running in fullscreen mode"
-msgstr "Ekzekutim në modalitetin me ekran të plotë"
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Shfaq"
 
-#: ../plugins/fullscreen/fullscreen.xviewer-plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Aktivizo modalitetin me ekran të plotë me dopjo-klik"
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "_Paneli i instrumentëve"
 
-#: ../plugins/fullscreen/fullscreen.xviewer-plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "Ekran i plotë me dopjo-klik"
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "_Shtylla e gjëndjes"
 
-#: ../plugins/reload/reload.xviewer-plugin.desktop.in.h:1
-#: ../plugins/reload/xviewer-reload-plugin.c:38
-msgid "Reload Image"
-msgstr "Ringarko figurën"
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr ""
 
-#: ../plugins/reload/reload.xviewer-plugin.desktop.in.h:2
-#: ../plugins/reload/xviewer-reload-plugin.c:40
-msgid "Reload current image"
-msgstr "Ringarko figurën e tanishme"
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr "_Paneli anësor"
 
-#: ../plugins/statusbar-date/statusbar-date.xviewer-plugin.desktop.in.h:1
-msgid "Date in statusbar"
-msgstr "Data në menunë e gjendjes"
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "Preferi_met"
 
-#: ../plugins/statusbar-date/statusbar-date.xviewer-plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Shfaq datën e figurës tek menu e gjendjes së dritares"
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_Ndihmë"
 
-#: ../data/xviewer.desktop.in.in.h:1
-msgid "Browse and rotate images"
-msgstr "Shfleto dhe rrotullo figurat"
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_Informacione"
 
-#: ../data/xviewer.desktop.in.in.h:2
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Shikues figurash"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:1
-msgid "<b>Aperture Value:</b>"
-msgstr "<b>Vlera e hapjes:</b>"
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Shfleto dhe rrotullo figurat"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:2
-msgid "<b>Author:</b>"
-msgstr "<b>Autori:</b>"
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr ""
 
-#: ../data/xviewer-image-properties-dialog.glade.h:3
-msgid "<b>Bytes:</b>"
-msgstr "<b>Byte:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:4
-msgid "<b>Camera Model:</b>"
-msgstr "<b>Modeli i kamerës:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:5
-msgid "<b>Copyright:</b>"
-msgstr "<b>Copyright:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:6
-msgid "<b>Date/Time:</b>"
-msgstr "<b>Data/Ora:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Përshkrimi:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:8
-msgid "<b>Details</b>"
-msgstr "<b>Hollësi</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:9
-msgid "<b>Exposure Time:</b>"
-msgstr "<b>Koha e ekspozimit:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:10
-msgid "<b>Flash:</b>"
-msgstr "<b>Flash:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:11
-msgid "<b>Focal Length:</b>"
-msgstr "<b>Gjatësia fokale:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:12
-msgid "<b>Height:</b>"
-msgstr "<b>Lartësia:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:13
-msgid "<b>ISO Speed Rating:</b>"
-msgstr "<b>Vlerësimi i shpejtësisë ISO:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:14
-msgid "<b>Keywords:</b>"
-msgstr "<b>Fjalëkyçe:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:15
-msgid "<b>Location:</b>"
-msgstr "<b>Pozicioni:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:16
-msgid "<b>Metering Mode:</b>"
-msgstr "<b>Mënyra e matjes:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:17
-msgid "<b>Name:</b>"
-msgstr "<b>Emri:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:18
-msgid "<b>Type:</b>"
-msgstr "<b>Lloji:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:19
-msgid "<b>Width:</b>"
-msgstr "<b>Gjerësia:</b>"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:20
-msgid "General"
-msgstr "Të përgjithshme"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:21
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Pronësitë e figurës"
 
-#: ../data/xviewer-image-properties-dialog.glade.h:22
-msgid "Metadata"
-msgstr "Metadata"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:23
-msgid "_Next"
-msgstr "_Në vazhdim"
-
-#: ../data/xviewer-image-properties-dialog.glade.h:24
+#: ../data/xviewer-image-properties-dialog.ui.h:2
 msgid "_Previous"
 msgstr "_Paraardhëse"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:1
-msgid "<b>File Name Preview</b>"
-msgstr "<b>Pamja e para e File</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_Në vazhdim"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:2
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Përcaktimi i pozicionit të file</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "_Mbyll"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:3
-msgid "<b>Options</b>"
-msgstr "<b>Mundësi</b>"
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:5
-#, no-c-format
-msgid "<small><i><b>%f:</b> original filename</i></small>"
-msgstr "<small><i><b>%f:</b> emri orgjinal i file</i></small>"
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:7
-#, no-c-format
-msgid "<small><i><b>%n:</b> counter</i></small>"
-msgstr "<small><i><b>%n:</b> numërues</i></small>"
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:8
-msgid "Choose a folder"
-msgstr "Zgjidh një kartelë"
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:9
-msgid "Destination folder:"
-msgstr "Kartela e destinuar:"
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:10
-msgid "Filename format:"
-msgstr "Formati i emrit të file:"
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:11
-msgid "Rename from:"
-msgstr "Riemërto nga:"
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "Të përgjithshme"
 
-# (pofilter) accelerators: accelerator _ does not occur in original and should not be in translation
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:12
-msgid "Replace spaces with underscores"
-msgstr "Zëvendëso hapësirat me underscore (nën_ndarës)"
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:13
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr "Metadata"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
 msgstr "Ruaj si"
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:14
-msgid "Start counter at:"
-msgstr "Fillo numëruesin tek:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr ""
 
-#: ../data/xviewer-multiple-save-as-dialog.glade.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "Zgjidh një kartelë"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr "Riemërto nga:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "Për:"
 
-#: ../data/xviewer-preferences-dialog.glade.h:1
-msgid "<b>Image Enhancements</b>"
-msgstr "<b>Shtimi i figurave</b>"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:2
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Zmadhimi i Figurave</b>"
+#: ../data/xviewer-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:3
-msgid "<b>Sequence</b>"
-msgstr "<b>Sekuenca</b>"
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:4
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Pjesët e tejdukshme</b>"
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:5
-msgid "As _background"
-msgstr "Si _sfond"
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
 
-#: ../data/xviewer-preferences-dialog.glade.h:6
-msgid "As check _pattern"
-msgstr "Si _fushë shahu"
-
-#: ../data/xviewer-preferences-dialog.glade.h:7
-msgid "As custom c_olor:"
-msgstr "Si ngjyrë e pers_onalizuar:"
-
-#: ../data/xviewer-preferences-dialog.glade.h:8
-msgid "Color for Transparent Areas"
-msgstr "Ngjyra për zonat e tejdukshme"
-
-#: ../data/xviewer-preferences-dialog.glade.h:9
-msgid "E_xpand images to fit screen"
-msgstr "Z_madho figurat për t'ja përshtatur ekranit"
-
-#: ../data/xviewer-preferences-dialog.glade.h:10
-msgid "Xviewer Preferences"
-msgstr "Preferimet e Xviewer"
-
-#: ../data/xviewer-preferences-dialog.glade.h:11
-msgid "Image View"
-msgstr "Shikuesi i figurave"
-
-#: ../data/xviewer-preferences-dialog.glade.h:12
-msgid "Plugins"
-msgstr "Plugins"
-
-#: ../data/xviewer-preferences-dialog.glade.h:13
-msgid "Slideshow"
-msgstr "Diapozitivët"
-
-#: ../data/xviewer-preferences-dialog.glade.h:14
-msgid "Smooth images when _zoomed"
-msgstr "Përshtat figurat kur _zmadhohen"
-
-#: ../data/xviewer-preferences-dialog.glade.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "Orientim _automatik"
 
-#: ../data/xviewer-preferences-dialog.glade.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Si _fushë shahu"
+
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Si ngjyrë e pers_onalizuar:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Ngjyra për zonat e tejdukshme"
+
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Si _sfond"
+
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Shikuesi i figurave"
+
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "Z_madho figurat për t'ja përshtatur ekranit"
+
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr ""
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "Sekuenca e _Loop"
 
-#: ../data/xviewer-preferences-dialog.glade.h:17
-msgid "_Switch image after:"
-msgstr "_Kalo tek figura tjetër mbas:"
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Diapozitivët"
 
-#: ../data/xviewer-preferences-dialog.glade.h:18
-msgid "seconds"
-msgstr "sekonda"
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Plugins"
 
-#: ../data/xviewer.schemas.in.h:1
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Një vlerë më e madhe se 0 përcakton kohën në sekonda gjatë së cilës një "
-"figurë qëndron në ekran para se figura në vazhdim të shfaqet automatikisht. "
-"Zero çaktivizon shfletimin automatik."
-
-#: ../data/xviewer.schemas.in.h:2
-msgid "Active plugins"
-msgstr "Plugin aktivë"
-
-#: ../data/xviewer.schemas.in.h:4
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Lejo zmadhimin më shume se 100% gjatë hapjes"
-
-#: ../data/xviewer.schemas.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Orientim automatik"
 
-#: ../data/xviewer.schemas.in.h:6
-msgid "Delay in seconds until showing the next image"
-msgstr "Intervali në sekonda para se të shfaqet figura në vazhdim"
-
-#: ../data/xviewer.schemas.in.h:7
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
-"Përcakton si duhet të tregohet transparenca. Vlera të vlefshme janë "
-"CHECK_PATTERN, COLOR dhe NONE. Nëse është zgjedhur COLOR, atëhere "
-"kyçitrans_color përcakton vlerën e ngjyrës së përdorur."
+"Nëse figura duhet rrotulluar automatikisht bazuar në orientimin EXIF."
 
-#: ../data/xviewer.schemas.in.h:8
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
 msgstr ""
-"Nëqoftëse kyçi i tejdukshmërisë ka vlerën COLOR, atëhere ky kyç përcakton "
-"ngjyrën e përdorur për tejdukshmërinë e treguar."
 
-#: ../data/xviewer.schemas.in.h:9
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Nëse kjo është vendosur në FALSE figurat e vogla nuk do të zmadhohen që t'i "
-"përshtaten ekranit gjatë hapjes."
-
-#: ../data/xviewer.schemas.in.h:10
-msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
-msgstr ""
-"Pozicioni i panelit të koleksionit të figurave. Vendos 0 për poshtë; 1 për "
-"majtas; 2 për sipër; 3 për djathtas."
-
-#: ../data/xviewer.schemas.in.h:11
+#: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
 msgstr "Interpolo figurën"
 
-#: ../data/xviewer.schemas.in.h:12
+#: ../data/org.x.viewer.gschema.xml.in.h:6
 msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"Lista me plugin aktivë. Nuk përmban \"Vendndodhjen\" e plugin aktivë. Shiko "
-"file .xviewer-plugin për të marrë vendndodhjen e një plugin të dhënë."
 
-#: ../data/xviewer.schemas.in.h:13
-msgid "Loop through the image sequence"
-msgstr "Cikli midis sekuencës së figurave"
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:14
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Treguesi i transparencës"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
 msgstr "Zmadhimi me rrotën e mouse"
 
-#: ../data/xviewer.schemas.in.h:15
-msgid "Show/hide the image collection pane scroll buttons."
-msgstr "Shfaq/fshih pulsantët e rrëshkitjes në panelin e koleksionit të figurave."
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:16
-msgid "Show/hide the image collection pane."
-msgstr "Shfaq/fshih panelin e figurës së koleksionit."
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Shumëfishuesi i shkallës së zmadhimit"
 
-#: ../data/xviewer.schemas.in.h:17
-msgid "Show/hide the window side pane."
-msgstr "Shfaq/fshih panelin anësor të dritares."
-
-#: ../data/xviewer.schemas.in.h:18
-msgid "Show/hide the window statusbar."
-msgstr "Shfaq/fshih menunë e gjendjes së dritares."
-
-#: ../data/xviewer.schemas.in.h:19
-msgid "Show/hide the window toolbar."
-msgstr "Shfaq/fshih menunë e instrumentëve të dritares."
-
-#: ../data/xviewer.schemas.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -430,305 +475,328 @@ msgstr ""
 "rezulton në një zmadhim prej 5% për çdo rrotullim dhe 1.00 sjell si pasojë "
 "zmadhimin në 100%."
 
-#: ../data/xviewer.schemas.in.h:22
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Ngjyrë e tejdukshme"
 
-#: ../data/xviewer.schemas.in.h:23
-msgid "Transparency indicator"
-msgstr "Treguesi i transparencës"
-
-#: ../data/xviewer.schemas.in.h:24
-msgid "Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Kur dhe kur jo sekuenca e figurave duhet shfaqur në një cikël të pafund."
-
-#: ../data/xviewer.schemas.in.h:25
-msgid "Whether the image collection pane should be resizable or not."
-msgstr "Nëse panelit të koleksionit të figurave mund t'i ndryshohet madhësia ose jo."
-
-#: ../data/xviewer.schemas.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
 msgstr ""
-"Nëse figura duhet interpoluar apo jo kur zmadhohet. Do të arrihet një "
-"kualitet më i lartë por është ndonjëherë më i ngadaltë se figurat e pa "
-"interpoluara."
+"Nëqoftëse kyçi i tejdukshmërisë ka vlerën COLOR, atëhere ky kyç përcakton "
+"ngjyrën e përdorur për tejdukshmërinë e treguar."
 
-#: ../data/xviewer.schemas.in.h:27
-msgid "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr "Nëse figura duhet rrotulluar automatikisht bazuar në orientimin EXIF."
+#: ../data/org.x.viewer.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr ""
 
-#: ../data/xviewer.schemas.in.h:28
-msgid "Whether the scroll wheel should be used for zooming or not."
-msgstr "Nëse rrota e mouse duhet përdorur ose jo për të kryer zmadhime."
-
-#: ../data/xviewer.schemas.in.h:29
-msgid "Zoom multiplier"
-msgstr "Shumëfishuesi i shkallës së zmadhimit"
-
-#: ../src/xviewer-file-chooser.c:125
-msgid "File format is unknown or unsupported"
-msgstr "Format i panjohur apo i pasuportuar file"
-
-#: ../src/xviewer-file-chooser.c:130
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
-"Xviewer could not determine a supported writable file format based on "
-"the filename."
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
 msgstr ""
-"Xviewer nuk arriti të përcaktojë një format të suportuar të "
-"shkruajtshëm file duke u nisur nga emri i file."
 
-#: ../src/xviewer-file-chooser.c:131
-msgid "Please try a different file extension like .png or .jpg."
-msgstr "Të lutem provo një prapashtesë tjetër file si p.sh. .png ose .jpg."
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Cikli midis sekuencës së figurave"
 
-#: ../src/xviewer-file-chooser.c:163
-msgid "All Files"
-msgstr "Të gjithë files"
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
 
-#: ../src/xviewer-file-chooser.c:168
-msgid "All Images"
-msgstr "Të gjitha figurat"
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Lejo zmadhimin më shume se 100% gjatë hapjes"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:189
+#: ../data/org.x.viewer.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Nëse kjo është vendosur në FALSE figurat e vogla nuk do të zmadhohen që t'i "
+"përshtaten ekranit gjatë hapjes."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Intervali në sekonda para se të shfaqet figura në vazhdim"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Një vlerë më e madhe se 0 përcakton kohën në sekonda gjatë së cilës një "
+"figurë qëndron në ekran para se figura në vazhdim të shfaqet automatikisht. "
+"Zero çaktivizon shfletimin automatik."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Plugin aktivë"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+"Lista me plugin aktivë. Nuk përmban \"Vendndodhjen\" e plugin aktivë. Shiko "
+"file .xviewer-plugin për të marrë vendndodhjen e një plugin të dhënë."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Ekran i plotë me dopjo-klik"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Aktivizo modalitetin me ekran të plotë me dopjo-klik"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Ringarko figurën"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Ringarko figurën e tanishme"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Data në menunë e gjendjes"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Shfaq datën e figurës tek menu e gjendjes së dritares"
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Ruaj"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
+msgid "Question"
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:391
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
-msgid "%s (*.%s)"
-msgstr "%s (*.%s)"
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
 
-#. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:285 ../src/xviewer-properties-dialog.c:133
-#: ../src/xviewer-properties-dialog.c:135 ../src/xviewer-thumb-view.c:444
-#: ../src/xviewer-window.c:720
-msgid "pixel"
-msgid_plural "pixels"
-msgstr[0] "pikë"
-msgstr[1] "pikë"
-
-#: ../src/xviewer-file-chooser.c:436
-msgid "Load Image"
-msgstr "Hap figurën"
-
-#: ../src/xviewer-file-chooser.c:444
-msgid "Save Image"
-msgstr "Ruaj figurën"
-
-#: ../src/xviewer-file-chooser.c:452
-msgid "Open Folder"
-msgstr "Hap kartelën"
-
-#: ../src/xviewer-image.c:530
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
-msgid "Transformation on unloaded image."
-msgstr "Transformimi i figurës së pangarkuar."
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/xviewer-image.c:558
-#, c-format
-msgid "Transformation failed."
-msgstr "Transformimi dështoi."
+#: ../src/xviewer-close-confirmation-dialog.c:669
+msgid "S_elect the images you want to save:"
+msgstr ""
 
-#: ../src/xviewer-image.c:947
-#, c-format
-msgid "EXIF not supported for this file format."
-msgstr "EXIF nuk suportohet për këtë format file."
+#. Secondary label
+#: ../src/xviewer-close-confirmation-dialog.c:688
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
 
-#: ../src/xviewer-image.c:1067
-#, c-format
-msgid "Image loading failed."
-msgstr "Ngarkimi i figurës dështoi."
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+msgid "_Reload"
+msgstr ""
 
-#: ../src/xviewer-image.c:1469 ../src/xviewer-image.c:1571
-#, c-format
-msgid "No image loaded."
-msgstr "Asnjë figurë e ngarkuar."
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr ""
 
-#: ../src/xviewer-image.c:1479 ../src/xviewer-image.c:1583
-#, c-format
-msgid "Temporary file creation failed."
-msgstr "Krijimi i file të përkohshëm dështoi."
-
-#: ../src/xviewer-image-jpeg.c:361
-#, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "I pamundur krijimi i file të përkohshëm për të ruajtur: %s"
-
-#: ../src/xviewer-image-jpeg.c:380
-#, c-format
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "E pamundur përgatitja e kujtesës për të ngarkuar file JPEG"
-
-#: ../src/xviewer-exif-details.c:68
-msgid "Camera"
-msgstr "Kamer"
-
-#: ../src/xviewer-exif-details.c:69
-msgid "Image Data"
-msgstr "Të dhënat e figurës"
-
-#: ../src/xviewer-exif-details.c:70
-msgid "Image Taking Conditions"
-msgstr "Kushtet e marrjes së figurës"
-
-#: ../src/xviewer-exif-details.c:71
-msgid "Maker Note"
-msgstr "Shënime mbi marrjen"
-
-#: ../src/xviewer-exif-details.c:72
-msgid "Other"
-msgstr "Tjetër"
-
-#: ../src/xviewer-exif-details.c:74
-msgid "XMP Exif"
-msgstr "XMP Exif"
-
-#: ../src/xviewer-exif-details.c:75
-msgid "XMP IPTC"
-msgstr "XMP IPTC"
-
-#: ../src/xviewer-exif-details.c:76
-msgid "XMP Rights Management"
-msgstr "XMP Rights Management"
-
-#: ../src/xviewer-exif-details.c:77
-msgid "XMP Other"
-msgstr "Tjetër XMP"
-
-#: ../src/xviewer-exif-details.c:251
-msgid "Tag"
-msgstr "Tag"
-
-#: ../src/xviewer-exif-details.c:258
-msgid "Value"
-msgstr "Vlera"
-
-#. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:58 ../src/xviewer-exif-util.c:96
-msgid "%a, %d %B %Y  %X"
-msgstr "%a, %d %B %Y  %X"
-
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
-#: ../src/xviewer-exif-util.c:90
-msgid "%a, %d %B %Y"
-msgstr "%a, %d %B %Y"
-
-#: ../src/xviewer-error-message-area.c:110
-msgid "_Retry"
-msgstr "_Riprovo"
-
-#: ../src/xviewer-error-message-area.c:134
+#: ../src/xviewer-error-message-area.c:171
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "I pamundur ngarkimi i figurës '%s'."
 
-#: ../src/xviewer-error-message-area.c:161
+#: ../src/xviewer-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr ""
+
+#: ../src/xviewer-error-message-area.c:256
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Nuk u gjet asnjë figurë tek '%s'."
 
-#: ../src/xviewer-error-message-area.c:167
+#: ../src/xviewer-error-message-area.c:263
 msgid "The given locations contain no images."
 msgstr "Pozicioni i dhënë nuk përmban figura."
 
-#: ../src/xviewer-print.c:197
-msgid "Image Settings"
-msgstr "Rregullimi i figurës"
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "Kamer"
 
-#: ../src/xviewer-print-image-setup.c:840
-msgid "Image"
-msgstr "Figura"
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "Të dhënat e figurës"
 
-#: ../src/xviewer-print-image-setup.c:841
-msgid "The image whose printing properties will be setup"
-msgstr "Figura për të cilën do të rregullohen pronësitë e printimit"
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Kushtet e marrjes së figurës"
 
-#: ../src/xviewer-print-image-setup.c:847
-msgid "Page Setup"
-msgstr "Rregullimi i faqes"
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:848
-msgid "The information for the page where the image will be printed"
-msgstr "Informacione mbi faqen ku do të printohet figura"
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Shënime mbi marrjen"
 
-#: ../src/xviewer-print-image-setup.c:876
-msgid "Position"
-msgstr "Pozicioni"
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "Tjetër"
 
-#: ../src/xviewer-print-image-setup.c:881
-msgid "_Left:"
-msgstr "_Majtas:"
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP Exif"
 
-#: ../src/xviewer-print-image-setup.c:882
-msgid "_Right:"
-msgstr "_Djathtas:"
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
 
-#: ../src/xviewer-print-image-setup.c:883
-msgid "_Top:"
-msgstr "_Sipër:"
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "XMP Rights Management"
 
-#: ../src/xviewer-print-image-setup.c:884
-msgid "_Bottom:"
-msgstr "_Poshtë:"
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr "Tjetër XMP"
 
-#: ../src/xviewer-print-image-setup.c:886
-msgid "C_enter:"
-msgstr "Në q_endër:"
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "Tag"
 
-#: ../src/xviewer-print-image-setup.c:891
-msgid "None"
-msgstr "Asnjë"
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Vlera"
 
-#: ../src/xviewer-print-image-setup.c:893
-msgid "Horizontal"
-msgstr "Horizontalisht"
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:895
-msgid "Vertical"
-msgstr "Vertikalisht"
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:897
-msgid "Both"
-msgstr "Së bashku"
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:913
-msgid "Size"
-msgstr "Madhësia"
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:918
-msgid "_Width:"
-msgstr "_Gjerësia:"
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
 
-#: ../src/xviewer-print-image-setup.c:920
-msgid "_Height:"
-msgstr "_Lartësia:"
-
-#: ../src/xviewer-print-image-setup.c:923
-msgid "_Scaling:"
-msgstr "_Shkalla:"
-
-#: ../src/xviewer-print-image-setup.c:936
-msgid "_Unit:"
-msgstr "_Njësia:"
-
-#: ../src/xviewer-print-image-setup.c:941
-msgid "Millimeters"
-msgstr "Milimetra"
-
-#: ../src/xviewer-print-image-setup.c:943
-msgid "Inches"
-msgstr "Inch"
-
-#: ../src/xviewer-print-image-setup.c:973
-msgid "Preview"
-msgstr "Pamja e parë"
-
-#: ../src/xviewer-properties-dialog.c:150 ../src/xviewer-properties-dialog.c:151
-msgid "Unknown"
-msgstr "Nuk njihet"
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/xviewer-properties-dialog.c:229
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (lente)"
@@ -736,38 +804,287 @@ msgstr "%.1f (lente)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/xviewer-properties-dialog.c:240
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (film 35mm)"
 
-#: ../src/xviewer-save-as-dialog-helper.c:159
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Format i panjohur apo i pasuportuar file"
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "Të lutem provo një prapashtesë tjetër file si p.sh. .png ose .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/xviewer-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr ""
+
+#. Pixel size of image: width x height in pixel
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "pikë"
+msgstr[1] "pikë"
+
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:467
+msgid "Save Image"
+msgstr "Ruaj figurën"
+
+#: ../src/xviewer-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Hap kartelën"
+
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Transformimi i figurës së pangarkuar."
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Transformimi dështoi."
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF nuk suportohet për këtë format file."
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Ngarkimi i figurës dështoi."
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Asnjë figurë e ngarkuar."
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr ""
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Krijimi i file të përkohshëm dështoi."
+
+#: ../src/xviewer-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "I pamundur krijimi i file të përkohshëm për të ruajtur: %s"
+
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "E pamundur përgatitja e kujtesës për të ngarkuar file JPEG"
+
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
+msgstr "Nuk njihet"
+
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr ""
+
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "Rregullimi i figurës"
+
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "Figura"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Rregullimi i faqes"
+
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Informacione mbi faqen ku do të printohet figura"
+
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr "Pozicioni"
+
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr "_Majtas:"
+
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr "_Djathtas:"
+
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr "_Sipër:"
+
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "_Poshtë:"
+
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "Në q_endër:"
+
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr "Asnjë"
+
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Horizontalisht"
+
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Vertikalisht"
+
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr "Së bashku"
+
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "Madhësia"
+
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr "_Gjerësia:"
+
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr "_Lartësia:"
+
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "_Shkalla:"
+
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_Njësia:"
+
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "Milimetra"
+
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr "Inch"
+
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Pamja e parë"
+
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "si është"
 
-#: ../src/xviewer-thumb-view.c:470
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/xviewer-statusbar.c:126
+#, c-format
+msgid "%d / %d"
+msgstr ""
+
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "Marrë në"
 
-#: ../src/xviewer-uri-converter.c:1013
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Të paktën dy prej emrave të file janë njësoj."
 
-#: ../src/xviewer-util.c:63
-msgid "Could not display help for Xviewer"
-msgstr "E pamundur shfaqja e ndihmës për Xviewer"
+#: ../src/xviewer-util.c:68
+msgid "Could not display help for Image Viewer"
+msgstr ""
 
-#: ../src/xviewer-util.c:111
+#: ../src/xviewer-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (Unicode e pavlefshme)"
 
-#: ../src/xviewer-window.c:1131
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/xviewer-window.c:541
 #, c-format
-msgid "Open with \"%s\""
-msgstr "Hap me \"%s\""
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/xviewer-window.c:1132
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:859
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Përdor \"%s\" për të hapur figurën e zgjedhur"
@@ -778,17 +1095,26 @@ msgstr "Përdor \"%s\" për të hapur figurën e zgjedhur"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1247
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Duke ruajtur figurën \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1590
+#: ../src/xviewer-window.c:1574
 #, c-format
-msgid "Loading image \"%s\""
-msgstr "Duke ngarkuar figurën \"%s\""
+msgid "Opening image \"%s\""
+msgstr ""
 
-#: ../src/xviewer-window.c:2286
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -797,73 +1123,90 @@ msgstr ""
 "Gabim gjatë printimit të file:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2414
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "Edituesi i panelit të instrumentëve"
 
-#: ../src/xviewer-window.c:2417
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "_Rikthe në vlerën e paracaktuar"
 
-#: ../src/xviewer-window.c:2503
-msgid "translator-credits"
-msgstr "Laurent Dhima <laurenti@alblinux.net>"
-
-#: ../src/xviewer-window.c:2506
-msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
+msgid "Error launching System Settings: "
 msgstr ""
-"Ky program është software i lirë; mund ta rishpërndani apo/dhe ndryshoni nën "
-"kushtet e Liçencës Publike të Përgjithshme GNU sikurse publikuar nga "
-"Fondacioni Free Software; duke zgjedhur midis versionit 2 të Liçencës, ose "
-"(sipas dëshirës suaj) çdo versioni tjetër të mëvonshëm.\n"
 
-#: ../src/xviewer-window.c:2510
-msgid ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from xviewer's menubar
+#: ../src/xviewer-window.c:2791
+msgid "_Open Background Preferences"
 msgstr ""
-"Ky program shpërndahet me dëshirën që të jetë i vlefshëm për ju, por PA "
-"ASNJË LLOJ GARANCIE; bile as pa garancinë e TREGTIMIT apo PËRDORIMIT PËR "
-"QËLLIME TË VEÇANTA.  Shiko Liçencën Publike të Përgjithshme GNU për hollësi "
-"të mëtejshme.\n"
 
-#: ../src/xviewer-window.c:2514
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/xviewer-window.c:2807
+#, c-format
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
-"Së bashku me këtë program duhet të keni marrë edhe një kopje të Liçencës "
-"Publike të Përgjithshme GNU; nëse jo, shkruaj tek Free Software Foundation, "
-"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#: ../src/xviewer-window.c:2527 ../src/main.c:192
-msgid "Xviewer"
-msgstr "Xviewer"
+#: ../src/xviewer-window.c:3274
+msgid "Saving image locally…"
+msgstr ""
 
-#: ../src/xviewer-window.c:2530
-msgid "The GNOME image viewer."
-msgstr "Shfaqësi i figurave për GNOME."
-
-#: ../src/xviewer-window.c:2901
-msgid "Only local images can be used as wallpapers"
-msgstr "Vetëm figurat lokale mund të përdoren si sfonde për hapësirën e punës"
-
-#: ../src/xviewer-window.c:2905
+#: ../src/xviewer-window.c:3352
+#, c-format
 msgid ""
-"To be able to set this image as your wallpaper, please save it locally in "
-"your computer"
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
 msgstr ""
-"Që kjo figurë të mund të përdoret si sfond për hapësirën e punës, duhet "
-"ruajtur në kompjutër."
 
-#: ../src/xviewer-window.c:2943
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr ""
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr ""
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr ""
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Gabim gjatë fshirjes së figurës %s"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -872,8 +1215,15 @@ msgstr ""
 "Me të vërtetë dëshironi të hidhni\n"
 "\"%s\" në kosh?"
 
+#: ../src/xviewer-window.c:3606
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
 # (pofilter) variables: translation contains variables not in original: %d
-#: ../src/xviewer-window.c:2946
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -888,408 +1238,381 @@ msgstr[1] ""
 "Me të vërtetë dëshironi të hidhni\n"
 "%d figurat e zgjedhura në kosh?"
 
-#: ../src/xviewer-window.c:2961
-msgid "Move to Trash"
-msgstr "Hidh në Kosh"
+#: ../src/xviewer-window.c:3616
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
 
-#: ../src/xviewer-window.c:2989 ../src/xviewer-window.c:3003 ../src/xviewer-window.c:3009
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
+msgid "Move to _Trash"
+msgstr "Hidhe në _Kosh"
+
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Nuk kam hyrje në kosh."
 
-#: ../src/xviewer-window.c:3075
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "Gabim gjatë fshirjes së figurës %s"
-
-#: ../src/xviewer-window.c:3282
-msgid "_File"
-msgstr "_File"
-
-#: ../src/xviewer-window.c:3283
-msgid "_Edit"
-msgstr "_Ndrysho"
-
-#: ../src/xviewer-window.c:3284
-msgid "_View"
-msgstr "_Shfaq"
-
-#: ../src/xviewer-window.c:3285
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Figura"
 
-#: ../src/xviewer-window.c:3286
+#: ../src/xviewer-window.c:4046
+msgid "_Edit"
+msgstr "_Ndrysho"
+
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "_Shko"
 
-#: ../src/xviewer-window.c:3287
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "Ins_trumentë"
 
-#: ../src/xviewer-window.c:3288
-msgid "_Help"
-msgstr "_Ndihmë"
+#: ../src/xviewer-window.c:4052
+msgid "_Open…"
+msgstr ""
 
-#: ../src/xviewer-window.c:3290
-msgid "_Open..."
-msgstr "_Hap..."
-
-#: ../src/xviewer-window.c:3291
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Hap një file"
 
-#: ../src/xviewer-window.c:3293
-msgid "_Close"
-msgstr "_Mbyll"
-
-#: ../src/xviewer-window.c:3294
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Mbyll dritaren"
 
-#: ../src/xviewer-window.c:3296
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "P_aneli i instrumentëve"
 
-#: ../src/xviewer-window.c:3297
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Ndrysho panelin e instrumentëve të aplikativit"
 
-#: ../src/xviewer-window.c:3299
-msgid "Prefere_nces"
-msgstr "Preferi_met"
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr ""
 
-#: ../src/xviewer-window.c:3300
-msgid "Preferences for Xviewer"
-msgstr "Preferimet për Xviewer"
-
-#: ../src/xviewer-window.c:3302
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Përmbajtja"
 
-#: ../src/xviewer-window.c:3303
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Ndihmë në këtë aplikativ"
 
-#: ../src/xviewer-window.c:3305 ../src/xviewer-plugin-manager.c:506
-msgid "_About"
-msgstr "_Informacione"
-
-#: ../src/xviewer-window.c:3306
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Informacione mbi këtë program"
 
-#: ../src/xviewer-window.c:3311
-msgid "_Toolbar"
-msgstr "_Paneli i instrumentëve"
-
-#: ../src/xviewer-window.c:3312
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Ndryshon dukshmërinë e shtyllës së instrumentëve në dritaren aktuale"
 
-#: ../src/xviewer-window.c:3314
-msgid "_Statusbar"
-msgstr "_Shtylla e gjëndjes"
-
-#: ../src/xviewer-window.c:3315
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Ndryshon dukshmërinë e panelit të gjëndjes në dritaren aktuale"
 
-#: ../src/xviewer-window.c:3317
-msgid "_Image Collection"
-msgstr "Koleksioni i _Figurave"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
+msgstr ""
 
-#: ../src/xviewer-window.c:3318
-msgid "Changes the visibility of the image collection pane in the current window"
-msgstr "Ndryshon dukshmërinë e panelit të koleksionit të figurave në dritaren aktuale"
-
-#: ../src/xviewer-window.c:3320
-msgid "Side _Pane"
-msgstr "_Paneli anësor"
-
-#: ../src/xviewer-window.c:3321
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Ndryshon dukshmërinë e panelit anësor në dritaren aktuale"
 
-#: ../src/xviewer-window.c:3326
-msgid "_Save"
-msgstr "_Ruaj"
-
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../src/xviewer-window.c:3327
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "Ruaj ndryshimet tek figurat e zgjedhura aktualisht"
 
-#: ../src/xviewer-window.c:3329
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "Hap _me"
 
-#: ../src/xviewer-window.c:3330
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "Hap figurën e zgjedhur me një aplikativ tjetër"
 
-#: ../src/xviewer-window.c:3332
-msgid "Save _As..."
-msgstr "Ruaj _si..."
-
-#: ../src/xviewer-window.c:3333
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "Ruaj figurat e zgjedhura me një emër tjetër"
 
-#: ../src/xviewer-window.c:3335
-msgid "Page Set_up..."
-msgstr "Rreg_ullimi i faqes..."
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr ""
 
-#: ../src/xviewer-window.c:3336
-msgid "Setup the page properties for printing"
-msgstr "Përcakto pronësitë e faqes për printim"
-
-#: ../src/xviewer-window.c:3338
-msgid "_Print..."
-msgstr "_Printo..."
+#: ../src/xviewer-window.c:4100
+msgid "_Print…"
+msgstr ""
 
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../src/xviewer-window.c:3339
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "Printo figurën e zgjedhur"
 
-#: ../src/xviewer-window.c:3341
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "P_ronësitë"
 
-#: ../src/xviewer-window.c:3342
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "Shfaq pronësitë dhe metadata të figurës së zgjedhur"
 
-#: ../src/xviewer-window.c:3344
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Anullo"
 
-#: ../src/xviewer-window.c:3345
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "Anullo ndryshimin e fundit në figurë"
 
-#: ../src/xviewer-window.c:3347
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "Përmbyse _Horizontalisht"
 
-#: ../src/xviewer-window.c:3348
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "Pasqyro horizontalisht figurën"
 
-#: ../src/xviewer-window.c:3350
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "Përmbyse _Vertikalisht"
 
-#: ../src/xviewer-window.c:3351
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "Pasqyro vertikalisht figurën"
 
-#: ../src/xviewer-window.c:3353
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "_Rrotullim Orar"
 
-#: ../src/xviewer-window.c:3354
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Rrotullo 90 gradë djathtas figurën"
 
-#: ../src/xviewer-window.c:3356
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "Rrotu_llo drejtim orar"
 
-#: ../src/xviewer-window.c:3357
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Rrotullo 90 gradë majtas figurën"
 
-#: ../src/xviewer-window.c:3359
-msgid "Set As _Wallpaper"
-msgstr "Vendose si _Sfond"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3360
-msgid "Set the selected image as the desktop wallpaper"
-msgstr "Cakto si sfond ekrani figurën e zgjedhur"
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3362 ../src/xviewer-window.c:3386
-msgid "Move to _Trash"
-msgstr "Hidhe në _Kosh"
-
-#: ../src/xviewer-window.c:3363
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "Lëviz në kosh figurën e zgjedhur"
 
-#: ../src/xviewer-window.c:3365 ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3380
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
+msgid "_Copy"
+msgstr ""
+
+#: ../src/xviewer-window.c:4131
+msgid "Copy the selected image to the clipboard"
+msgstr ""
+
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Zmadho"
 
-#: ../src/xviewer-window.c:3366 ../src/xviewer-window.c:3378
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "Zmadho figurën"
 
-#: ../src/xviewer-window.c:3368 ../src/xviewer-window.c:3383
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Z_vogëlo"
 
-#: ../src/xviewer-window.c:3369 ../src/xviewer-window.c:3381 ../src/xviewer-window.c:3384
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "Zvogëlo figurën"
 
-#: ../src/xviewer-window.c:3371
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "Madhësia _Normale"
 
-#: ../src/xviewer-window.c:3372
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "Shfaq figurën në madhësinë natyrale"
 
-#: ../src/xviewer-window.c:3374
-msgid "Best _Fit"
-msgstr "Për_shtate"
+#: ../src/xviewer-window.c:4157
+msgid "_Fullscreen"
+msgstr ""
 
-#: ../src/xviewer-window.c:3375
-msgid "Fit the image to the window"
-msgstr "Përshtat figurën dritares"
-
-#: ../src/xviewer-window.c:3392
-msgid "_Full Screen"
-msgstr "Ekran i _Plotë"
-
-#: ../src/xviewer-window.c:3393
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "Shfaq figurën aktuale në modalitetin me ekran të plotë"
 
-#: ../src/xviewer-window.c:3398 ../src/xviewer-window.c:3410
+#: ../src/xviewer-window.c:4160
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4161
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
+msgstr ""
+
+#: ../src/xviewer-window.c:4164
+msgid "Fit the image to the window"
+msgstr "Përshtat figurën dritares"
+
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "Figura _Paraardhëse"
 
-#: ../src/xviewer-window.c:3399
-msgid "Go to the previous image of the collection"
-msgstr "Shko tek figura paraardhëse e koleksionit"
+#: ../src/xviewer-window.c:4170
+msgid "Go to the previous image of the gallery"
+msgstr ""
 
-#: ../src/xviewer-window.c:3401
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "Figura _Në vazhdim"
 
-#: ../src/xviewer-window.c:3402
-msgid "Go to the next image of the collection"
-msgstr "Shko tek figura pasardhëse e koleksionit"
+#: ../src/xviewer-window.c:4173
+msgid "Go to the next image of the gallery"
+msgstr ""
 
-#: ../src/xviewer-window.c:3404 ../src/xviewer-window.c:3413
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "_Figura e parë"
 
-#: ../src/xviewer-window.c:3405
-msgid "Go to the first image of the collection"
-msgstr "Shko tek figura e parë e koleksionit"
+#: ../src/xviewer-window.c:4176
+msgid "Go to the first image of the gallery"
+msgstr ""
 
-#: ../src/xviewer-window.c:3407 ../src/xviewer-window.c:3416
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "Figura e _fundit"
 
-#: ../src/xviewer-window.c:3408
-msgid "Go to the last image of the collection"
-msgstr "Shko tek figura e fundit e koleksionit"
+#: ../src/xviewer-window.c:4179
+msgid "Go to the last image of the gallery"
+msgstr ""
 
-#: ../src/xviewer-window.c:3422
-msgid "_Slideshow"
-msgstr "_Diapozitivët"
+#: ../src/xviewer-window.c:4181
+msgid "_Random Image"
+msgstr ""
 
-#: ../src/xviewer-window.c:3423
+#: ../src/xviewer-window.c:4182
+msgid "Go to a random image of the gallery"
+msgstr ""
+
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "Nis shfaqjen në formë diapozitivësh të figurave"
 
-#: ../src/xviewer-window.c:3489
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Paraardhëse"
 
-#: ../src/xviewer-window.c:3493
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Pasardhëse"
 
-#: ../src/xviewer-window.c:3497
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Djathtas"
 
-#: ../src/xviewer-window.c:3500
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Majtas"
 
-#: ../src/xviewer-window.c:3503
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr ""
+
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Zmadho"
 
-#: ../src/xviewer-window.c:3506
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Zvogëlo"
 
-#: ../src/xviewer-window.c:3509
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Madhësia normale"
 
-#: ../src/xviewer-window.c:3512
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Përshtat"
 
-#: ../src/xviewer-window.c:3515
-msgid "Collection"
-msgstr "Koleksion"
+#: ../src/xviewer-window.c:4446
+msgid "Gallery"
+msgstr ""
 
-#: ../src/xviewer-plugin-manager.c:52
-msgid "Plugin"
-msgstr "Plugin"
+#: ../src/xviewer-window.c:4463
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
 
-#: ../src/xviewer-plugin-manager.c:53
-msgid "Enabled"
-msgstr "Aktiv"
+#: ../src/xviewer-window.c:4829
+#, c-format
+msgid "Edit the current image using %s"
+msgstr ""
 
-#: ../src/xviewer-plugin-manager.c:514
-msgid "C_onfigure"
-msgstr "K_onfigurimi"
+#: ../src/xviewer-window.c:4831
+msgid "Edit Image"
+msgstr ""
 
-#: ../src/xviewer-plugin-manager.c:524
-msgid "A_ctivate"
-msgstr "A_ktivizo"
-
-#: ../src/xviewer-plugin-manager.c:536
-msgid "Ac_tivate All"
-msgstr "Ak_tivizoi të gjithë"
-
-# (pofilter) accelerators: accelerator _ appears before an invalid accelerator character 'Ç' (eg. space)
-#: ../src/xviewer-plugin-manager.c:541
-msgid "_Deactivate All"
-msgstr "Ç_aktivizoi të gjithë"
-
-#: ../src/xviewer-plugin-manager.c:832
-msgid "Active _Plugins:"
-msgstr "_Plugin aktivë:"
-
-#: ../src/xviewer-plugin-manager.c:861
-msgid "_About Plugin"
-msgstr "Inform_acione në lidhje me plugin"
-
-#: ../src/xviewer-plugin-manager.c:868
-msgid "C_onfigure Plugin"
-msgstr "K_onfiguro plugin"
-
-#: ../src/main.c:67
+#: ../src/main.c:63
 msgid "Open in fullscreen mode"
 msgstr "Hap në modalitetin me ekran të plotë"
 
-#: ../src/main.c:68
-msgid "Disable image collection"
-msgstr "Çaktivizo koleksionimin e figurave"
+#: ../src/main.c:64
+msgid "Disable image gallery"
+msgstr ""
+
+#: ../src/main.c:65
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:66
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+"Fillo një instancë të re në vend të ripërdorimit të instancës ekzistuese"
+
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
 
 #: ../src/main.c:69
-msgid "Open in slide show mode"
-msgstr "Hap në modalitetin projektim diapozitivësh"
+msgid "Show the application's version"
+msgstr ""
 
-#: ../src/main.c:71
-msgid "Start a new instance instead of reusing an existing one"
-msgstr "Fillo një instancë të re në vend të ripërdorimit të instancës ekzistuese"
+#: ../src/main.c:99
+msgid "[FILE…]"
+msgstr ""
 
-#: ../src/main.c:73
-msgid "[FILE...]"
-msgstr "[FILE...]"
-
-#: ../src/main.c:223
-msgid "Xviewer Image Viewer"
-msgstr "Shfaqësi i figurave Xviewer"
-
+#. I18N: The '%s' is replaced with xviewer's command name.
+#: ../src/main.c:112
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

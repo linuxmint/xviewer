@@ -14,17 +14,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xviewer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-05 04:32+0000\n"
-"PO-Revision-Date: 2014-09-14 02:23+0900\n"
-"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-12 06:26+0000\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
-"Language: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: Korean\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -66,36 +69,36 @@ msgstr "선택한 도구 모음을 제거합니다"
 msgid "Separator"
 msgstr "구분선"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4036
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
 msgstr "보기(_V)"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4062
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
 msgid "_Toolbar"
 msgstr "도구 모음(_T)"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4065
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
 msgid "_Statusbar"
 msgstr "상태 표시줄(_S)"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4068
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
 msgid "_Image Gallery"
 msgstr "이미지 모음(_I)"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4071
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
 msgstr "가장자리 창(_P)"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4050
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
 msgstr "기본 설정(_N)"
 
-#: ../data/xviewer-app-menu.xml.h:7 ../src/xviewer-window.c:2565
-#: ../src/xviewer-window.c:4039
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4056
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
 msgid "_About"
 msgstr "정보(_A)"
 
@@ -103,25 +106,24 @@ msgstr "정보(_A)"
 msgid "_Quit"
 msgstr "끝내기(_Q)"
 
-# NOTE: 프로그램 설명이니 자유로운 형식으로.
 #: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
-"Xviewer is the official image viewer for the GNOME desktop. It "
-"integrates with the GTK+ look and feel of GNOME, and supports many image "
-"formats for viewing single images or images in a collection."
-msgstr "\"그놈의 눈\"은 그놈 데스크톱의 공식 이미지 보기 프로그램입니다. 그놈 데스크톱의 GTK+ 룩앤필을 가지고, 여러가지 이미지 형식을 지원하고, 단일 파일이나 여러 이미지 파일의 모음을 볼 수 있습니다."
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr "엑스뷰어는 여러 형식을 지원하는 이미지 뷰어입니다. 콜렉션에 있는 이미지나 이미지들을 볼 때 이용할 수 있습니다."
 
 # NOTE: 프로그램 설명이니 자유로운 형식으로.
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
-"Xviewer also allows to view the images in a fullscreen slideshow "
-"mode or set an image as the desktop wallpaper. It reads the camera tags to "
-"automatically rotate your images in the correct portrait or landscape "
-"orientation."
-msgstr "또 전체 화면 슬라이드쇼 모드에서 볼 수도 있고, 이미지를 데스크톱 배경으로 사용할 수도 있습니다. 또 카메라 태그를 자동으로 읽어서 가로나 세로 모드로 적절히 회전합니다."
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+"또 전체 화면 슬라이드쇼 모드에서 볼 수도 있고, 이미지를 데스크톱 배경으로 사용할 수도 있습니다. 또 카메라 태그를 자동으로 읽어서 "
+"가로나 세로 모드로 적절히 회전합니다."
 
-#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:269
-#: ../src/xviewer-window.c:6161
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "이미지 보기"
 
@@ -135,7 +137,7 @@ msgstr "이미지 살펴보기 및 회전"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Picture;그림;사진;이미지;Slideshow;슬라이드쇼;Graphics;그래픽;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5037
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "이미지 등록정보"
 
@@ -148,111 +150,117 @@ msgid "_Next"
 msgstr "다음(_N)"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../src/xviewer-metadata-sidebar.c:495
-msgid "Name:"
-msgstr "이름:"
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "닫기(_C)"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:5
 #: ../src/xviewer-metadata-sidebar.c:497
-msgid "Width:"
-msgstr "너비:"
+msgid "Name:"
+msgstr "이름:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:6
 #: ../src/xviewer-metadata-sidebar.c:499
-msgid "Height:"
-msgstr "높이:"
+msgid "Width:"
+msgstr "너비:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:7
 #: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "높이:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
 msgstr "종류:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
 msgstr "바이트:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-#: ../src/xviewer-metadata-sidebar.c:505
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
 msgstr "폴더:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:493
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "일반"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-#: ../src/xviewer-metadata-sidebar.c:530
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
 msgid "Aperture Value:"
 msgstr "조리개 값:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:533
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
 msgid "Exposure Time:"
 msgstr "노출 시간:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:536
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
 msgid "Focal Length:"
 msgstr "초점 거리:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:538
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
 msgid "Flash:"
 msgstr "플래시:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:542
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
 msgstr "ISO 감광도:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:545
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
 msgid "Metering Mode:"
 msgstr "측광 방식:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:548
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
 msgid "Camera Model:"
 msgstr "카메라 모델:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:550
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
 msgstr "날짜/시간:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:555
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
 msgstr "설명:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:558
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
 msgstr "장소:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:561
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
 msgid "Keywords:"
 msgstr "검색단어:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:563
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
 msgstr "촬영자:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:566
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
 msgid "Copyright:"
 msgstr "저작권:"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:569
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
 msgstr "자세히"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:526
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "메타데이터"
 
@@ -260,53 +268,67 @@ msgstr "메타데이터"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "취소(_C)"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "다른 이름으로 저장(_A)"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> 원래 파일 이름"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> 일련번호"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "_Filename format:"
 msgstr "파일 이름 형식(_F):"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "_Destination folder:"
 msgstr "저장할 폴더(_D):"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "폴더 선택"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "파일 경로 지정"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 msgid "_Start counter at:"
 msgstr "일련번호 시작(_S):"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "_Replace spaces with underscores"
 msgstr "공백을 밑줄로 바꾸기(_R)"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "옵션"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "원래 이름:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "바꿀 이름:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
 msgstr "파일 이름 미리 보기"
 
@@ -314,85 +336,85 @@ msgstr "파일 이름 미리 보기"
 msgid "Preferences"
 msgstr "기본 설정"
 
-#: ../data/xviewer-preferences-dialog.ui.h:2
+#: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
 msgstr "이미지 개선"
 
-#: ../data/xviewer-preferences-dialog.ui.h:3
+#: ../data/xviewer-preferences-dialog.ui.h:5
 msgid "Smooth images when zoomed _out"
 msgstr "이미지 축소할 때 부드럽게(_O)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:6
 msgid "Smooth images when zoomed _in"
 msgstr "이미지 확대할 때 부드럽게(_I)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:5
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "자동 방향(_A)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:6
+#: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
 msgstr "배경"
 
-#: ../data/xviewer-preferences-dialog.ui.h:7
+#: ../data/xviewer-preferences-dialog.ui.h:9
 msgid "As custom color:"
 msgstr "지정한 색으로:"
 
-#: ../data/xviewer-preferences-dialog.ui.h:8
+#: ../data/xviewer-preferences-dialog.ui.h:10
 #: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "배경색"
 
-#: ../data/xviewer-preferences-dialog.ui.h:9
+#: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
 msgstr "투명한 부분"
 
-#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
 msgstr "체크무늬로(_P)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
+#: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
 msgstr "지정한 색으로(_O):"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
+#: ../data/xviewer-preferences-dialog.ui.h:14
 msgid "Color for Transparent Areas"
 msgstr "투명한 부분의 색"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
+#: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
 msgstr "배경으로(_B)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:14
+#: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
 msgstr "이미지 보기"
 
-#: ../data/xviewer-preferences-dialog.ui.h:15
+#: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
 msgstr "이미지 확대/축소"
 
-#: ../data/xviewer-preferences-dialog.ui.h:16
+#: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
 msgstr "화면에 맞게 이미지 크기 조정(_X)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:17
+#: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
 msgstr "차례"
 
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "이미지 사이의 시간 간격(_T):"
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "반복(_L)"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
+#: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
 msgstr "슬라이드 쇼"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
+#: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
 msgstr "플러그인"
 
@@ -410,7 +432,9 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "이미지 뒤의 영역을 채우는데 사용할 색. use-background-color 키를 설정하지 않으면 GTK+ 테마에 따라 해당 영역을 채웁니다."
+msgstr ""
+"이미지 뒤의 영역을 채우는데 사용할 색. use-background-color 키를 설정하지 않으면 GTK+ 테마에 따라 해당 영역을 "
+"채웁니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
@@ -420,7 +444,8 @@ msgstr "이미지 인터폴레이션"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "확대에서 이미지에 인터폴레이션을 할지 여부. 인터폴레이션을 하면 화질이 좋아지지만, 인터폴레이션을 하지 않는 경우보다 느립니다."
+msgstr ""
+"확대에서 이미지에 인터폴레이션을 할지 여부. 인터폴레이션을 하면 화질이 좋아지지만, 인터폴레이션을 하지 않는 경우보다 느립니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
@@ -430,7 +455,9 @@ msgstr "이미지 엑스트라폴레이션"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "축소에서 이미지에 엑스트라폴레이션을 할지 여부. 엑스트라폴레이션을 하면 이미지가 흐릿해지고, 엑스트라폴레이션을 하지 않는 경우보다 약간 느립니다."
+msgstr ""
+"축소에서 이미지에 엑스트라폴레이션을 할지 여부. 엑스트라폴레이션을 하면 이미지가 흐릿해지고, 엑스트라폴레이션을 하지 않는 경우보다 약간 "
+"느립니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
@@ -442,9 +469,8 @@ msgid ""
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
 msgstr ""
-"투명한 부분을 어떻게 나타낼 지 지정합니다. 가능한 값은 CHECK_PATTERN, COLOR, "
-"그리고 NONE입니다. COLOR의 경우 trans-color 키에서 어떤 색을 쓸 지 지정합니"
-"다."
+"투명한 부분을 어떻게 나타낼 지 지정합니다. 가능한 값은 CHECK_PATTERN, COLOR, 그리고 NONE입니다. COLOR의 경우 "
+"trans-color 키에서 어떤 색을 쓸 지 지정합니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
@@ -466,9 +492,8 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
-"스크롤 휠로 확대/축소를 사용할 때 적용되는 비율. 각각의 스크롤 이벤트가 생길 "
-"때 적용되는 확대/축소 비율입니다. 0.05로 설정되면 각각의 스크롤 이벤트가 발생"
-"될 때 5%씩 확대증가가 되고, 1.00이면 100% 확대증가가 됩니다."
+"스크롤 휠로 확대/축소를 사용할 때 적용되는 비율. 각각의 스크롤 이벤트가 생길 때 적용되는 확대/축소 비율입니다. 0.05로 설정되면 "
+"각각의 스크롤 이벤트가 발생될 때 5%씩 확대증가가 되고, 1.00이면 100% 확대증가가 됩니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
@@ -478,9 +503,7 @@ msgstr "투명 색"
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr ""
-"transparency 키 값이 COLOR일 경우, 이 키 값이 투명한 부분에 사용될 색이 됩니"
-"다."
+msgstr "transparency 키 값이 COLOR일 경우, 이 키 값이 투명한 부분에 사용될 색이 됩니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
@@ -491,7 +514,9 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "참이면 background-color 키에서 설정한 색을 이미지 뒤의 영역을 채우는데 사용합니다. 거짓이면 현재 GTK+ 테마에 따라 색을 채웁니다."
+msgstr ""
+"참이면 background-color 키에서 설정한 색을 이미지 뒤의 영역을 채우는데 사용합니다. 거짓이면 현재 GTK+ 테마에 따라 "
+"색을 채웁니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
@@ -562,10 +587,12 @@ msgstr "물어보지 않고 휴지통에 이미지 버리기"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr "참이면 이미지를 휴지통에 옮길 때 확인 질문을 하지 않습니다. 참일 경우에도 파일 중에 휴지통에 옮기지 못하고 삭제하는 파일이 있으면 확인 질문을 합니다."
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"참이면 이미지를 휴지통에 옮길 때 확인 질문을 하지 않습니다. 참일 경우에도 파일 중에 휴지통에 옮기지 못하고 삭제하는 파일이 있으면 "
+"확인 질문을 합니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
@@ -579,7 +606,9 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "참이고 창에서 이미지를 읽어들이지 않은 경우, 파일 선택 창에서 해당 XDG 사용자 디렉터리를 사용해 사용자의 이미지 폴더를 표시합니다. 거짓이거나 이미지 폴더를 설정하지 않은 경우에는 현재 디렉터리를 표시합니다."
+msgstr ""
+"참이고 창에서 이미지를 읽어들이지 않은 경우, 파일 선택 창에서 해당 XDG 사용자 디렉터리를 사용해 사용자의 이미지 폴더를 표시합니다. "
+"거짓이거나 이미지 폴더를 설정하지 않은 경우에는 현재 디렉터리를 표시합니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
@@ -593,9 +622,8 @@ msgid ""
 "on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
 msgstr ""
-"참이면 속성 창에서 자세한 메타데이터 목록을 별도 페이지에 표시합니다. 이렇게 "
-"하면 넷북처럼 화면이 작은 경우에 속성 창 크기가 잘 맞습니다. 거짓이면 위젯이 "
-"\"메타데이터\" 페이지에 포함됩니다."
+"참이면 속성 창에서 자세한 메타데이터 목록을 별도 페이지에 표시합니다. 이렇게 하면 넷북처럼 화면이 작은 경우에 속성 창 크기가 잘 "
+"맞습니다. 거짓이면 위젯이 \"메타데이터\" 페이지에 포함됩니다."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -606,7 +634,9 @@ msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
 "to the empty string to disable this feature."
-msgstr "이미지 편집에 사용할(\"이미지 편집\" 도구 모음 단추를 눌렀을 때) 응용 프로그램의 desktop 파일 이름(\".desktop\" 포함). 이미지 편집 기능을 사용하지 않으려면 빈 문자열로 설정하십시오."
+msgstr ""
+"이미지 편집에 사용할(\"이미지 편집\" 도구 모음 단추를 눌렀을 때) 응용 프로그램의 desktop 파일 이름(\".desktop\" "
+"포함). 이미지 편집 기능을 사용하지 않으려면 빈 문자열로 설정하십시오."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
@@ -615,11 +645,11 @@ msgstr "사용중인 플러그인"
 #: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
 msgstr ""
-"사용중인 플러그인 목록. 사용중인 플러그인의 \"위치\"는 포함하지 않습니다. 주"
-"어진 플러그인의 \"위치\"는 .xviewer-plugin 파일을 참고하십시오."
+"사용중인 플러그인 목록. 사용중인 플러그인의 \"위치\"는 포함하지 않습니다. 주어진 플러그인의 \"위치\"는 .xviewer-"
+"plugin 파일을 참고하십시오."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -651,21 +681,10 @@ msgstr "창의 상태 표시줄에 이미지의 시각을 표시합니다"
 msgid "Close _without Saving"
 msgstr "저장하지 않고 닫기(_W)"
 
-#: ../src/xviewer-close-confirmation-dialog.c:172
-#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
-#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3365 ../src/xviewer-window.c:3368 ../src/xviewer-window.c:3619
-msgid "_Cancel"
-msgstr "취소(_C)"
-
-#: ../src/xviewer-close-confirmation-dialog.c:178 ../src/xviewer-file-chooser.c:465
-#: ../src/xviewer-window.c:4077
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
 msgid "_Save"
 msgstr "저장(_S)"
-
-#: ../src/xviewer-close-confirmation-dialog.c:184
-msgid "Save _As"
-msgstr "다른 이름으로 저장(_A)"
 
 #: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
@@ -675,24 +694,24 @@ msgstr "물음"
 msgid "If you don't save, your changes will be lost."
 msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
 
-#: ../src/xviewer-close-confirmation-dialog.c:428
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "바뀐 사항을 \"%s\" 이미지에 닫기 전에 저장하시겠습니까?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:635
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] "바뀐 사항을 저장하지 않은 이미지가 %d개 있습니다. 닫기 전에 저장하시겠습니까?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:652
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "저장하려는 이미지 선택(_E):"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:671
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
 
@@ -700,7 +719,7 @@ msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
 msgid "_Reload"
 msgstr "다시 읽기(_R)"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4083
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "다른 이름으로 저장(_A)…"
 
@@ -841,9 +860,10 @@ msgid "Supported image files"
 msgstr "지원하는 이미지 파일"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:232
-#: ../src/xviewer-metadata-sidebar.c:236 ../src/xviewer-properties-dialog.c:135
-#: ../src/xviewer-properties-dialog.c:137 ../src/xviewer-thumb-view.c:515
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "픽셀"
@@ -874,27 +894,27 @@ msgstr "읽지 않은 이미지 변환."
 msgid "Transformation failed."
 msgstr "이미지 변환 실패."
 
-#: ../src/xviewer-image.c:1116
+#: ../src/xviewer-image.c:1138
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "이 파일형식은 EXIF를 지원하지 않습니다."
 
-#: ../src/xviewer-image.c:1265
+#: ../src/xviewer-image.c:1287
 #, c-format
 msgid "Image loading failed."
 msgstr "이미지를 읽는데 실패했습니다."
 
-#: ../src/xviewer-image.c:1846 ../src/xviewer-image.c:1966
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
 #, c-format
 msgid "No image loaded."
 msgstr "읽어 온 이미지가 없습니다."
 
-#: ../src/xviewer-image.c:1854 ../src/xviewer-image.c:1975
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "파일을 저장하는데 필요한 권한이 없습니다."
 
-#: ../src/xviewer-image.c:1864 ../src/xviewer-image.c:1986
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "임시 파일 만들기가 실패했습니다."
@@ -909,20 +929,21 @@ msgstr "저장할 때 쓸 임시 파일을 만들지 못했습니다: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG 파일을 읽어들일 때 필요한 메모리를 할당하지 못했습니다"
 
-#: ../src/xviewer-metadata-sidebar.c:245 ../src/xviewer-properties-dialog.c:152
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: ../src/xviewer-metadata-sidebar.c:503
+#: ../src/xviewer-metadata-sidebar.c:505
 msgid "File size:"
 msgstr "파일 크기:"
 
-#: ../src/xviewer-metadata-sidebar.c:519 ../src/xviewer-properties-dialog.c:669
-#: ../src/xviewer-window.c:4087
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
 msgstr "이 파일이 들어 있는 폴더를 파일 관리자에서 표시합니다"
 
-#: ../src/xviewer-preferences-dialog.c:109
+#: ../src/xviewer-preferences-dialog.c:125
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -932,91 +953,91 @@ msgstr[0] "%lu초"
 msgid "Image Settings"
 msgstr "이미지 설정"
 
-#: ../src/xviewer-print-image-setup.c:902
+#: ../src/xviewer-print-image-setup.c:897
 msgid "Image"
 msgstr "이미지"
 
-#: ../src/xviewer-print-image-setup.c:903
+#: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
 msgstr "인쇄 속성을 설정할 이미지"
 
-#: ../src/xviewer-print-image-setup.c:909
+#: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
 msgstr "페이지 설정"
 
-#: ../src/xviewer-print-image-setup.c:910
+#: ../src/xviewer-print-image-setup.c:905
 msgid "The information for the page where the image will be printed"
 msgstr "이미지를 인쇄할 페이지의 정보"
 
-#: ../src/xviewer-print-image-setup.c:936
+#: ../src/xviewer-print-image-setup.c:931
 msgid "Position"
 msgstr "위치"
 
-#: ../src/xviewer-print-image-setup.c:940
+#: ../src/xviewer-print-image-setup.c:935
 msgid "_Left:"
 msgstr "왼쪽(_L):"
 
-#: ../src/xviewer-print-image-setup.c:942
+#: ../src/xviewer-print-image-setup.c:937
 msgid "_Right:"
 msgstr "오른쪽(_R):"
 
-#: ../src/xviewer-print-image-setup.c:943
+#: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
 msgstr "위(_T):"
 
-#: ../src/xviewer-print-image-setup.c:944
+#: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
 msgstr "아래(_B):"
 
-#: ../src/xviewer-print-image-setup.c:947
+#: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
 msgstr "가운데(_E):"
 
-#: ../src/xviewer-print-image-setup.c:952
+#: ../src/xviewer-print-image-setup.c:947
 msgid "None"
 msgstr "없음"
 
-#: ../src/xviewer-print-image-setup.c:954
+#: ../src/xviewer-print-image-setup.c:949
 msgid "Horizontal"
 msgstr "가로 방향"
 
-#: ../src/xviewer-print-image-setup.c:956
+#: ../src/xviewer-print-image-setup.c:951
 msgid "Vertical"
 msgstr "세로 방향"
 
-#: ../src/xviewer-print-image-setup.c:958
+#: ../src/xviewer-print-image-setup.c:953
 msgid "Both"
 msgstr "양쪽"
 
-#: ../src/xviewer-print-image-setup.c:974
+#: ../src/xviewer-print-image-setup.c:969
 msgid "Size"
 msgstr "크기"
 
-#: ../src/xviewer-print-image-setup.c:977
+#: ../src/xviewer-print-image-setup.c:972
 msgid "_Width:"
 msgstr "너비(_W):"
 
-#: ../src/xviewer-print-image-setup.c:979
+#: ../src/xviewer-print-image-setup.c:974
 msgid "_Height:"
 msgstr "높이(_H):"
 
-#: ../src/xviewer-print-image-setup.c:982
+#: ../src/xviewer-print-image-setup.c:977
 msgid "_Scaling:"
 msgstr "크기 조정(_S):"
 
-#: ../src/xviewer-print-image-setup.c:993
+#: ../src/xviewer-print-image-setup.c:988
 msgid "_Unit:"
 msgstr "단위(_U):"
 
-#: ../src/xviewer-print-image-setup.c:998
+#: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
 msgstr "밀리미터"
 
-#: ../src/xviewer-print-image-setup.c:1000
+#: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
 msgstr "인치"
 
-#: ../src/xviewer-print-image-setup.c:1029
+#: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
 msgstr "미리 보기"
 
@@ -1039,11 +1060,11 @@ msgstr "그대로"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:543
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "가져오기"
 
-#: ../src/xviewer-uri-converter.c:980
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "두 파일의 이름이 같습니다."
@@ -1068,7 +1089,7 @@ msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i 픽셀  %s    %i%%"
 
-#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2784
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "숨기기(_D)"
@@ -1130,23 +1151,19 @@ msgstr "도구 모음 편집"
 msgid "_Reset to Default"
 msgstr "기본값으로 돌아가기(_R)"
 
-#: ../src/xviewer-window.c:2563 ../src/xviewer-window.c:4044
-msgid "_Close"
-msgstr "닫기(_C)"
-
-#: ../src/xviewer-window.c:2731 ../src/xviewer-window.c:2746
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "시스템 설정 실행에 오류: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2782
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "배경 기본 설정 열기(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2798
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1155,11 +1172,11 @@ msgstr ""
 "\"%s\" 이미지를 데스크톱 배경으로 지정했습니다.\n"
 "모양을 수정하시겠습니까?"
 
-#: ../src/xviewer-window.c:3263
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "이미지를 로컬에 저장하는 중입니다…"
 
-#: ../src/xviewer-window.c:3341
+#: ../src/xviewer-window.c:3352
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1168,7 +1185,7 @@ msgstr ""
 "정말로 \"%s\"(을)를 \n"
 "완전히 제거하시겠습니까?"
 
-#: ../src/xviewer-window.c:3344
+#: ../src/xviewer-window.c:3355
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1180,41 +1197,41 @@ msgstr[0] ""
 "정말로 선택한 이미지 %d개를\n"
 "완전히 제거하시겠습니까?"
 
-#: ../src/xviewer-window.c:3366 ../src/xviewer-window.c:3630
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
 msgid "_Delete"
 msgstr "삭제(_D)"
 
-#: ../src/xviewer-window.c:3369 ../src/xviewer-window.c:3632
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
 msgid "_Yes"
 msgstr "예(_Y)"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3373 ../src/xviewer-window.c:3624
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
 msgid "Do _not ask again during this session"
 msgstr "이 세션에서 다시 묻지 않기(_N)"
 
-#: ../src/xviewer-window.c:3417
+#: ../src/xviewer-window.c:3428
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "이미지 파일을 가져올 수 없습니다"
 
-#: ../src/xviewer-window.c:3433
+#: ../src/xviewer-window.c:3444
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "이미지 파일 정보를 가져올 수 없습니다"
 
-#: ../src/xviewer-window.c:3449 ../src/xviewer-window.c:3691
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
 #, c-format
 msgid "Couldn't delete file"
 msgstr "파일을 삭제할 수 없습니다"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3499 ../src/xviewer-window.c:3787
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "%s 이미지를 삭제하는데 오류가 발생했습니다"
 
-#: ../src/xviewer-window.c:3592
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1223,14 +1240,14 @@ msgstr ""
 "정말로 \"%s\"(을)를 \n"
 "휴지통에 옮기시겠습니까?"
 
-#: ../src/xviewer-window.c:3595
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "\"%s\"에 대한 휴지통이 없습니다. 이 이미지를 완전히 제거하시겠습니까?"
 
-#: ../src/xviewer-window.c:3600
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1242,358 +1259,347 @@ msgstr[0] ""
 "정말로 선택한 이미지 %d개를\n"
 "휴지통에 옮기시겠습니까?"
 
-#: ../src/xviewer-window.c:3605
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "선택한 이미지 중에 휴지통으로 옮기지 못해서 완전히 제거할 파일이 있습니다. 계속 하시겠습니까?"
 
-#: ../src/xviewer-window.c:3622 ../src/xviewer-window.c:4113 ../src/xviewer-window.c:4140
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "휴지통으로 옮기기(_T)"
 
-#: ../src/xviewer-window.c:3669 ../src/xviewer-window.c:3683
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "휴지통에 접근할 수 없습니다."
 
-#: ../src/xviewer-window.c:4034
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "이미지(_I)"
 
-#: ../src/xviewer-window.c:4035
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: ../src/xviewer-window.c:4037
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "이동(_G)"
 
-#: ../src/xviewer-window.c:4038
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "도구(_T)"
 
-#: ../src/xviewer-window.c:4041
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "열기(_O)…"
 
-#: ../src/xviewer-window.c:4042
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "파일을 엽니다"
 
-#: ../src/xviewer-window.c:4045
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "창 닫기"
 
-#: ../src/xviewer-window.c:4047
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "도구 모음(_O)"
 
-#: ../src/xviewer-window.c:4048
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "도구 모음을 고칩니다"
 
-#: ../src/xviewer-window.c:4051
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "이미지 보기 기본 설정"
 
-#: ../src/xviewer-window.c:4053
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "차례(_C)"
 
-#: ../src/xviewer-window.c:4054
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "이 프로그램에 대한 정보"
 
-#: ../src/xviewer-window.c:4057
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "이 프로그램 정보"
 
-#: ../src/xviewer-window.c:4063
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "현재 창의 도구 모음 표시 여부를 바꿉니다"
 
-#: ../src/xviewer-window.c:4066
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "현재 창의 상태 표시줄 표시 여부를 바꿉니다"
 
-#: ../src/xviewer-window.c:4069
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr "현재 창의 이미지 모음 창 보기 여부를 바꿉니다"
 
-#: ../src/xviewer-window.c:4072
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "현재 창에서 가장자리 창을 보기 여부를 바꿉니다"
 
-#: ../src/xviewer-window.c:4078
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "현재 선택한 이미지의 바뀐 사항을 저장합니다"
 
-#: ../src/xviewer-window.c:4080
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "다른 프로그램으로 열기(_W)"
 
-#: ../src/xviewer-window.c:4081
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "선택한 이미지를 다른 프로그램에서 엽니다"
 
-#: ../src/xviewer-window.c:4084
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "선택한 이미지를 다른 이름으로 저장합니다"
 
-#: ../src/xviewer-window.c:4086
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "들어 있는 폴더 표시(_F)"
 
-#: ../src/xviewer-window.c:4089
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "인쇄(_P)…"
 
-#: ../src/xviewer-window.c:4090
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "선택한 이미지를 인쇄합니다"
 
-#: ../src/xviewer-window.c:4092
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "속성(_R)"
 
-#: ../src/xviewer-window.c:4093
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "선택한 이미지의 속성과 메타데이터를 봅니다"
 
-#: ../src/xviewer-window.c:4095
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "실행 취소(_U)"
 
-#: ../src/xviewer-window.c:4096
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "이미지에서 마지막에 바꾼 사항을 실행 취소합니다"
 
-#: ../src/xviewer-window.c:4098
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "가로 방향으로 뒤집기(_H)"
 
-#: ../src/xviewer-window.c:4099
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "이미지를 가로 방향으로 뒤바꿉니다"
 
-#: ../src/xviewer-window.c:4101
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "세로 방향으로 뒤집기(_V)"
 
-#: ../src/xviewer-window.c:4102
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "이미지를 세로 방향으로 뒤바꿉니다"
 
-#: ../src/xviewer-window.c:4104
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "시계 방향 회전(_R)"
 
-#: ../src/xviewer-window.c:4105
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "이미지를 오른쪽 90도만큼 회전합니다"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "시계 반대 방향 회전(_L)"
 
-#: ../src/xviewer-window.c:4108
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "이미지를 왼쪽 90도만큼 회전합니다"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4121
 msgid "Set as Wa_llpaper"
 msgstr "배경으로 지정(_L)"
 
-#: ../src/xviewer-window.c:4111
+#: ../src/xviewer-window.c:4122
 msgid "Set the selected image as the wallpaper"
 msgstr "선택한 이미지를 배경으로 설정합니다"
 
-#: ../src/xviewer-window.c:4114
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "선택한 이미지를 휴지통 폴더로 옮깁니다"
 
-#: ../src/xviewer-window.c:4116
+#: ../src/xviewer-window.c:4127
 msgid "_Delete Image"
 msgstr "이미지 삭제(_D)"
 
-#: ../src/xviewer-window.c:4117
+#: ../src/xviewer-window.c:4128
 msgid "Delete the selected image"
 msgstr "선택한 이미지를 삭제합니다"
 
-#: ../src/xviewer-window.c:4119
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "복사(_C)"
 
-#: ../src/xviewer-window.c:4120
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "선택한 이미지를 클립보드에 복사합니다"
 
-#: ../src/xviewer-window.c:4122 ../src/xviewer-window.c:4131 ../src/xviewer-window.c:4134
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "확대(_Z)"
 
-#: ../src/xviewer-window.c:4123 ../src/xviewer-window.c:4132
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "이미지를 크게 확대해서 봅니다"
 
-#: ../src/xviewer-window.c:4125 ../src/xviewer-window.c:4137
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "축소(_O)"
 
-#: ../src/xviewer-window.c:4126 ../src/xviewer-window.c:4135 ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "이미지를 작게 축소해서 봅니다"
 
-#: ../src/xviewer-window.c:4128
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "보통 크기(_N)"
 
-#: ../src/xviewer-window.c:4129
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "이미지를 원래 크기로 봅니다"
 
-#: ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "전체 화면(_F)"
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "현재 이미지를 전체화면 모드에서 봅니다"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "슬라이드 쇼 일시 중지"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "슬라이드 쇼를 일시 중지하거나 다시 시작합니다"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "창에 맞게(_B)"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "이미지를 창 크기에 맞춥니다"
 
-#: ../src/xviewer-window.c:4158 ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "이전 이미지(_P)"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "이미지 모음의 이전 이미지로 이동합니다"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "다음 이미지(_N)"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "이미지 모음의 다음 이미지로 이동합니다"
 
-#: ../src/xviewer-window.c:4164 ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "처음 이미지(_F)"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "이미지 모음의 처음 이미지로 이동합니다"
 
-#: ../src/xviewer-window.c:4167 ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "마지막 이미지(_L)"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "이미지 모음의 마지막 이미지로 이동합니다"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "임의의 이미지(_R)"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "이미지 모음에서 임의의 이미지로 이동합니다"
 
-#: ../src/xviewer-window.c:4329
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "슬라이드 쇼(_L)"
 
-#: ../src/xviewer-window.c:4330
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "이미지로 슬라이드 쇼를 시작합니다."
 
-#: ../src/xviewer-window.c:4402
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "이전"
 
-#: ../src/xviewer-window.c:4407
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "다음"
 
-#: ../src/xviewer-window.c:4414
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "오른쪽"
 
-#: ../src/xviewer-window.c:4417
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "왼쪽"
 
-#: ../src/xviewer-window.c:4420
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "폴더 표시"
 
-#: ../src/xviewer-window.c:4423
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "확대"
 
-#: ../src/xviewer-window.c:4426
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "축소"
 
-#: ../src/xviewer-window.c:4429
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "보통"
 
-#: ../src/xviewer-window.c:4432
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "맞추기"
 
-#: ../src/xviewer-window.c:4435
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "이미지 모음"
 
-#: ../src/xviewer-window.c:4452
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "휴지통"
 
 # tooltip
-#: ../src/xviewer-window.c:4818
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "현재 이미지를 %s 프로그램을 사용해 편집합니다"
 
-#: ../src/xviewer-window.c:4820
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "이미지 편집"
-
-#: ../src/xviewer-window.c:6164
-msgid "The GNOME image viewer."
-msgstr "그놈 이미지 보기."
-
-#: ../src/xviewer-window.c:6167
-msgid "translator-credits"
-msgstr ""
-"남성현 <namsh@kldp.org>\n"
-"차영호 <ganadist@chollian.net>\n"
-"류창우 <cwryu@debian.org>"
-
-#: ../src/main.c:56
-msgid "GNOME Image Viewer"
-msgstr "그놈 이미지 보기"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"

@@ -9,19 +9,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer.HEAD.ro\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&ke"
-"ywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-03-12 02:12+0000\n"
-"PO-Revision-Date: 2011-03-12 03:14+0200\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-16 21:44+0000\n"
+"Last-Translator: CD <Unknown>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
-"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
+"== 0) && (n != 0))) ? 2: 1));\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: ro\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -30,473 +32,400 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
 msgstr "Arată „_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1411
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
 msgstr "_Mută în bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1412
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
 msgstr "Mută elementul selectat în bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1413
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
 msgstr "Ște_rge din bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1414
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
 msgstr "Șterge elementul selectat din bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1415
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
 msgstr "Șterge bara _de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
 msgstr "Șterge bara de unelte aleasă"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
 msgstr "Separator"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Activează modul pe tot ecranul cu dublu-clic"
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Vizualizare"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "Pe tot ecranul cu dublu-clic"
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "Bară de unel_te"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:53
-#: ../plugins/reload/reload.plugin.desktop.in.h:1
-msgid "Reload Image"
-msgstr "Reîncarcă imaginea"
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "Bară de _stare"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:55
-#: ../plugins/reload/reload.plugin.desktop.in.h:2
-msgid "Reload current image"
-msgstr "Reîncarcă imaginea curentă"
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr "Galerie de _imagini"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
-msgid "Date in statusbar"
-msgstr "Data în bara de stare"
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr "_Panou lateral"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Afișează data imaginii în bara de stare a ferestrei"
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "Preferi_nțe"
 
-#: ../data/xviewer.desktop.in.in.h:1
-msgid "Browse and rotate images"
-msgstr "Navighează și rotește imagini"
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "_Ajutor"
 
-#: ../data/xviewer.desktop.in.in.h:2
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_Despre"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr "Ieși_re"
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+"Xviewer este un vizualizator de imagini care suportă numeroase formate. "
+"Poate fi utilizat pentru a vizualiza imagini sau colecții de imagini."
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+"De asemenea, Xviewer permite vizualizarea imaginilor ca slideshow pe tot "
+"ecranul sau setarea unei imagini ca fundal pe desktop. Citește metadatele "
+"pentru a roti automat imaginile în poziția portret sau peisaj."
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "Vizualizator imagini"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1
-msgid "Aperture Value:"
-msgstr "Valoare diafragmă:"
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Navighează și rotește imagini"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:2
-msgid "Author:"
-msgstr "Autor:"
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr "Imagine;Prezentare diapozitive;Grafică;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:3
-msgid "Bytes:"
-msgstr "Octeți:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:4
-msgid "Camera Model:"
-msgstr "Model cameră:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:5
-msgid "Copyright:"
-msgstr "Drepturi de autor:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:6
-msgid "Date/Time:"
-msgstr "Dată/Oră:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:7
-msgid "Description:"
-msgstr "Descriere:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:8
-msgid "Details"
-msgstr "Detalii"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-msgid "Exposure Time:"
-msgstr "Timp de expunere:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-msgid "Flash:"
-msgstr "Bliț:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-msgid "Focal Length:"
-msgstr "Distanța focală:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-msgid "General"
-msgstr "Generale"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-msgid "Height:"
-msgstr "Înălțime:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-msgid "ISO Speed Rating:"
-msgstr "Viteza ISO:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
 msgid "Image Properties"
 msgstr "Proprietăți imagine"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-msgid "Keywords:"
-msgstr "Cuvinte cheie:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-msgid "Location:"
-msgstr "Locație:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-msgid "Metadata"
-msgstr "Metadata"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-msgid "Metering Mode:"
-msgstr "Mod de măsurare:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-msgid "Name:"
-msgstr "Nume:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-msgid "Type:"
-msgstr "Tip:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-msgid "Width:"
-msgstr "Lățime:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-msgid "_Next"
-msgstr "Î_nainte"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../data/xviewer-image-properties-dialog.ui.h:2
 msgid "_Previous"
 msgstr "Îna_poi"
 
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "Î_nainte"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "În_chide"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr "Nume:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr "Lățime:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "Înălțime:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr "Tip:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "Octeți:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr "Dosar:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "Generale"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr "Valoare diafragmă:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr "Timp de expunere:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr "Distanța focală:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr "Bliț:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr "Viteza ISO:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr "Mod de măsurare:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr "Model cameră:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr "Dată/Oră:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr "Descriere:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr "Locație:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr "Cuvinte cheie:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr "Autor:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr "Drepturi de autor:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr "Detalii"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr "Metadata"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Salvează ca"
+
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "_Renunță"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr "Salvează c_a"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> nume fișier original"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:4
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
 #, no-c-format
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> contor"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr "_Format nume de fișier:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr "_Dosar destinație:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
 msgstr "Alegeți un dosar"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
-msgid "Destination folder:"
-msgstr "Dosar destinație:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
-msgid "File Name Preview"
-msgstr "Previzualizare nume fișier"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
 msgstr "Specificații cale fișier"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
-msgid "Filename format:"
-msgstr "Format nume fișier:"
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr "_Începe numărătoarea la:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr "În_locuiește spațiile cu liniuță de subliniere"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
 msgstr "Opțiuni"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
 msgstr "Redenumește din:"
 
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
-msgid "Replace spaces with underscores"
-msgstr "Înlocuiește spațiile cu liniuță de subliniere"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
-msgid "Save As"
-msgstr "Salvează ca"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
-msgid "Start counter at:"
-msgstr "Începe numărarea de la:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
 msgid "To:"
 msgstr "Pâna la:"
 
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "Previzualizare nume fișier"
+
 #: ../data/xviewer-preferences-dialog.ui.h:1
-msgid "As _background"
-msgstr "Ca _fundal"
-
-#: ../data/xviewer-preferences-dialog.ui.h:2
-msgid "As check _pattern"
-msgstr "Ca _model mozaic"
-
-#: ../data/xviewer-preferences-dialog.ui.h:3
-msgid "As custom c_olor:"
-msgstr "Ca o cul_oare personalizată:"
+msgid "Preferences"
+msgstr "Preferinţe"
 
 #: ../data/xviewer-preferences-dialog.ui.h:4
-msgid "As custom color:"
-msgstr "Ca o culoare personalizată:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:5
-msgid "Background"
-msgstr "Fundal"
-
-#: ../data/xviewer-preferences-dialog.ui.h:6
-#: ../data/org.x.viewer.gschema.xml.in.in.h:6
-msgid "Background Color"
-msgstr "Culoare de fundal"
-
-#: ../data/xviewer-preferences-dialog.ui.h:7
-msgid "Color for Transparent Areas"
-msgstr "Culoarea pentru zonele transparente"
-
-#: ../data/xviewer-preferences-dialog.ui.h:8
-msgid "E_xpand images to fit screen"
-msgstr "E_xtinde imaginea pentru a umple ecranul"
-
-#: ../data/xviewer-preferences-dialog.ui.h:9
-msgid "Xviewer Preferences"
-msgstr "Preferințe Xviewer"
-
-#: ../data/xviewer-preferences-dialog.ui.h:10
 msgid "Image Enhancements"
 msgstr "Îmbunătățiri imagine"
 
-#: ../data/xviewer-preferences-dialog.ui.h:11
-msgid "Image View"
-msgstr "Vizualizare imagine"
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr "Netezește ima_ginile la mărire"
 
-#: ../data/xviewer-preferences-dialog.ui.h:12
-msgid "Image Zoom"
-msgstr "Scalare imagine"
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr "Netezește _imaginile la micșorare"
 
-#: ../data/xviewer-preferences-dialog.ui.h:13
-msgid "Plugins"
-msgstr "Module"
-
-#: ../data/xviewer-preferences-dialog.ui.h:14
-msgid "Sequence"
-msgstr "Secvență"
-
-#: ../data/xviewer-preferences-dialog.ui.h:15
-msgid "Slideshow"
-msgstr "Succesiune automată imagini"
-
-#: ../data/xviewer-preferences-dialog.ui.h:16
-msgid "Smooth images when zoomed-_in"
-msgstr "Netezește imaginile când sunt măr_ite"
-
-#: ../data/xviewer-preferences-dialog.ui.h:17
-msgid "Smooth images when zoomed-_out"
-msgstr "Netezește imaginile când sunt micș_orate"
-
-#: ../data/xviewer-preferences-dialog.ui.h:18
-msgid "Transparent Parts"
-msgstr "Părți transparente"
-
-#: ../data/xviewer-preferences-dialog.ui.h:19
+#: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
 msgstr "Orientare _automată"
 
-#: ../data/xviewer-preferences-dialog.ui.h:20
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "Fundal"
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr "Ca o culoare personalizată:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Culoare de fundal"
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr "Părți transparente"
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Ca _model mozaic"
+
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Ca o cul_oare personalizată:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Culoarea pentru zonele transparente"
+
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Ca _fundal"
+
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Vizualizare imagine"
+
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "Scalare imagine"
+
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "E_xtinde imaginea pentru a umple ecranul"
+
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "Secvență"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr "_Timp între imagini:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
 msgstr "_Repetă secvența"
 
-#: ../data/xviewer-preferences-dialog.ui.h:21
-msgid "_Switch image after:"
-msgstr "_Schimbă imaginea după:"
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Succesiune automată imagini"
 
-#: ../data/xviewer-preferences-dialog.ui.h:22
-msgid "seconds"
-msgstr "secunde"
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Module"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:1
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"O valoare mai mare de 0 determină câte secunde va fi afișată o imagine pe "
-"ecran înainte ca următoarea să fie afișată automat. Zero dezactivează "
-"navigarea automată."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:2
-msgid "Active plugins"
-msgstr "Module active"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:4
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Permite scalarea inițială mai mare de 100%"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:5
+#: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Orientare automată"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:7
-msgid "Close main window without asking to save changes."
-msgstr ""
-"Închide fereastra principală fără a întreba dacă se dorește salvarea "
-"modificărilor."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:8
-msgid "Delay in seconds until showing the next image"
-msgstr "Întârzierea în secunde până la afișarea următoarei imagini"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:9
+#: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr ""
-"Determină felul în care ar trebui indicată transparența. Valorile valide "
-"sunt CHECK_PATTERN, COLOR și NONE. Dacă este aleasă COLOR, atunci cheia "
-"„trans-color” determină valoarea utilizată a culorii."
+"Imaginile sunt rotite automat în funcție de informațiile de orientare EXIF."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:10
-msgid "External program to use for editing images"
-msgstr "Programul extern de utilizat la editarea imaginilor"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:11
-msgid "Extrapolate Image"
-msgstr "Extrapolează imaginea"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:12
-msgid ""
-"If activated and no image is loaded in the active window, the file chooser "
-"will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up, it "
-"will show the current working directory."
-msgstr ""
-"La activare, dacă nu sunt imagini încărcate în fereastra activă, dialogul de "
-"alegere fișiere va afișa dosarul de fotografii al utilizatorului folosind "
-"dosarul special XDG. Dacă este dezactivat sau dosarul de fotografii nu a "
-"fost definit, va afișa dosarul curent."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:13
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr ""
-"La activare, Xviewer nu va cere confirmare la mutarea imaginilor la "
-"coșul de gunoi. Se va cere confirmare în cazul în care fișierele nu pot fi "
-"mutate în coșul de gunoi, iar în acest caz vor fi șterse."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:14
-msgid ""
-"If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
-"be embedded on the \"Metadata\" page."
-msgstr ""
-"La activare, lista detaliată de metadate din dialogul de proprietăți va fi "
-"mutată într-o pagină dedicată din dialog. Aceasta ar trebui să facă dialogul "
-"mai utilizabil pe ecrane mici, cum ar fi netbook-urile. Dacă este "
-"dezactivată, widgetul va fi înglobat în pagina „Metadate”."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:15
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"În cazul în care cheia de transparență are valoarea COLOR, atunci această "
-"cheie determină culoarea care este utilizată pentru a indica transparența."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:16
-msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
-"will determine the fill color."
-msgstr ""
-"Dacă este activă, culoarea definită de „use-background-color” va fi folosită "
-"pentru a umple zone din jurul imaginii. Dacă aceasta nu este definită, "
-"culoarea de umplere va fi definită de tema GTK+ activă."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:17
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Dacă aceasta este definită la „FALSE” atunci imaginile mici nu vor fi mărite "
-"pentru a se potrivi dimensiunii ecranului."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:18
-msgid ""
-"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
-"for right."
-msgstr ""
-"Poziția panoului galeriei de imagini. Definiți „0” pentru jos; „1” pentru "
-"stânga; „2” pentru sus; „3” pentru dreapta."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:19
-msgid "Interpolate Image"
-msgstr "Interpolează imaginea"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:20
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
-msgstr ""
-"Lista modulelor active. Nu conține „locația” modulelor active. Vezi "
-"fișierul .xviewer-plugin pentru a determina „locația” unui modul activ."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:21
-msgid "Loop through the image sequence"
-msgstr "Repetă ciclul afișării secvenței de imagini"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:22
-msgid "Scroll wheel zoom"
-msgstr "Scalare cu rotița de derulare"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:23
-msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr ""
-"Arată/ascunde butoanele de derulare ale panoului de galeriei de imagini."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:24
-msgid "Show/Hide the image gallery pane."
-msgstr "Afișează/ascunde panoul pentru galeria de imagini."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:25
-msgid "Show/Hide the window side pane."
-msgstr "Arată/ascunde panoul lateral al ferestrei."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:26
-msgid "Show/Hide the window statusbar."
-msgstr "Afișează/ascunde bara de stare a ferestrei."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:27
-msgid "Show/Hide the window toolbar."
-msgstr "Afișează/ascunde bara de unelte a ferestrei."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -506,18 +435,57 @@ msgstr ""
 "background-color” nu este definită, culoarea este definită de tema GTK+ "
 "activă."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:29
-msgid ""
-"The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
-"to the empty string to disable this feature."
-msgstr ""
-"Numele fișierului desktop (inclusiv extensia „.desktop”) al aplicației de "
-"utilizat pentru editarea imaginilor (în cazul în care butonul „Editează "
-"imaginea” din bara de instrumente este apăsat). Definiți la un șir gol "
-"pentru a dezactiva această funcționalitate."
+#: ../data/org.x.viewer.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Interpolează imaginea"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Dacă imaginea ar trebui să fie interpolată la mărire. Aceasta implică o "
+"calitate mai bună, dar și o viteză scăzută față de imaginile neinterpolate."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Extrapolează imaginea"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+"Dacă imaginea ar trebui să fie extrapolată la mărire. Aceasta implică o "
+"calitate mai bună, dar și o viteză scăzută pentru imaginile extrapolate."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Indicator de transparență"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+"Determină felul în care ar trebui indicată transparența. Valorile valide "
+"sunt CHECK_PATTERN, COLOR și NONE. Dacă este aleasă COLOR, atunci cheia "
+"„trans-color” determină valoarea utilizată a culorii."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr "Scalare cu rotița de derulare"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr "Dacă rotița de derulare să fie folosită pentru scalare."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr "Multiplicator scalare"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -531,23 +499,120 @@ msgstr ""
 "scalării pentru fiecare eveniment de derulare și 1.00 înseamnă o creștere "
 "100% a scalării."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
 msgstr "Culoare de transparență"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:33
-msgid "Transparency indicator"
-msgstr "Indicator de transparență"
+#: ../data/org.x.viewer.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"În cazul în care cheia de transparență are valoarea COLOR, atunci această "
+"cheie determină culoarea care este utilizată pentru a indica transparența."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:34
-msgid "Trash images without asking"
-msgstr "Mută imaginile la gunoi fără a mai întreba"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
 msgstr "Folosește o culoare de fundal personalizată"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+"Dacă este activă, culoarea definită de „use-background-color” va fi folosită "
+"pentru a umple zone din jurul imaginii. Dacă aceasta nu este definită, "
+"culoarea de umplere va fi definită de tema GTK+ activă."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Repetă ciclul afișării secvenței de imagini"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr "Dacă secvența de imagini să fie afișată într-un ciclu infinit."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Permite scalarea inițială mai mare de 100%"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Dacă aceasta este definită la „FALSE” atunci imaginile mici nu vor fi mărite "
+"pentru a se potrivi dimensiunii ecranului."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Întârzierea în secunde până la afișarea următoarei imagini"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"O valoare mai mare de 0 determină câte secunde va fi afișată o imagine pe "
+"ecran înainte ca următoarea să fie afișată automat. Zero dezactivează "
+"navigarea automată."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Afișează/ascunde bara de unelte a ferestrei."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Afișează/ascunde bara de stare a ferestrei."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr "Afișează/ascunde panoul pentru galeria de imagini."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+"Poziția panoului galeriei de imagini. Definiți „0” pentru jos; „1” pentru "
+"stânga; „2” pentru sus; „3” pentru dreapta."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr "Dacă panoul galeriei de imagini să fie redimensionabil."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Arată/ascunde panoul lateral al ferestrei."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+"Arată/ascunde butoanele de derulare ale panoului de galeriei de imagini."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+"Închide fereastra principală fără a întreba dacă se dorește salvarea "
+"modificărilor."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr "Mută imaginile la gunoi fără a mai întreba"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+"La activare, Xviewer nu va cere confirmare la mutarea imaginilor la coșul de "
+"gunoi. Se va cere confirmare în cazul în care fișierele nu pot fi mutate în "
+"coșul de gunoi, iar în acest caz vor fi șterse."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -555,73 +620,114 @@ msgstr ""
 "Dacă dialogul de alegere fișiere ar trebui să afișeze dosarul de fotografii "
 "al utilizatorului când nu sunt imagini încărcate."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:37
-msgid "Whether the image gallery pane should be resizable."
-msgstr "Dacă panoul galeriei de imagini să fie redimensionabil."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
 msgstr ""
-"Dacă imaginea ar trebui să fie extrapolată la mărire. Aceasta implică o "
-"calitate mai bună, dar și o viteză scăzută pentru imaginile extrapolate."
+"La activare, dacă nu sunt imagini încărcate în fereastra activă, dialogul de "
+"alegere fișiere va afișa dosarul de fotografii al utilizatorului folosind "
+"dosarul special XDG. Dacă este dezactivat sau dosarul de fotografii nu a "
+"fost definit, va afișa dosarul curent."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:39
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"Dacă imaginea ar trebui să fie interpolată la mărire. Aceasta implică o "
-"calitate mai bună, dar și o viteză scăzută față de imaginile neinterpolate."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:40
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"Imaginile sunt rotite automat în funcție de informațiile de orientare EXIF."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "Dacă lista de metadate din dialogul de proprietăți ar trebui să aibă pagină "
 "proprie."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:42
-msgid "Whether the scroll wheel should be used for zooming."
-msgstr "Dacă rotița de derulare să fie folosită pentru scalare."
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+"La activare, lista detaliată de metadate din dialogul de proprietăți va fi "
+"mutată într-o pagină dedicată din dialog. Aceasta ar trebui să facă dialogul "
+"mai utilizabil pe ecrane mici, cum ar fi netbook-urile. Dacă este "
+"dezactivată, widgetul va fi înglobat în pagina „Metadate”."
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:43
-msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr "Dacă secvența de imagini să fie afișată într-un ciclu infinit."
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Programul extern de utilizat la editarea imaginilor"
 
-#: ../data/org.x.viewer.gschema.xml.in.in.h:44
-msgid "Zoom multiplier"
-msgstr "Multiplicator scalare"
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+"Numele fișierului desktop (inclusiv extensia „.desktop”) al aplicației de "
+"utilizat pentru editarea imaginilor (în cazul în care butonul „Editează "
+"imaginea” din bara de instrumente este apăsat). Definiți la un șir gol "
+"pentru a dezactiva această funcționalitate."
 
-#: ../src/xviewer-application.c:124
-msgid "Running in fullscreen mode"
-msgstr "Se ruleză pe tot ecranul"
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr "Module active"
 
-#: ../src/xviewer-close-confirmation-dialog.c:159
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+"Lista modulelor active. Nu conține „locația” modulelor active. Vezi fișierul "
+".xviewer-plugin pentru a determina „locația” unui modul activ."
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Pe tot ecranul cu dublu-clic"
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Activează modul pe tot ecranul cu dublu-clic"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Reîncarcă imaginea"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:76
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Reîncarcă imaginea curentă"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Data în bara de stare"
+
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Afișează data imaginii în bara de stare a ferestrei"
+
+#: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "Mută imaginile la _gunoi fără a salva"
 
-#: ../src/xviewer-close-confirmation-dialog.c:192
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Salvează"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
 msgstr "Întrebare"
 
-#: ../src/xviewer-close-confirmation-dialog.c:373
+#: ../src/xviewer-close-confirmation-dialog.c:391
 msgid "If you don't save, your changes will be lost."
 msgstr "Dacă nu salvați, modificările vor fi pierdute."
 
-#: ../src/xviewer-close-confirmation-dialog.c:408
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Salvați modificările imaginii „%s” înainge de a închide?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:603
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -636,277 +742,119 @@ msgstr[2] ""
 "Există %d de imagini cu modificări nesalvate. Salvați modificările înainte "
 "de închidere?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:620
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "S_electați imaginile pe care vreți să le salvați:"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:638
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
 msgstr "Dacă nu salvați, toate modificările vor fi pierdute."
 
-#: ../src/xviewer-file-chooser.c:126
-msgid "File format is unknown or unsupported"
-msgstr "Formatul fișierului este necunoscut sau nesuportat"
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+msgid "_Reload"
+msgstr "_Reîncarcă"
 
-#: ../src/xviewer-file-chooser.c:131
-msgid ""
-"Xviewer could not determine a supported writable file format based on "
-"the filename."
-msgstr ""
-"Xviewer nu a putut determina un format inscriptibil de fișier pe baza "
-"numelui fișierului."
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+msgid "Save _As…"
+msgstr "Salvează c_a…"
 
-#: ../src/xviewer-file-chooser.c:132
-msgid "Please try a different file extension like .png or .jpg."
-msgstr "Încercați o altă extensie, cu ar fi .png sau .jpg."
-
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:167
-#, c-format
-msgid "%s (*.%s)"
-msgstr "%s·(*.%s)"
-
-#: ../src/xviewer-file-chooser.c:219
-msgid "All files"
-msgstr "Toate fișierele"
-
-#: ../src/xviewer-file-chooser.c:224
-msgid "Supported image files"
-msgstr "Fișiere imagine acceptate"
-
-#. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:296 ../src/xviewer-properties-dialog.c:137
-#: ../src/xviewer-properties-dialog.c:139 ../src/xviewer-thumb-view.c:443
-msgid "pixel"
-msgid_plural "pixels"
-msgstr[0] "pixel"
-msgstr[1] "pixeli"
-msgstr[2] "de pixeli"
-
-#: ../src/xviewer-file-chooser.c:447
-msgid "Open Image"
-msgstr "Deschide imaginea"
-
-#: ../src/xviewer-file-chooser.c:455
-msgid "Save Image"
-msgstr "Salvează imaginea"
-
-#: ../src/xviewer-file-chooser.c:463
-msgid "Open Folder"
-msgstr "Deschide dosar"
-
-#: ../src/xviewer-image.c:600
-#, c-format
-msgid "Transformation on unloaded image."
-msgstr "Transformare asupra unei imagini neîncărcate."
-
-#: ../src/xviewer-image.c:628
-#, c-format
-msgid "Transformation failed."
-msgstr "Transformarea a eșuat."
-
-#: ../src/xviewer-image.c:1055
-#, c-format
-msgid "EXIF not supported for this file format."
-msgstr "EXIF nu este suportat pentru acest tip de fișier."
-
-#: ../src/xviewer-image.c:1184
-#, c-format
-msgid "Image loading failed."
-msgstr "Încărcarea imaginii a eșuat."
-
-#: ../src/xviewer-image.c:1605 ../src/xviewer-image.c:1707
-#, c-format
-msgid "No image loaded."
-msgstr "Nicio imagine încărcată."
-
-#: ../src/xviewer-image.c:1615 ../src/xviewer-image.c:1719
-#, c-format
-msgid "Temporary file creation failed."
-msgstr "Fișierul temporar nu a putut fi creat."
-
-#: ../src/xviewer-image-jpeg.c:373
-#, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "Nu s-a putut crea un fișier temporar pentru salvare: %s"
-
-#: ../src/xviewer-image-jpeg.c:392
-#, c-format
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Nu s-a putut aloca memorie pentru încărcarea imaginii JPEG"
-
-#: ../src/xviewer-exif-details.c:68
-msgid "Camera"
-msgstr "Cameră"
-
-#: ../src/xviewer-exif-details.c:69
-msgid "Image Data"
-msgstr "Date imagine"
-
-#: ../src/xviewer-exif-details.c:70
-msgid "Image Taking Conditions"
-msgstr "Condiții realizare fotografie"
-
-#: ../src/xviewer-exif-details.c:71
-msgid "Maker Note"
-msgstr "Notă autor"
-
-#: ../src/xviewer-exif-details.c:72
-msgid "Other"
-msgstr "Altele"
-
-#: ../src/xviewer-exif-details.c:74
-msgid "XMP Exif"
-msgstr "XMP Exif"
-
-#: ../src/xviewer-exif-details.c:75
-msgid "XMP IPTC"
-msgstr "XMP IPTC"
-
-#: ../src/xviewer-exif-details.c:76
-msgid "XMP Rights Management"
-msgstr "Administrator de drepturi XMP"
-
-#: ../src/xviewer-exif-details.c:77
-msgid "XMP Other"
-msgstr "Altele XMP"
-
-#: ../src/xviewer-exif-details.c:251
-msgid "Tag"
-msgstr "Etichetă"
-
-#: ../src/xviewer-exif-details.c:258
-msgid "Value"
-msgstr "Valoare"
-
-#. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:118 ../src/xviewer-exif-util.c:158
-msgid "%a, %d %B %Y  %X"
-msgstr "%a, %d %B %Y  %X"
-
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
-#: ../src/xviewer-exif-util.c:152
-msgid "%a, %d %B %Y"
-msgstr "%a, %d %B %Y"
-
-#: ../src/xviewer-error-message-area.c:107
-msgid "_Retry"
-msgstr "_Reîncearcă"
-
-#: ../src/xviewer-error-message-area.c:150
+#: ../src/xviewer-error-message-area.c:171
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Nu s-a putut încărca imaginea „%s”."
 
-#: ../src/xviewer-error-message-area.c:192
+#: ../src/xviewer-error-message-area.c:213
+#, c-format
+msgid "Could not save image '%s'."
+msgstr "Nu se poate salva imaginea „%s”."
+
+#: ../src/xviewer-error-message-area.c:256
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Nu s-au găsit imagini în „%s”."
 
-#: ../src/xviewer-error-message-area.c:199
+#: ../src/xviewer-error-message-area.c:263
 msgid "The given locations contain no images."
 msgstr "Locația dată nu conține imagini."
 
-#: ../src/xviewer-print.c:219
-msgid "Image Settings"
-msgstr "Preferințe imagine"
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "Cameră"
 
-#: ../src/xviewer-print-image-setup.c:834
-msgid "Image"
-msgstr "Imagine"
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "Date imagine"
 
-#: ../src/xviewer-print-image-setup.c:835
-msgid "The image whose printing properties will be set up"
-msgstr "Imaginea pentru care se configurează proprietățile de tipărire"
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Condiții realizare fotografie"
 
-#: ../src/xviewer-print-image-setup.c:841
-msgid "Page Setup"
-msgstr "Configurare pagină"
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr "Date GPS"
 
-#: ../src/xviewer-print-image-setup.c:842
-msgid "The information for the page where the image will be printed"
-msgstr "Informațiile pentru pagina pe care va fi tipărită imaginea"
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Notă autor"
 
-#: ../src/xviewer-print-image-setup.c:870
-msgid "Position"
-msgstr "Poziție"
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "Altele"
 
-#: ../src/xviewer-print-image-setup.c:875
-msgid "_Left:"
-msgstr "_Stânga:"
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr "XMP Exif"
 
-#: ../src/xviewer-print-image-setup.c:876
-msgid "_Right:"
-msgstr "D_reapta:"
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr "XMP IPTC"
 
-#: ../src/xviewer-print-image-setup.c:877
-msgid "_Top:"
-msgstr "S_us:"
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "Administrator de drepturi XMP"
 
-#: ../src/xviewer-print-image-setup.c:878
-msgid "_Bottom:"
-msgstr "_Jos:"
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr "Altele XMP"
 
-#: ../src/xviewer-print-image-setup.c:880
-msgid "C_enter:"
-msgstr "C_entru:"
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "Etichetă"
 
-#: ../src/xviewer-print-image-setup.c:885
-msgid "None"
-msgstr "Niciuna"
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Valoare"
 
-#: ../src/xviewer-print-image-setup.c:887
-msgid "Horizontal"
-msgstr "Orizontal"
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr "Nord"
 
-#: ../src/xviewer-print-image-setup.c:889
-msgid "Vertical"
-msgstr "Vertical"
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr "Est"
 
-#: ../src/xviewer-print-image-setup.c:891
-msgid "Both"
-msgstr "Ambele"
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr "Vest"
 
-#: ../src/xviewer-print-image-setup.c:907
-msgid "Size"
-msgstr "Mărime"
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr "Sud"
 
-#: ../src/xviewer-print-image-setup.c:912
-msgid "_Width:"
-msgstr "_Lățime:"
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
 
-#: ../src/xviewer-print-image-setup.c:914
-msgid "_Height:"
-msgstr "Î_nălțime:"
-
-#: ../src/xviewer-print-image-setup.c:917
-msgid "_Scaling:"
-msgstr "_Scalare:"
-
-#: ../src/xviewer-print-image-setup.c:930
-msgid "_Unit:"
-msgstr "_Unități:"
-
-#: ../src/xviewer-print-image-setup.c:935
-msgid "Millimeters"
-msgstr "Milimetri"
-
-#: ../src/xviewer-print-image-setup.c:937
-msgid "Inches"
-msgstr "Țoli"
-
-#: ../src/xviewer-print-image-setup.c:967
-msgid "Preview"
-msgstr "Previzualizare"
-
-#: ../src/xviewer-properties-dialog.c:154
-msgid "Unknown"
-msgstr "Necunoscut"
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/xviewer-properties-dialog.c:232
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (lentilă)"
@@ -914,12 +862,229 @@ msgstr "%.1f (lentilă)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/xviewer-properties-dialog.c:243
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (film 35mm)"
 
-#: ../src/xviewer-save-as-dialog-helper.c:161
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Formatul fișierului este necunoscut sau nesuportat"
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Vizualizatorul de imagini nu poate determina un format de fișier recunoscut "
+"pentru scriere, pe baza numelui fișierului."
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "Încercați o altă extensie, cu ar fi .png sau .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/xviewer-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s·(*.%s)"
+
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr "Toate fișierele"
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr "Fișiere imagine acceptate"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "pixel"
+msgstr[1] "pixeli"
+msgstr[2] "de pixeli"
+
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr "D_eschide"
+
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr "Deschide imaginea"
+
+#: ../src/xviewer-file-chooser.c:467
+msgid "Save Image"
+msgstr "Salvează imaginea"
+
+#: ../src/xviewer-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Deschide dosar"
+
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Transformare asupra unei imagini neîncărcate."
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Transformarea a eșuat."
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF nu este suportat pentru acest tip de fișier."
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Încărcarea imaginii a eșuat."
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Nicio imagine încărcată."
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "Nu aveți permisiunile necesare pentru a salva fișierul."
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Fișierul temporar nu a putut fi creat."
+
+#: ../src/xviewer-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Nu s-a putut crea un fișier temporar pentru salvare: %s"
+
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "Nu s-a putut aloca memorie pentru încărcarea imaginii JPEG"
+
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr "Dimensiune fișier:"
+
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+"Arată dosarul care conține acest fișier în administratorul de fișiere"
+
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] "%lu secundă"
+msgstr[1] "%lu secunde"
+msgstr[2] "%lu de secunde"
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "Preferințe imagine"
+
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "Imagine"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr "Imaginea pentru care se configurează proprietățile de tipărire"
+
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Configurare pagină"
+
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Informațiile pentru pagina pe care va fi tipărită imaginea"
+
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr "Poziție"
+
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr "_Stânga:"
+
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr "D_reapta:"
+
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr "S_us:"
+
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "_Jos:"
+
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "C_entru:"
+
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr "Niciuna"
+
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Orizontal"
+
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr "Ambele"
+
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "Mărime"
+
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr "_Lățime:"
+
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr "Î_nălțime:"
+
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "_Scalare:"
+
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "_Unități:"
+
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "Milimetri"
+
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr "Țoli"
+
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Previzualizare"
+
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "ca atare"
 
@@ -938,18 +1103,18 @@ msgstr "ca atare"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:471
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "Fotografiat în"
 
-#: ../src/xviewer-uri-converter.c:984
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Cel puțin două nume de fișiere sunt identice."
 
 #: ../src/xviewer-util.c:68
-msgid "Could not display help for Xviewer"
-msgstr "Nu s-a putut afișa ajutorul pentru Xviewer"
+msgid "Could not display help for Image Viewer"
+msgstr "Nu se poate afișa pagina de ajutor pentru vizualizatorul de imagini"
 
 #: ../src/xviewer-util.c:116
 msgid " (invalid Unicode)"
@@ -961,7 +1126,7 @@ msgstr " (Unicode nevalid)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:531
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -969,18 +1134,14 @@ msgstr[0] "%i × %i pixel  %s    %i%%"
 msgstr[1] "%i × %i pixeli  %s    %i%%"
 msgstr[2] "%i × %i de pixeli  %s    %i%%"
 
-#: ../src/xviewer-window.c:831
-msgid "_Reload"
-msgstr "_Reîncarcă"
-
-#: ../src/xviewer-window.c:833 ../src/xviewer-window.c:2710
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Ascun_de"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:843
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -989,7 +1150,7 @@ msgstr ""
 "Imaginea „%s” a fost modificată de către o aplicație externă.\n"
 "Doriți să o reîncărcați?"
 
-#: ../src/xviewer-window.c:1007
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Utilizează „%s” pentru a deschide imaginea aleasă"
@@ -999,17 +1160,26 @@ msgstr "Utilizează „%s” pentru a deschide imaginea aleasă"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1163
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Se salvează imaginea „%s” (%u/%u)"
 
-#: ../src/xviewer-window.c:1516
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Se deschide imaginea „%s”"
 
-#: ../src/xviewer-window.c:2209
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr "Părăsește _modul pe tot ecranul"
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr "Se vizualizează o prezentare de imagini"
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1018,48 +1188,27 @@ msgstr ""
 "Eroare la tipărirea fișierului:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2471
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "Editor bară de unelte"
 
-#: ../src/xviewer-window.c:2474
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "_Restabilește la implicit"
 
-#: ../src/xviewer-window.c:2560
-msgid "translator-credits"
-msgstr ""
-"Mugurel Tudor <mugurelu@gnome.ro>\n"
-"Daniel Șerbănescu <cyber19rider@gmail.com>\n"
-"Launchpad Contributions:\n"
-"  Adi Roiban https://launchpad.net/~adiroiban\n"
-"  Cristian KLEIN https://launchpad.net/~cristiklein\n"
-"  Doru Horișco https://launchpad.net/~doruhushhush\n"
-"  Ionuț Jula https://launchpad.net/~ionutjula\n"
-"  Mircea MITU https://launchpad.net/~mache\n"
-"  Mugurel Tudor https://launchpad.net/~mugurelu-gnome"
-
-#: ../src/xviewer-window.c:2565
-msgid "Xviewer"
-msgstr "Xviewer"
-
-#: ../src/xviewer-window.c:2568
-msgid "The GNOME image viewer."
-msgstr "Vizualizatorul de imagini pentru GNOME."
-
-#: ../src/xviewer-window.c:2660 ../src/xviewer-window.c:2675
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "Eroare la lansarea Configurațiilor sistemului: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2708
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "_Deschide preferințele de fundal"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2724
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1068,11 +1217,72 @@ msgstr ""
 "Imaginea „%s” a fost configurată ca fundal al desktopului.\n"
 "Doriți să-i modificați aspectul?"
 
-#: ../src/xviewer-window.c:3116
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "Se salvează imaginea local…"
 
-#: ../src/xviewer-window.c:3196
+#: ../src/xviewer-window.c:3352
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+"Sigur doriți să eliminați\n"
+"definitiv „%s”?"
+
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+"Sigur doriți să eliminați\n"
+"definitiv imaginea selectată?"
+msgstr[1] ""
+"Sigur doriți să eliminați\n"
+"definitiv imaginile selectate?"
+msgstr[2] ""
+"Sigur doriți să eliminați\n"
+"definitiv imaginile selectate?"
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr "Şter_ge"
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr "_Da"
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr "_Nu întreba din nou în timpul acestei sesiuni"
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr "Nu se poate prelua fișierul imagine"
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr "Nu se pot prelua informațiile fișierului imagine"
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "Nu s-a putut șterge fișierul"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Eroare la ștergerea imaginii %s"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1081,7 +1291,7 @@ msgstr ""
 "Sunteți sigur că doriți să mutați\n"
 "„%s” la gunoi?"
 
-#: ../src/xviewer-window.c:3199
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1090,7 +1300,7 @@ msgstr ""
 "Nu s-a putut găsit coșul de gunoi pentru „%s”. Doriți să ștergeți permanent "
 "această imagine?"
 
-#: ../src/xviewer-window.c:3204
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1108,7 +1318,7 @@ msgstr[2] ""
 "Doriți să mutați %d de imagini\n"
 "selectată în coșul de gunoi?"
 
-#: ../src/xviewer-window.c:3209
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1116,508 +1326,379 @@ msgstr ""
 "O parte din imaginile selectate nu au putut fi mutate la coșul de gunoi și "
 "voi fi șterse definitiv. Doriți să continuați?"
 
-#: ../src/xviewer-window.c:3226 ../src/xviewer-window.c:3714 ../src/xviewer-window.c:3738
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "Mu_tă la coșul de gunoi"
 
-#: ../src/xviewer-window.c:3228
-msgid "_Do not ask again during this session"
-msgstr "_Nu întreba din nou în această sesiune"
-
-#: ../src/xviewer-window.c:3273 ../src/xviewer-window.c:3287
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Nu s-a putut accesa coșul de gunoi."
 
-#: ../src/xviewer-window.c:3295
-#, c-format
-msgid "Couldn't delete file"
-msgstr "Nu s-a putut șterge fișierul"
-
-#: ../src/xviewer-window.c:3391
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "Eroare la ștergerea imaginii %s"
-
-#: ../src/xviewer-window.c:3638
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "_Imagine"
 
-#: ../src/xviewer-window.c:3639
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "_Editare"
 
-#: ../src/xviewer-window.c:3640
-msgid "_View"
-msgstr "_Vizualizare"
-
-#: ../src/xviewer-window.c:3641
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "Navi_gare"
 
-#: ../src/xviewer-window.c:3642
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "Unel_te"
 
-#: ../src/xviewer-window.c:3643
-msgid "_Help"
-msgstr "_Ajutor"
-
-#: ../src/xviewer-window.c:3645
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "_Deschide…"
 
-#: ../src/xviewer-window.c:3646
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Deschide un fișier"
 
-#: ../src/xviewer-window.c:3648
-msgid "_Close"
-msgstr "În_chide"
-
-#: ../src/xviewer-window.c:3649
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Închide fereastra"
 
-#: ../src/xviewer-window.c:3651
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "Bară de _unelte"
 
-#: ../src/xviewer-window.c:3652
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Editează bara de unelte a aplicației"
 
-#: ../src/xviewer-window.c:3654
-msgid "Prefere_nces"
-msgstr "Preferi_nțe"
+#: ../src/xviewer-window.c:4062
+msgid "Preferences for Image Viewer"
+msgstr "Preferințe pentru vizualizatorul de imagini"
 
-#: ../src/xviewer-window.c:3655
-msgid "Preferences for Xviewer"
-msgstr "Preferințe pentru Xviewer"
-
-#: ../src/xviewer-window.c:3657
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Conținut"
 
-#: ../src/xviewer-window.c:3658
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Ajutor pentru această aplicație"
 
-#: ../src/xviewer-window.c:3660
-msgid "_About"
-msgstr "_Despre"
-
-#: ../src/xviewer-window.c:3661
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Despre această aplicație"
 
-#: ../src/xviewer-window.c:3666
-msgid "_Toolbar"
-msgstr "Bară de unel_te"
-
-#: ../src/xviewer-window.c:3667
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Comută vizibilitatea barei de unelte în fereastra curentă"
 
-#: ../src/xviewer-window.c:3669
-msgid "_Statusbar"
-msgstr "Bară de _stare"
-
-#: ../src/xviewer-window.c:3670
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Comută vizibilitatea barei de stare în fereastra curentă"
 
-#: ../src/xviewer-window.c:3672
-msgid "_Image Gallery"
-msgstr "Galerie de _imagini"
-
-#: ../src/xviewer-window.c:3673
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 "Comută vizibilitatea panoului pentru galeria de imagini în fereastra curentă"
 
-#: ../src/xviewer-window.c:3675
-msgid "Side _Pane"
-msgstr "_Panou lateral"
-
-#: ../src/xviewer-window.c:3676
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Schimbă vizibilitatea panoului lateral în fereastra curentă"
 
-#: ../src/xviewer-window.c:3681
-msgid "_Save"
-msgstr "_Salvează"
-
-#: ../src/xviewer-window.c:3682
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "Salvează modificările din imaginile selectate curent"
 
-#: ../src/xviewer-window.c:3684
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "Desc_hide cu"
 
-#: ../src/xviewer-window.c:3685
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "Deschide imaginile selectate cu a altă aplicație"
 
-#: ../src/xviewer-window.c:3687
-msgid "Save _As…"
-msgstr "Salvează c_a…"
-
-#: ../src/xviewer-window.c:3688
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "Salvează imaginile selectate sub un alt nume"
 
-#: ../src/xviewer-window.c:3690
+#: ../src/xviewer-window.c:4097
+msgid "Show Containing _Folder"
+msgstr "Arată _dosarul conținător"
+
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "Ti_părește…"
 
-#: ../src/xviewer-window.c:3691
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "Tipărește imaginile selectate"
 
-#: ../src/xviewer-window.c:3693
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "Prop_rietăți"
 
-#: ../src/xviewer-window.c:3694
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "Afișează prioprietățile și informațiile imaginii selectate"
 
-#: ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Refă"
 
-#: ../src/xviewer-window.c:3697
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "Anulează ultima modificare din imagine"
 
-#: ../src/xviewer-window.c:3699
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "Răstoarnă ori_zontal"
 
-#: ../src/xviewer-window.c:3700
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "Oglindește orizontal imaginea"
 
-#: ../src/xviewer-window.c:3702
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "Răstoarnă _vertical"
 
-#: ../src/xviewer-window.c:3703
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "Oglindește vertical imaginea"
 
-#: ../src/xviewer-window.c:3705
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "_Rotește în sens orar"
 
-#: ../src/xviewer-window.c:3706
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Rotește imaginea 90 de grade către dreapta"
 
-#: ../src/xviewer-window.c:3708
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotire în sensulul invers al ace_lor de ceasornic"
 
-#: ../src/xviewer-window.c:3709
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Rotește imaginea 90 de grade către stânga"
 
-#: ../src/xviewer-window.c:3711
-msgid "Set as _Desktop Background"
-msgstr "Definește ca fundal pentru _desktop"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr "Setează ca imagine de _fundal"
 
-#: ../src/xviewer-window.c:3712
-msgid "Set the selected image as the desktop background"
-msgstr "Definește imaginea selectată ca fundal pentru desktop"
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr "Setează imaginea selectată ca imagine de fundal"
 
-#: ../src/xviewer-window.c:3715
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "Mută în coșul de gunoi imaginea selectată"
 
-#: ../src/xviewer-window.c:3717
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr "Șt_erge imaginea"
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr "Șterge imaginea selectată"
+
+#: ../src/xviewer-window.c:4130
 #| msgid "_Top:"
 msgid "_Copy"
 msgstr "_Copiază"
 
-#: ../src/xviewer-window.c:3718
+#: ../src/xviewer-window.c:4131
 #| msgid "Move the selected item on the toolbar"
 msgid "Copy the selected image to the clipboard"
 msgstr "Copiază imaginea selectată în clipboard"
 
-#: ../src/xviewer-window.c:3720 ../src/xviewer-window.c:3729 ../src/xviewer-window.c:3732
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Mărește"
 
-#: ../src/xviewer-window.c:3721 ../src/xviewer-window.c:3730
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "Mărește imaginea"
 
-#: ../src/xviewer-window.c:3723 ../src/xviewer-window.c:3735
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Mi_cșorează"
 
-#: ../src/xviewer-window.c:3724 ../src/xviewer-window.c:3733 ../src/xviewer-window.c:3736
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "Micșorează imaginea"
 
-#: ../src/xviewer-window.c:3726
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "Dimensiune _normală"
 
-#: ../src/xviewer-window.c:3727
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "Afișează imaginea la dimensiunea ei normală"
 
-#: ../src/xviewer-window.c:3744
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "Pe _tot ecranul"
 
-#: ../src/xviewer-window.c:3745
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "Afișează imaginea curentă pe tot ecranul"
 
-#: ../src/xviewer-window.c:3747
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "Pauză în succesiunea de imagini"
 
-#: ../src/xviewer-window.c:3748
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "Face o pauză sau reia succesiunea de imagini"
 
-#: ../src/xviewer-window.c:3750
-msgid "Best _Fit"
+#: ../src/xviewer-window.c:4163
+msgid "_Best Fit"
 msgstr "Cea mai _bună potrivire"
 
-#: ../src/xviewer-window.c:3751
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "Potrivește dimensiunea imaginii în fereastră"
 
-#: ../src/xviewer-window.c:3756 ../src/xviewer-window.c:3771
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "Imaginea _precedentă"
 
-#: ../src/xviewer-window.c:3757
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "Mergi la imaginea anterioară din galerie"
 
-#: ../src/xviewer-window.c:3759
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "Imaginea _următoare"
 
-#: ../src/xviewer-window.c:3760
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "Mergi la imaginea următoare din galerie"
 
-#: ../src/xviewer-window.c:3762 ../src/xviewer-window.c:3774
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "P_rima imagine"
 
-#: ../src/xviewer-window.c:3763
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "Mergi la prima imagine din galerie"
 
-#: ../src/xviewer-window.c:3765 ../src/xviewer-window.c:3777
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "Ul_tima imagine"
 
-#: ../src/xviewer-window.c:3766
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "Mergi la ultima imagine din galerie"
 
-#: ../src/xviewer-window.c:3768
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "Imagine aleatoa_re"
 
-#: ../src/xviewer-window.c:3769
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "Mergi la o imagine aleatoare din galerie"
 
-#: ../src/xviewer-window.c:3783
-msgid "_Slideshow"
-msgstr "Succesiune _automată a imaginilor"
+#: ../src/xviewer-window.c:4340
+msgid "S_lideshow"
+msgstr "Pre_zentare diapozitive"
 
-#: ../src/xviewer-window.c:3784
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "Pornește o succesiune automată a imaginilor"
 
-#: ../src/xviewer-window.c:3850
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Precedenta"
 
-#: ../src/xviewer-window.c:3854
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Următoarea"
 
-#: ../src/xviewer-window.c:3858
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Dreapta"
 
-#: ../src/xviewer-window.c:3861
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Stânga"
 
-#: ../src/xviewer-window.c:3864
+#: ../src/xviewer-window.c:4431
+msgid "Show Folder"
+msgstr "Arată dosarul"
+
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Mărește"
 
-#: ../src/xviewer-window.c:3867
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Micșorează"
 
-#: ../src/xviewer-window.c:3870
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/xviewer-window.c:3873
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Potrivește"
 
-#: ../src/xviewer-window.c:3876
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "Galerie"
 
-#: ../src/xviewer-window.c:3879
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Șterge"
 
-#: ../src/xviewer-window.c:4227
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Editează imaginea curentă folosind %s"
 
-#: ../src/xviewer-window.c:4229
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "Editează imaginea"
 
-#: ../src/main.c:69 ../src/main.c:254
-msgid "Xviewer Image Viewer"
-msgstr "Vizualizatorul de imagini Xviewer"
-
-#: ../src/main.c:76
+#: ../src/main.c:63
 msgid "Open in fullscreen mode"
 msgstr "Deschide pe tot ecranul"
 
-#: ../src/main.c:77
+#: ../src/main.c:64
 msgid "Disable image gallery"
 msgstr "Dezactivează galeria de imagini"
 
-#: ../src/main.c:78
+#: ../src/main.c:65
 msgid "Open in slideshow mode"
 msgstr "Deschide în modul succesiune automată a imaginilor"
 
-#: ../src/main.c:80
+#: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Pornește o nouă instanță în locul refolosirii instanței curente"
 
-#: ../src/main.c:83
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+"Deschide într-o singură fereastră, dacă sunt deschise mai multe ferestre, se "
+"va utiliza prima dintre acestea"
+
+#: ../src/main.c:69
 msgid "Show the application's version"
 msgstr "Arată versiunea aplicației"
 
-#: ../src/main.c:84
+#: ../src/main.c:99
 msgid "[FILE…]"
 msgstr "[FIȘIER…]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:214
+#: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Rulați „%s --help” pentru a vedea lista completă a opțiunilor liniei de "
 "comandă."
-
-#~ msgid "All Images"
-#~ msgstr "Toate imaginile"
-
-#~ msgid "Plugin"
-#~ msgstr "Modul"
-
-#~ msgid "Enabled"
-#~ msgstr "Activat"
-
-#~ msgid "C_onfigure"
-#~ msgstr "C_onfigurează"
-
-#~ msgid "A_ctivate"
-#~ msgstr "A_ctivează"
-
-#~ msgid "Ac_tivate All"
-#~ msgstr "Ac_tivează tot"
-
-#~ msgid "_Deactivate All"
-#~ msgstr "_Dezactivează tot"
-
-#~ msgid "Active _Plugins:"
-#~ msgstr "Module acti_ve:"
-
-#~ msgid "_About Plugin"
-#~ msgstr "_Despre modul"
-
-#~ msgid "C_onfigure Plugin"
-#~ msgstr "C_onfigurează modul"
-
-#~ msgid ""
-#~ "This program is free software; you can redistribute it and/or modify it "
-#~ "under the terms of the GNU General Public License as published by the "
-#~ "Free Software Foundation; either version 2 of the License, or (at your "
-#~ "option) any later version.\n"
-#~ msgstr ""
-#~ "Acest program este liber; îl puteți redistribui și/sau modifica în "
-#~ "conformitate cu termenii licenței Publice Generale GNU așa cum este "
-#~ "publicată de Free Software Foundation; fie versiunea 2 a Licenței, fie "
-#~ "(la latitudinea dumneavoastră) orice versiune ulterioară.\n"
-
-#~ msgid ""
-#~ "This program is distributed in the hope that it will be useful, but "
-#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
-#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-#~ "Public License for more details.\n"
-#~ msgstr ""
-#~ "Acest program este distribuit cu speranța că va fi util, dar FĂRĂ NICI O "
-#~ "GARANȚIE, fără garanție implicită de vandabilitate și  conformitate unui "
-#~ "anumit scop.  Citiți Licența Publică Generală GNU pentru detalii.\n"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program; if not, write to the Free Software Foundation, Inc., "
-#~ "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-#~ msgstr ""
-#~ "Ar fi trebuit să primiți o copie a Licenței Generale Publice (GPL) GNU "
-#~ "împreună cu acest program; dacă nu, scrieți Fundației pentru Software "
-#~ "Liber: Free Software Foundation, Inc., 59 Temple Place - Suite 330, "
-#~ "Boston, MA 02111-1307, USA."
-
-#~ msgid "Collection"
-#~ msgstr "Colecție"
-
-#~ msgid "Load Image"
-#~ msgstr "Încarcă imaginea"
-
-#~ msgid "_File"
-#~ msgstr "_Fișier"
-
-#~ msgid "Set up the page properties for printing"
-#~ msgstr "Configurează proprietățile paginii pentru tipărire"
-
-#~ msgid "<b>Details</b>"
-#~ msgstr "<b>Detalii</b>"
-
-#~ msgid "<b>Height:</b>"
-#~ msgstr "<b>Înălțime:</b>"
-
-#~ msgid "<b>Name:</b>"
-#~ msgstr "<b>Nume:</b>"
-
-#~ msgid "<b>Type:</b>"
-#~ msgstr "<b>Tip:</b>"
-
-#~ msgid "<b>Width:</b>"
-#~ msgstr "<b>Lățime:</b>"
-
-#~ msgid "Open with \"%s\""
-#~ msgstr "Deschide cu „%s”"
-
-#~ msgid "Set As _Wallpaper"
-#~ msgstr "Setează ca _fundal pentru desktop"

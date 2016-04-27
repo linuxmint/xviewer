@@ -7,20 +7,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xviewer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-10-25 00:12+0000\n"
-"PO-Revision-Date: 2011-10-27 12:40+0200\n"
-"Last-Translator: Andiswa Mvanyashe <andiswamva@webmail.co.za>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-10 16:57+0000\n"
+"PO-Revision-Date: 2016-02-05 08:12+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: translate-discuss-xh@lists.sourceforge.net\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: xh\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Virtaal 0.7.0\n"
-"X-DamnedLies-Scope: partial\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Project-Style: gnome\n"
+"Language: xh\n"
+"X-DamnedLies-Scope: partial\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -29,32 +31,32 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:988
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
 msgstr "Bonisa “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1479
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
 msgstr "_Gqithela kwibar yezixhobo"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1480
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
 msgstr "Shenxisa le nto ekhethiweyo kwibar yezixhobo"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1481
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
 msgstr "_Susa kwi-bar yezixhobo"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1482
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
 msgstr "Susa le nto ekhethiweyo kwibar yezixhobo"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1483
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
 msgstr "_Cima ibar yezixhobo"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1484
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
 msgstr "Susa ibar yezixhobo ekhethiwe"
 
@@ -62,20 +64,588 @@ msgstr "Susa ibar yezixhobo ekhethiwe"
 msgid "Separator"
 msgstr "Isahlukanisi"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Yenza ibeyifestile egcwele ngokucofa kabini"
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+msgid "_View"
+msgstr "_Bonisa"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+msgid "_Toolbar"
+msgstr "I-_bar yezixhobo"
+
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+msgid "_Statusbar"
+msgstr "Um_gca wobume bokuqhubekayo"
+
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+msgid "_Image Gallery"
+msgstr "I_sibonisi-mfanekiso"
+
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+msgid "Side _Pane"
+msgstr "Iglasi yefestile _esecaleni"
+
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+msgid "Prefere_nces"
+msgstr "Uluhlu lwezinto ezikhe_thwayo"
+
+#: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
+#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+msgid "_Help"
+msgstr "Un_cedo"
+
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+msgid "_About"
+msgstr "_Malunga"
+
+#: ../data/xviewer-app-menu.xml.h:9
+msgid "_Quit"
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:1
+msgid ""
+"Xviewer is an image viewer which supports many formats. It can be used to "
+"view single images or images in a collection."
+msgstr ""
+
+#: ../data/xviewer.appdata.xml.in.h:2
+msgid ""
+"Xviewer also allows to view the images in a fullscreen slideshow mode or set "
+"an image as the desktop wallpaper. It reads the camera tags to automatically "
+"rotate your images in the correct portrait or landscape orientation."
+msgstr ""
+
+#: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
+#: ../src/xviewer-window.c:6181
+msgid "Image Viewer"
+msgstr "Isibonisi-Mfanekiso"
+
+#: ../data/xviewer.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr "Funda nje kwaye ujikajike umifanekiso"
+
+#. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
+#: ../data/xviewer.desktop.in.in.h:4
+msgid "Picture;Slideshow;Graphics;"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
+msgid "Image Properties"
+msgstr "Iinkcazelo ngeempawu zomfuziselo"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:2
+msgid "_Previous"
+msgstr "_Ngaphambili"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:3
+msgid "_Next"
+msgstr "_Landelayo"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:4
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
+#: ../src/xviewer-window.c:4055
+msgid "_Close"
+msgstr "Va_la"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:5
+#: ../src/xviewer-metadata-sidebar.c:497
+msgid "Name:"
+msgstr "Igama:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:499
+msgid "Width:"
+msgstr "Ububanzi:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:501
+msgid "Height:"
+msgstr "Ukuphakama:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:503
+msgid "Type:"
+msgstr "Chwetheza:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:9
+msgid "Bytes:"
+msgstr "Iibyte:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-metadata-sidebar.c:507
+msgid "Folder:"
+msgstr ""
+
+#: ../data/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:495
+msgid "General"
+msgstr "Ngokubanzi"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:12
+#: ../src/xviewer-metadata-sidebar.c:532
+msgid "Aperture Value:"
+msgstr "Ixabiso lekroba:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:535
+msgid "Exposure Time:"
+msgstr "Ixesha lokutyhilwa:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:538
+msgid "Focal Length:"
+msgstr "Ubude besazulu:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:540
+msgid "Flash:"
+msgstr "Danyaza:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:544
+msgid "ISO Speed Rating:"
+msgstr "Uthelekelelo lwesantya se-ISO:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:547
+msgid "Metering Mode:"
+msgstr "Uhlelo lwe-metering:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:550
+msgid "Camera Model:"
+msgstr "Uhlobo lwe-khamera:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:552
+msgid "Date/Time:"
+msgstr "Umhla/Ixesha:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:557
+msgid "Description:"
+msgstr "Inkcazelo:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:560
+msgid "Location:"
+msgstr "Indawo yokuthile:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:563
+msgid "Keywords:"
+msgstr "Amagama asentloko:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:565
+msgid "Author:"
+msgstr "Umqulunqi:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:568
+msgid "Copyright:"
+msgstr "Amalungelo omqulunqi:"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:571
+msgid "Details"
+msgstr "Iinkcukacha"
+
+#: ../data/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:528
+msgid "Metadata"
+msgstr "I-metadata"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:1
+msgid "Save As"
+msgstr "Gcina Njenge"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
+#: ../src/xviewer-close-confirmation-dialog.c:172
+#: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
+#: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
+#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
+#: ../src/xviewer-window.c:3630
+msgid "_Cancel"
+msgstr "_Hlaba"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:3
+#: ../src/xviewer-close-confirmation-dialog.c:184
+msgid "Save _As"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr "<b>%f:</b> uqobo lwegama lefayili"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr "<b>%n:</b> ikhawunta"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
+msgid "_Filename format:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
+msgid "_Destination folder:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
+msgid "Choose a folder"
+msgstr "Khetha isiqulathi seefayili"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
+msgid "File Path Specifications"
+msgstr "Ukubalula indlela yefayili"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
+msgid "_Start counter at:"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
+msgid "Options"
+msgstr "Okukhethwayo"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
+msgid "Rename from:"
+msgstr "Nika igama kwakhona ukusuka:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:16
+msgid "To:"
+msgstr "Iya ku:"
+
+#: ../data/xviewer-multiple-save-as-dialog.ui.h:17
+msgid "File Name Preview"
+msgstr "Ukujonga igama lefayili phambi koshicilelo"
+
+#: ../data/xviewer-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Uluhlu lwezinto ezikhethwayo"
+
+#: ../data/xviewer-preferences-dialog.ui.h:4
+msgid "Image Enhancements"
+msgstr "Ukwenyuswelwa komfanekiso"
+
+#: ../data/xviewer-preferences-dialog.ui.h:5
+msgid "Smooth images when zoomed _out"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:6
+msgid "Smooth images when zoomed _in"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:7
+msgid "_Automatic orientation"
+msgstr "In_dlela yokubonisa ezenzekelayo"
+
+#: ../data/xviewer-preferences-dialog.ui.h:8
+msgid "Background"
+msgstr "Okungasemva"
+
+#: ../data/xviewer-preferences-dialog.ui.h:9
+msgid "As custom color:"
+msgstr "Njengombala womthengi:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:10
+#: ../data/org.x.viewer.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr "Umbala ongasemva"
+
+#: ../data/xviewer-preferences-dialog.ui.h:11
+msgid "Transparent Parts"
+msgstr "Iindawo ezicace gca"
+
+#: ../data/xviewer-preferences-dialog.ui.h:12
+msgid "As check _pattern"
+msgstr "Njengepateni _yokukhangela"
+
+#: ../data/xviewer-preferences-dialog.ui.h:13
+msgid "As custom c_olor:"
+msgstr "Njengom_bala womthengi:"
+
+#: ../data/xviewer-preferences-dialog.ui.h:14
+msgid "Color for Transparent Areas"
+msgstr "Umbala weendawo ocace gca"
+
+#: ../data/xviewer-preferences-dialog.ui.h:15
+msgid "As _background"
+msgstr "Nje_ngokungasemva"
+
+#: ../data/xviewer-preferences-dialog.ui.h:16
+msgid "Image View"
+msgstr "Umboniso womfanekiso"
+
+#: ../data/xviewer-preferences-dialog.ui.h:17
+msgid "Image Zoom"
+msgstr "Ukwandisa umfanekiso"
+
+#: ../data/xviewer-preferences-dialog.ui.h:18
+msgid "E_xpand images to fit screen"
+msgstr "Yan_disa umfanekiso ukuze wanele isikrini"
+
+#: ../data/xviewer-preferences-dialog.ui.h:19
+msgid "Sequence"
+msgstr "Ukulandelana"
+
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#: ../data/xviewer-preferences-dialog.ui.h:21
+msgid "_Time between images:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:22
+msgid "_Loop sequence"
+msgstr "Ukul_andelana kwesethi yeengxelo"
+
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Slideshow"
+msgstr "Umboniso wotyibiliko"
+
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Plugins"
+msgstr "Izingeniso"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:2
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:5
+msgid "Interpolate Image"
+msgstr "Ukufakela umfanekiso"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:6
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+"Ukuba umfanekiso ufanele ukufakelwa okanye ukungafakelwa kwisandisi. Oku "
+"kukhokelela kubunjani obungcono kodwa kuyacotha kunemifanekiso engafakelwayo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:7
+msgid "Extrapolate Image"
+msgstr "Ukufakisisa umfanekiso"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:9
+msgid "Transparency indicator"
+msgstr "Isalathisi esicace gca"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:10
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:11
+msgid "Scroll wheel zoom"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:12
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:15
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example, "
+"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
+"a 100% zoom increment."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:16
+msgid "Transparency color"
+msgstr "Umbala ocace gca"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:17
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr ""
+"Ukuba iqhosha lokucace gca limele COLOR, elo qhosha limisa umbala "
+"osetyenzisiweyo ukubonisa isicacisi."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:18
+msgid "Use a custom background color"
+msgstr "Sebenzisa umbala wasemva osele ukhona"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:19
+msgid ""
+"If this is active, the color set by the background-color key will be used to "
+"fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:20
+msgid "Loop through the image sequence"
+msgstr "Setha iingxelo uyidlulise kulandelwano lwemfanekiso"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+"Ukuba kunjalo okanye akunjalo ukulandelana kwemifanekiso kufuneka kubonisiwe "
+"kwisethi yeengxelo ezingenasiphelo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:23
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr "Vumela isandisi esingaphezulu kwe-100% xa kuqaliswayo"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:24
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr ""
+"Ukuba le nto imiselwe ku-FALSE imifanekiso emincinane ayinako ukutsalwa "
+"ukuze yanele kwiskrini xa kuqaliswayo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:25
+msgid "Delay in seconds until showing the next image"
+msgstr "Yilibazise imizuzwana de kuvele umfanekiso olandelayo"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:26
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until "
+"the next one is shown automatically. Zero disables the automatic browsing."
+msgstr ""
+"Ixabiso elingaphezulu kwe-0 limisela imizuzwana ehlalwa ngumfanekiso "
+"kwiskrini de kuboniswe olandelayo ngokuzenzekelayo. Iqanda alikuvumeli "
+"ukukhangela okuzenzekelayo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:27
+msgid "Show/Hide the window toolbar."
+msgstr "Bonisa/fihla ifestile yebar yezixhobo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:28
+msgid "Show/Hide the window statusbar."
+msgstr "Bonisa/fihla ifestile yomgca wobume obuqhubekayo."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:29
+msgid "Show/Hide the image gallery pane."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:30
+msgid ""
+"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
+"for right."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:31
+msgid "Whether the image gallery pane should be resizable."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:32
+msgid "Show/Hide the window side pane."
+msgstr "Bonisa/fihla ifestile yeglasi esecaleni."
+
+#: ../data/org.x.viewer.gschema.xml.in.h:33
+msgid "Show/Hide the image gallery pane scroll buttons."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:34
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:35
+msgid "Trash images without asking"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:36
+msgid ""
+"If activated, Xviewer won't ask for confirmation when moving images to the "
+"trash. It will still ask if any of the files cannot be moved to the trash "
+"and would be deleted instead."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:37
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images "
+"are loaded."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:38
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:39
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable "
+"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr "Inkqubo yangaphandle iyasetyenziswa ukulungisa umfanekiso"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use "
+"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
+"to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:43
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:44
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
+"given plugin."
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
 msgstr "Isikrini esipheleleyo ngokucofa kabini"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:53
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Yenza ibeyifestile egcwele ngokucofa kabini"
+
+#: ../plugins/reload/xviewer-reload-plugin.c:74
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "Faka kwakhona umfanekiso"
 
-#: ../plugins/reload/xviewer-reload-plugin.c:55
+#: ../plugins/reload/xviewer-reload-plugin.c:76
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "Phinda ulayishe umfanekiso okhoyo"
@@ -88,510 +658,29 @@ msgstr "Usuku kwindawo yokubonisa"
 msgid "Shows the image date in the window statusbar"
 msgstr "Bonisa umfanekiso wosuku kwifestile yomgca wobume obuqhubekayo"
 
-#: ../data/xviewer.desktop.in.in.h:1
-msgid "Browse and rotate images"
-msgstr "Funda nje kwaye ujikajike umifanekiso"
-
-#: ../data/xviewer.desktop.in.in.h:2 ../src/xviewer-window.c:2636 ../src/main.c:152
-msgid "Image Viewer"
-msgstr "Isibonisi-Mfanekiso"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:1
-msgid "Aperture Value:"
-msgstr "Ixabiso lekroba:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:2
-msgid "Author:"
-msgstr "Umqulunqi:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:3
-msgid "Bytes:"
-msgstr "Iibyte:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:4
-msgid "Camera Model:"
-msgstr "Uhlobo lwe-khamera:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:5
-msgid "Copyright:"
-msgstr "Amalungelo omqulunqi:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:6
-msgid "Date/Time:"
-msgstr "Umhla/Ixesha:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:7
-msgid "Description:"
-msgstr "Inkcazelo:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:8
-msgid "Details"
-msgstr "Iinkcukacha"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:9
-msgid "Exposure Time:"
-msgstr "Ixesha lokutyhilwa:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:10
-msgid "Flash:"
-msgstr "Danyaza:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:11
-msgid "Focal Length:"
-msgstr "Ubude besazulu:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:12
-msgid "General"
-msgstr "Ngokubanzi"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:13
-msgid "Height:"
-msgstr "Ukuphakama:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:14
-msgid "ISO Speed Rating:"
-msgstr "Uthelekelelo lwesantya se-ISO:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:15
-msgid "Image Properties"
-msgstr "Iinkcazelo ngeempawu zomfuziselo"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:16
-msgid "Keywords:"
-msgstr "Amagama asentloko:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:17
-msgid "Location:"
-msgstr "Indawo yokuthile:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:18
-msgid "Metadata"
-msgstr "I-metadata"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:19
-msgid "Metering Mode:"
-msgstr "Uhlelo lwe-metering:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:20
-msgid "Name:"
-msgstr "Igama:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:21
-msgid "Type:"
-msgstr "Chwetheza:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:22
-msgid "Width:"
-msgstr "Ububanzi:"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:23
-msgid "_Next"
-msgstr "_Landelayo"
-
-#: ../data/xviewer-image-properties-dialog.ui.h:24
-msgid "_Previous"
-msgstr "_Ngaphambili"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:2
-#, no-c-format
-msgid "<b>%f:</b> original filename"
-msgstr "<b>%f:</b> uqobo lwegama lefayili"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:4
-#, no-c-format
-msgid "<b>%n:</b> counter"
-msgstr "<b>%n:</b> ikhawunta"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:5
-msgid "Choose a folder"
-msgstr "Khetha isiqulathi seefayili"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:6
-msgid "Destination folder:"
-msgstr "Isiqulathi seefayile sendawo eya kuyo:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:7
-msgid "File Name Preview"
-msgstr "Ukujonga igama lefayili phambi koshicilelo"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:8
-msgid "File Path Specifications"
-msgstr "Ukubalula indlela yefayili"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:9
-msgid "Filename format:"
-msgstr "Ubume begama lefayili:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:10
-msgid "Options"
-msgstr "Okukhethwayo"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:11
-msgid "Rename from:"
-msgstr "Nika igama kwakhona ukusuka:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:12
-msgid "Replace spaces with underscores"
-msgstr "Faka umgca ngendawo yesithuba"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:13
-msgid "Save As"
-msgstr "Gcina Njenge"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:14
-msgid "Start counter at:"
-msgstr "Qalisa isibali e-:"
-
-#: ../data/xviewer-multiple-save-as-dialog.ui.h:15
-msgid "To:"
-msgstr "Iya ku:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:1
-msgid "As _background"
-msgstr "Nje_ngokungasemva"
-
-#: ../data/xviewer-preferences-dialog.ui.h:2
-msgid "As check _pattern"
-msgstr "Njengepateni _yokukhangela"
-
-#: ../data/xviewer-preferences-dialog.ui.h:3
-msgid "As custom c_olor:"
-msgstr "Njengom_bala womthengi:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:4
-msgid "As custom color:"
-msgstr "Njengombala womthengi:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:5
-msgid "Background"
-msgstr "Okungasemva"
-
-#: ../data/xviewer-preferences-dialog.ui.h:6
-#: ../data/org.x.viewer.gschema.xml.in.in.h:6
-msgid "Background Color"
-msgstr "Umbala ongasemva"
-
-#: ../data/xviewer-preferences-dialog.ui.h:7
-msgid "Color for Transparent Areas"
-msgstr "Umbala weendawo ocace gca"
-
-#: ../data/xviewer-preferences-dialog.ui.h:8
-msgid "E_xpand images to fit screen"
-msgstr "Yan_disa umfanekiso ukuze wanele isikrini"
-
-#: ../data/xviewer-preferences-dialog.ui.h:9
-msgid "Image Enhancements"
-msgstr "Ukwenyuswelwa komfanekiso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:10
-msgid "Image View"
-msgstr "Umboniso womfanekiso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:11
-msgid "Image Zoom"
-msgstr "Ukwandisa umfanekiso"
-
-#: ../data/xviewer-preferences-dialog.ui.h:12
-msgid "Plugins"
-msgstr "Izingeniso"
-
-#. I18N: This sentence will be displayed after a GtkSpinButton to select a number of seconds in xviewer's preferences dialog. The context is applied to avoid ambiguity with possible similar translations. See bug 654548 for details.
-#: ../data/xviewer-preferences-dialog.ui.h:14
-msgctxt "PrefDlgSlideSwitchPostfix"
-msgid "seconds"
-msgstr "imizuzu"
-
-#. I18N: This sentence will be displayed before a GtkSpinButton to select a number of seconds in xviewer's preferences dialog. The context is applied to avoid ambiguity with possible similar translations. See bug 654548 for details.
-#: ../data/xviewer-preferences-dialog.ui.h:16
-msgctxt "PrefDlgSlideSwitchPrefix"
-msgid "_Switch image after:"
-msgstr "_Tshintshisa umfanekiso emveni koko:"
-
-#: ../data/xviewer-preferences-dialog.ui.h:17
-msgid "Preferences"
-msgstr "Uluhlu lwezinto ezikhethwayo"
-
-#: ../data/xviewer-preferences-dialog.ui.h:18
-msgid "Sequence"
-msgstr "Ukulandelana"
-
-#: ../data/xviewer-preferences-dialog.ui.h:19
-msgid "Slideshow"
-msgstr "Umboniso wotyibiliko"
-
-#: ../data/xviewer-preferences-dialog.ui.h:20
-msgid "Smooth images when zoomed-_in"
-msgstr "Imifanekiso ecocekile xa yandisi_we"
-
-#: ../data/xviewer-preferences-dialog.ui.h:21
-msgid "Smooth images when zoomed-_out"
-msgstr "Imifanekiso ecocekile xa inciphisi_we"
-
-#: ../data/xviewer-preferences-dialog.ui.h:22
-msgid "Transparent Parts"
-msgstr "Iindawo ezicace gca"
-
-#: ../data/xviewer-preferences-dialog.ui.h:23
-msgid "_Automatic orientation"
-msgstr "In_dlela yokubonisa ezenzekelayo"
-
-#: ../data/xviewer-preferences-dialog.ui.h:24
-msgid "_Loop sequence"
-msgstr "Ukul_andelana kwesethi yeengxelo"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:1
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Ixabiso elingaphezulu kwe-0 limisela imizuzwana ehlalwa ngumfanekiso "
-"kwiskrini de kuboniswe olandelayo ngokuzenzekelayo. Iqanda alikuvumeli "
-"ukukhangela okuzenzekelayo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:2
-msgid "Active plugins"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:4
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Vumela isandisi esingaphezulu kwe-100% xa kuqaliswayo"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:5
-#, fuzzy
-#| msgid "_Automatic orientation"
-msgid "Automatic orientation"
-msgstr "In_dlela yokubonisa ezenzekelayo"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:7
-msgid "Close main window without asking to save changes."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:8
-msgid "Delay in seconds until showing the next image"
-msgstr "Yilibazise imizuzwana de kuvele umfanekiso olandelayo"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:9
-msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:10
-msgid "External program to use for editing images"
-msgstr "Inkqubo yangaphandle iyasetyenziswa ukulungisa umfanekiso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:11
-msgid "Extrapolate Image"
-msgstr "Ukufakisisa umfanekiso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:12
-msgid ""
-"If activated and no image is loaded in the active window, the file chooser "
-"will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up, it "
-"will show the current working directory."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:13
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:14
-msgid ""
-"If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
-"be embedded on the \"Metadata\" page."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:15
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"Ukuba iqhosha lokucace gca limele COLOR, elo qhosha limisa umbala "
-"osetyenzisiweyo ukubonisa isicacisi."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:16
-msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
-"will determine the fill color."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:17
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Ukuba le nto imiselwe ku-FALSE imifanekiso emincinane ayinako ukutsalwa "
-"ukuze yanele kwiskrini xa kuqaliswayo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:18
-msgid ""
-"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
-"for right."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:19
-msgid "Interpolate Image"
-msgstr "Ukufakela umfanekiso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:20
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a given "
-"plugin."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:21
-msgid "Loop through the image sequence"
-msgstr "Setha iingxelo uyidlulise kulandelwano lwemfanekiso"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:22
-msgid "Scroll wheel zoom"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:23
-msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:24
-#, fuzzy
-#| msgid "Show/Hide the window side pane."
-msgid "Show/Hide the image gallery pane."
-msgstr "Bonisa/fihla ifestile yeglasi esecaleni."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:25
-msgid "Show/Hide the window side pane."
-msgstr "Bonisa/fihla ifestile yeglasi esecaleni."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:26
-msgid "Show/Hide the window statusbar."
-msgstr "Bonisa/fihla ifestile yomgca wobume obuqhubekayo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:27
-msgid "Show/Hide the window toolbar."
-msgstr "Bonisa/fihla ifestile yebar yezixhobo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:28
-msgid ""
-"The color that is used to fill the area behind the image. If the use-"
-"background-color key is not set, the color is determined by the active GTK+ "
-"theme instead."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:29
-msgid ""
-"The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
-"to the empty string to disable this feature."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:31
-#, no-c-format
-msgid ""
-"The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:32
-msgid "Transparency color"
-msgstr "Umbala ocace gca"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:33
-msgid "Transparency indicator"
-msgstr "Isalathisi esicace gca"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:34
-#, fuzzy
-#| msgid "Close _without Saving"
-msgid "Trash images without asking"
-msgstr "_Vala ungagcinanga"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:35
-msgid "Use a custom background color"
-msgstr "Sebenzisa umbala wasemva osele ukhona"
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:36
-msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:37
-msgid "Whether the image gallery pane should be resizable."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:38
-#, fuzzy
-#| msgid ""
-#| "Whether the image should be interpolated on zoom or not. This leads to "
-#| "better quality but is somewhat slower than non interpolated images."
-msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"Ukuba umfanekiso ufanele ukufakelwa okanye ukungafakelwa kwisandisi. Oku "
-"kukhokelela kubunjani obungcono kodwa kuyacotha kunemifanekiso engafakelwayo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:39
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"Ukuba umfanekiso ufanele ukufakelwa okanye ukungafakelwa kwisandisi. Oku "
-"kukhokelela kubunjani obungcono kodwa kuyacotha kunemifanekiso engafakelwayo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:40
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:41
-msgid ""
-"Whether the metadata list in the properties dialog should have its own page."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:42
-msgid "Whether the scroll wheel should be used for zooming."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:43
-msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr ""
-"Ukuba kunjalo okanye akunjalo ukulandelana kwemifanekiso kufuneka kubonisiwe "
-"kwisethi yeengxelo ezingenasiphelo."
-
-#: ../data/org.x.viewer.gschema.xml.in.in.h:44
-msgid "Zoom multiplier"
-msgstr ""
-
-#: ../src/xviewer-close-confirmation-dialog.c:171
+#: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "_Vala ungagcinanga"
 
-#: ../src/xviewer-close-confirmation-dialog.c:217
+#: ../src/xviewer-close-confirmation-dialog.c:178
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+msgid "_Save"
+msgstr "_Gcina"
+
+#: ../src/xviewer-close-confirmation-dialog.c:212
 msgid "Question"
 msgstr "Umbuzo"
 
-#: ../src/xviewer-close-confirmation-dialog.c:398
+#: ../src/xviewer-close-confirmation-dialog.c:391
 msgid "If you don't save, your changes will be lost."
 msgstr "Ukuba awugcini umsebenzi wakho utshintsho lwakho luza kulahleka."
 
-#: ../src/xviewer-close-confirmation-dialog.c:435
+#: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Gcina utshintsho kumfanekiso \"%s\" phambi kokuvala?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:643
+#: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -603,197 +692,21 @@ msgstr[1] ""
 "Kukho imfanekiso eyi-%d aneenguqu ezingagcinwanga. Ufuna ukugcina iinguqu "
 "phambi kokuba uvale?"
 
-#: ../src/xviewer-close-confirmation-dialog.c:660
+#: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
 msgstr "_Khetha imifanekiso ofuna ukuwagcina:"
 
 #. Secondary label
-#: ../src/xviewer-close-confirmation-dialog.c:678
+#: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
-msgstr "Ukuba awugcini umsebenzi wakho utshintsho lwakho lonke luza kulahleka."
-
-#: ../src/xviewer-file-chooser.c:126
-msgid "File format is unknown or unsupported"
-msgstr "Uhlobo lwefayile alwaziwa kwaye alixhaswanga"
-
-#: ../src/xviewer-file-chooser.c:131
-msgid ""
-"Image Viewer could not determine a supported writable file format based on "
-"the filename."
 msgstr ""
-"Imbonisi mifanekiso ayikwazanga ukufumana uhlobo lwefayile oluxhaswayo "
-"olungaphinde lubhaleke ngenxa yegama lefayile."
+"Ukuba awugcini umsebenzi wakho utshintsho lwakho lonke luza kulahleka."
 
-#: ../src/xviewer-file-chooser.c:132
-msgid "Please try a different file extension like .png or .jpg."
-msgstr "Nceda uzama olunye uhlobo lwefayile njengo .png okanye .jpg."
-
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../src/xviewer-file-chooser.c:167
-#, c-format
-msgid "%s (*.%s)"
-msgstr "%s (*.%s)"
-
-#: ../src/xviewer-file-chooser.c:219
-msgid "All files"
-msgstr "Zonke iifayili"
-
-#: ../src/xviewer-file-chooser.c:224
-msgid "Supported image files"
-msgstr "Iifayle zemifanekiso exhasiwe"
-
-#. Pixel size of image: width x height in pixel
-#: ../src/xviewer-file-chooser.c:296 ../src/xviewer-properties-dialog.c:137
-#: ../src/xviewer-properties-dialog.c:139 ../src/xviewer-thumb-view.c:443
-msgid "pixel"
-msgid_plural "pixels"
-msgstr[0] "i-pixel"
-msgstr[1] "ii-pixel"
-
-#: ../src/xviewer-file-chooser.c:447
-msgid "Open Image"
-msgstr "Vuka umfanekiso"
-
-#: ../src/xviewer-file-chooser.c:455
-msgid "Save Image"
-msgstr "Gcina umfanekiso"
-
-#: ../src/xviewer-file-chooser.c:463
-msgid "Open Folder"
-msgstr "Vula isiqulathi seefayili"
-
-#: ../src/xviewer-image.c:606
-#, c-format
-msgid "Transformation on unloaded image."
-msgstr "Utshintsho kwimifanekiso engafakwanga."
-
-#: ../src/xviewer-image.c:634
-#, c-format
-msgid "Transformation failed."
-msgstr "Inguquko ayiphumelelanga."
-
-#: ../src/xviewer-image.c:1095
-#, c-format
-msgid "EXIF not supported for this file format."
-msgstr "EXIF ayixhaswa kolu hlobo lwefayile."
-
-#: ../src/xviewer-image.c:1244
-#, c-format
-msgid "Image loading failed."
-msgstr "Ukufakwa lomfanekiso aluphumelelanga."
-
-#: ../src/xviewer-image.c:1717 ../src/xviewer-image.c:1827
-#, c-format
-msgid "No image loaded."
-msgstr "Akukho mfanekiso ufakiweyo."
-
-#: ../src/xviewer-image.c:1725 ../src/xviewer-image.c:1836
-#, c-format
-msgid "You do not have the permissions necessary to save the file."
-msgstr "Awunazo iimvume ezifanelekileyo zokugcina ifayile."
-
-#: ../src/xviewer-image.c:1735 ../src/xviewer-image.c:1847
-#, c-format
-msgid "Temporary file creation failed."
-msgstr "Ukwenziwa kwefayili yexeshana akuphumelelanga."
-
-#: ../src/xviewer-image-jpeg.c:373
-#, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "Ayikwazanga ukwenza ifayili yexeshana yovimba wolwazi lokugcina: %s"
-
-#: ../src/xviewer-image-jpeg.c:392
-#, c-format
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Ayikwazanga ukwabela uvimba wolwazi lokufakwa kwefayili ye-JPEG"
-
-#: ../src/xviewer-exif-details.c:69
-msgid "Camera"
-msgstr "Ikhamera"
-
-#: ../src/xviewer-exif-details.c:70
-msgid "Image Data"
-msgstr "I-data yomfanekiso"
-
-#: ../src/xviewer-exif-details.c:71
-msgid "Image Taking Conditions"
-msgstr "Izimo ezithatyathwa ngumfanekiso"
-
-#: ../src/xviewer-exif-details.c:72
-#, fuzzy
-msgid "GPS Data"
-msgstr "I-GPS data"
-
-#: ../src/xviewer-exif-details.c:73
-msgid "Maker Note"
-msgstr "Inqaku lomenzi"
-
-#: ../src/xviewer-exif-details.c:74
-msgid "Other"
-msgstr "Okunye"
-
-#: ../src/xviewer-exif-details.c:76
-#, fuzzy
-msgid "XMP Exif"
-msgstr "XMP Exif"
-
-#: ../src/xviewer-exif-details.c:77
-#, fuzzy
-#| msgid "IPTC"
-msgid "XMP IPTC"
-msgstr "XMP IPTC"
-
-#: ../src/xviewer-exif-details.c:78
-msgid "XMP Rights Management"
-msgstr "XMP amalungelo okuphatha"
-
-#: ../src/xviewer-exif-details.c:79
-msgid "XMP Other"
-msgstr "XMP Okunye"
-
-#: ../src/xviewer-exif-details.c:253
-msgid "Tag"
-msgstr "Isiphawuli"
-
-#: ../src/xviewer-exif-details.c:260
-msgid "Value"
-msgstr "Ixabiso"
-
-#: ../src/xviewer-exif-details.c:422
-msgid "North"
-msgstr "Umntla"
-
-#: ../src/xviewer-exif-details.c:425
-msgid "East"
-msgstr "Impuma"
-
-#: ../src/xviewer-exif-details.c:428
-msgid "West"
-msgstr "Entshonalanga"
-
-#: ../src/xviewer-exif-details.c:431
-msgid "South"
-msgstr "Mzantsi"
-
-#. A strftime-formatted string, to display the date the image was taken.
-#: ../src/xviewer-exif-util.c:118 ../src/xviewer-exif-util.c:158
-msgid "%a, %d %B %Y  %X"
-msgstr "%a, %d %B %Y  %X"
-
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
-#: ../src/xviewer-exif-util.c:152
-msgid "%a, %d %B %Y"
-msgstr "%a, %d %B %Y"
-
-#: ../src/xviewer-error-message-area.c:119
-msgid "_Cancel"
-msgstr "_Hlaba"
-
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:825
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
 msgstr "_Layisha kwakhona"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:3842
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
 msgstr "Gcina n_jenge…"
 
@@ -816,105 +729,83 @@ msgstr "Akukho mfanekiso ofunyenwe ku '%s'."
 msgid "The given locations contain no images."
 msgstr "Ezi ndawo zinikeziwe aziqulathanga mifanekiso."
 
-#: ../src/xviewer-print.c:219
-msgid "Image Settings"
-msgstr "Izicwangciso zomfanekiso"
+#: ../src/xviewer-metadata-details.c:65
+msgid "Camera"
+msgstr "Ikhamera"
 
-#: ../src/xviewer-print-image-setup.c:834
-msgid "Image"
-msgstr "Umfanekiso"
+#: ../src/xviewer-metadata-details.c:66
+msgid "Image Data"
+msgstr "I-data yomfanekiso"
 
-#: ../src/xviewer-print-image-setup.c:835
-msgid "The image whose printing properties will be set up"
-msgstr "Umfanekiso inkcukacha zawo eziza kulungiselelwa"
+#: ../src/xviewer-metadata-details.c:67
+msgid "Image Taking Conditions"
+msgstr "Izimo ezithatyathwa ngumfanekiso"
 
-#: ../src/xviewer-print-image-setup.c:841
-msgid "Page Setup"
-msgstr "Umiselo lwekhasi"
+#: ../src/xviewer-metadata-details.c:68
+msgid "GPS Data"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:842
-msgid "The information for the page where the image will be printed"
-msgstr "Inkcukacha zephepha apho imifanekiso ingashicilelwa khona"
+#: ../src/xviewer-metadata-details.c:69
+msgid "Maker Note"
+msgstr "Inqaku lomenzi"
 
-#: ../src/xviewer-print-image-setup.c:870
-msgid "Position"
-msgstr "Indawo"
+#: ../src/xviewer-metadata-details.c:70
+msgid "Other"
+msgstr "Okunye"
 
-#: ../src/xviewer-print-image-setup.c:875
-msgid "_Left:"
-msgstr "E_khohlo:"
+#: ../src/xviewer-metadata-details.c:72
+msgid "XMP Exif"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:876
-msgid "_Right:"
-msgstr "Eku_nene:"
+#: ../src/xviewer-metadata-details.c:73
+msgid "XMP IPTC"
+msgstr ""
 
-#: ../src/xviewer-print-image-setup.c:877
-msgid "_Top:"
-msgstr "_Phezulu:"
+#: ../src/xviewer-metadata-details.c:74
+msgid "XMP Rights Management"
+msgstr "XMP amalungelo okuphatha"
 
-#: ../src/xviewer-print-image-setup.c:878
-msgid "_Bottom:"
-msgstr "E_zantsi:"
+#: ../src/xviewer-metadata-details.c:75
+msgid "XMP Other"
+msgstr "XMP Okunye"
 
-#: ../src/xviewer-print-image-setup.c:880
-msgid "C_enter:"
-msgstr "M_bindini:"
+#: ../src/xviewer-metadata-details.c:251
+msgid "Tag"
+msgstr "Isiphawuli"
 
-#: ../src/xviewer-print-image-setup.c:885
-msgid "None"
-msgstr "Akukho nanye"
+#: ../src/xviewer-metadata-details.c:258
+msgid "Value"
+msgstr "Ixabiso"
 
-#: ../src/xviewer-print-image-setup.c:887
-msgid "Horizontal"
-msgstr "Ngokuxwesa"
+#: ../src/xviewer-metadata-details.c:436
+msgid "North"
+msgstr "Umntla"
 
-#: ../src/xviewer-print-image-setup.c:889
-msgid "Vertical"
-msgstr "Ukusuka phezulu"
+#: ../src/xviewer-metadata-details.c:439
+msgid "East"
+msgstr "Impuma"
 
-#: ../src/xviewer-print-image-setup.c:891
-msgid "Both"
-msgstr "Macala"
+#: ../src/xviewer-metadata-details.c:442
+msgid "West"
+msgstr "Entshonalanga"
 
-#: ../src/xviewer-print-image-setup.c:907
-msgid "Size"
-msgstr "Ubungakanani"
+#: ../src/xviewer-metadata-details.c:445
+msgid "South"
+msgstr "Mzantsi"
 
-#: ../src/xviewer-print-image-setup.c:912
-msgid "_Width:"
-msgstr "Ububan_zi:"
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
+msgid "%a, %d %B %Y  %X"
+msgstr "%a, %d %B %Y  %X"
 
-#: ../src/xviewer-print-image-setup.c:914
-msgid "_Height:"
-msgstr "Ukup_hakama:"
-
-#: ../src/xviewer-print-image-setup.c:917
-msgid "_Scaling:"
-msgstr "Uh_lenga-hlengiso:"
-
-#: ../src/xviewer-print-image-setup.c:930
-msgid "_Unit:"
-msgstr "I_yunithi:"
-
-#: ../src/xviewer-print-image-setup.c:935
-msgid "Millimeters"
-msgstr "I-millimeters"
-
-#: ../src/xviewer-print-image-setup.c:937
-msgid "Inches"
-msgstr "Ii-intshi"
-
-#: ../src/xviewer-print-image-setup.c:967
-msgid "Preview"
-msgstr "Imboniso yangaphambili"
-
-#: ../src/xviewer-properties-dialog.c:154
-msgid "Unknown"
-msgstr "Okungaziwayo"
+#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#: ../src/xviewer-exif-util.c:154
+msgid "%a, %d %B %Y"
+msgstr "%a, %d %B %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/xviewer-properties-dialog.c:232
+#: ../src/xviewer-exif-util.c:251
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (lens)"
@@ -922,12 +813,226 @@ msgstr "%.1f (lens)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/xviewer-properties-dialog.c:243
+#: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm film)"
 
-#: ../src/xviewer-save-as-dialog-helper.c:161
+#: ../src/xviewer-file-chooser.c:119
+msgid "File format is unknown or unsupported"
+msgstr "Uhlobo lwefayile alwaziwa kwaye alixhaswanga"
+
+#: ../src/xviewer-file-chooser.c:124
+msgid ""
+"Image Viewer could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+"Imbonisi mifanekiso ayikwazanga ukufumana uhlobo lwefayile oluxhaswayo "
+"olungaphinde lubhaleke ngenxa yegama lefayile."
+
+#: ../src/xviewer-file-chooser.c:125
+msgid "Please try a different file extension like .png or .jpg."
+msgstr "Nceda uzama olunye uhlobo lwefayile njengo .png okanye .jpg."
+
+#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#: ../src/xviewer-file-chooser.c:160
+#, c-format
+msgid "%s (*.%s)"
+msgstr "%s (*.%s)"
+
+#: ../src/xviewer-file-chooser.c:212
+msgid "All files"
+msgstr "Zonke iifayili"
+
+#: ../src/xviewer-file-chooser.c:217
+msgid "Supported image files"
+msgstr "Iifayle zemifanekiso exhasiwe"
+
+#. Pixel size of image: width x height in pixel
+#: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
+#: ../src/xviewer-metadata-sidebar.c:238
+#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] "i-pixel"
+msgstr[1] "ii-pixel"
+
+#: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
+msgid "_Open"
+msgstr ""
+
+#: ../src/xviewer-file-chooser.c:459
+msgid "Open Image"
+msgstr "Vuka umfanekiso"
+
+#: ../src/xviewer-file-chooser.c:467
+msgid "Save Image"
+msgstr "Gcina umfanekiso"
+
+#: ../src/xviewer-file-chooser.c:475
+msgid "Open Folder"
+msgstr "Vula isiqulathi seefayili"
+
+#: ../src/xviewer-image.c:613
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Utshintsho kwimifanekiso engafakwanga."
+
+#: ../src/xviewer-image.c:641
+#, c-format
+msgid "Transformation failed."
+msgstr "Inguquko ayiphumelelanga."
+
+#: ../src/xviewer-image.c:1138
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF ayixhaswa kolu hlobo lwefayile."
+
+#: ../src/xviewer-image.c:1287
+#, c-format
+msgid "Image loading failed."
+msgstr "Ukufakwa lomfanekiso aluphumelelanga."
+
+#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#, c-format
+msgid "No image loaded."
+msgstr "Akukho mfanekiso ufakiweyo."
+
+#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#, c-format
+msgid "You do not have the permissions necessary to save the file."
+msgstr "Awunazo iimvume ezifanelekileyo zokugcina ifayile."
+
+#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Ukwenziwa kwefayili yexeshana akuphumelelanga."
+
+#: ../src/xviewer-image-jpeg.c:374
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Ayikwazanga ukwenza ifayili yexeshana yovimba wolwazi lokugcina: %s"
+
+#: ../src/xviewer-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "Ayikwazanga ukwabela uvimba wolwazi lokufakwa kwefayili ye-JPEG"
+
+#: ../src/xviewer-metadata-sidebar.c:247
+#: ../src/xviewer-properties-dialog.c:156
+msgid "Unknown"
+msgstr "Okungaziwayo"
+
+#: ../src/xviewer-metadata-sidebar.c:505
+msgid "File size:"
+msgstr ""
+
+#: ../src/xviewer-metadata-sidebar.c:521
+#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+msgid "Show the folder which contains this file in the file manager"
+msgstr "Bonisa esiqulathi fayile esiqulathe le fayile kumphathi fayile"
+
+#: ../src/xviewer-preferences-dialog.c:125
+#, c-format
+msgid "%lu second"
+msgid_plural "%lu seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-print.c:371
+msgid "Image Settings"
+msgstr "Izicwangciso zomfanekiso"
+
+#: ../src/xviewer-print-image-setup.c:897
+msgid "Image"
+msgstr "Umfanekiso"
+
+#: ../src/xviewer-print-image-setup.c:898
+msgid "The image whose printing properties will be set up"
+msgstr "Umfanekiso inkcukacha zawo eziza kulungiselelwa"
+
+#: ../src/xviewer-print-image-setup.c:904
+msgid "Page Setup"
+msgstr "Umiselo lwekhasi"
+
+#: ../src/xviewer-print-image-setup.c:905
+msgid "The information for the page where the image will be printed"
+msgstr "Inkcukacha zephepha apho imifanekiso ingashicilelwa khona"
+
+#: ../src/xviewer-print-image-setup.c:931
+msgid "Position"
+msgstr "Indawo"
+
+#: ../src/xviewer-print-image-setup.c:935
+msgid "_Left:"
+msgstr "E_khohlo:"
+
+#: ../src/xviewer-print-image-setup.c:937
+msgid "_Right:"
+msgstr "Eku_nene:"
+
+#: ../src/xviewer-print-image-setup.c:938
+msgid "_Top:"
+msgstr "_Phezulu:"
+
+#: ../src/xviewer-print-image-setup.c:939
+msgid "_Bottom:"
+msgstr "E_zantsi:"
+
+#: ../src/xviewer-print-image-setup.c:942
+msgid "C_enter:"
+msgstr "M_bindini:"
+
+#: ../src/xviewer-print-image-setup.c:947
+msgid "None"
+msgstr "Akukho nanye"
+
+#: ../src/xviewer-print-image-setup.c:949
+msgid "Horizontal"
+msgstr "Ngokuxwesa"
+
+#: ../src/xviewer-print-image-setup.c:951
+msgid "Vertical"
+msgstr "Ukusuka phezulu"
+
+#: ../src/xviewer-print-image-setup.c:953
+msgid "Both"
+msgstr "Macala"
+
+#: ../src/xviewer-print-image-setup.c:969
+msgid "Size"
+msgstr "Ubungakanani"
+
+#: ../src/xviewer-print-image-setup.c:972
+msgid "_Width:"
+msgstr "Ububan_zi:"
+
+#: ../src/xviewer-print-image-setup.c:974
+msgid "_Height:"
+msgstr "Ukup_hakama:"
+
+#: ../src/xviewer-print-image-setup.c:977
+msgid "_Scaling:"
+msgstr "Uh_lenga-hlengiso:"
+
+#: ../src/xviewer-print-image-setup.c:988
+msgid "_Unit:"
+msgstr "I_yunithi:"
+
+#: ../src/xviewer-print-image-setup.c:993
+msgid "Millimeters"
+msgstr "I-millimeters"
+
+#: ../src/xviewer-print-image-setup.c:995
+msgid "Inches"
+msgstr "Ii-intshi"
+
+#: ../src/xviewer-print-image-setup.c:1024
+msgid "Preview"
+msgstr "Imboniso yangaphambili"
+
+#: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "njengoko injalo"
 
@@ -941,16 +1046,16 @@ msgstr "njengoko injalo"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/xviewer-statusbar.c:124
+#: ../src/xviewer-statusbar.c:126
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/xviewer-thumb-view.c:471
+#: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
 msgstr "Ithathwe kwi"
 
-#: ../src/xviewer-uri-converter.c:984
+#: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
 msgstr "Noko amagama efayile ezimbini ayalingana."
@@ -969,21 +1074,21 @@ msgstr " (i-Unicode engaqinisekiswanga)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:525
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i x %i i-pixel  %s    %i%%"
 msgstr[1] "%i x %i i-pixel  %s    %i%%"
 
-#: ../src/xviewer-window.c:827 ../src/xviewer-window.c:2784
+#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Fi_hla"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:837
+#: ../src/xviewer-window.c:859
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -992,7 +1097,7 @@ msgstr ""
 "Umfanekiso \"%s\" ulungiswe yi-application yangaphandle.\n"
 "Ungathanda ukuphinde uyifake?"
 
-#: ../src/xviewer-window.c:1001
+#: ../src/xviewer-window.c:1023
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Sebenzisa i\"%s\" ukuvula umfanekiso okhethiwe"
@@ -1002,17 +1107,26 @@ msgstr "Sebenzisa i\"%s\" ukuvula umfanekiso okhethiwe"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1157
+#: ../src/xviewer-window.c:1179
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Ukugcina umfanekiso \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1528
+#: ../src/xviewer-window.c:1574
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Ukuvula umfanekiso \"%s\""
 
-#: ../src/xviewer-window.c:2205
+#: ../src/xviewer-window.c:1898
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#. L10N: This the reason why the screensaver is inhibited.
+#: ../src/xviewer-window.c:2030
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/xviewer-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1021,35 +1135,27 @@ msgstr ""
 "Kwenzeke impazamo ngelixa kushicilelwa ifayile:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2523
+#: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
 msgstr "Umlungisi webar yezixhobo"
 
-#: ../src/xviewer-window.c:2526
+#: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
 msgstr "_Phinda umisele inkqubo yekhompyutha"
 
-#: ../src/xviewer-window.c:2631
-msgid "translator-credits"
-msgstr "Andiswa Mvanyashe <andiswamva@gmail.com>"
-
-#: ../src/xviewer-window.c:2639
-msgid "The GNOME image viewer."
-msgstr "Ukubonisa umfanekiso we-GNOME."
-
-#: ../src/xviewer-window.c:2731 ../src/xviewer-window.c:2746
+#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
 msgid "Error launching System Settings: "
 msgstr "Ingxaki ekukhupeni imimiselo yenkqubo: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2782
+#: ../src/xviewer-window.c:2791
 msgid "_Open Background Preferences"
 msgstr "_Vula izikhetho zasemva"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2798
+#: ../src/xviewer-window.c:2807
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1058,11 +1164,63 @@ msgstr ""
 "Umfanekiso \"%s\" wenziwe wangumva wedesktop.\n"
 "Ungathanda ukutshintsha indlela ebonakala ngayo?"
 
-#: ../src/xviewer-window.c:3271
+#: ../src/xviewer-window.c:3274
 msgid "Saving image locally…"
 msgstr "Ukugcina umfanekiso engingqini…"
 
-#: ../src/xviewer-window.c:3351
+#: ../src/xviewer-window.c:3352
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"\"%s\" permanently?"
+msgstr ""
+
+#: ../src/xviewer-window.c:3355
+#, c-format
+msgid ""
+"Are you sure you want to remove\n"
+"the selected image permanently?"
+msgid_plural ""
+"Are you sure you want to remove\n"
+"the %d selected images permanently?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+msgid "_Delete"
+msgstr ""
+
+#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+msgid "_Yes"
+msgstr ""
+
+#. add 'dont ask again' button
+#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+msgid "Do _not ask again during this session"
+msgstr ""
+
+#: ../src/xviewer-window.c:3428
+#, c-format
+msgid "Couldn't retrieve image file"
+msgstr ""
+
+#: ../src/xviewer-window.c:3444
+#, c-format
+msgid "Couldn't retrieve image file information"
+msgstr ""
+
+#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#, c-format
+msgid "Couldn't delete file"
+msgstr "Awukwazanga kucimeka ifayile"
+
+#. set dialog error message
+#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#, c-format
+msgid "Error on deleting image %s"
+msgstr "Kwenzeke impazamo ngelixa kucinywa umfanekiso %s"
+
+#: ../src/xviewer-window.c:3603
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1071,7 +1229,7 @@ msgstr ""
 "Uqinisekile ukuba ufuna ukusa\n"
 "\"%s\" emgqomeni?"
 
-#: ../src/xviewer-window.c:3354
+#: ../src/xviewer-window.c:3606
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1079,7 +1237,7 @@ msgid ""
 msgstr ""
 "Umgqomo ka \"%s\" kange afunyanwe. Uyafuna ukususa lo mfanekiso uphele tu?"
 
-#: ../src/xviewer-window.c:3359
+#: ../src/xviewer-window.c:3611
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1094,7 +1252,7 @@ msgstr[1] ""
 "Uqinisekile ukuba ufuna ukusa\n"
 "imifanekio eyi-%d iyemgqomeni?"
 
-#: ../src/xviewer-window.c:3364
+#: ../src/xviewer-window.c:3616
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1102,623 +1260,374 @@ msgstr ""
 "Eminye imifanekiso ekhethiwe ayinako ukusiwa emgqomeni kwaye iza kususwa tu. "
 "Uqinisekile ufuna ukuqhubeka?"
 
-#: ../src/xviewer-window.c:3381 ../src/xviewer-window.c:3872 ../src/xviewer-window.c:3896
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
 msgstr "Yisa e_mgqomeni"
 
-#: ../src/xviewer-window.c:3383
-msgid "_Do not ask again during this session"
-msgstr "_Sukubuza kwakhono phakathi kwenkqubo"
-
-#: ../src/xviewer-window.c:3428 ../src/xviewer-window.c:3442
+#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Ayikwazanga ukufikelela emgqomeni."
 
-#: ../src/xviewer-window.c:3450
-#, c-format
-msgid "Couldn't delete file"
-msgstr "Awukwazanga kucimeka ifayile"
-
-#: ../src/xviewer-window.c:3546
-#, c-format
-msgid "Error on deleting image %s"
-msgstr "Kwenzeke impazamo ngelixa kucinywa umfanekiso %s"
-
-#: ../src/xviewer-window.c:3793
+#: ../src/xviewer-window.c:4045
 msgid "_Image"
 msgstr "Umfane_kiso"
 
-#: ../src/xviewer-window.c:3794
+#: ../src/xviewer-window.c:4046
 msgid "_Edit"
 msgstr "Hl_ela"
 
-#: ../src/xviewer-window.c:3795
-msgid "_View"
-msgstr "_Bonisa"
-
-#: ../src/xviewer-window.c:3796
+#: ../src/xviewer-window.c:4048
 msgid "_Go"
 msgstr "_Hamba"
 
-#: ../src/xviewer-window.c:3797
+#: ../src/xviewer-window.c:4049
 msgid "_Tools"
 msgstr "Izi_xhobo"
 
-#: ../src/xviewer-window.c:3798
-msgid "_Help"
-msgstr "Un_cedo"
-
-#: ../src/xviewer-window.c:3800
+#: ../src/xviewer-window.c:4052
 msgid "_Open…"
 msgstr "_Vula…"
 
-#: ../src/xviewer-window.c:3801
+#: ../src/xviewer-window.c:4053
 msgid "Open a file"
 msgstr "Vula ifayili"
 
-#: ../src/xviewer-window.c:3803
-msgid "_Close"
-msgstr "Va_la"
-
-#: ../src/xviewer-window.c:3804
+#: ../src/xviewer-window.c:4056
 msgid "Close window"
 msgstr "Vala ifestile"
 
-#: ../src/xviewer-window.c:3806
+#: ../src/xviewer-window.c:4058
 msgid "T_oolbar"
 msgstr "I_bar yezixhobo"
 
-#: ../src/xviewer-window.c:3807
+#: ../src/xviewer-window.c:4059
 msgid "Edit the application toolbar"
 msgstr "Lungisa kule nkqubo i-bar yezixhobo"
 
-#: ../src/xviewer-window.c:3809
-msgid "Prefere_nces"
-msgstr "Uluhlu lwezinto ezikhe_thwayo"
-
-#: ../src/xviewer-window.c:3810
+#: ../src/xviewer-window.c:4062
 msgid "Preferences for Image Viewer"
 msgstr "Ozikhethayo kwimboniso mifanekiso"
 
-#: ../src/xviewer-window.c:3812
+#: ../src/xviewer-window.c:4064
 msgid "_Contents"
 msgstr "_Okuqulathiweyo"
 
-#: ../src/xviewer-window.c:3813
+#: ../src/xviewer-window.c:4065
 msgid "Help on this application"
 msgstr "Nika uncedo kule nkqubo"
 
-#: ../src/xviewer-window.c:3815
-msgid "_About"
-msgstr "_Malunga"
-
-#: ../src/xviewer-window.c:3816
+#: ../src/xviewer-window.c:4068
 msgid "About this application"
 msgstr "Malunga nale nkqubo"
 
-#: ../src/xviewer-window.c:3821
-msgid "_Toolbar"
-msgstr "I-_bar yezixhobo"
-
-#: ../src/xviewer-window.c:3822
+#: ../src/xviewer-window.c:4074
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Iguqula ukubonakala kwe-toolbar kule festile ikhoyo ngoku"
 
-#: ../src/xviewer-window.c:3824
-msgid "_Statusbar"
-msgstr "Um_gca wobume bokuqhubekayo"
-
-#: ../src/xviewer-window.c:3825
+#: ../src/xviewer-window.c:4077
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Iguqula ukubonakala komgca wobume befestile okuyo ngoku"
 
-#: ../src/xviewer-window.c:3827
-msgid "_Image Gallery"
-msgstr "I_sibonisi-mfanekiso"
-
-#: ../src/xviewer-window.c:3828
-msgid "Changes the visibility of the image gallery pane in the current window"
+#: ../src/xviewer-window.c:4080
+msgid ""
+"Changes the visibility of the image gallery pane in the current window"
 msgstr "Ukuguqula ukubonakala kwefestile yemboniso mifanekiso okuyo ngoku"
 
-#: ../src/xviewer-window.c:3830
-msgid "Side _Pane"
-msgstr "Iglasi yefestile _esecaleni"
-
-#: ../src/xviewer-window.c:3831
+#: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Iguqula ukubonakala kwegkasi yefestile esecaleni okuyo ngoku"
 
-#: ../src/xviewer-window.c:3836
-msgid "_Save"
-msgstr "_Gcina"
-
-#: ../src/xviewer-window.c:3837
+#: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
 msgstr "Gcina utshintsho kulo mfanekiso okhethiwe"
 
-#: ../src/xviewer-window.c:3839
+#: ../src/xviewer-window.c:4091
 msgid "Open _with"
 msgstr "Vula _nge"
 
-#: ../src/xviewer-window.c:3840
+#: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
 msgstr "Vula imifanekiso ekhethiweyo ngenkqubo eyahlukile"
 
-#: ../src/xviewer-window.c:3843
+#: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
 msgstr "Gcina umfanekiso okhethiwe ngegama elahlukile"
 
-#: ../src/xviewer-window.c:3845
+#: ../src/xviewer-window.c:4097
 msgid "Show Containing _Folder"
 msgstr "Bonisa ifolda _ephethe"
 
-#: ../src/xviewer-window.c:3846
-msgid "Show the folder which contains this file in the file manager"
-msgstr "Bonisa esiqulathi fayile esiqulathe le fayile kumphathi fayile"
-
-#: ../src/xviewer-window.c:3848
+#: ../src/xviewer-window.c:4100
 msgid "_Print…"
 msgstr "_Shicilela…"
 
-#: ../src/xviewer-window.c:3849
+#: ../src/xviewer-window.c:4101
 msgid "Print the selected image"
 msgstr "Shicilela umfanekiso okhethiwe"
 
-#: ../src/xviewer-window.c:3851
+#: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
 msgstr "Inkcu_kacha"
 
-#: ../src/xviewer-window.c:3852
+#: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
 msgstr "Bonisa okubalulekile kunye ne-metadata zomfanekiso okhethiwe"
 
-#: ../src/xviewer-window.c:3854
+#: ../src/xviewer-window.c:4106
 msgid "_Undo"
 msgstr "_Buyela emva"
 
-#: ../src/xviewer-window.c:3855
+#: ../src/xviewer-window.c:4107
 msgid "Undo the last change in the image"
 msgstr "Buyela kukungenzi utshintsho lokugqibela"
 
-#: ../src/xviewer-window.c:3857
+#: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
 msgstr "Jikelezisa ngobu_banzi"
 
-#: ../src/xviewer-window.c:3858
+#: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
 msgstr "Bukisa umfanekiso ngokuthe tye"
 
-#: ../src/xviewer-window.c:3860
+#: ../src/xviewer-window.c:4112
 msgid "Flip _Vertical"
 msgstr "Jikelezisa ngobu_de"
 
-#: ../src/xviewer-window.c:3861
+#: ../src/xviewer-window.c:4113
 msgid "Mirror the image vertically"
 msgstr "Bukisa umfanekiso ngokuthe nkqo"
 
-#: ../src/xviewer-window.c:3863
+#: ../src/xviewer-window.c:4115
 msgid "_Rotate Clockwise"
 msgstr "_Jikelezisa usa ngakwicala eya kulo iwotshi"
 
-#: ../src/xviewer-window.c:3864
+#: ../src/xviewer-window.c:4116
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Jikelezisa umfanekiso aye ku-90 degrees ngasekunene"
 
-#: ../src/xviewer-window.c:3866
+#: ../src/xviewer-window.c:4118
 msgid "Rotate Counterc_lockwise"
 msgstr "Jikelezisa ikhawuntac ngoku_hamba Kwewotshi"
 
-#: ../src/xviewer-window.c:3867
+#: ../src/xviewer-window.c:4119
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Jikelezisa umfanekiso aye ku-90 degrees ngasekhohlo"
 
-#: ../src/xviewer-window.c:3869
-msgid "Set as _Desktop Background"
-msgstr "Misela _njengokungasemva kolwazi eskrinini"
+#: ../src/xviewer-window.c:4121
+msgid "Set as Wa_llpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3870
-msgid "Set the selected image as the desktop background"
-msgstr "Yenza umfanekiso okhethiweyo ebengumva wedesktop"
+#: ../src/xviewer-window.c:4122
+msgid "Set the selected image as the wallpaper"
+msgstr ""
 
-#: ../src/xviewer-window.c:3873
+#: ../src/xviewer-window.c:4125
 msgid "Move the selected image to the trash folder"
 msgstr "Shenxisela imifanekiso ekhethiweyo iye kwisiqulathi somgqomo"
 
-#: ../src/xviewer-window.c:3875
+#: ../src/xviewer-window.c:4127
+msgid "_Delete Image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4128
+msgid "Delete the selected image"
+msgstr ""
+
+#: ../src/xviewer-window.c:4130
 msgid "_Copy"
 msgstr "_Kopa"
 
-#: ../src/xviewer-window.c:3876
+#: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopela umfanekiso okhethiweyo kwi-clipboard"
 
-#: ../src/xviewer-window.c:3878 ../src/xviewer-window.c:3887 ../src/xviewer-window.c:3890
+#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4145
 msgid "_Zoom In"
 msgstr "_Yandisa"
 
-#: ../src/xviewer-window.c:3879 ../src/xviewer-window.c:3888
+#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
 msgid "Enlarge the image"
 msgstr "Yandisa lo mfanekiso"
 
-#: ../src/xviewer-window.c:3881 ../src/xviewer-window.c:3893
+#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
 msgid "Zoom _Out"
 msgstr "Nciphi _sa"
 
-#: ../src/xviewer-window.c:3882 ../src/xviewer-window.c:3891 ../src/xviewer-window.c:3894
+#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4149
 msgid "Shrink the image"
 msgstr "Nciphisa umfanekiso"
 
-#: ../src/xviewer-window.c:3884
+#: ../src/xviewer-window.c:4139
 msgid "_Normal Size"
 msgstr "Ubun_gakanani obuqhelekileyo"
 
-#: ../src/xviewer-window.c:3885
+#: ../src/xviewer-window.c:4140
 msgid "Show the image at its normal size"
 msgstr "Bonisa umfanekiso ngobungakanani obuqhelekileyo"
 
-#: ../src/xviewer-window.c:3902
+#: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
 msgstr "Iski_rni esipheleleyo"
 
-#: ../src/xviewer-window.c:3903
+#: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
 msgstr "Bonisa lo mfanekiso kumboniso ophelele"
 
-#: ../src/xviewer-window.c:3905
+#: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
 msgstr "Misa islayidi"
 
-#: ../src/xviewer-window.c:3906
+#: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
 msgstr "Misa okanye uqalele imbonisi zilayidi"
 
-#: ../src/xviewer-window.c:3908
+#: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
 msgstr "_Okona kulunga"
 
-#: ../src/xviewer-window.c:3909
+#: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
 msgstr "Faka umfanekiso ngendlela kwifestile"
 
-#: ../src/xviewer-window.c:3914 ../src/xviewer-window.c:3929
+#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
 msgid "_Previous Image"
 msgstr "_Umfanekiso odlulile"
 
-#: ../src/xviewer-window.c:3915
+#: ../src/xviewer-window.c:4170
 msgid "Go to the previous image of the gallery"
 msgstr "Yiya kumfanekiso odlulileyo wesiqulathi mifanekiso"
 
-#: ../src/xviewer-window.c:3917
+#: ../src/xviewer-window.c:4172
 msgid "_Next Image"
 msgstr "U_mfanekiso olandelayo"
 
-#: ../src/xviewer-window.c:3918
+#: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
 msgstr "Yiya kumfanekiso olandelayo wesiqulathi mifanekiso"
 
-#: ../src/xviewer-window.c:3920 ../src/xviewer-window.c:3932
+#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
 msgstr "Um_fuziselo wokuqala"
 
-#: ../src/xviewer-window.c:3921
+#: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
 msgstr "Yiya kumfanekiso wokuqala wesiqulathi mifanekiso"
 
-#: ../src/xviewer-window.c:3923 ../src/xviewer-window.c:3935
+#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
 msgid "_Last Image"
 msgstr "Umfu_ziselo wokugqibela"
 
-#: ../src/xviewer-window.c:3924
+#: ../src/xviewer-window.c:4179
 msgid "Go to the last image of the gallery"
 msgstr "Yiya kumfanekiso wokugqibela wesiqulathi mifanekiso"
 
-#: ../src/xviewer-window.c:3926
+#: ../src/xviewer-window.c:4181
 msgid "_Random Image"
 msgstr "_Nawuphi umfanekiso"
 
-#: ../src/xviewer-window.c:3927
+#: ../src/xviewer-window.c:4182
 msgid "Go to a random image of the gallery"
 msgstr "Yiya nakuwiphi umfanekiso wesiqulathi mifanekiso"
 
-#: ../src/xviewer-window.c:3941
+#: ../src/xviewer-window.c:4340
 msgid "S_lideshow"
 msgstr "U_mboniso wotyibiliko"
 
-#: ../src/xviewer-window.c:3942
+#: ../src/xviewer-window.c:4341
 msgid "Start a slideshow view of the images"
 msgstr "Qala imbonisi silayidi yokubonisa imifanekiso"
 
-#: ../src/xviewer-window.c:4008
+#: ../src/xviewer-window.c:4413
 msgid "Previous"
 msgstr "Ngaphambili"
 
-#: ../src/xviewer-window.c:4012
+#: ../src/xviewer-window.c:4418
 msgid "Next"
 msgstr "Elandelayo"
 
-#: ../src/xviewer-window.c:4016
+#: ../src/xviewer-window.c:4425
 msgid "Right"
 msgstr "Ekunene"
 
-#: ../src/xviewer-window.c:4019
+#: ../src/xviewer-window.c:4428
 msgid "Left"
 msgstr "Ekhohlo"
 
-#: ../src/xviewer-window.c:4022
+#: ../src/xviewer-window.c:4431
 msgid "Show Folder"
 msgstr "Bonisa isiqulathi seefayili"
 
-#: ../src/xviewer-window.c:4025
+#: ../src/xviewer-window.c:4434
 msgid "In"
 msgstr "Phakathi"
 
-#: ../src/xviewer-window.c:4028
+#: ../src/xviewer-window.c:4437
 msgid "Out"
 msgstr "Phandle"
 
-#: ../src/xviewer-window.c:4031
+#: ../src/xviewer-window.c:4440
 msgid "Normal"
 msgstr "Okuqhelekileyo"
 
-#: ../src/xviewer-window.c:4034
+#: ../src/xviewer-window.c:4443
 msgid "Fit"
 msgstr "Ngenisa"
 
-#: ../src/xviewer-window.c:4037
+#: ../src/xviewer-window.c:4446
 msgid "Gallery"
 msgstr "Indawo yemiboniso"
 
-#: ../src/xviewer-window.c:4040
+#: ../src/xviewer-window.c:4463
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Inkunkuma"
 
-#: ../src/xviewer-window.c:4408
+#: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Lungisa lo mfanekiso usebenzisa %s"
 
-#: ../src/xviewer-window.c:4410
+#: ../src/xviewer-window.c:4831
 msgid "Edit Image"
 msgstr "Hlela umfuziselo"
 
 #: ../src/main.c:63
-msgid "GNOME Image Viewer"
-msgstr "Isibonisi-mfanekiso sakwa-GNOME"
-
-#: ../src/main.c:70
 msgid "Open in fullscreen mode"
 msgstr "Vula ngemo yesikrini esipheleleyo"
 
-#: ../src/main.c:71
+#: ../src/main.c:64
 msgid "Disable image gallery"
 msgstr "Vala isibukiso semifanekiso"
 
-#: ../src/main.c:72
+#: ../src/main.c:65
 msgid "Open in slideshow mode"
 msgstr "Yivule kwifestile entsha"
 
-#: ../src/main.c:73
+#: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Qala elinye icandelo kunokuphinda usebenzise eli sele likhona"
 
-#: ../src/main.c:75
+#: ../src/main.c:67
+msgid ""
+"Open in a single window, if multiple windows are open the first one is used"
+msgstr ""
+
+#: ../src/main.c:69
 msgid "Show the application's version"
 msgstr "Bonisa uhlobo olusebenzisayo"
 
-#: ../src/main.c:108
+#: ../src/main.c:99
 msgid "[FILE…]"
 msgstr "[IFAYILE…]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:121
+#: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Sebenzisa '%s --help' lokufumana uluhlu olukhoyo lomyalelo weenketho "
 "zelayini."
-
-#~ msgid "View many different types of images"
-#~ msgstr "Bona iintlobo ezininzi zemifanekiso eyahlukileyo"
-
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "."
-#~ msgstr "."
-
-#~ msgid "<b>Image Interpolation</b>"
-#~ msgstr "<b>Ukufakela Umfanekiso</b>"
-
-#~ msgid "Allow _zoom greater than 100% initially"
-#~ msgstr "Vumela _isandisi esingaphezulu kwe-100% xa uqalayo"
-
-#~ msgid "Xviewer Preferences"
-#~ msgstr "Uluhlu Lokukhethwayo KwiLiso Le-GNOME"
-
-#~ msgid "Saving Image"
-#~ msgstr "Ukugcina Umfanekiso"
-
-#~ msgid "_Browse"
-#~ msgstr "_Khangela"
-
-#~ msgid "_Interpolate image on zoom"
-#~ msgstr "_Fakela umfanekiso kwisandisi"
-
-#~ msgid "Show/hide image information for collection."
-#~ msgstr "Bonisa/fihla ulwazi lomfanekiso ukuze luqokelelwe."
-
-#~ msgid "Show/hide image information for single image."
-#~ msgstr "Bonisa/fihla ulwazi lomfanekiso womfanekiso omnye."
-
-#~ msgid ""
-#~ "Whether opening an image should create a new window instead of replacing "
-#~ "the image in the current window."
-#~ msgstr ""
-#~ "Ukuba ukuvula umfanekiso kuza kwenza ifestile entsha endaweni yokuma "
-#~ "endaweni yomfanekiso osefestileni ngokwangoku."
-
-#~ msgid "%s x %s pixel"
-#~ msgstr "%s x %s ye-pixel"
-
-#~ msgid "File exists"
-#~ msgstr "Le fayili sele ikho"
-
-#~ msgid "Filename"
-#~ msgstr "Igama lefayili"
-
-#~ msgid "Filesize"
-#~ msgstr "Ubungakanani befayili"
-
-#~ msgid "Attribute"
-#~ msgstr "Uphawu"
-
-#~ msgid "File"
-#~ msgstr "Ifayili"
-
-#~ msgid "EXIF"
-#~ msgstr "EXIF"
-
-#~ msgid "Option not available."
-#~ msgstr "Olu khetho alufumanekanga."
-
-#~ msgid ""
-#~ "To use this function you need the libexif library. Please install libexif "
-#~ "(http://libexif.sf.net) and recompile Xviewer."
-#~ msgstr ""
-#~ "Ukusebenzisa lo msebenzi udinga ithala leencwadi le-libexif. Nceda useke "
-#~ "izixhobo ze-libexif (http://libexif.sf.net) ze uphinde uqokelele Iliso le-"
-#~ "GNOME."
-
-#~ msgid "Cancel saving ..."
-#~ msgstr "Rhoxisa ukugcina ..."
-
-#~ msgid "Filenames are not disjunct."
-#~ msgstr "Amagama eefayili akahlukaniswanga."
-
-#~ msgid "Comment"
-#~ msgstr "Nika amagqabantshintshi"
-
-#~ msgid "Date"
-#~ msgstr "Umhla"
-
-#~ msgid "Time"
-#~ msgstr "Ixesha"
-
-#~ msgid "Day"
-#~ msgstr "Usuku"
-
-#~ msgid "Year"
-#~ msgstr "Unyaka"
-
-#~ msgid "Hour"
-#~ msgstr "Iyure"
-
-#~ msgid "Minute"
-#~ msgstr "Umzuzu"
-
-#~ msgid "Second"
-#~ msgstr "Umzuzwana"
-
-#~ msgid "Xviewer"
-#~ msgstr "Iliso le-GNOME"
-
-#~ msgid ""
-#~ "Could not display help for Xviewer.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Ayikwazanga ukubonisa uncedo lweskrini seLiso le-GNOME.\n"
-#~ "%s"
-
-#~ msgid "Overwrite file %s?"
-#~ msgstr "Ufuna ukubhala phezu kwale fayili %s?"
-
-#~ msgid "File exists. Do you want to overwrite it?"
-#~ msgstr "Le fayili sele ikhona. Ufuna ukubhala phezu kwayo?"
-
-#~ msgid "Skip"
-#~ msgstr "Tsiba"
-
-#~ msgid "Overwrite"
-#~ msgstr "Bhala phezu kwayo"
-
-#~ msgid "Error on saving %s."
-#~ msgstr "Kwenzeke impazamo ngelixa ugcina %s."
-
-#~ msgid "Retry"
-#~ msgstr "Zama kwakhona"
-
-#, fuzzy
-#~ msgid "Couldn't determine destination uri."
-#~ msgstr "Ayikwazanga ukumisa ubume bale fayili %s"
-
-#~ msgid "Please use an appropriate filename suffix or select a file format."
-#~ msgstr ""
-#~ "Nceda usebenzise isimamva segama lefayili esifanelekileyo okanye chonga "
-#~ "ubume befayili."
-
-#~ msgid "Error on saving images."
-#~ msgstr "Kwenzeke impazamo ngelixa kugcinwa umfanekiso."
-
-#~ msgid "_File"
-#~ msgstr "I_Fayili"
-
-#~ msgid "Open a new window"
-#~ msgstr "Vula ifestile entsha"
-
-#~ msgid "_Open..."
-#~ msgstr "_Vula..."
-
-#~ msgid "Open _Folder..."
-#~ msgstr "Vula _Isiqulathi Seefayili..."
-
-#~ msgid "Rotat_e 180°"
-#~ msgstr "Jikelezis_a 180°"
-
-#~ msgid "Delete"
-#~ msgstr "Cima"
-
-#~ msgid "Image _Information"
-#~ msgstr "Ulwazi _Ngemifanekiso"
-
-#, fuzzy
-#~ msgid "New"
-#~ msgstr "_Entsha"
-
-#, fuzzy
-#~ msgid "Close"
-#~ msgstr "_Vala"
-
-#, fuzzy
-#~ msgid "Save"
-#~ msgstr "_Gcina"
-
-#, fuzzy
-#~ msgid "Undo"
-#~ msgstr "_Buyela Emva"
-
-#~ msgid "User interface description not found."
-#~ msgstr "Inkcazelo yomdibanisi wemida ayifumanekanga."
-
-#~ msgid "Unable to create Xviewer user interface"
-#~ msgstr "Ayikwazanga ukwenza umdibaniso wemida yomsebenzisi weLiso le-GNOME"
-
-#~ msgid ""
-#~ "You are about to open %i windows simultaneously. Do you want to open them "
-#~ "in a collection instead?"
-#~ msgstr ""
-#~ "Sele uza kuvula ezi festile %i ngexesha elinye. Ingaba ufuna ukuzivula "
-#~ "njengengqokelela?"
-
-#~ msgid "Open multiple single windows?"
-#~ msgstr "Ufuna ukuvula uninzi lweefestile ezinganye?"
-
-#~ msgid "Single Windows"
-#~ msgstr "Iifesitle Ngazinye"
-
-#~ msgid "empty file"
-#~ msgstr "ifayili engenanto"
