@@ -10,15 +10,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-03-08 09:45+0000\n"
+"PO-Revision-Date: 2016-05-20 08:30+0000\n"
 "Last-Translator: Балкыбаев Мурат <d2vsd1@mail.ru>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 "Language: kk\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -726,6 +726,9 @@ msgid_plural ""
 msgstr[0] ""
 "Өзгерістері сақталмаған %d сурет бар. Жабу алдында өзгерістерді сақтау керек "
 "пе?"
+msgstr[1] ""
+"Өзгерістері сақталмаған %d сурет бар. Жабу алдында өзгерістерді сақтау керек "
+"пе?"
 
 #: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
@@ -890,6 +893,7 @@ msgstr "Қолдауы бар сурет файлдары"
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "пиксель"
+msgstr[1] "пиксельдер"
 
 #: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
 msgid "_Open"
@@ -971,6 +975,7 @@ msgstr "Бұл файл орналасқан буманы файлдар бас�
 msgid "%lu second"
 msgid_plural "%lu seconds"
 msgstr[0] "%lu секунд"
+msgstr[1] "%lu секунд"
 
 #: ../src/xviewer-print.c:371
 msgid "Image Settings"
@@ -1110,7 +1115,8 @@ msgstr " (қате Юникод)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i пиксель  %s    %i%%"
+msgstr[0] "%i × %i пиксель %s %i%%"
+msgstr[1] "%i × %i пиксельдер %s %i%%"
 
 #: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
 msgctxt "MessageArea"
@@ -1217,7 +1223,10 @@ msgid_plural ""
 "Are you sure you want to remove\n"
 "the %d selected images permanently?"
 msgstr[0] ""
-"Таңдалған %d суретті толығымен өшіруді\n"
+"Таңдалған суретті толығымен өшіруді\n"
+"шынымен қалайсыз ба?"
+msgstr[1] ""
+"Таңдалған %d суреттерді толығымен өшіруді\n"
 "шынымен қалайсыз ба?"
 
 #: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
@@ -1281,7 +1290,10 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Таңдалған %d суретті қоқыс шелегіне тастауды\n"
+"Таңдалған суретті қоқыс шелегіне тастауды\n"
+"шынымен қалайсыз ба?"
+msgstr[1] ""
+"Таңдалған %d суреттерді қоқыс шелегіне тастауды\n"
 "шынымен қалайсыз ба?"
 
 #: ../src/xviewer-window.c:3616

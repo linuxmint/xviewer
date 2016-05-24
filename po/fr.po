@@ -25,15 +25,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-03-05 11:04+0000\n"
-"Last-Translator: Rémi Saint-romain <Unknown>\n"
+"PO-Revision-Date: 2016-05-23 13:08+0000\n"
+"Last-Translator: Phan Hoang <phahoatho@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 "Language: fr\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -118,9 +118,9 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
-"Xviewer est un visionneur d'images qui supporte de nombreux formats. Il peut "
-"être utilisé pour visualiser une seule image ou des images appartenant a une "
-"collection."
+"Xviewer est un visionneur d'images qui prend en charge de nombreux formats. "
+"Il peut être utilisé pour visualiser une seule image ou des images "
+"appartenant à une collection."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -571,8 +571,8 @@ msgid ""
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 "Une valeur supérieure à zéro détermine la durée d'affichage d'une image à "
-"l'écran, en secondes, avant de passer automatiquement à l'image "
-"suivante.Zéro désactive la navigation automatique."
+"l'écran, en secondes, avant de passer automatiquement à l'image suivante. "
+"Zéro désactive la navigation automatique."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
@@ -1104,7 +1104,7 @@ msgstr "Aperçu avant impression"
 
 #: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
-msgstr "inchangé"
+msgstr "tel quel"
 
 #. Translators: This string is displayed in the statusbar.
 #. * The first token is the image number, the second is total image
@@ -1128,7 +1128,7 @@ msgstr "Pris le"
 #: ../src/xviewer-uri-converter.c:982
 #, c-format
 msgid "At least two file names are equal."
-msgstr "Au moins deux noms de fichiers sont identiques."
+msgstr "Au moins deux fichiers ont le même nom."
 
 #: ../src/xviewer-util.c:68
 msgid "Could not display help for Image Viewer"
@@ -1587,7 +1587,7 @@ msgstr "Image _suivante"
 
 #: ../src/xviewer-window.c:4173
 msgid "Go to the next image of the gallery"
-msgstr "Affiche la prochaine image de la galerie"
+msgstr "Affiche l'image suivante de la galerie"
 
 #: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
@@ -1711,5 +1711,5 @@ msgstr "[FICHIER…]"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Lancez « %s --help » pour voir la liste complète de options disponibles en "
+"Exécutez « %s --help » pour afficher la liste des options disponibles en "
 "ligne de commande."

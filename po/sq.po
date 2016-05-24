@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: xviewer HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-02-05 08:12+0000\n"
-"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"PO-Revision-Date: 2016-04-28 18:06+0000\n"
+"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -92,7 +92,7 @@ msgstr "_Informacione"
 
 #: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
-msgstr ""
+msgstr "_Dil"
 
 #: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
@@ -142,22 +142,22 @@ msgstr "_Mbyll"
 #: ../data/xviewer-image-properties-dialog.ui.h:5
 #: ../src/xviewer-metadata-sidebar.c:497
 msgid "Name:"
-msgstr ""
+msgstr "Emri:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:6
 #: ../src/xviewer-metadata-sidebar.c:499
 msgid "Width:"
-msgstr ""
+msgstr "Gjerësia:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:7
 #: ../src/xviewer-metadata-sidebar.c:501
 msgid "Height:"
-msgstr ""
+msgstr "Lartësia:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:8
 #: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
-msgstr ""
+msgstr "Lloji:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
@@ -166,7 +166,7 @@ msgstr ""
 #: ../data/xviewer-image-properties-dialog.ui.h:10
 #: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
-msgstr ""
+msgstr "Dosja:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:11
 #: ../src/xviewer-metadata-sidebar.c:495
@@ -211,12 +211,12 @@ msgstr ""
 #: ../data/xviewer-image-properties-dialog.ui.h:19
 #: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
-msgstr ""
+msgstr "Data/Koha:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:20
 #: ../src/xviewer-metadata-sidebar.c:557
 msgid "Description:"
-msgstr ""
+msgstr "Përshkrimi:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:21
 #: ../src/xviewer-metadata-sidebar.c:560
@@ -231,7 +231,7 @@ msgstr ""
 #: ../data/xviewer-image-properties-dialog.ui.h:23
 #: ../src/xviewer-metadata-sidebar.c:565
 msgid "Author:"
-msgstr ""
+msgstr "Autori:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:24
 #: ../src/xviewer-metadata-sidebar.c:568
@@ -241,7 +241,7 @@ msgstr ""
 #: ../data/xviewer-image-properties-dialog.ui.h:25
 #: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
-msgstr ""
+msgstr "Detajet"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:26
 #: ../src/xviewer-metadata-sidebar.c:528
@@ -259,12 +259,12 @@ msgstr "Ruaj si"
 #: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
 #: ../src/xviewer-window.c:3630
 msgid "_Cancel"
-msgstr ""
+msgstr "_Anulo"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
 #: ../src/xviewer-close-confirmation-dialog.c:184
 msgid "Save _As"
-msgstr ""
+msgstr "Ruaj _si"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
@@ -302,7 +302,7 @@ msgstr ""
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
-msgstr ""
+msgstr "Opsionet"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
@@ -318,7 +318,7 @@ msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:1
 msgid "Preferences"
-msgstr ""
+msgstr "Parapëlqimet"
 
 #: ../data/xviewer-preferences-dialog.ui.h:4
 msgid "Image Enhancements"
@@ -347,7 +347,7 @@ msgstr ""
 #: ../data/xviewer-preferences-dialog.ui.h:10
 #: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
-msgstr ""
+msgstr "Ngjyra e sfondit"
 
 #: ../data/xviewer-preferences-dialog.ui.h:11
 msgid "Transparent Parts"
@@ -388,7 +388,7 @@ msgstr ""
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
 #: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
-msgstr ""
+msgstr "_Koha midis imazheve:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
@@ -695,11 +695,11 @@ msgstr ""
 
 #: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
 msgid "_Reload"
-msgstr ""
+msgstr "_Ringarko"
 
 #: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
 msgid "Save _As…"
-msgstr ""
+msgstr "Ruaj _si…"
 
 #: ../src/xviewer-error-message-area.c:171
 #, c-format
@@ -770,19 +770,19 @@ msgstr "Vlera"
 
 #: ../src/xviewer-metadata-details.c:436
 msgid "North"
-msgstr ""
+msgstr "Veri"
 
 #: ../src/xviewer-metadata-details.c:439
 msgid "East"
-msgstr ""
+msgstr "Lindje"
 
 #: ../src/xviewer-metadata-details.c:442
 msgid "West"
-msgstr ""
+msgstr "Perëndim"
 
 #: ../src/xviewer-metadata-details.c:445
 msgid "South"
-msgstr ""
+msgstr "Jug"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
@@ -831,7 +831,7 @@ msgstr "%s (*.%s)"
 
 #: ../src/xviewer-file-chooser.c:212
 msgid "All files"
-msgstr ""
+msgstr "Të gjithë skedarët"
 
 #: ../src/xviewer-file-chooser.c:217
 msgid "Supported image files"
@@ -849,11 +849,11 @@ msgstr[1] "pikë"
 
 #: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
 msgid "_Open"
-msgstr ""
+msgstr "_Hap"
 
 #: ../src/xviewer-file-chooser.c:459
 msgid "Open Image"
-msgstr ""
+msgstr "Hap Imazhin"
 
 #: ../src/xviewer-file-chooser.c:467
 msgid "Save Image"
@@ -926,8 +926,8 @@ msgstr ""
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu sekondë"
+msgstr[1] "%lu sekonda"
 
 #: ../src/xviewer-print.c:371
 msgid "Image Settings"
@@ -1038,7 +1038,7 @@ msgstr "si është"
 #: ../src/xviewer-statusbar.c:126
 #, c-format
 msgid "%d / %d"
-msgstr ""
+msgstr "%d / %d"
 
 #: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
@@ -1178,7 +1178,7 @@ msgstr ""
 
 #: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
 msgid "_Yes"
-msgstr ""
+msgstr "_Po"
 
 #. add 'dont ask again' button
 #: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
@@ -1272,7 +1272,7 @@ msgstr "Ins_trumentë"
 
 #: ../src/xviewer-window.c:4052
 msgid "_Open…"
-msgstr ""
+msgstr "_Hap…"
 
 #: ../src/xviewer-window.c:4053
 msgid "Open a file"
@@ -1423,7 +1423,7 @@ msgstr ""
 
 #: ../src/xviewer-window.c:4130
 msgid "_Copy"
-msgstr ""
+msgstr "_Kopjo"
 
 #: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
