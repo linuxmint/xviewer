@@ -424,7 +424,7 @@ xviewer_sidebar_init (XviewerSidebar *xviewer_sidebar)
 			  G_CALLBACK (xviewer_sidebar_close_clicked_cb),
 			  xviewer_sidebar);
 
-	image = gtk_image_new_from_icon_name ("window-close",
+	image = gtk_image_new_from_icon_name ("window-close-symbolic",
 					      GTK_ICON_SIZE_MENU);
 	gtk_container_add (GTK_CONTAINER (close_button), image);
 	gtk_widget_show (image);
