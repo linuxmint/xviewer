@@ -4049,22 +4049,22 @@ static const GtkActionEntry action_entries_window[] = {
 	{ "Tools", NULL, N_("_Tools") },
 	{ "Help",  NULL, N_("_Help") },
 
-	{ "ImageOpen", "document-open",  N_("_Open…"), "<control>O",
+	{ "ImageOpen", "document-open-symbolic",  N_("_Open…"), "<control>O",
 	  N_("Open a file"),
 	  G_CALLBACK (xviewer_window_cmd_file_open) },
-	{ "ImageClose", "window-close", N_("_Close"), "<control>W",
+	{ "ImageClose", "window-close-symbolic", N_("_Close"), "<control>W",
 	  N_("Close window"),
 	  G_CALLBACK (xviewer_window_cmd_close_window) },
 	{ "EditToolbar", NULL, N_("T_oolbar"), NULL,
 	  N_("Edit the application toolbar"),
 	  G_CALLBACK (xviewer_window_cmd_edit_toolbar) },
-	{ "EditPreferences", "preferences-desktop", N_("Prefere_nces"), NULL,
+	{ "EditPreferences", "preferences-system-symbolic", N_("Prefere_nces"), NULL,
 	  N_("Preferences for Image Viewer"),
 	  G_CALLBACK (xviewer_window_cmd_preferences) },
-	{ "HelpManual", "help-browser", N_("_Contents"), "F1",
+	{ "HelpManual", "help-browser-symbolic", N_("_Contents"), "F1",
 	  N_("Help on this application"),
 	  G_CALLBACK (xviewer_window_cmd_help) },
-	{ "HelpAbout", "help-about", N_("_About"), NULL,
+	{ "HelpAbout", "help-about-symbolic", N_("_About"), NULL,
 	  N_("About this application"),
 	  G_CALLBACK (xviewer_window_cmd_about) }
 };
@@ -4085,67 +4085,67 @@ static const GtkToggleActionEntry toggle_entries_window[] = {
 };
 
 static const GtkActionEntry action_entries_image[] = {
-	{ "ImageSave", "document-save", N_("_Save"), "<control>s",
+	{ "ImageSave", "document-save-symbolic", N_("_Save"), "<control>s",
 	  N_("Save changes in currently selected images"),
 	  G_CALLBACK (xviewer_window_cmd_save) },
 	{ "ImageOpenWith", NULL, N_("Open _with"), NULL,
 	  N_("Open the selected image with a different application"),
 	  NULL},
-	{ "ImageSaveAs", "document-save-as", N_("Save _As…"), "<control><shift>s",
+	{ "ImageSaveAs", "document-save-as-symbolic", N_("Save _As…"), "<control><shift>s",
 	  N_("Save the selected images with a different name"),
 	  G_CALLBACK (xviewer_window_cmd_save_as) },
-	{ "ImageOpenContainingFolder", "folder", N_("Show Containing _Folder"), NULL,
+	{ "ImageOpenContainingFolder", "folder-symbolic", N_("Show Containing _Folder"), NULL,
 	  N_("Show the folder which contains this file in the file manager"),
 	  G_CALLBACK (xviewer_window_cmd_open_containing_folder) },
-	{ "ImagePrint", "document-print", N_("_Print…"), "<control>p",
+	{ "ImagePrint", "document-print-symbolic", N_("_Print…"), "<control>p",
 	  N_("Print the selected image"),
 	  G_CALLBACK (xviewer_window_cmd_print) },
-	{ "ImageProperties", "document-properties", N_("Prope_rties"), "<alt>Return",
+	{ "ImageProperties", "document-properties-symbolic", N_("Prope_rties"), "<alt>Return",
 	  N_("Show the properties and metadata of the selected image"),
 	  G_CALLBACK (xviewer_window_cmd_properties) },
-	{ "EditUndo", "edit-undo", N_("_Undo"), "<control>z",
+	{ "EditUndo", "edit-undo-symbolic", N_("_Undo"), "<control>z",
 	  N_("Undo the last change in the image"),
 	  G_CALLBACK (xviewer_window_cmd_undo) },
-	{ "EditFlipHorizontal", "object-flip-horizontal", N_("Flip _Horizontal"), NULL,
+	{ "EditFlipHorizontal", "object-flip-horizontal-symbolic", N_("Flip _Horizontal"), NULL,
 	  N_("Mirror the image horizontally"),
 	  G_CALLBACK (xviewer_window_cmd_flip_horizontal) },
-	{ "EditFlipVertical", "object-flip-vertical", N_("Flip _Vertical"), NULL,
+	{ "EditFlipVertical", "object-flip-vertical-symbolic", N_("Flip _Vertical"), NULL,
 	  N_("Mirror the image vertically"),
 	  G_CALLBACK (xviewer_window_cmd_flip_vertical) },
-	{ "EditRotate90",  "object-rotate-right",  N_("_Rotate Clockwise"), "<control>r",
+	{ "EditRotate90",  "object-rotate-right-symbolic",  N_("_Rotate Clockwise"), "<control>r",
 	  N_("Rotate the image 90 degrees to the right"),
 	  G_CALLBACK (xviewer_window_cmd_rotate_90) },
-	{ "EditRotate270", "object-rotate-left", N_("Rotate Counterc_lockwise"), "<ctrl><shift>r",
+	{ "EditRotate270", "object-rotate-left-symbolic", N_("Rotate Counterc_lockwise"), "<ctrl><shift>r",
 	  N_("Rotate the image 90 degrees to the left"),
 	  G_CALLBACK (xviewer_window_cmd_rotate_270) },
 	{ "ImageSetAsWallpaper", NULL, N_("Set as Wa_llpaper"),
 	  "<control>F8", N_("Set the selected image as the wallpaper"),
 	  G_CALLBACK (xviewer_window_cmd_wallpaper) },
-	{ "EditMoveToTrash", "user-trash", N_("Move to _Trash"), NULL,
+	{ "EditMoveToTrash", "user-trash-symbolic", N_("Move to _Trash"), NULL,
 	  N_("Move the selected image to the trash folder"),
 	  G_CALLBACK (xviewer_window_cmd_move_to_trash) },
-	{ "EditDelete", "edit-delete", N_("_Delete Image"), "<shift>Delete",
+	{ "EditDelete", "edit-delete-symbolic", N_("_Delete Image"), "<shift>Delete",
 	  N_("Delete the selected image"),
 	  G_CALLBACK (xviewer_window_cmd_delete) },
-	{ "EditCopyImage", "edit-copy", N_("_Copy"), "<control>C",
+	{ "EditCopyImage", "edit-copy-symbolic", N_("_Copy"), "<control>C",
 	  N_("Copy the selected image to the clipboard"),
 	  G_CALLBACK (xviewer_window_cmd_copy_image) },
-	{ "ViewZoomIn", "zoom-in", N_("_Zoom In"), "<control>plus",
+	{ "ViewZoomIn", "zoom-in-symbolic", N_("_Zoom In"), "<control>plus",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
-	{ "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus",
+	{ "ViewZoomOut", "zoom-out-symbolic", N_("Zoom _Out"), "<control>minus",
 	  N_("Shrink the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_out) },
-	{ "ViewZoomNormal", "zoom-original", N_("_Normal Size"), "<control>0",
+	{ "ViewZoomNormal", "zoom-original-symbolic", N_("_Normal Size"), "<control>0",
 	  N_("Show the image at its normal size"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_normal) },
-	{ "ControlEqual", "zoom-in", N_("_Zoom In"), "<control>equal",
+	{ "ControlEqual", "zoom-in-symbolic", N_("_Zoom In"), "<control>equal",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
-	{ "ControlKpAdd", "zoom-in", N_("_Zoom In"), "<control>KP_Add",
+	{ "ControlKpAdd", "zoom-in-symbolic", N_("_Zoom In"), "<control>KP_Add",
 	  N_("Shrink the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
-	{ "ControlKpSub", "zoom-in", N_("Zoom _Out"), "<control>KP_Subtract",
+	{ "ControlKpSub", "zoom-in-symbolic", N_("Zoom _Out"), "<control>KP_Subtract",
 	  N_("Shrink the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_out) },
 	{ "Delete", NULL, N_("Move to _Trash"), "Delete",
@@ -4154,28 +4154,28 @@ static const GtkActionEntry action_entries_image[] = {
 };
 
 static const GtkToggleActionEntry toggle_entries_image[] = {
-	{ "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "F11",
+	{ "ViewFullscreen", "view-fullscreen-symbolic", N_("_Fullscreen"), "F11",
 	  N_("Show the current image in fullscreen mode"),
 	  G_CALLBACK (xviewer_window_cmd_fullscreen), FALSE },
-	{ "PauseSlideshow", "media-playback-pause", N_("Pause Slideshow"),
+	{ "PauseSlideshow", "media-playback-pause-symbolic", N_("Pause Slideshow"),
 	  NULL, N_("Pause or resume the slideshow"),
 	  G_CALLBACK (xviewer_window_cmd_pause_slideshow), FALSE },
-	{ "ViewZoomFit", "zoom-fit-best", N_("_Best Fit"), "F",
+	{ "ViewZoomFit", "zoom-fit-best-symbolic", N_("_Best Fit"), "F",
 	  N_("Fit the image to the window"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_fit) },
 };
 
 static const GtkActionEntry action_entries_gallery[] = {
-	{ "GoPrevious", "go-previous", N_("_Previous Image"), "Left",
+	{ "GoPrevious", "go-previous-symbolic", N_("_Previous Image"), "Left",
 	  N_("Go to the previous image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_prev) },
-	{ "GoNext", "go-next", N_("_Next Image"), "Right",
+	{ "GoNext", "go-next-symbolic", N_("_Next Image"), "Right",
 	  N_("Go to the next image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_next) },
-	{ "GoFirst", "go-first", N_("_First Image"), "<Alt>Home",
+	{ "GoFirst", "go-first-symbolic", N_("_First Image"), "<Alt>Home",
 	  N_("Go to the first image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_first) },
-	{ "GoLast", "go-last", N_("_Last Image"), "<Alt>End",
+	{ "GoLast", "go-last-symbolic", N_("_Last Image"), "<Alt>End",
 	  N_("Go to the last image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_last) },
 	{ "GoRandom", NULL, N_("_Random Image"), "<control>M",
@@ -4409,17 +4409,17 @@ set_action_properties (XviewerWindow      *window,
 	rtl = gtk_widget_get_direction (GTK_WIDGET (window)) == GTK_TEXT_DIR_RTL;
 
 	action = gtk_action_group_get_action (gallery_group, "GoPrevious");
-	g_object_set (action, "icon-name", rtl ? "go-previous-rtl" : "go-previous", NULL);
+	g_object_set (action, "icon-name", rtl ? "go-previous-rtl-symboli" : "go-previous-symbolic", NULL);
 	g_object_set (action, "short_label", _("Previous"), NULL);
 	g_object_set (action, "is-important", TRUE, NULL);
 
 	action = gtk_action_group_get_action (gallery_group, "GoNext");
-	g_object_set (action, "icon-name", rtl ? "go-next-rtl" : "go-next", NULL);
+	g_object_set (action, "icon-name", rtl ? "go-next-rtl-symbolic" : "go-next-symbolic", NULL);
 	g_object_set (action, "short_label", _("Next"), NULL);
 	g_object_set (action, "is-important", TRUE, NULL);
 
 	action = gtk_action_group_get_action (image_group, "EditUndo");
-	g_object_set (action, "icon-name", rtl ? "edit-undo-rtl" : "edit-undo", NULL);
+	g_object_set (action, "icon-name", rtl ? "edit-undo-rtl-symbolic" : "edit-undo-symbolic", NULL);
 
 	action = gtk_action_group_get_action (image_group, "EditRotate90");
 	g_object_set (action, "short_label", _("Right"), NULL);
