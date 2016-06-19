@@ -2775,7 +2775,7 @@ xviewer_window_set_wallpaper (XviewerWindow *window, const gchar *filename, cons
 	}
 	else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "MATE") == 0) {
 		settings = g_settings_new ("org.mate.background");
-		g_settings_set_string (settings, "picture-filename", uri);
+		g_settings_set_string (settings, "picture-filename", filename);
 		g_object_unref (settings);
 	}
 	else {
