@@ -6178,7 +6178,7 @@ xviewer_window_show_about_dialog (XviewerWindow *window)
 	g_return_if_fail (XVIEWER_IS_WINDOW (window));
 
 	gtk_show_about_dialog (GTK_WINDOW (window),
-			       "program-name", _("Image Viewer"),
+			       "program-name", "Xviewer",
 			       "version", VERSION,
 			       "website", "https://github.com/linuxmint/xviewer",
 			       "logo-icon-name", "xviewer",
