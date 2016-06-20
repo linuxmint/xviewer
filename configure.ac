@@ -2,10 +2,10 @@ AC_PREREQ(2.59)
 
 m4_define(xviewer_major_version,  1)
 m4_define(xviewer_minor_version, 0)
-m4_define(xviewer_micro_version,  3)
+m4_define(xviewer_micro_version,  4)
 m4_define(xviewer_version, xviewer_major_version.xviewer_minor_version.xviewer_micro_version)
 
-AC_INIT([xviewer], xviewer_version, [http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer], [xviewer])
+AC_INIT([xviewer], xviewer_version, [https://github.com/linuxmint/xviewer/issues], [xviewer])
 AM_INIT_AUTOMAKE([1.11 foreign no-dist-gzip dist-xz])
 
 AC_CONFIG_MACRO_DIR([m4])
