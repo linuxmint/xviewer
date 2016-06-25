@@ -15,15 +15,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-04-01 21:14+0000\n"
+"PO-Revision-Date: 2016-06-12 15:11+0000\n"
 "Last-Translator: tomoe_musashi <hkg.musashi@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-25 09:32+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -115,7 +115,7 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
-"Xviewer 亦允許以全螢幕投影片模式檢視圖片或是將圖片設定為桌面的桌布。它會讀取數碼相機的標籤自動將你的影像旋轉到正確的直式或橫式方向。"
+"Xviewer 亦允許以全熒幕投影片模式檢視圖片或是將圖片設定為桌面的桌布。它會讀取數碼相機的標籤自動將你的影像旋轉到正確的直式或橫式方向。"
 
 # src/preferences-dialog.glade.h:32
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
@@ -412,7 +412,7 @@ msgstr "影像縮放"
 
 #: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
-msgstr "放大至適合螢幕的大小(_X)"
+msgstr "放大至適合熒幕的大小(_X)"
 
 #: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
@@ -634,8 +634,8 @@ msgid ""
 "on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
 msgstr ""
-"如果在使用中，在屬性對話盒中的詳細中繼資料清單會移至對話盒中自已的頁面。這樣會讓對話盒在小型螢幕上更易於使用，例如用於輕省筆電。如果停用則此視窗元件會內嵌"
-"於「中繼資料」頁面。"
+"如果在使用中，在屬性對話盒中的詳細中繼資料清單會移至對話盒中自己的頁面。這樣會讓對話盒在小型熒幕上更易於使用，例如用於輕型手提電腦。如果停用則此視窗元件會"
+"內嵌於「中繼資料」頁面。"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -661,11 +661,11 @@ msgstr "使用中外掛程式的清單。這裏沒有包含這些外掛程式的
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
-msgstr "連按兩下全螢幕模式"
+msgstr "連按兩下全熒幕模式"
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
-msgstr "連按兩下時使用全螢幕模式"
+msgstr "連按兩下時使用全熒幕模式"
 
 # src/window.c:704
 #: ../plugins/reload/xviewer-reload-plugin.c:74
@@ -1153,11 +1153,9 @@ msgstr "儲存影像「%s」(%u/%u)"
 msgid "Opening image \"%s\""
 msgstr "正在開啟影像「%s」"
 
-# src/preferences-dialog.glade.h:39
 #: ../src/xviewer-window.c:1898
-#| msgid "_Fullscreen"
 msgid "_Leave Fullscreen"
-msgstr "離開全螢幕(_L)"
+msgstr "離開全熒幕(_L)"
 
 #. L10N: This the reason why the screensaver is inhibited.
 #: ../src/xviewer-window.c:2030
@@ -1511,14 +1509,13 @@ msgstr "正常大小(_N)"
 msgid "Show the image at its normal size"
 msgstr "以影像的原始尺寸顯示"
 
-# src/preferences-dialog.glade.h:39
 #: ../src/xviewer-window.c:4157
 msgid "_Fullscreen"
-msgstr "全螢幕(_F)"
+msgstr "全熒幕(_F)"
 
 #: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
-msgstr "以全螢幕模式顯示目前的影像"
+msgstr "以全熒幕模式顯示目前的影像"
 
 #: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
@@ -1653,7 +1650,7 @@ msgstr "編輯影像"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
-msgstr "以全螢幕模式開啟"
+msgstr "以全熒幕模式開啟"
 
 #: ../src/main.c:64
 msgid "Disable image gallery"
