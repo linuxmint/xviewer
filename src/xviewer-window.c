@@ -81,6 +81,8 @@
 #include <lcms2.h>
 #endif
 
+#include <stdlib.h>
+
 #define XVIEWER_WINDOW_MIN_WIDTH  440
 #define XVIEWER_WINDOW_MIN_HEIGHT 350
 
@@ -2717,10 +2719,12 @@ wallpaper_info_bar_response (GtkInfoBar *bar, gint response, XviewerWindow *wind
 			app_info = g_app_info_create_from_commandline ("cinnamon-settings backgrounds", "System Settings", G_APP_INFO_CREATE_NONE, &error);
 		else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "MATE") == 0)
 			app_info = g_app_info_create_from_commandline ("mate-appearance-properties --show-page=background", "System Settings", G_APP_INFO_CREATE_NONE, &error);
+		else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "XFCE") == 0)
+			app_info = g_app_info_create_from_commandline ("xfdesktop-settings", "Desktop", G_APP_INFO_CREATE_NONE, &error);
 		else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Unity") == 0)
 			app_info = g_app_info_create_from_commandline ("unity-control-center appearance", "System Settings", G_APP_INFO_CREATE_NONE, &error);
 		else
-			app_info = g_app_info_create_from_commandline ("gnome-control-center background", "System Settings", G_APP_INFO_CREATE_NONE, &error);
+			app_info = g_app_info_create_from_commandline ("gnome-XDG_CURRENT_DESKTOPcontrol-center background", "System Settings", G_APP_INFO_CREATE_NONE, &error);
 
 		if (error != NULL) {
 			g_warning ("%s%s", _("Error launching System Settings: "),
@@ -2777,6 +2781,11 @@ xviewer_window_set_wallpaper (XviewerWindow *window, const gchar *filename, cons
 		settings = g_settings_new ("org.mate.background");
 		g_settings_set_string (settings, "picture-filename", filename);
 		g_object_unref (settings);
+	}
+	else if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "XFCE") == 0) {
+		gchar *command = g_strdup_printf("xfce4-set-wallpaper '%s'", filename);
+		system(command);
+		g_free(command);
 	}
 	else {
 		settings = g_settings_new ("org.gnome.desktop.background");
