@@ -186,6 +186,10 @@ struct _XviewerScrollViewPrivate {
 	gdouble initial_zoom;
 	XviewerRotationState rotate_state;
 	XviewerPanAction pan_action;
+
+	/* Two-pass filtering */
+	GSource *hq_redraw_timeout_source;
+	gboolean force_unfiltered;
 };
 
 static void scroll_by (XviewerScrollView *view, int xofs, int yofs);
@@ -1251,6 +1255,44 @@ scroll_by (XviewerScrollView *view, int xofs, int yofs)
 	scroll_to (view, priv->xofs + xofs, priv->yofs + yofs, TRUE);
 }
 
+static gboolean _hq_redraw_cb (gpointer user_data)
+{
+	XviewerScrollViewPrivate *priv = XVIEWER_SCROLL_VIEW (user_data)->priv;
+
+	priv->force_unfiltered = FALSE;
+	gtk_widget_queue_draw (GTK_WIDGET (priv->display));
+
+	priv->hq_redraw_timeout_source = NULL;
+	return G_SOURCE_REMOVE;
+}
+
+static void
+_clear_hq_redraw_timeout (XviewerScrollView *view)
+{
+	XviewerScrollViewPrivate *priv = view->priv;
+
+	if (priv->hq_redraw_timeout_source != NULL) {
+		g_source_unref (priv->hq_redraw_timeout_source);
+		g_source_destroy (priv->hq_redraw_timeout_source);
+	}
+
+	priv->hq_redraw_timeout_source = NULL;
+}
+
+static void
+_set_hq_redraw_timeout (XviewerScrollView *view)
+{
+	GSource *source;
+
+	_clear_hq_redraw_timeout (view);
+
+	source = g_timeout_source_new (200);
+	g_source_set_callback (source, &_hq_redraw_cb, view, NULL);
+
+	g_source_attach (source, NULL);
+
+	view->priv->hq_redraw_timeout_source = source;
+}
 
 /* Callback used when an adjustment is changed */
 static void
@@ -1929,14 +1971,35 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 	} else
 #endif /* HAVE_RSVG */
 	{
+		cairo_filter_t interp_type;
+
+		if(!DOUBLE_EQUAL(priv->zoom, 1.0) && priv->force_unfiltered)
+		{
+			if ((is_zoomed_in (view) && priv->interp_type_in != CAIRO_FILTER_NEAREST) ||
+				(is_zoomed_out (view) && priv->interp_type_out != CAIRO_FILTER_NEAREST)) {
+				// CAIRO_FILTER_GOOD is too slow during zoom changes, so use CAIRO_FILTER_BILINEAR instead
+				interp_type = CAIRO_FILTER_BILINEAR;
+			}
+			else {
+				interp_type = CAIRO_FILTER_NEAREST;
+			}
+			_set_hq_redraw_timeout(view);
+		}
+		else
+		{
+			if (is_zoomed_in (view))
+				interp_type = priv->interp_type_in;
+			else
+				interp_type = priv->interp_type_out;
+
+			_clear_hq_redraw_timeout (view);
+			priv->force_unfiltered = TRUE;
+		}
 		cairo_scale (cr, priv->zoom, priv->zoom);
 		cairo_set_source_surface (cr, priv->surface, xofs/priv->zoom, yofs/priv->zoom);
 		cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_PAD);
-		if (is_zoomed_in (view))
-			cairo_pattern_set_filter (cairo_get_source (cr), priv->interp_type_in);
-		else if (is_zoomed_out (view))
-			cairo_pattern_set_filter (cairo_get_source (cr), priv->interp_type_out);
-
+		if (is_zoomed_in (view) || is_zoomed_out (view))
+			cairo_pattern_set_filter (cairo_get_source (cr), interp_type);
 		cairo_paint (cr);
 	}
 
@@ -2334,7 +2397,7 @@ xviewer_scroll_view_set_antialiasing_in (XviewerScrollView *view, gboolean state
 
 	priv = view->priv;
 
-	new_interp_type = state ? CAIRO_FILTER_BILINEAR : CAIRO_FILTER_NEAREST;
+	new_interp_type = state ? CAIRO_FILTER_GOOD : CAIRO_FILTER_NEAREST;
 
 	if (priv->interp_type_in != new_interp_type) {
 		priv->interp_type_in = new_interp_type;
@@ -2353,7 +2416,7 @@ xviewer_scroll_view_set_antialiasing_out (XviewerScrollView *view, gboolean stat
 
 	priv = view->priv;
 
-	new_interp_type = state ? CAIRO_FILTER_BILINEAR : CAIRO_FILTER_NEAREST;
+	new_interp_type = state ? CAIRO_FILTER_GOOD : CAIRO_FILTER_NEAREST;
 
 	if (priv->interp_type_out != new_interp_type) {
 		priv->interp_type_out = new_interp_type;
@@ -2697,8 +2760,8 @@ xviewer_scroll_view_init (XviewerScrollView *view)
 	priv->zoom_mode = XVIEWER_ZOOM_MODE_SHRINK_TO_FIT;
 	priv->upscale = FALSE;
 	//priv->uta = NULL;
-	priv->interp_type_in = CAIRO_FILTER_BILINEAR;
-	priv->interp_type_out = CAIRO_FILTER_BILINEAR;
+	priv->interp_type_in = CAIRO_FILTER_GOOD;
+	priv->interp_type_out = CAIRO_FILTER_GOOD;
 	priv->scroll_wheel_zoom = FALSE;
 	priv->zoom_multiplier = IMAGE_VIEW_ZOOM_MULTIPLIER;
 	priv->image = NULL;
@@ -2854,6 +2917,8 @@ xviewer_scroll_view_dispose (GObject *object)
 		priv->uta = NULL;
 	}
 #endif
+
+	_clear_hq_redraw_timeout (view);
 
 	if (priv->idle_id != 0) {
 		g_source_remove (priv->idle_id);
