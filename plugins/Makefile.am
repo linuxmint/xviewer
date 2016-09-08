@@ -11,12 +11,10 @@ AM_CPPFLAGS = \
 AM_LDFLAGS = -avoid-version -module
 
 plugins_LTLIBRARIES = \
-	fullscreen/libfullscreen.la  \
-	reload/libreload.la
+	fullscreen/libfullscreen.la
 
 plugins_in_files = \
-	fullscreen/fullscreen.plugin.desktop.in  \
-	reload/reload.plugin.desktop.in
+	fullscreen/fullscreen.plugin.desktop.in
 
 # Fullscreen plugin
 fullscreen_libfullscreen_la_SOURCES = \
@@ -24,15 +22,6 @@ fullscreen_libfullscreen_la_SOURCES = \
 	fullscreen/xviewer-fullscreen-plugin.c
 
 fullscreen_libfullscreen_la_LIBADD = \
-	$(top_builddir)/src/libxviewer.la	\
-	$(XVIEWER_LIBS)
-
-# Reload plugin
-reload_libreload_la_SOURCES = \
-	reload/xviewer-reload-plugin.h  \
-	reload/xviewer-reload-plugin.c
-
-reload_libreload_la_LIBADD = \
 	$(top_builddir)/src/libxviewer.la	\
 	$(XVIEWER_LIBS)
 

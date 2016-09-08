@@ -3566,6 +3566,20 @@ xviewer_window_force_image_delete (XviewerWindow *window,
 }
 
 static void
+xviewer_window_cmd_reload (GtkAction *action, gpointer user_data)
+{
+	XviewerWindow *window;
+	GList     *images;
+
+	window = XVIEWER_WINDOW (user_data);
+	images = xviewer_thumb_view_get_selected_images (XVIEWER_THUMB_VIEW (window->priv->thumbview));
+	if (G_LIKELY (g_list_length (images) > 0))
+	{
+		xviewer_window_reload_image (window);
+	}
+}
+
+static void
 xviewer_window_cmd_delete (GtkAction *action, gpointer user_data)
 {
 	XviewerWindow *window;
@@ -4148,6 +4162,9 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "ViewZoomNormal", "zoom-original", N_("_Normal Size"), "<control>0",
 	  N_("Show the image at its normal size"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_normal) },
+	{ "ViewReload", "view-refresh", N_("_Reload"), "<control>R",
+	  N_("Reload the image"),
+	  G_CALLBACK (xviewer_window_cmd_reload) },
 	{ "ControlEqual", "zoom-in", N_("_Zoom In"), "<control>equal",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
