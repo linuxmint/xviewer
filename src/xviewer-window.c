@@ -2145,9 +2145,6 @@ xviewer_window_run_fullscreen (XviewerWindow *window, gboolean slideshow)
 
 	gtk_widget_grab_focus (priv->view);
 
-	xviewer_scroll_view_override_bg_color (XVIEWER_SCROLL_VIEW (window->priv->view),
-					   &black);
-
 	gtk_window_fullscreen (GTK_WINDOW (window));
 
 	xviewer_window_inhibit_screensaver (window);
