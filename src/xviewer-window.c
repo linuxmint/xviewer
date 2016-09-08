@@ -813,6 +813,25 @@ image_thumb_changed_cb (XviewerImage *image, gpointer data)
 	}
 }
 
+static gboolean
+on_button_pressed (GtkWidget *widget, GdkEventButton *event, XviewerWindow *window)
+{
+	if (event->button == 1 && event->type == GDK_2BUTTON_PRESS) {
+		XviewerWindowMode mode = xviewer_window_get_mode (window);
+		GdkEvent *ev = (GdkEvent*) event;
+
+		if (mode == XVIEWER_WINDOW_MODE_SLIDESHOW ||
+		    mode == XVIEWER_WINDOW_MODE_FULLSCREEN)
+			xviewer_window_set_mode (window, XVIEWER_WINDOW_MODE_NORMAL);
+		else if (mode == XVIEWER_WINDOW_MODE_NORMAL)
+			xviewer_window_set_mode (window, XVIEWER_WINDOW_MODE_FULLSCREEN);
+
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
 static void
 file_changed_info_bar_response (GtkInfoBar *info_bar,
 				gint response,
@@ -826,6 +845,7 @@ file_changed_info_bar_response (GtkInfoBar *info_bar,
 
 	xviewer_window_set_message_area (window, NULL);
 }
+
 static void
 image_file_changed_cb (XviewerImage *img, XviewerWindow *window)
 {
@@ -5264,6 +5284,9 @@ xviewer_window_init (XviewerWindow *window)
 	                                     "current-image");
 	if (G_LIKELY (action != NULL))
 		g_simple_action_set_enabled (G_SIMPLE_ACTION (action), FALSE);
+
+	g_signal_connect (GTK_WINDOW (window), "button-press-event",
+			  G_CALLBACK (on_button_pressed), window);
 }
 
 static void

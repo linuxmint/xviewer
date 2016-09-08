@@ -2,7 +2,7 @@ if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif
 
-SUBDIRS = $(jpeg_DIRS) cut-n-paste src plugins po help data doc
+SUBDIRS = $(jpeg_DIRS) cut-n-paste src po help data doc
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 

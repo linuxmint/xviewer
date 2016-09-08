@@ -354,7 +354,6 @@ doc/Makefile
 doc/reference/Makefile
 doc/reference/version.xml
 doc/reference/xviewer-docs.xml
-plugins/Makefile
 ])
 
 AC_OUTPUT
