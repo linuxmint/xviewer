@@ -21,15 +21,15 @@ msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-06-18 17:55+0000\n"
+"PO-Revision-Date: 2016-10-14 07:50+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Dansk <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:32+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:17+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: da\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -46,11 +46,11 @@ msgstr "Vis “_%s”"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
-msgstr "_Flyt langs værktøjslinje"
+msgstr "_Flyt på værktøjslinje"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1486
 msgid "Move the selected item on the toolbar"
-msgstr "Flyt det valgte objekt langs værktøjslinjen"
+msgstr "Flyt det valgte element på værktøjslinjen"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
@@ -58,7 +58,7 @@ msgstr "_Fjern fra værktøjslinjen"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
-msgstr "Fjern det valgte objekt fra værktøjslinjen"
+msgstr "Fjern det valgte element fra værktøjslinjen"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
@@ -70,7 +70,7 @@ msgstr "Fjern den valgte værktøjslinje"
 
 #: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
-msgstr "Separator"
+msgstr "Adskiller"
 
 #: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
 msgid "_View"
@@ -90,7 +90,7 @@ msgstr "_Billedgalleri"
 
 #: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
 msgid "Side _Pane"
-msgstr "Side_panel"
+msgstr "Side_rude"
 
 #: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
 msgid "Prefere_nces"
@@ -123,10 +123,10 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
-"GNOMEs øje giver også mulighed for at se billederne i fuld skærm i "
+"Xviewer giver også mulighed for at se billederne i fuld skærm i "
 "præsentationstilstand eller at vælge et billede som skrivebordsbaggrund. Det "
 "læser også billedmærker fra kameraet for derved automatisk at kunne rotere "
-"dine billeder i den korrekte portræt- eller landskabs-orientering."
+"dine billeder i den korrekte portræt- eller landskabsorientering."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 #: ../src/xviewer-window.c:6181
@@ -135,7 +135,7 @@ msgstr "Billedfremviser"
 
 #: ../data/xviewer.desktop.in.in.h:2
 msgid "Browse and rotate images"
-msgstr "Gennemse og rotere billeder"
+msgstr "Gennemse og rotér billeder"
 
 #. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
 #: ../data/xviewer.desktop.in.in.h:4
@@ -217,7 +217,7 @@ msgstr "Blitz:"
 #: ../data/xviewer-image-properties-dialog.ui.h:16
 #: ../src/xviewer-metadata-sidebar.c:544
 msgid "ISO Speed Rating:"
-msgstr "ISO-hastighedsvurdering:"
+msgstr "ISO-hastighed:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:17
 #: ../src/xviewer-metadata-sidebar.c:547
@@ -232,7 +232,7 @@ msgstr "Kameramodel:"
 #: ../data/xviewer-image-properties-dialog.ui.h:19
 #: ../src/xviewer-metadata-sidebar.c:552
 msgid "Date/Time:"
-msgstr "Dato/Tid:"
+msgstr "Dato/tid:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:20
 #: ../src/xviewer-metadata-sidebar.c:557
@@ -242,7 +242,7 @@ msgstr "Beskrivelse:"
 #: ../data/xviewer-image-properties-dialog.ui.h:21
 #: ../src/xviewer-metadata-sidebar.c:560
 msgid "Location:"
-msgstr "Placering:"
+msgstr "Sted:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:22
 #: ../src/xviewer-metadata-sidebar.c:563
@@ -280,7 +280,7 @@ msgstr "Gem som"
 #: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
 #: ../src/xviewer-window.c:3630
 msgid "_Cancel"
-msgstr "_Annuller"
+msgstr "_Annullér"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
 #: ../src/xviewer-close-confirmation-dialog.c:184
@@ -413,7 +413,7 @@ msgstr "_Tid mellem billeder:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
-msgstr "_Løkkesekvens"
+msgstr "L_økkesekvens"
 
 #: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Slideshow"
@@ -421,7 +421,7 @@ msgstr "Slideshow"
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
-msgstr "Udvidelsesmoduler"
+msgstr "Plugins"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
@@ -438,8 +438,8 @@ msgid ""
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
-"Farven som bliver brugt til at udfylde området bagved billedet. Hvis nøgles "
-"use-background-image er deaktiveret, vil farven blive bestemt af det aktive "
+"Farven som bliver brugt til at udfylde området bag ved billedet. Hvis nøglen "
+"use-background-color er deaktiveret, vil farven blive bestemt af det aktive "
 "GTK+-tema i stedet for."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:5
@@ -451,9 +451,8 @@ msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"Om billedet skal interpoleres, når der zoomes ud, eller ej. Dette giver "
-"bedre billedkvalitet, men er noget langsommere end billeder der ikke er "
-"interpolerede."
+"Om billedet skal interpoleres, når der zoomes ud. Dette giver bedre "
+"billedkvalitet, men er noget langsommere end billeder, der ikke interpoleres."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
@@ -464,8 +463,8 @@ msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
 msgstr ""
-"Om billedet skal ekstrapoleres, når der zoomes ind, eller ej. Dette gør "
-"billedet sløret, og er noget langsommere end ikke-ekstrapolerede billeder."
+"Om billedet skal ekstrapoleres, når der zoomes ind. Dette gør billedet "
+"sløret, og er noget langsommere end billeder, der ikke ekstrapoleres."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
@@ -501,10 +500,10 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
-"Den faktor der skal anvendes når musehjulet bruges til at zoome med. Denne "
-"værdi definerer zoom-skridtet som der bruges for hver rullebegivenhed. "
-"F.eks. vil 0.05 resultere i en 5% zoom-stigning for hver rullebegivenhed og "
-"1.00 vil resultere i en 100% zoom-stigning."
+"Den faktor, der skal anvendes, når musehjulet bruges til at zoome med. Denne "
+"værdi definerer zoom-skridtet, der bruges for hver rullebegivenhed. F.eks. "
+"vil 0.05 resultere i en 5% zoom-stigning for hver rullebegivenhed og 1.00 "
+"vil resultere i en 100% zoom-stigning."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
@@ -515,12 +514,12 @@ msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
-"Hvis transparency-nøglen har værdien COLOR, angiver denne nøgle hvilken "
-"farve, der benyttes til at vise gennemsigtighed."
+"Hvis nøglen transparency har værdien COLOR, angiver denne nøgle hvilken "
+"farve, der benyttes til at angive gennemsigtighed."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:18
 msgid "Use a custom background color"
-msgstr "Brug en brugerdefineret baggrundsfarve"
+msgstr "Anvend en brugerdefineret baggrundsfarve"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:19
 msgid ""
@@ -528,9 +527,10 @@ msgid ""
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
-"Hvis dette er aktiveret, vil den farve som er defineret af nøglen background-"
-"color blive brugt til at fylde området bagved baggrundsbilledet. Hvis det "
-"ikke er aktiveret, vil det nuværende GTK+-tema bestemme fyldfarven."
+"Hvis denne er aktiveret, vil den farve, som er defineret af nøglen "
+"background-color, blive brugt til at udfylde området bag ved billedet. Hvis "
+"den ikke er aktiveret, vil det nuværende GTK+-tema bestemme "
+"udfyldningsfarven."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
@@ -550,8 +550,8 @@ msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"Hvis dette er sat til falsk, vil små billeder ikke blive strukket for at "
-"passe til skærmen ved start."
+"Hvis denne er sat til FALSE, vil små billeder ikke blive strakt for at passe "
+"til skærmen ved start."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Delay in seconds until showing the next image"
@@ -562,9 +562,9 @@ msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
-"En værdi større end 0 angiver antallet af sekunder et billede bliver på "
-"skærmen før det næste vises automatisk. Nul deaktiverer den automatisk "
-"gennemsening."
+"En værdi større end 0 angiver antallet af sekunder, et billede vises på "
+"skærmen, før det næste vises automatisk. Nul deaktiverer det automatisk "
+"gennemsyn."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
@@ -576,28 +576,28 @@ msgstr "Vis/skjul vinduesstatuslinjen."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Show/Hide the image gallery pane."
-msgstr "Vis/skjul billedgalleripanelet."
+msgstr "Vis/skjul billedgalleriruden."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
 msgstr ""
-"Position af billedgalleripanel. Sæt til 0 for bund; 1 for venstre; 2 for "
-"top; 3 for højre."
+"Placering af billedgalleriruden. Sæt til 0 for nederst; 1 for venstre; 2 for "
+"øverst; 3 for højre."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Whether the image gallery pane should be resizable."
 msgstr ""
-"Om det skal være muligt at ændre på størrelsen af billedgalleripanelet."
+"Om det skal være muligt at ændre på størrelsen af billedgalleriruden."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window side pane."
-msgstr "Vis/skjul vinduessidepanel."
+msgstr "Vis/skjul vinduessideruden."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr "Vis/skjul rulleknapper for billedgalleripanel."
+msgstr "Vis/skjul billedgallerirudens rulleknapper."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid "Close main window without asking to save changes."
@@ -613,9 +613,9 @@ msgid ""
 "trash. It will still ask if any of the files cannot be moved to the trash "
 "and would be deleted instead."
 msgstr ""
-"Hvis aktiveret, vil GNOMEs Øje ikke spørge om bekræftelse når billeder "
-"flyttes til papirkurven. Programmet vil dog stadig spørge, hvis nogle af "
-"filerne ikke kan flyttes til papirkurven og i stedet vil blive slettet."
+"Hvis aktiveret, vil Xviewer ikke spørge om bekræftelse, når billeder flyttes "
+"til papirkurven. Programmet vil dog stadig spørge, hvis nogle af filerne "
+"ikke kan flyttes til papirkurven og i stedet vil blive slettet."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
@@ -650,7 +650,7 @@ msgid ""
 "be embedded on the \"Metadata\" page."
 msgstr ""
 "Hvis aktiveret, vil den detaljerede liste af metadata i "
-"egenskabsdialogvinduet blive flyttet til dens egen side i dialogvinduet. "
+"egenskabsdialogvinduet blive flyttet til sin egen side i dialogvinduet. "
 "Dette bør gøre dialogvinduet mere anvendeligt på mindre skærme, f.eks. på "
 "netbook-computere. Hvis deaktiveret, vil kontrollen blive indlejret i "
 "\"Metadata\"-siden."
@@ -665,14 +665,14 @@ msgid ""
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
 "to the empty string to disable this feature."
 msgstr ""
-"Skrivebordsfilnavnet (inklusive \".desktop\") for det program der skal "
-"bruges til at redigere billeder (når værktøjsbjælkeknappen \"Rediger "
-"billede\" trykkes). Sæt til den tomme streng for at deaktivere denne "
-"funktion."
+"Navnet på skrivebordsfilen (inklusive endelsen \".desktop\") for det "
+"program, der skal bruges til at behandle billeder (når der klikkes på "
+"værktøjsbjælken \"Redigér billede\"). Sæt til den tomme streng for at "
+"deaktivere denne funktion."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
-msgstr "Aktive udvidelsesmoduler"
+msgstr "Aktive plugins"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
@@ -680,17 +680,17 @@ msgid ""
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
 "given plugin."
 msgstr ""
-"Liste af aktive udvidelsesmoduler. Den indeholder ikke \"Placeringen\" af de "
-"aktive udvidelsesmoduler. Kig i \".xviewer-plugin\"-filen for at finde "
-"placeringen for et bestemt udvidelsesmodul."
+"Liste over aktive plugins. Den indeholder ikke \"Placeringen\" af de aktive "
+"plugins. Kig i \".xviewer-plugin\"-filen for at finde placeringen af et "
+"bestemt plugin."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
-msgstr "Fuldskærm med dobbeltklik"
+msgstr "Fuldskærm ved dobbeltklik"
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
-msgstr "Aktivér fulskærmstilstand med dobbeltklik"
+msgstr "Aktivér fuldskærmstilstand ved dobbeltklik"
 
 #: ../plugins/reload/xviewer-reload-plugin.c:74
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
@@ -738,9 +738,9 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-"Der er %d billede med ugemte ændringer. Gem ændringer før lukning?"
+"Der er %d billede med ikke gemte ændringer. Gem ændringer før lukning?"
 msgstr[1] ""
-"Der er %d billeder med ugemte ændringer. Gem ændringer før lukning?"
+"Der er %d billeder med ikke gemte ændringer. Gem ændringer før lukning?"
 
 #: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
@@ -776,7 +776,7 @@ msgstr "Ingen billeder fundet i \"%s\"."
 
 #: ../src/xviewer-error-message-area.c:263
 msgid "The given locations contain no images."
-msgstr "Den angivne placering inderholder ingen billeder."
+msgstr "De angivne placeringer indeholder ingen billeder."
 
 #: ../src/xviewer-metadata-details.c:65
 msgid "Camera"
@@ -845,12 +845,12 @@ msgstr "Syd"
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
 msgid "%a, %d %B %Y  %X"
-msgstr "%a, %d %B %Y  %X"
+msgstr "%a %d. %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
 #: ../src/xviewer-exif-util.c:154
 msgid "%a, %d %B %Y"
-msgstr "%a, %d %B %Y"
+msgstr "%a %d. %B %Y"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
@@ -951,7 +951,7 @@ msgstr "Intet billede indlæst."
 #: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
-msgstr "Du har ikke de påkrævede rettigheder til at gemme filen."
+msgstr "Du har ikke de nødvendige rettigheder til at gemme filen."
 
 #: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
 #, c-format
@@ -1023,15 +1023,15 @@ msgstr "_Højre:"
 
 #: ../src/xviewer-print-image-setup.c:938
 msgid "_Top:"
-msgstr "_Top:"
+msgstr "_Øverst:"
 
 #: ../src/xviewer-print-image-setup.c:939
 msgid "_Bottom:"
-msgstr "_Bund:"
+msgstr "_Nederst:"
 
 #: ../src/xviewer-print-image-setup.c:942
 msgid "C_enter:"
-msgstr "C_entrum:"
+msgstr "_Centrum:"
 
 #: ../src/xviewer-print-image-setup.c:947
 msgid "None"
@@ -1101,10 +1101,9 @@ msgstr "som original"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-# Jeg kunne forestille mig to forskellige ting denne streng kan bruges til. Det kan henvise til en dato. "Taken on Jun 26, 2007", eller til kameraet billedet er taget på "Taken on Phillips T3000 super Zoom". Oversættelsen "Taget på" dækker heldigvis begge disse tilfælde
 #: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
-msgstr "Taget på"
+msgstr "Taget"
 
 #: ../src/xviewer-uri-converter.c:982
 #, c-format
@@ -1145,7 +1144,7 @@ msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
-"Billedet \"%s\" er blevet modificeret af et eksternt program.\n"
+"Billedet \"%s\" er blevet ændret af et eksternt program.\n"
 "Ønsker du at genindlæse det?"
 
 #: ../src/xviewer-window.c:1023
@@ -1188,7 +1187,7 @@ msgstr ""
 
 #: ../src/xviewer-window.c:2558
 msgid "Toolbar Editor"
-msgstr "Værktøjslinje-redigering"
+msgstr "Redigér værktøjslinje"
 
 #: ../src/xviewer-window.c:2561
 msgid "_Reset to Default"
@@ -1225,7 +1224,7 @@ msgid ""
 "Are you sure you want to remove\n"
 "\"%s\" permanently?"
 msgstr ""
-"Er du sikker på, at du vil at fjerne\n"
+"Er du sikker på, du vil fjerne\n"
 "\"%s\" permanent?"
 
 #: ../src/xviewer-window.c:3355
@@ -1237,10 +1236,10 @@ msgid_plural ""
 "Are you sure you want to remove\n"
 "the %d selected images permanently?"
 msgstr[0] ""
-"Er du sikker på, at du vil fjerne\n"
+"Er du sikker på, du vil fjerne\n"
 "det valgte billede permanent?"
 msgstr[1] ""
-"Er du sikker på, at du vil fjerne\n"
+"Er du sikker på, du vil fjerne\n"
 "de %d valgte billeder permanent?"
 
 #: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
@@ -1315,13 +1314,13 @@ msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
-"Nogle af de valgte billeder kan ikke flyttes til papirkurven, og vil blive "
-"slettet permanent. Er du sikker på, at du ønsker at fortsætte?"
+"Nogle af de valgte billeder kan ikke flyttes til papirkurven og vil blive "
+"slettet permanent. Er du sikker på, du ønsker at fortsætte?"
 
 #: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
 #: ../src/xviewer-window.c:4151
 msgid "Move to _Trash"
-msgstr "Flyt til _papirkurv"
+msgstr "Flyt til _papirkurven"
 
 #: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
 #, c-format
@@ -1391,11 +1390,11 @@ msgstr "Skifter synligheden af statuslinjen i det aktuelle vindue"
 #: ../src/xviewer-window.c:4080
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
-msgstr "Skifter synligheden af billedgalleripanelet i det aktuelle vindue"
+msgstr "Skifter synligheden af billedgalleriruden i det aktuelle vindue"
 
 #: ../src/xviewer-window.c:4083
 msgid "Changes the visibility of the side pane in the current window"
-msgstr "Skifter synligheden af sidepanelet i det aktuelle vindue"
+msgstr "Skifter synligheden af sideruden i det aktuelle vindue"
 
 #: ../src/xviewer-window.c:4089
 msgid "Save changes in currently selected images"
@@ -1407,7 +1406,7 @@ msgstr "Åbn _med"
 
 #: ../src/xviewer-window.c:4092
 msgid "Open the selected image with a different application"
-msgstr "Åben det valgte billede med et andet program"
+msgstr "Åbn det valgte billede med et andet program"
 
 #: ../src/xviewer-window.c:4095
 msgid "Save the selected images with a different name"
@@ -1443,7 +1442,7 @@ msgstr "Fortryd den seneste ændring i billedet"
 
 #: ../src/xviewer-window.c:4109
 msgid "Flip _Horizontal"
-msgstr "Vend om _vandret"
+msgstr "Ven_d om vandret"
 
 #: ../src/xviewer-window.c:4110
 msgid "Mirror the image horizontally"
@@ -1495,11 +1494,11 @@ msgstr "Slet det valgte billede"
 
 #: ../src/xviewer-window.c:4130
 msgid "_Copy"
-msgstr "_Kopier"
+msgstr "_Kopiér"
 
 #: ../src/xviewer-window.c:4131
 msgid "Copy the selected image to the clipboard"
-msgstr "Kopier det valgte billede til klippebordet"
+msgstr "Kopiér det valgte billede til klippebordet"
 
 #: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
 #: ../src/xviewer-window.c:4145
@@ -1533,7 +1532,7 @@ msgstr "_Fuldskærm"
 
 #: ../src/xviewer-window.c:4158
 msgid "Show the current image in fullscreen mode"
-msgstr "Vis det valgte billede fuldskærmstilstand"
+msgstr "Vis det valgte billede i fuldskærmstilstand"
 
 #: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
@@ -1545,7 +1544,7 @@ msgstr "Pause eller genoptag slideshow"
 
 #: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
-msgstr "_Bedste tilpasning"
+msgstr "Bedste _tilpasning"
 
 #: ../src/xviewer-window.c:4164
 msgid "Fit the image to the window"
@@ -1569,7 +1568,7 @@ msgstr "Gå til det næste billede i galleriet"
 
 #: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
 msgid "_First Image"
-msgstr "_Første billede"
+msgstr "F_ørste billede"
 
 #: ../src/xviewer-window.c:4176
 msgid "Go to the first image of the gallery"
@@ -1647,11 +1646,11 @@ msgstr "Flyt til papirkurven"
 #: ../src/xviewer-window.c:4829
 #, c-format
 msgid "Edit the current image using %s"
-msgstr "Rediger det nuværende billede ved hjælp af %s"
+msgstr "Redigér det aktuelle billede ved hjælp af %s"
 
 #: ../src/xviewer-window.c:4831
 msgid "Edit Image"
-msgstr "Rediger billede"
+msgstr "Redigér billede"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
@@ -1659,7 +1658,7 @@ msgstr "Åbn i fuldskærmstilstand"
 
 #: ../src/main.c:64
 msgid "Disable image gallery"
-msgstr "Slå billedgalleri fra"
+msgstr "Deaktivér billedgalleri"
 
 #: ../src/main.c:65
 msgid "Open in slideshow mode"
@@ -1667,7 +1666,7 @@ msgstr "Åbn i slideshowtilstand"
 
 #: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
-msgstr "Start en ny instans i stedet for at genbruge en eksisterende"
+msgstr "Start en ny forekomst i stedet for at genbruge en eksisterende"
 
 #: ../src/main.c:67
 msgid ""

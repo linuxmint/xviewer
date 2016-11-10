@@ -13,7 +13,7 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-04-17 08:28+0000\n"
+"PO-Revision-Date: 2016-10-21 07:58+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:32+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:17+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "X-Project-Style: gnome\n"
 "Language: uk\n"
 
@@ -120,7 +120,7 @@ msgid ""
 msgstr ""
 "Xviewer також дозволяє переглядати зображення у повноекранному режимі показу "
 "слайдів або встановлювати зображення як стільничні шпалери. Він читає мітки "
-"камери для автоматичного обертання зображення в правильній орієнтації."
+"камери для самочинного обертання зображення в правильній орієнтації."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 #: ../src/xviewer-window.c:6181
@@ -256,7 +256,7 @@ msgstr "Авторські права:"
 #: ../data/xviewer-image-properties-dialog.ui.h:25
 #: ../src/xviewer-metadata-sidebar.c:571
 msgid "Details"
-msgstr "Подробиці"
+msgstr "Докладніше"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:26
 #: ../src/xviewer-metadata-sidebar.c:528
@@ -294,7 +294,7 @@ msgstr "<b>%n:</b> лічильник"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "_Filename format:"
-msgstr "_Формат імені файлу:"
+msgstr "_Формат імени файлу:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "_Destination folder:"
@@ -332,7 +332,7 @@ msgstr "На:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
-msgstr "Перегляд імені файлу"
+msgstr "Перегляд імени файлу"
 
 #: ../data/xviewer-preferences-dialog.ui.h:1
 msgid "Preferences"
@@ -352,7 +352,7 @@ msgstr "Згладжувати зображення при збільшенні"
 
 #: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
-msgstr "_Автоматичне орієнтування"
+msgstr "_Самочинне орієнтування"
 
 #: ../data/xviewer-preferences-dialog.ui.h:8
 msgid "Background"
@@ -373,7 +373,7 @@ msgstr "Прозорі ділянки"
 
 #: ../data/xviewer-preferences-dialog.ui.h:12
 msgid "As check _pattern"
-msgstr "У вигляді _клітинчастого поля"
+msgstr "_Шахівницею"
 
 #: ../data/xviewer-preferences-dialog.ui.h:13
 msgid "As custom c_olor:"
@@ -418,17 +418,16 @@ msgstr "Показ слайдів"
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
-msgstr "Додатки"
+msgstr "Втулки"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
-msgstr "Автоматичне орієнтування"
+msgstr "Самочинне орієнтування"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"Чи повинне зображення автоматично обертатися відповідно до даних EXIF."
+msgstr "Чи повинне зображення самочинно обертатися відповідно до даних EXIF."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:4
 msgid ""
@@ -448,7 +447,7 @@ msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"Визначає, чи потрібно інтерполювати зображення примасштабуванні. В "
+"Визначає, чи потрібно інтерполювати зображення при масштабуванні. В "
 "результаті можна отримати кращу якість при сповільненні роботи, на відміну "
 "від неінтерпольованих зображень."
 
@@ -467,7 +466,7 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
-msgstr "Індикатор прозорості"
+msgstr "Індикатор прозорости"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:10
 msgid ""
@@ -506,7 +505,7 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
-msgstr "Колір прозорості"
+msgstr "Колір прозорости"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid ""
@@ -563,8 +562,7 @@ msgid ""
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 "Значення більше 0 визначає кількість секунд, яку зображення лишатиметься на "
-"екрані перед автоматичною появою наступного. Нуль вимикає автоматичний "
-"перегляд."
+"екрані перед самочинною появою наступного. Нуль вимикає самочинний перегляд."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:27
 msgid "Show/Hide the window toolbar."
@@ -612,9 +610,9 @@ msgid ""
 "trash. It will still ask if any of the files cannot be moved to the trash "
 "and would be deleted instead."
 msgstr ""
-"Якщо активне, Xviewer не запитуватиме підтвердження при переміщенні "
-"зображень до смітника. Однак, Ви будете отримувати запити у випадку, якщо "
-"файли не можна перенести до смітника, а натомість їх пропонується вилучити."
+"Якщо активне, Xviewer не запитуватиме схвалення при переміщенні зображень до "
+"смітника. Однак, Ви будете отримувати запити у випадку, якщо файли не можна "
+"перенести до смітника, а натомість їх пропонується вилучити."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
@@ -632,7 +630,7 @@ msgid ""
 "will show the current working directory."
 msgstr ""
 "Якщо увімкнено й у активному вікні не завантажено зображення, вікно вибору "
-"файлів показуватиме теку користувача для малюнків, зі спеціальних каталогів "
+"файлів показуватиме теку користувача для малюнків, зі спеціяльних каталогів "
 "XDG. Якщо вимкнено або теку малюнків не встановлено, показуватиметься "
 "поточний каталог."
 
@@ -961,7 +959,7 @@ msgstr "Помилка при створенні тимчасового файл
 #: ../src/xviewer-image-jpeg.c:374
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
-msgstr "Не вдалось створити тимчасовий файл для збереження: %s"
+msgstr "Не вдалося створити тимчасовий файл для збереження: %s"
 
 #: ../src/xviewer-image-jpeg.c:393
 #, c-format
@@ -980,7 +978,7 @@ msgstr "Розмір файлу:"
 #: ../src/xviewer-metadata-sidebar.c:521
 #: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
 msgid "Show the folder which contains this file in the file manager"
-msgstr "Показати теку, яка містить цей файл у файловому менеджері"
+msgstr "Показати теку, яка містить цей файл у керівнику файлами"
 
 #: ../src/xviewer-preferences-dialog.c:125
 #, c-format
@@ -1000,7 +998,7 @@ msgstr "Зображення"
 
 #: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
-msgstr "Зображення, для якого будуть налаштовані властивості друку"
+msgstr "Зображення, для якого будуть налаштовані властивости друку"
 
 #: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
@@ -1076,7 +1074,7 @@ msgstr "Міліметри"
 
 #: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
-msgstr "Дюйми"
+msgstr "Дюйми(Інчі)"
 
 #: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
@@ -1424,11 +1422,11 @@ msgstr "Надрукувати вибрані зображення"
 
 #: ../src/xviewer-window.c:4103
 msgid "Prope_rties"
-msgstr "В_ластивості"
+msgstr "В_ластивости"
 
 #: ../src/xviewer-window.c:4104
 msgid "Show the properties and metadata of the selected image"
-msgstr "Показати властивості та метадані вибраних зображень"
+msgstr "Показати властивости та метадані вибраних зображень"
 
 #: ../src/xviewer-window.c:4106
 msgid "_Undo"
@@ -1534,11 +1532,11 @@ msgstr "Показати зображення у повноекранному р
 
 #: ../src/xviewer-window.c:4160
 msgid "Pause Slideshow"
-msgstr "Призупинити слайд-шоу"
+msgstr "Призупинити показ слайдів"
 
 #: ../src/xviewer-window.c:4161
 msgid "Pause or resume the slideshow"
-msgstr "Призупинити або продовжити слайд-шоу"
+msgstr "Призупинити або відновити показ слайдів"
 
 #: ../src/xviewer-window.c:4163
 msgid "_Best Fit"
@@ -1652,7 +1650,7 @@ msgstr "Редагувати зображення"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
-msgstr "Відкрити у повноекранному режимі"
+msgstr "Відкрити повноекранно"
 
 #: ../src/main.c:64
 msgid "Disable image gallery"
@@ -1664,7 +1662,7 @@ msgstr "Відкрити у режимі показу слайдів"
 
 #: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
-msgstr "Запускати новий екземпляр замість використання наявного"
+msgstr "Запускати новий примірник замість використання наявного"
 
 #: ../src/main.c:67
 msgid ""
