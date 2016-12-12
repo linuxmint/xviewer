@@ -23,16 +23,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-02-10 16:57+0000\n"
-"PO-Revision-Date: 2016-02-20 11:49+0000\n"
+"POT-Creation-Date: 2016-11-10 00:13+0000\n"
+"PO-Revision-Date: 2016-11-10 03:28+0000\n"
 "Last-Translator: AlephAlpha <alephalpha911@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-11-09 17:17+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-12-12 12:17+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "Language: zh_CN\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -75,36 +75,36 @@ msgstr "删除选中的工具栏"
 msgid "Separator"
 msgstr "分隔符"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4047
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4087
 msgid "_View"
 msgstr "查看(_V)"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4073
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4113
 msgid "_Toolbar"
 msgstr "工具栏(_T)"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4076
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4116
 msgid "_Statusbar"
 msgstr "状态栏(_S)"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4079
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4119
 msgid "_Image Gallery"
 msgstr "图像收藏(_I)"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4082
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4122
 msgid "Side _Pane"
 msgstr "侧边栏(_P)"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4061
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4101
 msgid "Prefere_nces"
 msgstr "首选项(_N)"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:2565 ../src/xviewer-window.c:4050
+#: ../src/xviewer-window.c:2584 ../src/xviewer-window.c:4090
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4067
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4107
 msgid "_About"
 msgstr "关于(_A)"
 
@@ -127,7 +127,6 @@ msgstr ""
 "GNOME 之眼也可以全屏幻灯片播放的方式查看图片，或者将图片设置为桌面壁纸。它会自动读取相机的标签来自动旋转您的照片，从而正确的横向/纵向显示它们。"
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
-#: ../src/xviewer-window.c:6181
 msgid "Image Viewer"
 msgstr "图像查看器"
 
@@ -140,7 +139,7 @@ msgstr "浏览及旋转图像"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Picture;Slideshow;Graphics;图片;幻灯片;图像;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5082
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5125
 msgid "Image Properties"
 msgstr "图像属性"
 
@@ -153,8 +152,8 @@ msgid "_Next"
 msgstr "下一张(_N)"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2563
-#: ../src/xviewer-window.c:4055
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:2582
+#: ../src/xviewer-window.c:4095
 msgid "_Close"
 msgstr "关闭(_C)"
 
@@ -277,8 +276,8 @@ msgstr "另存为"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3376 ../src/xviewer-window.c:3379
-#: ../src/xviewer-window.c:3630
+#: ../src/xviewer-window.c:3402 ../src/xviewer-window.c:3405
+#: ../src/xviewer-window.c:3670
 msgid "_Cancel"
 msgstr "取消(_C)"
 
@@ -407,7 +406,7 @@ msgstr "将图像扩展以适合屏幕(_X)"
 msgid "Sequence"
 msgstr "序列"
 
-#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer's preferences dialog.
+#. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer
 #: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
 msgstr "图像之间的时间(_T)："
@@ -649,38 +648,12 @@ msgid ""
 "given plugin."
 msgstr "已激活插件列表。它并不包含激活插件的位置。参见 .xviewer-plugin 文件以获得相应插件的位置。"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
-msgid "Fullscreen with double-click"
-msgstr "双击切换全屏"
-
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
-msgid "Activate fullscreen mode with double-click"
-msgstr "双击启用全屏模式"
-
-#: ../plugins/reload/xviewer-reload-plugin.c:74
-#: ../plugins/reload/reload.plugin.desktop.in.h:1
-msgid "Reload Image"
-msgstr "重新载入图像"
-
-#: ../plugins/reload/xviewer-reload-plugin.c:76
-#: ../plugins/reload/reload.plugin.desktop.in.h:2
-msgid "Reload current image"
-msgstr "重新载入当前图像"
-
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
-msgid "Date in statusbar"
-msgstr "在状态栏中显示日期"
-
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "在窗口状态栏中显示图像日期"
-
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "关闭而不保存(_W)"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4088
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4128
 msgid "_Save"
 msgstr "保存(_S)"
 
@@ -713,11 +686,12 @@ msgstr "选择您想保存的图像(_E)："
 msgid "If you don't save, all your changes will be lost."
 msgstr "如果不保存，您的所有更改都会丢失。"
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:847
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:869
+#: ../src/xviewer-window.c:4182
 msgid "_Reload"
 msgstr "重新载入(_R)"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4094
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4134
 msgid "Save _As…"
 msgstr "另存为(_A)..."
 
@@ -860,8 +834,7 @@ msgstr "支持的图像文件"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
-#: ../src/xviewer-metadata-sidebar.c:238
-#: ../src/xviewer-properties-dialog.c:139
+#: ../src/xviewer-metadata-sidebar.c:238 ../src/xviewer-properties-dialog.c:139
 #: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
@@ -928,8 +901,7 @@ msgstr "无法创建临时文件来保存 %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "无法分配内存载入 JPEG 文件"
 
-#: ../src/xviewer-metadata-sidebar.c:247
-#: ../src/xviewer-properties-dialog.c:156
+#: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
 msgstr "未知"
 
@@ -937,8 +909,8 @@ msgstr "未知"
 msgid "File size:"
 msgstr "文件大小："
 
-#: ../src/xviewer-metadata-sidebar.c:521
-#: ../src/xviewer-properties-dialog.c:737 ../src/xviewer-window.c:4098
+#: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
+#: ../src/xviewer-window.c:4138
 msgid "Show the folder which contains this file in the file manager"
 msgstr "在文件管理器中显示包含这个文件的文件夹"
 
@@ -1084,20 +1056,20 @@ msgstr " (无效的 Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:541
+#: ../src/xviewer-window.c:543
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i 像素  %s    %i%%"
 
-#: ../src/xviewer-window.c:849 ../src/xviewer-window.c:2793
+#: ../src/xviewer-window.c:871 ../src/xviewer-window.c:2819
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "隐藏(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:859
+#: ../src/xviewer-window.c:881
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1106,7 +1078,7 @@ msgstr ""
 "图像“%s”这张图已经被外部程序修改。\n"
 "您想重新载入它吗？"
 
-#: ../src/xviewer-window.c:1023
+#: ../src/xviewer-window.c:1045
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "使用“%s”打开选中图像"
@@ -1116,26 +1088,26 @@ msgstr "使用“%s”打开选中图像"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1179
+#: ../src/xviewer-window.c:1201
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "保存图像“%s”(第%u个，共%u个)"
 
-#: ../src/xviewer-window.c:1574
+#: ../src/xviewer-window.c:1596
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "正在打开图像“%s”"
 
-#: ../src/xviewer-window.c:1898
+#: ../src/xviewer-window.c:1920
 msgid "_Leave Fullscreen"
 msgstr "退出全屏(_L)"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2030
+#: ../src/xviewer-window.c:2052
 msgid "Viewing a slideshow"
 msgstr "正在以幻灯片方式查看"
 
-#: ../src/xviewer-window.c:2259
+#: ../src/xviewer-window.c:2278
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1144,27 +1116,27 @@ msgstr ""
 "打印文件出错：\n"
 "%s"
 
-#: ../src/xviewer-window.c:2558
+#: ../src/xviewer-window.c:2577
 msgid "Toolbar Editor"
 msgstr "工具栏编辑器"
 
-#: ../src/xviewer-window.c:2561
+#: ../src/xviewer-window.c:2580
 msgid "_Reset to Default"
 msgstr "重设为默认值(_R)"
 
-#: ../src/xviewer-window.c:2726 ../src/xviewer-window.c:2741
+#: ../src/xviewer-window.c:2747 ../src/xviewer-window.c:2762
 msgid "Error launching System Settings: "
 msgstr "启动系统设置时出错： "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2791
+#: ../src/xviewer-window.c:2817
 msgid "_Open Background Preferences"
 msgstr "打开背景首选项(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2807
+#: ../src/xviewer-window.c:2833
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1173,11 +1145,11 @@ msgstr ""
 "图像“%s”已设为桌面背景。\n"
 "您想修改它的外观吗？"
 
-#: ../src/xviewer-window.c:3274
+#: ../src/xviewer-window.c:3300
 msgid "Saving image locally…"
 msgstr "本地保存图像..."
 
-#: ../src/xviewer-window.c:3352
+#: ../src/xviewer-window.c:3378
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1186,7 +1158,7 @@ msgstr ""
 "您要删除“%s”吗？\n"
 "永久删除！"
 
-#: ../src/xviewer-window.c:3355
+#: ../src/xviewer-window.c:3381
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1198,41 +1170,41 @@ msgstr[0] ""
 "您确定要永久删除选中的\n"
 "这 %d 张图像吗？"
 
-#: ../src/xviewer-window.c:3377 ../src/xviewer-window.c:3641
+#: ../src/xviewer-window.c:3403 ../src/xviewer-window.c:3681
 msgid "_Delete"
 msgstr "删除(_D)"
 
-#: ../src/xviewer-window.c:3380 ../src/xviewer-window.c:3643
+#: ../src/xviewer-window.c:3406 ../src/xviewer-window.c:3683
 msgid "_Yes"
 msgstr "是(_Y)"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3384 ../src/xviewer-window.c:3635
+#: ../src/xviewer-window.c:3410 ../src/xviewer-window.c:3675
 msgid "Do _not ask again during this session"
 msgstr "在该会话期间不再询问(_N)"
 
-#: ../src/xviewer-window.c:3428
+#: ../src/xviewer-window.c:3454
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "无法检索图像文件"
 
-#: ../src/xviewer-window.c:3444
+#: ../src/xviewer-window.c:3470
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "无法获取图像文件信息"
 
-#: ../src/xviewer-window.c:3460 ../src/xviewer-window.c:3702
+#: ../src/xviewer-window.c:3486 ../src/xviewer-window.c:3742
 #, c-format
 msgid "Couldn't delete file"
 msgstr "无法删除文件"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3510 ../src/xviewer-window.c:3798
+#: ../src/xviewer-window.c:3536 ../src/xviewer-window.c:3838
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "删除图像 %s 出错"
 
-#: ../src/xviewer-window.c:3603
+#: ../src/xviewer-window.c:3643
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1241,14 +1213,14 @@ msgstr ""
 "您真的想要将“%s”\n"
 "移至回收站吗？"
 
-#: ../src/xviewer-window.c:3606
+#: ../src/xviewer-window.c:3646
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "无法找到可用于“%s”的回收站。您想要将此图像永久移除吗？"
 
-#: ../src/xviewer-window.c:3611
+#: ../src/xviewer-window.c:3651
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1260,347 +1232,351 @@ msgstr[0] ""
 "您真的想要将 %d 个\n"
 "选中的图像移至回收站吗？"
 
-#: ../src/xviewer-window.c:3616
+#: ../src/xviewer-window.c:3656
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "有些所选择的图像无法移动到回收站并将永久移除。您确定要这样进行吗？"
 
-#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:4124
-#: ../src/xviewer-window.c:4151
+#: ../src/xviewer-window.c:3673 ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4194
 msgid "Move to _Trash"
 msgstr "移至回收站(_T)"
 
-#: ../src/xviewer-window.c:3680 ../src/xviewer-window.c:3694
+#: ../src/xviewer-window.c:3720 ../src/xviewer-window.c:3734
 #, c-format
 msgid "Couldn't access trash."
 msgstr "无法访问回收站。"
 
-#: ../src/xviewer-window.c:4045
+#: ../src/xviewer-window.c:4085
 msgid "_Image"
 msgstr "图像(_I)"
 
-#: ../src/xviewer-window.c:4046
+#: ../src/xviewer-window.c:4086
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../src/xviewer-window.c:4048
+#: ../src/xviewer-window.c:4088
 msgid "_Go"
 msgstr "转到(_G)"
 
-#: ../src/xviewer-window.c:4049
+#: ../src/xviewer-window.c:4089
 msgid "_Tools"
 msgstr "工具(_T)"
 
-#: ../src/xviewer-window.c:4052
+#: ../src/xviewer-window.c:4092
 msgid "_Open…"
 msgstr "打开(_O)..."
 
-#: ../src/xviewer-window.c:4053
+#: ../src/xviewer-window.c:4093
 msgid "Open a file"
 msgstr "打开一个文件"
 
-#: ../src/xviewer-window.c:4056
+#: ../src/xviewer-window.c:4096
 msgid "Close window"
 msgstr "关闭窗口"
 
-#: ../src/xviewer-window.c:4058
+#: ../src/xviewer-window.c:4098
 msgid "T_oolbar"
 msgstr "工具栏(_O)"
 
-#: ../src/xviewer-window.c:4059
+#: ../src/xviewer-window.c:4099
 msgid "Edit the application toolbar"
 msgstr "编辑应用程序工具栏"
 
-#: ../src/xviewer-window.c:4062
+#: ../src/xviewer-window.c:4102
 msgid "Preferences for Image Viewer"
 msgstr "图像查看器的首选项"
 
 # SUN CHANGED MESSAGE
-#: ../src/xviewer-window.c:4064
+#: ../src/xviewer-window.c:4104
 msgid "_Contents"
 msgstr "内容(_C)"
 
 # SUN CHANGED MESSAGE
-#: ../src/xviewer-window.c:4065
+#: ../src/xviewer-window.c:4105
 msgid "Help on this application"
 msgstr "关于此应用程序的帮助"
 
-#: ../src/xviewer-window.c:4068
+#: ../src/xviewer-window.c:4108
 msgid "About this application"
 msgstr "关于此应用程序"
 
-#: ../src/xviewer-window.c:4074
+#: ../src/xviewer-window.c:4114
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "更改当前窗口工具栏的可见性"
 
-#: ../src/xviewer-window.c:4077
+#: ../src/xviewer-window.c:4117
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "更改当前窗口状态栏的可见性"
 
-#: ../src/xviewer-window.c:4080
+#: ../src/xviewer-window.c:4120
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "更改当前窗口图像收藏面板的可见性"
 
-#: ../src/xviewer-window.c:4083
+#: ../src/xviewer-window.c:4123
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "更改当前窗口侧边栏的可见性"
 
-#: ../src/xviewer-window.c:4089
+#: ../src/xviewer-window.c:4129
 msgid "Save changes in currently selected images"
 msgstr "保存更改到当前选中图像"
 
-#: ../src/xviewer-window.c:4091
+#: ../src/xviewer-window.c:4131
 msgid "Open _with"
 msgstr "打开方式(_W)"
 
-#: ../src/xviewer-window.c:4092
+#: ../src/xviewer-window.c:4132
 msgid "Open the selected image with a different application"
 msgstr "用一个不同的应用程序打开选中图像"
 
-#: ../src/xviewer-window.c:4095
+#: ../src/xviewer-window.c:4135
 msgid "Save the selected images with a different name"
 msgstr "以一个不同的名字保存选中图像"
 
-#: ../src/xviewer-window.c:4097
+#: ../src/xviewer-window.c:4137
 msgid "Show Containing _Folder"
 msgstr "显示图像所在文件夹(_F)"
 
-#: ../src/xviewer-window.c:4100
+#: ../src/xviewer-window.c:4140
 msgid "_Print…"
 msgstr "打印(_P)..."
 
-#: ../src/xviewer-window.c:4101
+#: ../src/xviewer-window.c:4141
 msgid "Print the selected image"
 msgstr "打印选中图像"
 
-#: ../src/xviewer-window.c:4103
+#: ../src/xviewer-window.c:4143
 msgid "Prope_rties"
 msgstr "属性(_R)"
 
-#: ../src/xviewer-window.c:4104
+#: ../src/xviewer-window.c:4144
 msgid "Show the properties and metadata of the selected image"
 msgstr "显示选中图像的属性和元数据"
 
-#: ../src/xviewer-window.c:4106
+#: ../src/xviewer-window.c:4146
 msgid "_Undo"
 msgstr "撤销(_U)"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4147
 msgid "Undo the last change in the image"
 msgstr "撤销上一次对图像的修改"
 
-#: ../src/xviewer-window.c:4109
+#: ../src/xviewer-window.c:4149
 msgid "Flip _Horizontal"
 msgstr "水平翻转(_H)"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4150
 msgid "Mirror the image horizontally"
 msgstr "水平翻转图像"
 
-#: ../src/xviewer-window.c:4112
+#: ../src/xviewer-window.c:4152
 msgid "Flip _Vertical"
 msgstr "垂直翻转(_V)"
 
-#: ../src/xviewer-window.c:4113
+#: ../src/xviewer-window.c:4153
 msgid "Mirror the image vertically"
 msgstr "垂直翻转图像"
 
-#: ../src/xviewer-window.c:4115
+#: ../src/xviewer-window.c:4155
 msgid "_Rotate Clockwise"
 msgstr "顺时针旋转(_R)"
 
-#: ../src/xviewer-window.c:4116
+#: ../src/xviewer-window.c:4156
 msgid "Rotate the image 90 degrees to the right"
 msgstr "将图片顺时针旋转 90 度"
 
-#: ../src/xviewer-window.c:4118
+#: ../src/xviewer-window.c:4158
 msgid "Rotate Counterc_lockwise"
 msgstr "逆时针旋转(_L)"
 
-#: ../src/xviewer-window.c:4119
+#: ../src/xviewer-window.c:4159
 msgid "Rotate the image 90 degrees to the left"
 msgstr "将图片逆时针旋转 90 度"
 
-#: ../src/xviewer-window.c:4121
+#: ../src/xviewer-window.c:4161
 msgid "Set as Wa_llpaper"
 msgstr "设为桌面壁纸(_L)"
 
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4162
 msgid "Set the selected image as the wallpaper"
 msgstr "将选中图像设为桌面壁纸"
 
-#: ../src/xviewer-window.c:4125
+#: ../src/xviewer-window.c:4165
 msgid "Move the selected image to the trash folder"
 msgstr "将选中图像移至回收站文件夹"
 
-#: ../src/xviewer-window.c:4127
+#: ../src/xviewer-window.c:4167
 msgid "_Delete Image"
 msgstr "删除图像(_D)"
 
-#: ../src/xviewer-window.c:4128
+#: ../src/xviewer-window.c:4168
 msgid "Delete the selected image"
 msgstr "删除选中图像"
 
-#: ../src/xviewer-window.c:4130
+#: ../src/xviewer-window.c:4170
 msgid "_Copy"
 msgstr "复制(_C)"
 
-#: ../src/xviewer-window.c:4131
+#: ../src/xviewer-window.c:4171
 msgid "Copy the selected image to the clipboard"
 msgstr "复制选中图像到剪贴板"
 
-#: ../src/xviewer-window.c:4133 ../src/xviewer-window.c:4142
-#: ../src/xviewer-window.c:4145
+#: ../src/xviewer-window.c:4173 ../src/xviewer-window.c:4185
+#: ../src/xviewer-window.c:4188
 msgid "_Zoom In"
 msgstr "放大(_Z)"
 
-#: ../src/xviewer-window.c:4134 ../src/xviewer-window.c:4143
+#: ../src/xviewer-window.c:4174 ../src/xviewer-window.c:4186
 msgid "Enlarge the image"
 msgstr "放大图片"
 
-#: ../src/xviewer-window.c:4136 ../src/xviewer-window.c:4148
+#: ../src/xviewer-window.c:4176 ../src/xviewer-window.c:4191
 msgid "Zoom _Out"
 msgstr "缩小(_O)"
 
-#: ../src/xviewer-window.c:4137 ../src/xviewer-window.c:4146
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4177 ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4192
 msgid "Shrink the image"
 msgstr "缩小图像"
 
-#: ../src/xviewer-window.c:4139
+#: ../src/xviewer-window.c:4179
 msgid "_Normal Size"
 msgstr "正常大小(_N)"
 
-#: ../src/xviewer-window.c:4140
+#: ../src/xviewer-window.c:4180
 msgid "Show the image at its normal size"
 msgstr "以正常大小显示图像"
 
-#: ../src/xviewer-window.c:4157
+#: ../src/xviewer-window.c:4183
+msgid "Reload the image"
+msgstr "重新载入图片"
+
+#: ../src/xviewer-window.c:4200
 msgid "_Fullscreen"
 msgstr "全屏(_F)"
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4201
 msgid "Show the current image in fullscreen mode"
 msgstr "在全屏模式中显示当前图像"
 
-#: ../src/xviewer-window.c:4160
+#: ../src/xviewer-window.c:4203
 msgid "Pause Slideshow"
 msgstr "暂停放映"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4204
 msgid "Pause or resume the slideshow"
 msgstr "暂停或继续幻灯片放映"
 
-#: ../src/xviewer-window.c:4163
+#: ../src/xviewer-window.c:4206
 msgid "_Best Fit"
 msgstr "最佳匹配(_B)"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4207
 msgid "Fit the image to the window"
 msgstr "使图像适合窗口"
 
-#: ../src/xviewer-window.c:4169 ../src/xviewer-window.c:4184
+#: ../src/xviewer-window.c:4212 ../src/xviewer-window.c:4227
 msgid "_Previous Image"
 msgstr "上一个图像(_P)"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4213
 msgid "Go to the previous image of the gallery"
 msgstr "转到收藏中上一个图像"
 
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4215
 msgid "_Next Image"
 msgstr "下一个图像(_N)"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4216
 msgid "Go to the next image of the gallery"
 msgstr "转到收藏中下一个图像"
 
-#: ../src/xviewer-window.c:4175 ../src/xviewer-window.c:4187
+#: ../src/xviewer-window.c:4218 ../src/xviewer-window.c:4230
 msgid "_First Image"
 msgstr "第一个图像(_F)"
 
-#: ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4219
 msgid "Go to the first image of the gallery"
 msgstr "转到收藏中第一个图像"
 
-#: ../src/xviewer-window.c:4178 ../src/xviewer-window.c:4190
+#: ../src/xviewer-window.c:4221 ../src/xviewer-window.c:4233
 msgid "_Last Image"
 msgstr "最后一个图像(_L)"
 
-#: ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4222
 msgid "Go to the last image of the gallery"
 msgstr "转到收藏中最后一张图像"
 
-#: ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4224
 msgid "_Random Image"
 msgstr "随机图像(_R)"
 
-#: ../src/xviewer-window.c:4182
+#: ../src/xviewer-window.c:4225
 msgid "Go to a random image of the gallery"
 msgstr "转到收藏中任意一个图像"
 
-#: ../src/xviewer-window.c:4340
+#: ../src/xviewer-window.c:4383
 msgid "S_lideshow"
 msgstr "幻灯片放映(_L)"
 
-#: ../src/xviewer-window.c:4341
+#: ../src/xviewer-window.c:4384
 msgid "Start a slideshow view of the images"
 msgstr "以幻灯片方式查看图像"
 
-#: ../src/xviewer-window.c:4413
+#: ../src/xviewer-window.c:4456
 msgid "Previous"
 msgstr "上一张"
 
-#: ../src/xviewer-window.c:4418
+#: ../src/xviewer-window.c:4461
 msgid "Next"
 msgstr "下一张"
 
 # SUN CHANGED MESSAGE
-#: ../src/xviewer-window.c:4425
+#: ../src/xviewer-window.c:4468
 msgid "Right"
 msgstr "顺时针"
 
-#: ../src/xviewer-window.c:4428
+#: ../src/xviewer-window.c:4471
 msgid "Left"
 msgstr "逆时针"
 
-#: ../src/xviewer-window.c:4431
+#: ../src/xviewer-window.c:4474
 msgid "Show Folder"
 msgstr "显示文件夹"
 
-#: ../src/xviewer-window.c:4434
+#: ../src/xviewer-window.c:4477
 msgid "In"
 msgstr "放大"
 
-#: ../src/xviewer-window.c:4437
+#: ../src/xviewer-window.c:4480
 msgid "Out"
 msgstr "缩小"
 
-#: ../src/xviewer-window.c:4440
+#: ../src/xviewer-window.c:4483
 msgid "Normal"
 msgstr "正常"
 
-#: ../src/xviewer-window.c:4443
+#: ../src/xviewer-window.c:4486
 msgid "Fit"
 msgstr "适合"
 
-#: ../src/xviewer-window.c:4446
+#: ../src/xviewer-window.c:4489
 msgid "Gallery"
 msgstr "收藏"
 
-#: ../src/xviewer-window.c:4463
+#: ../src/xviewer-window.c:4506
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "移入回收站"
 
-#: ../src/xviewer-window.c:4829
+#: ../src/xviewer-window.c:4872
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "使用%s来编辑当前图像"
 
-#: ../src/xviewer-window.c:4831
+#: ../src/xviewer-window.c:4874
 msgid "Edit Image"
 msgstr "编辑图像"
 
