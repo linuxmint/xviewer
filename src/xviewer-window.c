@@ -139,6 +139,7 @@ struct _XviewerWindowPrivate {
         GtkWidget           *nav;
 	GtkWidget           *message_area;
 	GtkWidget           *toolbar;
+	GtkWidget 			*toolbar_revealer;
 	GtkWidget           *properties_dlg;
 
         GtkActionGroup      *actions_window;
@@ -1990,7 +1991,7 @@ update_ui_visibility (XviewerWindow *window)
 	action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/ToolbarToggle");
 	g_assert (action != NULL);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
-	g_object_set (G_OBJECT (priv->toolbar), "visible", visible, NULL);
+	g_object_set (G_OBJECT (priv->toolbar_revealer), "reveal-child", visible, NULL);
 
 	visible = g_settings_get_boolean (priv->ui_settings,
 					  XVIEWER_CONF_UI_STATUSBAR);
@@ -2555,7 +2556,7 @@ xviewer_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 	visible = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
 
 	if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewToolbar") == 0) {
-		g_object_set (G_OBJECT (priv->toolbar), "visible", visible, NULL);
+		g_object_set (G_OBJECT (priv->toolbar_revealer), "reveal-child", visible, NULL);
 
 		if (priv->mode == XVIEWER_WINDOW_MODE_NORMAL)
 			g_settings_set_boolean (priv->ui_settings,
@@ -4824,9 +4825,13 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	gtk_image_menu_item_set_always_show_image (
 			GTK_IMAGE_MENU_ITEM (menuitem), TRUE);
 
+	priv->toolbar_revealer = gtk_revealer_new ();
+	gtk_revealer_set_transition_duration (GTK_REVEALER (priv->toolbar_revealer), 175);
+
 	priv->toolbar = gtk_toolbar_new ();
 	gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (priv->toolbar)),
 				     			 GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+	gtk_container_add (GTK_CONTAINER (priv->toolbar_revealer), priv->toolbar);
 
 	tool_item = gtk_tool_item_new ();
 	gtk_tool_item_set_expand (GTK_TOOL_ITEM (tool_item), TRUE);
@@ -4882,9 +4887,9 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	button = create_toolbar_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
-	gtk_box_pack_start (GTK_BOX (priv->box), priv->toolbar, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (priv->box), priv->toolbar_revealer, FALSE, FALSE, 0);
 
-	gtk_widget_show_all (priv->toolbar);
+	gtk_widget_show_all (priv->toolbar_revealer);
 
 	gtk_window_add_accel_group (GTK_WINDOW (window), gtk_ui_manager_get_accel_group (priv->ui_mgr));
 
