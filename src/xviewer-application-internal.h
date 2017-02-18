@@ -32,14 +32,11 @@
 
 #include "xviewer-application.h"
 #include "xviewer-plugin-engine.h"
-#include "egg-toolbars-model.h"
 #include "xviewer-window.h"
 
 G_BEGIN_DECLS
 
 struct _XviewerApplicationPrivate {
-	EggToolbarsModel *toolbars_model;
-	gchar            *toolbars_file;
 	XviewerPluginEngine  *plugin_engine;
 
 	XviewerStartupFlags   flags;
@@ -48,13 +45,6 @@ struct _XviewerApplicationPrivate {
 
 	PeasExtensionSet *extensions;
 };
-
-
-EggToolbarsModel *xviewer_application_get_toolbars_model  (XviewerApplication *application);
-
-void              xviewer_application_save_toolbars_model (XviewerApplication *application);
-
-void		  xviewer_application_reset_toolbars_model (XviewerApplication *app);
 
 void              xviewer_application_screensaver_enable  (XviewerApplication *application);
 
