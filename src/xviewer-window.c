@@ -1914,11 +1914,11 @@ xviewer_window_get_exit_fullscreen_button (XviewerWindow *window)
 	GtkWidget *button;
 	GtkWidget *image;
 
-	button = gtk_button_new_with_mnemonic (_("_Leave Fullscreen"));
-	image = gtk_image_new_from_icon_name ("view-restore",
-					      GTK_ICON_SIZE_BUTTON);
+	button = gtk_button_new ();
+	image = gtk_image_new_from_icon_name ("view-restore-symbolic", GTK_ICON_SIZE_BUTTON);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
 	gtk_button_set_image (GTK_BUTTON (button), image);
-	gtk_button_set_always_show_image (GTK_BUTTON (button), TRUE);
+	gtk_button_set_label (GTK_BUTTON (button), NULL);
 
 	g_signal_connect (button, "clicked",
 			  G_CALLBACK (exit_fullscreen_button_clicked_cb),
@@ -1928,31 +1928,154 @@ xviewer_window_get_exit_fullscreen_button (XviewerWindow *window)
 }
 
 static GtkWidget *
+create_toolbar_button (GtkAction *action)
+{
+	GtkWidget *button;
+	GtkWidget *image;
+
+	button = gtk_button_new ();
+	image = gtk_image_new ();
+
+	gtk_button_set_image (GTK_BUTTON (button), image);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
+	gtk_button_set_label (GTK_BUTTON (button), NULL);
+	gtk_widget_set_tooltip_text (button, gtk_action_get_tooltip (action));
+
+	return button;
+}
+
+static GtkWidget *
+create_toolbar_toggle_button (GtkAction *action)
+{
+	GtkWidget *button;
+	GtkWidget *image;
+
+	button = gtk_toggle_button_new ();
+	image = gtk_image_new ();
+
+	gtk_button_set_image (GTK_BUTTON (button), image);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
+	gtk_button_set_label (GTK_BUTTON (button), NULL);
+	gtk_widget_set_tooltip_text (button, gtk_action_get_tooltip (action));
+
+	return button;
+}
+
+static GtkWidget *
 xviewer_window_create_fullscreen_popup (XviewerWindow *window)
 {
+	XviewerWindowPrivate *priv;
 	GtkWidget *revealer;
-	GtkWidget *hbox;
+	GtkWidget *main_box;
+	GtkWidget *box;
 	GtkWidget *button;
+	GtkWidget *separator;
 	GtkWidget *toolbar;
+	GtkWidget *tool_item;
+	GtkAction *action;
+	GtkWidget *frame;
 
 	xviewer_debug (DEBUG_WINDOW);
+
+	priv = window->priv;
 
 	revealer = gtk_revealer_new();
 	gtk_widget_add_events (revealer, GDK_ENTER_NOTIFY_MASK);
 
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	frame = gtk_frame_new (NULL);
+	gtk_container_add (GTK_CONTAINER (revealer), frame);
+
+	toolbar = gtk_toolbar_new ();
+	gtk_container_add (GTK_CONTAINER (frame), toolbar);
+	tool_item = gtk_tool_item_new ();
+	gtk_tool_item_set_expand (GTK_TOOL_ITEM (tool_item), TRUE);
+	gtk_toolbar_insert (GTK_TOOLBAR (toolbar), GTK_TOOL_ITEM (tool_item), 0);
+
+	main_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+	gtk_widget_set_hexpand (main_box, TRUE);
 	gtk_widget_set_valign (revealer, GTK_ALIGN_START);
 	gtk_widget_set_halign (revealer, GTK_ALIGN_FILL);
-	gtk_container_add (GTK_CONTAINER (revealer), hbox);
+	gtk_container_add (GTK_CONTAINER (tool_item), main_box);
 
-	toolbar = gtk_ui_manager_get_widget (window->priv->ui_mgr,
-					     "/FullscreenToolbar");
-	g_assert (GTK_IS_WIDGET (toolbar));
-	gtk_toolbar_set_style (GTK_TOOLBAR (toolbar), GTK_TOOLBAR_ICONS);
-	gtk_box_pack_start (GTK_BOX (hbox), toolbar, TRUE, TRUE, 0);
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoFirst");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoPrevious");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoNext");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoLast");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomNormal");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomFit");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "EditRotate270");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "EditRotate90");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_window, "ViewImageGallery");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "PauseSlideshow");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
 	button = xviewer_window_get_exit_fullscreen_button (window);
-	gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+	gtk_box_pack_end (GTK_BOX (main_box), button, FALSE, FALSE, 0);
 
 	/* Disable timer when the pointer enters the toolbar window. */
 	g_signal_connect (revealer,
@@ -4689,24 +4812,6 @@ xviewer_window_view_previous_image_cb (XviewerScrollView *view,
 	xviewer_window_cmd_go_prev (NULL, window);
 }
 
-static GtkWidget *
-create_toolbar_button (GtkAction *action)
-{
-	GtkWidget *button;
-	GtkWidget *image;
-
-	button = gtk_button_new ();
-	image = gtk_image_new ();
-
-	gtk_button_set_image (GTK_BUTTON (button), image);
-	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
-	gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
-	gtk_button_set_label (GTK_BUTTON (button), NULL);
-	gtk_widget_set_tooltip_text (button, gtk_action_get_tooltip (action));
-
-	return button;
-}
-
 static void
 xviewer_window_construct_ui (XviewerWindow *window)
 {
@@ -4870,7 +4975,7 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
 	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomFit");
-	button = create_toolbar_button (action);
+	button = create_toolbar_toggle_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
 	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
