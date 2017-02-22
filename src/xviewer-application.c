@@ -359,13 +359,6 @@ xviewer_application_finalize (GObject *object)
 	XviewerApplication *application = XVIEWER_APPLICATION (object);
 	XviewerApplicationPrivate *priv = application->priv;
 
-	if (priv->toolbars_model) {
-		g_object_unref (priv->toolbars_model);
-		priv->toolbars_model = NULL;
-		g_free (priv->toolbars_file);
-		priv->toolbars_file = NULL;
-	}
-
 	g_clear_object (&priv->extensions);
 
 	if (priv->plugin_engine) {
@@ -437,35 +430,16 @@ static void
 xviewer_application_init (XviewerApplication *xviewer_application)
 {
 	XviewerApplicationPrivate *priv;
-	const gchar *dot_dir = xviewer_util_dot_dir ();
 
 	xviewer_session_init (xviewer_application);
 
 	xviewer_application->priv = xviewer_application_get_instance_private (xviewer_application);
 	priv = xviewer_application->priv;
 
-	priv->toolbars_model = egg_toolbars_model_new ();
 	priv->plugin_engine = xviewer_plugin_engine_new ();
 	priv->flags = 0;
 
 	priv->ui_settings = g_settings_new (XVIEWER_CONF_UI);
-
-	egg_toolbars_model_load_names (priv->toolbars_model,
-				       XVIEWER_DATA_DIR "/xviewer-toolbar.xml");
-
-	if (G_LIKELY (dot_dir != NULL))
-		priv->toolbars_file = g_build_filename
-			(dot_dir, "xviewer_toolbar.xml", NULL);
-
-	if (!dot_dir || !egg_toolbars_model_load_toolbars (priv->toolbars_model,
-							priv->toolbars_file)) {
-
-		egg_toolbars_model_load_toolbars (priv->toolbars_model,
-						  XVIEWER_DATA_DIR "/xviewer-toolbar.xml");
-	}
-
-	egg_toolbars_model_set_flags (priv->toolbars_model, 0,
-				      EGG_TB_MODEL_NOT_REMOVABLE);
 
 	xviewer_application_load_accelerators ();
 }
@@ -736,64 +710,6 @@ xviewer_application_open_uris (XviewerApplication  *application,
 
  	return xviewer_application_open_file_list (application, file_list, timestamp,
 						    flags, error);
-}
-
-
-/**
- * xviewer_application_get_toolbars_model:
- * @application: An #XviewerApplication.
- *
- * Retrieves the #EggToolbarsModel for the toolbar in #XviewerApplication.
- *
- * Returns: (transfer none): An #EggToolbarsModel.
- **/
-EggToolbarsModel *
-xviewer_application_get_toolbars_model (XviewerApplication *application)
-{
-	g_return_val_if_fail (XVIEWER_IS_APPLICATION (application), NULL);
-
-	return application->priv->toolbars_model;
-}
-
-/**
- * xviewer_application_save_toolbars_model:
- * @application: An #XviewerApplication.
- *
- * Causes the saving of the model of the toolbar in #XviewerApplication to a file.
- **/
-void
-xviewer_application_save_toolbars_model (XviewerApplication *application)
-{
-	if (G_LIKELY(application->priv->toolbars_file != NULL))
-		egg_toolbars_model_save_toolbars (application->priv->toolbars_model,
-		                                  application->priv->toolbars_file,
-						  "1.0");
-}
-
-/**
- * xviewer_application_reset_toolbars_model:
- * @app: an #XviewerApplication
- *
- * Restores the toolbars model to the defaults.
- **/
-void
-xviewer_application_reset_toolbars_model (XviewerApplication *app)
-{
-	XviewerApplicationPrivate *priv;
-	g_return_if_fail (XVIEWER_IS_APPLICATION (app));
-
-	priv = app->priv;
-
-	g_object_unref (app->priv->toolbars_model);
-
-	priv->toolbars_model = egg_toolbars_model_new ();
-
-	egg_toolbars_model_load_names (priv->toolbars_model,
-				       XVIEWER_DATA_DIR "/xviewer-toolbar.xml");
-	egg_toolbars_model_load_toolbars (priv->toolbars_model,
-					  XVIEWER_DATA_DIR "/xviewer-toolbar.xml");
-	egg_toolbars_model_set_flags (priv->toolbars_model, 0,
-				      EGG_TB_MODEL_NOT_REMOVABLE);
 }
 
 static void

@@ -2,8 +2,6 @@ if ENABLE_JPEG
 jpeg_LIB = $(top_builddir)/jpegutils/libxviewer-jpegutils.la
 endif
 
-toolbar_LIB = $(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la
-
 pkglib_LTLIBRARIES = libxviewer.la
 
 bin_PROGRAMS = xviewer
@@ -134,7 +132,6 @@ endif HAVE_EXEMPI
 
 libxviewer_la_CPPFLAGS =						\
 	-I$(top_srcdir)/jpegutils				\
-	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
 	-DG_LOG_DOMAIN=\"XVIEWER\"					\
 	-DXVIEWER_PREFIX=\""${prefix}"\"				\
 	-DXVIEWER_DATA_DIR=\""$(pkgdatadir)"\"			\
@@ -149,7 +146,6 @@ libxviewer_la_CFLAGS =						\
 
 libxviewer_la_LIBADD = \
 	$(XVIEWER_LIBS)	\
-	$(toolbar_LIB)	\
 	$(jpeg_LIB)	\
 	$(LIBJPEG)	\
 	$(LIBM)
@@ -167,7 +163,6 @@ libxviewer_la_LDFLAGS = -avoid-version -export-dynamic -no-undefined -export-sym
 xviewer_SOURCES = main.c
 
 xviewer_CFLAGS = 							\
-	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
 	$(XVIEWER_CFLAGS)						\
 	-DXVIEWER_DATA_DIR=\""$(pkgdatadir)"\"			\
 	-DXVIEWER_LOCALE_DIR=\""$(datadir)/locale"\"                \

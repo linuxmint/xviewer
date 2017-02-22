@@ -59,10 +59,6 @@
 
 #include "xviewer-enum-types.h"
 
-#include "egg-toolbar-editor.h"
-#include "egg-editable-toolbar.h"
-#include "egg-toolbars-model.h"
-
 #include <glib.h>
 #include <glib-object.h>
 #include <glib/gi18n.h>
@@ -143,6 +139,7 @@ struct _XviewerWindowPrivate {
         GtkWidget           *nav;
 	GtkWidget           *message_area;
 	GtkWidget           *toolbar;
+	GtkWidget 			*toolbar_revealer;
 	GtkWidget           *properties_dlg;
 
         GtkActionGroup      *actions_window;
@@ -1926,11 +1923,11 @@ xviewer_window_get_exit_fullscreen_button (XviewerWindow *window)
 	GtkWidget *button;
 	GtkWidget *image;
 
-	button = gtk_button_new_with_mnemonic (_("_Leave Fullscreen"));
-	image = gtk_image_new_from_icon_name ("view-restore",
-					      GTK_ICON_SIZE_BUTTON);
+	button = gtk_button_new ();
+	image = gtk_image_new_from_icon_name ("view-restore-symbolic", GTK_ICON_SIZE_BUTTON);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
 	gtk_button_set_image (GTK_BUTTON (button), image);
-	gtk_button_set_always_show_image (GTK_BUTTON (button), TRUE);
+	gtk_button_set_label (GTK_BUTTON (button), NULL);
 
 	g_signal_connect (button, "clicked",
 			  G_CALLBACK (exit_fullscreen_button_clicked_cb),
@@ -1940,31 +1937,154 @@ xviewer_window_get_exit_fullscreen_button (XviewerWindow *window)
 }
 
 static GtkWidget *
+create_toolbar_button (GtkAction *action)
+{
+	GtkWidget *button;
+	GtkWidget *image;
+
+	button = gtk_button_new ();
+	image = gtk_image_new ();
+
+	gtk_button_set_image (GTK_BUTTON (button), image);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
+	gtk_button_set_label (GTK_BUTTON (button), NULL);
+	gtk_widget_set_tooltip_text (button, gtk_action_get_tooltip (action));
+
+	return button;
+}
+
+static GtkWidget *
+create_toolbar_toggle_button (GtkAction *action)
+{
+	GtkWidget *button;
+	GtkWidget *image;
+
+	button = gtk_toggle_button_new ();
+	image = gtk_image_new ();
+
+	gtk_button_set_image (GTK_BUTTON (button), image);
+	gtk_style_context_add_class (gtk_widget_get_style_context (button), "flat");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
+	gtk_button_set_label (GTK_BUTTON (button), NULL);
+	gtk_widget_set_tooltip_text (button, gtk_action_get_tooltip (action));
+
+	return button;
+}
+
+static GtkWidget *
 xviewer_window_create_fullscreen_popup (XviewerWindow *window)
 {
+	XviewerWindowPrivate *priv;
 	GtkWidget *revealer;
-	GtkWidget *hbox;
+	GtkWidget *main_box;
+	GtkWidget *box;
 	GtkWidget *button;
+	GtkWidget *separator;
 	GtkWidget *toolbar;
+	GtkWidget *tool_item;
+	GtkAction *action;
+	GtkWidget *frame;
 
 	xviewer_debug (DEBUG_WINDOW);
+
+	priv = window->priv;
 
 	revealer = gtk_revealer_new();
 	gtk_widget_add_events (revealer, GDK_ENTER_NOTIFY_MASK);
 
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	frame = gtk_frame_new (NULL);
+	gtk_container_add (GTK_CONTAINER (revealer), frame);
+
+	toolbar = gtk_toolbar_new ();
+	gtk_container_add (GTK_CONTAINER (frame), toolbar);
+	tool_item = gtk_tool_item_new ();
+	gtk_tool_item_set_expand (GTK_TOOL_ITEM (tool_item), TRUE);
+	gtk_toolbar_insert (GTK_TOOLBAR (toolbar), GTK_TOOL_ITEM (tool_item), 0);
+
+	main_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+	gtk_widget_set_hexpand (main_box, TRUE);
 	gtk_widget_set_valign (revealer, GTK_ALIGN_START);
 	gtk_widget_set_halign (revealer, GTK_ALIGN_FILL);
-	gtk_container_add (GTK_CONTAINER (revealer), hbox);
+	gtk_container_add (GTK_CONTAINER (tool_item), main_box);
 
-	toolbar = gtk_ui_manager_get_widget (window->priv->ui_mgr,
-					     "/FullscreenToolbar");
-	g_assert (GTK_IS_WIDGET (toolbar));
-	gtk_toolbar_set_style (GTK_TOOLBAR (toolbar), GTK_TOOLBAR_ICONS);
-	gtk_box_pack_start (GTK_BOX (hbox), toolbar, TRUE, TRUE, 0);
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoFirst");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoPrevious");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoNext");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoLast");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomNormal");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomFit");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "EditRotate270");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "EditRotate90");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_window, "ViewImageGallery");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (main_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "PauseSlideshow");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
 	button = xviewer_window_get_exit_fullscreen_button (window);
-	gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+	gtk_box_pack_end (GTK_BOX (main_box), button, FALSE, FALSE, 0);
 
 	/* Disable timer when the pointer enters the toolbar window. */
 	g_signal_connect (revealer,
@@ -2003,7 +2123,7 @@ update_ui_visibility (XviewerWindow *window)
 	action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/ToolbarToggle");
 	g_assert (action != NULL);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
-	g_object_set (G_OBJECT (priv->toolbar), "visible", visible, NULL);
+	g_object_set (G_OBJECT (priv->toolbar_revealer), "reveal-child", visible, NULL);
 
 	visible = g_settings_get_boolean (priv->ui_settings,
 					  XVIEWER_CONF_UI_STATUSBAR);
@@ -2529,122 +2649,6 @@ xviewer_window_cmd_preferences (GtkAction *action, gpointer user_data)
 	xviewer_window_show_preferences_dialog (XVIEWER_WINDOW (user_data));
 }
 
-#define XVIEWER_TB_EDITOR_DLG_RESET_RESPONSE 128
-
-static void
-xviewer_window_cmd_edit_toolbar_cb (GtkDialog *dialog, gint response, gpointer data)
-{
-	XviewerWindow *window = XVIEWER_WINDOW (data);
-
-	if (response == XVIEWER_TB_EDITOR_DLG_RESET_RESPONSE) {
-		EggToolbarsModel *model;
-		EggToolbarEditor *editor;
-
-		editor = g_object_get_data (G_OBJECT (dialog),
-					    "EggToolbarEditor");
-
-		g_return_if_fail (editor != NULL);
-
-        	egg_editable_toolbar_set_edit_mode
-			(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), FALSE);
-
-		xviewer_application_reset_toolbars_model (XVIEWER_APP);
-		model = xviewer_application_get_toolbars_model (XVIEWER_APP);
-		egg_editable_toolbar_set_model
-			(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), model);
-		egg_toolbar_editor_set_model (editor, model);
-
-		/* Toolbar would be uneditable now otherwise */
-		egg_editable_toolbar_set_edit_mode
-			(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), TRUE);
-	} else if (response == GTK_RESPONSE_HELP) {
-		xviewer_util_show_help ("toolbar#modify", NULL);
-	} else {
-        	egg_editable_toolbar_set_edit_mode
-			(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), FALSE);
-
-		xviewer_application_save_toolbars_model (XVIEWER_APP);
-
-		// Destroying the dialog will also make the previously
-		// disabled action sensitive again through the GBindings
-        	gtk_widget_destroy (GTK_WIDGET (dialog));
-	}
-}
-
-static void
-xviewer_window_cmd_edit_toolbar (GtkAction *action, gpointer *user_data)
-{
-	XviewerWindow *window;
-	GtkWidget *dialog;
-	GtkWidget *editor;
-	GtkAction *tb_action;
-
-	g_return_if_fail (XVIEWER_IS_WINDOW (user_data));
-
-	window = XVIEWER_WINDOW (user_data);
-
-	dialog = gtk_dialog_new_with_buttons (_("Toolbar Editor"),
-					      GTK_WINDOW (window),
-				              GTK_DIALOG_DESTROY_WITH_PARENT,
-					      _("_Reset to Default"),
-					      XVIEWER_TB_EDITOR_DLG_RESET_RESPONSE,
-					      _("_Close"),
-					      GTK_RESPONSE_CLOSE,
-					      _("_Help"),
-					      GTK_RESPONSE_HELP,
-					      NULL);
-
-	gtk_dialog_set_default_response (GTK_DIALOG (dialog),
-					 GTK_RESPONSE_CLOSE);
-
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 2);
-
-	gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
-
-	editor = egg_toolbar_editor_new (window->priv->ui_mgr,
-					 xviewer_application_get_toolbars_model (XVIEWER_APP));
-
-	gtk_container_set_border_width (GTK_CONTAINER (editor), 5);
-
-	gtk_box_set_spacing (GTK_BOX (EGG_TOOLBAR_EDITOR (editor)), 5);
-	// Use as much vertical space as available
-	gtk_widget_set_vexpand (GTK_WIDGET (editor), TRUE);
-
-	gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), editor);
-
-	egg_editable_toolbar_set_edit_mode
-		(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), TRUE);
-
-	g_object_set_data (G_OBJECT (dialog), "EggToolbarEditor", editor);
-
-	g_signal_connect (dialog,
-                          "response",
-			  G_CALLBACK (xviewer_window_cmd_edit_toolbar_cb),
-			  window);
-
-	gtk_widget_show_all (dialog);
-
-	tb_action = gtk_action_group_get_action (window->priv->actions_window,
-						"ViewToolbar");
-	/* Bind sensitivity of ViewToolbar action to the dialog's visibility.
-	 * This will make it sensitive again once the dialog goes away.
-	 */
-	if(tb_action)
-		g_object_bind_property (dialog, "visible",
-					tb_action, "sensitive",
-					G_BINDING_SYNC_CREATE |
-					G_BINDING_INVERT_BOOLEAN);
-	/* Do the same for the EditToolbar action to avoid spawning
-	 * additional (useless) editor windows. */
-	g_object_bind_property (dialog, "visible",
-				action, "sensitive",
-				G_BINDING_SYNC_CREATE |
-				G_BINDING_INVERT_BOOLEAN);
-
-}
-
 static void
 xviewer_window_cmd_help (GtkAction *action, gpointer user_data)
 {
@@ -2684,7 +2688,7 @@ xviewer_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 	visible = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
 
 	if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewToolbar") == 0) {
-		g_object_set (G_OBJECT (priv->toolbar), "visible", visible, NULL);
+		g_object_set (G_OBJECT (priv->toolbar_revealer), "reveal-child", visible, NULL);
 
 		if (priv->mode == XVIEWER_WINDOW_MODE_NORMAL)
 			g_settings_set_boolean (priv->ui_settings,
@@ -4098,22 +4102,19 @@ static const GtkActionEntry action_entries_window[] = {
 	{ "Tools", NULL, N_("_Tools") },
 	{ "Help",  NULL, N_("_Help") },
 
-	{ "ImageOpen", "document-open",  N_("_Open…"), "<control>O",
+	{ "ImageOpen", "document-open-symbolic",  N_("_Open…"), "<control>O",
 	  N_("Open a file"),
 	  G_CALLBACK (xviewer_window_cmd_file_open) },
-	{ "ImageClose", "window-close", N_("_Close"), "<control>W",
+	{ "ImageClose", "window-close-symbolic", N_("_Close"), "<control>W",
 	  N_("Close window"),
 	  G_CALLBACK (xviewer_window_cmd_close_window) },
-	{ "EditToolbar", NULL, N_("T_oolbar"), NULL,
-	  N_("Edit the application toolbar"),
-	  G_CALLBACK (xviewer_window_cmd_edit_toolbar) },
-	{ "EditPreferences", "preferences-desktop", N_("Prefere_nces"), NULL,
+	{ "EditPreferences", "preferences-system-symbolic", N_("Prefere_nces"), NULL,
 	  N_("Preferences for Image Viewer"),
 	  G_CALLBACK (xviewer_window_cmd_preferences) },
-	{ "HelpManual", "help-browser", N_("_Contents"), "F1",
+	{ "HelpManual", "help-browser-symbolic", N_("_Contents"), "F1",
 	  N_("Help on this application"),
 	  G_CALLBACK (xviewer_window_cmd_help) },
-	{ "HelpAbout", "help-about", N_("_About"), NULL,
+	{ "HelpAbout", "help-about-symbolic", N_("_About"), NULL,
 	  N_("About this application"),
 	  G_CALLBACK (xviewer_window_cmd_about) }
 };
@@ -4134,70 +4135,70 @@ static const GtkToggleActionEntry toggle_entries_window[] = {
 };
 
 static const GtkActionEntry action_entries_image[] = {
-	{ "ImageSave", "document-save", N_("_Save"), "<control>s",
+	{ "ImageSave", "document-save-symbolic", N_("_Save"), "<control>s",
 	  N_("Save changes in currently selected images"),
 	  G_CALLBACK (xviewer_window_cmd_save) },
 	{ "ImageOpenWith", NULL, N_("Open _with"), NULL,
 	  N_("Open the selected image with a different application"),
 	  NULL},
-	{ "ImageSaveAs", "document-save-as", N_("Save _As…"), "<control><shift>s",
+	{ "ImageSaveAs", "document-save-as-symbolic", N_("Save _As…"), "<control><shift>s",
 	  N_("Save the selected images with a different name"),
 	  G_CALLBACK (xviewer_window_cmd_save_as) },
-	{ "ImageOpenContainingFolder", "folder", N_("Show Containing _Folder"), NULL,
+	{ "ImageOpenContainingFolder", "folder-symbolic", N_("Show Containing _Folder"), NULL,
 	  N_("Show the folder which contains this file in the file manager"),
 	  G_CALLBACK (xviewer_window_cmd_open_containing_folder) },
-	{ "ImagePrint", "document-print", N_("_Print…"), "<control>p",
+	{ "ImagePrint", "document-print-symbolic", N_("_Print…"), "<control>p",
 	  N_("Print the selected image"),
 	  G_CALLBACK (xviewer_window_cmd_print) },
-	{ "ImageProperties", "document-properties", N_("Prope_rties"), "<alt>Return",
+	{ "ImageProperties", "document-properties-symbolic", N_("Prope_rties"), "<alt>Return",
 	  N_("Show the properties and metadata of the selected image"),
 	  G_CALLBACK (xviewer_window_cmd_properties) },
-	{ "EditUndo", "edit-undo", N_("_Undo"), "<control>z",
+	{ "EditUndo", "edit-undo-symbolic", N_("_Undo"), "<control>z",
 	  N_("Undo the last change in the image"),
 	  G_CALLBACK (xviewer_window_cmd_undo) },
-	{ "EditFlipHorizontal", "object-flip-horizontal", N_("Flip _Horizontal"), NULL,
+	{ "EditFlipHorizontal", "object-flip-horizontal-symbolic", N_("Flip _Horizontal"), NULL,
 	  N_("Mirror the image horizontally"),
 	  G_CALLBACK (xviewer_window_cmd_flip_horizontal) },
-	{ "EditFlipVertical", "object-flip-vertical", N_("Flip _Vertical"), NULL,
+	{ "EditFlipVertical", "object-flip-vertical-symbolic", N_("Flip _Vertical"), NULL,
 	  N_("Mirror the image vertically"),
 	  G_CALLBACK (xviewer_window_cmd_flip_vertical) },
-	{ "EditRotate90",  "object-rotate-right",  N_("_Rotate Clockwise"), "<control>r",
+	{ "EditRotate90",  "object-rotate-right-symbolic",  N_("_Rotate Clockwise"), "<control>r",
 	  N_("Rotate the image 90 degrees to the right"),
 	  G_CALLBACK (xviewer_window_cmd_rotate_90) },
-	{ "EditRotate270", "object-rotate-left", N_("Rotate Counterc_lockwise"), "<control><shift>r",
+	{ "EditRotate270", "object-rotate-left-symbolic", N_("Rotate Counterc_lockwise"), "<control><shift>r",
 	  N_("Rotate the image 90 degrees to the left"),
 	  G_CALLBACK (xviewer_window_cmd_rotate_270) },
 	{ "ImageSetAsWallpaper", NULL, N_("Set as Wa_llpaper"),
 	  "<control>F8", N_("Set the selected image as the wallpaper"),
 	  G_CALLBACK (xviewer_window_cmd_wallpaper) },
-	{ "EditMoveToTrash", "user-trash", N_("Move to _Trash"), NULL,
+	{ "EditMoveToTrash", "user-trash-symbolic", N_("Move to _Trash"), NULL,
 	  N_("Move the selected image to the trash folder"),
 	  G_CALLBACK (xviewer_window_cmd_move_to_trash) },
-	{ "EditDelete", "edit-delete", N_("_Delete Image"), "<shift>Delete",
+	{ "EditDelete", "edit-delete-symbolic", N_("_Delete Image"), "<shift>Delete",
 	  N_("Delete the selected image"),
 	  G_CALLBACK (xviewer_window_cmd_delete) },
-	{ "EditCopyImage", "edit-copy", N_("_Copy"), "<control>C",
+	{ "EditCopyImage", "edit-copy-symbolic", N_("_Copy"), "<control>C",
 	  N_("Copy the selected image to the clipboard"),
 	  G_CALLBACK (xviewer_window_cmd_copy_image) },
-	{ "ViewZoomIn", "zoom-in", N_("_Zoom In"), "<control>plus",
+	{ "ViewZoomIn", "zoom-in-symbolic", N_("_Zoom In"), "<control>plus",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
-	{ "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus",
+	{ "ViewZoomOut", "zoom-out-symbolic", N_("Zoom _Out"), "<control>minus",
 	  N_("Shrink the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_out) },
-	{ "ViewZoomNormal", "zoom-original", N_("_Normal Size"), "<control>0",
+	{ "ViewZoomNormal", "zoom-original-symbolic", N_("_Normal Size"), "<control>0",
 	  N_("Show the image at its normal size"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_normal) },
-	{ "ViewReload", "view-refresh", N_("_Reload"), "R",
+	{ "ViewReload", "view-refresh-symbolic", N_("_Reload"), "R",
 	  N_("Reload the image"),
 	  G_CALLBACK (xviewer_window_cmd_reload) },
-	{ "ControlEqual", "zoom-in", N_("_Zoom In"), "<control>equal",
+	{ "ControlEqual", "zoom-in-symbolic", N_("_Zoom In"), "<control>equal",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
-	{ "ControlKpAdd", "zoom-in", N_("_Zoom In"), "<control>KP_Add",
+	{ "ControlKpAdd", "zoom-in-symbolic", N_("_Zoom In"), "<control>KP_Add",
 	  N_("Shrink the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_in) },
-	{ "ControlKpSub", "zoom-in", N_("Zoom _Out"), "<control>KP_Subtract",
+	{ "ControlKpSub", "zoom-in-symbolic", N_("Zoom _Out"), "<control>KP_Subtract",
 	  N_("Shrink the image"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_out) },
 	{ "Delete", NULL, N_("Move to _Trash"), "Delete",
@@ -4206,28 +4207,28 @@ static const GtkActionEntry action_entries_image[] = {
 };
 
 static const GtkToggleActionEntry toggle_entries_image[] = {
-	{ "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "F11",
+	{ "ViewFullscreen", "view-fullscreen-symbolic", N_("_Fullscreen"), "F11",
 	  N_("Show the current image in fullscreen mode"),
 	  G_CALLBACK (xviewer_window_cmd_fullscreen), FALSE },
-	{ "PauseSlideshow", "media-playback-pause", N_("Pause Slideshow"),
+	{ "PauseSlideshow", "media-playback-pause-symbolic", N_("Pause Slideshow"),
 	  NULL, N_("Pause or resume the slideshow"),
 	  G_CALLBACK (xviewer_window_cmd_pause_slideshow), FALSE },
-	{ "ViewZoomFit", "zoom-fit-best", N_("_Best Fit"), "F",
+	{ "ViewZoomFit", "zoom-fit-best-symbolic", N_("_Best Fit"), "F",
 	  N_("Fit the image to the window"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_fit) },
 };
 
 static const GtkActionEntry action_entries_gallery[] = {
-	{ "GoPrevious", "go-previous", N_("_Previous Image"), "Left",
+	{ "GoPrevious", "go-previous-symbolic", N_("_Previous Image"), "Left",
 	  N_("Go to the previous image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_prev) },
-	{ "GoNext", "go-next", N_("_Next Image"), "Right",
+	{ "GoNext", "go-next-symbolic", N_("_Next Image"), "Right",
 	  N_("Go to the next image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_next) },
-	{ "GoFirst", "go-first", N_("_First Image"), "<Alt>Home",
+	{ "GoFirst", "go-first-symbolic", N_("_First Image"), "<Alt>Home",
 	  N_("Go to the first image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_first) },
-	{ "GoLast", "go-last", N_("_Last Image"), "<Alt>End",
+	{ "GoLast", "go-last-symbolic", N_("_Last Image"), "<Alt>End",
 	  N_("Go to the last image of the gallery"),
 	  G_CALLBACK (xviewer_window_cmd_go_last) },
 	{ "GoRandom", NULL, N_("_Random Image"), "<control>M",
@@ -4461,17 +4462,17 @@ set_action_properties (XviewerWindow      *window,
 	rtl = gtk_widget_get_direction (GTK_WIDGET (window)) == GTK_TEXT_DIR_RTL;
 
 	action = gtk_action_group_get_action (gallery_group, "GoPrevious");
-	g_object_set (action, "icon-name", rtl ? "go-previous-rtl" : "go-previous", NULL);
+	g_object_set (action, "icon-name", rtl ? "go-previous-symbolic-rtl" : "go-previous-symbolic", NULL);
 	g_object_set (action, "short_label", _("Previous"), NULL);
 	g_object_set (action, "is-important", TRUE, NULL);
 
 	action = gtk_action_group_get_action (gallery_group, "GoNext");
-	g_object_set (action, "icon-name", rtl ? "go-next-rtl" : "go-next", NULL);
+	g_object_set (action, "icon-name", rtl ? "go-next-symbolic-rtl" : "go-next-symbolic", NULL);
 	g_object_set (action, "short_label", _("Next"), NULL);
 	g_object_set (action, "is-important", TRUE, NULL);
 
 	action = gtk_action_group_get_action (image_group, "EditUndo");
-	g_object_set (action, "icon-name", rtl ? "edit-undo-rtl" : "edit-undo", NULL);
+	g_object_set (action, "icon-name", rtl ? "edit-undo-symbolic-rtl" : "edit-undo-symbolic", NULL);
 
 	action = gtk_action_group_get_action (image_group, "EditRotate90");
 	g_object_set (action, "short_label", _("Right"), NULL);
@@ -4513,26 +4514,6 @@ set_action_properties (XviewerWindow      *window,
 
 	action = gtk_action_group_get_action (image_group, "EditMoveToTrash");
 	g_object_set (action, "short_label", C_("action (to trash)", "Trash"), NULL);
-
-	/* Only allow editing the toolbar if it is visible */
-	action = gtk_action_group_get_action (window_group, "ViewToolbar");
-	if (G_LIKELY (action != NULL)) {
-		GtkAction *tbedit_action;
-
-		tbedit_action = gtk_action_group_get_action (window_group,
-		                                             "EditToolbar");
-
-		if (G_LIKELY (tbedit_action != NULL)) {
-			// The binding should free itself when the actions do
-			g_object_bind_property (action, "active",
-			                        tbedit_action, "sensitive",
-			                        G_BINDING_SYNC_CREATE);
-		} else {
-			g_warn_if_reached ();
-		}
-	} else {
-		g_warn_if_reached ();
-	}
 }
 
 static gint
@@ -4796,16 +4777,7 @@ get_appinfo_for_editor (XviewerWindow *window)
 	/* We want this function to always return the same thing, not
 	 * just for performance reasons, but because if someone edits
 	 * GConf while xviewer is running, the application could get into an
-	 * inconsistent state.  If the editor exists once, it gets added
-	 * to the "available" list of the EggToolbarsModel (for which
-	 * there is no API to remove it).  If later the editor no longer
-	 * existed when constructing a new window, we'd be unable to
-	 * construct a GtkAction for the editor for that window, causing
-	 * assertion failures when viewing the "Edit Toolbars" dialog
-	 * (item is available, but can't find the GtkAction for it).
-	 *
-	 * By ensuring we keep the GAppInfo around, we avoid the
-	 * possibility of that situation occurring.
+	 * inconsistent state.
 	 */
 	static GDesktopAppInfo *app_info = NULL;
 	static gboolean initialised;
@@ -4825,72 +4797,6 @@ get_appinfo_for_editor (XviewerWindow *window)
 	}
 
 	return (GAppInfo *) app_info;
-}
-
-static void
-xviewer_window_open_editor (GtkAction *action,
-                        XviewerWindow *window)
-{
-	GdkAppLaunchContext *context;
-	GAppInfo *app_info;
-	GList files;
-
-	app_info = get_appinfo_for_editor (window);
-
-	if (app_info == NULL)
-		return;
-
-	context = gdk_display_get_app_launch_context (
-	  gtk_widget_get_display (GTK_WIDGET (window)));
-	gdk_app_launch_context_set_screen (context,
-	  gtk_widget_get_screen (GTK_WIDGET (window)));
-	gdk_app_launch_context_set_icon (context,
-	  g_app_info_get_icon (app_info));
-	gdk_app_launch_context_set_timestamp (context,
-	  gtk_get_current_event_time ());
-
-	{
-		GList f = { xviewer_image_get_file (window->priv->image) };
-		files = f;
-	}
-
-	g_app_info_launch (app_info, &files,
-                           G_APP_LAUNCH_CONTEXT (context), NULL);
-
-	g_object_unref (files.data);
-	g_object_unref (context);
-}
-
-static void
-xviewer_window_add_open_editor_action (XviewerWindow *window)
-{
-        EggToolbarsModel *model;
-	GAppInfo *app_info;
-	GtkAction *action;
-        gchar *tooltip;
-
-	app_info = get_appinfo_for_editor (window);
-
-	if (app_info == NULL)
-		return;
-
-	model = xviewer_application_get_toolbars_model (XVIEWER_APP);
-	egg_toolbars_model_set_name_flags (model, "OpenEditor",
-	                                   EGG_TB_MODEL_NAME_KNOWN);
-
-	tooltip = g_strdup_printf (_("Edit the current image using %s"),
-	                           g_app_info_get_name (app_info));
-	action = gtk_action_new ("OpenEditor", _("Edit Image"), tooltip, NULL);
-	gtk_action_set_gicon (action, g_app_info_get_icon (app_info));
-	gtk_action_set_is_important (action, TRUE);
-
-	g_signal_connect (action, "activate",
-	                  G_CALLBACK (xviewer_window_open_editor), window);
-
-	gtk_action_group_add_action (window->priv->actions_image, action);
-
-	g_object_unref (action);
-	g_free (tooltip);
 }
 
 static void
@@ -4927,8 +4833,12 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	GtkWidget *view_popup;
 	GtkWidget *hpaned;
 	GtkWidget *menuitem;
+	GtkWidget *tool_item;
+	GtkWidget *tool_box;
+	GtkWidget *box;
+	GtkWidget *separator;
+	GtkWidget *button;
 	GtkAction *action = NULL;
-
 
 	g_return_if_fail (XVIEWER_IS_WINDOW (window));
 
@@ -4964,8 +4874,6 @@ xviewer_window_construct_ui (XviewerWindow *window)
 				      action_entries_image,
 				      G_N_ELEMENTS (action_entries_image),
 				      window);
-
-	xviewer_window_add_open_editor_action (window);
 
 	gtk_action_group_add_toggle_actions (priv->actions_image,
 					     toggle_entries_image,
@@ -5031,27 +4939,73 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	gtk_image_menu_item_set_always_show_image (
 			GTK_IMAGE_MENU_ITEM (menuitem), TRUE);
 
-	priv->toolbar = GTK_WIDGET
-		(g_object_new (EGG_TYPE_EDITABLE_TOOLBAR,
-			       "ui-manager", priv->ui_mgr,
-			       "model", xviewer_application_get_toolbars_model (XVIEWER_APP),
-			       NULL));
+	priv->toolbar_revealer = gtk_revealer_new ();
+	gtk_revealer_set_transition_duration (GTK_REVEALER (priv->toolbar_revealer), 175);
+
+	priv->toolbar = gtk_toolbar_new ();
 	gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (priv->toolbar)),
-				     GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+				     			 GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+	gtk_container_add (GTK_CONTAINER (priv->toolbar_revealer), priv->toolbar);
 
-	egg_editable_toolbar_show (EGG_EDITABLE_TOOLBAR (priv->toolbar),
-				   "Toolbar");
+	tool_item = gtk_tool_item_new ();
+	gtk_tool_item_set_expand (GTK_TOOL_ITEM (tool_item), TRUE);
+	gtk_toolbar_insert (GTK_TOOLBAR (priv->toolbar), GTK_TOOL_ITEM (tool_item), 0);
 
-	gtk_box_pack_start (GTK_BOX (priv->box),
-			    priv->toolbar,
-			    FALSE,
-			    FALSE,
-			    0);
+	tool_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+	gtk_container_add (GTK_CONTAINER (tool_item), tool_box);
 
-	gtk_widget_show (priv->toolbar);
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (tool_box), box, FALSE, FALSE, 0);
 
-	gtk_window_add_accel_group (GTK_WINDOW (window),
-				    gtk_ui_manager_get_accel_group (priv->ui_mgr));
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoPrevious");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "GoNext");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (tool_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (tool_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomNormal");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomFit");
+	button = create_toolbar_toggle_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (tool_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (tool_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "EditRotate270");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "EditRotate90");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	gtk_box_pack_start (GTK_BOX (priv->box), priv->toolbar_revealer, FALSE, FALSE, 0);
+
+	gtk_widget_show_all (priv->toolbar_revealer);
+
+	gtk_window_add_accel_group (GTK_WINDOW (window), gtk_ui_manager_get_accel_group (priv->ui_mgr));
 
 	priv->actions_recent = gtk_action_group_new ("RecentFilesActions");
 	gtk_action_group_set_translation_domain (priv->actions_recent,

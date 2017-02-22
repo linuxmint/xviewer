@@ -297,16 +297,13 @@ static void migrate_config_file (const gchar *old_filename, const gchar* new_fil
 
 static void migrate_config_folder (const gchar* new_dir)
 {
-	gchar* old_dir = g_build_filename (g_get_home_dir (), ".gnome2",
-					   "xviewer", NULL);
+	gchar* old_dir = g_build_filename (g_get_home_dir (), ".gnome2", "xviewer", NULL);
 	gchar* old_filename = NULL;
 	gchar* new_filename = NULL;
 	GError *error = NULL;
 	GFile *dir_file = NULL;
 	gsize i;
-	static const gchar *old_files[] = { "xviewer-print-settings.ini",
-					    "xviewer_toolbar.xml",
-					    NULL };
+	static const gchar *old_files[] = { "xviewer-print-settings.ini", NULL };
 
 	if(!g_file_test (old_dir, G_FILE_TEST_IS_DIR)) {
 		/* Nothing to migrate */
