@@ -820,11 +820,20 @@ on_button_pressed (GtkWidget *widget, GdkEventButton *event, XviewerWindow *wind
 		XviewerWindowMode mode = xviewer_window_get_mode (window);
 		GdkEvent *ev = (GdkEvent*) event;
 
-		if (mode == XVIEWER_WINDOW_MODE_SLIDESHOW ||
-		    mode == XVIEWER_WINDOW_MODE_FULLSCREEN)
+		if (!gtk_widget_get_realized (GTK_WIDGET (window->priv->view))) {
+			return FALSE;
+		}
+
+		if (!xviewer_scroll_view_event_is_over_image (window->priv->view, ev)) {
+			return FALSE;
+		}
+
+		if (mode == XVIEWER_WINDOW_MODE_SLIDESHOW || mode == XVIEWER_WINDOW_MODE_FULLSCREEN) {
 			xviewer_window_set_mode (window, XVIEWER_WINDOW_MODE_NORMAL);
-		else if (mode == XVIEWER_WINDOW_MODE_NORMAL)
+		}
+		else if (mode == XVIEWER_WINDOW_MODE_NORMAL) {
 			xviewer_window_set_mode (window, XVIEWER_WINDOW_MODE_FULLSCREEN);
+		}
 
 		return TRUE;
 	}
