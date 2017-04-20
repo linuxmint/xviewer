@@ -2149,7 +2149,7 @@ update_ui_visibility (XviewerWindow *window)
 
 	visible = g_settings_get_boolean (priv->ui_settings,
 					  XVIEWER_CONF_UI_SIDEBAR);
-	visible = visible && !fullscreen_mode;
+    visible = visible && priv->mode != XVIEWER_WINDOW_MODE_SLIDESHOW;
 	action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/SidebarToggle");
 	g_assert (action != NULL);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
