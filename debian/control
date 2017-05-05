@@ -43,7 +43,7 @@ Depends: ${shlibs:Depends},
          xapps-common (>= 1.0.0)
 Recommends: librsvg2-common,
             yelp
-Description: Image viewer program
+Description: Image viewer
  xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
  images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
@@ -54,7 +54,7 @@ Architecture: any
 Priority: extra
 Depends: xviewer (= ${binary:Version}),
          ${misc:Depends}
-Description: Image viewer program - debugging symbols
+Description: Image viewer - debugging symbols
  xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
  images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
