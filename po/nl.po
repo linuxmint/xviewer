@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-05 08:35+0100\n"
-"PO-Revision-Date: 2017-04-27 09:30+0000\n"
+"PO-Revision-Date: 2017-06-25 17:18+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-05-23 10:34+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-06-28 07:53+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "Language: nl\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -341,11 +341,11 @@ msgstr "Afbeeldingsverbeteringen"
 
 #: ../data/xviewer-preferences-dialog.ui.h:5
 msgid "Smooth images when zoomed _out"
-msgstr "Afbeeldingen gladmaken bij _uitzoomen"
+msgstr "Afbeeldingen gladmaken bij ver_kleinen"
 
 #: ../data/xviewer-preferences-dialog.ui.h:6
 msgid "Smooth images when zoomed _in"
-msgstr "Afbeeldingen gladmaken bij _inzoomen"
+msgstr "Afbeeldingen gladmaken bij ver_groten"
 
 #: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
@@ -388,10 +388,9 @@ msgstr "Als _achtergrond"
 msgid "Image View"
 msgstr "Afbeeldingweergave"
 
-# Vrij vertaald (Wouter Bolsterlee)
 #: ../data/xviewer-preferences-dialog.ui.h:17
 msgid "Image Zoom"
-msgstr "Zoomen"
+msgstr "Vergrotingsfactor voor afbeeldingen"
 
 #: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
@@ -416,7 +415,7 @@ msgstr "Diavoorstelling"
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Plugins"
-msgstr "Invoegtoepassingen"
+msgstr "Invoegsels"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:1
 msgid "Automatic orientation"
@@ -448,8 +447,8 @@ msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"Bepaalt of de afbeelding geïnterpoleerd moet worden bij uitzoomen. Dit zorgt "
-"voor een betere beeldkwaliteit maar is wat langzamer."
+"Bepaalt of de afbeelding geïnterpoleerd moet worden bij verkleinen. Dit "
+"zorgt voor een betere beeldkwaliteit maar is wat langzamer."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
@@ -460,7 +459,7 @@ msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
 msgstr ""
-"Bepaalt of de afbeelding geëxtrapoleerd moet worden bij inzoomen. Dit zorgt "
+"Bepaalt of de afbeelding geëxtrapoleerd moet worden bij vergroten. Dit zorgt "
 "voor een wazige beeldkwaliteit en is wat langzamer."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
@@ -479,15 +478,16 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
-msgstr "Zoomfactor muiswiel"
+msgstr "Vergrotingsfactor muiswiel"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
-msgstr "Bepaalt of het schuifwiel gebruikt wordt voor zoomen."
+msgstr ""
+"Bepaalt of het muiswiel gebruikt wordt voor bepalen van de vergrotingsfactor."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
-msgstr "Zoomfactor"
+msgstr "Vergrotingsfactor"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:15
 #, no-c-format
@@ -497,10 +497,11 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
-"De vermenigvuldigingsfactor die gebruikt moet worden bij zoomen met een "
-"muiswiel. Deze waarde bepaalt hoeveel er gezoomd wordt als het muiswiel "
-"wordt bewogen. Voorbeeld: de waarde 0.05 zorgt ervoor dat er 5% in- of "
-"uitgezoomd wordt en de waarde 1.00 zorgt voor een 100% toe- of afname."
+"De vermenigvuldigingsfactor die gebruikt moet worden bij "
+"vergroten/verkleinen met een muiswiel. Deze waarde bepaalt hoeveel er "
+"vergroot wordt als het muiswiel wordt bewogen. Voorbeeld: de waarde 0.05 "
+"zorgt ervoor dat er 5% vergroot of verkleind wordt en de waarde 1.00 zorgt "
+"voor een 100% toe- of afname."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
@@ -539,7 +540,7 @@ msgstr "Bepaalt of de reeks van afbeeldingen eindeloos herhaald wordt."
 #: ../data/org.x.viewer.gschema.xml.in.h:23
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
-msgstr "Starten met zoomfactor van meer dan 100% toestaan"
+msgstr "Starten met vergrotingsfactor van meer dan 100% toestaan"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid ""
@@ -673,7 +674,7 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
-msgstr "Actieve invoegtoepassingen"
+msgstr "Actieve invoegsels"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
@@ -681,8 +682,8 @@ msgid ""
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
 "given plugin."
 msgstr ""
-"Lijst van actieve invoegtoepassingen. Deze lijst bevat niet de locatie van "
-"de invoegtoepassing; zie hiervoor het '.xviewer-plugin'-bestand."
+"Lijst van actieve invoegsels. Deze lijst bevat niet de locatie van het "
+"invoegsel; zie daarvoor het '.xviewer-plugin'-bestand."
 
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
@@ -1462,7 +1463,7 @@ msgstr "Het geselecteerde element naar het klembord kopiëren"
 #: ../src/xviewer-window.c:4183 ../src/xviewer-window.c:4195
 #: ../src/xviewer-window.c:4198
 msgid "_Zoom In"
-msgstr "_Inzoomen"
+msgstr "Ver_groten"
 
 #: ../src/xviewer-window.c:4184 ../src/xviewer-window.c:4196
 msgid "Enlarge the image"
@@ -1470,7 +1471,7 @@ msgstr "De afbeelding vergroten"
 
 #: ../src/xviewer-window.c:4186 ../src/xviewer-window.c:4201
 msgid "Zoom _Out"
-msgstr "_Uitzoomen"
+msgstr "Ver_kleinen"
 
 #: ../src/xviewer-window.c:4187 ../src/xviewer-window.c:4199
 #: ../src/xviewer-window.c:4202
