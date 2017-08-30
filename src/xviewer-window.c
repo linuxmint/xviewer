@@ -4103,7 +4103,7 @@ xviewer_window_cmd_go_random (GtkAction *action, gpointer user_data)
 }
 
 static const GtkActionEntry action_entries_window[] = {
-	{ "Image", NULL, N_("_Image") },
+	{ "Image", NULL, N_("_File") },
 	{ "Edit",  NULL, N_("_Edit") },
 	{ "View",  NULL, N_("_View") },
 	{ "Go",    NULL, N_("_Go") },
