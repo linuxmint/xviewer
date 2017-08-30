@@ -1723,18 +1723,26 @@ static void
 xviewer_window_update_pause_slideshow_action (XviewerWindow *window)
 {
 	GtkAction *action;
+    gboolean active;
 
-	action = gtk_action_group_get_action (window->priv->actions_image,
-					      "PauseSlideshow");
+    active = (window->priv->mode == XVIEWER_WINDOW_MODE_SLIDESHOW);
 
-	g_signal_handlers_block_by_func
-		(action, G_CALLBACK (xviewer_window_cmd_pause_slideshow), window);
+	action = gtk_action_group_get_action (window->priv->actions_image, "PauseSlideshow");
 
-	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-				      window->priv->mode != XVIEWER_WINDOW_MODE_SLIDESHOW);
+	g_signal_handlers_block_by_func (action, G_CALLBACK (xviewer_window_cmd_pause_slideshow), window);
 
-	g_signal_handlers_unblock_by_func
-		(action, G_CALLBACK (xviewer_window_cmd_pause_slideshow), window);
+	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), active);
+
+    if (active)
+    {
+        gtk_action_set_icon_name (action, "media-playback-pause-symbolic");
+    }
+    else
+    {
+        gtk_action_set_icon_name (action, "media-playback-start-symbolic");
+    }
+
+	g_signal_handlers_unblock_by_func (action, G_CALLBACK (xviewer_window_cmd_pause_slideshow), window);
 }
 
 static gboolean
