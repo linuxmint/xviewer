@@ -2033,11 +2033,11 @@ xviewer_window_create_fullscreen_popup (XviewerWindow *window)
 	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start (GTK_BOX (main_box), box, FALSE, FALSE, 0);
 
-	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
 	button = create_toolbar_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
-	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
 	button = create_toolbar_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
@@ -4483,11 +4483,11 @@ set_action_properties (XviewerWindow      *window,
 	action = gtk_action_group_get_action (image_group, "ImageOpenContainingFolder");
 	g_object_set (action, "short_label", _("Show Folder"), NULL);
 
-	action = gtk_action_group_get_action (image_group, "ViewZoomIn");
-	g_object_set (action, "short_label", _("In"), NULL);
-
 	action = gtk_action_group_get_action (image_group, "ViewZoomOut");
 	g_object_set (action, "short_label", _("Out"), NULL);
+
+	action = gtk_action_group_get_action (image_group, "ViewZoomIn");
+	g_object_set (action, "short_label", _("In"), NULL);
 
 	action = gtk_action_group_get_action (image_group, "ViewZoomNormal");
 	g_object_set (action, "short_label", _("Normal"), NULL);
@@ -4971,11 +4971,11 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start (GTK_BOX (tool_box), box, FALSE, FALSE, 0);
 
-	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
 	button = create_toolbar_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
-	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomOut");
+	action = gtk_action_group_get_action (priv->actions_image, "ViewZoomIn");
 	button = create_toolbar_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
