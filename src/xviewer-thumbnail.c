@@ -122,10 +122,16 @@ create_thumbnail_from_pixbuf (XviewerThumbData *data,
 	height = gdk_pixbuf_get_height (pixbuf);
 
 	perc = CLAMP (128.0/(MAX (width, height)), 0, 1);
-
+#if GDK_PIXBUF_CHECK_VERSION(2,36,5)
+	thumb = gdk_pixbuf_scale_simple (pixbuf,
+							   width*perc,
+							   height*perc,
+							   GDK_INTERP_HYPER);
+#else
 	thumb = gnome_desktop_thumbnail_scale_down_pixbuf (pixbuf,
 							   width*perc,
 							   height*perc);
+#endif
 
 	return thumb;
 }
@@ -444,7 +450,11 @@ xviewer_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
 		width  = MAX (width  * factor, 1);
 		height = MAX (height * factor, 1);
 
+#if GDK_PIXBUF_CHECK_VERSION(2,36,5)
+		result_pixbuf = gdk_pixbuf_scale_simple (thumbnail, width, height, GDK_INTERP_HYPER);
+#else
 		result_pixbuf = gnome_desktop_thumbnail_scale_down_pixbuf (thumbnail, width, height);
+#endif
 
 		return result_pixbuf;
 	}
