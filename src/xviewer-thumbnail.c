@@ -31,7 +31,7 @@
 #ifndef GNOME_DESKTOP_USE_UNSTABLE_API
 #define GNOME_DESKTOP_USE_UNSTABLE_API
 #endif
-#include <libgnome-desktop/gnome-desktop-thumbnail.h>
+#include <libcinnamon-desktop/gnome-desktop-thumbnail.h>
 
 #include "xviewer-thumbnail.h"
 #include "xviewer-list-store.h"

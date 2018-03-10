@@ -87,12 +87,11 @@ YELP_HELP_INIT
 
 GTK_REQUIRED=3.10.0
 GLIB_REQUIRED=2.38.0
-GNOME_DESKTOP_REQUIRED=2.91.2
+CINNAMON_DESKTOP_REQUIRED=3.2.0
 GDKPIXBUF_REQUIRED=2.4.0
 GTK_PRINT_REQUIRED=3.5.4
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
-DESKTOP_SCHEMAS_REQUIRED=2.91.92
 LIBPEAS_REQUIRED=0.7.4
 LIBPEAS_GTK_REQUIRED=0.7.4
 
@@ -100,11 +99,10 @@ XVIEWER_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
              gio-2.0 >= $GLIB_REQUIRED \
              gio-unix-2.0 >= $GLIB_REQUIRED \
-             gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED \
+             cinnamon-desktop >= $CINNAMON_DESKTOP_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
              gtk+-unix-print-3.0 >= $GTK_PRINT_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED \
-             gsettings-desktop-schemas >= $DESKTOP_SCHEMAS_REQUIRED \
              libpeas-1.0 >= $LIBPEAS_REQUIRED \
              libpeas-gtk-1.0 >= $LIBPEAS_GTK_REQUIRED"
 
