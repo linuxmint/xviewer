@@ -28,6 +28,12 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include "xviewer-image.h"
 
+#define GDK_PIXBUF_CHECK_VERSION(major, minor, micro) \
+	(GDK_PIXBUF_MAJOR > (major) || \
+	(GDK_PIXBUF_MAJOR == (major) && GDK_PIXBUF_MINOR > (minor)) || \
+	(GDK_PIXBUF_MAJOR == (major) && GDK_PIXBUF_MINOR == (minor) && \
+	 GDK_PIXBUF_MICRO >= (micro)))
+
 G_BEGIN_DECLS
 
 void          xviewer_thumbnail_init        (void);
