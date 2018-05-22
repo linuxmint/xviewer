@@ -15,15 +15,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2017-11-14 10:24+0000\n"
+"PO-Revision-Date: 2018-05-09 20:49+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <Unknown>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:44+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:23+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 "Language: ca\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -128,7 +128,7 @@ msgstr "Visualitzador d'imatges"
 
 #: ../data/xviewer.desktop.in.in.h:2
 msgid "Browse and rotate images"
-msgstr "Navegueu per imatges i gireu-les"
+msgstr "Navegueu per les imatges i gireu-les"
 
 #. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
 #: ../data/xviewer.desktop.in.in.h:4
@@ -609,9 +609,9 @@ msgid ""
 "trash. It will still ask if any of the files cannot be moved to the trash "
 "and would be deleted instead."
 msgstr ""
-"Si està activat, l'Xviewer no sol·licitarà confirmació en enviar imatges a "
-"la paperera. Tot i això, la demanarà si algun dels fitxers no es pot enviar "
-"a la paperera i s'ha de suprimir."
+"Si està activat, Xviewer no demanarà cap confirmació quan mogui les imatges "
+"a la paperera. Tot i això, encara la demanarà si algun dels fitxers no es "
+"pot moure a la paperera i s'ha de suprimir en lloc seu."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
@@ -663,9 +663,9 @@ msgid ""
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
 "to the empty string to disable this feature."
 msgstr ""
-"El nom canònic de l'aplicació (incloent el «.desktop») que es farà servir "
-"per editar les imatges (quan es faci clic al botó de la barra d'eines «Edita "
-"la imatge»). Deixeu-ho en blanc per inhabilitar aquesta funció."
+"El nom del fitxer d'escriptori (incloent-hi l'extensió «.desktop») de "
+"l'aplicació per utilitzar per a l'edició de les imatges (en fer clic al botó "
+"«Edita la imatge»). Establiu la cadena buida per inhabilitar aquesta funció."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid "Active plugins"
@@ -839,7 +839,7 @@ msgstr "%.1f (lent)"
 #: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
-msgstr "%.1f (film de 35mm)"
+msgstr "%.1f (film de 35 mm)"
 
 #: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
@@ -1511,11 +1511,11 @@ msgstr "Ajusta la imatge a la finestra"
 
 #: ../src/xviewer-window.c:4230 ../src/xviewer-window.c:4245
 msgid "_Previous Image"
-msgstr "Imatge _prèvia"
+msgstr "Imatge _anterior"
 
 #: ../src/xviewer-window.c:4231
 msgid "Go to the previous image of the gallery"
-msgstr "Vés a la imatge prèvia de la col·lecció"
+msgstr "Vés a la imatge anterior de la col·lecció"
 
 #: ../src/xviewer-window.c:4233
 msgid "_Next Image"
@@ -1560,7 +1560,7 @@ msgstr "Inicia una projecció de les imatges"
 
 #: ../src/xviewer-window.c:4474
 msgid "Previous"
-msgstr "Prèvia"
+msgstr "Anterior"
 
 #: ../src/xviewer-window.c:4479
 msgid "Next"
