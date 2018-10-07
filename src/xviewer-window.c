@@ -4119,7 +4119,7 @@ static const GtkActionEntry action_entries_window[] = {
 	{ "EditPreferences", "preferences-system-symbolic", N_("Prefere_nces"), NULL,
 	  N_("Preferences for Image Viewer"),
 	  G_CALLBACK (xviewer_window_cmd_preferences) },
-	{ "HelpManual", "help-browser-symbolic", N_("_Contents"), "F1",
+	{ "HelpManual", "help-contents-symbolic", N_("_Contents"), "F1",
 	  N_("Help on this application"),
 	  G_CALLBACK (xviewer_window_cmd_help) },
 	{ "HelpAbout", "help-about-symbolic", N_("_About"), NULL,
