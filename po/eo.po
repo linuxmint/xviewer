@@ -22,15 +22,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2016-02-05 08:12+0000\n"
-"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"PO-Revision-Date: 2018-12-05 11:58+0000\n"
+"Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-11-27 17:51+0000\n"
-"X-Generator: Launchpad (build 18826)\n"
+"X-Launchpad-Export-Date: 2018-12-11 11:59+0000\n"
+"X-Generator: Launchpad (build 18837)\n"
 "X-Project-Style: gnome\n"
 "Language: eo\n"
 "X-DamnedLies-Scope: partial\n"
@@ -117,6 +117,8 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
+"Xviewer estas bildomontrilo, kiu subtenas multajn dosierformojn. Ĝi uzeblas  "
+"por montri bildojn unuope aŭ ene de aro."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -124,6 +126,10 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
+"Xviewer ankaŭ permesas montri la bildojn laŭ reĝimo de tutekrana "
+"bildoprezento aŭ fiksi iun bildon kiel la ekranfono. Ĝi legas la kameraajn "
+"etikedojn por aŭtomate turni la bildojn en la ĝusta horizontala aŭ vertikala "
+"orientiĝo."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 msgid "Image Viewer"
@@ -280,7 +286,7 @@ msgstr "_Nuligi"
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
 #: ../src/xviewer-close-confirmation-dialog.c:184
 msgid "Save _As"
-msgstr ""
+msgstr "_Konservi kiel"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
@@ -294,11 +300,11 @@ msgstr "<b>%n:</b> nombrilo"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "_Filename format:"
-msgstr ""
+msgstr "_Dosiernoma formo:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "_Destination folder:"
-msgstr ""
+msgstr "_Celdosierujo:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
@@ -310,11 +316,11 @@ msgstr "Dosiervojaj specifoj"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 msgid "_Start counter at:"
-msgstr ""
+msgstr "_Eknombri je:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "_Replace spaces with underscores"
-msgstr ""
+msgstr "_Anstataŭigi spacojn per substrekoj"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
@@ -677,7 +683,7 @@ msgstr ""
 
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
-msgstr "Fermi _sen konseri"
+msgstr "Fermi _sen konservi"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
 #: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4146
@@ -874,7 +880,7 @@ msgstr[1] "bilderoj"
 
 #: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
 msgid "_Open"
-msgstr ""
+msgstr "_Malfermi"
 
 #: ../src/xviewer-file-chooser.c:459
 msgid "Open Image"
@@ -1196,16 +1202,16 @@ msgstr[1] ""
 
 #: ../src/xviewer-window.c:3424 ../src/xviewer-window.c:3702
 msgid "_Delete"
-msgstr ""
+msgstr "_Forigi"
 
 #: ../src/xviewer-window.c:3427 ../src/xviewer-window.c:3704
 msgid "_Yes"
-msgstr ""
+msgstr "_Jes"
 
 #. add 'dont ask again' button
 #: ../src/xviewer-window.c:3431 ../src/xviewer-window.c:3696
 msgid "Do _not ask again during this session"
-msgstr ""
+msgstr "_Ne demandi denove dum ĉi tiu seanco"
 
 #: ../src/xviewer-window.c:3475
 #, c-format
@@ -1280,7 +1286,7 @@ msgstr "Ne eblis atingi rubujon."
 
 #: ../src/xviewer-window.c:4106
 msgid "_File"
-msgstr ""
+msgstr "_Dosiero"
 
 #: ../src/xviewer-window.c:4107
 msgid "_Edit"
@@ -1471,7 +1477,7 @@ msgstr "Montri la bildon en normala amplekso"
 
 #: ../src/xviewer-window.c:4201
 msgid "Reload the image"
-msgstr ""
+msgstr "Reŝargi la bildon"
 
 #: ../src/xviewer-window.c:4218
 msgid "_Fullscreen"
