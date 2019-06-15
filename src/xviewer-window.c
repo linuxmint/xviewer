@@ -5469,6 +5469,13 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 			xviewer_window_run_fullscreen (XVIEWER_WINDOW (widget), !slideshow);
 		}
 		break;
+	case GDK_KEY_Q:
+	case GDK_KEY_q:
+		if ((event->state & modifiers) == GDK_CONTROL_MASK) {
+			xviewer_window_cmd_close_window (NULL, XVIEWER_WINDOW (widget));
+			return TRUE;
+		}
+		break;
 	case GDK_KEY_Escape:
 		if (XVIEWER_WINDOW (widget)->priv->mode == XVIEWER_WINDOW_MODE_FULLSCREEN) {
 			xviewer_window_stop_fullscreen (XVIEWER_WINDOW (widget), FALSE);
