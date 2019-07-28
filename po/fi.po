@@ -19,15 +19,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2017-10-01 12:38+0000\n"
+"PO-Revision-Date: 2019-07-14 18:53+0000\n"
 "Last-Translator: Ari Ervasti <ari.ervasti87@gmail.com>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2019-06-23 10:21+0000\n"
-"X-Generator: Launchpad (build 18989)\n"
+"X-Launchpad-Export-Date: 2019-07-28 09:35+0000\n"
+"X-Generator: Launchpad (build 19010)\n"
 "Language: fi\n"
 "X-POT-Import-Date: 2012-03-05 15:05:46+0000\n"
 
@@ -113,8 +113,8 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
-"Xviever on kuvankatselin, joka tukee useita formaatteja. Sitä voidaan "
-"käyttää yksittäisten kuvien tai kuvakokoelmien katseluun."
+"Xviever on kuvakatselin, joka tukee useita formaatteja. Sitä voidaan käyttää "
+"yksittäisten kuvien tai kuvakokoelmien katseluun."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -461,7 +461,7 @@ msgid ""
 "quality and is somewhat slower than non-extrapolated images."
 msgstr ""
 "Määrittää, ekstrapoloidaanko kuvaa lähennettäessä vai ei. Tämä johtaa "
-"parempaan kuvanlaatuun, mutta on jonkinverran hitaampi kuin ei-"
+"parempaan kuvanlaatuun, mutta on jonkin verran hitaampi kuin ei-"
 "ekstrapoloidut kuvat."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
@@ -798,19 +798,19 @@ msgstr "Arvo"
 
 #: ../src/xviewer-metadata-details.c:436
 msgid "North"
-msgstr "pohjoista"
+msgstr "Pohjoinen"
 
 #: ../src/xviewer-metadata-details.c:439
 msgid "East"
-msgstr "itäistä"
+msgstr "Itä"
 
 #: ../src/xviewer-metadata-details.c:442
 msgid "West"
-msgstr "läntistä"
+msgstr "Länsi"
 
 #: ../src/xviewer-metadata-details.c:445
 msgid "South"
-msgstr "eteläistä"
+msgstr "Etelä"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/xviewer-exif-util.c:120 ../src/xviewer-exif-util.c:160
@@ -851,7 +851,7 @@ msgstr ""
 
 #: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
-msgstr "Kokeile jotain muuta tiedostopäätettä, kuten .png tai .jpg"
+msgstr "Kokeile jotain muuta tiedostopäätettä, kuten .png tai .jpg."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
 #: ../src/xviewer-file-chooser.c:160
@@ -1039,11 +1039,11 @@ msgstr "_Yksikkö:"
 
 #: ../src/xviewer-print-image-setup.c:993
 msgid "Millimeters"
-msgstr "millimetri"
+msgstr "Millimetriä"
 
 #: ../src/xviewer-print-image-setup.c:995
 msgid "Inches"
-msgstr "tuuma"
+msgstr "Tuumaa"
 
 #: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
@@ -1079,7 +1079,7 @@ msgstr "Vähintään kaksi tiedostonimeä ovat samat."
 
 #: ../src/xviewer-util.c:68
 msgid "Could not display help for Image Viewer"
-msgstr "Kuvakatselimen ohjetta ei voitu näyttää."
+msgstr "Kuvakatselimen ohjetta ei voitu näyttää"
 
 #: ../src/xviewer-util.c:116
 msgid " (invalid Unicode)"
@@ -1117,7 +1117,7 @@ msgstr ""
 #: ../src/xviewer-window.c:1051
 #, c-format
 msgid "Use \"%s\" to open the selected image"
-msgstr "Avaa valittu kuva komennolla ”%s”"
+msgstr "Käytä ”%s” avataksesi valitun kuvan"
 
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
@@ -1630,4 +1630,6 @@ msgstr "[TIEDOSTO…]"
 #: ../src/main.c:112
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "Näet kaikki komentorivivalitsimet komennolla ”%s --help”"
+msgstr ""
+"Suorita '%s --help' nähdäksesi täyden listan saatavilla olevista "
+"komentorivivalitsimista."
