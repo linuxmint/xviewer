@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2017-09-06 17:32+0000\n"
+"PO-Revision-Date: 2019-09-17 06:53+0000\n"
 "Last-Translator: karm <melo@carmu.com>\n"
 "Language-Team: Interlingua <ia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2019-07-28 09:35+0000\n"
-"X-Generator: Launchpad (build 19010)\n"
+"X-Launchpad-Export-Date: 2019-11-26 16:00+0000\n"
+"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -319,7 +319,7 @@ msgstr "A:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:17
 msgid "File Name Preview"
-msgstr "Vista preliminar del nomine de fila"
+msgstr "Vista preliminar del nomine de file"
 
 #: ../data/xviewer-preferences-dialog.ui.h:1
 msgid "Preferences"
@@ -372,7 +372,7 @@ msgstr "Color pro le areas transparente"
 
 #: ../data/xviewer-preferences-dialog.ui.h:15
 msgid "As _background"
-msgstr "As fundo (_background)"
+msgstr "Como fundo (_background)"
 
 #: ../data/xviewer-preferences-dialog.ui.h:16
 msgid "Image View"
@@ -384,7 +384,7 @@ msgstr "Zoom del imagine"
 
 #: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
-msgstr "E_xpandes le imagines a plenar le schermo="
+msgstr "E_xpander le imagines pro plenar le schermo="
 
 #: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
@@ -938,7 +938,7 @@ msgstr "Dimension del file:"
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
 #: ../src/xviewer-window.c:4156
 msgid "Show the folder which contains this file in the file manager"
-msgstr "Monstrar le plica que contine iste file in le gerente de file"
+msgstr "Monstrar le plica que contine iste file in le gestor de file"
 
 #: ../src/xviewer-preferences-dialog.c:125
 #, c-format
@@ -1060,7 +1060,7 @@ msgstr "%d / %d"
 
 #: ../src/xviewer-thumb-view.c:544
 msgid "Taken on"
-msgstr "Prendite su"
+msgstr "Prendite"
 
 #: ../src/xviewer-uri-converter.c:982
 #, c-format
@@ -1159,7 +1159,7 @@ msgstr ""
 
 #: ../src/xviewer-window.c:3321
 msgid "Saving image locally…"
-msgstr "Salvatage local del imagine"
+msgstr "Salvatage local del imagine..."
 
 #: ../src/xviewer-window.c:3399
 #, c-format
@@ -1168,8 +1168,7 @@ msgid ""
 "\"%s\" permanently?"
 msgstr ""
 "Desira tu vermente remover\n"
-"permanentemente\n"
-"\"%s\"?"
+"permanentemente \"%s\"?"
 
 #: ../src/xviewer-window.c:3402
 #, c-format
@@ -1181,10 +1180,10 @@ msgid_plural ""
 "the %d selected images permanently?"
 msgstr[0] ""
 "Desira tu vermente remover\n"
-"permanentemente le imagine eligite?"
+"permanentemente le imagine seligite?"
 msgstr[1] ""
 "Desira tu vermente remover\n"
-"permanentemente le imagines eligite?"
+"permanentemente le imagines seligite?"
 
 #: ../src/xviewer-window.c:3424 ../src/xviewer-window.c:3702
 msgid "_Delete"
@@ -1235,8 +1234,8 @@ msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr ""
-"Un immunditia pro \"%s\" non pote ser trovate. Desira tu remover iste "
-"imagine permanentemente?"
+"Un cassa de immunditia pro \"%s\" non pote esser trovate. Desira tu remover "
+"iste imagine permanentemente?"
 
 #: ../src/xviewer-window.c:3672
 #, c-format
@@ -1247,10 +1246,10 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Desira tu vermente displaciar\n"
+"Desira tu vermente mover\n"
 "le imagine eligite al immunditia?"
 msgstr[1] ""
-"Desira tu vermente displaciar\n"
+"Desira tu vermente mover\n"
 "le imagines eligite al immunditia?"
 
 #: ../src/xviewer-window.c:3677
@@ -1258,7 +1257,7 @@ msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
-"Alcun del imagines seligite non pote ser movite al immunditia e essera "
+"Alcun del imagines seligite non pote esser movite al immunditia e essera "
 "removite permanentemente. Desira tu vermente proceder?"
 
 #: ../src/xviewer-window.c:3694 ../src/xviewer-window.c:4182
@@ -1269,7 +1268,7 @@ msgstr "Mover al immunditia (_Trash)"
 #: ../src/xviewer-window.c:3741 ../src/xviewer-window.c:3755
 #, c-format
 msgid "Couldn't access trash."
-msgstr "Impossibile acceder al immunditia."
+msgstr "Impossibile acceder al cassa de immunditia."
 
 #: ../src/xviewer-window.c:4106
 msgid "_File"
@@ -1474,7 +1473,7 @@ msgstr "Plen schermo (_Full)"
 
 #: ../src/xviewer-window.c:4219
 msgid "Show the current image in fullscreen mode"
-msgstr "Monstrar le actual imagine in modo de schermo plen"
+msgstr "Monstrar le actual imagine in modo plen schermo"
 
 #: ../src/xviewer-window.c:4221
 msgid "Pause Slideshow"
@@ -1599,7 +1598,7 @@ msgstr "Aperir in modo presentation de imagines"
 
 #: ../src/main.c:66
 msgid "Start a new instance instead of reusing an existing one"
-msgstr "Aperir un nove instantia in vice de re-usar lo existente"
+msgstr "Aperir un nove instantia in vice de re-usar illo existente"
 
 #: ../src/main.c:67
 msgid ""

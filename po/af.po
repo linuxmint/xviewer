@@ -10,15 +10,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2016-02-05 08:12+0000\n"
-"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"PO-Revision-Date: 2019-11-06 16:51+0000\n"
+"Last-Translator: Johannes <Unknown>\n"
 "Language-Team: translate-discuss-af@lists.sourceforge.net\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2019-07-28 09:35+0000\n"
-"X-Generator: Launchpad (build 19010)\n"
+"X-Launchpad-Export-Date: 2019-11-26 16:00+0000\n"
+"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 "X-Project-Style: gnome\n"
 "Language: af\n"
 "X-DamnedLies-Scope: partial\n"
@@ -105,6 +105,8 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
+"Xviewer is 'n beeldbekyker wat heelwat formate ondersteun. Dit kan gebruik "
+"word om enkelbeelde of beelde in 'n versameling te besigtig."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -112,6 +114,9 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
+"Xviewer kan ook beelde vertoon by wyse van 'n skyfievertoning in volskerm "
+"modus of 'n beeld stel as werkskermagtergrond. Dit lees die kamera-inligting "
+"om beelde outomaties te roteer na die korrekte oriëntasie."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 msgid "Image Viewer"
@@ -124,7 +129,7 @@ msgstr "Bekyk en roteer beelde"
 #. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
 #: ../data/xviewer.desktop.in.in.h:4
 msgid "Picture;Slideshow;Graphics;"
-msgstr ""
+msgstr "Foto;Beeld;Skyfievertoning;Grafika;"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5096
 msgid "Image Properties"
@@ -170,7 +175,7 @@ msgstr "Grepe:"
 #: ../data/xviewer-image-properties-dialog.ui.h:10
 #: ../src/xviewer-metadata-sidebar.c:507
 msgid "Folder:"
-msgstr ""
+msgstr "Omslag:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:11
 #: ../src/xviewer-metadata-sidebar.c:495
@@ -269,7 +274,7 @@ msgstr "_Kanselleer"
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:3
 #: ../src/xviewer-close-confirmation-dialog.c:184
 msgid "Save _As"
-msgstr ""
+msgstr "Stoor _As"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:5
 #, no-c-format
@@ -283,11 +288,11 @@ msgstr "<b>%n:</b> teller"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "_Filename format:"
-msgstr ""
+msgstr "_Lêernaamformaat:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "_Destination folder:"
-msgstr ""
+msgstr "_Bestemmingsomslag"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
@@ -299,11 +304,11 @@ msgstr "Lêerpadspesifikasies"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 msgid "_Start counter at:"
-msgstr ""
+msgstr "Begin _teller by:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "_Replace spaces with underscores"
-msgstr ""
+msgstr "_Vervang spasies met onderstrepe"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
@@ -332,11 +337,11 @@ msgstr "Beeldverbeterings"
 
 #: ../data/xviewer-preferences-dialog.ui.h:5
 msgid "Smooth images when zoomed _out"
-msgstr ""
+msgstr "Maak beelde glad wanneer _uitgezoem"
 
 #: ../data/xviewer-preferences-dialog.ui.h:6
 msgid "Smooth images when zoomed _in"
-msgstr ""
+msgstr "Maak beelde glad wanneer _ingezoem"
 
 #: ../data/xviewer-preferences-dialog.ui.h:7
 msgid "_Automatic orientation"
@@ -394,7 +399,7 @@ msgstr "Volgorde"
 #. I18N: This sentence will be displayed above a horizonzal scale to select a number of seconds in xviewer
 #: ../data/xviewer-preferences-dialog.ui.h:21
 msgid "_Time between images:"
-msgstr ""
+msgstr "T_yd tussen beelde:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:22
 msgid "_Loop sequence"
@@ -424,6 +429,9 @@ msgid ""
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
+"Die kleur wat gebruik word om die area agter 'n beeld te vul. Indien die "
+"'use-background-color' sleutel nie gestel is nie, sal die kleur deur die "
+"aktiewe GTK+ tema bepaal word."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:5
 msgid "Interpolate Image"
@@ -466,11 +474,11 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:11
 msgid "Scroll wheel zoom"
-msgstr ""
+msgstr "Muiswiel zoemfaktor"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:12
 msgid "Whether the scroll wheel should be used for zooming."
-msgstr ""
+msgstr "Of die muiswiel gebruik moet word om te zoem"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:13
 msgid "Zoom multiplier"
@@ -484,6 +492,10 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
+"Die vermenigvuldigingsfaktor wat gebruik word vir zoem met die muiswiel. "
+"Hierdie waarde bepaal hoeveel gezoem word as die muiswiel een keer beweeg "
+"word. Byvoorbeeld: die waarde 0.05 sorg daarvoor dat daar 5% in- of "
+"uitgezoem word en die waarde 1.00 sorg vir 'n 100% toe- of afname."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Transparency color"
@@ -507,6 +519,9 @@ msgid ""
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
+"As hierdie aktief is, word die kleur wat deur die agtergrondkleurtoets "
+"gestel is gebruik om die gebied agter die beeld te vul. As dit nie ingestel "
+"is nie, sal die huidige GTK+ tema die vulkleur bepaal."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Loop through the image sequence"
@@ -580,7 +595,7 @@ msgstr "Sluit die hoofvenster sonder om te vra om veranderinge te stoor."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Trash images without asking"
-msgstr ""
+msgstr "Stuur beelde na asblik sonder om te bevestig"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid ""
@@ -588,12 +603,17 @@ msgid ""
 "trash. It will still ask if any of the files cannot be moved to the trash "
 "and would be deleted instead."
 msgstr ""
+"Indien aktief sal Xviewer nie bevestiging vra om beelde na die asblik te "
+"stuur nie. Indien beelde nie na die asblik gestuur kan word nie, sal dit "
+"steeds bevestiging vra voordat die beelde verwyder word."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
 msgstr ""
+"Of die lêer-selekteerder die gebruiker se beelde-omslag moet wys indien daar "
+"geen beelde gelaai is nie."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid ""
@@ -602,11 +622,15 @@ msgid ""
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
 msgstr ""
+"Indien geaktiveer en daar is geen beeld in die aktiewe venster nie, sal die "
+"lêer-selekteerder die gebruiker se beeldomslag toon. Indien gedeaktiveer of "
+"die beeldomslag bestaan nie, word die huidige werkomslag getoon."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
+"Bepaal of die metadatalys in die eienskappedialoog 'n eie bladsy moet hê."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""

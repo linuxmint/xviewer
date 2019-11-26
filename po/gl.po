@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: xviewer-master-po-gl-66757\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2016-02-05 08:12+0000\n"
-"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"PO-Revision-Date: 2019-10-19 08:39+0000\n"
+"Last-Translator: Alberto Gómez <Unknown>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2019-07-28 09:35+0000\n"
-"X-Generator: Launchpad (build 19010)\n"
+"X-Launchpad-Export-Date: 2019-11-26 16:00+0000\n"
+"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 "Language: gl\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -37,7 +37,7 @@ msgstr ""
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:992
 #, c-format
 msgid "Show “_%s”"
-msgstr "Mostrar «_%s»"
+msgstr "Amosar “_%s”"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1485
 msgid "_Move on Toolbar"
@@ -49,15 +49,15 @@ msgstr "Mover o elemento seleccionado na barra de ferramentas"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1487
 msgid "_Remove from Toolbar"
-msgstr "_Retirar da barra de ferramentas"
+msgstr "_Quitar da barra de ferramentas"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1488
 msgid "Remove the selected item from the toolbar"
-msgstr "Retirar o elemento seleccionado da barra de ferramentas"
+msgstr "Quitar o elemento seleccionado da barra de ferramentas"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1489
 msgid "_Delete Toolbar"
-msgstr "E_liminar a barra de ferramentas"
+msgstr "_Eliminar a barra de ferramentas"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1490
 msgid "Remove the selected toolbar"
@@ -69,15 +69,15 @@ msgstr "Separador"
 
 #: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4108
 msgid "_View"
-msgstr "_Ver"
+msgstr "Ver"
 
 #: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4131
 msgid "_Toolbar"
-msgstr "Barra de _ferramentas"
+msgstr "_Barra de ferramentas"
 
 #: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4134
 msgid "_Statusbar"
-msgstr "Barra de e_stado"
+msgstr "_Barra de estado"
 
 #: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4137
 msgid "_Image Gallery"
@@ -94,11 +94,11 @@ msgstr "Prefere_ncias"
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
 #: ../src/xviewer-window.c:4111
 msgid "_Help"
-msgstr "A_xuda"
+msgstr "/_Axuda"
 
 #: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4125
 msgid "_About"
-msgstr "_Sobre"
+msgstr "_Acerca"
 
 #: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
@@ -109,6 +109,8 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
+"Xviewer é un visor de imaxes que soporta moitos formatos. Pode amosar imaxes "
+"individuais ou imaxes nunha colección."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -116,10 +118,10 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
-"O Ollo de GNOME tamén lle permite ver imaxes en modo diaporama a pantalla "
-"completa ou estabelecer unha imaxe como fondo de pantalla. Pode ler as "
-"etiquetas das cámaras para rotar automaticamente as súas imaxes en "
-"orientación vertical ou apaisada."
+"Xviewer tamén permite ver as imaxes en modo diaporama a pantalla completa ou "
+"estabelecer unha imaxe como fondo de pantalla. Pode ler as etiquetas das "
+"cámaras para rotar automaticamente as súas imaxes a orientación vertical ou "
+"apaisada segundo corresponda."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 msgid "Image Viewer"
@@ -149,12 +151,12 @@ msgstr "_Seguinte"
 #: ../data/xviewer-image-properties-dialog.ui.h:4
 #: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4116
 msgid "_Close"
-msgstr "Pe_char"
+msgstr "_Pechar"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:5
 #: ../src/xviewer-metadata-sidebar.c:497
 msgid "Name:"
-msgstr "Name:"
+msgstr "Nome:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:6
 #: ../src/xviewer-metadata-sidebar.c:499
@@ -169,7 +171,7 @@ msgstr "Altura:"
 #: ../data/xviewer-image-properties-dialog.ui.h:8
 #: ../src/xviewer-metadata-sidebar.c:503
 msgid "Type:"
-msgstr "Superior:"
+msgstr "Tipo:"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:9
 msgid "Bytes:"
@@ -1286,7 +1288,7 @@ msgstr "Non foi posíbel acceder ao lixo."
 
 #: ../src/xviewer-window.c:4106
 msgid "_File"
-msgstr ""
+msgstr "_Arquivo"
 
 #: ../src/xviewer-window.c:4107
 msgid "_Edit"
@@ -1477,7 +1479,7 @@ msgstr "Mostrar a imaxe no seu tamaño normal"
 
 #: ../src/xviewer-window.c:4201
 msgid "Reload the image"
-msgstr ""
+msgstr "Cargar de novo a imaxe"
 
 #: ../src/xviewer-window.c:4218
 msgid "_Fullscreen"
@@ -1631,5 +1633,5 @@ msgstr "[FICHEIRO…]"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Execute '%s --help' para ver unha lista completa das opcións da liña de "
+"Executar «%s --help» para ver unha lista completa das opcións de liña de "
 "ordes dispoñíbeis."
