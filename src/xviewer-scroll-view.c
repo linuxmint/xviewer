@@ -43,6 +43,10 @@
  */
 #define IMAGE_VIEW_ZOOM_MULTIPLIER 1.05
 
+/* from cairo-utils.h */
+#define _CAIRO_MAX_IMAGE_SIZE 32767
+
+
 #if 0
 /* Progressive loading state */
 typedef enum {
@@ -222,11 +226,27 @@ create_surface_from_pixbuf (XviewerScrollView *view, GdkPixbuf *pixbuf)
 {
 	cairo_surface_t *surface;
 	cairo_t *cr;
+	gint w, h;
+	gboolean size_invalid = FALSE;
+
+	w = gdk_pixbuf_get_width (pixbuf);
+	h = gdk_pixbuf_get_height (pixbuf);
+
+    if (w > _CAIRO_MAX_IMAGE_SIZE || h > _CAIRO_MAX_IMAGE_SIZE) {
+        g_warning ("Image dimensions too large to process");
+        w = 50;
+        h = 50;
+        size_invalid = TRUE;
+    }
 
 	surface = gdk_window_create_similar_surface (gtk_widget_get_window (view->priv->display),
 						     CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA,
-						     gdk_pixbuf_get_width (pixbuf),
-						     gdk_pixbuf_get_height (pixbuf));
+						     w, h);
+
+	if (size_invalid) {
+		return surface;
+	}
+
 	cr = cairo_create (surface);
 	gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 	cairo_paint (cr);
