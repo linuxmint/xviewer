@@ -1390,7 +1390,6 @@ set_zoom (XviewerScrollView *view, double zoom,
 	double x_rel, y_rel;
 	int zoomed_img_height;
 	int zoomed_img_width;
-	int image_to_window_edge;
 
 	priv = view->priv;
 
@@ -1413,6 +1412,8 @@ set_zoom (XviewerScrollView *view, double zoom,
 
 	/* compute new xofs/yofs values */
 	if (have_anchor) {
+		int image_to_window_edge;
+
 		compute_scaled_size (view, priv->zoom, &zoomed_img_width, &zoomed_img_height);
 
 		if (zoomed_img_height >= allocation.height)
@@ -1544,7 +1545,6 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	int zoomed_img_height;
 	int zoomed_img_width;
 	GtkRequisition req;
-	double zoom_for_fit;
 	gboolean scroll_bar_visible;
 
 
@@ -1638,6 +1638,9 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 
 	case GDK_KEY_1:
 		if (!(event->state & modifiers)) {
+
+			double zoom_for_fit;
+
 			compute_scaled_size (view, priv->zoom, &zoomed_img_width, &zoomed_img_height);
 
 			scroll_bar_visible = FALSE;
