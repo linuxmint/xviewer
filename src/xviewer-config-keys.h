@@ -31,6 +31,7 @@
 #define XVIEWER_CONF_PLUGINS			XVIEWER_CONF_DOMAIN".plugins"
 #define XVIEWER_CONF_UI				XVIEWER_CONF_DOMAIN".ui"
 #define XVIEWER_CONF_VIEW				XVIEWER_CONF_DOMAIN".view"
+#define XVIEWER_CONF_WINDOW				XVIEWER_CONF_DOMAIN".window"
 
 #define XVIEWER_CONF_DESKTOP_LOCKDOWN_SCHEMA	"org.gnome.desktop.lockdown"
 #define XVIEWER_CONF_DESKTOP_CAN_PRINT		"disable-printing"
@@ -46,6 +47,8 @@
 #define XVIEWER_CONF_VIEW_TRANSPARENCY		"transparency"
 #define XVIEWER_CONF_VIEW_TRANS_COLOR		"trans-color"
 #define XVIEWER_CONF_VIEW_USE_BG_COLOR		"use-background-color"
+
+#define XVIEWER_CONF_WINDOW_MAXIMIZED			"maximized"
 
 #define XVIEWER_CONF_FULLSCREEN_LOOP		"loop"
 #define XVIEWER_CONF_FULLSCREEN_UPSCALE		"upscale"

@@ -121,6 +121,7 @@ struct _XviewerWindowPrivate {
 	GSettings           *ui_settings;
 	GSettings           *view_settings;
 	GSettings           *lockdown_settings;
+    GSettings			*window_settings;
 
         XviewerListStore        *store;
         XviewerImage            *image;
@@ -945,6 +946,11 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 			 (GSourceFunc) add_file_to_recent_files,
 			 file,
 			 (GDestroyNotify) g_object_unref);
+
+	if (g_settings_get_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED))
+        gtk_window_maximize (GTK_WINDOW (window));
+    else
+        gtk_window_unmaximize (GTK_WINDOW (window));
 
 	xviewer_window_update_openwith_menu (window, image);
 }
@@ -2347,6 +2353,11 @@ xviewer_window_stop_fullscreen (XviewerWindow *window, gboolean slideshow)
 	} else {
 		xviewer_window_update_fullscreen_action (window);
 	}
+
+	if (g_settings_get_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED))
+        gtk_window_maximize (GTK_WINDOW (window));
+    else
+        gtk_window_unmaximize (GTK_WINDOW (window));
 
 	xviewer_scroll_view_show_cursor (XVIEWER_SCROLL_VIEW (priv->view));
 
@@ -5188,6 +5199,29 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	xviewer_window_set_drag_dest (window);
 }
 
+static gboolean
+xviewer_window_window_state_event (GtkWidget           *widget,
+                               GdkEventWindowState *event,
+								gpointer user_data)
+{
+    XviewerWindow *window = XVIEWER_WINDOW (widget);
+	gboolean maximized;
+
+
+	if (((event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED) != 0) &&
+			((event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) == 0))
+	{
+		if ((event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0)
+			maximized = TRUE;
+		else
+			maximized = FALSE;
+
+		g_settings_set_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED, maximized);
+	}
+
+    return FALSE;
+}
+
 static void
 xviewer_window_init (XviewerWindow *window)
 {
@@ -5206,6 +5240,7 @@ xviewer_window_init (XviewerWindow *window)
 	priv->ui_settings = g_settings_new (XVIEWER_CONF_UI);
 	priv->view_settings = g_settings_new (XVIEWER_CONF_VIEW);
 	priv->lockdown_settings = g_settings_new (XVIEWER_CONF_DESKTOP_LOCKDOWN_SCHEMA);
+	priv->window_settings = g_settings_new (XVIEWER_CONF_WINDOW);
 
 	window->priv->store = NULL;
 	window->priv->image = NULL;
@@ -5258,6 +5293,9 @@ xviewer_window_init (XviewerWindow *window)
 
 	g_signal_connect (GTK_WINDOW (window), "button-press-event",
 			  G_CALLBACK (on_button_pressed), window);
+
+	g_signal_connect(GTK_WINDOW (window), "window-state-event", 
+    		  G_CALLBACK (xviewer_window_window_state_event), window);
 }
 
 static void
@@ -5390,6 +5428,11 @@ xviewer_window_dispose (GObject *object)
 	if (priv->page_setup != NULL) {
 		g_object_unref (priv->page_setup);
 		priv->page_setup = NULL;
+	}
+
+	if (priv->window_settings) {
+		g_object_unref (priv->window_settings);
+		priv->window_settings = NULL;
 	}
 
 	if (priv->thumbview)
