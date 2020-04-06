@@ -1545,8 +1545,6 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	int zoomed_img_height;
 	int zoomed_img_width;
 	GtkRequisition req;
-	gboolean scroll_bar_visible;
-
 
 	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
@@ -1637,59 +1635,52 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 		break;
 
 	case GDK_KEY_1:
-		if (!(event->state & modifiers)) {
+        if (!(event->state & modifiers)) {
 
-			double zoom_for_fit;
+            double zoom_for_fit;
 
-			compute_scaled_size (view, priv->zoom, &zoomed_img_width, &zoomed_img_height);
+            compute_scaled_size (view, priv->zoom, &zoomed_img_width, &zoomed_img_height);
 
-			scroll_bar_visible = FALSE;
+            if (gtk_widget_get_visible (GTK_WIDGET (priv->hbar))) {
+                gtk_widget_get_preferred_size (priv->hbar, &req, NULL);
+                allocation.height += req.height;
+            }
 
-			if (gtk_widget_get_visible (GTK_WIDGET (priv->hbar))) {
-				scroll_bar_visible = TRUE;
-				gtk_widget_get_preferred_size (priv->hbar, &req, NULL);
-				allocation.height += req.height;
-			}
+            if (gtk_widget_get_visible (GTK_WIDGET (priv->vbar))) {
+                gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
+                allocation.width += req.width;
+            }
 
-			if (gtk_widget_get_visible (GTK_WIDGET (priv->vbar))) {
-				scroll_bar_visible = TRUE;
-				gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
-				allocation.width += req.width;
-			}
+            zoom_for_fit = zoom_fit_scale (allocation.width, allocation.height,
+                    gdk_pixbuf_get_width (priv->pixbuf),
+                    gdk_pixbuf_get_height (priv->pixbuf),
+                    priv->upscale);
 
-			zoom_for_fit = zoom_fit_scale (allocation.width, allocation.height,
-				   gdk_pixbuf_get_width (priv->pixbuf),
-				   gdk_pixbuf_get_height (priv->pixbuf),
-				   priv->upscale);
+            if (zoom_for_fit > MAX_ZOOM_FACTOR)
+                zoom_for_fit = MAX_ZOOM_FACTOR;
+            else if (zoom_for_fit < MIN_ZOOM_FACTOR)
+                zoom_for_fit = MIN_ZOOM_FACTOR;
 
-			if (zoom_for_fit > MAX_ZOOM_FACTOR)
-				zoom_for_fit = MAX_ZOOM_FACTOR;
-			else if (zoom_for_fit < MIN_ZOOM_FACTOR)
-				zoom_for_fit = MIN_ZOOM_FACTOR;
+            if ((gdk_pixbuf_get_width (priv->pixbuf) <= allocation.width)
+                && (gdk_pixbuf_get_height (priv->pixbuf) <= allocation.height))
+                    zoom = 1.0;                         // the 1:1 image fits in the window
+            else
+            {
+                if (DOUBLE_EQUAL(priv->zoom, 1.0))
+                    zoom = zoom_for_fit;
+                else
+                    zoom = 1.0;
+            }
 
-			if ((gdk_pixbuf_get_width (priv->pixbuf) <= allocation.width)
-				&& (gdk_pixbuf_get_height (priv->pixbuf) <= allocation.height))
-				zoom = 1.0;						// the 1:1 image fits in the window
-			else
-			{
-				if (scroll_bar_visible)					// if at least one scroll-bar is visible need to zoom to fit
-					zoom = zoom_for_fit;
-				else
-				{
-					if (priv->zoom < zoom_for_fit)
-						zoom = zoom_for_fit;			// the image has been zoomed out small enough that if
-														//  fits the window with a gap on at least one side
-					else
-						zoom = 1.0;
-				}
-			}
+                            // the following two statements are necessary otherwise if the 1:1 image
+                            //  is dragged the alignment is thrown out
+            if (DOUBLE_EQUAL(priv->zoom,zoom_for_fit))
+            {
+                priv->xofs = 0;
+                priv->yofs = 0;
+            }
 
-														// the following two statements are necessary otherwise if the 1:1 image
-														//  is dragged the alignment is thrown out
-			priv->xofs = 0;
-			priv->yofs = 0;
-
-			do_zoom = TRUE;
+            do_zoom = TRUE;
 		}
 		break;
 
