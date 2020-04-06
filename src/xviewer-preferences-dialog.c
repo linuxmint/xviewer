@@ -37,8 +37,7 @@
 #include <gtk/gtk.h>
 #include <libpeas-gtk/peas-gtk-plugin-manager.h>
 
-#define GCONF_OBJECT_KEY	"GCONF_KEY"
-#define GCONF_OBJECT_VALUE	"GCONF_VALUE"
+#define RADIO_VALUE "radio-value"
 
 struct _XviewerPreferencesDialogPrivate {
 	GSettings     *view_settings;
@@ -111,7 +110,7 @@ pd_transp_radio_toggle_cb (GtkWidget *widget, gpointer data)
 	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)))
 	    return;
 
-	value = g_object_get_data (G_OBJECT (widget), GCONF_OBJECT_VALUE);
+	value = g_object_get_data (G_OBJECT (widget), RADIO_VALUE);
 
 	g_settings_set_enum (G_SETTINGS (data), XVIEWER_CONF_VIEW_TRANSPARENCY,
 			     GPOINTER_TO_INT (value));
@@ -232,7 +231,7 @@ xviewer_preferences_dialog_init (XviewerPreferencesDialog *pref_dlg)
 				      pd_rgba_to_string_mapping,
 				      NULL, NULL);
 	g_object_set_data (G_OBJECT (priv->color_radio),
-			   GCONF_OBJECT_VALUE,
+			   RADIO_VALUE,
 			   GINT_TO_POINTER (XVIEWER_TRANSP_COLOR));
 
 	g_signal_connect (G_OBJECT (priv->color_radio),
@@ -241,7 +240,7 @@ xviewer_preferences_dialog_init (XviewerPreferencesDialog *pref_dlg)
 			  priv->view_settings);
 
 	g_object_set_data (G_OBJECT (priv->checkpattern_radio),
-			   GCONF_OBJECT_VALUE,
+			   RADIO_VALUE,
 			   GINT_TO_POINTER (XVIEWER_TRANSP_CHECKED));
 
 	g_signal_connect (G_OBJECT (priv->checkpattern_radio),
@@ -250,7 +249,7 @@ xviewer_preferences_dialog_init (XviewerPreferencesDialog *pref_dlg)
 			  priv->view_settings);
 
 	g_object_set_data (G_OBJECT (priv->background_radio),
-			   GCONF_OBJECT_VALUE,
+			   RADIO_VALUE,
 			   GINT_TO_POINTER (XVIEWER_TRANSP_BACKGROUND));
 
 	g_signal_connect (G_OBJECT (priv->background_radio),

@@ -33,7 +33,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/missing \
 	$(srcdir)/mkinstalldirs
 
-@BEHAVE_INSTALLED_TESTS_RULE@
 INSTALLED_TESTS=about undo sidepane fullscreen wallpaper screenshot_tour1 screenshot_tour2
 INSTALLED_TESTS_TYPE=session-exclusive
 

@@ -4796,11 +4796,6 @@ xviewer_window_finish_saving (XviewerWindow *window)
 static GAppInfo *
 get_appinfo_for_editor (XviewerWindow *window)
 {
-	/* We want this function to always return the same thing, not
-	 * just for performance reasons, but because if someone edits
-	 * GConf while xviewer is running, the application could get into an
-	 * inconsistent state.
-	 */
 	static GDesktopAppInfo *app_info = NULL;
 	static gboolean initialised;
 

@@ -20,9 +20,6 @@ gsettings_SCHEMAS = org.x.viewer.gschema.xml
 
 @GSETTINGS_RULES@
 
-gsettingsconvertdir = $(datadir)/GConf/gsettings
-gsettingsconvert_DATA = xviewer.convert
-
 uidir = $(pkgdatadir)
 ui_DATA = \
 	xviewer-toolbar.xml
