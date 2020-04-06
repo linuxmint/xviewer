@@ -4,6 +4,7 @@
     <child name="fullscreen" schema="org.x.viewer.fullscreen"/>
     <child name="ui" schema="org.x.viewer.ui"/>
     <child name="plugins" schema="org.x.viewer.plugins"/>
+    <child name="window" schema="org.x.viewer.window"/>
   </schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.x.viewer.view" path="/org/x/viewer/view/">
     <key name="autorotate" type="b">
@@ -128,6 +129,13 @@
       <default>[]</default>
       <summary>Active plugins</summary>
       <description>List of active plugins. It doesn't contain the "Location" of the active plugins.  See the .xviewer-plugin file for obtaining the "Location" of a given plugin.</description>
+    </key>
+  </schema>
+  <schema id="org.x.viewer.window" path="/org/x/viewer/window/">
+    <key name="maximized" type="b">
+      <default>true</default>
+      <summary>Maximize Image</summary>
+      <description>Whether or not the image should be maximized.</description>
     </key>
   </schema>
 </schemalist>
