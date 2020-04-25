@@ -5018,6 +5018,20 @@ xviewer_window_construct_ui (XviewerWindow *window)
 	button = create_toolbar_button (action);
 	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
 
+	separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+	gtk_box_pack_start (GTK_BOX (tool_box), separator, FALSE, FALSE, 0);
+
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_box_pack_start (GTK_BOX (tool_box), box, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_image, "ViewFullscreen");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
+	action = gtk_action_group_get_action (priv->actions_gallery, "ViewSlideshow");
+	button = create_toolbar_button (action);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 0);
+
 	gtk_box_pack_start (GTK_BOX (priv->box), priv->toolbar_revealer, FALSE, FALSE, 0);
 
 	gtk_widget_show_all (priv->toolbar_revealer);
