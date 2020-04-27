@@ -816,8 +816,9 @@ xviewer_image_set_orientation (XviewerImage *img)
 	}
 
 	if (priv->orientation > 4 &&
-	    priv->orientation < 9) {
-		gint tmp;
+        priv->orientation < 9 &&
+        priv->autorotate) {
+        gint tmp;
 
 		tmp = priv->width;
 		priv->width = priv->height;
