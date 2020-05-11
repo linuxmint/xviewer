@@ -4412,7 +4412,7 @@ static const GActionEntry window_actions[] = {
 };
 
 static const GtkToggleActionEntry toggle_entries_gallery[] = {
-	{ "ViewSlideshow", "slideshow-play", N_("S_lideshow"), "F5",
+	{ "ViewSlideshow", "xapp-diaporama-symbolic", N_("S_lideshow"), "F5",
 	  N_("Start a slideshow view of the images"),
 	  G_CALLBACK (xviewer_window_cmd_slideshow), FALSE },
 };
