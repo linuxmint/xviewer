@@ -1957,8 +1957,6 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
             guint state;
             GdkEventKey key_event;
 
-            int old_stderr, new_stderr;
-
             keyval = GDK_KEY_R;
 
             if ((event->direction == GDK_SCROLL_UP) || (event->direction == GDK_SCROLL_LEFT))
@@ -1996,6 +1994,7 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 
                                    The following code therefore temporarily suppresses stderr to avoid showing
                                    this warning when (given the Gdk implementation) it is expected - and untidy! */
+                int old_stderr, new_stderr;
 
                 fflush(stderr);
                 old_stderr = dup(2);
