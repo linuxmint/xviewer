@@ -42,6 +42,16 @@
 #define XVIEWER_CONF_VIEW_INTERPOLATE		"interpolate"
 #define XVIEWER_CONF_VIEW_EXTRAPOLATE		"extrapolate"
 #define XVIEWER_CONF_VIEW_SCROLL_WHEEL_ZOOM		"scroll-wheel-zoom"
+
+#define XVIEWER_CONF_VIEW_SCROLL_ACTION             "scroll-action"
+#define XVIEWER_CONF_VIEW_SCROLL_SHIFT_ACTION       "scroll-shift-action"
+#define XVIEWER_CONF_VIEW_SCROLL_CTRL_ACTION        "scroll-ctrl-action"
+#define XVIEWER_CONF_VIEW_SCROLL_SHIFT_CTRL_ACTION  "scroll-shift-ctrl-action"
+#define XVIEWER_CONF_VIEW_TILT_ACTION               "tilt-action"
+#define XVIEWER_CONF_VIEW_TILT_SHIFT_ACTION         "tilt-shift-action"
+#define XVIEWER_CONF_VIEW_TILT_CTRL_ACTION          "tilt-ctrl-action"
+#define XVIEWER_CONF_VIEW_TILT_SHIFT_CTRL_ACTION    "tilt-shift-ctrl-action"
+
 #define XVIEWER_CONF_VIEW_ZOOM_MULTIPLIER		"zoom-multiplier"
 #define XVIEWER_CONF_VIEW_AUTOROTATE                "autorotate"
 #define XVIEWER_CONF_VIEW_TRANSPARENCY		"transparency"

@@ -37,6 +37,54 @@
       <summary>Scroll wheel zoom</summary>
       <description>Whether the scroll wheel should be used for zooming.</description>
     </key>
+    <key name="scroll-action" type="i">
+      <default>0</default>
+      <summary>Mouse scroll wheel action</summary>
+      <description>Action for mouse scroll wheel. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="scroll-shift-action" type="i">
+      <default>2</default>
+      <summary>Mouse scroll wheel + shift action</summary>
+      <description>Action for mouse scroll wheel + shift. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="scroll-ctrl-action" type="i">
+      <default>1</default>
+      <summary>Mouse scroll wheel + ctrl action</summary>
+      <description>Action for mouse scroll wheel + ctrl. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="scroll-shift-ctrl-action" type="i">
+      <default>2</default>
+      <summary>Mouse scroll wheel + shift action</summary>
+      <description>Action for mouse scroll wheel + shift. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="tilt-action" type="i">
+      <default>0</default>
+      <summary>Mouse scroll wheel action</summary>
+      <description>Action for mouse scroll wheel. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="tilt-shift-action" type="i">
+      <default>1</default>
+      <summary>Mouse scroll wheel + shift action</summary>
+      <description>Action for mouse scroll wheel + shift. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="tilt-ctrl-action" type="i">
+      <default>2</default>
+      <summary>Mouse scroll wheel + ctrl action</summary>
+      <description>Action for mouse scroll wheel + ctrl. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
+    <key name="tilt-shift-ctrl-action" type="i">
+      <default>1</default>
+      <summary>Mouse scroll wheel + shift action</summary>
+      <description>Action for mouse scroll wheel + shift. Values are 0 = zoom
+          1 = Vertical pan, 2 = horizontal pan, 3 = next/prev image</description>
+    </key>
     <key name="zoom-multiplier" type="d">
       <default>0.05</default>
       <summary>Zoom multiplier</summary>
