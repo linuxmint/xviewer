@@ -1996,17 +1996,17 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
                                    this warning when (given the Gdk implementation) it is expected - and untidy! */
                 int old_stderr, new_stderr;
 
-                fflush(stderr);
+                fflush (stderr);
                 old_stderr = dup(2);
-                new_stderr = open("/dev/null", O_WRONLY);
-                dup2(new_stderr, 2);
-                close(new_stderr);
+                new_stderr = open ("/dev/null", O_WRONLY);
+                dup2 (new_stderr, 2);
+                close (new_stderr);
 
-                gtk_main_do_event((GdkEvent *)&key_event);
+                gtk_main_do_event ((GdkEvent *)&key_event);
 
-                fflush(stderr);             /* restore normal stderr output */
-                dup2(old_stderr, 2);
-                close(old_stderr);
+                fflush (stderr);             /* restore normal stderr output */
+                dup2 (old_stderr, 2);
+                close (old_stderr);
 
                 mouse_wheel_time = key_event.time;
             }
