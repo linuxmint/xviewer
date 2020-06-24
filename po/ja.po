@@ -17,16 +17,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2018-02-20 14:35+0000\n"
-"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
+"POT-Creation-Date: 2020-04-06 17:15-0400\n"
+"PO-Revision-Date: 2020-06-22 06:36+0000\n"
+"Last-Translator: vega m57 <Unknown>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2020-05-11 11:01+0000\n"
-"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
+"X-Launchpad-Export-Date: 2020-06-24 10:09+0000\n"
+"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
 "Language: ja\n"
 
 # (pofilter) accelerators: accelerator _ is missing from translation
@@ -70,36 +70,36 @@ msgstr "選択したツールバーを削除します"
 msgid "Separator"
 msgstr "セパレーター"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4108
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4119
 msgid "_View"
 msgstr "表示(_V)"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4131
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4142
 msgid "_Toolbar"
 msgstr "ツールバー(_T)"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4134
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4145
 msgid "_Statusbar"
 msgstr "ステータスバー(_S)"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4137
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4148
 msgid "_Image Gallery"
 msgstr "画像ギャラリー(_I)"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4140
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4151
 msgid "Side _Pane"
 msgstr "サイドペイン(_P)"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4119
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4130
 msgid "Prefere_nces"
 msgstr "設定(_N)"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4111
+#: ../src/xviewer-window.c:4122
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4125
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4136
 msgid "_About"
 msgstr "このアプリケーションについて(_A)"
 
@@ -136,7 +136,7 @@ msgstr "画像の閲覧や向きの調整をします"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Picture;Slideshow;Graphics;写真;画像;スライドショー;グラフィックス;ImageViewer;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5096
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5105
 msgid "Image Properties"
 msgstr "画像のプロパティ"
 
@@ -149,7 +149,7 @@ msgid "_Next"
 msgstr "次へ(_N)"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4116
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4127
 msgid "_Close"
 msgstr "閉じる(_C)"
 
@@ -270,8 +270,8 @@ msgstr "名前を付けて保存"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3423 ../src/xviewer-window.c:3426
-#: ../src/xviewer-window.c:3691
+#: ../src/xviewer-window.c:3434 ../src/xviewer-window.c:3437
+#: ../src/xviewer-window.c:3702
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
@@ -653,12 +653,20 @@ msgstr ""
 "利用可能なプラグイン名の並びです。これらの文字列にはプラグインを格納したフォルダー名は含まれません。詳細は、指定したプラグインの \"フォルダー\" "
 "の中にある .xviewer-plugin ファイルを参照してみてください。"
 
+#: ../data/org.x.viewer.gschema.xml.in.h:45
+msgid "Maximize Image"
+msgstr "画像最大化"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:46
+msgid "Whether or not the image should be maximized."
+msgstr "画像を最大化するか否か。"
+
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "保存せずに閉じる(_W)"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4146
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4157
 msgid "_Save"
 msgstr "保存(_S)"
 
@@ -691,12 +699,12 @@ msgstr "保存したい画像を選んでください(_E):"
 msgid "If you don't save, all your changes will be lost."
 msgstr "保存をしないと変更はすべて失われます。"
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:875
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:876
+#: ../src/xviewer-window.c:4211
 msgid "_Reload"
 msgstr "再読み込み(_R)"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4152
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4163
 msgid "Save _As…"
 msgstr "名前を付けて保存(_A)…"
 
@@ -918,11 +926,11 @@ msgid "File size:"
 msgstr "ファイルサイズ:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4167
 msgid "Show the folder which contains this file in the file manager"
 msgstr "ファイルマネージャーでこのファイルを含むフォルダーを表示します"
 
-#: ../src/xviewer-preferences-dialog.c:125
+#: ../src/xviewer-preferences-dialog.c:124
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1062,20 +1070,20 @@ msgstr " (不正な Unicode です)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:540
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i x %i ピクセル %s    %i%%"
 
-#: ../src/xviewer-window.c:877 ../src/xviewer-window.c:2840
+#: ../src/xviewer-window.c:878 ../src/xviewer-window.c:2851
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "隠す(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:887
+#: ../src/xviewer-window.c:888
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1084,7 +1092,7 @@ msgstr ""
 "画像 \"%s\" が別のアプリケーションによって変更されました。\n"
 "再読み込みしますか?"
 
-#: ../src/xviewer-window.c:1051
+#: ../src/xviewer-window.c:1057
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "選択した画像を \"%s\" で開きます"
@@ -1094,22 +1102,22 @@ msgstr "選択した画像を \"%s\" で開きます"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1207
+#: ../src/xviewer-window.c:1213
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "画像 \"%s\" を保存しています (%u/%u)"
 
-#: ../src/xviewer-window.c:1602
+#: ../src/xviewer-window.c:1608
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "画像 \"%s\" を開いています"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2189
+#: ../src/xviewer-window.c:2195
 msgid "Viewing a slideshow"
 msgstr "スライドショー表示中"
 
-#: ../src/xviewer-window.c:2415
+#: ../src/xviewer-window.c:2426
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1118,19 +1126,19 @@ msgstr ""
 "ファイルを印刷する際にエラー:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2768 ../src/xviewer-window.c:2783
+#: ../src/xviewer-window.c:2779 ../src/xviewer-window.c:2794
 msgid "Error launching System Settings: "
 msgstr "「システムの設定」の起動時にエラー: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2838
+#: ../src/xviewer-window.c:2849
 msgid "_Open Background Preferences"
 msgstr "背景の設定を開く(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2854
+#: ../src/xviewer-window.c:2865
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1139,11 +1147,11 @@ msgstr ""
 "画像 \"%s\" がデスクトップの背景に設定されました。\n"
 "見た目を変更しますか?"
 
-#: ../src/xviewer-window.c:3321
+#: ../src/xviewer-window.c:3332
 msgid "Saving image locally…"
 msgstr "画像をローカルに保存中…"
 
-#: ../src/xviewer-window.c:3399
+#: ../src/xviewer-window.c:3410
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1152,7 +1160,7 @@ msgstr ""
 "本当に \"%s\" を\n"
 "完全に削除しますか?"
 
-#: ../src/xviewer-window.c:3402
+#: ../src/xviewer-window.c:3413
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1164,41 +1172,41 @@ msgstr[0] ""
 "本当に、選択した %d個の\n"
 "画像を完全に削除しますか?"
 
-#: ../src/xviewer-window.c:3424 ../src/xviewer-window.c:3702
+#: ../src/xviewer-window.c:3435 ../src/xviewer-window.c:3713
 msgid "_Delete"
 msgstr "削除(_D)"
 
-#: ../src/xviewer-window.c:3427 ../src/xviewer-window.c:3704
+#: ../src/xviewer-window.c:3438 ../src/xviewer-window.c:3715
 msgid "_Yes"
 msgstr "はい(_Y)"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3431 ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:3442 ../src/xviewer-window.c:3707
 msgid "Do _not ask again during this session"
 msgstr "このセッション中は再度確認しない(_N)"
 
-#: ../src/xviewer-window.c:3475
+#: ../src/xviewer-window.c:3486
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "画像ファイルが見つかりませんでした"
 
-#: ../src/xviewer-window.c:3491
+#: ../src/xviewer-window.c:3502
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "画像ファイルの情報が見つかりませんでした"
 
-#: ../src/xviewer-window.c:3507 ../src/xviewer-window.c:3763
+#: ../src/xviewer-window.c:3518 ../src/xviewer-window.c:3774
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ファイルを削除できませんでした"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3557 ../src/xviewer-window.c:3859
+#: ../src/xviewer-window.c:3568 ../src/xviewer-window.c:3870
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "画像 %s を削除する際にエラー"
 
-#: ../src/xviewer-window.c:3664
+#: ../src/xviewer-window.c:3675
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1207,14 +1215,14 @@ msgstr ""
 "本当に \"%s\" を\n"
 "ゴミ箱へ移動しますか?"
 
-#: ../src/xviewer-window.c:3667
+#: ../src/xviewer-window.c:3678
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "\"%s\" をゴミ箱へ移動できません。この画像を直接削除しますか?"
 
-#: ../src/xviewer-window.c:3672
+#: ../src/xviewer-window.c:3683
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1226,330 +1234,330 @@ msgstr[0] ""
 "本当に、選択した %d個の\n"
 "画像をゴミ箱へ移動しますか?"
 
-#: ../src/xviewer-window.c:3677
+#: ../src/xviewer-window.c:3688
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "選択した画像のいくつかはゴミ箱へ移動できません。直接削除しますが、続行してもよろしいですか?"
 
-#: ../src/xviewer-window.c:3694 ../src/xviewer-window.c:4182
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:3705 ../src/xviewer-window.c:4193
+#: ../src/xviewer-window.c:4226
 msgid "Move to _Trash"
 msgstr "ゴミ箱へ移動する(_T)"
 
-#: ../src/xviewer-window.c:3741 ../src/xviewer-window.c:3755
+#: ../src/xviewer-window.c:3752 ../src/xviewer-window.c:3766
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ゴミ箱にアクセスできませんでした。"
 
-#: ../src/xviewer-window.c:4106
+#: ../src/xviewer-window.c:4117
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4118
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/xviewer-window.c:4109
+#: ../src/xviewer-window.c:4120
 msgid "_Go"
 msgstr "ジャンプ(_G)"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4121
 msgid "_Tools"
 msgstr "ツール(_T)"
 
-#: ../src/xviewer-window.c:4113
+#: ../src/xviewer-window.c:4124
 msgid "_Open…"
 msgstr "開く(_O)…"
 
-#: ../src/xviewer-window.c:4114
+#: ../src/xviewer-window.c:4125
 msgid "Open a file"
 msgstr "ファイルを開きます"
 
-#: ../src/xviewer-window.c:4117
+#: ../src/xviewer-window.c:4128
 msgid "Close window"
 msgstr "このウィンドウを閉じます"
 
-#: ../src/xviewer-window.c:4120
+#: ../src/xviewer-window.c:4131
 msgid "Preferences for Image Viewer"
 msgstr "画像ビューアーの設定"
 
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4133
 msgid "_Contents"
 msgstr "目次(_C)"
 
-#: ../src/xviewer-window.c:4123
+#: ../src/xviewer-window.c:4134
 msgid "Help on this application"
 msgstr "このアプリケーションのヘルプです"
 
-#: ../src/xviewer-window.c:4126
+#: ../src/xviewer-window.c:4137
 msgid "About this application"
 msgstr "このアプリケーションの情報を表示します"
 
-#: ../src/xviewer-window.c:4132
+#: ../src/xviewer-window.c:4143
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ツールバーの表示を切り替えます"
 
-#: ../src/xviewer-window.c:4135
+#: ../src/xviewer-window.c:4146
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ステータスバーの表示を切り替えます"
 
-#: ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4149
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "現在のウインドウの画像ギャラリーのペインの表示を切り替えます"
 
-#: ../src/xviewer-window.c:4141
+#: ../src/xviewer-window.c:4152
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "サイドペインの表示/非表示を切り替えます"
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "Save changes in currently selected images"
 msgstr "選択した画像の変更点を保存します"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4160
 msgid "Open _with"
 msgstr "別のアプリケーションで開く(_W)"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4161
 msgid "Open the selected image with a different application"
 msgstr "選択した画像を別のアプリケーションで開きます"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4164
 msgid "Save the selected images with a different name"
 msgstr "選択した画像に名前を付けて保存します"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4166
 msgid "Show Containing _Folder"
 msgstr "この画像のフォルダーを表示(_F)"
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4169
 msgid "_Print…"
 msgstr "印刷(_P)…"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4170
 msgid "Print the selected image"
 msgstr "選択した画像を印刷します"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4172
 msgid "Prope_rties"
 msgstr "プロパティ(_R)"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4173
 msgid "Show the properties and metadata of the selected image"
 msgstr "選択した画像のプロパティとメタデータを表示します"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4175
 msgid "_Undo"
 msgstr "元に戻す(_U)"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4176
 msgid "Undo the last change in the image"
 msgstr "最後に適用した変更点を戻します"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4178
 msgid "Flip _Horizontal"
 msgstr "水平方向にひっくり返す(_H)"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4179
 msgid "Mirror the image horizontally"
 msgstr "画像を水平方向にひっくり返します"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4181
 msgid "Flip _Vertical"
 msgstr "垂直方向にひっくり返す(_V)"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4182
 msgid "Mirror the image vertically"
 msgstr "画像を垂直方向にひっくり返します"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4184
 msgid "_Rotate Clockwise"
 msgstr "時計回りに回転する(_R)"
 
-#: ../src/xviewer-window.c:4174
+#: ../src/xviewer-window.c:4185
 msgid "Rotate the image 90 degrees to the right"
 msgstr "画像を右回りで90°回転させます"
 
-#: ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4187
 msgid "Rotate Counterc_lockwise"
 msgstr "反時計回りに回転する(_L)"
 
-#: ../src/xviewer-window.c:4177
+#: ../src/xviewer-window.c:4188
 msgid "Rotate the image 90 degrees to the left"
 msgstr "画像を左回りで90°回転させます"
 
-#: ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4190
 msgid "Set as Wa_llpaper"
 msgstr "壁紙にする(_L)"
 
-#: ../src/xviewer-window.c:4180
+#: ../src/xviewer-window.c:4191
 msgid "Set the selected image as the wallpaper"
 msgstr "選択した画像を壁紙に設定します"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4194
 msgid "Move the selected image to the trash folder"
 msgstr "選択した画像をゴミ箱のフォルダーへ移動します"
 
-#: ../src/xviewer-window.c:4185
+#: ../src/xviewer-window.c:4196
 msgid "_Delete Image"
 msgstr "画像を削除する(_D)"
 
-#: ../src/xviewer-window.c:4186
+#: ../src/xviewer-window.c:4197
 msgid "Delete the selected image"
 msgstr "選択した画像を削除します"
 
-#: ../src/xviewer-window.c:4188
+#: ../src/xviewer-window.c:4199
 msgid "_Copy"
 msgstr "コピー(_C)"
 
-#: ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4200
 msgid "Copy the selected image to the clipboard"
 msgstr "選択した画像をクリップボードへコピーします"
 
-#: ../src/xviewer-window.c:4191 ../src/xviewer-window.c:4203
-#: ../src/xviewer-window.c:4206
+#: ../src/xviewer-window.c:4202 ../src/xviewer-window.c:4214
+#: ../src/xviewer-window.c:4217
 msgid "_Zoom In"
 msgstr "拡大(_Z)"
 
-#: ../src/xviewer-window.c:4192 ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4203 ../src/xviewer-window.c:4215
 msgid "Enlarge the image"
 msgstr "画像を拡大します"
 
-#: ../src/xviewer-window.c:4194 ../src/xviewer-window.c:4209
+#: ../src/xviewer-window.c:4205 ../src/xviewer-window.c:4220
 msgid "Zoom _Out"
 msgstr "縮小(_O)"
 
-#: ../src/xviewer-window.c:4195 ../src/xviewer-window.c:4207
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4206 ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4221
 msgid "Shrink the image"
 msgstr "画像を縮小します"
 
-#: ../src/xviewer-window.c:4197
+#: ../src/xviewer-window.c:4208 ../src/xviewer-window.c:4223
 msgid "_Normal Size"
 msgstr "通常の大きさ(_N)"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4209 ../src/xviewer-window.c:4224
 msgid "Show the image at its normal size"
 msgstr "通常の大きさで画像を表示します"
 
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4212
 msgid "Reload the image"
 msgstr "画像を再読み込み"
 
-#: ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4232
 msgid "_Fullscreen"
 msgstr "フルスクリーン(_F)"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4233
 msgid "Show the current image in fullscreen mode"
 msgstr "画像をフルスクリーンモードで表示します"
 
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4235
 msgid "Pause Slideshow"
 msgstr "スライドショー停止"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4236
 msgid "Pause or resume the slideshow"
 msgstr "スライドショーを停止したり再開したりします"
 
-#: ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4238
 msgid "_Best Fit"
 msgstr "ウィンドウに合わせる(_B)"
 
-#: ../src/xviewer-window.c:4225
+#: ../src/xviewer-window.c:4239
 msgid "Fit the image to the window"
 msgstr "画像をウィンドウに合わせた大きさにします"
 
-#: ../src/xviewer-window.c:4230 ../src/xviewer-window.c:4245
+#: ../src/xviewer-window.c:4244 ../src/xviewer-window.c:4259
 msgid "_Previous Image"
 msgstr "前の画像へ(_P)"
 
-#: ../src/xviewer-window.c:4231
+#: ../src/xviewer-window.c:4245
 msgid "Go to the previous image of the gallery"
 msgstr "ギャラリーの前の画像を表示します"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4247
 msgid "_Next Image"
 msgstr "次の画像へ(_N)"
 
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-window.c:4248
 msgid "Go to the next image of the gallery"
 msgstr "ギャラリーの次の画像を表示します"
 
-#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4250 ../src/xviewer-window.c:4262
 msgid "_First Image"
 msgstr "先頭へ(_F)"
 
-#: ../src/xviewer-window.c:4237
+#: ../src/xviewer-window.c:4251
 msgid "Go to the first image of the gallery"
 msgstr "ギャラリーの一番最初の画像を表示します"
 
-#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4253 ../src/xviewer-window.c:4265
 msgid "_Last Image"
 msgstr "最後へ(_L)"
 
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4254
 msgid "Go to the last image of the gallery"
 msgstr "ギャラリーの一番最後の画像を表示します"
 
-#: ../src/xviewer-window.c:4242
+#: ../src/xviewer-window.c:4256
 msgid "_Random Image"
 msgstr "ランダムな画像(_R)"
 
-#: ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4257
 msgid "Go to a random image of the gallery"
 msgstr "ギャラリーでランダムに画像を表示します"
 
-#: ../src/xviewer-window.c:4401
+#: ../src/xviewer-window.c:4415
 msgid "S_lideshow"
 msgstr "スライドショー(_L)"
 
-#: ../src/xviewer-window.c:4402
+#: ../src/xviewer-window.c:4416
 msgid "Start a slideshow view of the images"
 msgstr "複数の画像をスライドショーで表示します"
 
-#: ../src/xviewer-window.c:4474
+#: ../src/xviewer-window.c:4488
 msgid "Previous"
 msgstr "前へ"
 
-#: ../src/xviewer-window.c:4479
+#: ../src/xviewer-window.c:4493
 msgid "Next"
 msgstr "次へ"
 
-#: ../src/xviewer-window.c:4486
+#: ../src/xviewer-window.c:4500
 msgid "Right"
 msgstr "右側"
 
-#: ../src/xviewer-window.c:4489
+#: ../src/xviewer-window.c:4503
 msgid "Left"
 msgstr "左側"
 
-#: ../src/xviewer-window.c:4492
+#: ../src/xviewer-window.c:4506
 msgid "Show Folder"
 msgstr "フォルダーを表示する"
 
-#: ../src/xviewer-window.c:4495
+#: ../src/xviewer-window.c:4509
 msgid "Out"
 msgstr "縮小"
 
-#: ../src/xviewer-window.c:4498
+#: ../src/xviewer-window.c:4512
 msgid "In"
 msgstr "拡大"
 
-#: ../src/xviewer-window.c:4501
+#: ../src/xviewer-window.c:4515
 msgid "Normal"
 msgstr "標準"
 
-#: ../src/xviewer-window.c:4504
+#: ../src/xviewer-window.c:4518
 msgid "Fit"
 msgstr "合わせる"
 
-#: ../src/xviewer-window.c:4507
+#: ../src/xviewer-window.c:4521
 msgid "Gallery"
 msgstr "ギャラリー"
 
-#: ../src/xviewer-window.c:4524
+#: ../src/xviewer-window.c:4538
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ゴミ箱"

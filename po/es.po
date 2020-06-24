@@ -17,16 +17,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2020-03-19 20:14+0000\n"
-"Last-Translator: Toni Estevez <toni.estevez@gmail.com>\n"
+"POT-Creation-Date: 2020-04-06 17:15-0400\n"
+"PO-Revision-Date: 2020-05-11 16:12+0000\n"
+"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-05-11 11:01+0000\n"
-"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
+"X-Launchpad-Export-Date: 2020-06-24 10:09+0000\n"
+"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
 "Language: \n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -69,36 +69,36 @@ msgstr "Eliminar la barra de herramientas seleccionada"
 msgid "Separator"
 msgstr "Separador"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4108
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4119
 msgid "_View"
 msgstr "_Ver"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4131
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4142
 msgid "_Toolbar"
 msgstr "Barra de _herramientas"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4134
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4145
 msgid "_Statusbar"
 msgstr "Barra de _estado"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4137
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4148
 msgid "_Image Gallery"
 msgstr "Colección de _imágenes"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4140
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4151
 msgid "Side _Pane"
 msgstr "Panel _lateral"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4119
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4130
 msgid "Prefere_nces"
 msgstr "Prefere_ncias"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4111
+#: ../src/xviewer-window.c:4122
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4125
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4136
 msgid "_About"
 msgstr "Acerca _de"
 
@@ -139,7 +139,7 @@ msgstr "Examine y rote imágenes"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Fotografía;Presentación;Diapositivas;Gráficos;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5096
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5105
 msgid "Image Properties"
 msgstr "Propiedades de la imagen"
 
@@ -152,7 +152,7 @@ msgid "_Next"
 msgstr "_Siguiente"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4116
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4127
 msgid "_Close"
 msgstr "_Cerrar"
 
@@ -273,8 +273,8 @@ msgstr "Guardar como"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3423 ../src/xviewer-window.c:3426
-#: ../src/xviewer-window.c:3691
+#: ../src/xviewer-window.c:3434 ../src/xviewer-window.c:3437
+#: ../src/xviewer-window.c:3702
 msgid "_Cancel"
 msgstr "_Cancelar"
 
@@ -684,12 +684,20 @@ msgstr ""
 "complementos activos. Consulte el archivo .xviewer-plugin para obtener la "
 "ubicación de un complemento determinado."
 
+#: ../data/org.x.viewer.gschema.xml.in.h:45
+msgid "Maximize Image"
+msgstr "Maximizar la imagen"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:46
+msgid "Whether or not the image should be maximized."
+msgstr "Indica si la imagen debe ser maximizada o no."
+
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "Cerrar _sin guardar"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4146
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4157
 msgid "_Save"
 msgstr "_Guardar"
 
@@ -726,12 +734,12 @@ msgstr "S_eleccione las imágenes que quiere guardar:"
 msgid "If you don't save, all your changes will be lost."
 msgstr "Se perderán todos los cambios si no los guarda."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:875
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:876
+#: ../src/xviewer-window.c:4211
 msgid "_Reload"
 msgstr "_Recargar"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4152
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4163
 msgid "Save _As…"
 msgstr "Guardar co_mo…"
 
@@ -953,12 +961,12 @@ msgid "File size:"
 msgstr "Tamaño del archivo:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4167
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 "Mostrar en el gestor de archivos la carpeta que contiene este archivo"
 
-#: ../src/xviewer-preferences-dialog.c:125
+#: ../src/xviewer-preferences-dialog.c:124
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1099,21 +1107,21 @@ msgstr " (Unicode no válido)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:540
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i píxel  %s    %i %%"
 msgstr[1] "%i × %i píxeles  %s    %i %%"
 
-#: ../src/xviewer-window.c:877 ../src/xviewer-window.c:2840
+#: ../src/xviewer-window.c:878 ../src/xviewer-window.c:2851
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Ocultar"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:887
+#: ../src/xviewer-window.c:888
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1122,7 +1130,7 @@ msgstr ""
 "Se ha modificado la imagen «%s» con una aplicación externa.\n"
 "¿Quiere actualizarla?"
 
-#: ../src/xviewer-window.c:1051
+#: ../src/xviewer-window.c:1057
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Usar «%s» para abrir la imagen seleccionada"
@@ -1132,22 +1140,22 @@ msgstr "Usar «%s» para abrir la imagen seleccionada"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1207
+#: ../src/xviewer-window.c:1213
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Guardando la imagen «%s» (%u/%u)"
 
-#: ../src/xviewer-window.c:1602
+#: ../src/xviewer-window.c:1608
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Abriendo imagen «%s»"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2189
+#: ../src/xviewer-window.c:2195
 msgid "Viewing a slideshow"
 msgstr "Viendo una presentación de diapositivas"
 
-#: ../src/xviewer-window.c:2415
+#: ../src/xviewer-window.c:2426
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1156,19 +1164,19 @@ msgstr ""
 "Error al imprimir el archivo:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2768 ../src/xviewer-window.c:2783
+#: ../src/xviewer-window.c:2779 ../src/xviewer-window.c:2794
 msgid "Error launching System Settings: "
 msgstr "Error al iniciar la configuración del sistema: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2838
+#: ../src/xviewer-window.c:2849
 msgid "_Open Background Preferences"
 msgstr "_Abrir las preferencias del fondo"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2854
+#: ../src/xviewer-window.c:2865
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1177,11 +1185,11 @@ msgstr ""
 "Se ha configurado la imagen «%s» como fondo del escritorio.\n"
 "¿Quiere modificar su apariencia?"
 
-#: ../src/xviewer-window.c:3321
+#: ../src/xviewer-window.c:3332
 msgid "Saving image locally…"
 msgstr "Guardando la imagen localmente…"
 
-#: ../src/xviewer-window.c:3399
+#: ../src/xviewer-window.c:3410
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1190,7 +1198,7 @@ msgstr ""
 "¿Seguro que quiere eliminar\n"
 "«%s» permanentemente?"
 
-#: ../src/xviewer-window.c:3402
+#: ../src/xviewer-window.c:3413
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1205,41 +1213,41 @@ msgstr[1] ""
 "¿Seguro que quiere eliminar las %d\n"
 "imágenes seleccionadas permanentemente?"
 
-#: ../src/xviewer-window.c:3424 ../src/xviewer-window.c:3702
+#: ../src/xviewer-window.c:3435 ../src/xviewer-window.c:3713
 msgid "_Delete"
 msgstr "_Eliminar"
 
-#: ../src/xviewer-window.c:3427 ../src/xviewer-window.c:3704
+#: ../src/xviewer-window.c:3438 ../src/xviewer-window.c:3715
 msgid "_Yes"
 msgstr "_Sí"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3431 ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:3442 ../src/xviewer-window.c:3707
 msgid "Do _not ask again during this session"
 msgstr "_No preguntar de nuevo durante esta sesión"
 
-#: ../src/xviewer-window.c:3475
+#: ../src/xviewer-window.c:3486
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "No se ha podido obtener el archivo de imagen"
 
-#: ../src/xviewer-window.c:3491
+#: ../src/xviewer-window.c:3502
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "No se ha podido obtener información del archivo de imagen"
 
-#: ../src/xviewer-window.c:3507 ../src/xviewer-window.c:3763
+#: ../src/xviewer-window.c:3518 ../src/xviewer-window.c:3774
 #, c-format
 msgid "Couldn't delete file"
 msgstr "No se ha podido eliminar el archivo"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3557 ../src/xviewer-window.c:3859
+#: ../src/xviewer-window.c:3568 ../src/xviewer-window.c:3870
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Error al eliminar la imagen %s"
 
-#: ../src/xviewer-window.c:3664
+#: ../src/xviewer-window.c:3675
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1248,7 +1256,7 @@ msgstr ""
 "¿Seguro que quiere mover\n"
 "«%s» a la papelera?"
 
-#: ../src/xviewer-window.c:3667
+#: ../src/xviewer-window.c:3678
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1257,7 +1265,7 @@ msgstr ""
 "No se ha podido encontrar la papelera para «%s». ¿Quiere eliminar esta "
 "imagen permanentemente?"
 
-#: ../src/xviewer-window.c:3672
+#: ../src/xviewer-window.c:3683
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1272,7 +1280,7 @@ msgstr[1] ""
 "¿Seguro que quiere mover las %d\n"
 "imágenes seleccionadas a la papelera?"
 
-#: ../src/xviewer-window.c:3677
+#: ../src/xviewer-window.c:3688
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1280,327 +1288,327 @@ msgstr ""
 "Algunas de las imágenes seleccionadas no se pueden mover a la papelera y se "
 "eliminarán permanentemente. ¿Seguro que quiere seguir adelante?"
 
-#: ../src/xviewer-window.c:3694 ../src/xviewer-window.c:4182
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:3705 ../src/xviewer-window.c:4193
+#: ../src/xviewer-window.c:4226
 msgid "Move to _Trash"
 msgstr "Mo_ver a la papelera"
 
-#: ../src/xviewer-window.c:3741 ../src/xviewer-window.c:3755
+#: ../src/xviewer-window.c:3752 ../src/xviewer-window.c:3766
 #, c-format
 msgid "Couldn't access trash."
 msgstr "No se ha podido acceder a la papelera."
 
-#: ../src/xviewer-window.c:4106
+#: ../src/xviewer-window.c:4117
 msgid "_File"
 msgstr "_Archivo"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4118
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/xviewer-window.c:4109
+#: ../src/xviewer-window.c:4120
 msgid "_Go"
 msgstr "_Ir"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4121
 msgid "_Tools"
 msgstr "_Herramientas"
 
-#: ../src/xviewer-window.c:4113
+#: ../src/xviewer-window.c:4124
 msgid "_Open…"
 msgstr "_Abrir…"
 
-#: ../src/xviewer-window.c:4114
+#: ../src/xviewer-window.c:4125
 msgid "Open a file"
 msgstr "Abrir un archivo"
 
-#: ../src/xviewer-window.c:4117
+#: ../src/xviewer-window.c:4128
 msgid "Close window"
 msgstr "Cerrar la ventana"
 
-#: ../src/xviewer-window.c:4120
+#: ../src/xviewer-window.c:4131
 msgid "Preferences for Image Viewer"
 msgstr "Preferencias del visor de imágenes"
 
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4133
 msgid "_Contents"
 msgstr "Índ_ice"
 
-#: ../src/xviewer-window.c:4123
+#: ../src/xviewer-window.c:4134
 msgid "Help on this application"
 msgstr "Ayuda sobre esta aplicación"
 
-#: ../src/xviewer-window.c:4126
+#: ../src/xviewer-window.c:4137
 msgid "About this application"
 msgstr "Acerca de esta aplicación"
 
-#: ../src/xviewer-window.c:4132
+#: ../src/xviewer-window.c:4143
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr ""
 "Cambiar la visibilidad de la barra de herramientas en la ventana actual"
 
-#: ../src/xviewer-window.c:4135
+#: ../src/xviewer-window.c:4146
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Cambiar la visibilidad de la barra de estado en la ventana actual"
 
-#: ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4149
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 "Cambiar la visibilidad del panel de la colección de imágenes en la ventana "
 "actual"
 
-#: ../src/xviewer-window.c:4141
+#: ../src/xviewer-window.c:4152
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Cambiar la visibilidad del panel lateral en la ventana actual"
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "Save changes in currently selected images"
 msgstr "Guardar los cambios en las imágenes seleccionadas"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4160
 msgid "Open _with"
 msgstr "Abrir c_on"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4161
 msgid "Open the selected image with a different application"
 msgstr "Abrir la imagen seleccionada con una aplicación diferente"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4164
 msgid "Save the selected images with a different name"
 msgstr "Guardar las imágenes seleccionadas con un nombre diferente"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4166
 msgid "Show Containing _Folder"
 msgstr "Mos_trar la carpeta contenedora"
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4169
 msgid "_Print…"
 msgstr "_Imprimir…"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4170
 msgid "Print the selected image"
 msgstr "Imprimir la imagen seleccionada"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4172
 msgid "Prope_rties"
 msgstr "_Propiedades"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4173
 msgid "Show the properties and metadata of the selected image"
 msgstr "Mostrar las propiedades y los metadatos de la imagen seleccionada"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4175
 msgid "_Undo"
 msgstr "_Deshacer"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4176
 msgid "Undo the last change in the image"
 msgstr "Deshacer el último cambio en la imagen"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4178
 msgid "Flip _Horizontal"
 msgstr "Voltear _horizontalmente"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4179
 msgid "Mirror the image horizontally"
 msgstr "Reflejar la imagen horizontalmente"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4181
 msgid "Flip _Vertical"
 msgstr "Voltear _verticalmente"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4182
 msgid "Mirror the image vertically"
 msgstr "Reflejar la imagen verticalmente"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4184
 msgid "_Rotate Clockwise"
 msgstr "_Rotar en sentido horario"
 
-#: ../src/xviewer-window.c:4174
+#: ../src/xviewer-window.c:4185
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Rotar la imagen 90 grados a la derecha"
 
-#: ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4187
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotar en sentido _antihorario"
 
-#: ../src/xviewer-window.c:4177
+#: ../src/xviewer-window.c:4188
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Rotar la imagen 90 grados a la izquierda"
 
-#: ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4190
 msgid "Set as Wa_llpaper"
 msgstr "Configurar como _fondo"
 
-#: ../src/xviewer-window.c:4180
+#: ../src/xviewer-window.c:4191
 msgid "Set the selected image as the wallpaper"
 msgstr "Configurar la imagen seleccionada como el fondo del escritorio"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4194
 msgid "Move the selected image to the trash folder"
 msgstr "Mover la imagen seleccionada a la papelera"
 
-#: ../src/xviewer-window.c:4185
+#: ../src/xviewer-window.c:4196
 msgid "_Delete Image"
 msgstr "_Eliminar la imagen"
 
-#: ../src/xviewer-window.c:4186
+#: ../src/xviewer-window.c:4197
 msgid "Delete the selected image"
 msgstr "Eliminar la imagen seleccionada"
 
-#: ../src/xviewer-window.c:4188
+#: ../src/xviewer-window.c:4199
 msgid "_Copy"
 msgstr "_Copiar"
 
-#: ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4200
 msgid "Copy the selected image to the clipboard"
 msgstr "Copiar la imagen seleccionada al portapapeles"
 
-#: ../src/xviewer-window.c:4191 ../src/xviewer-window.c:4203
-#: ../src/xviewer-window.c:4206
+#: ../src/xviewer-window.c:4202 ../src/xviewer-window.c:4214
+#: ../src/xviewer-window.c:4217
 msgid "_Zoom In"
 msgstr "_Ampliar"
 
-#: ../src/xviewer-window.c:4192 ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4203 ../src/xviewer-window.c:4215
 msgid "Enlarge the image"
 msgstr "Ampliar la imagen"
 
-#: ../src/xviewer-window.c:4194 ../src/xviewer-window.c:4209
+#: ../src/xviewer-window.c:4205 ../src/xviewer-window.c:4220
 msgid "Zoom _Out"
 msgstr "_Reducir"
 
-#: ../src/xviewer-window.c:4195 ../src/xviewer-window.c:4207
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4206 ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4221
 msgid "Shrink the image"
 msgstr "Reducir la imagen"
 
-#: ../src/xviewer-window.c:4197
+#: ../src/xviewer-window.c:4208 ../src/xviewer-window.c:4223
 msgid "_Normal Size"
 msgstr "Tamaño _normal"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4209 ../src/xviewer-window.c:4224
 msgid "Show the image at its normal size"
 msgstr "Mostrar la imagen a tamaño normal"
 
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4212
 msgid "Reload the image"
 msgstr "Recargar la imagen"
 
-#: ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4232
 msgid "_Fullscreen"
 msgstr "_Pantalla completa"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4233
 msgid "Show the current image in fullscreen mode"
 msgstr "Mostrar la imagen actual a pantalla completa"
 
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4235
 msgid "Pause Slideshow"
 msgstr "Pausar la presentación de diapositivas"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4236
 msgid "Pause or resume the slideshow"
 msgstr "Pausar o reanudar la presentación de diapositivas"
 
-#: ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4238
 msgid "_Best Fit"
 msgstr "Ajuste óptim_o"
 
-#: ../src/xviewer-window.c:4225
+#: ../src/xviewer-window.c:4239
 msgid "Fit the image to the window"
 msgstr "Ajustar la imagen a la ventana"
 
-#: ../src/xviewer-window.c:4230 ../src/xviewer-window.c:4245
+#: ../src/xviewer-window.c:4244 ../src/xviewer-window.c:4259
 msgid "_Previous Image"
 msgstr "Imagen _anterior"
 
-#: ../src/xviewer-window.c:4231
+#: ../src/xviewer-window.c:4245
 msgid "Go to the previous image of the gallery"
 msgstr "Ir a la imagen anterior de la colección"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4247
 msgid "_Next Image"
 msgstr "_Imagen siguiente"
 
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-window.c:4248
 msgid "Go to the next image of the gallery"
 msgstr "Ir a la imagen siguiente de la colección"
 
-#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4250 ../src/xviewer-window.c:4262
 msgid "_First Image"
 msgstr "_Primera imagen"
 
-#: ../src/xviewer-window.c:4237
+#: ../src/xviewer-window.c:4251
 msgid "Go to the first image of the gallery"
 msgstr "Ir a la primera imagen de la colección"
 
-#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4253 ../src/xviewer-window.c:4265
 msgid "_Last Image"
 msgstr "Ú_ltima imagen"
 
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4254
 msgid "Go to the last image of the gallery"
 msgstr "Ir a la última imagen de la colección"
 
-#: ../src/xviewer-window.c:4242
+#: ../src/xviewer-window.c:4256
 msgid "_Random Image"
 msgstr "Imagen al_eatoria"
 
-#: ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4257
 msgid "Go to a random image of the gallery"
 msgstr "Ir a una imagen aleatoria de la colección"
 
-#: ../src/xviewer-window.c:4401
+#: ../src/xviewer-window.c:4415
 msgid "S_lideshow"
 msgstr "Presentación de _diapositivas"
 
-#: ../src/xviewer-window.c:4402
+#: ../src/xviewer-window.c:4416
 msgid "Start a slideshow view of the images"
 msgstr "Iniciar una presentación de diapositivas de las imágenes"
 
-#: ../src/xviewer-window.c:4474
+#: ../src/xviewer-window.c:4488
 msgid "Previous"
 msgstr "Anterior"
 
-#: ../src/xviewer-window.c:4479
+#: ../src/xviewer-window.c:4493
 msgid "Next"
 msgstr "Siguiente"
 
-#: ../src/xviewer-window.c:4486
+#: ../src/xviewer-window.c:4500
 msgid "Right"
 msgstr "Derecha"
 
-#: ../src/xviewer-window.c:4489
+#: ../src/xviewer-window.c:4503
 msgid "Left"
 msgstr "Izquierda"
 
-#: ../src/xviewer-window.c:4492
+#: ../src/xviewer-window.c:4506
 msgid "Show Folder"
 msgstr "Mostrar la carpeta"
 
-#: ../src/xviewer-window.c:4495
+#: ../src/xviewer-window.c:4509
 msgid "Out"
 msgstr "Reducir"
 
-#: ../src/xviewer-window.c:4498
+#: ../src/xviewer-window.c:4512
 msgid "In"
 msgstr "Ampliar"
 
-#: ../src/xviewer-window.c:4501
+#: ../src/xviewer-window.c:4515
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/xviewer-window.c:4504
+#: ../src/xviewer-window.c:4518
 msgid "Fit"
 msgstr "Ajustar"
 
-#: ../src/xviewer-window.c:4507
+#: ../src/xviewer-window.c:4521
 msgid "Gallery"
 msgstr "Colección"
 
-#: ../src/xviewer-window.c:4524
+#: ../src/xviewer-window.c:4538
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Mover a la papelera"

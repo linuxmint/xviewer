@@ -15,8 +15,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 12:06+0100\n"
-"PO-Revision-Date: 2017-08-31 21:48+0000\n"
+"POT-Creation-Date: 2020-04-06 17:15-0400\n"
+"PO-Revision-Date: 2020-05-16 10:42+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2020-05-11 11:01+0000\n"
-"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
+"X-Launchpad-Export-Date: 2020-06-24 10:10+0000\n"
+"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
 "Language: lt\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -68,36 +68,36 @@ msgstr "Šalinti pasirinktą įrankių juostą"
 msgid "Separator"
 msgstr "Skirtukas"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4108
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4119
 msgid "_View"
 msgstr "_Rodinys"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4131
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4142
 msgid "_Toolbar"
 msgstr "_Įrankių juosta"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4134
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4145
 msgid "_Statusbar"
 msgstr "_Būsenos juosta"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4137
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4148
 msgid "_Image Gallery"
 msgstr "_Paveikslų galerija"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4140
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4151
 msgid "Side _Pane"
 msgstr "Šoninis p_olangis"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4119
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4130
 msgid "Prefere_nces"
 msgstr "_Nuostatos"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4111
+#: ../src/xviewer-window.c:4122
 msgid "_Help"
 msgstr "_Pagalba"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4125
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4136
 msgid "_About"
 msgstr "_Apie"
 
@@ -136,7 +136,7 @@ msgstr "Naršyti ir pasukti paveikslus"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Paveikslas;Skaidrių rodymas;Grafika;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5096
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5105
 msgid "Image Properties"
 msgstr "Paveikslo savybės"
 
@@ -149,7 +149,7 @@ msgid "_Next"
 msgstr "_Kitas"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4116
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4127
 msgid "_Close"
 msgstr "_Užverti"
 
@@ -270,8 +270,8 @@ msgstr "Įrašyti kaip"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3423 ../src/xviewer-window.c:3426
-#: ../src/xviewer-window.c:3691
+#: ../src/xviewer-window.c:3434 ../src/xviewer-window.c:3437
+#: ../src/xviewer-window.c:3702
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
@@ -674,12 +674,20 @@ msgstr ""
 "Įjungtų įskiepių sąrašas. Jame nėra aktyvių įskiepių „vietos“. Norėdami "
 "gauti nurodyto įskiepio „vietą“, žiūrėkite .xviewer-plugin failą."
 
+#: ../data/org.x.viewer.gschema.xml.in.h:45
+msgid "Maximize Image"
+msgstr "Padidinti paveikslą"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:46
+msgid "Whether or not the image should be maximized."
+msgstr "Ar paveikslas turėtų būti padidintas, ar ne."
+
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "Užverti _neįrašant"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4146
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4157
 msgid "_Save"
 msgstr "Į_rašyti"
 
@@ -720,12 +728,12 @@ msgstr "_Pasirinkite paveikslus, kuriuos norite įrašyti:"
 msgid "If you don't save, all your changes will be lost."
 msgstr "Jei neįrašysite, visi jūsų atlikti pakeitimai bus prarasti."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:875
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:876
+#: ../src/xviewer-window.c:4211
 msgid "_Reload"
 msgstr "Įkelti iš _naujo"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4152
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4163
 msgid "Save _As…"
 msgstr "Įrašyti k_aip…"
 
@@ -948,11 +956,11 @@ msgid "File size:"
 msgstr "Failo dydis:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4167
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Rodyti failų tvarkytuvėje aplanką, kuriame yra šis failas"
 
-#: ../src/xviewer-preferences-dialog.c:125
+#: ../src/xviewer-preferences-dialog.c:124
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1094,7 +1102,7 @@ msgstr " (netaisyklingas unikodas)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:540
+#: ../src/xviewer-window.c:541
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -1102,14 +1110,14 @@ msgstr[0] "%i × %i pikselio  %s    %i%%"
 msgstr[1] "%i × %i pikselių  %s    %i%%"
 msgstr[2] "%i × %i pikselių  %s    %i%%"
 
-#: ../src/xviewer-window.c:877 ../src/xviewer-window.c:2840
+#: ../src/xviewer-window.c:878 ../src/xviewer-window.c:2851
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Slėpti"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:887
+#: ../src/xviewer-window.c:888
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1118,7 +1126,7 @@ msgstr ""
 "Paveikslas „%s“ buvo pakeistas išorinės programos.\n"
 "Ar norite jį įkelti iš naujo?"
 
-#: ../src/xviewer-window.c:1051
+#: ../src/xviewer-window.c:1057
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Atverti pasirinktą paveikslą naudojant „%s“"
@@ -1128,22 +1136,22 @@ msgstr "Atverti pasirinktą paveikslą naudojant „%s“"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1207
+#: ../src/xviewer-window.c:1213
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Įrašomas paveikslas „%s“ (%u/%u)"
 
-#: ../src/xviewer-window.c:1602
+#: ../src/xviewer-window.c:1608
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Atveriamas paveikslas „%s“"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2189
+#: ../src/xviewer-window.c:2195
 msgid "Viewing a slideshow"
 msgstr "Rodomos skaidrės"
 
-#: ../src/xviewer-window.c:2415
+#: ../src/xviewer-window.c:2426
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1152,19 +1160,19 @@ msgstr ""
 "Klaida spausdintant failą:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2768 ../src/xviewer-window.c:2783
+#: ../src/xviewer-window.c:2779 ../src/xviewer-window.c:2794
 msgid "Error launching System Settings: "
 msgstr "Klaida atveriant sistemos nustatymus: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2838
+#: ../src/xviewer-window.c:2849
 msgid "_Open Background Preferences"
 msgstr "_Atverti fono nuostatas"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2854
+#: ../src/xviewer-window.c:2865
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1173,11 +1181,11 @@ msgstr ""
 "Paveikslas „%s“ nustatytas kaip darbalaukio fonas.\n"
 "Ar norite pakeisti jo išvaizdą?"
 
-#: ../src/xviewer-window.c:3321
+#: ../src/xviewer-window.c:3332
 msgid "Saving image locally…"
 msgstr "Paveikslas įrašomas vietiniame diske…"
 
-#: ../src/xviewer-window.c:3399
+#: ../src/xviewer-window.c:3410
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1186,7 +1194,7 @@ msgstr ""
 "Ar tikrai norite visam laikui\n"
 "pašalinti „%s“?"
 
-#: ../src/xviewer-window.c:3402
+#: ../src/xviewer-window.c:3413
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1204,41 +1212,41 @@ msgstr[2] ""
 "Ar tikrai norite visam laikui\n"
 "pašalinti %d pasirinktų paveikslų?"
 
-#: ../src/xviewer-window.c:3424 ../src/xviewer-window.c:3702
+#: ../src/xviewer-window.c:3435 ../src/xviewer-window.c:3713
 msgid "_Delete"
 msgstr "Iš_trinti"
 
-#: ../src/xviewer-window.c:3427 ../src/xviewer-window.c:3704
+#: ../src/xviewer-window.c:3438 ../src/xviewer-window.c:3715
 msgid "_Yes"
 msgstr "_Taip"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3431 ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:3442 ../src/xviewer-window.c:3707
 msgid "Do _not ask again during this session"
 msgstr "Daugiau _neklausti šio seanso metu"
 
-#: ../src/xviewer-window.c:3475
+#: ../src/xviewer-window.c:3486
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Nepavyko gauti paveikslo failo"
 
-#: ../src/xviewer-window.c:3491
+#: ../src/xviewer-window.c:3502
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Nepavyko gauti paveikslo failo informacijos"
 
-#: ../src/xviewer-window.c:3507 ../src/xviewer-window.c:3763
+#: ../src/xviewer-window.c:3518 ../src/xviewer-window.c:3774
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Nepavyko ištrinti failo"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3557 ../src/xviewer-window.c:3859
+#: ../src/xviewer-window.c:3568 ../src/xviewer-window.c:3870
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Ištrinant paveikslą %s įvyko klaida"
 
-#: ../src/xviewer-window.c:3664
+#: ../src/xviewer-window.c:3675
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1247,14 +1255,14 @@ msgstr ""
 "Ar tikrai norite perkelti\n"
 "„%s“ į šiukšlinę?"
 
-#: ../src/xviewer-window.c:3667
+#: ../src/xviewer-window.c:3678
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "„%s“ šiukšlinė nerasta. Ar norite šį paveikslą ištrinti negrįžtamai?"
 
-#: ../src/xviewer-window.c:3672
+#: ../src/xviewer-window.c:3683
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1272,7 +1280,7 @@ msgstr[2] ""
 "Ar tikrai norite perkelti %d pasirinktų\n"
 "paveikslų į šiukšlinę?"
 
-#: ../src/xviewer-window.c:3677
+#: ../src/xviewer-window.c:3688
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1280,324 +1288,324 @@ msgstr ""
 "Kai kurių pasirinktų paveikslų negalima perkelti į šiukšlinę, tad jie bus "
 "ištrinti negrįžtamai. Ar tikrai norite tęsti?"
 
-#: ../src/xviewer-window.c:3694 ../src/xviewer-window.c:4182
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:3705 ../src/xviewer-window.c:4193
+#: ../src/xviewer-window.c:4226
 msgid "Move to _Trash"
 msgstr "Perkelti į ši_ukšlinę"
 
-#: ../src/xviewer-window.c:3741 ../src/xviewer-window.c:3755
+#: ../src/xviewer-window.c:3752 ../src/xviewer-window.c:3766
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Nepavyko gauti prieigos prie šiukšlinės."
 
-#: ../src/xviewer-window.c:4106
+#: ../src/xviewer-window.c:4117
 msgid "_File"
 msgstr "_Failas"
 
-#: ../src/xviewer-window.c:4107
+#: ../src/xviewer-window.c:4118
 msgid "_Edit"
 msgstr "_Taisa"
 
-#: ../src/xviewer-window.c:4109
+#: ../src/xviewer-window.c:4120
 msgid "_Go"
 msgstr "_Eiti"
 
-#: ../src/xviewer-window.c:4110
+#: ../src/xviewer-window.c:4121
 msgid "_Tools"
 msgstr "Įran_kiai"
 
-#: ../src/xviewer-window.c:4113
+#: ../src/xviewer-window.c:4124
 msgid "_Open…"
 msgstr "_Atverti…"
 
-#: ../src/xviewer-window.c:4114
+#: ../src/xviewer-window.c:4125
 msgid "Open a file"
 msgstr "Atverti failą"
 
-#: ../src/xviewer-window.c:4117
+#: ../src/xviewer-window.c:4128
 msgid "Close window"
 msgstr "Užverti langą"
 
-#: ../src/xviewer-window.c:4120
+#: ../src/xviewer-window.c:4131
 msgid "Preferences for Image Viewer"
 msgstr "Paveikslų žiūryklės nuostatos"
 
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4133
 msgid "_Contents"
 msgstr "_Turinys"
 
-#: ../src/xviewer-window.c:4123
+#: ../src/xviewer-window.c:4134
 msgid "Help on this application"
 msgstr "Šios programos žinynas"
 
-#: ../src/xviewer-window.c:4126
+#: ../src/xviewer-window.c:4137
 msgid "About this application"
 msgstr "Apie šią programą"
 
-#: ../src/xviewer-window.c:4132
+#: ../src/xviewer-window.c:4143
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Keičia įrankinės esamame lange matomumą"
 
-#: ../src/xviewer-window.c:4135
+#: ../src/xviewer-window.c:4146
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Keičia būsenos juostos esamame lange matomumą"
 
-#: ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4149
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "Keičia esamo lango paveikslų kolekcijos skydelio matomumą"
 
-#: ../src/xviewer-window.c:4141
+#: ../src/xviewer-window.c:4152
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Keičia esamo lango šoninio polangio matomumą"
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "Save changes in currently selected images"
 msgstr "Įrašyti pažymėtų paveikslų pakeitimus"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4160
 msgid "Open _with"
 msgstr "Atverti _su"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4161
 msgid "Open the selected image with a different application"
 msgstr "Atverti pažymėtą paveikslą su kita programa"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4164
 msgid "Save the selected images with a different name"
 msgstr "Įrašyti pažymėtus paveikslus kitu vardu"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4166
 msgid "Show Containing _Folder"
 msgstr "Rodyti _aplanką"
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4169
 msgid "_Print…"
 msgstr "S_pausdinti…"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4170
 msgid "Print the selected image"
 msgstr "Spausdinti pažymėtą paveikslą"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4172
 msgid "Prope_rties"
 msgstr "Sa_vybės"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4173
 msgid "Show the properties and metadata of the selected image"
 msgstr "Rodyti pasirinkto paveikslo savybes ir metaduomenis"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4175
 msgid "_Undo"
 msgstr "_Atšaukti"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4176
 msgid "Undo the last change in the image"
 msgstr "Atšaukti paskutinį paveikslo pakeitimą"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4178
 msgid "Flip _Horizontal"
 msgstr "Apversti _horizontaliai"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4179
 msgid "Mirror the image horizontally"
 msgstr "Atspindėti paveikslą horizontaliai"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4181
 msgid "Flip _Vertical"
 msgstr "Apversti _vertikaliai"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4182
 msgid "Mirror the image vertically"
 msgstr "Atspindėti paveikslą vertikaliai"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4184
 msgid "_Rotate Clockwise"
 msgstr "Pasukti pagal laik_rodžio rodyklę"
 
-#: ../src/xviewer-window.c:4174
+#: ../src/xviewer-window.c:4185
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Pasukti paveikslą 90 laipsnių į dešinę"
 
-#: ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4187
 msgid "Rotate Counterc_lockwise"
 msgstr "Pasukti prieš _laikrodžio rodyklę"
 
-#: ../src/xviewer-window.c:4177
+#: ../src/xviewer-window.c:4188
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Pasukti paveikslą 90 laipsnių į kairę"
 
-#: ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4190
 msgid "Set as Wa_llpaper"
 msgstr "Nustatyti kaip _foną"
 
-#: ../src/xviewer-window.c:4180
+#: ../src/xviewer-window.c:4191
 msgid "Set the selected image as the wallpaper"
 msgstr "Nustatyti pasirinktą paveikslą kaip darbalaukio foną"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4194
 msgid "Move the selected image to the trash folder"
 msgstr "Perkelti pasirinktą paveikslą į šiukšlinę"
 
-#: ../src/xviewer-window.c:4185
+#: ../src/xviewer-window.c:4196
 msgid "_Delete Image"
 msgstr "Iš_trinti paveikslą"
 
-#: ../src/xviewer-window.c:4186
+#: ../src/xviewer-window.c:4197
 msgid "Delete the selected image"
 msgstr "Ištrinti pasirinktą paveikslą"
 
-#: ../src/xviewer-window.c:4188
+#: ../src/xviewer-window.c:4199
 msgid "_Copy"
 msgstr "_Kopijuoti:"
 
-#: ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4200
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopijuoti pasirinktą paveikslą į iškarpinę"
 
-#: ../src/xviewer-window.c:4191 ../src/xviewer-window.c:4203
-#: ../src/xviewer-window.c:4206
+#: ../src/xviewer-window.c:4202 ../src/xviewer-window.c:4214
+#: ../src/xviewer-window.c:4217
 msgid "_Zoom In"
 msgstr "_Didinti"
 
-#: ../src/xviewer-window.c:4192 ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4203 ../src/xviewer-window.c:4215
 msgid "Enlarge the image"
 msgstr "Padidinti paveikslą"
 
-#: ../src/xviewer-window.c:4194 ../src/xviewer-window.c:4209
+#: ../src/xviewer-window.c:4205 ../src/xviewer-window.c:4220
 msgid "Zoom _Out"
 msgstr "_Mažinti"
 
-#: ../src/xviewer-window.c:4195 ../src/xviewer-window.c:4207
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4206 ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4221
 msgid "Shrink the image"
 msgstr "Sumažinti paveikslą"
 
-#: ../src/xviewer-window.c:4197
+#: ../src/xviewer-window.c:4208 ../src/xviewer-window.c:4223
 msgid "_Normal Size"
 msgstr "_Normalus dydis"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4209 ../src/xviewer-window.c:4224
 msgid "Show the image at its normal size"
 msgstr "Rodyti paveikslą normaliu dydžiu"
 
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4212
 msgid "Reload the image"
 msgstr "Įkelti paveikslą iš naujo"
 
-#: ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4232
 msgid "_Fullscreen"
 msgstr "_Visame ekrane"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4233
 msgid "Show the current image in fullscreen mode"
 msgstr "Rodyti pasirinktą paveikslą viso ekrano veiksenoje"
 
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4235
 msgid "Pause Slideshow"
 msgstr "Stabdyti skaidrių rodymas"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4236
 msgid "Pause or resume the slideshow"
 msgstr "Stabdyti arba pratęsti skaidrių rodymą"
 
-#: ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4238
 msgid "_Best Fit"
 msgstr "Geriausiai _tinkantis"
 
-#: ../src/xviewer-window.c:4225
+#: ../src/xviewer-window.c:4239
 msgid "Fit the image to the window"
 msgstr "Pritaikyti paveikslo dydį langui"
 
-#: ../src/xviewer-window.c:4230 ../src/xviewer-window.c:4245
+#: ../src/xviewer-window.c:4244 ../src/xviewer-window.c:4259
 msgid "_Previous Image"
 msgstr "_Ankstesnis paveikslas"
 
-#: ../src/xviewer-window.c:4231
+#: ../src/xviewer-window.c:4245
 msgid "Go to the previous image of the gallery"
 msgstr "Rodyti ankstesnį rinkinio paveikslą"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4247
 msgid "_Next Image"
 msgstr "_Kitas paveikslas"
 
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-window.c:4248
 msgid "Go to the next image of the gallery"
 msgstr "Rodyti kitą rinkinio paveikslą"
 
-#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4250 ../src/xviewer-window.c:4262
 msgid "_First Image"
 msgstr "_Pirmas paveikslas"
 
-#: ../src/xviewer-window.c:4237
+#: ../src/xviewer-window.c:4251
 msgid "Go to the first image of the gallery"
 msgstr "Rodyti pirmąjį rinkinio paveikslą"
 
-#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4253 ../src/xviewer-window.c:4265
 msgid "_Last Image"
 msgstr "Pas_kutinis paveikslas"
 
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4254
 msgid "Go to the last image of the gallery"
 msgstr "Rodyti paskutinį rinkinio paveikslą"
 
-#: ../src/xviewer-window.c:4242
+#: ../src/xviewer-window.c:4256
 msgid "_Random Image"
 msgstr "_Atsitiktinis paveikslas"
 
-#: ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4257
 msgid "Go to a random image of the gallery"
 msgstr "Rodyti atsitiktinį rinkinio paveikslą"
 
-#: ../src/xviewer-window.c:4401
+#: ../src/xviewer-window.c:4415
 msgid "S_lideshow"
 msgstr "Skaidrių _rodymas"
 
-#: ../src/xviewer-window.c:4402
+#: ../src/xviewer-window.c:4416
 msgid "Start a slideshow view of the images"
 msgstr "Rodyti paveikslus kaip skaidrių rodymą"
 
-#: ../src/xviewer-window.c:4474
+#: ../src/xviewer-window.c:4488
 msgid "Previous"
 msgstr "Ankstesnis"
 
-#: ../src/xviewer-window.c:4479
+#: ../src/xviewer-window.c:4493
 msgid "Next"
 msgstr "Kitas"
 
-#: ../src/xviewer-window.c:4486
+#: ../src/xviewer-window.c:4500
 msgid "Right"
 msgstr "Dešinėn"
 
-#: ../src/xviewer-window.c:4489
+#: ../src/xviewer-window.c:4503
 msgid "Left"
 msgstr "Kairėn"
 
-#: ../src/xviewer-window.c:4492
+#: ../src/xviewer-window.c:4506
 msgid "Show Folder"
 msgstr "Rodyti aplanką"
 
-#: ../src/xviewer-window.c:4495
+#: ../src/xviewer-window.c:4509
 msgid "Out"
 msgstr "Mažinti"
 
-#: ../src/xviewer-window.c:4498
+#: ../src/xviewer-window.c:4512
 msgid "In"
 msgstr "Didinti"
 
-#: ../src/xviewer-window.c:4501
+#: ../src/xviewer-window.c:4515
 msgid "Normal"
 msgstr "Normalus"
 
-#: ../src/xviewer-window.c:4504
+#: ../src/xviewer-window.c:4518
 msgid "Fit"
 msgstr "Taikyti"
 
-#: ../src/xviewer-window.c:4507
+#: ../src/xviewer-window.c:4521
 msgid "Gallery"
 msgstr "Galerija"
 
-#: ../src/xviewer-window.c:4524
+#: ../src/xviewer-window.c:4538
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Perkelti į šiukšlinę"
