@@ -1957,7 +1957,7 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
             guint state;
             GdkEventKey key_event;
 
-            int old_stderr, new_stderr;
+            int new_stderr;
 
             keyval = GDK_KEY_R;
 
@@ -1987,6 +1987,7 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 
             if (key_event.time - mouse_wheel_time > 400) /* 400 msec debounce of mouse wheel */
             {
+                int old_stderr;
                                 /* When generating a mouse button event the event structure contains the device
                                    ID for the mouse (see case 3 above) and no Gdk-Warning is generated. The Key
                                    event structure has no device ID member and Gdk reports a warning that:
