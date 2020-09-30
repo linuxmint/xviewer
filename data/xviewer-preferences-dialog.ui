@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
+<!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.10"/>
   <requires lib="libpeas-gtk" version="1.0"/>
@@ -15,6 +15,9 @@
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Preferences</property>
     <property name="type_hint">dialog</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
@@ -566,12 +569,15 @@
               <object class="GtkBox" id="Box1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="border_width">12</property>
                 <property name="orientation">vertical</property>
+                <property name="spacing">6</property>
                 <child>
                   <object class="GtkLabel" id="labelM2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Scroll-wheel</property>
+                    <property name="label" translatable="yes">Scroll-wheel:</property>
+                    <property name="xalign">0</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
                     </attributes>
@@ -586,12 +592,15 @@
                   <object class="GtkGrid" id="Grid1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="margin_left">16</property>
+                    <property name="row_spacing">6</property>
+                    <property name="column_homogeneous">True</property>
                     <child>
                       <object class="GtkLabel" id="labelM4">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Scroll</property>
-                        <property name="width_chars">22</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -682,7 +691,8 @@
                       <object class="GtkLabel" id="labelM13">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Shift-Scroll</property>
+                        <property name="label" translatable="yes">Shift+Scroll</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -693,7 +703,8 @@
                       <object class="GtkLabel" id="labelM15">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Control-Scroll</property>
+                        <property name="label" translatable="yes">Control+Scroll</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -704,7 +715,8 @@
                       <object class="GtkLabel" id="labelM16">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Shift-Control-Scroll</property>
+                        <property name="label" translatable="yes">Shift+Control+Scroll</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -719,33 +731,11 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkLabel" id="labelM3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Tilt-wheel</property>
+                    <property name="label" translatable="yes">Tilt-wheel:</property>
+                    <property name="xalign">0</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
                     </attributes>
@@ -760,6 +750,9 @@
                   <object class="GtkGrid" id="Grid2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="margin_left">16</property>
+                    <property name="row_spacing">6</property>
+                    <property name="column_homogeneous">True</property>
                     <child>
                       <object class="GtkComboBoxText" id="TiltTextComboBox">
                         <property name="visible">True</property>
@@ -845,7 +838,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Tilt</property>
-                        <property name="width_chars">22</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -856,7 +849,8 @@
                       <object class="GtkLabel" id="labelM18">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Shift-Tilt</property>
+                        <property name="label" translatable="yes">Shift+Tilt</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -867,7 +861,8 @@
                       <object class="GtkLabel" id="labelM19">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Control-Tilt</property>
+                        <property name="label" translatable="yes">Control+Tilt</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -878,7 +873,8 @@
                       <object class="GtkLabel" id="labelM">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Shift-Control-Tilt</property>
+                        <property name="label" translatable="yes">Shift+Control+Tilt</property>
+                        <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>

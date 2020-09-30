@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-06 17:15-0400\n"
+"POT-Creation-Date: 2020-09-30 13:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgstr ""
 msgid "Picture;Slideshow;Graphics;"
 msgstr ""
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5105
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5119
 msgid "Image Properties"
 msgstr ""
 
@@ -398,6 +398,74 @@ msgid "Slideshow"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Scroll-wheel:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:25
+msgid "Scroll"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:26
+msgid "Zoom"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:27
+msgid "Vetical Pan"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:28
+msgid "Horizontal Pan"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:29
+msgid "Next/Previous Image"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:30
+msgid "Rotate 90 degrees"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:31
+msgid "No Action"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:32
+msgid "Shift+Scroll"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:33
+msgid "Control+Scroll"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:34
+msgid "Shift+Control+Scroll"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:35
+msgid "Tilt-wheel:"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:36
+msgid "Tilt"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:37
+msgid "Shift+Tilt"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:38
+msgid "Control+Tilt"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:39
+msgid "Shift+Control+Tilt"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:40
+msgid "Mouse"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:41
 msgid "Plugins"
 msgstr ""
 
@@ -457,10 +525,29 @@ msgid "Whether the scroll wheel should be used for zooming."
 msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:13
-msgid "Zoom multiplier"
+msgid "Mouse scroll wheel action"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:14
+msgid ""
+"Action for mouse scroll wheel. Values are 0 = zoom, 1 = Vertical pan, 2 = "
+"horizontal pan, 3 = next/prev image, 4 = rotate 90 deg CW or CCW, 5 = no "
+"action"
 msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:15
+msgid "Mouse scroll wheel + shift action"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:16
+msgid "Mouse scroll wheel + ctrl action"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:17
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -469,108 +556,108 @@ msgid ""
 "a 100% zoom increment."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Transparency color"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:22
 msgid "Use a custom background color"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid "Loop through the image sequence"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Delay in seconds until showing the next image"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Show/Hide the window toolbar."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window statusbar."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Whether the image gallery pane should be resizable."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid "Show/Hide the window side pane."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid "Close main window without asking to save changes."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid "Trash images without asking"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to the "
 "trash. It will still ask if any of the files cannot be moved to the trash "
 "and would be deleted instead."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -578,12 +665,12 @@ msgid ""
 "will show the current working directory."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -591,33 +678,33 @@ msgid ""
 "be embedded on the \"Metadata\" page."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:45
 msgid "External program to use for editing images"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:46
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
 "to the empty string to disable this feature."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:47
 msgid "Active plugins"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:48
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
 "given plugin."
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:45
+#: ../data/org.x.viewer.gschema.xml.in.h:49
 msgid "Maximize Image"
 msgstr ""
 
-#: ../data/org.x.viewer.gschema.xml.in.h:46
+#: ../data/org.x.viewer.gschema.xml.in.h:50
 msgid "Whether or not the image should be maximized."
 msgstr ""
 
@@ -840,27 +927,27 @@ msgstr ""
 msgid "Transformation failed."
 msgstr ""
 
-#: ../src/xviewer-image.c:1138
+#: ../src/xviewer-image.c:1139
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr ""
 
-#: ../src/xviewer-image.c:1287
+#: ../src/xviewer-image.c:1288
 #, c-format
 msgid "Image loading failed."
 msgstr ""
 
-#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#: ../src/xviewer-image.c:1869 ../src/xviewer-image.c:1989
 #, c-format
 msgid "No image loaded."
 msgstr ""
 
-#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#: ../src/xviewer-image.c:1877 ../src/xviewer-image.c:1998
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr ""
 
-#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#: ../src/xviewer-image.c:1887 ../src/xviewer-image.c:2009
 #, c-format
 msgid "Temporary file creation failed."
 msgstr ""
@@ -888,7 +975,7 @@ msgstr ""
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: ../src/xviewer-preferences-dialog.c:124
+#: ../src/xviewer-preferences-dialog.c:133
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
