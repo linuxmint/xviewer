@@ -58,6 +58,15 @@ struct _XviewerPreferencesDialogPrivate {
 	GtkWidget     *seconds_scale;
 
 	GtkWidget     *plugin_manager;
+
+    GtkWidget     *ScrollTextComboBox;
+    GtkWidget     *ScrollShiftTextComboBox;
+    GtkWidget     *ScrollCtrlTextComboBox;
+    GtkWidget     *ScrollShiftCtrlTextComboBox;
+    GtkWidget     *TiltTextComboBox;
+    GtkWidget     *TiltShiftTextComboBox;
+    GtkWidget     *TiltCtrlTextComboBox;
+    GtkWidget     *TiltShiftCtrlTextComboBox;
 };
 
 static GObject *instance = NULL;
@@ -190,6 +199,31 @@ xviewer_preferences_dialog_class_init (XviewerPreferencesDialogClass *klass)
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      XviewerPreferencesDialog,
 						      plugin_manager);
+
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      ScrollTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      ScrollShiftTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      ScrollCtrlTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      ScrollShiftCtrlTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      TiltTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      TiltShiftTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      TiltCtrlTextComboBox);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      TiltShiftCtrlTextComboBox);
 }
 
 static void
@@ -230,6 +264,32 @@ xviewer_preferences_dialog_init (XviewerPreferencesDialog *pref_dlg)
 				      pd_string_to_rgba_mapping,
 				      pd_rgba_to_string_mapping,
 				      NULL, NULL);
+
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_SCROLL_ACTION,
+			 priv->ScrollTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_SCROLL_SHIFT_ACTION,
+			 priv->ScrollShiftTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_SCROLL_CTRL_ACTION,
+			 priv->ScrollCtrlTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_SCROLL_SHIFT_CTRL_ACTION,
+			 priv->ScrollShiftCtrlTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_TILT_ACTION,
+			 priv->TiltTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_TILT_SHIFT_ACTION,
+			 priv->TiltShiftTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_TILT_CTRL_ACTION,
+			 priv->TiltCtrlTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_TILT_SHIFT_CTRL_ACTION,
+			 priv->TiltShiftCtrlTextComboBox, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+
 	g_object_set_data (G_OBJECT (priv->color_radio),
 			   RADIO_VALUE,
 			   GINT_TO_POINTER (XVIEWER_TRANSP_COLOR));

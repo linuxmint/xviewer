@@ -3,6 +3,7 @@
 #endif
 
 #include <stdlib.h>
+#include <fcntl.h>
 #include <math.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
@@ -14,6 +15,7 @@
 #include "xviewer-enum-types.h"
 #include "xviewer-scroll-view.h"
 #include "xviewer-debug.h"
+
 #if 0
 #include "uta.h"
 #endif
@@ -121,6 +123,8 @@ struct _XviewerScrollViewPrivate {
 	guint frame_changed_id;
 	GdkPixbuf *pixbuf;
 	cairo_surface_t *surface;
+
+	GSettings           *view_settings;
 
 	/* zoom mode, either ZOOM_MODE_FIT or ZOOM_MODE_FREE */
 	XviewerZoomMode zoom_mode;
@@ -1663,7 +1667,7 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 
             if ((gdk_pixbuf_get_width (priv->pixbuf) <= allocation.width)
                 && (gdk_pixbuf_get_height (priv->pixbuf) <= allocation.height))
-                    zoom = 1.0;                         // the 1:1 image fits in the window
+                    zoom = 1.0;                         /* the 1:1 image fits in the window */
             else
             {
                 if (DOUBLE_EQUAL(priv->zoom, 1.0))
@@ -1672,8 +1676,8 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
                     zoom = 1.0;
             }
 
-                            // the following two statements are necessary otherwise if the 1:1 image
-                            //  is dragged the alignment is thrown out
+                            /* the following two statements are necessary otherwise if the 1:1 image
+                               is dragged the alignment is thrown out */
             if (DOUBLE_EQUAL(priv->zoom,zoom_for_fit))
             {
                 priv->xofs = 0;
@@ -1795,11 +1799,7 @@ xviewer_scroll_view_button_release_event (GtkWidget *widget, GdkEventButton *eve
 	return TRUE;
 }
 
-/* Scroll event handler for the image view.  We zoom with an event without
- * modifiers rather than scroll; we use the Shift modifier to scroll.
- * Rationale: images are not primarily vertical, and in XVIEWER you scan scroll by
- * dragging the image with button 1 anyways.
- */
+/* Scroll event handler for the image view */
 static gboolean
 xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer data)
 {
@@ -1807,9 +1807,18 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 	XviewerScrollViewPrivate *priv;
 	double zoom_factor;
 	int xofs, yofs;
+    int button_combination;         /* 0 = scroll, 1 = scroll + shift, 2 = scroll + ctrl, 3 = scroll + shift + ctrl
+                                        4..7 as 0..3 but for tilt wheel */
+    int action;                     /* 0 = zoom, 1 = vertical pan, 2 = horizontal pan, 3 = next/prev image */
+    static guint32 mouse_wheel_time = 0;     /* used to debounce the mouse wheel (scroll and tilt)
+                                                         when used for next/previous image or rotate image */
+
+
 
 	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
+
+	priv->view_settings = g_settings_new (XVIEWER_CONF_VIEW);
 
 	/* Compute zoom factor and scrolling offsets; we'll only use either of them */
 	/* same as in gtkscrolledwindow.c */
@@ -1817,52 +1826,196 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 	yofs = gtk_adjustment_get_page_increment (priv->vadj) / 2;
 
 	switch (event->direction) {
-	case GDK_SCROLL_UP:
-		zoom_factor = priv->zoom_multiplier;
-		xofs = 0;
-		yofs = -yofs;
-		break;
+	    case GDK_SCROLL_UP:
+            button_combination = 0;     /* scroll wheel */
+		    break;
 
-	case GDK_SCROLL_LEFT:
-		zoom_factor = 1.0 / priv->zoom_multiplier;
-		xofs = -xofs;
-		yofs = 0;
-		break;
+	    case GDK_SCROLL_LEFT:
+            button_combination = 4;     /* tilt wheel */
+		    break;
 
-	case GDK_SCROLL_DOWN:
-		zoom_factor = 1.0 / priv->zoom_multiplier;
-		xofs = 0;
-		yofs = yofs;
-		break;
+	    case GDK_SCROLL_DOWN:
+            button_combination = 0;     /* scroll wheel */
+		    break;
 
-	case GDK_SCROLL_RIGHT:
-		zoom_factor = priv->zoom_multiplier;
-		xofs = xofs;
-		yofs = 0;
-		break;
+	    case GDK_SCROLL_RIGHT:
+            button_combination = 4;     /* tilt wheel */
+		    break;
 
-	default:
-		g_assert_not_reached ();
-		return FALSE;
+	    default:
+		    g_assert_not_reached ();
+		    return FALSE;
 	}
 
-        if (priv->scroll_wheel_zoom) {
-		if (event->state & GDK_SHIFT_MASK)
-			scroll_by (view, yofs, xofs);
-		else if (event->state & GDK_CONTROL_MASK)
+    if (event->state & GDK_SHIFT_MASK)
+        button_combination++;
+
+    if (event->state & GDK_CONTROL_MASK)
+        button_combination += 2;
+
+    switch (button_combination)
+    {
+        case 0:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_SCROLL_ACTION);
+            break;
+        case 1:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_SCROLL_SHIFT_ACTION);
+            break;
+        case 2:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_SCROLL_CTRL_ACTION);
+            break;
+        case 3:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_SCROLL_SHIFT_CTRL_ACTION);
+            break;
+        case 4:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_TILT_ACTION);
+            break;
+        case 5:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_TILT_SHIFT_ACTION);
+            break;
+        case 6:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_TILT_CTRL_ACTION);
+            break;
+        case 7:
+            action = g_settings_get_int(priv->view_settings,
+				     XVIEWER_CONF_VIEW_TILT_SHIFT_CTRL_ACTION);
+            break;
+    }
+
+    switch (action)
+    {
+        case 0:                             /* zoom */
+            if ((event->direction == GDK_SCROLL_UP) || (event->direction == GDK_SCROLL_RIGHT))
+                zoom_factor = priv->zoom_multiplier;
+            else
+                zoom_factor = 1.0 / priv->zoom_multiplier;
+            set_zoom (view, priv->zoom * zoom_factor, TRUE, event->x, event->y);
+            break;
+
+        case 1:                             /* vertical pan */
+            xofs = 0;
+            if ((event->direction == GDK_SCROLL_UP) || (event->direction == GDK_SCROLL_RIGHT))
+                yofs = -yofs;
+            else
+                yofs = yofs;
 			scroll_by (view, xofs, yofs);
-		else
-			set_zoom (view, priv->zoom * zoom_factor,
-				  TRUE, event->x, event->y);
-	} else {
-		if (event->state & GDK_SHIFT_MASK)
-			scroll_by (view, yofs, xofs);
-		else if (event->state & GDK_CONTROL_MASK)
-			set_zoom (view, priv->zoom * zoom_factor,
-				  TRUE, event->x, event->y);
-		else
+            break;
+
+        case 2:                             /* horizontal pan */
+            yofs = 0;
+            if ((event->direction == GDK_SCROLL_DOWN) || (event->direction == GDK_SCROLL_RIGHT))
+                xofs = xofs;
+            else
+                xofs = -xofs;
 			scroll_by (view, xofs, yofs);
+            break;
+
+        case 3:                             /* move to next/prev image */
+        {
+            GdkEventButton button_event;
+
+            button_event.type = GDK_BUTTON_PRESS;
+            button_event.window = gtk_widget_get_window(widget);
+            button_event.send_event = TRUE;
+            button_event.time = g_get_monotonic_time() / 1000;
+            button_event.x = 0.0;         /* coordinate parameters are irrelevant for this button press */
+            button_event.y = 0.0;
+            button_event.axes = NULL;
+            button_event.state = 0;
+            if ((event->direction == GDK_SCROLL_UP) || (event->direction == GDK_SCROLL_LEFT))
+                button_event.button = 8;
+            else
+                button_event.button = 9;
+
+            button_event.device = event->device;
+            button_event.x_root = 0.0;
+            button_event.y_root = 0.0;
+
+
+            if (button_event.time - mouse_wheel_time > 400) /* 400 msec debounce of mouse wheel */
+            {
+                gtk_main_do_event((GdkEvent *)&button_event);
+
+                mouse_wheel_time = button_event.time;
+            }
+
+            break;
         }
+
+        case 4:                             /* Rotate image 90 CW or CCW */
+        {
+           GdkKeymapKey* keys;
+            gint n_keys;
+            guint keyval;
+            guint state;
+            GdkEventKey key_event;
+
+            keyval = GDK_KEY_R;
+
+            if ((event->direction == GDK_SCROLL_UP) || (event->direction == GDK_SCROLL_LEFT))
+                state = GDK_CONTROL_MASK + GDK_SHIFT_MASK;
+            else
+                state = GDK_CONTROL_MASK;
+
+            gdk_keymap_get_entries_for_keyval(gdk_keymap_get_for_display (gtk_widget_get_display(widget)),
+                                          keyval,
+                                          &keys,
+                                          &n_keys);
+
+ 
+
+            key_event.type = GDK_KEY_PRESS;
+            key_event.window = gtk_widget_get_window(widget);
+            key_event.send_event = TRUE;
+            key_event.time = g_get_monotonic_time() / 1000;
+            key_event.state = state;
+            key_event.keyval = keyval;
+            key_event.length = 0;
+            key_event.string = NULL;
+            key_event.hardware_keycode = keys[0].keycode;
+            key_event.group = keys[0].group;
+            key_event.is_modifier = FALSE;
+
+            if (key_event.time - mouse_wheel_time > 400) /* 400 msec debounce of mouse wheel */
+            {
+                int old_stderr, new_stderr;
+                                /* When generating a mouse button event the event structure contains the device
+                                   ID for the mouse (see case 3 above) and no Gdk-Warning is generated. The Key
+                                   event structure has no device ID member and Gdk reports a warning that:
+
+                                  "Event with type 8 not holding a GdkDevice. It is most likely synthesized
+                                   outside Gdk/GTK+"
+
+                                   The following code therefore temporarily suppresses stderr to avoid showing
+                                   this warning when (given the Gdk implementation) it is expected - and untidy! */
+
+                fflush(stderr);
+                old_stderr = dup(2);
+                new_stderr = open("/dev/null", O_WRONLY);
+                dup2(new_stderr, 2);
+                close(new_stderr);
+
+                gtk_main_do_event((GdkEvent *)&key_event);
+
+                fflush(stderr);             /* restore normal stderr output */
+                dup2(old_stderr, 2);
+                close(old_stderr);
+
+                mouse_wheel_time = key_event.time;
+            }
+            break;
+        }
+
+
+        /* case 5 = no action */
+    }
 
 	return TRUE;
 }
