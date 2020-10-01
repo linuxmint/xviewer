@@ -911,6 +911,7 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 {
 	XviewerWindowPrivate *priv;
 	GFile *file;
+    gboolean is_maximized;
 
 	g_return_if_fail (XVIEWER_IS_WINDOW (window));
 	g_return_if_fail (XVIEWER_IS_IMAGE (image));
@@ -947,10 +948,17 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 			 file,
 			 (GDestroyNotify) g_object_unref);
 
+    is_maximized = gtk_window_is_maximized (GTK_WINDOW (window));
 	if (g_settings_get_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED))
-        gtk_window_maximize (GTK_WINDOW (window));
+    {
+        if (!is_maximized)
+            gtk_window_maximize (GTK_WINDOW (window));
+    }
     else
-        gtk_window_unmaximize (GTK_WINDOW (window));
+    {
+        if (is_maximized)
+            gtk_window_unmaximize (GTK_WINDOW (window));
+    }
 
 	xviewer_window_update_openwith_menu (window, image);
 }
@@ -2303,6 +2311,7 @@ xviewer_window_stop_fullscreen (XviewerWindow *window, gboolean slideshow)
 {
 	XviewerWindowPrivate *priv;
 	GtkWidget *menubar;
+    gboolean is_maximized;
 
 	xviewer_debug (DEBUG_WINDOW);
 
@@ -2354,10 +2363,18 @@ xviewer_window_stop_fullscreen (XviewerWindow *window, gboolean slideshow)
 		xviewer_window_update_fullscreen_action (window);
 	}
 
+    is_maximized = gtk_window_is_maximized (GTK_WINDOW (window));
 	if (g_settings_get_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED))
-        gtk_window_maximize (GTK_WINDOW (window));
+    {
+        if (!is_maximized)
+            gtk_window_maximize (GTK_WINDOW (window));
+    }
     else
-        gtk_window_unmaximize (GTK_WINDOW (window));
+    {
+        if (is_maximized)
+            gtk_window_unmaximize (GTK_WINDOW (window));
+    }
+
 
 	xviewer_scroll_view_show_cursor (XVIEWER_SCROLL_VIEW (priv->view));
 
