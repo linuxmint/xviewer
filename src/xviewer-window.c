@@ -3412,6 +3412,7 @@ show_force_image_delete_confirm_dialog (XviewerWindow *window,
 	gchar     *prompt;
 	guint      n_images;
 	gint       response;
+    GtkWidget *delete_button;
 
 	/* assume agreement, if the user doesn't want to be asked and deletion is available */
 	if (dont_ask_again_force_delete)
@@ -3449,10 +3450,10 @@ show_force_image_delete_confirm_dialog (XviewerWindow *window,
 	/* add buttons to the dialog */
 	if (n_images == 1) {
 		gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Cancel"), GTK_RESPONSE_CANCEL);
-		gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Delete"), GTK_RESPONSE_OK);
+		delete_button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Delete"), GTK_RESPONSE_OK);
 	} else {
 		gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Cancel"), GTK_RESPONSE_CANCEL);
-		gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Yes")   , GTK_RESPONSE_OK);
+		delete_button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Yes")   , GTK_RESPONSE_OK);
 	}
 
 	/* add 'dont ask again' button */
@@ -3467,6 +3468,7 @@ show_force_image_delete_confirm_dialog (XviewerWindow *window,
 			  TRUE,
 			  0);
 
+    gtk_widget_grab_focus (delete_button);
 	/* show dialog and get user response */
 	gtk_widget_show_all (dialog);
 	response = gtk_dialog_run (GTK_DIALOG (dialog));
