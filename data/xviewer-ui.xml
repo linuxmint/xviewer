@@ -16,7 +16,14 @@
       <separator/>
       <menuitem action="ImageProperties"/>
       <separator/>
-      <placeholder name="RecentDocuments"/>
+      <menu name="XAppFavorites" action="XAppFavorites">
+        <placeholder name="XAppFavoritesPlaceholder">
+        </placeholder>
+      </menu>
+      <menu name="RecentDocuments" action="RecentDocuments">
+        <placeholder name="RecentDocumentsPlaceholder">
+        </placeholder>
+      </menu>
       <separator/>
       <menuitem action="ImageClose"/>
     </menu>

@@ -94,6 +94,7 @@ SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 LIBPEAS_REQUIRED=0.7.4
 LIBPEAS_GTK_REQUIRED=0.7.4
+XAPP_REQUIRED=1.9.0
 
 XVIEWER_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
@@ -104,7 +105,8 @@ XVIEWER_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
              gtk+-unix-print-3.0 >= $GTK_PRINT_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED \
              libpeas-1.0 >= $LIBPEAS_REQUIRED \
-             libpeas-gtk-1.0 >= $LIBPEAS_GTK_REQUIRED"
+             libpeas-gtk-1.0 >= $LIBPEAS_GTK_REQUIRED \
+             xapp >= $XAPP_REQUIRED"
 
 # Introspection
 GOBJECT_INTROSPECTION_CHECK([0.9.3])

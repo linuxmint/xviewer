@@ -66,6 +66,7 @@
 #include <gdk/gdkkeysyms.h>
 #include <gio/gdesktopappinfo.h>
 #include <gtk/gtk.h>
+#include <libxapp/xapp-favorites.h>
 
 #include <libpeas/peas-extension-set.h>
 #include <libpeas/peas-activatable.h>
@@ -147,6 +148,7 @@ struct _XviewerWindowPrivate {
         GtkActionGroup      *actions_image;
         GtkActionGroup      *actions_gallery;
         GtkActionGroup      *actions_recent;
+        GtkActionGroup      *actions_favorites;
 
 	GtkWidget           *fullscreen_popup;
 	GSource             *fullscreen_timeout_source;
@@ -157,7 +159,8 @@ struct _XviewerWindowPrivate {
 
 	guint                fullscreen_idle_inhibit_cookie;
 
-        guint		     recent_menu_id;
+    guint                recent_menu_id;
+    guint                favorites_menu_id;
 
         XviewerJob              *load_job;
         XviewerJob              *transform_job;
@@ -1652,16 +1655,14 @@ view_zoom_changed_cb (GtkWidget *widget, double zoom, gpointer user_data)
 }
 
 static void
-xviewer_window_open_recent_cb (GtkAction *action, XviewerWindow *window)
+xviewer_window_open_by_uri (GtkAction *action, XviewerWindow *window)
 {
-	GtkRecentInfo *info;
 	const gchar *uri;
 	GSList *list = NULL;
 
-	info = g_object_get_data (G_OBJECT (action), "gtk-recent-info");
-	g_return_if_fail (info != NULL);
+	uri = g_object_get_data (G_OBJECT (action), "xviewer-doc-uri");
+	g_return_if_fail (uri != NULL);
 
-	uri = gtk_recent_info_get_uri (info);
 	list = g_slist_prepend (list, g_strdup (uri));
 
 	xviewer_application_open_uri_list (XVIEWER_APP,
@@ -1670,8 +1671,7 @@ xviewer_window_open_recent_cb (GtkAction *action, XviewerWindow *window)
 				       0,
 				       NULL);
 
-	g_slist_foreach (list, (GFunc) g_free, NULL);
-	g_slist_free (list);
+	g_slist_free_full (list, (GDestroyNotify) g_free);
 }
 
 static void
@@ -4140,7 +4140,9 @@ static const GtkActionEntry action_entries_window[] = {
 	{ "View",  NULL, N_("_View") },
 	{ "Go",    NULL, N_("_Go") },
 	{ "Tools", NULL, N_("_Tools") },
-	{ "Help",  NULL, N_("_Help") },
+    { "Help",  NULL, N_("_Help") },
+    { "XAppFavorites",  NULL, N_("_Favorites") },
+    { "RecentDocuments",  NULL, N_("_Recents") },
 
 	{ "ImageOpen", "document-open-symbolic",  N_("_Open…"), "<control>O",
 	  N_("Open a file"),
@@ -4613,7 +4615,7 @@ xviewer_window_update_recent_files_menu (XviewerWindow *window)
 
 	for (li = actions; li != NULL; li = li->next) {
 		g_signal_handlers_disconnect_by_func (GTK_ACTION (li->data),
-						      G_CALLBACK(xviewer_window_open_recent_cb),
+						      G_CALLBACK(xviewer_window_open_by_uri),
 						      window);
 
 		gtk_action_group_remove_action (priv->actions_recent,
@@ -4663,14 +4665,14 @@ xviewer_window_update_recent_files_menu (XviewerWindow *window)
 		action = gtk_action_new (action_name, label, tip, NULL);
 		gtk_action_set_always_show_image (action, TRUE);
 
-		g_object_set_data_full (G_OBJECT (action), "gtk-recent-info",
-					gtk_recent_info_ref (info),
-					(GDestroyNotify) gtk_recent_info_unref);
+        g_object_set_data_full (G_OBJECT (action), "xviewer-doc-uri",
+                                g_strdup (gtk_recent_info_get_uri (info)),
+                                (GDestroyNotify) g_free);
 
 		g_object_set (G_OBJECT (action), "icon-name", "image-x-generic", NULL);
 
 		g_signal_connect (action, "activate",
-				  G_CALLBACK (xviewer_window_open_recent_cb),
+				  G_CALLBACK (xviewer_window_open_by_uri),
 				  window);
 
 		gtk_action_group_add_action (priv->actions_recent, action);
@@ -4678,7 +4680,7 @@ xviewer_window_update_recent_files_menu (XviewerWindow *window)
 		g_object_unref (action);
 
 		gtk_ui_manager_add_ui (priv->ui_mgr, priv->recent_menu_id,
-				       "/MainMenu/Image/RecentDocuments",
+				       "/MainMenu/Image/RecentDocuments/RecentDocumentsPlaceholder",
 				       action_name, action_name,
 				       GTK_UI_MANAGER_AUTO, FALSE);
 
@@ -4695,6 +4697,120 @@ static void
 xviewer_window_recent_manager_changed_cb (GtkRecentManager *manager, XviewerWindow *window)
 {
 	xviewer_window_update_recent_files_menu (window);
+}
+
+// This should be generated in the build and shared between the desktop file and here
+const gchar *supported_mimetypes[] = {
+    "image/bmp",
+    "image/gif",
+    "image/jpeg",
+    "image/jpg",
+    "image/pjpeg",
+    "image/png",
+    "image/tiff",
+    "image/x-bmp",
+    "image/x-gray",
+    "image/x-icb",
+    "image/x-ico",
+    "image/x-png",
+    "image/x-portable-anymap",
+    "image/x-portable-bitmap",
+    "image/x-portable-graymap",
+    "image/x-portable-pixmap",
+    "image/x-xbitmap",
+    "image/x-xpixmap",
+    "image/x-pcx",
+    "image/svg+xml",
+    "image/svg+xml-compressed",
+    "image/vnd.wap.wbmp"
+};
+
+static void
+xviewer_window_update_favorites_menu (XviewerWindow *window)
+{
+    XviewerWindowPrivate *priv;
+    GList *actions = NULL, *li = NULL, *items = NULL;
+    gint count;
+    priv = window->priv;
+
+    if (priv->favorites_menu_id != 0)
+        gtk_ui_manager_remove_ui (priv->ui_mgr, priv->favorites_menu_id);
+
+    actions = gtk_action_group_list_actions (priv->actions_favorites);
+
+    for (li = actions; li != NULL; li = li->next) {
+        g_signal_handlers_disconnect_by_func (GTK_ACTION (li->data),
+                              G_CALLBACK(xviewer_window_open_by_uri),
+                              window);
+
+        gtk_action_group_remove_action (priv->actions_favorites,
+                        GTK_ACTION (li->data));
+    }
+
+    g_list_free (actions);
+
+    priv->favorites_menu_id = gtk_ui_manager_new_merge_id (priv->ui_mgr);
+
+    items = xapp_favorites_get_favorites (xapp_favorites_get_default (),
+                                          supported_mimetypes);
+    count = 1;
+
+    for (li = items; li != NULL; li = li->next) {
+        gchar *action_name;
+        gchar *label;
+        gchar *tip;
+        gchar **display_name;
+        gchar *label_filename;
+        GtkAction *action;
+        XAppFavoriteInfo *info = li->data;
+
+        action_name = g_strdup_printf ("favorite-%d", count);
+        display_name = g_strsplit (info->display_name, "_", -1);
+        label_filename = g_strjoinv ("__", display_name);
+        label = g_strdup_printf ("%s_%d. %s",
+                (is_rtl ? "\xE2\x80\x8F" : ""), count, label_filename);
+        g_free (label_filename);
+        g_strfreev (display_name);
+
+        tip = g_uri_unescape_string (info->uri, NULL);
+
+        action = gtk_action_new (action_name, label, tip, NULL);
+        gtk_action_set_always_show_image (action, TRUE);
+
+        g_object_set_data_full (G_OBJECT (action), "xviewer-doc-uri",
+                                g_strdup (info->uri),
+                                (GDestroyNotify) g_free);
+
+        g_object_set (G_OBJECT (action), "icon-name", "image-x-generic", NULL);
+
+        g_signal_connect (action, "activate",
+                  G_CALLBACK (xviewer_window_open_by_uri),
+                  window);
+
+        gtk_action_group_add_action (priv->actions_favorites, action);
+
+        g_object_unref (action);
+
+        gtk_ui_manager_add_ui (priv->ui_mgr, priv->favorites_menu_id,
+                       "/MainMenu/Image/XAppFavorites/XAppFavoritesPlaceholder",
+                       action_name, action_name,
+                       GTK_UI_MANAGER_AUTO, FALSE);
+
+        g_free (action_name);
+        g_free (label);
+        g_free (tip);
+
+        count++;
+    }
+
+    g_list_foreach (items, (GFunc) xapp_favorite_info_free, NULL);
+    g_list_free (items);
+}
+
+static void
+xviewer_window_favorites_changed_cb (GtkRecentManager *manager, XviewerWindow *window)
+{
+    xviewer_window_update_favorites_menu (window);
 }
 
 static void
@@ -5071,6 +5187,18 @@ xviewer_window_construct_ui (XviewerWindow *window)
 
 	gtk_ui_manager_insert_action_group (priv->ui_mgr, priv->actions_recent, 0);
 
+    priv->actions_favorites = gtk_action_group_new ("XAppFavoriteActions");
+    gtk_action_group_set_translation_domain (priv->actions_favorites,
+                         GETTEXT_PACKAGE);
+
+    g_signal_connect (xapp_favorites_get_default (), "changed",
+                      G_CALLBACK (xviewer_window_favorites_changed_cb),
+                      window);
+
+    xviewer_window_update_favorites_menu (window);
+
+    gtk_ui_manager_insert_action_group (priv->ui_mgr, priv->actions_favorites, 0);
+
 	priv->cbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 	gtk_box_pack_start (GTK_BOX (priv->box), priv->cbox, TRUE, TRUE, 0);
 	gtk_widget_show (priv->cbox);
@@ -5301,7 +5429,8 @@ xviewer_window_init (XviewerWindow *window)
 		xviewer_window_get_display_profile (GTK_WIDGET (window));
 #endif
 
-	window->priv->recent_menu_id = 0;
+    window->priv->recent_menu_id = 0;
+	window->priv->favorites_menu_id = 0;
 
 	window->priv->gallery_position = 0;
 	window->priv->gallery_resizable = FALSE;
@@ -5392,6 +5521,11 @@ xviewer_window_dispose (GObject *object)
 		priv->actions_recent = NULL;
 	}
 
+    if (priv->actions_favorites != NULL) {
+        g_object_unref (priv->actions_favorites);
+        priv->actions_favorites = NULL;
+    }
+
         if (priv->actions_open_with != NULL) {
                 g_object_unref (priv->actions_open_with);
                 priv->actions_open_with = NULL;
@@ -5412,6 +5546,12 @@ xviewer_window_dispose (GObject *object)
 					      window);
 
 	priv->recent_menu_id = 0;
+
+    g_signal_handlers_disconnect_by_func (xapp_favorites_get_default (),
+                                          G_CALLBACK (xviewer_window_favorites_changed_cb),
+                                          window);
+
+    priv->favorites_menu_id = 0;
 
 	xviewer_window_clear_load_job (window);
 

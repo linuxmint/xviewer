@@ -27,6 +27,7 @@ Build-Depends: cdbs (>= 0.4.41),
                librsvg2-dev (>= 2.36.2),
                libxml2-dev (>= 2.0),
                libatk1.0-dev (>= 1.32.0-2~),
+               libxapp-dev (>= 1.9.0),
                gobject-introspection (>= 0.9.12-4~),
                libgirepository1.0-dev (>= 0.9.12)
 Build-Depends-Indep: libgdk-pixbuf2.0-doc, libglib2.0-doc, libgtk-3-doc
@@ -39,7 +40,7 @@ Depends: ${shlibs:Depends},
          shared-mime-info (>= 0.20),
          gsettings-desktop-schemas (>= 2.91.92),
          gir1.2-peas-1.0,
-         xapps-common (>= 1.8.4)
+         xapps-common (>= 1.9.0)
 Recommends: librsvg2-common,
             yelp
 Description: Image viewer
