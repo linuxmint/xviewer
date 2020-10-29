@@ -3451,9 +3451,11 @@ show_force_image_delete_confirm_dialog (XviewerWindow *window,
 	if (n_images == 1) {
 		gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Cancel"), GTK_RESPONSE_CANCEL);
 		delete_button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Delete"), GTK_RESPONSE_OK);
+        gtk_style_context_add_class (gtk_widget_get_style_context (delete_button), GTK_STYLE_CLASS_DESTRUCTIVE_ACTION);
 	} else {
 		gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Cancel"), GTK_RESPONSE_CANCEL);
 		delete_button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Yes")   , GTK_RESPONSE_OK);
+        gtk_style_context_add_class (gtk_widget_get_style_context (delete_button), GTK_STYLE_CLASS_DESTRUCTIVE_ACTION);
 	}
 
 	/* add 'dont ask again' button */
