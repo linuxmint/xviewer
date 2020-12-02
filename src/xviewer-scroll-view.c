@@ -243,9 +243,7 @@ create_surface_from_pixbuf (XviewerScrollView *view, GdkPixbuf *pixbuf)
         size_invalid = TRUE;
     }
 
-	surface = gdk_window_create_similar_surface (gtk_widget_get_window (view->priv->display),
-						     CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA,
-						     w, h);
+    surface = cairo_image_surface_create (CAIRO_FORMAT_ARGB32, w, h);
 
 	if (size_invalid) {
 		return surface;
