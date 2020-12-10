@@ -15,16 +15,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-06 17:15-0400\n"
-"PO-Revision-Date: 2020-05-12 19:47+0000\n"
+"POT-Creation-Date: 2020-12-02 16:04+0000\n"
+"PO-Revision-Date: 2020-12-02 18:42+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:09+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:29+0000\n"
+"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
 "Language: nl\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -67,36 +67,36 @@ msgstr "De gekozen werkbalk verwijderen"
 msgid "Separator"
 msgstr "Scheider"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4119
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4140
 msgid "_View"
 msgstr "Beel_d"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4142
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4165
 msgid "_Toolbar"
 msgstr "_Werkbalk"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4145
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4168
 msgid "_Statusbar"
 msgstr "_Statusbalk"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4148
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4171
 msgid "_Image Gallery"
 msgstr "_Afbeeldingenoverzicht"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4151
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4174
 msgid "Side _Pane"
 msgstr "_Zijbalk"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4130
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4153
 msgid "Prefere_nces"
 msgstr "_Voorkeuren"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4122
+#: ../src/xviewer-window.c:4143
 msgid "_Help"
 msgstr "_Hulp"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4136
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4159
 msgid "_About"
 msgstr "I_nfo"
 
@@ -137,7 +137,7 @@ msgstr "Afbeeldingen bekijken en draaien"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Foto;Diavoorstelling;Afbeeldingen;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5105
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5268
 msgid "Image Properties"
 msgstr "Afbeeldingseigenschappen"
 
@@ -150,7 +150,7 @@ msgid "_Next"
 msgstr "Vol_gende"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4127
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4150
 msgid "_Close"
 msgstr "Sl_uiten"
 
@@ -271,8 +271,8 @@ msgstr "Opslaan als"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3434 ../src/xviewer-window.c:3437
-#: ../src/xviewer-window.c:3702
+#: ../src/xviewer-window.c:3452 ../src/xviewer-window.c:3456
+#: ../src/xviewer-window.c:3723
 msgid "_Cancel"
 msgstr "_Afbreken"
 
@@ -414,6 +414,58 @@ msgid "Slideshow"
 msgstr "Diavoorstelling"
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Scroll Wheel"
+msgstr "Schuifwiel"
+
+#: ../data/xviewer-preferences-dialog.ui.h:25
+msgid "Wheel"
+msgstr "Wiel"
+
+#: ../data/xviewer-preferences-dialog.ui.h:26
+msgid "Zoom"
+msgstr "Vergroten"
+
+#: ../data/xviewer-preferences-dialog.ui.h:27
+msgid "Vertical Scrolling"
+msgstr "Verticaal schuiven"
+
+#: ../data/xviewer-preferences-dialog.ui.h:28
+msgid "Horizontal Scrolling"
+msgstr "Horizontaal schuiven"
+
+#: ../data/xviewer-preferences-dialog.ui.h:29
+msgid "Previous/Next Image"
+msgstr "Vorige/volgende afbeelding"
+
+#: ../data/xviewer-preferences-dialog.ui.h:30
+msgid "Rotate 90 degrees"
+msgstr "90 graden draaien"
+
+#: ../data/xviewer-preferences-dialog.ui.h:31
+msgid "No Action"
+msgstr "Niets doen"
+
+#: ../data/xviewer-preferences-dialog.ui.h:32
+msgid "Shift + Wheel"
+msgstr "Shift + wiel"
+
+#: ../data/xviewer-preferences-dialog.ui.h:33
+msgid "Control + Wheel"
+msgstr "Control + wiel"
+
+#: ../data/xviewer-preferences-dialog.ui.h:34
+msgid "Shift + Control + Wheel"
+msgstr "Shift + Control + wiel"
+
+#: ../data/xviewer-preferences-dialog.ui.h:35
+msgid "Tilt Wheel"
+msgstr "Wiel kantelen"
+
+#: ../data/xviewer-preferences-dialog.ui.h:36
+msgid "Mouse"
+msgstr "Muis"
+
+#: ../data/xviewer-preferences-dialog.ui.h:37
 msgid "Plugins"
 msgstr "Invoegsels"
 
@@ -486,10 +538,32 @@ msgstr ""
 "Bepaalt of het muiswiel gebruikt wordt voor bepalen van de vergrotingsfactor."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:13
+msgid "Mouse scroll wheel action"
+msgstr "Actie van schuifwiel van muis"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:14
+msgid ""
+"Action for mouse scroll wheel. Values are 0 = zoom, 1 = Vertical pan, 2 = "
+"horizontal pan, 3 = next/prev image, 4 = rotate 90 deg CW or CCW, 5 = no "
+"action"
+msgstr ""
+"Actie voor schuifwiel van muis. 0 = vergroten, 1 =verticaal verslepen, 2 = "
+"horizontaal verslepen, 3 = volgende/vorige afbeelding, 4 = 90 graden met de "
+"klok mee of tegen de klok in draaien, 5 = niets doen"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:15
+msgid "Mouse scroll wheel + shift action"
+msgstr "Schuifwiel van muis + Shift-actie"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:16
+msgid "Mouse scroll wheel + ctrl action"
+msgstr "Schuifwiel van muis + Ctrl-actie"
+
+#: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid "Zoom multiplier"
 msgstr "Vergrotingsfactor"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:15
+#: ../data/org.x.viewer.gschema.xml.in.h:19
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -503,11 +577,11 @@ msgstr ""
 "zorgt ervoor dat er 5% vergroot of verkleind wordt en de waarde 1.00 zorgt "
 "voor een 100% toe- of afname."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:16
+#: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Transparency color"
 msgstr "Kleur van doorzichtigheid"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:17
+#: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -515,11 +589,11 @@ msgstr ""
 "Als de doorzichtigheidsleutel de waarde COLOR heeft, dan bepaalt deze "
 "sleutel welke kleur wordt gebruikt voor het aanduiden van doorzichtigheid."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:18
+#: ../data/org.x.viewer.gschema.xml.in.h:22
 msgid "Use a custom background color"
 msgstr "Aangepaste achtergrondkleur gebruiken"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:19
+#: ../data/org.x.viewer.gschema.xml.in.h:23
 msgid ""
 "If this is active, the color set by the background-color key will be used to "
 "fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -529,20 +603,20 @@ msgstr ""
 "'background-color' gebruikt om de achtergrond achter de afbeelding te "
 "vullen. Indien uitgeschakeld, wordt de kleur bepaald door het thema van GTK+."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:20
+#: ../data/org.x.viewer.gschema.xml.in.h:24
 msgid "Loop through the image sequence"
 msgstr "De reeks afbeeldingen blijven herhalen"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:21
+#: ../data/org.x.viewer.gschema.xml.in.h:25
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Bepaalt of de reeks van afbeeldingen eindeloos herhaald wordt."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:23
+#: ../data/org.x.viewer.gschema.xml.in.h:27
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Starten met vergrotingsfactor van meer dan 100% toestaan"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:24
+#: ../data/org.x.viewer.gschema.xml.in.h:28
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -550,11 +624,11 @@ msgstr ""
 "Indien uitgeschakeld worden kleine afbeeldingen in beginsel niet tot "
 "schermvullende grootte opgerekt."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:25
+#: ../data/org.x.viewer.gschema.xml.in.h:29
 msgid "Delay in seconds until showing the next image"
 msgstr "Pauze tussen laden van twee opeenvolgende dia's."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:26
+#: ../data/org.x.viewer.gschema.xml.in.h:30
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until "
 "the next one is shown automatically. Zero disables the automatic browsing."
@@ -563,19 +637,19 @@ msgstr ""
 "het scherm blijft staan voordat de volgende automatisch wordt weergegeven. "
 "Een waarde van nul schakelt deze functie uit."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:27
+#: ../data/org.x.viewer.gschema.xml.in.h:31
 msgid "Show/Hide the window toolbar."
 msgstr "Werkbalk tonen of verbergen."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:28
+#: ../data/org.x.viewer.gschema.xml.in.h:32
 msgid "Show/Hide the window statusbar."
 msgstr "Statusbalk tonen of verbergen."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:29
+#: ../data/org.x.viewer.gschema.xml.in.h:33
 msgid "Show/Hide the image gallery pane."
 msgstr "Het afbeeldingenoverzicht tonen of verbergen."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:30
+#: ../data/org.x.viewer.gschema.xml.in.h:34
 msgid ""
 "Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
 "for right."
@@ -583,32 +657,32 @@ msgstr ""
 "Positie van het paneel met het afbeeldingenoverzicht. Onderkant: 0, links: "
 "1, bovenkant: 2, rechts: 3."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:31
+#: ../data/org.x.viewer.gschema.xml.in.h:35
 msgid "Whether the image gallery pane should be resizable."
 msgstr ""
 "Bepaalt of het paneel met het afbeeldingenoverzicht van grootte kan "
 "veranderen."
 
 # zijbalk/informatiebalk
-#: ../data/org.x.viewer.gschema.xml.in.h:32
+#: ../data/org.x.viewer.gschema.xml.in.h:36
 msgid "Show/Hide the window side pane."
 msgstr "Zijbalk tonen of verbergen."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:33
+#: ../data/org.x.viewer.gschema.xml.in.h:37
 msgid "Show/Hide the image gallery pane scroll buttons."
 msgstr "Schuifknoppen naast het afbeeldingenoverzicht tonen of verbergen."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:34
+#: ../data/org.x.viewer.gschema.xml.in.h:38
 msgid "Close main window without asking to save changes."
 msgstr ""
 "Hoofdvenster sluiten zonder te vragen of wijzigingen opgeslagen moeten "
 "worden."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:35
+#: ../data/org.x.viewer.gschema.xml.in.h:39
 msgid "Trash images without asking"
 msgstr "Afbeeldingen zonder bevestiging in prullenbak gooien"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:36
+#: ../data/org.x.viewer.gschema.xml.in.h:40
 msgid ""
 "If activated, Xviewer won't ask for confirmation when moving images to the "
 "trash. It will still ask if any of the files cannot be moved to the trash "
@@ -619,7 +693,7 @@ msgstr ""
 "bevestiging gevraagd worden als afbeeldingen niet naar de prullenbak kunnen "
 "worden verplaatst, maar enkel definitief verwijderd kunnen worden."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:37
+#: ../data/org.x.viewer.gschema.xml.in.h:41
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images "
 "are loaded."
@@ -627,7 +701,7 @@ msgstr ""
 "Bepaalt of de bestandkiezer de afbeeldingenmap van de gebruiker toont als er "
 "geen afbeeldingen geladen zijn."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:38
+#: ../data/org.x.viewer.gschema.xml.in.h:42
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -639,14 +713,14 @@ msgstr ""
 "behulp van de speciale XDG-gebruikersmappen. Indien uitgeschakeld, of als er "
 "geen afbeeldingenmap ingesteld is, wordt de huidige map getoond."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:39
+#: ../data/org.x.viewer.gschema.xml.in.h:43
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr ""
 "Bepaalt of de metagegevenslijst in het eigenschappenvenster op een eigen "
 "pagina staat."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:40
+#: ../data/org.x.viewer.gschema.xml.in.h:44
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable "
@@ -658,11 +732,11 @@ msgstr ""
 "geschikter voor kleinere schermen, zoals bijvoorbeeld netboekjes. Indien "
 "uitgeschakeld wordt de lijst getoond op de pagina met metagegevens."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:41
+#: ../data/org.x.viewer.gschema.xml.in.h:45
 msgid "External program to use for editing images"
 msgstr "Externe toepassing voor het bewerken van afbeeldingen"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:42
+#: ../data/org.x.viewer.gschema.xml.in.h:46
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use "
 "for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
@@ -672,11 +746,11 @@ msgstr ""
 "die gebruikt moet worden voor het bewerken van afbeeldingen. Indien leeg "
 "gelaten wordt deze functie uitgeschakeld."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:43
+#: ../data/org.x.viewer.gschema.xml.in.h:47
 msgid "Active plugins"
 msgstr "Actieve invoegsels"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:44
+#: ../data/org.x.viewer.gschema.xml.in.h:48
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
@@ -685,11 +759,11 @@ msgstr ""
 "Lijst van actieve invoegsels. Deze lijst bevat niet de locatie van het "
 "invoegsel; zie daarvoor het '.xviewer-plugin'-bestand."
 
-#: ../data/org.x.viewer.gschema.xml.in.h:45
+#: ../data/org.x.viewer.gschema.xml.in.h:49
 msgid "Maximize Image"
 msgstr "Afbeelding maximaliseren"
 
-#: ../data/org.x.viewer.gschema.xml.in.h:46
+#: ../data/org.x.viewer.gschema.xml.in.h:50
 msgid "Whether or not the image should be maximized."
 msgstr "Of de afbeelding gemaximaliseerd moet worden."
 
@@ -698,7 +772,7 @@ msgid "Close _without Saving"
 msgstr "Sluiten _zonder opslaan"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4157
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4180
 msgid "_Save"
 msgstr "Op_slaan"
 
@@ -737,12 +811,12 @@ msgid "If you don't save, all your changes will be lost."
 msgstr "Als u niet opslaat, gaan alle wijzingen verloren."
 
 # opnieuw laden/herladen
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:876
-#: ../src/xviewer-window.c:4211
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:879
+#: ../src/xviewer-window.c:4234
 msgid "_Reload"
 msgstr "_Herladen"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4163
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4186
 msgid "Save _As…"
 msgstr "Opslaan _als…"
 
@@ -920,27 +994,27 @@ msgstr "Transformatie bij ontladen afbeelding."
 msgid "Transformation failed."
 msgstr "Transformatie mislukt."
 
-#: ../src/xviewer-image.c:1138
+#: ../src/xviewer-image.c:1139
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF wordt niet ondersteund voor deze bestandsoort."
 
-#: ../src/xviewer-image.c:1287
+#: ../src/xviewer-image.c:1288
 #, c-format
 msgid "Image loading failed."
 msgstr "Laden van afbeelding mislukt."
 
-#: ../src/xviewer-image.c:1868 ../src/xviewer-image.c:1988
+#: ../src/xviewer-image.c:1869 ../src/xviewer-image.c:1989
 #, c-format
 msgid "No image loaded."
 msgstr "Geen afbeelding geladen."
 
-#: ../src/xviewer-image.c:1876 ../src/xviewer-image.c:1997
+#: ../src/xviewer-image.c:1877 ../src/xviewer-image.c:1998
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "U heeft onvoldoende rechten om het bestand op te slaan."
 
-#: ../src/xviewer-image.c:1886 ../src/xviewer-image.c:2008
+#: ../src/xviewer-image.c:1887 ../src/xviewer-image.c:2009
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Het aanmaken van een tijdelijk bestand is mislukt."
@@ -964,11 +1038,11 @@ msgid "File size:"
 msgstr "Bestandgrootte:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4190
 msgid "Show the folder which contains this file in the file manager"
 msgstr "De map die dit bestand bevat openen in bestandsbeheer"
 
-#: ../src/xviewer-preferences-dialog.c:124
+#: ../src/xviewer-preferences-dialog.c:133
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1110,21 +1184,21 @@ msgstr " (ongeldige Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:541
+#: ../src/xviewer-window.c:544
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i beeldpunt  %s    %i%%"
 msgstr[1] "%i × %i beeldpunten  %s    %i%%"
 
-#: ../src/xviewer-window.c:878 ../src/xviewer-window.c:2851
+#: ../src/xviewer-window.c:881 ../src/xviewer-window.c:2868
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Ver_bergen"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:888
+#: ../src/xviewer-window.c:891
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1133,7 +1207,7 @@ msgstr ""
 "De afbeelding '%s' is door een externe toepassing gewijzigd.\n"
 "Wilt u de afbeelding herladen?"
 
-#: ../src/xviewer-window.c:1057
+#: ../src/xviewer-window.c:1068
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "'%s' gebruiken om de gekozen afbeelding te openen"
@@ -1143,22 +1217,22 @@ msgstr "'%s' gebruiken om de gekozen afbeelding te openen"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1213
+#: ../src/xviewer-window.c:1224
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Afbeelding '%s' opslaan… (%u/%u)"
 
-#: ../src/xviewer-window.c:1608
+#: ../src/xviewer-window.c:1619
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Afbeelding '%s' openen…"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2195
+#: ../src/xviewer-window.c:2203
 msgid "Viewing a slideshow"
 msgstr "Diapresentatie aan de gang"
 
-#: ../src/xviewer-window.c:2426
+#: ../src/xviewer-window.c:2443
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1167,19 +1241,19 @@ msgstr ""
 "Fout bij afdrukken van bestand:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2779 ../src/xviewer-window.c:2794
+#: ../src/xviewer-window.c:2796 ../src/xviewer-window.c:2811
 msgid "Error launching System Settings: "
 msgstr "Fout bij het opstarten van systeeminstellingen: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2849
+#: ../src/xviewer-window.c:2866
 msgid "_Open Background Preferences"
 msgstr "Achtergrondvoorkeuren _openen"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2865
+#: ../src/xviewer-window.c:2882
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1188,11 +1262,11 @@ msgstr ""
 "De afbeelding '%s' is als bureaubladachtergrond ingesteld.\n"
 "Wilt u de weergaveopties wijzigen?"
 
-#: ../src/xviewer-window.c:3332
+#: ../src/xviewer-window.c:3349
 msgid "Saving image locally…"
 msgstr "Afbeelding lokaal opslaan…"
 
-#: ../src/xviewer-window.c:3410
+#: ../src/xviewer-window.c:3428
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1201,7 +1275,7 @@ msgstr ""
 "Weet u zeker dat u '%s' voorgoed\n"
 "wilt verwijderen?"
 
-#: ../src/xviewer-window.c:3413
+#: ../src/xviewer-window.c:3431
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1216,41 +1290,41 @@ msgstr[1] ""
 "Weet u zeker dat u de %d gekozen\n"
 "afbeeldingen voorgoed wilt verwijderen?"
 
-#: ../src/xviewer-window.c:3435 ../src/xviewer-window.c:3713
+#: ../src/xviewer-window.c:3453 ../src/xviewer-window.c:3734
 msgid "_Delete"
 msgstr "Verwij_deren"
 
-#: ../src/xviewer-window.c:3438 ../src/xviewer-window.c:3715
+#: ../src/xviewer-window.c:3457 ../src/xviewer-window.c:3736
 msgid "_Yes"
 msgstr "_Ja"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3442 ../src/xviewer-window.c:3707
+#: ../src/xviewer-window.c:3462 ../src/xviewer-window.c:3728
 msgid "Do _not ask again during this session"
 msgstr "_Niet nogmaals vragen tijdens deze sessie"
 
-#: ../src/xviewer-window.c:3486
+#: ../src/xviewer-window.c:3507
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Kon afbeeldingsbestand niet ophalen"
 
-#: ../src/xviewer-window.c:3502
+#: ../src/xviewer-window.c:3523
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Kon informatie over afbeeldingsbestand niet ophalen"
 
-#: ../src/xviewer-window.c:3518 ../src/xviewer-window.c:3774
+#: ../src/xviewer-window.c:3539 ../src/xviewer-window.c:3795
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Kon bestand niet verwijderen"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3568 ../src/xviewer-window.c:3870
+#: ../src/xviewer-window.c:3589 ../src/xviewer-window.c:3891
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Fout bij het verwijderen van afbeelding %s"
 
-#: ../src/xviewer-window.c:3675
+#: ../src/xviewer-window.c:3696
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1259,7 +1333,7 @@ msgstr ""
 "Weet u zeker dat u '%s' naar\n"
 "de prullenbak wilt verplaatsen?"
 
-#: ../src/xviewer-window.c:3678
+#: ../src/xviewer-window.c:3699
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1268,7 +1342,7 @@ msgstr ""
 "Er kon geen prullenbak voor '%s' gevonden worden. Weet u zeker dat u deze "
 "afbeelding voorgoed wilt verwijderen?"
 
-#: ../src/xviewer-window.c:3683
+#: ../src/xviewer-window.c:3704
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1283,7 +1357,7 @@ msgstr[1] ""
 "Weet u zeker dat u de %d gekozen\n"
 "afbeeldingen naar de prullenbak wilt verplaatsen?"
 
-#: ../src/xviewer-window.c:3688
+#: ../src/xviewer-window.c:3709
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1291,324 +1365,332 @@ msgstr ""
 "Enkele gekozen afbeeldingen kunnen niet in de prullenbak gegooid worden en "
 "zullen voorgoed worden verwijderd. Weet u zeker dat u wilt doorgaan?"
 
-#: ../src/xviewer-window.c:3705 ../src/xviewer-window.c:4193
-#: ../src/xviewer-window.c:4226
+#: ../src/xviewer-window.c:3726 ../src/xviewer-window.c:4216
+#: ../src/xviewer-window.c:4249
 msgid "Move to _Trash"
 msgstr "In _prullenbak gooien"
 
-#: ../src/xviewer-window.c:3752 ../src/xviewer-window.c:3766
+#: ../src/xviewer-window.c:3773 ../src/xviewer-window.c:3787
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Kon de prullenbak niet benaderen."
 
-#: ../src/xviewer-window.c:4117
+#: ../src/xviewer-window.c:4138
 msgid "_File"
 msgstr "_Bestand"
 
-#: ../src/xviewer-window.c:4118
+#: ../src/xviewer-window.c:4139
 msgid "_Edit"
 msgstr "Be_werken"
 
-#: ../src/xviewer-window.c:4120
+#: ../src/xviewer-window.c:4141
 msgid "_Go"
 msgstr "_Ga naar"
 
-#: ../src/xviewer-window.c:4121
+#: ../src/xviewer-window.c:4142
 msgid "_Tools"
 msgstr "_Gereedschappen"
 
-#: ../src/xviewer-window.c:4124
+#: ../src/xviewer-window.c:4144
+msgid "_Favorites"
+msgstr "_Favorieten"
+
+#: ../src/xviewer-window.c:4145
+msgid "_Recents"
+msgstr "_Recent"
+
+#: ../src/xviewer-window.c:4147
 msgid "_Open…"
 msgstr "_Openen…"
 
-#: ../src/xviewer-window.c:4125
+#: ../src/xviewer-window.c:4148
 msgid "Open a file"
 msgstr "Een bestand openen"
 
-#: ../src/xviewer-window.c:4128
+#: ../src/xviewer-window.c:4151
 msgid "Close window"
 msgstr "Venster sluiten"
 
-#: ../src/xviewer-window.c:4131
+#: ../src/xviewer-window.c:4154
 msgid "Preferences for Image Viewer"
 msgstr "Voorkeuren voor Afbeeldingkijker"
 
-#: ../src/xviewer-window.c:4133
+#: ../src/xviewer-window.c:4156
 msgid "_Contents"
 msgstr "In_houd"
 
-#: ../src/xviewer-window.c:4134
+#: ../src/xviewer-window.c:4157
 msgid "Help on this application"
 msgstr "Hulptekst voor dit programma"
 
-#: ../src/xviewer-window.c:4137
+#: ../src/xviewer-window.c:4160
 msgid "About this application"
 msgstr "Informatie over deze toepassing"
 
-#: ../src/xviewer-window.c:4143
+#: ../src/xviewer-window.c:4166
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Toont of verbergt de werkbalk van het huidige venster"
 
-#: ../src/xviewer-window.c:4146
+#: ../src/xviewer-window.c:4169
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Toont of verbergt de statusbalk van het huidige venster"
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4172
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "Toont of verbergt het afbeeldingenoverzicht in het huidige venster"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4175
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Toont of verbergt de zijbalk in het huidige venster"
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4181
 msgid "Save changes in currently selected images"
 msgstr "Wijzigingen in de thans gekozen afbeeldingen opslaan"
 
-#: ../src/xviewer-window.c:4160
+#: ../src/xviewer-window.c:4183
 msgid "Open _with"
 msgstr "Openen _met"
 
-#: ../src/xviewer-window.c:4161
+#: ../src/xviewer-window.c:4184
 msgid "Open the selected image with a different application"
 msgstr "De gekozen afbeelding openen met een andere toepassing"
 
-#: ../src/xviewer-window.c:4164
+#: ../src/xviewer-window.c:4187
 msgid "Save the selected images with a different name"
 msgstr "De gekozen afbeeldingen opslaan onder een andere naam"
 
-#: ../src/xviewer-window.c:4166
+#: ../src/xviewer-window.c:4189
 msgid "Show Containing _Folder"
 msgstr "Bovenliggende _map tonen"
 
-#: ../src/xviewer-window.c:4169
+#: ../src/xviewer-window.c:4192
 msgid "_Print…"
 msgstr "Af_drukken…"
 
-#: ../src/xviewer-window.c:4170
+#: ../src/xviewer-window.c:4193
 msgid "Print the selected image"
 msgstr "De gekozen afbeelding afdrukken"
 
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4195
 msgid "Prope_rties"
 msgstr "_Eigenschappen"
 
-#: ../src/xviewer-window.c:4173
+#: ../src/xviewer-window.c:4196
 msgid "Show the properties and metadata of the selected image"
 msgstr "De eigenschappen en metagegevens van de gekozen afbeelding tonen"
 
-#: ../src/xviewer-window.c:4175
+#: ../src/xviewer-window.c:4198
 msgid "_Undo"
 msgstr "_Ongedaan maken"
 
-#: ../src/xviewer-window.c:4176
+#: ../src/xviewer-window.c:4199
 msgid "Undo the last change in the image"
 msgstr "De laatste wijziging in de afbeelding ongedaan maken"
 
-#: ../src/xviewer-window.c:4178
+#: ../src/xviewer-window.c:4201
 msgid "Flip _Horizontal"
 msgstr "_Horizontaal omdraaien"
 
-#: ../src/xviewer-window.c:4179
+#: ../src/xviewer-window.c:4202
 msgid "Mirror the image horizontally"
 msgstr "De afbeelding horizontaal spiegelen"
 
-#: ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4204
 msgid "Flip _Vertical"
 msgstr "_Verticaal omdraaien"
 
-#: ../src/xviewer-window.c:4182
+#: ../src/xviewer-window.c:4205
 msgid "Mirror the image vertically"
 msgstr "De afbeelding verticaal spiegelen"
 
-#: ../src/xviewer-window.c:4184
+#: ../src/xviewer-window.c:4207
 msgid "_Rotate Clockwise"
 msgstr "_Met de klok mee draaien"
 
-#: ../src/xviewer-window.c:4185
+#: ../src/xviewer-window.c:4208
 msgid "Rotate the image 90 degrees to the right"
 msgstr "De afbeelding 90 graden rechtsom draaien"
 
-#: ../src/xviewer-window.c:4187
+#: ../src/xviewer-window.c:4210
 msgid "Rotate Counterc_lockwise"
 msgstr "_Tegen de klok in draaien"
 
-#: ../src/xviewer-window.c:4188
+#: ../src/xviewer-window.c:4211
 msgid "Rotate the image 90 degrees to the left"
 msgstr "De afbeelding 90 graden linksom draaien"
 
-#: ../src/xviewer-window.c:4190
+#: ../src/xviewer-window.c:4213
 msgid "Set as Wa_llpaper"
 msgstr "Als bureaublada_chtergrond instellen"
 
-#: ../src/xviewer-window.c:4191
+#: ../src/xviewer-window.c:4214
 msgid "Set the selected image as the wallpaper"
 msgstr "De gekozen afbeelding als bureaubladachtergrond instellen"
 
-#: ../src/xviewer-window.c:4194
+#: ../src/xviewer-window.c:4217
 msgid "Move the selected image to the trash folder"
 msgstr "De gekozen afbeelding naar de prullenbak verplaatsen"
 
-#: ../src/xviewer-window.c:4196
+#: ../src/xviewer-window.c:4219
 msgid "_Delete Image"
 msgstr "Afbeelding verwij_deren"
 
-#: ../src/xviewer-window.c:4197
+#: ../src/xviewer-window.c:4220
 msgid "Delete the selected image"
 msgstr "De gekozen afbeelding verwijderen"
 
-#: ../src/xviewer-window.c:4199
+#: ../src/xviewer-window.c:4222
 msgid "_Copy"
 msgstr "_Kopiëren"
 
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-window.c:4223
 msgid "Copy the selected image to the clipboard"
 msgstr "Het gekozen element naar het klembord kopiëren"
 
-#: ../src/xviewer-window.c:4202 ../src/xviewer-window.c:4214
-#: ../src/xviewer-window.c:4217
+#: ../src/xviewer-window.c:4225 ../src/xviewer-window.c:4237
+#: ../src/xviewer-window.c:4240
 msgid "_Zoom In"
 msgstr "Ver_groten"
 
-#: ../src/xviewer-window.c:4203 ../src/xviewer-window.c:4215
+#: ../src/xviewer-window.c:4226 ../src/xviewer-window.c:4238
 msgid "Enlarge the image"
 msgstr "De afbeelding vergroten"
 
-#: ../src/xviewer-window.c:4205 ../src/xviewer-window.c:4220
+#: ../src/xviewer-window.c:4228 ../src/xviewer-window.c:4243
 msgid "Zoom _Out"
 msgstr "Ver_kleinen"
 
-#: ../src/xviewer-window.c:4206 ../src/xviewer-window.c:4218
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4229 ../src/xviewer-window.c:4241
+#: ../src/xviewer-window.c:4244
 msgid "Shrink the image"
 msgstr "De afbeelding verkleinen"
 
-#: ../src/xviewer-window.c:4208 ../src/xviewer-window.c:4223
+#: ../src/xviewer-window.c:4231 ../src/xviewer-window.c:4246
 msgid "_Normal Size"
 msgstr "_Normale afmetingen"
 
-#: ../src/xviewer-window.c:4209 ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4232 ../src/xviewer-window.c:4247
 msgid "Show the image at its normal size"
 msgstr "Afbeelding weergeven op haar normale grootte"
 
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:4235
 msgid "Reload the image"
 msgstr "Herlaad de afbeelding"
 
-#: ../src/xviewer-window.c:4232
+#: ../src/xviewer-window.c:4255
 msgid "_Fullscreen"
 msgstr "Scherm_vullend"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4256
 msgid "Show the current image in fullscreen mode"
 msgstr "Huidige afbeelding weergeven in volledig scherm-modus"
 
-#: ../src/xviewer-window.c:4235
+#: ../src/xviewer-window.c:4258
 msgid "Pause Slideshow"
 msgstr "Diavoorstelling pauzeren"
 
-#: ../src/xviewer-window.c:4236
+#: ../src/xviewer-window.c:4259
 msgid "Pause or resume the slideshow"
 msgstr "De diavoorstelling pauzeren of hervatten"
 
-#: ../src/xviewer-window.c:4238
+#: ../src/xviewer-window.c:4261
 msgid "_Best Fit"
 msgstr "_Best passend"
 
-#: ../src/xviewer-window.c:4239
+#: ../src/xviewer-window.c:4262
 msgid "Fit the image to the window"
 msgstr "Afbeeldingsgrootte aanpassen aan het venster"
 
-#: ../src/xviewer-window.c:4244 ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4267 ../src/xviewer-window.c:4282
 msgid "_Previous Image"
 msgstr "Vo_rige afbeelding"
 
-#: ../src/xviewer-window.c:4245
+#: ../src/xviewer-window.c:4268
 msgid "Go to the previous image of the gallery"
 msgstr "Naar de vorige afbeelding in het overzicht gaan"
 
-#: ../src/xviewer-window.c:4247
+#: ../src/xviewer-window.c:4270
 msgid "_Next Image"
 msgstr "V_olgende afbeelding"
 
-#: ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4271
 msgid "Go to the next image of the gallery"
 msgstr "Naar de volgende afbeelding in het overzicht gaan"
 
-#: ../src/xviewer-window.c:4250 ../src/xviewer-window.c:4262
+#: ../src/xviewer-window.c:4273 ../src/xviewer-window.c:4285
 msgid "_First Image"
 msgstr "_Eerste afbeelding"
 
-#: ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4274
 msgid "Go to the first image of the gallery"
 msgstr "Naar de eerste afbeelding in het overzicht gaan"
 
-#: ../src/xviewer-window.c:4253 ../src/xviewer-window.c:4265
+#: ../src/xviewer-window.c:4276 ../src/xviewer-window.c:4288
 msgid "_Last Image"
 msgstr "_Laatste afbeelding"
 
-#: ../src/xviewer-window.c:4254
+#: ../src/xviewer-window.c:4277
 msgid "Go to the last image of the gallery"
 msgstr "Naar de laatste afbeelding in het overzicht gaan"
 
-#: ../src/xviewer-window.c:4256
+#: ../src/xviewer-window.c:4279
 msgid "_Random Image"
 msgstr "_Willekeurige afbeelding"
 
-#: ../src/xviewer-window.c:4257
+#: ../src/xviewer-window.c:4280
 msgid "Go to a random image of the gallery"
 msgstr "Naar een willekeurige afbeelding in het overzicht gaan"
 
-#: ../src/xviewer-window.c:4415
+#: ../src/xviewer-window.c:4438
 msgid "S_lideshow"
 msgstr "_Diavoorstelling"
 
-#: ../src/xviewer-window.c:4416
+#: ../src/xviewer-window.c:4439
 msgid "Start a slideshow view of the images"
 msgstr "Diavoorstelling van de afbeeldingen beginnen"
 
-#: ../src/xviewer-window.c:4488
+#: ../src/xviewer-window.c:4511
 msgid "Previous"
 msgstr "Vorige"
 
-#: ../src/xviewer-window.c:4493
+#: ../src/xviewer-window.c:4516
 msgid "Next"
 msgstr "Volgende"
 
-#: ../src/xviewer-window.c:4500
+#: ../src/xviewer-window.c:4523
 msgid "Right"
 msgstr "Rechts"
 
-#: ../src/xviewer-window.c:4503
+#: ../src/xviewer-window.c:4526
 msgid "Left"
 msgstr "Links"
 
-#: ../src/xviewer-window.c:4506
+#: ../src/xviewer-window.c:4529
 msgid "Show Folder"
 msgstr "Map weergeven"
 
-#: ../src/xviewer-window.c:4509
+#: ../src/xviewer-window.c:4532
 msgid "Out"
 msgstr "Uit"
 
-#: ../src/xviewer-window.c:4512
+#: ../src/xviewer-window.c:4535
 msgid "In"
 msgstr "In"
 
-#: ../src/xviewer-window.c:4515
+#: ../src/xviewer-window.c:4538
 msgid "Normal"
 msgstr "Normaal"
 
-#: ../src/xviewer-window.c:4518
+#: ../src/xviewer-window.c:4541
 msgid "Fit"
 msgstr "Passend maken"
 
-#: ../src/xviewer-window.c:4521
+#: ../src/xviewer-window.c:4544
 msgid "Gallery"
 msgstr "Overzicht"
 
-#: ../src/xviewer-window.c:4538
+#: ../src/xviewer-window.c:4561
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "In prullenbak gooien"
