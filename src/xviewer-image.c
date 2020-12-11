@@ -652,7 +652,42 @@ xviewer_image_get_file_info (XviewerImage *img,
 			 gchar **mime_type,
 			 GError **error)
 {
+    const gint BUFFER_SIZE = 100;            /* give the recognition based on content a reasonable chance */
+
+    gboolean file_type_unknown = TRUE;
+
+	static const struct magic {                                 /* 'magic number' code based on code from pix */
+		const unsigned int offset;
+		const unsigned int length;
+		const char * const id_bytes;
+		const char * const mime_type_str;
+	}
+	magic_type_ids [] = {
+		{ 0,  8, "\x89PNG\x0d\x0a\x1a\x0a", "image/png" },
+		{ 0,  4, "MM\x00\x2a",              "image/tiff" },
+		{ 0,  4, "II\x2a\x00",              "image/tiff" },
+		{ 0,  4, "GIF8",                    "image/gif" },
+		{ 0,  3, "\xff\xd8\xff",            "image/jpeg" },
+		{ 0,  2, "BM",                      "image/bmp" },
+		{ 0,  4, "\x00\x00\x01\x00",        "image/vnd.microsoft.icon" },
+		{ 8,  7, "WEBPVP8",                 "image/webp" }      /* whilst webp is not currently (9.12.2020)
+                                                                   supported it has been included here in
+                                                                   case support is added */
+
+                                                                /* note that there are no magic numbers for
+                                                                   AVIF and svg type files - so no tests here */
+	};
+
+
+    /* Note that as of 9.12.2020 g_file_query_info() and g_content_type_guess() both return application/octet-stream
+       for AVIF files (with AVIF extensions. The correct MIME type is image/avif - assume that this will be corrected
+       before xviewer supports AVIF files. */
+
 	GFileInfo *file_info;
+    GFileInputStream *input_stream;
+    guchar ip_buffer [BUFFER_SIZE];
+    gint bytes_read;
+
 
 	file_info = g_file_query_info (img->priv->file,
 				       G_FILE_ATTRIBUTE_STANDARD_SIZE ","
@@ -674,8 +709,60 @@ xviewer_image_get_file_info (XviewerImage *img,
 		if (bytes)
 			*bytes = g_file_info_get_size (file_info);
 
+        /* g_file_query_info() (as of 9.12.2020) returns a MIME type based on the file
+            extension - even if the extension is not the correct one for the file content.
+            If there is no extension it examines the content of the file to determine
+            the type. Use the result returned by g_file_query_info() as the default to
+            be used if we can't determine the type based on content, otherwise use the type based
+            on content rather than the file extension */
 		if (mime_type)
-			*mime_type = g_strdup (g_file_info_get_content_type (file_info));
+        {
+            GFileInputStream *input_stream;
+            guchar ip_buffer [BUFFER_SIZE];
+            gint bytes_read;
+
+            input_stream = g_file_read(img->priv->file,
+                                       NULL, error);
+            if (input_stream)
+            {
+                bytes_read = g_input_stream_read(G_INPUT_STREAM (input_stream),
+                                                 ip_buffer,
+                                                 BUFFER_SIZE,
+                                                 NULL, error);
+                g_object_unref(G_OBJECT(input_stream));
+
+                if (bytes_read != 0)
+                {                               /* try to determine file type based on content */
+                    gint i;
+
+                    for (i = 0; i < G_N_ELEMENTS (magic_type_ids); i++) {
+                        if ((magic_type_ids[i].offset + magic_type_ids[i].length) <= bytes_read)
+                            if (! memcmp (ip_buffer + magic_type_ids[i].offset, magic_type_ids[i].id_bytes, magic_type_ids[i].length))
+                                {
+                                    *mime_type =  g_strdup(magic_type_ids[i].mime_type_str);
+                                    file_type_unknown = FALSE;
+                                    break;
+                                }
+                    }
+                }
+
+                if (file_type_unknown)
+                {
+                    char *content_type;
+	                gboolean    result_uncertain = FALSE;
+                    content_type = g_content_type_guess (NULL, ip_buffer, bytes_read, &result_uncertain);
+                    if (content_type != NULL)
+                    {
+                        *mime_type =  g_strdup(content_type);
+                        file_type_unknown = FALSE;
+                        g_free(content_type);
+                    }
+                }
+            }
+
+            if (file_type_unknown)
+                *mime_type = g_strdup (g_file_info_get_content_type (file_info));
+        }
 		g_object_unref (file_info);
 	}
 }
