@@ -156,6 +156,8 @@ struct _XviewerWindowPrivate {
 	gboolean             slideshow_loop;
 	gint                 slideshow_switch_timeout;
 	GSource             *slideshow_switch_source;
+    gboolean             slideshow_spacebar_pause;
+    gboolean             slideshow_active;
 
 	guint                fullscreen_idle_inhibit_cookie;
 
@@ -1862,6 +1864,8 @@ slideshow_set_timeout (XviewerWindow *window)
 
 	slideshow_clear_timeout (window);
 
+    window->priv->slideshow_active = TRUE;
+
 	if (window->priv->slideshow_switch_timeout <= 0)
 		return;
 
@@ -2286,6 +2290,11 @@ xviewer_window_run_fullscreen (XviewerWindow *window, gboolean slideshow)
 					    XVIEWER_CONF_FULLSCREEN_SECONDS);
 
 		slideshow_set_timeout (window);
+
+		priv->slideshow_spacebar_pause =
+			g_settings_get_boolean (priv->fullscreen_settings,
+						XVIEWER_CONF_FULLSCREEN_SPACEBAR_PAUSE);
+
 	}
 
 	upscale = g_settings_get_boolean (priv->fullscreen_settings,
@@ -2316,6 +2325,8 @@ xviewer_window_stop_fullscreen (XviewerWindow *window, gboolean slideshow)
 	xviewer_debug (DEBUG_WINDOW);
 
 	priv = window->priv;
+
+    priv->slideshow_active = FALSE;
 
 	if (priv->mode != XVIEWER_WINDOW_MODE_SLIDESHOW &&
 	    priv->mode != XVIEWER_WINDOW_MODE_FULLSCREEN) return;
@@ -5407,6 +5418,7 @@ xviewer_window_init (XviewerWindow *window)
 	window->priv->fullscreen_timeout_source = NULL;
 	window->priv->slideshow_loop = FALSE;
 	window->priv->slideshow_switch_timeout = 0;
+    window->priv->slideshow_active = FALSE;
 	window->priv->slideshow_switch_source = NULL;
 	window->priv->fullscreen_idle_inhibit_cookie = 0;
 
@@ -5653,6 +5665,10 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 	GdkModifierType modifiers;
 
 	modifiers = gtk_accelerator_get_default_mod_mask ();
+
+    if ((XVIEWER_WINDOW (widget)->priv->slideshow_spacebar_pause) && (event->keyval == GDK_KEY_space) &&
+        (XVIEWER_WINDOW (widget)->priv->slideshow_active))
+        event->keyval = GDK_KEY_P;              /* spacebar is configured to pause/resume slideshows */
 
 	switch (event->keyval) {
 	case GDK_KEY_space:
