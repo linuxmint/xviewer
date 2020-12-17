@@ -125,6 +125,11 @@
       <summary>Delay in seconds until showing the next image</summary>
       <description>A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero  disables the automatic browsing.</description>
     </key>
+    <key name="space-pause" type="b">
+      <default>false</default>
+      <summary>Spacebar pauses and resumes slideshows</summary>
+      <description>Whether the spacebar should pause and resume slideshows.</description>
+    </key>
   </schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.x.viewer.ui" path="/org/x/viewer/ui/">
     <key name="toolbar" type="b">

@@ -60,9 +60,10 @@
 
 #define XVIEWER_CONF_WINDOW_MAXIMIZED			"maximized"
 
-#define XVIEWER_CONF_FULLSCREEN_LOOP		"loop"
-#define XVIEWER_CONF_FULLSCREEN_UPSCALE		"upscale"
-#define XVIEWER_CONF_FULLSCREEN_SECONDS		"seconds"
+#define XVIEWER_CONF_FULLSCREEN_LOOP		    "loop"
+#define XVIEWER_CONF_FULLSCREEN_UPSCALE		    "upscale"
+#define XVIEWER_CONF_FULLSCREEN_SECONDS		    "seconds"
+#define XVIEWER_CONF_FULLSCREEN_SPACEBAR_PAUSE  "space-pause"
 
 #define XVIEWER_CONF_UI_TOOLBAR			"toolbar"
 #define XVIEWER_CONF_UI_STATUSBAR			"statusbar"

@@ -56,6 +56,7 @@ struct _XviewerPreferencesDialogPrivate {
 	GtkWidget     *upscale_check;
 	GtkWidget     *loop_check;
 	GtkWidget     *seconds_scale;
+    GtkWidget     *pause_resume_check;
 
 	GtkWidget     *plugin_manager;
 
@@ -195,6 +196,9 @@ xviewer_preferences_dialog_class_init (XviewerPreferencesDialogClass *klass)
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      XviewerPreferencesDialog,
 						      seconds_scale);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
+						      pause_resume_check);
 
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      XviewerPreferencesDialog,
@@ -352,6 +356,10 @@ xviewer_preferences_dialog_init (XviewerPreferencesDialog *pref_dlg)
 
 	g_settings_bind (priv->fullscreen_settings, XVIEWER_CONF_FULLSCREEN_LOOP,
 			 priv->loop_check, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+
+	g_settings_bind (priv->fullscreen_settings, XVIEWER_CONF_FULLSCREEN_SPACEBAR_PAUSE,
+			 priv->pause_resume_check, "active",
 			 G_SETTINGS_BIND_DEFAULT);
 
 	scale_adjustment = gtk_range_get_adjustment (GTK_RANGE (priv->seconds_scale));
