@@ -1180,6 +1180,29 @@ xviewer_image_real_load (XviewerImage *img,
 			break;
 		}
 
+        /* GIMP (version 2.10.22 and probably all versions since the option of saving colour space information was added)
+           saves BMP files with a BITMAPV5HEADER when the colour space information is to be included. It sets the bV5Compression
+           member to BI_BITFIELDS (3) for all six variants of BMPs that it saves. This indicates that there is no compression of
+           the data and that the header members bV5RedMask, bV5GreenMask and bV5BlueMask hold the bit masks for the three colours.
+           The problem is that the Microsoft specification for BITMAPV5HEADER says that BI_BITFIELDS is only valid for 16 and 32-bit
+           files (quite why is questionable) and GIMP sets the mask members correctly but technically the setting of the compression
+           field is illegal and causes  gdk_pixbuf_loader_write() to return an error. (The threee variants of 16-bit files and the
+           two variants of 32-bit files have no problems)
+
+           The following statements check for the specific case of a 24-bit BMP file with colour space information included and with the
+           compression type set incorrectly. For such files the bV5Compression member value is changed to BI_RGB (0) - a simple uncompressed
+           format. */
+
+        if ((bytes_read >= 0x1F) && (bytes_read_total == 0)){   /* only check the start of the file */
+            if ((buffer[0] == 'B') && (buffer[1] == 'M')   /* if the file has the 'magic numbers' for a BMP... */
+                && (buffer[0x0E] == 0x7C)                  /* ...and it has the 124. byte BITMAPv5HEADER (colour space info included)... */
+                && (buffer[0x1C] == 24)                    /* ...and it has 24 bits per pixel... */
+                && (buffer[0x1E] == 3))                    /* ...and bV5Compression is set to BI_BITFIELDS */
+            {
+                buffer[0x1E] = 0;                          /* set bV5Compression member to BI_RGB */
+            }
+        }
+
 		if ((read_image_data || read_only_dimension)) {
 #ifdef HAVE_RSVG
 			if (use_rsvg) {
