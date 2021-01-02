@@ -18,15 +18,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2020-12-02 16:04+0000\n"
-"PO-Revision-Date: 2020-12-03 10:08+0000\n"
-"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
+"PO-Revision-Date: 2021-01-02 11:04+0000\n"
+"Last-Translator: Toni Estevez <toni.estevez@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-12-10 10:29+0000\n"
-"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
+"X-Launchpad-Export-Date: 2021-01-02 14:16+0000\n"
+"X-Generator: Launchpad (build 34b3ffd45c9543b7f7aa5aa313925241e9e7ca3f)\n"
 "Language: \n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -104,7 +104,7 @@ msgstr "Acerca _de"
 
 #: ../data/xviewer-app-menu.xml.h:9
 msgid "_Quit"
-msgstr "_Quitar"
+msgstr "_Salir"
 
 #: ../data/xviewer.appdata.xml.in.h:1
 msgid ""
@@ -112,7 +112,7 @@ msgid ""
 "view single images or images in a collection."
 msgstr ""
 "Xviewer es un visor de imágenes compatible con muchos formatos. Se puede "
-"usar para ver imágenes individuales o las imágenes de una colección."
+"usar para mostrar imágenes individuales o las imágenes de una colección."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -120,7 +120,7 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
-"Xviewer también permite ver las imágenes como una presentación de "
+"Xviewer también permite mostrar las imágenes como una presentación de "
 "diapositivas a pantalla completa o configurar una imagen como fondo del "
 "escritorio. Lee las etiquetas de la cámara y rota las imágenes "
 "automáticamente para mostrarlas con la orientación vertical u horizontal "
@@ -132,7 +132,7 @@ msgstr "Visor de imágenes"
 
 #: ../data/xviewer.desktop.in.in.h:2
 msgid "Browse and rotate images"
-msgstr "Examine y rote imágenes"
+msgstr "Examinar y rotar imágenes"
 
 #. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
 #: ../data/xviewer.desktop.in.in.h:4
@@ -311,11 +311,11 @@ msgstr "Especificaciones de la ruta de archivo"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:12
 msgid "_Start counter at:"
-msgstr "_Iniciar contador en:"
+msgstr "_Iniciar el contador en:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "_Replace spaces with underscores"
-msgstr "_Reemplazar espacios por guión bajo"
+msgstr "_Reemplazar espacios por guiones bajos"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
@@ -449,7 +449,7 @@ msgstr "Sin acción"
 
 #: ../data/xviewer-preferences-dialog.ui.h:32
 msgid "Shift + Wheel"
-msgstr "Shift + rueda"
+msgstr "Mayús + rueda"
 
 #: ../data/xviewer-preferences-dialog.ui.h:33
 msgid "Control + Wheel"
@@ -457,11 +457,11 @@ msgstr "Control + rueda"
 
 #: ../data/xviewer-preferences-dialog.ui.h:34
 msgid "Shift + Control + Wheel"
-msgstr "Shift + Control + rueda"
+msgstr "Mayús + Control + rueda"
 
 #: ../data/xviewer-preferences-dialog.ui.h:35
 msgid "Tilt Wheel"
-msgstr "Inclinar rueda"
+msgstr "Rueda inclinable"
 
 #: ../data/xviewer-preferences-dialog.ui.h:36
 msgid "Mouse"
@@ -501,8 +501,8 @@ msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"Indica si la imagen se debe interpolar al reducirla. Produce mejor calidad "
-"pero es algo más lento que las imágenes no interpoladas."
+"Indica si se debe interpolar la imagen al reducirla. La representación es de "
+"mejor calidad pero algo más lenta que en el caso de imágenes no interpoladas."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:7
 msgid "Extrapolate Image"
@@ -513,8 +513,9 @@ msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
 msgstr ""
-"Indica si la imagen se debe extrapolar al ampliarla. Produce mejor calidad "
-"pero es algo más lento que las imágenes no extrapoladas."
+"Indica si la imagen se debe extrapolar al ampliarla. Produce una "
+"representación poco nítida y es algo más lenta que en el caso de imágenes no "
+"extrapoladas."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:9
 msgid "Transparency indicator"
@@ -548,21 +549,21 @@ msgid ""
 "horizontal pan, 3 = next/prev image, 4 = rotate 90 deg CW or CCW, 5 = no "
 "action"
 msgstr ""
-"Acción de la rueda del ratón. Valores: 0 = ampliar, 1 = desplazar vertical, "
-"2 = desplazar horizontal, 3 = imagen siguiente/previa, 4 = girar 90º horario "
-"o antihorario, 5 = sin acción"
+"Acción de la rueda del ratón. Valores: 0 = ampliar, 1 = desplazamiento "
+"vertical, 2 = desplazar horizontal, 3 = imagen siguiente/anterior, 4 = girar "
+"90º en sentido horario o antihorario, 5 = sin acción"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:15
 msgid "Mouse scroll wheel + shift action"
-msgstr "Acción para rueda del ratón + shift"
+msgstr "Acción de la rueda del ratón + mayús"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:16
 msgid "Mouse scroll wheel + ctrl action"
-msgstr "Acción para rueda del ratón + ctrl"
+msgstr "Acción de la rueda del ratón + ctrl"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:17
 msgid "Zoom multiplier"
-msgstr "Multiplicador de ampliación"
+msgstr "Multiplicador de la ampliación"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:19
 #, no-c-format
@@ -572,22 +573,23 @@ msgid ""
 "0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
 "a 100% zoom increment."
 msgstr ""
-"El multiplicador a aplicar cuando se use el ratón para ampliar. Este valor "
-"define el paso de la ampliación usada para cada evento de desplazamiento. "
-"Por ejemplo, 0.05 resulta en un incremento del 5% para cada evento de "
-"desplazamiento y 1.00 resulta en un incremento de ampliación del 100%."
+"El multiplicador que se aplica al usar la rueda del ratón para ampliar la "
+"imagen. Este valor define el nivel de la ampliación que se usa para cada "
+"evento de desplazamiento. Por ejemplo, 0.05 da como resultado un incremento "
+"de la ampliación del 5% para cada evento de desplazamiento y 1.00 da como "
+"resultado un incremento de la ampliación del 100%."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:20
 msgid "Transparency color"
-msgstr "Color de transparencia"
+msgstr "Color de la transparencia"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:21
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
-"Si la clave de transparencia tiene un valor COLOR, entonces, esta clave "
-"determina el color que se usa para indicar la transparencia."
+"Si la clave de la transparencia tiene el valor COLOR, esta clave determina "
+"el color que se usa para indicar la transparencia."
 
 #: ../data/org.x.viewer.gschema.xml.in.h:22
 msgid "Use a custom background color"
@@ -732,7 +734,7 @@ msgstr ""
 
 #: ../data/org.x.viewer.gschema.xml.in.h:45
 msgid "External program to use for editing images"
-msgstr "Programa externo que usar para editar imágenes"
+msgstr "Programa externo que se usará para editar imágenes"
 
 #: ../data/org.x.viewer.gschema.xml.in.h:46
 msgid ""
@@ -830,7 +832,7 @@ msgstr "No se ha podido guardar la imagen «%s»."
 #: ../src/xviewer-error-message-area.c:256
 #, c-format
 msgid "No images found in '%s'."
-msgstr "No se encontraron imágenes en «%s»."
+msgstr "No se han encontrado imágenes en «%s»."
 
 #: ../src/xviewer-error-message-area.c:263
 msgid "The given locations contain no images."
@@ -923,7 +925,7 @@ msgstr "%.1f (long. focal)"
 #: ../src/xviewer-exif-util.c:262
 #, c-format
 msgid "%.1f (35mm film)"
-msgstr "%.1f (película de 35mm)"
+msgstr "%.1f (película de 35 mm)"
 
 #: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
@@ -1038,7 +1040,7 @@ msgstr "Tamaño del archivo:"
 #: ../src/xviewer-window.c:4190
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
-"Mostrar en el gestor de archivos la carpeta que contiene este archivo"
+"Mostrar la carpeta que contiene este archivo en el gestor de archivos"
 
 #: ../src/xviewer-preferences-dialog.c:133
 #, c-format
@@ -1201,7 +1203,7 @@ msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
-"Se ha modificado la imagen «%s» con una aplicación externa.\n"
+"Una aplicación externa ha modificado la imagen «%s».\n"
 "¿Quiere actualizarla?"
 
 #: ../src/xviewer-window.c:1068
@@ -1222,12 +1224,12 @@ msgstr "Guardando la imagen «%s» (%u/%u)"
 #: ../src/xviewer-window.c:1619
 #, c-format
 msgid "Opening image \"%s\""
-msgstr "Abriendo imagen «%s»"
+msgstr "Abriendo la imagen «%s»"
 
 #. L10N: This the reason why the screensaver is inhibited.
 #: ../src/xviewer-window.c:2203
 msgid "Viewing a slideshow"
-msgstr "Viendo una presentación de diapositivas"
+msgstr "Mostrando una presentación de diapositivas"
 
 #: ../src/xviewer-window.c:2443
 #, c-format
