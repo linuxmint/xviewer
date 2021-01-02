@@ -2,7 +2,7 @@ AC_PREREQ(2.59)
 
 m4_define(xviewer_major_version,  2)
 m4_define(xviewer_minor_version, 8)
-m4_define(xviewer_micro_version,  1)
+m4_define(xviewer_micro_version,  2)
 m4_define(xviewer_version, xviewer_major_version.xviewer_minor_version.xviewer_micro_version)
 
 AC_INIT([xviewer], xviewer_version, [https://github.com/linuxmint/xviewer/issues], [xviewer])
