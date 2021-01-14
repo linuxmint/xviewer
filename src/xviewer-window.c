@@ -4722,7 +4722,8 @@ const gchar *supported_mimetypes[] = {
     "image/x-pcx",
     "image/svg+xml",
     "image/svg+xml-compressed",
-    "image/vnd.wap.wbmp"
+    "image/vnd.wap.wbmp",
+    NULL
 };
 
 static void
