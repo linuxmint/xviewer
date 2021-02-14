@@ -684,10 +684,6 @@ xviewer_image_get_file_info (XviewerImage *img,
        before xviewer supports AVIF files. */
 
 	GFileInfo *file_info;
-    GFileInputStream *input_stream;
-    guchar ip_buffer [BUFFER_SIZE];
-    gint bytes_read;
-
 
 	file_info = g_file_query_info (img->priv->file,
 				       G_FILE_ATTRIBUTE_STANDARD_SIZE ","
@@ -720,6 +716,7 @@ xviewer_image_get_file_info (XviewerImage *img,
             GFileInputStream *input_stream;
             guchar ip_buffer [BUFFER_SIZE];
             gint bytes_read;
+            char *mime_type_by_extn;
 
             input_stream = g_file_read(img->priv->file,
                                        NULL, error);
@@ -760,8 +757,18 @@ xviewer_image_get_file_info (XviewerImage *img,
                 }
             }
 
+            mime_type_by_extn = g_strdup (g_file_info_get_content_type (file_info));
+
             if (file_type_unknown)
-                *mime_type = g_strdup (g_file_info_get_content_type (file_info));
+               *mime_type = mime_type_by_extn;
+            else
+            {
+                if ((strcmp(*mime_type,"application/gzip") == 0) &&
+                    (strcmp(mime_type_by_extn,"image/svg+xml-compressed") == 0))
+                    *mime_type = g_strdup(mime_type_by_extn);
+            }
+
+            g_free(mime_type_by_extn);
         }
 		g_object_unref (file_info);
 	}
@@ -1179,6 +1186,34 @@ xviewer_image_real_load (XviewerImage *img,
 
 			break;
 		}
+
+        /* GIMP (version 2.10.22 and probably all versions since the option of saving colour space information was added)
+           saves BMP files with a BITMAPV5HEADER when the colour space information is to be included. It sets the bV5Compression
+           member to BI_BITFIELDS (3) for all six non-indexed variants of BMPs that it saves. This indicates that there is no compression of
+           the data and that the header members bV5RedMask, bV5GreenMask and bV5BlueMask hold the bit masks for the three colours.
+           The problem is that the Microsoft specification for BITMAPV5HEADER says that BI_BITFIELDS is only valid for 16 and 32-bit
+           files (quite why is questionable) and GIMP sets the mask members correctly but technically the setting of the compression
+           field is illegal and causes  gdk_pixbuf_loader_write() to return an error. (The three variants of 16-bit files and the
+           two variants of 32-bit files have no problems)
+
+           The same problem also applies to 1, 4 and 8 bpp index files saved with colour space information.
+
+           The following statements check for the specific cases of 1, 4, 8 and 24-bit BMP files with colour space information included and
+           with the compression type set incorrectly. For such files the bV5Compression member value is changed to BI_RGB (0) - a simple
+           uncompressed format. */
+
+        if ((bytes_read >= 0x1F) && (bytes_read_total == 0)){   /* only check the start of the file */
+            if ((buffer[0] == 'B') && (buffer[1] == 'M')   /* if the file has the 'magic numbers' for a BMP... */
+                && (buffer[0x0E] == 0x7C)                  /* ...and it has the 124. byte BITMAPv5HEADER (colour space info included)... */
+                && ((buffer[0x1C] == 1)                    /* ...and it has 1, 4, 8 or 24 bits per pixel... */
+                || (buffer[0x1C] == 4)
+                || (buffer[0x1C] == 8)
+                || (buffer[0x1C] == 24))
+                && (buffer[0x1E] == 3))                    /* ...and bV5Compression is set to BI_BITFIELDS */
+            {
+                buffer[0x1E] = 0;                          /* set bV5Compression member to BI_RGB */
+            }
+        }
 
 		if ((read_image_data || read_only_dimension)) {
 #ifdef HAVE_RSVG
