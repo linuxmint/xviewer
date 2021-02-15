@@ -763,8 +763,8 @@ xviewer_image_get_file_info (XviewerImage *img,
                *mime_type = mime_type_by_extn;
             else
             {
-                if ((strcmp(*mime_type,"application/gzip") == 0) &&
-                    (strcmp(mime_type_by_extn,"image/svg+xml-compressed") == 0))
+                if ((strstr(*mime_type,"application/") == *mime_type) &&
+                    (strstr(mime_type_by_extn,"image/") == mime_type_by_extn))
                     *mime_type = g_strdup(mime_type_by_extn);
             }
 
