@@ -718,11 +718,11 @@ xviewer_image_get_file_info (XviewerImage *img,
             gint bytes_read;
             char *mime_type_by_extn;
 
-            input_stream = g_file_read(img->priv->file,
+            input_stream = g_file_read (img->priv->file,
                                        NULL, error);
             if (input_stream)
             {
-                bytes_read = g_input_stream_read(G_INPUT_STREAM (input_stream),
+                bytes_read = g_input_stream_read (G_INPUT_STREAM (input_stream),
                                                  ip_buffer,
                                                  BUFFER_SIZE,
                                                  NULL, error);
@@ -736,7 +736,7 @@ xviewer_image_get_file_info (XviewerImage *img,
                         if ((magic_type_ids[i].offset + magic_type_ids[i].length) <= bytes_read)
                             if (! memcmp (ip_buffer + magic_type_ids[i].offset, magic_type_ids[i].id_bytes, magic_type_ids[i].length))
                                 {
-                                    *mime_type =  g_strdup(magic_type_ids[i].mime_type_str);
+                                    *mime_type =  g_strdup (magic_type_ids[i].mime_type_str);
                                     file_type_unknown = FALSE;
                                     break;
                                 }
@@ -750,9 +750,9 @@ xviewer_image_get_file_info (XviewerImage *img,
                     content_type = g_content_type_guess (NULL, ip_buffer, bytes_read, &result_uncertain);
                     if (content_type != NULL)
                     {
-                        *mime_type =  g_strdup(content_type);
+                        *mime_type =  g_strdup (content_type);
                         file_type_unknown = FALSE;
-                        g_free(content_type);
+                        g_free (content_type);
                     }
                 }
             }
@@ -760,15 +760,15 @@ xviewer_image_get_file_info (XviewerImage *img,
             mime_type_by_extn = g_strdup (g_file_info_get_content_type (file_info));
 
             if (file_type_unknown)
-               *mime_type = mime_type_by_extn;
+               *mime_type = g_strdup (mime_type_by_extn);
             else
             {
-                if ((strstr(*mime_type,"application/") == *mime_type) &&
-                    (strstr(mime_type_by_extn,"image/") == mime_type_by_extn))
-                    *mime_type = g_strdup(mime_type_by_extn);
+                if ((strstr (*mime_type,"application/") == *mime_type) &&
+                    (strstr (mime_type_by_extn,"image/") == mime_type_by_extn))
+                    *mime_type = g_strdup (mime_type_by_extn);
             }
 
-            g_free(mime_type_by_extn);
+            g_free (mime_type_by_extn);
         }
 		g_object_unref (file_info);
 	}
