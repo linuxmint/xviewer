@@ -171,7 +171,7 @@ xviewer_list_store_init (XviewerListStore *self)
 						 NULL, NULL);
 
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (self),
-					      GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,
+					      GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,
 					      GTK_SORT_ASCENDING);
 }
 
@@ -536,6 +536,9 @@ xviewer_list_store_append_directory (XviewerListStore *store,
  * only one file and this is a regular file, then all the images in the same
  * directory will be added as well to @store.
  *
+ * If @file_list contains multiple entries and no directories, images will
+ * follow the given order, otherwise default sorting will be applied.
+ *
  **/
 void
 xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
@@ -545,13 +548,19 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 	GFileType file_type;
 	GFile *initial_file = NULL;
 	GtkTreeIter iter;
+	gint sort_id = GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID;
+	gboolean singleton_list = FALSE;
 
 	if (file_list == NULL) {
 		return;
 	}
+	if (file_list->next == NULL) {
+		singleton_list = TRUE;
+		sort_id = GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID;
+	}
 
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
-					      GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,
+					      sort_id,
 					      GTK_SORT_ASCENDING);
 
 	for (it = file_list; it != NULL; it = it->next) {
@@ -580,9 +589,15 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 		g_object_unref (file_info);
 
 		if (file_type == G_FILE_TYPE_DIRECTORY) {
+			if (sort_id != GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID) {
+				// Given file order isn't conclusive, re-sort in default order.
+				sort_id = GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID;
+				gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
+					  sort_id,
+					  GTK_SORT_ASCENDING);
+			}
 			xviewer_list_store_append_directory (store, file, file_type);
-		} else if (file_type == G_FILE_TYPE_REGULAR &&
-			   g_list_length (file_list) == 1) {
+		} else if (file_type == G_FILE_TYPE_REGULAR && singleton_list) {
 
 			initial_file = g_file_dup (file);
 
@@ -610,15 +625,10 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 				xviewer_list_store_append_image_from_file (store, initial_file);
 			}
 			g_object_unref (file);
-		} else if (file_type == G_FILE_TYPE_REGULAR &&
-			   g_list_length (file_list) > 1) {
+		} else if (file_type == G_FILE_TYPE_REGULAR && !singleton_list) {
 			xviewer_list_store_append_image_from_file (store, file);
 		}
 	}
-
-	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
-					      GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,
-					      GTK_SORT_ASCENDING);
 
 	if (initial_file &&
 	    is_file_in_list_store_file (store, initial_file, &iter)) {
