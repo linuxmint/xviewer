@@ -1,3 +1,26 @@
+xviewer (3.0.0) uma; urgency=medium
+
+  [ Talkashie ]
+  * Fix typos in the Contents page (#127)
+
+  [ Cerulean ]
+  * Where a list of multiple files is supplied containing no directories, display them in the order it specifies, rather than sorting. Replace some unnecessary g_list_length calls.
+
+  [ programmer-ceds ]
+  * Spacebar Optionally Pauses Slideshow
+
+  [ Michael Webster ]
+  * xviewer-preferences-dialog.c: Tweak new labels in preferences, fix text alignment.
+
+  [ programmer-ceds ]
+  * Open svgz files (Fixes: https://github.com/linuxmint/xviewer/issues/128) (#129)
+
+  [ Clement Lefebvre ]
+  * i18n: Don't translate gsettings strings
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 01 Jun 2021 13:04:14 +0100
+
 xviewer (2.8.3) ulyssa; urgency=medium
 
   [ Michael Webster ]
