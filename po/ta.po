@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer.HEAD.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-02 16:04+0000\n"
+"POT-Creation-Date: 2021-06-01 13:03+0100\n"
 "PO-Revision-Date: 2016-06-03 13:34+0000\n"
 "Last-Translator: Kamala Kannan <Unknown>\n"
 "Language-Team: American English <<gnome-tamil-"
@@ -26,8 +26,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-01-02 14:16+0000\n"
-"X-Generator: Launchpad (build 34b3ffd45c9543b7f7aa5aa313925241e9e7ca3f)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:19+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 "Language: en_US\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -70,36 +70,36 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட கருவ�
 msgid "Separator"
 msgstr "பிரிப்பான்"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4140
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4151
 msgid "_View"
 msgstr "_V பார்வை"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4165
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4176
 msgid "_Toolbar"
 msgstr "_T கருவிப்பட்டி"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4168
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4179
 msgid "_Statusbar"
 msgstr "_S நிலைப்பட்டை"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4171
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4182
 msgid "_Image Gallery"
 msgstr "_I பிம்ப சேகரிப்பு"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4174
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4185
 msgid "Side _Pane"
 msgstr "பக்க பலகம் (_P)"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4153
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4164
 msgid "Prefere_nces"
 msgstr "_n விருப்பங்கள்"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4143
+#: ../src/xviewer-window.c:4154
 msgid "_Help"
 msgstr "_H உதவி"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4159
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4170
 msgid "_About"
 msgstr "_A பற்றி"
 
@@ -133,7 +133,7 @@ msgstr "பிம்பங்களை உலாவு சுழற்று"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "படங்கள்;லைட்ஷோ;வரகலை;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5268
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5280
 msgid "Image Properties"
 msgstr "பிம்ப பண்புகள்"
 
@@ -146,7 +146,7 @@ msgid "_Next"
 msgstr "(_N) அடுத்து"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4150
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4161
 msgid "_Close"
 msgstr "_C மூடு"
 
@@ -267,8 +267,8 @@ msgstr "இப்படி சேமி"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3452 ../src/xviewer-window.c:3456
-#: ../src/xviewer-window.c:3723
+#: ../src/xviewer-window.c:3463 ../src/xviewer-window.c:3467
+#: ../src/xviewer-window.c:3734
 msgid "_Cancel"
 msgstr "_C நீக்கு"
 
@@ -356,7 +356,6 @@ msgid "As custom color:"
 msgstr "தனிப்பயன் வண்ணமாக:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:10
-#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "பின்னணி வண்ணம்"
 
@@ -406,354 +405,79 @@ msgid "_Loop sequence"
 msgstr "(_L) லூப் வரிசைமுறை"
 
 #: ../data/xviewer-preferences-dialog.ui.h:23
-msgid "Slideshow"
-msgstr "படவில்லை காட்சி"
+msgid "Control"
+msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
-msgid "Scroll Wheel"
+msgid "Pause and resume with the spacebar"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:25
-msgid "Wheel"
-msgstr ""
+msgid "Slideshow"
+msgstr "படவில்லை காட்சி"
 
 #: ../data/xviewer-preferences-dialog.ui.h:26
-msgid "Zoom"
+msgid "Scroll Wheel"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:27
-msgid "Vertical Scrolling"
+msgid "Wheel"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:28
-msgid "Horizontal Scrolling"
+msgid "Zoom"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:29
-msgid "Previous/Next Image"
+msgid "Vertical Scrolling"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:30
-msgid "Rotate 90 degrees"
+msgid "Horizontal Scrolling"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:31
-msgid "No Action"
+msgid "Previous/Next Image"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:32
-msgid "Shift + Wheel"
+msgid "Rotate 90 degrees"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:33
-msgid "Control + Wheel"
+msgid "No Action"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:34
-msgid "Shift + Control + Wheel"
+msgid "Shift + Wheel"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:35
-msgid "Tilt Wheel"
+msgid "Control + Wheel"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:36
-msgid "Mouse"
+msgid "Shift + Control + Wheel"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:37
+msgid "Tilt Wheel"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:38
+msgid "Mouse"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:39
 msgid "Plugins"
 msgstr "சொருகுபொருள்கள்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:1
-msgid "Automatic orientation"
-msgstr "தானியங்கி ஆற்றுப்படுத்தல்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:2
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"பிம்பத்தை EXIF ஆற்றுப்படுத்தலை ஆதாரமாக கொண்டு தானியங்கியாக சுழற்ற வேண்டுமா?"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:4
-msgid ""
-"The color that is used to fill the area behind the image. If the use-"
-"background-color key is not set, the color is determined by the active GTK+ "
-"theme instead."
-msgstr ""
-"பிம்பத்தின் பின்னணியில் உள்ள இடத்தை நிரப்ப பயன்படுத்த நிறம். பின்னணி நிறத்தை "
-"பயன்படுத்து விசை அமைக்கப்படா விட்டால் நடப்பில் உள்ள ஜிடிகே+ இன் கருத்துப்படி "
-"அமைக்கப்படும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:5
-msgid "Interpolate Image"
-msgstr "பிம்பத்தை இடைச்சொருகுக"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:6
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"விலகல் போது பிம்பத்தை இடைச்செருக வேண்டுமா வேண்டாமா. இதனால் தரம் அதிகமான, "
-"ஆனால் இடைசெருகல் இல்லாத பிம்பத்தை விட மெதுவாக பிம்பம் கிடைக்கும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:7
-msgid "Extrapolate Image"
-msgstr "பிம்பத்தை புறச்செருகல் செய்க"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:8
-msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"அணுகல் போது பிம்பத்தை  புறச்செருக வேண்டுமா வேண்டாமா. இதனால் தெளிவு குறைவான, "
-"புறச்செருகாத பிம்பத்தை விட மெதுவாக பிம்பம் கிடைக்கும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:9
-msgid "Transparency indicator"
-msgstr "ஊடு தெரிதல் காட்டி"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:10
-msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
-msgstr ""
-"எவ்வளவு ஒளிபுகும் தன்மை காட்டப்பட வேண்டும் என்பதை கண்டறியும். செல்லகூடிய "
-"மதிப்புகள் CHECK_PATTERN, COLOR மற்றும் NONE. COLOR தேர்வு செய்யப்பட்டால் "
-"trans-color விசை பயன்படுத்தப்படும்வண்ணத்தின் மதிப்பை கணக்கிடும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:11
-msgid "Scroll wheel zoom"
-msgstr "சக்கர உருட்டு பார்வை அணுகல்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:12
-msgid "Whether the scroll wheel should be used for zooming."
-msgstr "உருளை சக்கரத்தை அணுகலுக்கு பயன்படுத்த வேண்டுமா இல்லையா?"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:13
-msgid "Mouse scroll wheel action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:14
-msgid ""
-"Action for mouse scroll wheel. Values are 0 = zoom, 1 = Vertical pan, 2 = "
-"horizontal pan, 3 = next/prev image, 4 = rotate 90 deg CW or CCW, 5 = no "
-"action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:15
-msgid "Mouse scroll wheel + shift action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:16
-msgid "Mouse scroll wheel + ctrl action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:17
-msgid "Zoom multiplier"
-msgstr "அணுகல் பெருக்கி"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:19
-#, no-c-format
-msgid ""
-"The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"சக்கர உருளையால் அணுகிப் பார்க்க பயன் படும் பெருக்கி. இந்த மதிப்பு ஒவ்வொரு "
-"உருட்டுக்குமான அணுகல் படியை வரையறுக்கிறது. உதாரணமாக 0.05 என்பது ஒவ்வொரு "
-"உருட்டுக்கும் 5% அணுகல் அதிகரிப்பு. 1.00 என்பது 100% அணுகல் அதிகரிப்பு."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:20
-msgid "Transparency color"
-msgstr "ஊடு தெரிதல் வண்ணம்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:21
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"ஒளிபுகும் விசையின் மதிப்பு COLOR ஆக இருந்தால், விசை ஒளிபுகும் தன்மை "
-"காட்டப்பட வேண்டிய வண்ணத்தை தேர்வு செய்யும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:22
-msgid "Use a custom background color"
-msgstr "தனிப்பயன் பின்னணி வண்ணம் பயன்படுத்து"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:23
-msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
-"will determine the fill color."
-msgstr ""
-"இது செயலில் உள்ள நிற தொகுதியானால் பின்னணி நிற விசை பிம்பத்தின் பின்னணியில் "
-"உள்ள இடத்தை நிரப்ப பயன்படுத்தும். விசை அமைக்கப்படா விட்டால் நடப்பில் உள்ள "
-"ஜிடிகே+ இன் கருத்துப்படி அமைக்கப்படும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:24
-msgid "Loop through the image sequence"
-msgstr "பிம்ப வரிசையில் மீண்டும் முயலவும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:25
-msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr "முடிவற்ற சுற்றில் பிம்பங்களை வரிசையாக காட்ட வேண்டுமா இல்லையா."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:27
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "100% மேல் பெரிதாக்குவதற்கு தொடக்கத்தில் அனுமதிக்கவும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:28
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"இதை பொய் என அமைத்தால் சிறிய பிம்பங்கள் திரையில் பொருந்தும் அளவிற்கு "
-"அமைக்கப்படும்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:29
-msgid "Delay in seconds until showing the next image"
-msgstr "அடுத்த பிம்பத்தைக் காண்பிப்பதற்கு தாமதம் (நொடிகளில்)"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:30
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"0 க்கும் மேற்பட்ட மதிப்புகள் அடுத்ததை காட்டுவதற்கு முன் பிம்பம் எவ்வளவு "
-"நேரம் திரையில் இருக்கும் என்பதை நொடிகளில் காட்டும். 0 தானியங்கி உலாவலை "
-"செயலிழக்க வைக்கும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:31
-msgid "Show/Hide the window toolbar."
-msgstr "சாளர கருவிப்பட்டையை காட்டுக/மறைக்கவும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:32
-msgid "Show/Hide the window statusbar."
-msgstr "சாளர நிலைப்பட்டையை காட்டுக/மறைக்கவும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:33
-msgid "Show/Hide the image gallery pane."
-msgstr "பிம்ப சேகரிப்பு பலகத்தை காட்டு/மறை."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:34
-msgid ""
-"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
-"for right."
-msgstr ""
-"பிம்ப சேமிப்பு பலக நிலை. கீழே என்பதற்கு 0 அமைக்கவும்; இடது 1; மேலே 2; வலது 3."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:35
-msgid "Whether the image gallery pane should be resizable."
-msgstr "பிம்ப சேகரிப்பு பலகம் மறு அளவு ஆக்க இயல வேண்டுமா இல்லையா?"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:36
-msgid "Show/Hide the window side pane."
-msgstr "சாளர பக்கப்பட்டையை காட்டுக/மறைக்கவும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:37
-msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr "பிம்ப சேகரிப்பு பலக உருளை பொத்தான்களை காட்டு/மறை."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:38
-msgid "Close main window without asking to save changes."
-msgstr "மாற்றங்களை சேமிக்காமல் முதன்மை சாளரத்தை மூடு"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:39
-msgid "Trash images without asking"
-msgstr "கேளாமல் பிம்பங்களை குப்பைக்கு நகர்த்துக"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:40
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to the "
-"trash. It will still ask if any of the files cannot be moved to the trash "
-"and would be deleted instead."
-msgstr ""
-"செயல்படுத்தினால் ஈஓஜி பிம்பங்களை குப்பைக்கு நகர்த்தும் போது உறுதிசெய்ய "
-"கேட்காது.ஒரு வேளை  கோப்புகள் குப்பைக்கு நகர்த்த முடியாமல் நீக்க நேரிடும்போது "
-"மட்டுமே கேட்கும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:41
-msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-"படங்கள் ஏதும் ஏற்றப்படாத போது பயனரின் படங்கள் அடைவை கோப்பு தேர்வி காட்ட "
-"வேண்டுமா?"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:42
-msgid ""
-"If activated and no image is loaded in the active window, the file chooser "
-"will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up, it "
-"will show the current working directory."
-msgstr ""
-"செயல் சாளரத்தில் ஒரு படமும் ஏற்றப்படாது செயல்படுத்தினால் கோப்பு தேர்வி "
-"எக்ஸ்டிஜி சிறப்பு பயனர் அடைவுகளை பயன்படுத்தி பயனரின் பட அடைவை திறக்கும். "
-"செயல்படுத்தாவிட்டால், அல்லது பட அடைவை அமைக்காவிட்டால் நடப்பு அடைவே "
-"காட்டப்படும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:43
-msgid ""
-"Whether the metadata list in the properties dialog should have its own page."
-msgstr "பண்புகள் உரையாடலின்  மெடா தரவுக்கு அதற்கான பக்கம் இருக்க வேண்டுமா"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:44
-msgid ""
-"If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
-"be embedded on the \"Metadata\" page."
-msgstr ""
-"செயல்படுத்தினால் பண்புகள் உரையாடலின் விரிவான மெடா தரவு அந்த உரையாடலில் "
-"அதற்கான பக்கத்துக்கு நகர்த்தப்படும். இது நெட்புக் போன்ற சிறு கணினிகளில் "
-"உரையாடல்கள் மேலும் பயன்படுத்த முடிந்தவையாக்கும், செயல்நீக்கினால் "
-"\"Metadata\" பக்கத்தில் இந்த சிறு நிரல் பொதியப்படும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:45
-msgid "External program to use for editing images"
-msgstr "பிம்பங்களை திருத்த வெளியார்ந்த நிரல்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:46
-msgid ""
-"The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
-"to the empty string to disable this feature."
-msgstr ""
-"(\"Edit Image\" கருவிப்பட்டை மென்மேட்டை சொடுக்கிய போது) பிம்பங்களை "
-"திருத்தும்  நிரலை பயன்படுத்த மேல்மேசை கோப்பின் பெயர்( \".desktop\" உட்பட) "
-"இந்த அம்சத்தை செயல் நீக்க காலி சரத்துக்கு அமைக்கவும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:47
-msgid "Active plugins"
-msgstr "செயல்படும் செருகிகள்"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:48
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
-"given plugin."
-msgstr ""
-"செயலில் உள்ள சொருகிகளின் பட்டியல். இதில் அவற்றின் இடம் \"Location\"  "
-"கிடையாது. ஒரு சொருகியைன் இடத்தை \"Location\" அறிய .xviewer-plugin கோப்பை "
-"பார்க்கவும்."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:49
-msgid "Maximize Image"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:50
-msgid "Whether or not the image should be maximized."
-msgstr ""
 
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "சேமிக்காமல் மூடு (_w)"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4180
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4191
 msgid "_Save"
 msgstr "_S சேமிக்கவும்"
 
@@ -793,12 +517,12 @@ msgid "If you don't save, all your changes will be lost."
 msgstr ""
 "நீங்கள் சேமிக்கவில்லையென்றால், உங்கள் அனைத்து மாற்றங்களையும் இழக்க நேரும்."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:879
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:881
+#: ../src/xviewer-window.c:4245
 msgid "_Reload"
 msgstr "(_R) மீளேற்று"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4186
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4197
 msgid "Save _As…"
 msgstr "(_A) இப்படி சேமி..."
 
@@ -976,27 +700,27 @@ msgstr "ஏற்றப்படாத பிம்பத்தை மாற்�
 msgid "Transformation failed."
 msgstr "உருமாற்றுதல் தோல்வியுற்றது."
 
-#: ../src/xviewer-image.c:1139
+#: ../src/xviewer-image.c:1261
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "இந்த கோப்பு வடிவத்திற்கு EXIF துணையில்லை."
 
-#: ../src/xviewer-image.c:1288
+#: ../src/xviewer-image.c:1410
 #, c-format
 msgid "Image loading failed."
 msgstr "பிம்ப ஏற்றம் தோல்வியுற்றது."
 
-#: ../src/xviewer-image.c:1869 ../src/xviewer-image.c:1989
+#: ../src/xviewer-image.c:1991 ../src/xviewer-image.c:2111
 #, c-format
 msgid "No image loaded."
 msgstr "பிம்பம் ஏதும் ஏற்றப்படவில்லை."
 
-#: ../src/xviewer-image.c:1877 ../src/xviewer-image.c:1998
+#: ../src/xviewer-image.c:1999 ../src/xviewer-image.c:2120
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "இந்த கோப்பினை சேமிக்க உங்களுக்குத் தேவையான அனுமதிகள் இல்லை."
 
-#: ../src/xviewer-image.c:1887 ../src/xviewer-image.c:2009
+#: ../src/xviewer-image.c:2009 ../src/xviewer-image.c:2131
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "தற்காலிக கோப்பு உருவாக்கம் தோல்வியில் முடிந்தது"
@@ -1020,11 +744,11 @@ msgid "File size:"
 msgstr "கோப்பின் அளவு:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4190
+#: ../src/xviewer-window.c:4201
 msgid "Show the folder which contains this file in the file manager"
 msgstr "கோப்பு மேலாளரில் இந்த  கோப்பு இருக்கும் அடைவை காட்டவும்."
 
-#: ../src/xviewer-preferences-dialog.c:133
+#: ../src/xviewer-preferences-dialog.c:134
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1165,21 +889,21 @@ msgstr " (தவறான யூனிகோட்)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:544
+#: ../src/xviewer-window.c:546
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i பிக்ஸல்  %s    %i%%"
 msgstr[1] "%i x %i பிக்ஸல்கள்  %s    %i%%"
 
-#: ../src/xviewer-window.c:881 ../src/xviewer-window.c:2868
+#: ../src/xviewer-window.c:883 ../src/xviewer-window.c:2879
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_d மறை"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:891
+#: ../src/xviewer-window.c:893
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1188,7 +912,7 @@ msgstr ""
 "பிம்பம்  \"%s\" வெளியார்ந்த நிரலால் மாற்றப்பட்டது\n"
 " அதை மீண்டும் ஏற்ற விருப்பமா?"
 
-#: ../src/xviewer-window.c:1068
+#: ../src/xviewer-window.c:1070
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "தேர்ந்தெடுத்த பிம்பத்தை திறக்க \"%s\"  ஐ பயன்படுத்துக"
@@ -1198,22 +922,22 @@ msgstr "தேர்ந்தெடுத்த பிம்பத்தை த�
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1224
+#: ../src/xviewer-window.c:1226
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" பிம்பம் சேமிக்கப்படுகின்றது  (%u/%u)"
 
-#: ../src/xviewer-window.c:1619
+#: ../src/xviewer-window.c:1621
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "பிம்பம்  திறக்கப்படுகின்றது \"%s\""
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2203
+#: ../src/xviewer-window.c:2207
 msgid "Viewing a slideshow"
 msgstr "முன்வைப்பை காணல்"
 
-#: ../src/xviewer-window.c:2443
+#: ../src/xviewer-window.c:2454
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1222,19 +946,19 @@ msgstr ""
 "கோப்பை அச்சிடும் போது பிழை:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2796 ../src/xviewer-window.c:2811
+#: ../src/xviewer-window.c:2807 ../src/xviewer-window.c:2822
 msgid "Error launching System Settings: "
 msgstr "கணினி அமைப்புகளை துவக்கும்போது பிழை: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2866
+#: ../src/xviewer-window.c:2877
 msgid "_Open Background Preferences"
 msgstr "_O பின்னணி விருப்பங்களை திற"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2882
+#: ../src/xviewer-window.c:2893
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1243,18 +967,18 @@ msgstr ""
 "பிம்பம்  \"%s\" மேல்மேசை   பின்னணியாக  வைக்கப்பட்டுள்ள து\n"
 " அதன் தோற்றத்தை   மாற்ற விருப்பமா?"
 
-#: ../src/xviewer-window.c:3349
+#: ../src/xviewer-window.c:3360
 msgid "Saving image locally…"
 msgstr "படத்தை உள்ளமைவாக சேமிக்கிறது"
 
-#: ../src/xviewer-window.c:3428
+#: ../src/xviewer-window.c:3439
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
 "\"%s\" permanently?"
 msgstr ""
 
-#: ../src/xviewer-window.c:3431
+#: ../src/xviewer-window.c:3442
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1265,41 +989,41 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/xviewer-window.c:3453 ../src/xviewer-window.c:3734
+#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3745
 msgid "_Delete"
 msgstr "_D அழி"
 
-#: ../src/xviewer-window.c:3457 ../src/xviewer-window.c:3736
+#: ../src/xviewer-window.c:3468 ../src/xviewer-window.c:3747
 msgid "_Yes"
 msgstr "ஆம் (_Y)"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3462 ../src/xviewer-window.c:3728
+#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3739
 msgid "Do _not ask again during this session"
 msgstr ""
 
-#: ../src/xviewer-window.c:3507
+#: ../src/xviewer-window.c:3518
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr ""
 
-#: ../src/xviewer-window.c:3523
+#: ../src/xviewer-window.c:3534
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr ""
 
-#: ../src/xviewer-window.c:3539 ../src/xviewer-window.c:3795
+#: ../src/xviewer-window.c:3550 ../src/xviewer-window.c:3806
 #, c-format
 msgid "Couldn't delete file"
 msgstr "கோப்பினை சேமிக்க முடியவில்லை"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3589 ../src/xviewer-window.c:3891
+#: ../src/xviewer-window.c:3600 ../src/xviewer-window.c:3902
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "பிம்பத்தை நீக்கும் போது பிழை %s"
 
-#: ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:3707
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1308,7 +1032,7 @@ msgstr ""
 "நீங்கள் நிச்சயமாக\n"
 "\"%s\" ஐ குப்பைக்கு நகர்த்த வேண்டுமா?"
 
-#: ../src/xviewer-window.c:3699
+#: ../src/xviewer-window.c:3710
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1316,7 +1040,7 @@ msgid ""
 msgstr ""
 "ஒரு குப்பை \"%s\"க்கு தேட முடியவில்லை. இந்த படத்தை நிரந்தரமாக நீக்க வேண்டுமா?"
 
-#: ../src/xviewer-window.c:3704
+#: ../src/xviewer-window.c:3715
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1331,7 +1055,7 @@ msgstr[1] ""
 "நீங்கள் தேர்ந்தெடுத்த பிம்பங்கள்\n"
 "%d ஐ குப்பை தொட்டிக்கு நகர்த்த வேண்டுமா?"
 
-#: ../src/xviewer-window.c:3709
+#: ../src/xviewer-window.c:3720
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1339,332 +1063,332 @@ msgstr ""
 "சில தேர்ந்தெடுக்கப்பட்ட படங்களை குப்பைக்கு நகர்த்த முடியவில்லை அவை "
 "நிரந்தரமாக நீக்கப்படும். அதனை செய்ய வேண்டுமா?"
 
-#: ../src/xviewer-window.c:3726 ../src/xviewer-window.c:4216
-#: ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:3737 ../src/xviewer-window.c:4227
+#: ../src/xviewer-window.c:4260
 msgid "Move to _Trash"
 msgstr "_T குப்பைக்கு நகர்த்து"
 
-#: ../src/xviewer-window.c:3773 ../src/xviewer-window.c:3787
+#: ../src/xviewer-window.c:3784 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Couldn't access trash."
 msgstr "குப்பை தொட்டியை அணுக முடியவில்லை"
 
-#: ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4149
 msgid "_File"
 msgstr ""
 
-#: ../src/xviewer-window.c:4139
+#: ../src/xviewer-window.c:4150
 msgid "_Edit"
 msgstr "_E திருத்து"
 
-#: ../src/xviewer-window.c:4141
+#: ../src/xviewer-window.c:4152
 msgid "_Go"
 msgstr "_G செல்க"
 
-#: ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4153
 msgid "_Tools"
 msgstr "_T கருவிகள்"
 
-#: ../src/xviewer-window.c:4144
+#: ../src/xviewer-window.c:4155
 msgid "_Favorites"
 msgstr ""
 
-#: ../src/xviewer-window.c:4145
+#: ../src/xviewer-window.c:4156
 msgid "_Recents"
 msgstr ""
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "_Open…"
 msgstr "(_O) திற"
 
-#: ../src/xviewer-window.c:4148
+#: ../src/xviewer-window.c:4159
 msgid "Open a file"
 msgstr "ஓர் கோப்பை திறக்கவும்"
 
-#: ../src/xviewer-window.c:4151
+#: ../src/xviewer-window.c:4162
 msgid "Close window"
 msgstr "சாளரத்தை மூடு"
 
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4165
 msgid "Preferences for Image Viewer"
 msgstr "இமேஜ் வ்யூவர் க்கு விருப்பங்கள்"
 
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4167
 msgid "_Contents"
 msgstr "_C உள்ளடக்கங்கள்"
 
-#: ../src/xviewer-window.c:4157
+#: ../src/xviewer-window.c:4168
 msgid "Help on this application"
 msgstr "இந்த செயல்பாட்டுக்கான உதவி"
 
-#: ../src/xviewer-window.c:4160
+#: ../src/xviewer-window.c:4171
 msgid "About this application"
 msgstr "இந்த பயன்பாடு பற்றி"
 
-#: ../src/xviewer-window.c:4166
+#: ../src/xviewer-window.c:4177
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "நடப்பு சாளரத்தில் கருவிப்பட்டையின் தெரிதலை மாற்றுகிறது"
 
-#: ../src/xviewer-window.c:4169
+#: ../src/xviewer-window.c:4180
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "நடப்பு சாளரத்தில் நிலைப்பட்டையின் தெரிதலை மாற்றுகிறது"
 
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4183
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "நடப்பு சாளரத்தில் பிம்ப சேகரிப்பு பலக தெரிதலை மாற்றுகிறது"
 
-#: ../src/xviewer-window.c:4175
+#: ../src/xviewer-window.c:4186
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "நடப்பு சாளரத்தில் நிலைப்பட்டையின் தெரிதலை மாற்றுகிறது"
 
-#: ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4192
 msgid "Save changes in currently selected images"
 msgstr "தேர்ந்தெடுத்த பிம்பத்தில் மாற்றங்களை சேமிக்கவும்"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4194
 msgid "Open _with"
 msgstr "_w இதனுடன் திறக்க"
 
-#: ../src/xviewer-window.c:4184
+#: ../src/xviewer-window.c:4195
 msgid "Open the selected image with a different application"
 msgstr "தேர்ந்தெடுக்கப்பட்ட படத்தை வேறு ஒரு பயன்பாட்டால் திற"
 
-#: ../src/xviewer-window.c:4187
+#: ../src/xviewer-window.c:4198
 msgid "Save the selected images with a different name"
 msgstr "தேர்ந்தெடுக்கப்பட்ட படத்தை வேறு ஒரு பெயரால் சேமி"
 
-#: ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4200
 msgid "Show Containing _Folder"
 msgstr "_F அடக்கிய அடைவை காட்டவும்"
 
-#: ../src/xviewer-window.c:4192
+#: ../src/xviewer-window.c:4203
 msgid "_Print…"
 msgstr "_P அச்சிடு."
 
-#: ../src/xviewer-window.c:4193
+#: ../src/xviewer-window.c:4204
 msgid "Print the selected image"
 msgstr "தேர்ந்தெடுத்த பிம்பத்தை அச்சிடவும்"
 
-#: ../src/xviewer-window.c:4195
+#: ../src/xviewer-window.c:4206
 msgid "Prope_rties"
 msgstr "_r பண்புகள்"
 
-#: ../src/xviewer-window.c:4196
+#: ../src/xviewer-window.c:4207
 msgid "Show the properties and metadata of the selected image"
 msgstr "தேர்ந்தெடுக்கப்பட்ட படத்தின் பண்புகள் மற்றும்  மெடாதரவையும் காட்டுக"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4209
 msgid "_Undo"
 msgstr "_U தவிர்"
 
-#: ../src/xviewer-window.c:4199
+#: ../src/xviewer-window.c:4210
 msgid "Undo the last change in the image"
 msgstr "படத்தில் கடைசி மாற்றத்தை செயல்நீக்கு"
 
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4212
 msgid "Flip _Horizontal"
 msgstr "(_H) கிடைதிசையாக திருப்புக"
 
-#: ../src/xviewer-window.c:4202
+#: ../src/xviewer-window.c:4213
 msgid "Mirror the image horizontally"
 msgstr "படத்தை கிடையில் கண்ணாடி பிம்பம் போல் காட்டு"
 
-#: ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4215
 msgid "Flip _Vertical"
 msgstr "(_V) செங்குத்தாக திருப்புக"
 
-#: ../src/xviewer-window.c:4205
+#: ../src/xviewer-window.c:4216
 msgid "Mirror the image vertically"
 msgstr "படத்தை செங்குத்தில் கண்ணாடி பிம்பம் போல் காட்டு"
 
-#: ../src/xviewer-window.c:4207
+#: ../src/xviewer-window.c:4218
 msgid "_Rotate Clockwise"
 msgstr "(_R) நேர்திசையில் சுழற்றவும்"
 
-#: ../src/xviewer-window.c:4208
+#: ../src/xviewer-window.c:4219
 msgid "Rotate the image 90 degrees to the right"
 msgstr "படத்தை 90 பாகைகள் வலமாக சுற்றுக"
 
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4221
 msgid "Rotate Counterc_lockwise"
 msgstr "(_l) எதிர்திசையில் சுழற்றவும்"
 
-#: ../src/xviewer-window.c:4211
+#: ../src/xviewer-window.c:4222
 msgid "Rotate the image 90 degrees to the left"
 msgstr "படத்தை 90 பாகைகள் இடமாக சுற்றுக"
 
-#: ../src/xviewer-window.c:4213
+#: ../src/xviewer-window.c:4224
 msgid "Set as Wa_llpaper"
 msgstr "_l திரை பின்னணியாக அமைக்கவும்"
 
-#: ../src/xviewer-window.c:4214
+#: ../src/xviewer-window.c:4225
 msgid "Set the selected image as the wallpaper"
 msgstr "தேர்வு செய்யப்பட்ட படத்தை திரை பின்னணியாக்கு"
 
-#: ../src/xviewer-window.c:4217
+#: ../src/xviewer-window.c:4228
 msgid "Move the selected image to the trash folder"
 msgstr "தேர்வு செய்யப்பட்ட உருப்படியை குப்பை அடைவுக்கு நகர்த்து"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4230
 msgid "_Delete Image"
 msgstr "(_D) படத்தை நீக்கு"
 
-#: ../src/xviewer-window.c:4220
+#: ../src/xviewer-window.c:4231
 msgid "Delete the selected image"
 msgstr "தெரிவுசெய்துள்ள படத்தை அழிக்கவும்"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4233
 msgid "_Copy"
 msgstr "நகல் (_C)"
 
-#: ../src/xviewer-window.c:4223
+#: ../src/xviewer-window.c:4234
 msgid "Copy the selected image to the clipboard"
 msgstr "தேர்வு செய்யப்பட்ட பிம்பத்தை ஒட்டுப்பலகைக்கு படியெடு"
 
-#: ../src/xviewer-window.c:4225 ../src/xviewer-window.c:4237
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4251
 msgid "_Zoom In"
 msgstr "(_Z) அணுகிப் பார்"
 
-#: ../src/xviewer-window.c:4226 ../src/xviewer-window.c:4238
+#: ../src/xviewer-window.c:4237 ../src/xviewer-window.c:4249
 msgid "Enlarge the image"
 msgstr "படத்தை பெரிதாக்கு"
 
-#: ../src/xviewer-window.c:4228 ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4254
 msgid "Zoom _Out"
 msgstr "(_O) விலகிப் பார்"
 
-#: ../src/xviewer-window.c:4229 ../src/xviewer-window.c:4241
-#: ../src/xviewer-window.c:4244
+#: ../src/xviewer-window.c:4240 ../src/xviewer-window.c:4252
+#: ../src/xviewer-window.c:4255
 msgid "Shrink the image"
 msgstr "படத்தை சுருக்கவும்"
 
-#: ../src/xviewer-window.c:4231 ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4242 ../src/xviewer-window.c:4257
 msgid "_Normal Size"
 msgstr "(_N) இயல்பான அளவு"
 
-#: ../src/xviewer-window.c:4232 ../src/xviewer-window.c:4247
+#: ../src/xviewer-window.c:4243 ../src/xviewer-window.c:4258
 msgid "Show the image at its normal size"
 msgstr "படத்தை இயல்பான அளவில் காட்டு"
 
-#: ../src/xviewer-window.c:4235
+#: ../src/xviewer-window.c:4246
 msgid "Reload the image"
 msgstr ""
 
-#: ../src/xviewer-window.c:4255
+#: ../src/xviewer-window.c:4266
 msgid "_Fullscreen"
 msgstr "(_F) முழுத்திரையில்"
 
-#: ../src/xviewer-window.c:4256
+#: ../src/xviewer-window.c:4267
 msgid "Show the current image in fullscreen mode"
 msgstr "இப்போதைய படத்தை முழுத்திரை பாங்கில் காட்டுக"
 
-#: ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4269
 msgid "Pause Slideshow"
 msgstr "படவில்லை காட்சியை தாமதி"
 
-#: ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4270
 msgid "Pause or resume the slideshow"
 msgstr "படவில்லை காட்சியை தாமதி / மீள்துவக்கு"
 
-#: ../src/xviewer-window.c:4261
+#: ../src/xviewer-window.c:4272
 msgid "_Best Fit"
 msgstr "(_B) நல்ல பொருத்தம்"
 
-#: ../src/xviewer-window.c:4262
+#: ../src/xviewer-window.c:4273
 msgid "Fit the image to the window"
 msgstr "படத்தை சாளரத்தில் பொருத்தவும்"
 
-#: ../src/xviewer-window.c:4267 ../src/xviewer-window.c:4282
+#: ../src/xviewer-window.c:4278 ../src/xviewer-window.c:4293
 msgid "_Previous Image"
 msgstr "(_P) முந்தைய பிம்பம்"
 
-#: ../src/xviewer-window.c:4268
+#: ../src/xviewer-window.c:4279
 msgid "Go to the previous image of the gallery"
 msgstr "பட சேகரிப்பில் முந்தைய படத்துக்கு போ"
 
-#: ../src/xviewer-window.c:4270
+#: ../src/xviewer-window.c:4281
 msgid "_Next Image"
 msgstr "(_N) அடுத்த பிம்பம்"
 
-#: ../src/xviewer-window.c:4271
+#: ../src/xviewer-window.c:4282
 msgid "Go to the next image of the gallery"
 msgstr "பட சேகரிப்பில் அடுத்த படத்துக்கு போ"
 
-#: ../src/xviewer-window.c:4273 ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4284 ../src/xviewer-window.c:4296
 msgid "_First Image"
 msgstr "(_F) ஆரம்ப பிம்பம்"
 
-#: ../src/xviewer-window.c:4274
+#: ../src/xviewer-window.c:4285
 msgid "Go to the first image of the gallery"
 msgstr "பட சேகரிப்பில் முதல் படத்துக்கு போ"
 
-#: ../src/xviewer-window.c:4276 ../src/xviewer-window.c:4288
+#: ../src/xviewer-window.c:4287 ../src/xviewer-window.c:4299
 msgid "_Last Image"
 msgstr "(_L) கடைசி பிம்பம்"
 
-#: ../src/xviewer-window.c:4277
+#: ../src/xviewer-window.c:4288
 msgid "Go to the last image of the gallery"
 msgstr "பட சேகரிப்பில் கடைசி படத்துக்கு போ"
 
-#: ../src/xviewer-window.c:4279
+#: ../src/xviewer-window.c:4290
 msgid "_Random Image"
 msgstr "_R  குறிப்பில்லா பிம்பம்"
 
-#: ../src/xviewer-window.c:4280
+#: ../src/xviewer-window.c:4291
 msgid "Go to a random image of the gallery"
 msgstr "பட சேகரிப்பில் குறிப்பில்லாது ஒரு படத்துக்கு போ"
 
-#: ../src/xviewer-window.c:4438
+#: ../src/xviewer-window.c:4449
 msgid "S_lideshow"
 msgstr "_l படவில்லை காட்சி"
 
-#: ../src/xviewer-window.c:4439
+#: ../src/xviewer-window.c:4450
 msgid "Start a slideshow view of the images"
 msgstr "பட வரிசை காட்சி ஒன்றை துவக்கு"
 
-#: ../src/xviewer-window.c:4511
+#: ../src/xviewer-window.c:4522
 msgid "Previous"
 msgstr "முந்தைய"
 
-#: ../src/xviewer-window.c:4516
+#: ../src/xviewer-window.c:4527
 msgid "Next"
 msgstr "அடுத்து"
 
-#: ../src/xviewer-window.c:4523
+#: ../src/xviewer-window.c:4534
 msgid "Right"
 msgstr "வலது"
 
-#: ../src/xviewer-window.c:4526
+#: ../src/xviewer-window.c:4537
 msgid "Left"
 msgstr "இடது"
 
-#: ../src/xviewer-window.c:4529
+#: ../src/xviewer-window.c:4540
 msgid "Show Folder"
 msgstr "அடைவை     காட்டவும்"
 
-#: ../src/xviewer-window.c:4532
+#: ../src/xviewer-window.c:4543
 msgid "Out"
 msgstr "வெளியே"
 
-#: ../src/xviewer-window.c:4535
+#: ../src/xviewer-window.c:4546
 msgid "In"
 msgstr "உள்ளே"
 
-#: ../src/xviewer-window.c:4538
+#: ../src/xviewer-window.c:4549
 msgid "Normal"
 msgstr "இயல்பான"
 
-#: ../src/xviewer-window.c:4541
+#: ../src/xviewer-window.c:4552
 msgid "Fit"
 msgstr "பொருத்து"
 
-#: ../src/xviewer-window.c:4544
+#: ../src/xviewer-window.c:4555
 msgid "Gallery"
 msgstr "பிம்ப சேகரிப்பு"
 
-#: ../src/xviewer-window.c:4561
+#: ../src/xviewer-window.c:4572
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "குப்பை"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&component=general\n"
-"POT-Creation-Date: 2020-12-02 16:04+0000\n"
+"POT-Creation-Date: 2021-06-01 13:03+0100\n"
 "PO-Revision-Date: 2019-05-12 19:05+0000\n"
 "Last-Translator: Arnab <Unknown>\n"
 "Language-Team: Bengali<ankur-bd-l10n@googlegroups.com>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-01-02 14:16+0000\n"
-"X-Generator: Launchpad (build 34b3ffd45c9543b7f7aa5aa313925241e9e7ca3f)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:19+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 
 # Translated by sadia
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -71,39 +71,39 @@ msgid "Separator"
 msgstr "বিভাজক"
 
 # msgstr "_বাতিল করা হোক"
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4140
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4151
 msgid "_View"
 msgstr "প্রদর্শন (_V)"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4165
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4176
 msgid "_Toolbar"
 msgstr "টুলবার (_T)"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4168
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4179
 msgid "_Statusbar"
 msgstr "স্ট্যাটাসবার (_S)"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4171
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4182
 msgid "_Image Gallery"
 msgstr "ছবির গ্যালারি (_I)"
 
 # Translated by sadia
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4174
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4185
 msgid "Side _Pane"
 msgstr "পার্শ্বদেশ (_P)"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4153
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4164
 msgid "Prefere_nces"
 msgstr "পছন্দসমূহ (_n)"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4143
+#: ../src/xviewer-window.c:4154
 msgid "_Help"
 msgstr "সহায়তা (_H)"
 
 # msgstr "প্রোগ্রামটি থেকে বিদায় নেওয়া হোক"
 # msgstr "প্রোগ্রামটি বন্ধ করে দেয়া হোক" -- ভাবানুবাদ
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4159
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4170
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
@@ -143,7 +143,7 @@ msgid "Picture;Slideshow;Graphics;"
 msgstr ""
 
 # Translated by sadia
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5268
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5280
 msgid "Image Properties"
 msgstr "ছবির বৈশিষ্ট্যাবলী"
 
@@ -159,7 +159,7 @@ msgstr "পরবর্তী (_N)"
 
 # msgstr "সফটওয়ার _পরিচিতি"
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4150
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4161
 msgid "_Close"
 msgstr "বন্ধ (_C)"
 
@@ -301,8 +301,8 @@ msgstr "নতুনভাবে সংরক্ষণ"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3452 ../src/xviewer-window.c:3456
-#: ../src/xviewer-window.c:3723
+#: ../src/xviewer-window.c:3463 ../src/xviewer-window.c:3467
+#: ../src/xviewer-window.c:3734
 msgid "_Cancel"
 msgstr ""
 
@@ -401,7 +401,6 @@ msgid "As custom color:"
 msgstr ""
 
 #: ../data/xviewer-preferences-dialog.ui.h:10
-#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr ""
 
@@ -464,349 +463,76 @@ msgstr ""
 msgid "_Loop sequence"
 msgstr "চক্রাকার আবর্তনের ক্রমপর্যায় (_L)"
 
+#: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Control"
+msgstr ""
+
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Pause and resume with the spacebar"
+msgstr ""
+
 # msgstr "ঘড়ির কাঁটার _উল্টোদিকে ঘোরানো হোক"
 # Translated by sadia
-#: ../data/xviewer-preferences-dialog.ui.h:23
+#: ../data/xviewer-preferences-dialog.ui.h:25
 msgid "Slideshow"
 msgstr "স্লাইড প্রদর্শনী"
 
-#: ../data/xviewer-preferences-dialog.ui.h:24
+#: ../data/xviewer-preferences-dialog.ui.h:26
 msgid "Scroll Wheel"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:25
+#: ../data/xviewer-preferences-dialog.ui.h:27
 msgid "Wheel"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:26
+#: ../data/xviewer-preferences-dialog.ui.h:28
 msgid "Zoom"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:27
+#: ../data/xviewer-preferences-dialog.ui.h:29
 msgid "Vertical Scrolling"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:28
+#: ../data/xviewer-preferences-dialog.ui.h:30
 msgid "Horizontal Scrolling"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:29
+#: ../data/xviewer-preferences-dialog.ui.h:31
 msgid "Previous/Next Image"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:30
+#: ../data/xviewer-preferences-dialog.ui.h:32
 msgid "Rotate 90 degrees"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:31
+#: ../data/xviewer-preferences-dialog.ui.h:33
 msgid "No Action"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:32
+#: ../data/xviewer-preferences-dialog.ui.h:34
 msgid "Shift + Wheel"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:33
+#: ../data/xviewer-preferences-dialog.ui.h:35
 msgid "Control + Wheel"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:34
+#: ../data/xviewer-preferences-dialog.ui.h:36
 msgid "Shift + Control + Wheel"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:35
+#: ../data/xviewer-preferences-dialog.ui.h:37
 msgid "Tilt Wheel"
 msgstr ""
 
-#: ../data/xviewer-preferences-dialog.ui.h:36
+#: ../data/xviewer-preferences-dialog.ui.h:38
 msgid "Mouse"
 msgstr ""
 
 # Translated by sadia
-#: ../data/xviewer-preferences-dialog.ui.h:37
+#: ../data/xviewer-preferences-dialog.ui.h:39
 msgid "Plugins"
 msgstr "প্লাগইন"
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:1
-msgid "Automatic orientation"
-msgstr "স্বয়ংক্রিয় স্থিতিবিন্যাস"
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:2
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"ছবিগুলোকে EXIF স্থিতিবিন্যাসের উপর নির্ভর করে স্বয়ংক্রিয়ভাবে আবর্তিত হতে "
-"দেয়া হবে কিনা।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:4
-msgid ""
-"The color that is used to fill the area behind the image. If the use-"
-"background-color key is not set, the color is determined by the active GTK+ "
-"theme instead."
-msgstr ""
-
-# "ঠিক এর পরিবর্তে "নির্ধারণ" লিখ। আর "স্বচ্ছতা" বানানে এখানেও গোলমাল। এটা কি Yudit/Lekho এর Inconsistency ?
-# #হতে পারে - কিন্তু আমি Yudit ব্যবহার করি না - জি-এডিট
-#: ../data/org.x.viewer.gschema.xml.in.h:5
-msgid "Interpolate Image"
-msgstr "ছবিকে প্রক্ষিপ্ত করা হবে"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:6
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non-interpolated images."
-msgstr ""
-
-# "ঠিক এর পরিবর্তে "নির্ধারণ" লিখ। আর "স্বচ্ছতা" বানানে এখানেও গোলমাল। এটা কি Yudit/Lekho এর Inconsistency ?
-# #হতে পারে - কিন্তু আমি Yudit ব্যবহার করি না - জি-এডিট
-#: ../data/org.x.viewer.gschema.xml.in.h:7
-msgid "Extrapolate Image"
-msgstr "ছবিকে প্রক্ষিপ্ত করা হবে"
-
-# Translated by sadia
-#
-#  extrapolate-proper meaning is not found
-#: ../data/org.x.viewer.gschema.xml.in.h:8
-msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"ছবির আকার বড় করার সময় তাকে প্রক্ষিপ্ত করা হবে কিনা। এতে ছবির গুণগত মান উন্নত "
-"হয় কিন্তু গোটা প্রক্রিয়াটি সম্পন্ন হতে আরো বেশি সময় লাগে।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:9
-msgid "Transparency indicator"
-msgstr "স্বচ্ছতা সূচক"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:10
-msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:11
-msgid "Scroll wheel zoom"
-msgstr "চক্রাকারে স্ক্রল করে বড় আকারে প্রদর্শন"
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:12
-msgid "Whether the scroll wheel should be used for zooming."
-msgstr "বড় আকারে প্রদর্শনের জন্য স্ক্রল চাকাটি ব্যবহার করা উচিত কিনা।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:13
-msgid "Mouse scroll wheel action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:14
-msgid ""
-"Action for mouse scroll wheel. Values are 0 = zoom, 1 = Vertical pan, 2 = "
-"horizontal pan, 3 = next/prev image, 4 = rotate 90 deg CW or CCW, 5 = no "
-"action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:15
-msgid "Mouse scroll wheel + shift action"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:16
-msgid "Mouse scroll wheel + ctrl action"
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:17
-msgid "Zoom multiplier"
-msgstr "বড় আকারে প্রদর্শনের গুণিতক"
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:19
-#, no-c-format
-msgid ""
-"The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"মাউসের স্ক্রল চাকাটি বড় আকারে প্রদর্শনের জন্য ব্যবহার করা হলে যে গুণিতক "
-"প্রয়োগ করা হবে। প্রতিবার স্ক্রল করলে বড় আকারে প্রদর্শনের যে ধাপ তা এই মান "
-"নির্দেশ করে। উদাহরণস্বরূপ, ৫% বড় আকারে প্রদর্শনের জন্য প্রতিবার স্ক্রল করলে "
-"বাড়ে ০.০৫ এবং ১০০% এর জন্য বাড়ে ১.০০।"
-
-# #ধন্যবাদ :-)
-#: ../data/org.x.viewer.gschema.xml.in.h:20
-msgid "Transparency color"
-msgstr "স্বচ্ছতার রং"
-
-# msgstr "আদর্শ আয়তনের চিত্রসমূহ সমগ্র পর্দা জুড়ে প্রদর্শন করা হোক"
-#: ../data/org.x.viewer.gschema.xml.in.h:21
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"স্বচ্ছতা কী-এর মান যদি রং হয়, তাহলে এই কী নির্ধারণ করে কোন রং ব্যবহার করে "
-"স্বচ্ছতা বোঝানো হবে।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:22
-msgid "Use a custom background color"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:23
-msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
-"will determine the fill color."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:24
-msgid "Loop through the image sequence"
-msgstr "ছবির ক্রমের মধ্য দিয়ে আবর্তন করা হবে"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:25
-msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr "ছবির ধারা একটি অবিরাম লুপ হিসেবে দেখানো হবে কিনা।"
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:27
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "প্রাথমিকভাবে বড় করে দেখার মাত্রা ১০০%-এর বেশী অনুমোদন করা হবে"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:28
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"এটা যদি FALSE হিসেবে নির্ধারিত থাকে, তাহলে প্রাথমিকভাবে ছোট ছবিগুলোকে "
-"প্রসারিত করে দেখানো হবে না।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:29
-msgid "Delay in seconds until showing the next image"
-msgstr "পরবর্তী ছবি দেখার মধ্যবর্তী সময়ের ব্যবধান"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:30
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"০ থেকে বড় মান নির্দেশ করে কত সেকেন্ড পর পর স্ক্রিনে ছবি বদলানো হবে। ০ মান "
-"স্বয়ংক্রিয় ব্রাউজিং নিষ্ক্রিয় করে দেয়।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:31
-msgid "Show/Hide the window toolbar."
-msgstr "উইন্ডো টুলবার প্রদর্শন/আড়াল।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:32
-msgid "Show/Hide the window statusbar."
-msgstr "উইন্ডো স্ট্যাটাসবার প্রদর্শন/আড়াল।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:33
-msgid "Show/Hide the image gallery pane."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:34
-msgid ""
-"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
-"for right."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:35
-msgid "Whether the image gallery pane should be resizable."
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:36
-msgid "Show/Hide the window side pane."
-msgstr "উইন্ডোর সাইড পেন প্রদর্শন/আড়াল।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:37
-msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:38
-msgid "Close main window without asking to save changes."
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:39
-msgid "Trash images without asking"
-msgstr "ছবিগুলোকে অনুমতি ছাড়াই আবর্জনায় সরানো হবে"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:40
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to the "
-"trash. It will still ask if any of the files cannot be moved to the trash "
-"and would be deleted instead."
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:41
-msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-"কোন ছবি লোড করা না থাকলে ফাইল নির্বাচকের ব্যবহারকারীর ছবির ফোল্ডার দেখানো "
-"উচিত কিনা।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:42
-msgid ""
-"If activated and no image is loaded in the active window, the file chooser "
-"will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up, it "
-"will show the current working directory."
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:43
-msgid ""
-"Whether the metadata list in the properties dialog should have its own page."
-msgstr ""
-"বৈশিষ্ট্যাবলী ডায়ালগের ভেতর মেটাডাটার তালিকার জন্য আলাদা কোন পৃষ্ঠা থাকা "
-"উচিত কিনা।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:44
-msgid ""
-"If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
-"be embedded on the \"Metadata\" page."
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:45
-msgid "External program to use for editing images"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:46
-msgid ""
-"The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
-"to the empty string to disable this feature."
-msgstr ""
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:47
-msgid "Active plugins"
-msgstr "সক্রিয় প্লাগইন"
-
-# Translated by sadia
-#: ../data/org.x.viewer.gschema.xml.in.h:48
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
-"given plugin."
-msgstr ""
-"সক্রিয় প্লাগইনের তালিকা। এটি সক্রিয় প্লাগইনের \"অবস্থান\" ধারণ করে না। "
-"উল্লিখিত প্লাগইনের অবস্থান পেতে .xviewer-plugin ফাইলটিতে দেখুন।"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:49
-msgid "Maximize Image"
-msgstr ""
-
-#: ../data/org.x.viewer.gschema.xml.in.h:50
-msgid "Whether or not the image should be maximized."
-msgstr ""
 
 # Translated by sadia
 #: ../src/xviewer-close-confirmation-dialog.c:166
@@ -814,7 +540,7 @@ msgid "Close _without Saving"
 msgstr "সংরক্ষণ না করেই বন্ধ (_w)"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4180
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4191
 msgid "_Save"
 msgstr "সংরক্ষণ (_S)"
 
@@ -853,14 +579,14 @@ msgstr "সংরক্ষণ করার জন্য ছবি নির্�
 msgid "If you don't save, all your changes will be lost."
 msgstr "আপনি যদি সংরক্ষণ না করেন, তবে আপনার করা সকল পরিবর্তন বাতিল হয়ে যাবে।"
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:879
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:881
+#: ../src/xviewer-window.c:4245
 msgid "_Reload"
 msgstr ""
 
 # msgstr "চিত্রটি ছাপা হোক এই প্রিন্টারে"
 # কনটেক্সট জানি না - এটাই বোধহয় ঠিক
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4186
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4197
 msgid "Save _As…"
 msgstr "নতুনভাবে সংরক্ষণ… (_A)"
 
@@ -1065,31 +791,31 @@ msgstr "রূপান্তর ব্যর্থ।"
 # msgstr "এক্সটেনশন অনুসারে"
 # "অনুযায়ী"তে কোন সমস্যা নাই
 #
-#: ../src/xviewer-image.c:1139
+#: ../src/xviewer-image.c:1261
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "এই ফাইল ফরম্যাটের জন্য EXIF সমর্থিত নয়।"
 
 # msgstr "চিত্র সফলভাবে সংরক্ষিত হয়েছে"
 # Translated by sadia
-#: ../src/xviewer-image.c:1288
+#: ../src/xviewer-image.c:1410
 #, c-format
 msgid "Image loading failed."
 msgstr "ছবির লোডিং প্রক্রিয়া ব্যর্থ।"
 
 # msgstr "চিত্র সংরক্ষন করা হোক"
-#: ../src/xviewer-image.c:1869 ../src/xviewer-image.c:1989
+#: ../src/xviewer-image.c:1991 ../src/xviewer-image.c:2111
 #, c-format
 msgid "No image loaded."
 msgstr "কোন ছবি লোড করা হয়নি।"
 
-#: ../src/xviewer-image.c:1877 ../src/xviewer-image.c:1998
+#: ../src/xviewer-image.c:1999 ../src/xviewer-image.c:2120
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-image.c:1887 ../src/xviewer-image.c:2009
+#: ../src/xviewer-image.c:2009 ../src/xviewer-image.c:2131
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "অস্থায়ী ফাইল তৈরীতে ব্যর্থ।"
@@ -1114,11 +840,11 @@ msgid "File size:"
 msgstr ""
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4190
+#: ../src/xviewer-window.c:4201
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: ../src/xviewer-preferences-dialog.c:133
+#: ../src/xviewer-preferences-dialog.c:134
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1285,21 +1011,21 @@ msgstr " (অকার্যকর ইউনিকোড)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:544
+#: ../src/xviewer-window.c:546
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i পিক্সেল  %s    %i%%"
 msgstr[1] "%i × %i পিক্সেল  %s    %i%%"
 
-#: ../src/xviewer-window.c:881 ../src/xviewer-window.c:2868
+#: ../src/xviewer-window.c:883 ../src/xviewer-window.c:2879
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr ""
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:891
+#: ../src/xviewer-window.c:893
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1307,7 +1033,7 @@ msgid ""
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:1068
+#: ../src/xviewer-window.c:1070
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "নির্বাচিত ছবিটি খোলার জন্য \"%s\" ব্যবহার করুন"
@@ -1319,23 +1045,23 @@ msgstr "নির্বাচিত ছবিটি খোলার জন্য
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1224
+#: ../src/xviewer-window.c:1226
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" ছবি সংরক্ষণ করা হচ্ছে (%u/%u)"
 
-#: ../src/xviewer-window.c:1619
+#: ../src/xviewer-window.c:1621
 #, c-format
 msgid "Opening image \"%s\""
 msgstr ""
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2203
+#: ../src/xviewer-window.c:2207
 msgid "Viewing a slideshow"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:2443
+#: ../src/xviewer-window.c:2454
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1344,19 +1070,19 @@ msgstr ""
 "ফাইল মুদ্রণে ত্রুটি দেখা দিয়েছে:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2796 ../src/xviewer-window.c:2811
+#: ../src/xviewer-window.c:2807 ../src/xviewer-window.c:2822
 msgid "Error launching System Settings: "
 msgstr ""
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2866
+#: ../src/xviewer-window.c:2877
 msgid "_Open Background Preferences"
 msgstr ""
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2882
+#: ../src/xviewer-window.c:2893
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1367,18 +1093,18 @@ msgstr ""
 
 # msgstr "চিত্র লোড করা হোক"
 # Translated by sadia
-#: ../src/xviewer-window.c:3349
+#: ../src/xviewer-window.c:3360
 msgid "Saving image locally…"
 msgstr "স্থানীয়ভাবে ছবি সংরক্ষণ করা হচ্ছে…"
 
-#: ../src/xviewer-window.c:3428
+#: ../src/xviewer-window.c:3439
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
 "\"%s\" permanently?"
 msgstr ""
 
-#: ../src/xviewer-window.c:3431
+#: ../src/xviewer-window.c:3442
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1389,43 +1115,43 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/xviewer-window.c:3453 ../src/xviewer-window.c:3734
+#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3745
 msgid "_Delete"
 msgstr ""
 
-#: ../src/xviewer-window.c:3457 ../src/xviewer-window.c:3736
+#: ../src/xviewer-window.c:3468 ../src/xviewer-window.c:3747
 msgid "_Yes"
 msgstr ""
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3462 ../src/xviewer-window.c:3728
+#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3739
 msgid "Do _not ask again during this session"
 msgstr ""
 
-#: ../src/xviewer-window.c:3507
+#: ../src/xviewer-window.c:3518
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr ""
 
-#: ../src/xviewer-window.c:3523
+#: ../src/xviewer-window.c:3534
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3539 ../src/xviewer-window.c:3795
+#: ../src/xviewer-window.c:3550 ../src/xviewer-window.c:3806
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ফাইলটি মুছে ফেলা যায়নি"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3589 ../src/xviewer-window.c:3891
+#: ../src/xviewer-window.c:3600 ../src/xviewer-window.c:3902
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "%s মুছে ফেলার সময় ত্রুটি দেখা দিয়েছে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:3707
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1435,7 +1161,7 @@ msgstr ""
 "\"%s\" কে আবর্জনায় সরাতে চান?"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3699
+#: ../src/xviewer-window.c:3710
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1445,7 +1171,7 @@ msgstr ""
 "করতে চান?"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3704
+#: ../src/xviewer-window.c:3715
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1459,7 +1185,7 @@ msgstr[1] ""
 "আপনি কি নিশ্চিত আপনি সত্যিই  %d নির্বাচিত ছবিগুলোকে আবর্জনায় সরাতে চান?"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3709
+#: ../src/xviewer-window.c:3720
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1468,18 +1194,18 @@ msgstr ""
 "আপনি কি নিশ্চিত আপনি অগ্রসর হতে চান?"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3726 ../src/xviewer-window.c:4216
-#: ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:3737 ../src/xviewer-window.c:4227
+#: ../src/xviewer-window.c:4260
 msgid "Move to _Trash"
 msgstr "আবর্জনায় সরিয়ে ফেলুন (_T)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:3773 ../src/xviewer-window.c:3787
+#: ../src/xviewer-window.c:3784 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Couldn't access trash."
 msgstr "আবর্জনায় প্রবেশ করা যায়নি।"
 
-#: ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4149
 msgid "_File"
 msgstr ""
 
@@ -1487,224 +1213,224 @@ msgstr ""
 # Pro: Dictionary'তে "স্লাইড" আছে, সুতরাং সমস্যা নাই
 # # তাও - ভালো শোনায় না - আর শো-র বাংলা কি?
 # Translated by sadia
-#: ../src/xviewer-window.c:4139
+#: ../src/xviewer-window.c:4150
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4141
+#: ../src/xviewer-window.c:4152
 msgid "_Go"
 msgstr "যান (_G)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4153
 msgid "_Tools"
 msgstr "টুল (_T)"
 
-#: ../src/xviewer-window.c:4144
+#: ../src/xviewer-window.c:4155
 msgid "_Favorites"
 msgstr ""
 
-#: ../src/xviewer-window.c:4145
+#: ../src/xviewer-window.c:4156
 msgid "_Recents"
 msgstr ""
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "_Open…"
 msgstr "খুলুন… (_O)"
 
-#: ../src/xviewer-window.c:4148
+#: ../src/xviewer-window.c:4159
 msgid "Open a file"
 msgstr "ফাইল খুলুন"
 
-#: ../src/xviewer-window.c:4151
+#: ../src/xviewer-window.c:4162
 msgid "Close window"
 msgstr "উইন্ডো বন্ধ করুন"
 
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4165
 msgid "Preferences for Image Viewer"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4167
 msgid "_Contents"
 msgstr "বিষয়বস্তু (_C)"
 
-#: ../src/xviewer-window.c:4157
+#: ../src/xviewer-window.c:4168
 msgid "Help on this application"
 msgstr "এই অ্যাপলিকেশনের সহায়তা"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4160
+#: ../src/xviewer-window.c:4171
 msgid "About this application"
 msgstr "অ্যাপলিকেশনের পরিচিতি"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4166
+#: ../src/xviewer-window.c:4177
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "বর্তমান উইন্ডোতে টুলবারের দৃশ্যমানতা বদলায়"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4169
+#: ../src/xviewer-window.c:4180
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "বর্তমান উইন্ডোতে স্ট্যাটাসবারের দৃশ্যমানতা বদলায়"
 
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4183
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4175
+#: ../src/xviewer-window.c:4186
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "বর্তমান উইন্ডোতে পার্শ্বদেশের দৃশ্যমানতা বদলায়"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4192
 msgid "Save changes in currently selected images"
 msgstr "বর্তমানে নির্বাচিত ছবিগুলোর পরিবর্তন সংরক্ষণ করা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4194
 msgid "Open _with"
 msgstr "সহযোগে খোলা হবে (_w)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4184
+#: ../src/xviewer-window.c:4195
 msgid "Open the selected image with a different application"
 msgstr "নির্বাচিত ছবিটিকে ভিন্ন অ্যাপলিকেশনের সাথে খোলা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4187
+#: ../src/xviewer-window.c:4198
 msgid "Save the selected images with a different name"
 msgstr "নির্বাচিত ছবিগুলোকে ভিন্ন নামে সংরক্ষণ করা হবে"
 
-#: ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4200
 msgid "Show Containing _Folder"
 msgstr ""
 
 # msgstr "_পুরো পর্দা জুড়ে"
 # Translated by sadia
-#: ../src/xviewer-window.c:4192
+#: ../src/xviewer-window.c:4203
 msgid "_Print…"
 msgstr "মুদ্রণ… (_P)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4193
+#: ../src/xviewer-window.c:4204
 msgid "Print the selected image"
 msgstr "নির্বাচিত ছবিটিকে মুদ্রণ করা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4195
+#: ../src/xviewer-window.c:4206
 msgid "Prope_rties"
 msgstr "বৈশিষ্ট্যাবলী (_r)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4196
+#: ../src/xviewer-window.c:4207
 msgid "Show the properties and metadata of the selected image"
 msgstr "নির্বাচিত ছবিটির বৈশিষ্ট্যাবলী ও মেটাডাটা প্রদর্শন"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4209
 msgid "_Undo"
 msgstr "আগের অবস্থায় ফিরিয়ে আনা হবে (_U)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4199
+#: ../src/xviewer-window.c:4210
 msgid "Undo the last change in the image"
 msgstr "ছবিটিতে করা শেষ পরিবর্তন বাতিল করা হবে"
 
 # শুধু "ছবি" লিখলে জিনিষটা সহজে বোঝা যায়। "চিত্র সংগ্রহ" ঠিক আছে - কিন্তু কেমন জানি শোনায়। "চিত্রের সংগ্রহ" লিখতে পারো।
 # #চিত্রের করে দিয়েছি
 # Translated by sadia
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4212
 msgid "Flip _Horizontal"
 msgstr "অনুভূমিকভাবে উল্টানো হবে (_H)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4202
+#: ../src/xviewer-window.c:4213
 msgid "Mirror the image horizontally"
 msgstr "ছবিটিকে অনুভূমিকভাবে প্রতিফলিত করা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4215
 msgid "Flip _Vertical"
 msgstr "উল্লম্বভাবে উল্টানো হবে (_V)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4205
+#: ../src/xviewer-window.c:4216
 msgid "Mirror the image vertically"
 msgstr "ছবিটিকে উল্লম্বভাবে প্রতিফলিত করা হবে"
 
-#: ../src/xviewer-window.c:4207
+#: ../src/xviewer-window.c:4218
 msgid "_Rotate Clockwise"
 msgstr "ঘড়ির কাঁটার দিকে ঘোরান (_R)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4208
+#: ../src/xviewer-window.c:4219
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ছবিটিকে ৯০ ডিগ্রী ডানে ঘোরান"
 
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4221
 msgid "Rotate Counterc_lockwise"
 msgstr "ঘড়ির কাঁটার বিপরীত দিকে ঘোরান (_l)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4211
+#: ../src/xviewer-window.c:4222
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ছবিটিকে ৯০ ডিগ্রী বামে ঘোরান"
 
-#: ../src/xviewer-window.c:4213
+#: ../src/xviewer-window.c:4224
 msgid "Set as Wa_llpaper"
 msgstr ""
 
-#: ../src/xviewer-window.c:4214
+#: ../src/xviewer-window.c:4225
 msgid "Set the selected image as the wallpaper"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4217
+#: ../src/xviewer-window.c:4228
 msgid "Move the selected image to the trash folder"
 msgstr "নির্বাচিত ছবিটিকে আবর্জনা ফোল্ডারে সরিয়ে ফেলা হবে"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4230
 msgid "_Delete Image"
 msgstr ""
 
-#: ../src/xviewer-window.c:4220
+#: ../src/xviewer-window.c:4231
 msgid "Delete the selected image"
 msgstr ""
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4233
 msgid "_Copy"
 msgstr ""
 
-#: ../src/xviewer-window.c:4223
+#: ../src/xviewer-window.c:4234
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4225 ../src/xviewer-window.c:4237
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4251
 msgid "_Zoom In"
 msgstr "বড় আকারে প্রদর্শন (_Z)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4226 ../src/xviewer-window.c:4238
+#: ../src/xviewer-window.c:4237 ../src/xviewer-window.c:4249
 msgid "Enlarge the image"
 msgstr "ছবিটিকে বড় করা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4228 ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4254
 msgid "Zoom _Out"
 msgstr "ছোট আকারে প্রদর্শন (_O)"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4229 ../src/xviewer-window.c:4241
-#: ../src/xviewer-window.c:4244
+#: ../src/xviewer-window.c:4240 ../src/xviewer-window.c:4252
+#: ../src/xviewer-window.c:4255
 msgid "Shrink the image"
 msgstr "ছবিটিকে সঙ্কোচন করা হবে"
 
-#: ../src/xviewer-window.c:4231 ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4242 ../src/xviewer-window.c:4257
 msgid "_Normal Size"
 msgstr "স্বাভাবিক আকার (_N)"
 
@@ -1714,16 +1440,16 @@ msgstr "স্বাভাবিক আকার (_N)"
 # #বুঝলাম না!
 #
 # Translated by sadia
-#: ../src/xviewer-window.c:4232 ../src/xviewer-window.c:4247
+#: ../src/xviewer-window.c:4243 ../src/xviewer-window.c:4258
 msgid "Show the image at its normal size"
 msgstr "ছবিটিকে এর নিজস্ব আকারে প্রদর্শন করা হবে"
 
-#: ../src/xviewer-window.c:4235
+#: ../src/xviewer-window.c:4246
 msgid "Reload the image"
 msgstr ""
 
 # msgstr "আপনার বর্তমান প্রিন্টারের পৃষ্ঠা বৈশিষ্টাবলী ঠিক করুন"
-#: ../src/xviewer-window.c:4255
+#: ../src/xviewer-window.c:4266
 msgid "_Fullscreen"
 msgstr "পর্দা জুড়ে প্রদর্শন (_F)"
 
@@ -1733,33 +1459,33 @@ msgstr "পর্দা জুড়ে প্রদর্শন (_F)"
 # #বুঝলাম না!
 #
 # Translated by sadia
-#: ../src/xviewer-window.c:4256
+#: ../src/xviewer-window.c:4267
 msgid "Show the current image in fullscreen mode"
 msgstr "বর্তমান ছবিটি পর্দাজুড়ে প্রদর্শন করা হবে"
 
-#: ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4269
 msgid "Pause Slideshow"
 msgstr ""
 
-#: ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4270
 msgid "Pause or resume the slideshow"
 msgstr ""
 
-#: ../src/xviewer-window.c:4261
+#: ../src/xviewer-window.c:4272
 msgid "_Best Fit"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4262
+#: ../src/xviewer-window.c:4273
 msgid "Fit the image to the window"
 msgstr "ছবিটিকে উইন্ডোর সাথে মানানসই করা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4267 ../src/xviewer-window.c:4282
+#: ../src/xviewer-window.c:4278 ../src/xviewer-window.c:4293
 msgid "_Previous Image"
 msgstr "পূর্ববর্তী ছবি (_P)"
 
-#: ../src/xviewer-window.c:4268
+#: ../src/xviewer-window.c:4279
 msgid "Go to the previous image of the gallery"
 msgstr ""
 
@@ -1767,99 +1493,99 @@ msgstr ""
 # #আমারও মাথায় ঢুকছে না :-(
 #
 # Translated by sadia
-#: ../src/xviewer-window.c:4270
+#: ../src/xviewer-window.c:4281
 msgid "_Next Image"
 msgstr "পরবর্তী ছবি (_N)"
 
-#: ../src/xviewer-window.c:4271
+#: ../src/xviewer-window.c:4282
 msgid "Go to the next image of the gallery"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4273 ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4284 ../src/xviewer-window.c:4296
 msgid "_First Image"
 msgstr "প্রথম ছবি (_F)"
 
-#: ../src/xviewer-window.c:4274
+#: ../src/xviewer-window.c:4285
 msgid "Go to the first image of the gallery"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4276 ../src/xviewer-window.c:4288
+#: ../src/xviewer-window.c:4287 ../src/xviewer-window.c:4299
 msgid "_Last Image"
 msgstr "শেষ ছবি (_L)"
 
-#: ../src/xviewer-window.c:4277
+#: ../src/xviewer-window.c:4288
 msgid "Go to the last image of the gallery"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4279
+#: ../src/xviewer-window.c:4290
 msgid "_Random Image"
 msgstr "র্যান্ডম ছবি (_R)"
 
-#: ../src/xviewer-window.c:4280
+#: ../src/xviewer-window.c:4291
 msgid "Go to a random image of the gallery"
 msgstr ""
 
-#: ../src/xviewer-window.c:4438
+#: ../src/xviewer-window.c:4449
 msgid "S_lideshow"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4439
+#: ../src/xviewer-window.c:4450
 msgid "Start a slideshow view of the images"
 msgstr "ছবিগুলোর স্লাইড প্রদর্শন শুরু করা হবে"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4511
+#: ../src/xviewer-window.c:4522
 msgid "Previous"
 msgstr "পূর্ববর্তী"
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4516
+#: ../src/xviewer-window.c:4527
 msgid "Next"
 msgstr "পরবর্তী"
 
-#: ../src/xviewer-window.c:4523
+#: ../src/xviewer-window.c:4534
 msgid "Right"
 msgstr "ডান"
 
 # could be  অবশিষ্ট also - mak
-#: ../src/xviewer-window.c:4526
+#: ../src/xviewer-window.c:4537
 msgid "Left"
 msgstr "বাম"
 
-#: ../src/xviewer-window.c:4529
+#: ../src/xviewer-window.c:4540
 msgid "Show Folder"
 msgstr ""
 
 # msgstr "স্বাভাবিক ভাবে দেখানো হোক"
-#: ../src/xviewer-window.c:4532
+#: ../src/xviewer-window.c:4543
 msgid "Out"
 msgstr "বাহিরে"
 
 # msgstr "আঁটানো হোক"
 # #এটা কিন্তু জি-উ-আই নিয়ে ঝামেলা করবে
-#: ../src/xviewer-window.c:4535
+#: ../src/xviewer-window.c:4546
 msgid "In"
 msgstr "ভিতরে"
 
-#: ../src/xviewer-window.c:4538
+#: ../src/xviewer-window.c:4549
 msgid "Normal"
 msgstr "স্বাভাবিক"
 
 # "ভালো" বানানটা ঠিক আছে, তবে সাধারণতঃ "ভাল"ই লিখা হয়
-#: ../src/xviewer-window.c:4541
+#: ../src/xviewer-window.c:4552
 msgid "Fit"
 msgstr "মানানসই"
 
-#: ../src/xviewer-window.c:4544
+#: ../src/xviewer-window.c:4555
 msgid "Gallery"
 msgstr ""
 
 # Translated by sadia
-#: ../src/xviewer-window.c:4561
+#: ../src/xviewer-window.c:4572
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "আবর্জনা"

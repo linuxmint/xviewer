@@ -12,8 +12,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2020-12-02 16:04+0000\n"
-"PO-Revision-Date: 2020-12-17 12:51+0000\n"
+"POT-Creation-Date: 2021-06-01 13:03+0100\n"
+"PO-Revision-Date: 2021-06-08 11:49+0000\n"
 "Last-Translator: Mykola Tkach <chistomov@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2021-01-02 14:16+0000\n"
-"X-Generator: Launchpad (build 34b3ffd45c9543b7f7aa5aa313925241e9e7ca3f)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:19+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 "X-Project-Style: gnome\n"
 "Language: uk\n"
 
@@ -66,36 +66,36 @@ msgstr "В_илучити вибрану панель знарядь"
 msgid "Separator"
 msgstr "Розділювач"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4140
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4151
 msgid "_View"
 msgstr "_Вигляд"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4165
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4176
 msgid "_Toolbar"
 msgstr "_Панель знарядь"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4168
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4179
 msgid "_Statusbar"
 msgstr "_Рядок стану"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4171
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4182
 msgid "_Image Gallery"
 msgstr "Галерея _зображень"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4174
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4185
 msgid "Side _Pane"
 msgstr "Бі_чна панель"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4153
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4164
 msgid "Prefere_nces"
 msgstr "П_араметри"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4143
+#: ../src/xviewer-window.c:4154
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4159
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4170
 msgid "_About"
 msgstr "_Про програму"
 
@@ -108,8 +108,8 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
-"Xviewer - програма перегляду зображень, яка підтримує безліч форматів. Вона "
-"може використовуватися як для перегляду окремих зображень так і для колекцій "
+"Xviewer — програма перегляду зображень, яка підтримує безліч форматів. Вона "
+"може використовуватись як для перегляду окремих зображень так і для колекцій "
 "зображень."
 
 #: ../data/xviewer.appdata.xml.in.h:2
@@ -119,8 +119,9 @@ msgid ""
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
 "Xviewer також дозволяє переглядати зображення у повноекранному режимі показу "
-"слайдів або встановлювати зображення як стільничні шпалери. Він читає мітки "
-"камери для автоматичного обертання зображення в правильній орієнтації."
+"слайдів або встановлювати зображення як стільничні шпалери. Він читає "
+"позначки камери для автоматичного обертання зображення у правильній "
+"орієнтації."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 msgid "Image Viewer"
@@ -128,14 +129,14 @@ msgstr "Переглядач зображень"
 
 #: ../data/xviewer.desktop.in.in.h:2
 msgid "Browse and rotate images"
-msgstr "Перегляд та обертання зображень"
+msgstr "Перегляд і обертання зображень"
 
 #. Extra keywords that can be used to search for xviewer in GNOME Shell and Unity
 #: ../data/xviewer.desktop.in.in.h:4
 msgid "Picture;Slideshow;Graphics;"
-msgstr "Малюнок;Слайд-шоу;Графіка;"
+msgstr "Малюнок;Перегляд слайдів;Графіка;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5268
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5280
 msgid "Image Properties"
 msgstr "Властивості зображення"
 
@@ -148,7 +149,7 @@ msgid "_Next"
 msgstr "Н_аступне"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4150
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4161
 msgid "_Close"
 msgstr "_Закрити"
 
@@ -269,8 +270,8 @@ msgstr "Зберегти як"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3452 ../src/xviewer-window.c:3456
-#: ../src/xviewer-window.c:3723
+#: ../src/xviewer-window.c:3463 ../src/xviewer-window.c:3467
+#: ../src/xviewer-window.c:3734
 msgid "_Cancel"
 msgstr "_Скасувати"
 
@@ -300,7 +301,7 @@ msgstr "_Тека призначення:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:10
 msgid "Choose a folder"
-msgstr "Вибрати теку"
+msgstr "Обрати теку"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:11
 msgid "File Path Specifications"
@@ -361,7 +362,6 @@ msgid "As custom color:"
 msgstr "Власний колір:"
 
 #: ../data/xviewer-preferences-dialog.ui.h:10
-#: ../data/org.x.viewer.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Колір тла"
 
@@ -411,362 +411,79 @@ msgid "_Loop sequence"
 msgstr "_Зациклити послідовність"
 
 #: ../data/xviewer-preferences-dialog.ui.h:23
+msgid "Control"
+msgstr "Керування"
+
+#: ../data/xviewer-preferences-dialog.ui.h:24
+msgid "Pause and resume with the spacebar"
+msgstr "Призупинити та продовжити за допомогою пробілу"
+
+#: ../data/xviewer-preferences-dialog.ui.h:25
 msgid "Slideshow"
 msgstr "Показ слайдів"
 
-#: ../data/xviewer-preferences-dialog.ui.h:24
+#: ../data/xviewer-preferences-dialog.ui.h:26
 msgid "Scroll Wheel"
 msgstr "Коліща гортання"
 
-#: ../data/xviewer-preferences-dialog.ui.h:25
+#: ../data/xviewer-preferences-dialog.ui.h:27
 msgid "Wheel"
 msgstr "Коліща"
 
-#: ../data/xviewer-preferences-dialog.ui.h:26
+#: ../data/xviewer-preferences-dialog.ui.h:28
 msgid "Zoom"
 msgstr "Масштаб"
 
-#: ../data/xviewer-preferences-dialog.ui.h:27
+#: ../data/xviewer-preferences-dialog.ui.h:29
 msgid "Vertical Scrolling"
 msgstr "Вертикальне гортання"
 
-#: ../data/xviewer-preferences-dialog.ui.h:28
+#: ../data/xviewer-preferences-dialog.ui.h:30
 msgid "Horizontal Scrolling"
 msgstr "Горизонтальне гортання"
 
-#: ../data/xviewer-preferences-dialog.ui.h:29
+#: ../data/xviewer-preferences-dialog.ui.h:31
 msgid "Previous/Next Image"
 msgstr "Попереднє/Наступне зображення"
 
-#: ../data/xviewer-preferences-dialog.ui.h:30
+#: ../data/xviewer-preferences-dialog.ui.h:32
 msgid "Rotate 90 degrees"
 msgstr "Повернути на 90 градусів"
 
-#: ../data/xviewer-preferences-dialog.ui.h:31
+#: ../data/xviewer-preferences-dialog.ui.h:33
 msgid "No Action"
 msgstr "Жодних дій"
 
-#: ../data/xviewer-preferences-dialog.ui.h:32
+#: ../data/xviewer-preferences-dialog.ui.h:34
 msgid "Shift + Wheel"
 msgstr "Shift + Коліща"
 
-#: ../data/xviewer-preferences-dialog.ui.h:33
+#: ../data/xviewer-preferences-dialog.ui.h:35
 msgid "Control + Wheel"
 msgstr "Control + Коліща"
 
-#: ../data/xviewer-preferences-dialog.ui.h:34
+#: ../data/xviewer-preferences-dialog.ui.h:36
 msgid "Shift + Control + Wheel"
 msgstr "Shift + Control + Коліща"
 
-#: ../data/xviewer-preferences-dialog.ui.h:35
+#: ../data/xviewer-preferences-dialog.ui.h:37
 msgid "Tilt Wheel"
 msgstr "Нахил коліща"
 
-#: ../data/xviewer-preferences-dialog.ui.h:36
+#: ../data/xviewer-preferences-dialog.ui.h:38
 msgid "Mouse"
 msgstr "Миша"
 
-#: ../data/xviewer-preferences-dialog.ui.h:37
+#: ../data/xviewer-preferences-dialog.ui.h:39
 msgid "Plugins"
 msgstr "Втулки"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:1
-msgid "Automatic orientation"
-msgstr "Автоматичне орієнтування"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:2
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"Чи повинно зображення автоматично обертатись відповідно до даних EXIF."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:4
-msgid ""
-"The color that is used to fill the area behind the image. If the use-"
-"background-color key is not set, the color is determined by the active GTK+ "
-"theme instead."
-msgstr ""
-"Колір, який використовується для заливання ділянки за зображенням. Якщо ключ "
-"use-background-color не встановлено, колір натомість визначить тема GTK+."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:5
-msgid "Interpolate Image"
-msgstr "Інтерполювати зображення"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:6
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"Визначає, чи потрібно інтерполювати зображення при масштабуванні. В "
-"результаті можна отримати кращу якість при сповільненні роботи, на відміну "
-"від неінтерпольованих зображень."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:7
-msgid "Extrapolate Image"
-msgstr "Екстраполювати зображення"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:8
-msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"Визначає, чи потрібно екстраполювати зображення при масштабуванні. В "
-"результаті можна отримати кращу якість при сповільненні роботи, на відміну "
-"від неекстрапольованих зображень."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:9
-msgid "Transparency indicator"
-msgstr "Індикатор прозорості"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:10
-msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
-msgstr ""
-"Визначає, як потрібно позначати прозорість. Правильними значеннями є  "
-"CHECK_PATTERN, COLOR і NONE. Якщо вибрано COLOR, то ключ кольору, яким "
-"позначатиметься прозорість, буде визначати значення."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:11
-msgid "Scroll wheel zoom"
-msgstr "Масштабувати обертання колеса миші"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:12
-msgid "Whether the scroll wheel should be used for zooming."
-msgstr "Чи використовувати прокручування колеса для зміни масштабу."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:13
-msgid "Mouse scroll wheel action"
-msgstr "Дія коліща миші"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:14
-msgid ""
-"Action for mouse scroll wheel. Values are 0 = zoom, 1 = Vertical pan, 2 = "
-"horizontal pan, 3 = next/prev image, 4 = rotate 90 deg CW or CCW, 5 = no "
-"action"
-msgstr ""
-"Дія для коліща миші. Значення: 0 = масштабування, 1 = вертикальне гортання, "
-"2 = горизонтальне гортання, 3 = наступне/попереднє зображення, 4 = обертання "
-"на 90 градусів проти годинникової стрілки, 5 = відсутність дії"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:15
-msgid "Mouse scroll wheel + shift action"
-msgstr "Дія для коліща миші + Shift"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:16
-msgid "Mouse scroll wheel + ctrl action"
-msgstr "Дія для коліща миші + ctrl"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:17
-msgid "Zoom multiplier"
-msgstr "Коефіцієнт збільшення"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:19
-#, no-c-format
-msgid ""
-"The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"Множник, що застосовується при використанні колеса миші для зміни масштабу. "
-"Це значення визначає крок зміни масштабу при кожному русі прокручування. "
-"Наприклад, 0.05 означає збільшення на 5% для кожної події прокручування, а "
-"1.00 — збільшення на 100%."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:20
-msgid "Transparency color"
-msgstr "Колір прозорості"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:21
-msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
-msgstr ""
-"Якщо ключ transparency має значення COLOR, то цей ключ визначає колір, яким "
-"позначатиметься прозорість."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:22
-msgid "Use a custom background color"
-msgstr "Використати власний колір тла"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:23
-msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
-"will determine the fill color."
-msgstr ""
-"Якщо увімкнено, вказаний колір у ключі background-color буде використано для "
-"заповнення ділянки за зображенням. Якщо не вказано, поточна тема GTK+ "
-"визначить колір заливання."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:24
-msgid "Loop through the image sequence"
-msgstr "Циклічна послідовність зображень"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:25
-msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr ""
-"Визначає, що потрібно показувати послідовність зображень у нескінченному "
-"циклі."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:27
-#, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Дозволяти початковий масштаб більше 100%"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:28
-msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Якщо не позначено, то малі зображення не будуть розтягуватися до розмірів "
-"екрану на початку."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:29
-msgid "Delay in seconds until showing the next image"
-msgstr "Затримка у секундах перед наступним зображенням"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:30
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Значення більше 0 визначає кількість секунд, яку зображення лишатиметься на "
-"екрані перед автоматичною появою наступного. Нуль вимикає автоматичний "
-"перегляд."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:31
-msgid "Show/Hide the window toolbar."
-msgstr "Показати чи прибрати панель знарядь"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:32
-msgid "Show/Hide the window statusbar."
-msgstr "Показати чи приховати рядок стану вікна."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:33
-msgid "Show/Hide the image gallery pane."
-msgstr "Показувати/Приховувати панель галереї зображень."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:34
-msgid ""
-"Image gallery pane position. Set to 0 for bottom; 1 for left; 2 for top; 3 "
-"for right."
-msgstr ""
-"Положення панелі галереї зображень. Встановіть 0 — знизу; 1 — ліворуч; 2 — "
-"згори; 3 — праворуч."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:35
-msgid "Whether the image gallery pane should be resizable."
-msgstr "Чи можна змінювати розмір панелі галереї зображень."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:36
-msgid "Show/Hide the window side pane."
-msgstr "Показати чи приховати бічну панель."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:37
-msgid "Show/Hide the image gallery pane scroll buttons."
-msgstr "Показати/Сховати кнопки прокручування панелі галереї."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:38
-msgid "Close main window without asking to save changes."
-msgstr "Закрити головне вікно без запитання про зберігання змін."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:39
-msgid "Trash images without asking"
-msgstr "Знищувати зображення не питаючи дозволу"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:40
-msgid ""
-"If activated, Xviewer won't ask for confirmation when moving images to the "
-"trash. It will still ask if any of the files cannot be moved to the trash "
-"and would be deleted instead."
-msgstr ""
-"Якщо активне, Xviewer не запитуватиме схвалення при переміщенні зображень до "
-"смітника. Однак, Ви будете отримувати запити у випадку, якщо файли не можна "
-"перенести до смітника, а натомість їх пропонується вилучити."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:41
-msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-"Чи у вікні вибору файлу слід показувати зображення з теки малюнків, якщо "
-"зображення не завантажено у програмі."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:42
-msgid ""
-"If activated and no image is loaded in the active window, the file chooser "
-"will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up, it "
-"will show the current working directory."
-msgstr ""
-"Якщо увімкнено й у активному вікні не завантажено зображення, вікно вибору "
-"файлів показуватиме теку користувача для малюнків, зі спеціальних каталогів "
-"XDG. Якщо вимкнено або теку малюнків не встановлено, показуватиметься "
-"поточний каталог."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:43
-msgid ""
-"Whether the metadata list in the properties dialog should have its own page."
-msgstr "Чи матиме перелік метаданих власну сторінку у вікні властивостей."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:44
-msgid ""
-"If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
-"be embedded on the \"Metadata\" page."
-msgstr ""
-"Якщо увімкнено, докладний перелік метаданих у діалозі властивостей буде "
-"показано на власній сторінці у вікні. Це дозволяє краще розміщуватися на "
-"маленьких екранах, наприклад нетбуках. Якщо вимкнено, віджет вбудовується у "
-"сторінку «Метадані»."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:45
-msgid "External program to use for editing images"
-msgstr "Зовнішня програма для редагування зображень"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:46
-msgid ""
-"The desktop file name (including the \".desktop\") of the application to use "
-"for editing images (when the \"Edit Image\" toolbar button is clicked). Set "
-"to the empty string to disable this feature."
-msgstr ""
-"Назва файлу стільниці (включаючи «.desktop») програми для редагування "
-"зображень (коли панель «Редагування зображення» натиснуто). Залиште порожній "
-"рядок, щоб вимкнути цю функцію."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:47
-msgid "Active plugins"
-msgstr "Активні втулки"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:48
-msgid ""
-"List of active plugins. It doesn't contain the \"Location\" of the active "
-"plugins. See the .xviewer-plugin file for obtaining the \"Location\" of a "
-"given plugin."
-msgstr ""
-"Перелік активних втулків. У переліку не міститься \"Розташування\" активних "
-"втулків. Щоб дізнатись \"Розташування\" певного втулку дивіться файл "
-".xviewer-plugin\"."
-
-#: ../data/org.x.viewer.gschema.xml.in.h:49
-msgid "Maximize Image"
-msgstr "Максимізувати зображення"
-
-#: ../data/org.x.viewer.gschema.xml.in.h:50
-msgid "Whether or not the image should be maximized."
-msgstr "Чи повинне зображення бути максимізованим"
 
 #: ../src/xviewer-close-confirmation-dialog.c:166
 msgid "Close _without Saving"
 msgstr "Закрити _без збереження"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4180
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4191
 msgid "_Save"
 msgstr "З_берегти"
 
@@ -776,7 +493,7 @@ msgstr "Запитання"
 
 #: ../src/xviewer-close-confirmation-dialog.c:391
 msgid "If you don't save, your changes will be lost."
-msgstr "Якщо Ви не збережете, зміни будуть втрачені."
+msgstr "Якщо Ви не збережете, зміни буде втрачено."
 
 #: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
@@ -796,19 +513,19 @@ msgstr[2] ""
 
 #: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
-msgstr "В_иберіть зображення, які треба зберегти:"
+msgstr "Об_беріть зображення, які треба зберегти:"
 
 #. Secondary label
 #: ../src/xviewer-close-confirmation-dialog.c:688
 msgid "If you don't save, all your changes will be lost."
-msgstr "Якщо Ви не збережете, усі зміни буде втрачено."
+msgstr "Якщо Ви не збережете, всі зміни буде втрачено."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:879
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:881
+#: ../src/xviewer-window.c:4245
 msgid "_Reload"
 msgstr "_Перезавантажити"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4186
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4197
 msgid "Save _As…"
 msgstr "Зберегти _як…"
 
@@ -873,7 +590,7 @@ msgstr "Інше XMP"
 
 #: ../src/xviewer-metadata-details.c:251
 msgid "Tag"
-msgstr "Мітка"
+msgstr "Позначка"
 
 #: ../src/xviewer-metadata-details.c:258
 msgid "Value"
@@ -922,7 +639,7 @@ msgstr "%.1f (35мм плівка)"
 
 #: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
-msgstr "Формат файлу невідомий або не підтримується"
+msgstr "Формат файлу невідомий або непідтримується"
 
 #: ../src/xviewer-file-chooser.c:124
 msgid ""
@@ -934,7 +651,7 @@ msgstr ""
 
 #: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
-msgstr "Спробуйте різні розширення файлів, наприклад .png чи .jpg."
+msgstr "Спробуйте різні розширення файлів, наприклад .png або .jpg."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
 #: ../src/xviewer-file-chooser.c:160
@@ -980,34 +697,34 @@ msgstr "Відкрити теку"
 #: ../src/xviewer-image.c:613
 #, c-format
 msgid "Transformation on unloaded image."
-msgstr "Перетворення для не завантаженого зображення."
+msgstr "Перетворення для незавантаженого зображення."
 
 #: ../src/xviewer-image.c:641
 #, c-format
 msgid "Transformation failed."
 msgstr "Помилка при перетворенні."
 
-#: ../src/xviewer-image.c:1139
+#: ../src/xviewer-image.c:1261
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Для цього формату файлів EXIF не підтримується."
 
-#: ../src/xviewer-image.c:1288
+#: ../src/xviewer-image.c:1410
 #, c-format
 msgid "Image loading failed."
 msgstr "Помилка завантаження зображення."
 
-#: ../src/xviewer-image.c:1869 ../src/xviewer-image.c:1989
+#: ../src/xviewer-image.c:1991 ../src/xviewer-image.c:2111
 #, c-format
 msgid "No image loaded."
 msgstr "Зображення не завантажено."
 
-#: ../src/xviewer-image.c:1877 ../src/xviewer-image.c:1998
+#: ../src/xviewer-image.c:1999 ../src/xviewer-image.c:2120
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
-msgstr "В вас немає прав потрібних для збереження файлу."
+msgstr "У вас немає прав потрібних для збереження файлу."
 
-#: ../src/xviewer-image.c:1887 ../src/xviewer-image.c:2009
+#: ../src/xviewer-image.c:2009 ../src/xviewer-image.c:2131
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Помилка при створенні тимчасового файлу."
@@ -1020,7 +737,7 @@ msgstr "Не вдалося створити тимчасовий файл дл�
 #: ../src/xviewer-image-jpeg.c:393
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Не вдалося виділити пам'ять для завантаження файлу у форматі JPEG"
+msgstr "Не вдалося виділити пам'ять для завантаження файлу в форматі JPEG"
 
 #: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:156
 msgid "Unknown"
@@ -1031,11 +748,11 @@ msgid "File size:"
 msgstr "Розмір файлу:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4190
+#: ../src/xviewer-window.c:4201
 msgid "Show the folder which contains this file in the file manager"
-msgstr "Показати теку, яка містить цей файл у файловому менеджері"
+msgstr "Показати теку, яка містить цей файл у файловому упоряднику"
 
-#: ../src/xviewer-preferences-dialog.c:133
+#: ../src/xviewer-preferences-dialog.c:134
 #, c-format
 msgid "%lu second"
 msgid_plural "%lu seconds"
@@ -1053,7 +770,7 @@ msgstr "Зображення"
 
 #: ../src/xviewer-print-image-setup.c:898
 msgid "The image whose printing properties will be set up"
-msgstr "Зображення, для якого будуть налаштовані властивості друку"
+msgstr "Зображення, для якого буде налаштовано властивості друку"
 
 #: ../src/xviewer-print-image-setup.c:904
 msgid "Page Setup"
@@ -1133,7 +850,7 @@ msgstr "Дюйми(Інчі)"
 
 #: ../src/xviewer-print-image-setup.c:1024
 msgid "Preview"
-msgstr "Передогляд"
+msgstr "Передпрогляд"
 
 #: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
@@ -1177,7 +894,7 @@ msgstr " (некоректний символ Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:544
+#: ../src/xviewer-window.c:546
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -1185,14 +902,14 @@ msgstr[0] "%i × %i точка  %s    %i%%"
 msgstr[1] "%i × %i точки  %s    %i%%"
 msgstr[2] "%i × %i точок  %s    %i%%"
 
-#: ../src/xviewer-window.c:881 ../src/xviewer-window.c:2868
+#: ../src/xviewer-window.c:883 ../src/xviewer-window.c:2879
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Сховати"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:891
+#: ../src/xviewer-window.c:893
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1201,7 +918,7 @@ msgstr ""
 "Зображення «%s» змінено через іншу програму.\n"
 "Перезавантажити його?"
 
-#: ../src/xviewer-window.c:1068
+#: ../src/xviewer-window.c:1070
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Використовувати «%s» для відкривання вибраного зображення"
@@ -1211,22 +928,22 @@ msgstr "Використовувати «%s» для відкривання ви
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1224
+#: ../src/xviewer-window.c:1226
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Збереження зображення «%s» (%u/%u)"
 
-#: ../src/xviewer-window.c:1619
+#: ../src/xviewer-window.c:1621
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Відкриття зображення «%s»"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2203
+#: ../src/xviewer-window.c:2207
 msgid "Viewing a slideshow"
 msgstr "Переглядання слайдами"
 
-#: ../src/xviewer-window.c:2443
+#: ../src/xviewer-window.c:2454
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1235,19 +952,19 @@ msgstr ""
 "Помилка при друкуванні файлу:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2796 ../src/xviewer-window.c:2811
+#: ../src/xviewer-window.c:2807 ../src/xviewer-window.c:2822
 msgid "Error launching System Settings: "
 msgstr "помилка запуску системних налаштувань: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2866
+#: ../src/xviewer-window.c:2877
 msgid "_Open Background Preferences"
 msgstr "_Відкрити налаштування тла"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2882
+#: ../src/xviewer-window.c:2893
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1256,18 +973,18 @@ msgstr ""
 "Зображення «%s» встановлено як тло стільниці.\n"
 "Змінити його вигляд?"
 
-#: ../src/xviewer-window.c:3349
+#: ../src/xviewer-window.c:3360
 msgid "Saving image locally…"
 msgstr "Збереження зображення локально…"
 
-#: ../src/xviewer-window.c:3428
+#: ../src/xviewer-window.c:3439
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
 "\"%s\" permanently?"
 msgstr "Вилучити «%s» остаточно?"
 
-#: ../src/xviewer-window.c:3431
+#: ../src/xviewer-window.c:3442
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1279,41 +996,41 @@ msgstr[0] "Вилучити %d вибране зображення остато�
 msgstr[1] "Вилучити %d вибраних зображення остаточно?"
 msgstr[2] "Вилучити %d вибраних зображень остаточно?"
 
-#: ../src/xviewer-window.c:3453 ../src/xviewer-window.c:3734
+#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3745
 msgid "_Delete"
 msgstr "В_илучити"
 
-#: ../src/xviewer-window.c:3457 ../src/xviewer-window.c:3736
+#: ../src/xviewer-window.c:3468 ../src/xviewer-window.c:3747
 msgid "_Yes"
 msgstr "_Так"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3462 ../src/xviewer-window.c:3728
+#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3739
 msgid "Do _not ask again during this session"
 msgstr "_Не запитувати знову впродовж цього сеансу"
 
-#: ../src/xviewer-window.c:3507
+#: ../src/xviewer-window.c:3518
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Неможливо отримати файл зображення"
 
-#: ../src/xviewer-window.c:3523
+#: ../src/xviewer-window.c:3534
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Неможливо отримати інформацію про файл зображення"
 
-#: ../src/xviewer-window.c:3539 ../src/xviewer-window.c:3795
+#: ../src/xviewer-window.c:3550 ../src/xviewer-window.c:3806
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Не можу вилучити файл"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3589 ../src/xviewer-window.c:3891
+#: ../src/xviewer-window.c:3600 ../src/xviewer-window.c:3902
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Помилка при вилученні зображення %s"
 
-#: ../src/xviewer-window.c:3696
+#: ../src/xviewer-window.c:3707
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1322,14 +1039,14 @@ msgstr ""
 "Перемістити\n"
 "«%s» у смітник?"
 
-#: ../src/xviewer-window.c:3699
+#: ../src/xviewer-window.c:3710
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Не можу знайти смітника для «%s». Остаточно вилучити це зображення?"
 
-#: ../src/xviewer-window.c:3704
+#: ../src/xviewer-window.c:3715
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1347,340 +1064,340 @@ msgstr[2] ""
 "Перемістити\n"
 "%d вибраних зображень у смітник?"
 
-#: ../src/xviewer-window.c:3709
+#: ../src/xviewer-window.c:3720
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
-"Деякі з вибраних зображень не можна перенести до смітника, а тому їх буде "
+"Деякі з обраних зображень не можна перенести до смітника, а тому їх буде "
 "вилучено остаточно. Продовжити?"
 
-#: ../src/xviewer-window.c:3726 ../src/xviewer-window.c:4216
-#: ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:3737 ../src/xviewer-window.c:4227
+#: ../src/xviewer-window.c:4260
 msgid "Move to _Trash"
 msgstr "Перемістити у _смітник"
 
-#: ../src/xviewer-window.c:3773 ../src/xviewer-window.c:3787
+#: ../src/xviewer-window.c:3784 ../src/xviewer-window.c:3798
 #, c-format
 msgid "Couldn't access trash."
-msgstr "Не вдалося отримати доступ до смітника."
+msgstr "Не вдалось отримати доступ до смітника."
 
-#: ../src/xviewer-window.c:4138
+#: ../src/xviewer-window.c:4149
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/xviewer-window.c:4139
+#: ../src/xviewer-window.c:4150
 msgid "_Edit"
 msgstr "З_міни"
 
-#: ../src/xviewer-window.c:4141
+#: ../src/xviewer-window.c:4152
 msgid "_Go"
 msgstr "_Перейти"
 
-#: ../src/xviewer-window.c:4142
+#: ../src/xviewer-window.c:4153
 msgid "_Tools"
 msgstr "_Знаряддя"
 
-#: ../src/xviewer-window.c:4144
+#: ../src/xviewer-window.c:4155
 msgid "_Favorites"
 msgstr "_Улюблене"
 
-#: ../src/xviewer-window.c:4145
+#: ../src/xviewer-window.c:4156
 msgid "_Recents"
 msgstr "_Останні"
 
-#: ../src/xviewer-window.c:4147
+#: ../src/xviewer-window.c:4158
 msgid "_Open…"
 msgstr "_Відкрити…"
 
-#: ../src/xviewer-window.c:4148
+#: ../src/xviewer-window.c:4159
 msgid "Open a file"
 msgstr "Відкрити файл"
 
-#: ../src/xviewer-window.c:4151
+#: ../src/xviewer-window.c:4162
 msgid "Close window"
 msgstr "Закрити вікно"
 
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4165
 msgid "Preferences for Image Viewer"
 msgstr "Параметри переглядача зображень"
 
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4167
 msgid "_Contents"
 msgstr "_Зміст"
 
-#: ../src/xviewer-window.c:4157
+#: ../src/xviewer-window.c:4168
 msgid "Help on this application"
 msgstr "Довідка про програму"
 
-#: ../src/xviewer-window.c:4160
+#: ../src/xviewer-window.c:4171
 msgid "About this application"
 msgstr "Про цю програму"
 
-#: ../src/xviewer-window.c:4166
+#: ../src/xviewer-window.c:4177
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Змінює видимість панелі знарядь у поточному вікні"
 
-#: ../src/xviewer-window.c:4169
+#: ../src/xviewer-window.c:4180
 msgid "Changes the visibility of the statusbar in the current window"
-msgstr "Змінює видимість рядка стану у поточному вікні"
+msgstr "Змінює видимість рядка стану в поточному вікні"
 
-#: ../src/xviewer-window.c:4172
+#: ../src/xviewer-window.c:4183
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "Змінює видимість панелі галереї зображень у поточному вікні"
 
-#: ../src/xviewer-window.c:4175
+#: ../src/xviewer-window.c:4186
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Змінює видимість бічної панелі у поточному вікні"
 
-#: ../src/xviewer-window.c:4181
+#: ../src/xviewer-window.c:4192
 msgid "Save changes in currently selected images"
 msgstr "Зберегти зміни у виділених зображеннях"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4194
 msgid "Open _with"
 msgstr "Відкрити _у програмі"
 
-#: ../src/xviewer-window.c:4184
+#: ../src/xviewer-window.c:4195
 msgid "Open the selected image with a different application"
-msgstr "Відкрити виділене зображення у інший програмі"
+msgstr "Відкрити виділене зображення в іншій програмі"
 
-#: ../src/xviewer-window.c:4187
+#: ../src/xviewer-window.c:4198
 msgid "Save the selected images with a different name"
 msgstr "Зберегти виділене зображення з іншою назвою"
 
-#: ../src/xviewer-window.c:4189
+#: ../src/xviewer-window.c:4200
 msgid "Show Containing _Folder"
 msgstr "Показати вміст _теки"
 
-#: ../src/xviewer-window.c:4192
+#: ../src/xviewer-window.c:4203
 msgid "_Print…"
 msgstr "Над_рукувати…"
 
-#: ../src/xviewer-window.c:4193
+#: ../src/xviewer-window.c:4204
 msgid "Print the selected image"
 msgstr "Надрукувати вибрані зображення"
 
-#: ../src/xviewer-window.c:4195
+#: ../src/xviewer-window.c:4206
 msgid "Prope_rties"
 msgstr "В_ластивості"
 
-#: ../src/xviewer-window.c:4196
+#: ../src/xviewer-window.c:4207
 msgid "Show the properties and metadata of the selected image"
 msgstr "Показати властивості та метадані вибраних зображень"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4209
 msgid "_Undo"
 msgstr "_Повернути"
 
-#: ../src/xviewer-window.c:4199
+#: ../src/xviewer-window.c:4210
 msgid "Undo the last change in the image"
-msgstr "Повернути останню зміну у зображенні"
+msgstr "Повернути останню зміну в зображенні"
 
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4212
 msgid "Flip _Horizontal"
 msgstr "Віддзеркалити гор_изонтально"
 
-#: ../src/xviewer-window.c:4202
+#: ../src/xviewer-window.c:4213
 msgid "Mirror the image horizontally"
 msgstr "Віддзеркалити зображення горизонтально."
 
-#: ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4215
 msgid "Flip _Vertical"
 msgstr "Віддзеркалити _вертикально"
 
-#: ../src/xviewer-window.c:4205
+#: ../src/xviewer-window.c:4216
 msgid "Mirror the image vertically"
 msgstr "Віддзеркалити зображення вертикально."
 
-#: ../src/xviewer-window.c:4207
+#: ../src/xviewer-window.c:4218
 msgid "_Rotate Clockwise"
 msgstr "Обернути _за годинниковою стрілкою"
 
-#: ../src/xviewer-window.c:4208
+#: ../src/xviewer-window.c:4219
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Обернути зображення за годинниковою стрілкою на 90 градусів"
 
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4221
 msgid "Rotate Counterc_lockwise"
 msgstr "Обернути _проти годинникової стрілки"
 
-#: ../src/xviewer-window.c:4211
+#: ../src/xviewer-window.c:4222
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Обернути зображення проти годинникової стрілки на 90 градусів"
 
-#: ../src/xviewer-window.c:4213
+#: ../src/xviewer-window.c:4224
 msgid "Set as Wa_llpaper"
 msgstr "Встановити як _шпалери"
 
-#: ../src/xviewer-window.c:4214
+#: ../src/xviewer-window.c:4225
 msgid "Set the selected image as the wallpaper"
 msgstr "Встановити вибране зображення як шпалери"
 
-#: ../src/xviewer-window.c:4217
+#: ../src/xviewer-window.c:4228
 msgid "Move the selected image to the trash folder"
 msgstr "Перемістити виділене зображення у смітник"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4230
 msgid "_Delete Image"
 msgstr "_Вилучити зображення"
 
-#: ../src/xviewer-window.c:4220
+#: ../src/xviewer-window.c:4231
 msgid "Delete the selected image"
 msgstr "Вилучити вибране зображення"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4233
 msgid "_Copy"
 msgstr "_Копіювати"
 
-#: ../src/xviewer-window.c:4223
+#: ../src/xviewer-window.c:4234
 msgid "Copy the selected image to the clipboard"
 msgstr "Скопіювати вибране зображення у буфер"
 
-#: ../src/xviewer-window.c:4225 ../src/xviewer-window.c:4237
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
+#: ../src/xviewer-window.c:4251
 msgid "_Zoom In"
 msgstr "З_більшити"
 
-#: ../src/xviewer-window.c:4226 ../src/xviewer-window.c:4238
+#: ../src/xviewer-window.c:4237 ../src/xviewer-window.c:4249
 msgid "Enlarge the image"
 msgstr "Збільшити зображення"
 
-#: ../src/xviewer-window.c:4228 ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4254
 msgid "Zoom _Out"
 msgstr "З_меншити"
 
-#: ../src/xviewer-window.c:4229 ../src/xviewer-window.c:4241
-#: ../src/xviewer-window.c:4244
+#: ../src/xviewer-window.c:4240 ../src/xviewer-window.c:4252
+#: ../src/xviewer-window.c:4255
 msgid "Shrink the image"
 msgstr "Зменшити зображення"
 
-#: ../src/xviewer-window.c:4231 ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4242 ../src/xviewer-window.c:4257
 msgid "_Normal Size"
 msgstr "З_вичайний розмір"
 
-#: ../src/xviewer-window.c:4232 ../src/xviewer-window.c:4247
+#: ../src/xviewer-window.c:4243 ../src/xviewer-window.c:4258
 msgid "Show the image at its normal size"
 msgstr "Показати зображення зі звичайними розмірами"
 
-#: ../src/xviewer-window.c:4235
+#: ../src/xviewer-window.c:4246
 msgid "Reload the image"
 msgstr "Оновити зображення"
 
-#: ../src/xviewer-window.c:4255
+#: ../src/xviewer-window.c:4266
 msgid "_Fullscreen"
-msgstr "_На увесь екран"
+msgstr "_На весь екран"
 
-#: ../src/xviewer-window.c:4256
+#: ../src/xviewer-window.c:4267
 msgid "Show the current image in fullscreen mode"
 msgstr "Показати зображення у повноекранному режимі"
 
-#: ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4269
 msgid "Pause Slideshow"
 msgstr "Призупинити показ слайдів"
 
-#: ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4270
 msgid "Pause or resume the slideshow"
 msgstr "Призупинити або відновити показ слайдів"
 
-#: ../src/xviewer-window.c:4261
+#: ../src/xviewer-window.c:4272
 msgid "_Best Fit"
 msgstr "_Вмістити у вікні"
 
-#: ../src/xviewer-window.c:4262
+#: ../src/xviewer-window.c:4273
 msgid "Fit the image to the window"
 msgstr "Розмістити зображення цілком у вікні"
 
-#: ../src/xviewer-window.c:4267 ../src/xviewer-window.c:4282
+#: ../src/xviewer-window.c:4278 ../src/xviewer-window.c:4293
 msgid "_Previous Image"
 msgstr "_Попереднє зображення"
 
-#: ../src/xviewer-window.c:4268
+#: ../src/xviewer-window.c:4279
 msgid "Go to the previous image of the gallery"
 msgstr "Перейти до попередньої галереї зображень"
 
-#: ../src/xviewer-window.c:4270
+#: ../src/xviewer-window.c:4281
 msgid "_Next Image"
 msgstr "_Наступне зображення"
 
-#: ../src/xviewer-window.c:4271
+#: ../src/xviewer-window.c:4282
 msgid "Go to the next image of the gallery"
 msgstr "Перейти до наступної галереї зображень"
 
-#: ../src/xviewer-window.c:4273 ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4284 ../src/xviewer-window.c:4296
 msgid "_First Image"
 msgstr "П_ерше зображення"
 
-#: ../src/xviewer-window.c:4274
+#: ../src/xviewer-window.c:4285
 msgid "Go to the first image of the gallery"
 msgstr "Перейти до першої галереї зображень"
 
-#: ../src/xviewer-window.c:4276 ../src/xviewer-window.c:4288
+#: ../src/xviewer-window.c:4287 ../src/xviewer-window.c:4299
 msgid "_Last Image"
 msgstr "_Останнє зображення"
 
-#: ../src/xviewer-window.c:4277
+#: ../src/xviewer-window.c:4288
 msgid "Go to the last image of the gallery"
 msgstr "Перейти до останньої галереї зображень"
 
-#: ../src/xviewer-window.c:4279
+#: ../src/xviewer-window.c:4290
 msgid "_Random Image"
 msgstr "Випа_дкове зображення"
 
-#: ../src/xviewer-window.c:4280
+#: ../src/xviewer-window.c:4291
 msgid "Go to a random image of the gallery"
 msgstr "Перейти до випадкової галереї зображень"
 
-#: ../src/xviewer-window.c:4438
+#: ../src/xviewer-window.c:4449
 msgid "S_lideshow"
 msgstr "Показ _слайдів"
 
-#: ../src/xviewer-window.c:4439
+#: ../src/xviewer-window.c:4450
 msgid "Start a slideshow view of the images"
 msgstr "Почати показ слайдів із зображень"
 
-#: ../src/xviewer-window.c:4511
+#: ../src/xviewer-window.c:4522
 msgid "Previous"
 msgstr "Попереднє"
 
-#: ../src/xviewer-window.c:4516
+#: ../src/xviewer-window.c:4527
 msgid "Next"
 msgstr "Наступне"
 
-#: ../src/xviewer-window.c:4523
+#: ../src/xviewer-window.c:4534
 msgid "Right"
 msgstr "За годинниковою"
 
-#: ../src/xviewer-window.c:4526
+#: ../src/xviewer-window.c:4537
 msgid "Left"
 msgstr "Проти годинникової"
 
-#: ../src/xviewer-window.c:4529
+#: ../src/xviewer-window.c:4540
 msgid "Show Folder"
 msgstr "Показати теку"
 
-#: ../src/xviewer-window.c:4532
+#: ../src/xviewer-window.c:4543
 msgid "Out"
 msgstr "Зменшити"
 
-#: ../src/xviewer-window.c:4535
+#: ../src/xviewer-window.c:4546
 msgid "In"
 msgstr "Збільшити"
 
-#: ../src/xviewer-window.c:4538
+#: ../src/xviewer-window.c:4549
 msgid "Normal"
 msgstr "Початковий"
 
-#: ../src/xviewer-window.c:4541
+#: ../src/xviewer-window.c:4552
 msgid "Fit"
 msgstr "Припасувати"
 
-#: ../src/xviewer-window.c:4544
+#: ../src/xviewer-window.c:4555
 msgid "Gallery"
 msgstr "Галерея"
 
-#: ../src/xviewer-window.c:4561
+#: ../src/xviewer-window.c:4572
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Смітник"
@@ -1705,7 +1422,7 @@ msgstr "Запускати новий примірник замість вико
 msgid ""
 "Open in a single window, if multiple windows are open the first one is used"
 msgstr ""
-"Відкрити у окремому вікні, якщо відкрито декілька вікон й використовується "
+"Відкрити в окремому вікні, якщо відкрито декілька вікон і використовується "
 "перше вікно"
 
 #: ../src/main.c:69
