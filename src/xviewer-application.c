@@ -293,9 +293,12 @@ xviewer_application_startup (GApplication *application)
 	g_set_application_name (_("Image Viewer"));
 
 	settings = gtk_settings_get_default ();
-	g_object_set (G_OBJECT (settings),
+
+	if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "XFCE") != 0) {
+		g_object_set (G_OBJECT (settings),
 	              "gtk-application-prefer-dark-theme", TRUE,
 	              NULL);
+	}
 
 	g_object_get (gtk_settings_get_default (),
 		      "gtk-shell-shows-app-menu", &shows_app_menu,
