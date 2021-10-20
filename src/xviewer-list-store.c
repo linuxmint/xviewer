@@ -485,14 +485,14 @@ directory_visit (GFile *directory,
 	}
 }
 
+/* Set up callbacks for changes to files in a folder */
+
 static void
-xviewer_list_store_append_directory (XviewerListStore *store,
+xviewer_list_store_set_directory_callbacks  (XviewerListStore *store,
 				 GFile *file,
 				 GFileType file_type)
 {
 	GFileMonitor *file_monitor;
-	GFileEnumerator *file_enumerator;
-	GFileInfo *file_info;
 
 	g_return_if_fail (file_type == G_FILE_TYPE_DIRECTORY);
 
@@ -500,13 +500,28 @@ xviewer_list_store_append_directory (XviewerListStore *store,
 						 0, NULL, NULL);
 
 	if (file_monitor != NULL) {
-		g_signal_connect (file_monitor, "changed",
-				  G_CALLBACK (file_monitor_changed_cb), store);
+        if (g_list_find(store->priv->monitors, file_monitor) == NULL) {
+		    g_signal_connect (file_monitor, "changed",
+				     G_CALLBACK (file_monitor_changed_cb), store);
 
-		/* prepend seems more efficient to me, we don't need this list
-		   to be sorted */
-		store->priv->monitors = g_list_prepend (store->priv->monitors, file_monitor);
+		    /* prepend seems more efficient to me, we don't need this list
+		        to be sorted */
+		    store->priv->monitors = g_list_prepend (store->priv->monitors, file_monitor);
+        }
 	}
+}
+
+static void
+xviewer_list_store_append_directory (XviewerListStore *store,
+				 GFile *file,
+				 GFileType file_type)
+{
+	GFileEnumerator *file_enumerator;
+	GFileInfo *file_info;
+
+	g_return_if_fail (file_type == G_FILE_TYPE_DIRECTORY);
+
+    xviewer_list_store_set_directory_callbacks (store, file, file_type);
 
 	file_enumerator = g_file_enumerate_children (file,
 						     G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
@@ -550,7 +565,9 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 	GtkTreeIter iter;
 	gint sort_id = GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID;
 	gboolean singleton_list = FALSE;
-
+    GList *directory_list = NULL;
+    GList *dir_iter;
+ 
 	if (file_list == NULL) {
 		return;
 	}
@@ -627,8 +644,54 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 			g_object_unref (file);
 		} else if (file_type == G_FILE_TYPE_REGULAR && !singleton_list) {
 			xviewer_list_store_append_image_from_file (store, file);
+
+			file = g_file_get_parent (file);
+			file_info = g_file_query_info (file,
+						       G_FILE_ATTRIBUTE_STANDARD_TYPE,
+						       0, NULL, NULL);
+
+			/* If we can't get a file_info,
+			   file_type will stay as G_FILE_TYPE_REGULAR */
+			if (file_info != NULL) {
+				file_type = g_file_info_get_file_type (file_info);
+				g_object_unref (file_info);
+			}
+                                                        /* attempt to set callbacks for the directories
+                                                           that contain the selected files - otherwise
+                                                           changes by external programs to an image that
+                                                           is currently being displayed will not cause
+                                                           the display to be updated */
+			if (file_type == G_FILE_TYPE_DIRECTORY) {
+                gboolean name_not_found = TRUE;
+
+                gchar * directory_name = g_file_get_basename(file);
+
+                dir_iter = directory_list;
+
+                while ((dir_iter != NULL) && name_not_found) {
+                    if (strcmp(dir_iter->data, directory_name) == 0)
+                        name_not_found = FALSE;
+                    dir_iter = dir_iter->next;
+                }
+
+                if (name_not_found) {
+                    directory_list = g_list_prepend(directory_list, g_strdup(directory_name));
+                    xviewer_list_store_set_directory_callbacks (store, file, file_type);
+                }
+
+                g_free(directory_name);
+           }
 		}
 	}
+
+    if (directory_list != NULL) {
+        dir_iter = directory_list;
+        while (dir_iter != NULL) {
+            g_free(dir_iter->data);
+            dir_iter = dir_iter->next;
+        }
+        g_list_free(directory_list);
+    }
 
 	if (initial_file &&
 	    is_file_in_list_store_file (store, initial_file, &iter)) {
