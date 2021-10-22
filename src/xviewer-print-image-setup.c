@@ -24,8 +24,6 @@
 #endif
 
 #include <gtk/gtk.h>
-#include <gtk/gtkunixprint.h>
-
 #include <glib/gi18n.h>
 #include <glib/gprintf.h>
 

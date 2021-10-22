@@ -1,21 +1,26 @@
-#! /usr/bin/make -f 
+#! /usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/autoreconf.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/utils.mk
-include /usr/share/cdbs/1/class/gnome.mk
--include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+%:
+	dh $@ --with gir
 
-LDFLAGS += -Wl,-O1 -Wl,--as-needed
 
-DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-D deprecated_warnings=false \
+		-D docs=true \
+		-D exempi=enabled \
+		-D exif=enabled \
+		-D jpeg=enabled \
+		-D lcms=enabled \
+		-D rsvg=enabled
 
-DEB_DH_MAKESHLIBS_ARGS_ALL += --no-act
+override_dh_strip:
+	dh_strip --dbg-package=xviewer-dbg
 
-binary-post-install/xviewer::
-	# remove gir file from xviewer package, it will be in xviewer-dev
-	rm -rf `pwd`/debian/xviewer/usr/share/xviewer/gir-1.0/
+# needed to find the library in it's subdir
+override_dh_girepository:
+	dh_girepository /usr/lib/$(DEB_HOST_MULTIARCH)/xviewer
 
-DEB_DH_GIREPOSITORY_ARGS_xviewer += -ldebian/tmp/usr/share/xviewer/gir-1.0/ /usr/lib/xviewer/girepository-1.0/
-
-common-binary-post-install-arch:: list-missing
+# Disabled
+override_dh_dwz:
+override_dh_auto_test:
