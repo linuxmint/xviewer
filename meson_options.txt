@@ -1,0 +1,48 @@
+option(
+    'exempi',
+    type: 'feature',
+    value: 'auto',
+    description: 'enable XMP (libexempi) support'
+)
+
+option(
+    'exif',
+    type: 'feature',
+    value: 'auto',
+    description: 'enable EXIF (libexif) support'
+)
+
+option(
+    'jpeg',
+    type: 'feature',
+    value: 'auto',
+    description: 'enable JPEG (libjpeg) support'
+)
+
+option(
+    'lcms',
+    type: 'feature',
+    value: 'auto',
+    description: 'enable LittleCMS 2 (liblcms2) support'
+)
+
+option(
+    'rsvg',
+    type: 'feature',
+    value: 'auto',
+    description: 'enable SVG (librsvg) support'
+)
+
+option(
+    'docs',
+    type: 'boolean',
+    value: true,
+    description: 'Build the API references (requires gtk-doc)'
+)
+
+option(
+    'deprecated_warnings',
+    type : 'boolean',
+    value : false,
+    description: 'Show build warnings for deprecations'
+)

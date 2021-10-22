@@ -92,13 +92,13 @@ main (int argc, char **argv)
 	GError *error = NULL;
 	GOptionContext *ctx;
 
-	bindtextdomain (PACKAGE, XVIEWER_LOCALE_DIR);
-	bind_textdomain_codeset (PACKAGE, "UTF-8");
-	textdomain (PACKAGE);
+	bindtextdomain (GETTEXT_PACKAGE, XVIEWER_LOCALE_DIR);
+	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+	textdomain (GETTEXT_PACKAGE);
 
 	ctx = g_option_context_new (_("[FILE…]"));
-	g_option_context_add_main_entries (ctx, goption_options, PACKAGE);
-	/* Option groups are free'd together with the context 
+	g_option_context_add_main_entries (ctx, goption_options, GETTEXT_PACKAGE);
+	/* Option groups are free'd together with the context
 	 * Using gtk_get_option_group here initializes gtk during parsing */
 	g_option_context_add_group (ctx, gtk_get_option_group (FALSE));
 #ifdef HAVE_INTROSPECTION
