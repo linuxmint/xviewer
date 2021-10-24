@@ -40,7 +40,7 @@ Depends: gir1.2-peas-1.0,
          ${shlibs:Depends}
 Recommends: librsvg2-common, yelp
 Description: Image viewer
- xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
  images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
 
@@ -50,7 +50,7 @@ Architecture: any
 Priority: extra
 Depends: xviewer (= ${binary:Version}), ${misc:Depends}
 Description: Image viewer - debugging symbols
- xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
  images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
  .
@@ -59,13 +59,13 @@ Description: Image viewer - debugging symbols
 Package: xviewer-dev
 Architecture: any
 Depends: libgtk-3-dev, xviewer (>= ${binary:Version}), ${misc:Depends}
-Description: Development files for xviewer
- xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
+Description: Development files for Xviewer
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
  images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
  .
  This package contains header files and development information, which
- is needed to build plugins for xviewer.
+ is needed to build plugins for Xviewer.
 
 Package: gir1.2-xviewer-3.0
 Section: introspection
@@ -73,8 +73,8 @@ Architecture: any
 Depends: xviewer (= ${binary:Version}),
          ${gir:Depends},
          ${misc:Depends}
-Description: GObject introspection data for xviewer
- xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
+Description: GObject introspection data for Xviewer
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
  images, and zoom and scroll with constant memory usage.  Its goals are
  simplicity and standards compliance.
  .
