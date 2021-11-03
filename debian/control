@@ -1,11 +1,10 @@
 Source: xviewer
-Section: gnome
+Section: graphics
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
 Standards-Version: 3.9.6
 Homepage: https://github.com/linuxmint/xviewer
 Build-Depends: debhelper-compat (= 12),
-               gnome-pkg-tools (>= 0.10),
                gobject-introspection (>= 0.9.12-4~),
                gtk-doc-tools (>= 1.16),
                intltool (>= 0.40.0),
@@ -30,9 +29,9 @@ Build-Depends: debhelper-compat (= 12),
 Build-Depends-Indep: libgdk-pixbuf2.0-doc, libglib2.0-doc, libgtk-3-doc
 
 Package: xviewer
+Section: graphics
 Architecture: any
 Depends: gir1.2-peas-1.0,
-         gir1.2-xviewer-3.0 (= ${binary:Version}),
          gsettings-desktop-schemas (>= 2.91.92),
          shared-mime-info (>= 0.20),
          xapps-common (>= 2.2.7),
@@ -40,9 +39,9 @@ Depends: gir1.2-peas-1.0,
          ${shlibs:Depends}
 Recommends: librsvg2-common, yelp
 Description: Image viewer
- Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
- images, and zoom and scroll with constant memory usage.  Its goals are
- simplicity and standards compliance.
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library. It can
+ deal with large images, and zoom and scroll with constant memory usage.
+ Its goals are simplicity and standards compliance.
 
 Package: xviewer-dbg
 Section: debug
@@ -57,12 +56,16 @@ Description: Image viewer - debugging symbols
  This package contains the debugging symbols.
 
 Package: xviewer-dev
+Section: libdevel
 Architecture: any
-Depends: libgtk-3-dev, xviewer (>= ${binary:Version}), ${misc:Depends}
+Depends: gir1.2-xviewer-3.0 (= ${binary:Version}),
+         libgtk-3-dev,
+         xviewer (>= ${binary:Version}),
+         ${misc:Depends}
 Description: Development files for Xviewer
- Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
- images, and zoom and scroll with constant memory usage.  Its goals are
- simplicity and standards compliance.
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library. It can
+ deal with large images, and zoom and scroll with constant memory usage.
+ Its goals are simplicity and standards compliance.
  .
  This package contains header files and development information, which
  is needed to build plugins for Xviewer.
@@ -70,13 +73,11 @@ Description: Development files for Xviewer
 Package: gir1.2-xviewer-3.0
 Section: introspection
 Architecture: any
-Depends: xviewer (= ${binary:Version}),
-         ${gir:Depends},
-         ${misc:Depends}
+Depends: xviewer (= ${binary:Version}), ${gir:Depends}, ${misc:Depends}
 Description: GObject introspection data for Xviewer
- Xviewer is a simple image viewer which uses the gdk-pixbuf library.  It can deal with large
- images, and zoom and scroll with constant memory usage.  Its goals are
- simplicity and standards compliance.
+ Xviewer is a simple image viewer which uses the gdk-pixbuf library. It can
+ deal with large images, and zoom and scroll with constant memory usage.
+ Its goals are simplicity and standards compliance.
  .
  This package can be used by other packages using the GIRepository format to
  generate dynamic bindings.
