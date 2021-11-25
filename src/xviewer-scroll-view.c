@@ -2239,7 +2239,12 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 			if ((is_zoomed_in (view) && priv->interp_type_in != CAIRO_FILTER_NEAREST) ||
 				(is_zoomed_out (view) && priv->interp_type_out != CAIRO_FILTER_NEAREST)) {
 				// CAIRO_FILTER_GOOD is too slow during zoom changes, so use CAIRO_FILTER_BILINEAR instead
-				interp_type = CAIRO_FILTER_BILINEAR;
+				/* interp_type = CAIRO_FILTER_BILINEAR; */
+                interp_type = CAIRO_FILTER_GOOD;    /* revert to using CAIRO_FILTER_GOOD to fix issue #24.
+                                                        Using CAIRO_FILTER_BILINEAR results in a blank display
+                                                        for the affected images - it also aeems to be slower than
+                                                        CAIRO_FILTER_GOOD (as of 26.9.2021) in contradiction to the
+                                                        earlier statement. */
 			}
 			else {
 				interp_type = CAIRO_FILTER_NEAREST;
