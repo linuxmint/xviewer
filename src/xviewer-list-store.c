@@ -645,6 +645,8 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 		} else if (file_type == G_FILE_TYPE_REGULAR && !singleton_list) {
 			xviewer_list_store_append_image_from_file (store, file);
 
+
+			g_object_unref (file);
 			file = g_file_get_parent (file);
 			file_info = g_file_query_info (file,
 						       G_FILE_ATTRIBUTE_STANDARD_TYPE,
@@ -669,7 +671,7 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
                 dir_iter = directory_list;
 
                 while ((dir_iter != NULL) && name_not_found) {
-                    if (strcmp(dir_iter->data, directory_name) == 0)
+                    if (g_strcmp0 (dir_iter->data, directory_name) == 0)
                         name_not_found = FALSE;
                     dir_iter = dir_iter->next;
                 }
@@ -679,19 +681,14 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
                     xviewer_list_store_set_directory_callbacks (store, file, file_type);
                 }
 
-                g_free(directory_name);
+                g_free (directory_name);
+			    g_object_unref (file);
            }
 		}
 	}
 
-    if (directory_list != NULL) {
-        dir_iter = directory_list;
-        while (dir_iter != NULL) {
-            g_free(dir_iter->data);
-            dir_iter = dir_iter->next;
-        }
-        g_list_free(directory_list);
-    }
+    if (directory_list != NULL)
+        g_list_free_full(directory_list, g_free);
 
 	if (initial_file &&
 	    is_file_in_list_store_file (store, initial_file, &iter)) {
