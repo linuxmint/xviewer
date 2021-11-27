@@ -1381,10 +1381,14 @@ set_minimum_zoom_factor (XviewerScrollView *view)
  * is %TRUE, then (@anchorx, @anchory) specify the point relative to the image
  * view widget's allocation that will stay fixed when zooming.  If @have_anchor
  * is %FALSE, then the center point of the image view will be used.
+ * If @force_display is %TRUE then the function will not return if @zoom == priv->zoom
+ * (this is necessary for different scroll settings of the fit to width and fit to
+ * height to be used consecutively)
  **/
 static void
 set_zoom (XviewerScrollView *view, double zoom,
-	  gboolean have_anchor, int anchorx, int anchory)
+	  gboolean have_anchor, int anchorx, int anchory,
+      gboolean force_display)
 {
 	XviewerScrollViewPrivate *priv;
 	GtkAllocation allocation;
@@ -1403,7 +1407,7 @@ set_zoom (XviewerScrollView *view, double zoom,
 	else if (zoom < MIN_ZOOM_FACTOR)
 		zoom = MIN_ZOOM_FACTOR;
 
-	if (DOUBLE_EQUAL (priv->zoom, zoom))
+	if ((DOUBLE_EQUAL (priv->zoom, zoom)) && (!force_display))
 		return;
 	if (DOUBLE_EQUAL (priv->zoom, priv->min_zoom) && zoom < priv->zoom)
 		return;
@@ -1485,7 +1489,6 @@ set_zoom (XviewerScrollView *view, double zoom,
 
 	/* repaint the whole image */
 	gtk_widget_queue_draw (GTK_WIDGET (priv->display));
-
 	g_signal_emit (view, view_signals [SIGNAL_ZOOM_CHANGED], 0, priv->zoom);
 }
 
@@ -1547,7 +1550,6 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	int zoomed_img_height;
 	int zoomed_img_width;
 	GtkRequisition req;
-
 	view = XVIEWER_SCROLL_VIEW (data);
 	priv = view->priv;
 
@@ -1636,6 +1638,104 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 		}
 		break;
 
+                            /* zoom to fit image height */
+    case GDK_KEY_J:         /* keycode needed so that the menu and the toolbar icon can call this code */
+    case GDK_KEY_H:
+    case GDK_KEY_h:
+        if ((event->state & (modifiers ^ (GDK_SHIFT_MASK | GDK_MOD1_MASK))) == 0)
+        {
+            if (gtk_widget_get_visible (GTK_WIDGET (priv->hbar)))
+            {
+                gtk_widget_get_preferred_size (priv->hbar, &req, NULL);
+                allocation.height += req.height;
+            }
+
+            if (gtk_widget_get_visible (GTK_WIDGET (priv->vbar)))
+            {
+                gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
+                allocation.width += req.width;
+            }
+
+                                            /* calculate the zoom factor for fitting the height assuming
+                                               that the horizontal scrollbar is not required */
+            zoom = (double)allocation.height / (double)gdk_pixbuf_get_height (priv->pixbuf);
+
+            if ((zoom * gdk_pixbuf_get_width (priv->pixbuf)) > allocation.width)
+            {                       /* need to display the horizontal scrollbar so reduce height
+                                       available to show height without vertical scrollbar */
+                if (!gtk_widget_get_visible (GTK_WIDGET (priv->hbar)))
+                    g_object_set (G_OBJECT (priv->hbar), "visible", TRUE, NULL);    /* show the horizontalal scrollbar so
+                                                                                       that its height can be determined */
+
+                gtk_widget_get_preferred_size (priv->hbar, &req, NULL);
+
+                zoom = (double)(allocation.height - req.height) / (double)gdk_pixbuf_get_height (priv->pixbuf);
+
+                                            /* avoid having blank bars on all 4 sides as would be the case if,
+                                               with the reduced zoom, the horizontal scrollbar is no longer needed.
+                                               Get rid of the side bars and reduce the width of the top and bottom bars */
+                if ((zoom * gdk_pixbuf_get_width (priv->pixbuf)) < allocation.width)
+                    zoom = (double)allocation.width / (double)gdk_pixbuf_get_width (priv->pixbuf);
+            }
+
+            if (zoom > MAX_ZOOM_FACTOR)
+                zoom = MAX_ZOOM_FACTOR;
+            else if (zoom < MIN_ZOOM_FACTOR)
+                zoom = MIN_ZOOM_FACTOR;
+
+            do_zoom = TRUE;
+        }
+        break;
+
+                            /* zoom to fit image width */
+    case GDK_KEY_K:         /* keycode needed so that the menu and the toolbar icon can call this code */
+    case GDK_KEY_W:
+    case GDK_KEY_w:
+        if ((event->state & (modifiers ^ (GDK_SHIFT_MASK | GDK_MOD1_MASK))) == 0)
+        { 
+            if (gtk_widget_get_visible (GTK_WIDGET (priv->hbar)))
+            {
+                gtk_widget_get_preferred_size (priv->hbar, &req, NULL);
+                allocation.height += req.height;
+            }
+
+            if (gtk_widget_get_visible (GTK_WIDGET (priv->vbar)))
+            {
+                gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
+                allocation.width += req.width;
+            }
+
+                                            /* calculate the zoom factor for fitting the width assuming
+                                               that the vertical scrollbar is not required */
+            zoom = (double)allocation.width / (double)gdk_pixbuf_get_width (priv->pixbuf);
+
+            if ((zoom * gdk_pixbuf_get_height (priv->pixbuf)) > allocation.height)
+            {                       /* need to display the vertical scrollbar so reduce width
+                                       available to show width without horizontal scrollbar */
+                if (!gtk_widget_get_visible (GTK_WIDGET (priv->vbar)))
+                    g_object_set (G_OBJECT (priv->vbar), "visible", TRUE, NULL);    /* show the vertical scrollbar so
+                                                                                       that its width can be determined */
+
+                gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
+
+                zoom = (double)(allocation.width - req.width) / (double)gdk_pixbuf_get_width (priv->pixbuf);
+
+                                            /* avoid having blank bars on all 4 sides as would be the case if,
+                                               with the reduced zoom, the vertical scrollbar is no longer needed.
+                                               Get rid of the top and bottom bars and reduce the width of the side bars */
+                if ((zoom * gdk_pixbuf_get_height (priv->pixbuf)) < allocation.height)
+                    zoom = (double)allocation.height / (double)gdk_pixbuf_get_height (priv->pixbuf);
+            }
+
+            if (zoom > MAX_ZOOM_FACTOR)
+                zoom = MAX_ZOOM_FACTOR;
+            else if (zoom < MIN_ZOOM_FACTOR)
+                zoom = MIN_ZOOM_FACTOR;
+
+            do_zoom = TRUE;
+        }
+        break;
+
 	case GDK_KEY_1:
         if (!(event->state & modifiers)) {
 
@@ -1665,11 +1765,19 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 
             if ((gdk_pixbuf_get_width (priv->pixbuf) <= allocation.width)
                 && (gdk_pixbuf_get_height (priv->pixbuf) <= allocation.height))
-                    zoom = 1.0;                         /* the 1:1 image fits in the window */
+            {
+                zoom = 1.0;                         /* the 1:1 image fits in the window */
+                priv->xofs = 0;                     /* as zoomed to fit the offsets must be 0 */
+                priv->yofs = 0;
+            }
             else
             {
                 if (DOUBLE_EQUAL(priv->zoom, 1.0))
+                {
                     zoom = zoom_for_fit;
+                    priv->xofs = 0;             /* as zoomed to fit the offsets must be 0 */
+                    priv->yofs = 0;
+                }
                 else
                     zoom = 1.0;
             }
@@ -1700,7 +1808,13 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 
 		gdk_window_get_device_position (gtk_widget_get_window (widget), device,
 					&x, &y, NULL);
-		set_zoom (view, zoom, TRUE, x, y);
+
+		set_zoom (view, zoom, TRUE, x, y, TRUE);    /* need to force a redisplay of the image after
+                                                       the call of set_zoom_fit() above otherwise
+                                                        pressing Shift W (or H) after W (or H) has no
+                                                        effect whereas the image should scroll
+                                                        (assuming that the height (or width respectively)
+                                                        is larger than will fit in the window) */
 	}
 
 	if (do_scroll)
@@ -1894,7 +2008,7 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
                 zoom_factor = priv->zoom_multiplier;
             else
                 zoom_factor = 1.0 / priv->zoom_multiplier;
-            set_zoom (view, priv->zoom * zoom_factor, TRUE, event->x, event->y);
+            set_zoom (view, priv->zoom * zoom_factor, TRUE, event->x, event->y, FALSE);
             break;
 
         case 1:                             /* vertical pan */
@@ -1949,7 +2063,7 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 
         case 4:                             /* Rotate image 90 CW or CCW */
         {
-           GdkKeymapKey* keys;
+            GdkKeymapKey* keys;
             gint n_keys;
             guint keyval;
             guint state;
@@ -1983,7 +2097,6 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 
             if (key_event.time - mouse_wheel_time > 400) /* 400 msec debounce of mouse wheel */
             {
-                int old_stderr, new_stderr;
                                 /* When generating a mouse button event the event structure contains the device
                                    ID for the mouse (see case 3 above) and no Gdk-Warning is generated. The Key
                                    event structure has no device ID member and Gdk reports a warning that:
@@ -1993,6 +2106,7 @@ xviewer_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpoi
 
                                    The following code therefore temporarily suppresses stderr to avoid showing
                                    this warning when (given the Gdk implementation) it is expected - and untidy! */
+                int old_stderr, new_stderr;
 
                 fflush(stderr);
                 old_stderr = dup(2);
@@ -2239,12 +2353,7 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 			if ((is_zoomed_in (view) && priv->interp_type_in != CAIRO_FILTER_NEAREST) ||
 				(is_zoomed_out (view) && priv->interp_type_out != CAIRO_FILTER_NEAREST)) {
 				// CAIRO_FILTER_GOOD is too slow during zoom changes, so use CAIRO_FILTER_BILINEAR instead
-				/* interp_type = CAIRO_FILTER_BILINEAR; */
-                interp_type = CAIRO_FILTER_GOOD;    /* revert to using CAIRO_FILTER_GOOD to fix issue #24.
-                                                        Using CAIRO_FILTER_BILINEAR results in a blank display
-                                                        for the affected images - it also aeems to be slower than
-                                                        CAIRO_FILTER_GOOD (as of 26.9.2021) in contradiction to the
-                                                        earlier statement. */
+				interp_type = CAIRO_FILTER_BILINEAR;
 			}
 			else {
 				interp_type = CAIRO_FILTER_NEAREST;
@@ -2311,7 +2420,7 @@ zoom_gesture_update_cb (GtkGestureZoom   *gesture,
 
 	drag_to (view, center_x, center_y);
 	set_zoom (view, priv->initial_zoom * scale, TRUE,
-		  center_x, center_y);
+		  center_x, center_y, FALSE);
 }
 
 static void
@@ -2784,7 +2893,7 @@ xviewer_scroll_view_zoom_in (XviewerScrollView *view, gboolean smooth)
 			zoom = preferred_zoom_levels [i];
 		}
 	}
-	set_zoom (view, zoom, FALSE, 0, 0);
+	set_zoom (view, zoom, FALSE, 0, 0, FALSE);
 
 }
 
@@ -2819,7 +2928,7 @@ xviewer_scroll_view_zoom_out (XviewerScrollView *view, gboolean smooth)
 			zoom = preferred_zoom_levels [i];
 		}
 	}
-	set_zoom (view, zoom, FALSE, 0, 0);
+	set_zoom (view, zoom, FALSE, 0, 0, FALSE);
 }
 
 static void
@@ -2837,7 +2946,7 @@ xviewer_scroll_view_set_zoom (XviewerScrollView *view, double zoom)
 {
 	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 
-	set_zoom (view, zoom, FALSE, 0, 0);
+	set_zoom (view, zoom, FALSE, 0, 0, FALSE);
 }
 
 double

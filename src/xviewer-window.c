@@ -79,6 +79,7 @@
 #endif
 
 #include <stdlib.h>
+#include <sys/fcntl.h>
 
 #define XVIEWER_WINDOW_MIN_WIDTH  460
 #define XVIEWER_WINDOW_MIN_HEIGHT 350
@@ -4050,6 +4051,88 @@ xviewer_window_cmd_zoom_normal (GtkAction *action, gpointer user_data)
 }
 
 static void
+xviewer_window_simulate_keypress (guint keyval, GtkWidget *widget)
+{
+            GdkKeymapKey* keys;
+            gint n_keys;
+            GdkEventKey key_event;
+            int old_stderr, new_stderr;
+
+            gtk_widget_grab_focus(widget);  /* scroll-view has to have focus in order to be passed the keypress */
+
+            gdk_keymap_get_entries_for_keyval(gdk_keymap_get_for_display (gtk_widget_get_display(widget)),
+                                          keyval,
+                                          &keys,
+                                          &n_keys);
+
+            key_event.type = GDK_KEY_PRESS;
+            key_event.window = gtk_widget_get_window(widget);
+            key_event.send_event = TRUE;
+            key_event.time = g_get_monotonic_time() / 1000;
+            key_event.state = 0;
+            key_event.keyval = keyval;
+            key_event.length = 0;
+            key_event.string = NULL;
+            key_event.hardware_keycode = keys[0].keycode;
+            key_event.group = keys[0].group;
+            key_event.is_modifier = FALSE;
+
+                                /* When generating a mouse button event the event structure contains the device
+                                   ID for the mouse and no Gdk-Warning is generated. The Key
+                                   event structure has no device ID member and Gdk reports a warning that:
+
+                                  "Event with type 8 not holding a GdkDevice. It is most likely synthesized
+                                   outside Gdk/GTK+"
+
+                                   The following code therefore temporarily suppresses stderr to avoid showing
+                                   this warning when (given the Gdk implementation) it is expected - and untidy! */
+
+            fflush(stderr);
+            old_stderr = dup(2);
+            new_stderr = open("/dev/null", O_WRONLY);
+            dup2(new_stderr, 2);
+            close(new_stderr);
+
+            gtk_main_do_event((GdkEvent *)&key_event);
+
+            fflush(stderr);             /* restore normal stderr output */
+            dup2(old_stderr, 2);
+            close(old_stderr);
+}
+
+static void
+xviewer_window_cmd_fit_height (GtkAction *action, gpointer user_data)
+{
+	XviewerWindowPrivate *priv;
+
+	g_return_if_fail (XVIEWER_IS_WINDOW (user_data));
+
+	xviewer_debug (DEBUG_WINDOW);
+
+	priv = XVIEWER_WINDOW (user_data)->priv;
+
+	if (priv->view) {
+		xviewer_window_simulate_keypress(GDK_KEY_J, priv->view);
+	}
+}
+
+static void
+xviewer_window_cmd_fit_width (GtkAction *action, gpointer user_data)
+{
+	XviewerWindowPrivate *priv;
+
+	g_return_if_fail (XVIEWER_IS_WINDOW (user_data));
+
+	xviewer_debug (DEBUG_WINDOW);
+
+	priv = XVIEWER_WINDOW (user_data)->priv;
+
+	if (priv->view) {
+		xviewer_window_simulate_keypress(GDK_KEY_K, priv->view);
+	}
+}
+
+static void
 xviewer_window_cmd_zoom_fit (GtkAction *action, gpointer user_data)
 {
 	XviewerWindowPrivate *priv;
@@ -4242,6 +4325,12 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "ViewZoomNormal", "zoom-original-symbolic", N_("_Normal Size"), "<control>0",
 	  N_("Show the image at its normal size"),
 	  G_CALLBACK (xviewer_window_cmd_zoom_normal) },
+	{ "ViewFitHeight", "view-fit-height-symbolic", N_("Fit to _Height"), "H",
+	  N_("Fit to height"),
+	  G_CALLBACK (xviewer_window_cmd_fit_height) },
+	{ "ViewFitWidth", "view-fit-width-symbolic", N_("Fit to _Width"), "W",
+	  N_("Fit to width"),
+	  G_CALLBACK (xviewer_window_cmd_fit_width) },
 	{ "ViewReload", "view-refresh-symbolic", N_("_Reload"), "R",
 	  N_("Reload the image"),
 	  G_CALLBACK (xviewer_window_cmd_reload) },
@@ -4548,6 +4637,12 @@ set_action_properties (XviewerWindow      *window,
 	action = gtk_action_group_get_action (image_group, "ViewZoomNormal");
 	g_object_set (action, "short_label", _("Normal"), NULL);
 
+	action = gtk_action_group_get_action (image_group, "ViewFitHeight");
+	g_object_set (action, "short_label", _("Height"), NULL);
+
+    action = gtk_action_group_get_action (image_group, "ViewFitWidth");
+	g_object_set (action, "short_label", _("Width"), NULL);
+
 	action = gtk_action_group_get_action (image_group, "ViewZoomFit");
 	g_object_set (action, "short_label", _("Fit"), NULL);
 
@@ -4734,6 +4829,7 @@ const gchar *supported_mimetypes[] = {
     "image/svg+xml",
     "image/svg+xml-compressed",
     "image/vnd.wap.wbmp",
+    "image/webp",
     NULL
 };
 
