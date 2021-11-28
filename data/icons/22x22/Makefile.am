@@ -7,8 +7,6 @@ dist_appicons_DATA = \
 dist_actionicons_DATA = \
 	actions/xviewer-plugin.png	  	\
 	actions/xviewer-image-gallery.png  \
-    actions/view-fit-height-symbolic.png \
-    actions/view-fit-width-symbolic.png \
 	actions/slideshow-play.png
 
 noinst_DATA = \

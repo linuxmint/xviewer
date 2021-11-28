@@ -4829,7 +4829,6 @@ const gchar *supported_mimetypes[] = {
     "image/svg+xml",
     "image/svg+xml-compressed",
     "image/vnd.wap.wbmp",
-    "image/webp",
     NULL
 };
 

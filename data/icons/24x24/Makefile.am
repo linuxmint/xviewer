@@ -6,8 +6,6 @@ dist_appicons_DATA = \
 	apps/xviewer.png
 dist_actionicons_DATA = \
 	actions/xviewer-image-gallery.png  \
-    actions/view-fit-height-symbolic.png \
-    actions/view-fit-width-symbolic.png \
 	actions/slideshow-play.png
 
 -include $(top_srcdir)/git.mk
