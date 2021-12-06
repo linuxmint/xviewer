@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-01 13:03+0100\n"
+"POT-Creation-Date: 2021-11-29 10:03+0000\n"
 "PO-Revision-Date: 2018-05-06 21:27+0000\n"
 "Last-Translator: Erlend Østlie <erlendandreas12368@gmail.com>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:40+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:04+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: nb\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -60,36 +60,36 @@ msgstr "Fjern valgt verktøylinje"
 msgid "Separator"
 msgstr "Skillelinje"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4151
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4234
 msgid "_View"
 msgstr "_Vis"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4176
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4259
 msgid "_Toolbar"
 msgstr "Verk_tøylinje"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4179
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4262
 msgid "_Statusbar"
 msgstr "_Statuslinje"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4182
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4265
 msgid "_Image Gallery"
 msgstr "B_ildesamling"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4185
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4268
 msgid "Side _Pane"
 msgstr "Side_linje"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4164
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4247
 msgid "Prefere_nces"
 msgstr "_Brukervalg"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4237
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4170
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4253
 msgid "_About"
 msgstr "_Om"
 
@@ -129,7 +129,7 @@ msgstr "Bla gjennom og roter bilder"
 msgid "Picture;Slideshow;Graphics;"
 msgstr "Bilde;Lysbilder;Grafikk;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5280
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5375
 msgid "Image Properties"
 msgstr "Egenskaper for bilde"
 
@@ -142,7 +142,7 @@ msgid "_Next"
 msgstr "_Neste"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4161
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4244
 msgid "_Close"
 msgstr "L_ukk"
 
@@ -263,8 +263,8 @@ msgstr "Lagre som"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3463 ../src/xviewer-window.c:3467
-#: ../src/xviewer-window.c:3734
+#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3468
+#: ../src/xviewer-window.c:3735
 msgid "_Cancel"
 msgstr "A_vbryt"
 
@@ -473,7 +473,7 @@ msgid "Close _without Saving"
 msgstr "Lukk _uten å lagre"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4191
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4274
 msgid "_Save"
 msgstr "_Lagre"
 
@@ -511,12 +511,12 @@ msgstr "V_elg bildene du vil lagre:"
 msgid "If you don't save, all your changes will be lost."
 msgstr "Hvis du ikke lagrer vil alle endringene dine gå tapt."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:881
-#: ../src/xviewer-window.c:4245
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:882
+#: ../src/xviewer-window.c:4334
 msgid "_Reload"
 msgstr "_Last på nytt"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4197
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4280
 msgid "Save _As…"
 msgstr "L_agre som …"
 
@@ -737,7 +737,7 @@ msgid "File size:"
 msgstr "Filstørrelse:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4284
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Vis mappen som inneholder denne filen i filhåndterer"
 
@@ -882,21 +882,21 @@ msgstr " (ugyldig Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:546
+#: ../src/xviewer-window.c:547
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i x %i piksel  %s   %i%%"
 msgstr[1] "%i x %i piksler  %s   %i%%"
 
-#: ../src/xviewer-window.c:883 ../src/xviewer-window.c:2879
+#: ../src/xviewer-window.c:884 ../src/xviewer-window.c:2880
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Skj_ul"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:893
+#: ../src/xviewer-window.c:894
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -905,7 +905,7 @@ msgstr ""
 "Bilde «%s» er endret av et eksternt program.\n"
 "Vil du laste bildet på nytt?"
 
-#: ../src/xviewer-window.c:1070
+#: ../src/xviewer-window.c:1071
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Bruk «%s» til å åpne valgt bilde"
@@ -915,22 +915,22 @@ msgstr "Bruk «%s» til å åpne valgt bilde"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1226
+#: ../src/xviewer-window.c:1227
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Lagrer bilde «%s» (%u/%u)"
 
-#: ../src/xviewer-window.c:1621
+#: ../src/xviewer-window.c:1622
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Åpner bilde «%s»"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2207
+#: ../src/xviewer-window.c:2208
 msgid "Viewing a slideshow"
 msgstr "Viser en presentasjon"
 
-#: ../src/xviewer-window.c:2454
+#: ../src/xviewer-window.c:2455
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -939,19 +939,19 @@ msgstr ""
 "Feil under utskrift av fil:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2807 ../src/xviewer-window.c:2822
+#: ../src/xviewer-window.c:2808 ../src/xviewer-window.c:2823
 msgid "Error launching System Settings: "
 msgstr "Feil under oppstart av systeminnstillinger: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2877
+#: ../src/xviewer-window.c:2878
 msgid "_Open Background Preferences"
 msgstr "_Åpne brukervalg for bakgrunn"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2893
+#: ../src/xviewer-window.c:2894
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -960,11 +960,11 @@ msgstr ""
 "Bilde «%s» er satt som skrivebordsbakgrunn.\n"
 "Vil du forandre utseende på bildet?"
 
-#: ../src/xviewer-window.c:3360
+#: ../src/xviewer-window.c:3361
 msgid "Saving image locally…"
 msgstr "Lagrer bildet lokalt …"
 
-#: ../src/xviewer-window.c:3439
+#: ../src/xviewer-window.c:3440
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -973,7 +973,7 @@ msgstr ""
 "Er du sikker på at du vil\n"
 "fjerne «%s» permanent?"
 
-#: ../src/xviewer-window.c:3442
+#: ../src/xviewer-window.c:3443
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -988,41 +988,41 @@ msgstr[1] ""
 "Er du sikker på at du vil\n"
 "fjerne %d valgte bilder permanent?"
 
-#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3745
+#: ../src/xviewer-window.c:3465 ../src/xviewer-window.c:3746
 msgid "_Delete"
 msgstr "_Slett"
 
-#: ../src/xviewer-window.c:3468 ../src/xviewer-window.c:3747
+#: ../src/xviewer-window.c:3469 ../src/xviewer-window.c:3748
 msgid "_Yes"
 msgstr "_Ja"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3739
+#: ../src/xviewer-window.c:3474 ../src/xviewer-window.c:3740
 msgid "Do _not ask again during this session"
 msgstr "Ikke spør i_gjen under denne økten"
 
-#: ../src/xviewer-window.c:3518
+#: ../src/xviewer-window.c:3519
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Kunne ikke hente bildefil"
 
-#: ../src/xviewer-window.c:3534
+#: ../src/xviewer-window.c:3535
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Kunne ikke hente informasjon om bildefil"
 
-#: ../src/xviewer-window.c:3550 ../src/xviewer-window.c:3806
+#: ../src/xviewer-window.c:3551 ../src/xviewer-window.c:3807
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Kunne ikke slette fil"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3600 ../src/xviewer-window.c:3902
+#: ../src/xviewer-window.c:3601 ../src/xviewer-window.c:3903
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Feil under sletting av bilde %s"
 
-#: ../src/xviewer-window.c:3707
+#: ../src/xviewer-window.c:3708
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1031,7 +1031,7 @@ msgstr ""
 "Er du sikker på at du vil\n"
 "flytte «%s» til papirkurven?"
 
-#: ../src/xviewer-window.c:3710
+#: ../src/xviewer-window.c:3711
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1040,7 +1040,7 @@ msgstr ""
 "Fant ikke papirkurv for «%s». Er du sikker på at du vil fjerne dette bildet "
 "permanent?"
 
-#: ../src/xviewer-window.c:3715
+#: ../src/xviewer-window.c:3716
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1055,7 +1055,7 @@ msgstr[1] ""
 "Er du sikker på at du vil\n"
 "flytte %d valgte bilder til papirkurven?"
 
-#: ../src/xviewer-window.c:3720
+#: ../src/xviewer-window.c:3721
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1063,332 +1063,356 @@ msgstr ""
 "Noen av de valgte bildene kan ikke flyttes til papirkurven og vil bli "
 "fjernet permanent. Er du sikker på at du vil fortsette?"
 
-#: ../src/xviewer-window.c:3737 ../src/xviewer-window.c:4227
-#: ../src/xviewer-window.c:4260
+#: ../src/xviewer-window.c:3738 ../src/xviewer-window.c:4310
+#: ../src/xviewer-window.c:4349
 msgid "Move to _Trash"
 msgstr "Flytt til _papirkurv"
 
-#: ../src/xviewer-window.c:3784 ../src/xviewer-window.c:3798
+#: ../src/xviewer-window.c:3785 ../src/xviewer-window.c:3799
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Kunne ikke aksessere papirkurv."
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4232
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4233
 msgid "_Edit"
 msgstr "R_ediger"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4235
 msgid "_Go"
 msgstr "_Gå til"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4236
 msgid "_Tools"
 msgstr "Verk_tøy"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4238
 msgid "_Favorites"
 msgstr ""
 
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4239
 msgid "_Recents"
 msgstr ""
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4241
 msgid "_Open…"
 msgstr "_Åpne …"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4242
 msgid "Open a file"
 msgstr "Åpne en fil"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4245
 msgid "Close window"
 msgstr "Lukk vindu"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4248
 msgid "Preferences for Image Viewer"
 msgstr "Brukervalg for bildevisning"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4250
 msgid "_Contents"
 msgstr "_Innhold"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4251
 msgid "Help on this application"
 msgstr "Hjelp om dette programmet"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4254
 msgid "About this application"
 msgstr "Om dette programmet"
 
-#: ../src/xviewer-window.c:4177
+#: ../src/xviewer-window.c:4260
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Endrer synlighet for verktøylinjen i aktivt vindu"
 
-#: ../src/xviewer-window.c:4180
+#: ../src/xviewer-window.c:4263
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Endrer synlighet for statuslinjen i aktivt vindu"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4266
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "Endre synlighet for bildesamlingsområdet i aktivt vindu"
 
-#: ../src/xviewer-window.c:4186
+#: ../src/xviewer-window.c:4269
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Endrer synlighet for sidelinjen i aktivt vindu"
 
-#: ../src/xviewer-window.c:4192
+#: ../src/xviewer-window.c:4275
 msgid "Save changes in currently selected images"
 msgstr "Lagre endringene i de aktive valgte bildene"
 
-#: ../src/xviewer-window.c:4194
+#: ../src/xviewer-window.c:4277
 msgid "Open _with"
 msgstr "Åpne _med"
 
-#: ../src/xviewer-window.c:4195
+#: ../src/xviewer-window.c:4278
 msgid "Open the selected image with a different application"
 msgstr "Åpne det valgte bildet med et annet program"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4281
 msgid "Save the selected images with a different name"
 msgstr "Lagre de valgte bildene med et annet navn"
 
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-window.c:4283
 msgid "Show Containing _Folder"
 msgstr "Vis opphavs_mappe"
 
-#: ../src/xviewer-window.c:4203
+#: ../src/xviewer-window.c:4286
 msgid "_Print…"
 msgstr "S_kriv ut …"
 
-#: ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4287
 msgid "Print the selected image"
 msgstr "Skriv ut valgt bilde"
 
-#: ../src/xviewer-window.c:4206
+#: ../src/xviewer-window.c:4289
 msgid "Prope_rties"
 msgstr "Egenskape_r"
 
-#: ../src/xviewer-window.c:4207
+#: ../src/xviewer-window.c:4290
 msgid "Show the properties and metadata of the selected image"
 msgstr "Vis egenskaper og metadata for det valgte bildet"
 
-#: ../src/xviewer-window.c:4209
+#: ../src/xviewer-window.c:4292
 msgid "_Undo"
 msgstr "_Angre"
 
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4293
 msgid "Undo the last change in the image"
 msgstr "Angre siste endring i bildet"
 
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:4295
 msgid "Flip _Horizontal"
 msgstr "Vend _horisontalt"
 
-#: ../src/xviewer-window.c:4213
+#: ../src/xviewer-window.c:4296
 msgid "Mirror the image horizontally"
 msgstr "Speil bildet horisontalt"
 
-#: ../src/xviewer-window.c:4215
+#: ../src/xviewer-window.c:4298
 msgid "Flip _Vertical"
 msgstr "Vend _vertikalt"
 
-#: ../src/xviewer-window.c:4216
+#: ../src/xviewer-window.c:4299
 msgid "Mirror the image vertically"
 msgstr "Speil bildet vertikalt"
 
-#: ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4301
 msgid "_Rotate Clockwise"
 msgstr "_Roter med klokken"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4302
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Roter bildet 90 grader til høyre"
 
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4304
 msgid "Rotate Counterc_lockwise"
 msgstr "Roter mot k_lokken"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4305
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Roter bildet 90 grader til venstre"
 
-#: ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4307
 msgid "Set as Wa_llpaper"
 msgstr "Sett som _bakgrunn"
 
-#: ../src/xviewer-window.c:4225
+#: ../src/xviewer-window.c:4308
 msgid "Set the selected image as the wallpaper"
 msgstr "Sett valgt bilde som bakgrunn"
 
-#: ../src/xviewer-window.c:4228
+#: ../src/xviewer-window.c:4311
 msgid "Move the selected image to the trash folder"
 msgstr "Flytt valgt bilde til papirkurven"
 
-#: ../src/xviewer-window.c:4230
+#: ../src/xviewer-window.c:4313
 msgid "_Delete Image"
 msgstr "_Slett bilde"
 
-#: ../src/xviewer-window.c:4231
+#: ../src/xviewer-window.c:4314
 msgid "Delete the selected image"
 msgstr "Slett valgt bilde"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4316
 msgid "_Copy"
 msgstr "_Kopier"
 
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-window.c:4317
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopier valgt bilde til utklippstavlen"
 
-#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
-#: ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4319 ../src/xviewer-window.c:4337
+#: ../src/xviewer-window.c:4340
 msgid "_Zoom In"
 msgstr "_Zoom inn"
 
-#: ../src/xviewer-window.c:4237 ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:4320 ../src/xviewer-window.c:4338
 msgid "Enlarge the image"
 msgstr "Forstørr bildet"
 
-#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4254
+#: ../src/xviewer-window.c:4322 ../src/xviewer-window.c:4343
 msgid "Zoom _Out"
 msgstr "Zoom _ut"
 
-#: ../src/xviewer-window.c:4240 ../src/xviewer-window.c:4252
-#: ../src/xviewer-window.c:4255
+#: ../src/xviewer-window.c:4323 ../src/xviewer-window.c:4341
+#: ../src/xviewer-window.c:4344
 msgid "Shrink the image"
 msgstr "Krymp bildet"
 
-#: ../src/xviewer-window.c:4242 ../src/xviewer-window.c:4257
+#: ../src/xviewer-window.c:4325 ../src/xviewer-window.c:4346
 msgid "_Normal Size"
 msgstr "_Normal størrelse"
 
-#: ../src/xviewer-window.c:4243 ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4326 ../src/xviewer-window.c:4347
 msgid "Show the image at its normal size"
 msgstr "Vis bildet i normal størrelse"
 
-#: ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4328
+msgid "Fit to _Height"
+msgstr ""
+
+#: ../src/xviewer-window.c:4329
+msgid "Fit to height"
+msgstr ""
+
+#: ../src/xviewer-window.c:4331
+msgid "Fit to _Width"
+msgstr ""
+
+#: ../src/xviewer-window.c:4332
+msgid "Fit to width"
+msgstr ""
+
+#: ../src/xviewer-window.c:4335
 msgid "Reload the image"
 msgstr "Last inn bildet på nytt"
 
-#: ../src/xviewer-window.c:4266
+#: ../src/xviewer-window.c:4355
 msgid "_Fullscreen"
 msgstr "_Full skjerm"
 
-#: ../src/xviewer-window.c:4267
+#: ../src/xviewer-window.c:4356
 msgid "Show the current image in fullscreen mode"
 msgstr "Vis det aktive bildet i fullskjerm-modus"
 
-#: ../src/xviewer-window.c:4269
+#: ../src/xviewer-window.c:4358
 msgid "Pause Slideshow"
 msgstr "Sett lysbildevisning på pause"
 
-#: ../src/xviewer-window.c:4270
+#: ../src/xviewer-window.c:4359
 msgid "Pause or resume the slideshow"
 msgstr "Sett lysbildevisning på pause eller gjenoppta den"
 
-#: ../src/xviewer-window.c:4272
+#: ../src/xviewer-window.c:4361
 msgid "_Best Fit"
 msgstr "_Beste tilpasning"
 
-#: ../src/xviewer-window.c:4273
+#: ../src/xviewer-window.c:4362
 msgid "Fit the image to the window"
 msgstr "Tilpass bildet til vinduet"
 
-#: ../src/xviewer-window.c:4278 ../src/xviewer-window.c:4293
+#: ../src/xviewer-window.c:4367 ../src/xviewer-window.c:4382
 msgid "_Previous Image"
 msgstr "F_orrige bilde"
 
-#: ../src/xviewer-window.c:4279
+#: ../src/xviewer-window.c:4368
 msgid "Go to the previous image of the gallery"
 msgstr "Gå til forrige bilde i samlingen"
 
-#: ../src/xviewer-window.c:4281
+#: ../src/xviewer-window.c:4370
 msgid "_Next Image"
 msgstr "_Neste bilde"
 
-#: ../src/xviewer-window.c:4282
+#: ../src/xviewer-window.c:4371
 msgid "Go to the next image of the gallery"
 msgstr "Gå til neste bilde i samlingen"
 
-#: ../src/xviewer-window.c:4284 ../src/xviewer-window.c:4296
+#: ../src/xviewer-window.c:4373 ../src/xviewer-window.c:4385
 msgid "_First Image"
 msgstr "_Første bilde"
 
-#: ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4374
 msgid "Go to the first image of the gallery"
 msgstr "Gå til første bilde i samlingen"
 
-#: ../src/xviewer-window.c:4287 ../src/xviewer-window.c:4299
+#: ../src/xviewer-window.c:4376 ../src/xviewer-window.c:4388
 msgid "_Last Image"
 msgstr "_Siste bilde"
 
-#: ../src/xviewer-window.c:4288
+#: ../src/xviewer-window.c:4377
 msgid "Go to the last image of the gallery"
 msgstr "Gå til siste bilde i samlingen"
 
-#: ../src/xviewer-window.c:4290
+#: ../src/xviewer-window.c:4379
 msgid "_Random Image"
 msgstr "Tilfel_dig bilde"
 
-#: ../src/xviewer-window.c:4291
+#: ../src/xviewer-window.c:4380
 msgid "Go to a random image of the gallery"
 msgstr "Gå til et tilfeldig bilde i samlingen"
 
-#: ../src/xviewer-window.c:4449
+#: ../src/xviewer-window.c:4538
 msgid "S_lideshow"
 msgstr "Lysbi_ldevisning"
 
-#: ../src/xviewer-window.c:4450
+#: ../src/xviewer-window.c:4539
 msgid "Start a slideshow view of the images"
 msgstr "Start lysbildevisning av bildene"
 
-#: ../src/xviewer-window.c:4522
+#: ../src/xviewer-window.c:4611
 msgid "Previous"
 msgstr "Forrige"
 
-#: ../src/xviewer-window.c:4527
+#: ../src/xviewer-window.c:4616
 msgid "Next"
 msgstr "Neste"
 
-#: ../src/xviewer-window.c:4534
+#: ../src/xviewer-window.c:4623
 msgid "Right"
 msgstr "Høyre"
 
-#: ../src/xviewer-window.c:4537
+#: ../src/xviewer-window.c:4626
 msgid "Left"
 msgstr "Venstre"
 
-#: ../src/xviewer-window.c:4540
+#: ../src/xviewer-window.c:4629
 msgid "Show Folder"
 msgstr "Vis mappe"
 
-#: ../src/xviewer-window.c:4543
+#: ../src/xviewer-window.c:4632
 msgid "Out"
 msgstr "Ut"
 
-#: ../src/xviewer-window.c:4546
+#: ../src/xviewer-window.c:4635
 msgid "In"
 msgstr "Inn"
 
-#: ../src/xviewer-window.c:4549
+#: ../src/xviewer-window.c:4638
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/xviewer-window.c:4552
+#: ../src/xviewer-window.c:4641
+msgid "Height"
+msgstr ""
+
+#: ../src/xviewer-window.c:4644
+msgid "Width"
+msgstr ""
+
+#: ../src/xviewer-window.c:4647
 msgid "Fit"
 msgstr "Tilpass"
 
-#: ../src/xviewer-window.c:4555
+#: ../src/xviewer-window.c:4650
 msgid "Gallery"
 msgstr "Samling"
 
-#: ../src/xviewer-window.c:4572
+#: ../src/xviewer-window.c:4667
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Legg i papirkurv"

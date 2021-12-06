@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2021-06-01 13:03+0100\n"
+"POT-Creation-Date: 2021-11-29 10:03+0000\n"
 "PO-Revision-Date: 2017-03-10 22:49+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -18,10 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:40+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
-"X-Project-Style: gnome\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:04+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: gd\n"
+"X-Project-Style: gnome\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -63,36 +63,36 @@ msgstr "Sguab às am bàr-inneal a thagh thu"
 msgid "Separator"
 msgstr "Sgaradair"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4151
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4234
 msgid "_View"
 msgstr "_Sealladh"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4176
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4259
 msgid "_Toolbar"
 msgstr "Bàr-_inneal"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4179
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4262
 msgid "_Statusbar"
 msgstr "Bàr na staide"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4182
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4265
 msgid "_Image Gallery"
 msgstr "Gailearaidh _dhealbhan"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4185
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4268
 msgid "Side _Pane"
 msgstr "_Leòsan-taoibh"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4164
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4247
 msgid "Prefere_nces"
 msgstr "Roghai_nnean"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4237
 msgid "_Help"
 msgstr "Cob_hair"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4170
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4253
 msgid "_About"
 msgstr "_Mu dhèidhinn"
 
@@ -134,7 +134,7 @@ msgid "Picture;Slideshow;Graphics;"
 msgstr ""
 "Dealbh;Taisbeanadh-shleamhnagan; Grafaigeachd;Picture;Slideshow;Graphics;"
 
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5280
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5375
 msgid "Image Properties"
 msgstr "Roghainnean an deilbh"
 
@@ -147,7 +147,7 @@ msgid "_Next"
 msgstr "Ai_r adhart"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4161
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4244
 msgid "_Close"
 msgstr "_Dùin"
 
@@ -268,8 +268,8 @@ msgstr "Sàbhail mar"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3463 ../src/xviewer-window.c:3467
-#: ../src/xviewer-window.c:3734
+#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3468
+#: ../src/xviewer-window.c:3735
 msgid "_Cancel"
 msgstr "_Sguir dheth"
 
@@ -483,7 +483,7 @@ msgid "Close _without Saving"
 msgstr "Dùin _gun a shàbhaladh"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4191
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4274
 msgid "_Save"
 msgstr "_Sàbhail"
 
@@ -529,12 +529,12 @@ msgstr "_Tagh na dealbhan a tha thu airson sàbhaladh:"
 msgid "If you don't save, all your changes will be lost."
 msgstr "Mur dèan thu sàbhaladh, thèid a h-uile atharrachadh agad air chall."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:881
-#: ../src/xviewer-window.c:4245
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:882
+#: ../src/xviewer-window.c:4334
 msgid "_Reload"
 msgstr "_Ath-luchdaich"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4197
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4280
 msgid "Save _As…"
 msgstr "Sàbhail m_ar..."
 
@@ -761,7 +761,7 @@ msgid "File size:"
 msgstr "Meud an fhaidhle:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4284
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 "Seall am pasgan sa bheil am faidhle seo ann am manaidsear nam faidhle"
@@ -914,7 +914,7 @@ msgstr " (Unicode mì-dhligheach)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:546
+#: ../src/xviewer-window.c:547
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -923,14 +923,14 @@ msgstr[1] "%i × %i phiogsail %s    %i%%"
 msgstr[2] "%i × %i piogsailean %s    %i%%"
 msgstr[3] "%i × %i piogsail %s    %i%%"
 
-#: ../src/xviewer-window.c:883 ../src/xviewer-window.c:2879
+#: ../src/xviewer-window.c:884 ../src/xviewer-window.c:2880
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Falaich"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:893
+#: ../src/xviewer-window.c:894
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -939,7 +939,7 @@ msgstr ""
 "Chaidh an dealbh \"%s\" atharrachadh le prògram taobh a-muigh.\n"
 "Am bu toigh leat ath-luchdadh?"
 
-#: ../src/xviewer-window.c:1070
+#: ../src/xviewer-window.c:1071
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Cleachd \"%s\" gus an dealbh a thagh thu fhosgladh"
@@ -949,22 +949,22 @@ msgstr "Cleachd \"%s\" gus an dealbh a thagh thu fhosgladh"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1226
+#: ../src/xviewer-window.c:1227
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "A' sàbhaladh an deilbh \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1621
+#: ../src/xviewer-window.c:1622
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "A' fosgladh an deilbh \"%s\""
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2207
+#: ../src/xviewer-window.c:2208
 msgid "Viewing a slideshow"
 msgstr "A' sealltainn taisbeanadh-shleamhnagan"
 
-#: ../src/xviewer-window.c:2454
+#: ../src/xviewer-window.c:2455
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -973,19 +973,19 @@ msgstr ""
 "Mearachd le clò-bhualadh an fhaidhle:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2807 ../src/xviewer-window.c:2822
+#: ../src/xviewer-window.c:2808 ../src/xviewer-window.c:2823
 msgid "Error launching System Settings: "
 msgstr "Mearachd le tòiseachadh roghainnean an t-siostaim: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2877
+#: ../src/xviewer-window.c:2878
 msgid "_Open Background Preferences"
 msgstr "F_osgail roghainnean a' chùlaibh"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2893
+#: ../src/xviewer-window.c:2894
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -994,11 +994,11 @@ msgstr ""
 "Chaidh an dealbh \"%s\" a shuidheachadh mar chùlaibh an deasg.\n"
 "A bheil thu airson a dhreach atharrachadh?"
 
-#: ../src/xviewer-window.c:3360
+#: ../src/xviewer-window.c:3361
 msgid "Saving image locally…"
 msgstr "A' sàbhaladh an deilbh gu ionadail..."
 
-#: ../src/xviewer-window.c:3439
+#: ../src/xviewer-window.c:3440
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1007,7 +1007,7 @@ msgstr ""
 "A bheil thu cinnteach gu bheil thu airson\n"
 "\"%s\" a thoirt air falbh gu buan?"
 
-#: ../src/xviewer-window.c:3442
+#: ../src/xviewer-window.c:3443
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1028,41 +1028,41 @@ msgstr[3] ""
 "A bheil thu cinnteach gu bheil thu airson\n"
 "%d dealbh a thagh thu a sguabadh às gu buan?"
 
-#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3745
+#: ../src/xviewer-window.c:3465 ../src/xviewer-window.c:3746
 msgid "_Delete"
 msgstr "_Sguab às"
 
-#: ../src/xviewer-window.c:3468 ../src/xviewer-window.c:3747
+#: ../src/xviewer-window.c:3469 ../src/xviewer-window.c:3748
 msgid "_Yes"
 msgstr "_Tha"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3739
+#: ../src/xviewer-window.c:3474 ../src/xviewer-window.c:3740
 msgid "Do _not ask again during this session"
 msgstr "_Na faighnich dhìom a-rithist rè an t-seisein seo"
 
-#: ../src/xviewer-window.c:3518
+#: ../src/xviewer-window.c:3519
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Cha b' urrainn dhuinn am faidhle deilbh fhaighinn"
 
-#: ../src/xviewer-window.c:3534
+#: ../src/xviewer-window.c:3535
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Cha b' urrainn dhuinn fiosrachadh an fhaidhle deilbh fhaighinn"
 
-#: ../src/xviewer-window.c:3550 ../src/xviewer-window.c:3806
+#: ../src/xviewer-window.c:3551 ../src/xviewer-window.c:3807
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Cha b' urrainn dhuinn an dealbh a sguabadh às"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3600 ../src/xviewer-window.c:3902
+#: ../src/xviewer-window.c:3601 ../src/xviewer-window.c:3903
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Mearachd le sguabadh às an deilbh %s"
 
-#: ../src/xviewer-window.c:3707
+#: ../src/xviewer-window.c:3708
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1071,7 +1071,7 @@ msgstr ""
 "A bheil thu cinnteach gu bheil thu airson\n"
 "\"%s\" a ghluasad dhan sgudail?"
 
-#: ../src/xviewer-window.c:3710
+#: ../src/xviewer-window.c:3711
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1080,7 +1080,7 @@ msgstr ""
 "Cha deach sgudal airson \"%s\" a lorg. Bheil thu airson an dealbh seo a "
 "thoirt air falbh gu buan?"
 
-#: ../src/xviewer-window.c:3715
+#: ../src/xviewer-window.c:3716
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1101,7 +1101,7 @@ msgstr[3] ""
 "A bheil thu cinnteach gu bheil thu airson\n"
 "an %d dealbh a thagh thu a ghluasad dhan sgudal?"
 
-#: ../src/xviewer-window.c:3720
+#: ../src/xviewer-window.c:3721
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1110,337 +1110,361 @@ msgstr ""
 "toirt air falbh gu buan. A bheil thu cinnteach gu bheil thu airson leantainn "
 "air adhart?"
 
-#: ../src/xviewer-window.c:3737 ../src/xviewer-window.c:4227
-#: ../src/xviewer-window.c:4260
+#: ../src/xviewer-window.c:3738 ../src/xviewer-window.c:4310
+#: ../src/xviewer-window.c:4349
 msgid "Move to _Trash"
 msgstr "Gluais dhan _sgudal"
 
-#: ../src/xviewer-window.c:3784 ../src/xviewer-window.c:3798
+#: ../src/xviewer-window.c:3785 ../src/xviewer-window.c:3799
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Cha b' urrainn dhuinn an sgudal inntrigeadh."
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4232
 msgid "_File"
 msgstr ""
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4233
 msgid "_Edit"
 msgstr "D_easaich"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4235
 msgid "_Go"
 msgstr "_Siuthad"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4236
 msgid "_Tools"
 msgstr "_Innealan"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4238
 msgid "_Favorites"
 msgstr ""
 
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4239
 msgid "_Recents"
 msgstr ""
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4241
 msgid "_Open…"
 msgstr "F_osgail..."
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4242
 msgid "Open a file"
 msgstr "Fosgail faidhle"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4245
 msgid "Close window"
 msgstr "Dùin an uinneag"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4248
 msgid "Preferences for Image Viewer"
 msgstr "Na roghainnean airson an t-sealladair dhealbhan"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4250
 msgid "_Contents"
 msgstr "_Clàr-innse"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4251
 msgid "Help on this application"
 msgstr "Cobhair air a' phrògram seo"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4254
 msgid "About this application"
 msgstr "Mun phrògram seo"
 
-#: ../src/xviewer-window.c:4177
+#: ../src/xviewer-window.c:4260
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr ""
 "Atharraichidh seo co-dhiù am faic thu am bàr-inneal san uinneag làithreach"
 
-#: ../src/xviewer-window.c:4180
+#: ../src/xviewer-window.c:4263
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr ""
 "Atharraichidh seo co-dhiù am faic thu bàr na staid san uinneag làithreach"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4266
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 "Atharraichidh seo co-dhiù am faic thu leòsan a' ghailearaidh dhealbhan  san "
 "uinneag làithreach"
 
-#: ../src/xviewer-window.c:4186
+#: ../src/xviewer-window.c:4269
 msgid "Changes the visibility of the side pane in the current window"
 msgstr ""
 "Atharraichidh seo co-dhiù am faic thu an leòsan-taoibh san uinneag làithreach"
 
-#: ../src/xviewer-window.c:4192
+#: ../src/xviewer-window.c:4275
 msgid "Save changes in currently selected images"
 msgstr "Sàbhail na h-atharraichean sna dealbhan a thagh thu an-dràsta"
 
-#: ../src/xviewer-window.c:4194
+#: ../src/xviewer-window.c:4277
 msgid "Open _with"
 msgstr "Fosgail _le"
 
-#: ../src/xviewer-window.c:4195
+#: ../src/xviewer-window.c:4278
 msgid "Open the selected image with a different application"
 msgstr "Fosgail an dealbh a thagh thu le prògram eile"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4281
 msgid "Save the selected images with a different name"
 msgstr "Sàbhail na dealbhan a thagh thu le ainm eile"
 
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-window.c:4283
 msgid "Show Containing _Folder"
 msgstr "Seall am _pasgan far a bheil e"
 
-#: ../src/xviewer-window.c:4203
+#: ../src/xviewer-window.c:4286
 msgid "_Print…"
 msgstr "_Clò-bhuail..."
 
-#: ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4287
 msgid "Print the selected image"
 msgstr "Clò-bhuail an dealbh a thagh thu"
 
-#: ../src/xviewer-window.c:4206
+#: ../src/xviewer-window.c:4289
 msgid "Prope_rties"
 msgstr "_Roghainnean"
 
-#: ../src/xviewer-window.c:4207
+#: ../src/xviewer-window.c:4290
 msgid "Show the properties and metadata of the selected image"
 msgstr "Seall na roghainnean is meata-dàta aig an dealbh a thagh thu"
 
-#: ../src/xviewer-window.c:4209
+#: ../src/xviewer-window.c:4292
 msgid "_Undo"
 msgstr "_Neo-dhèan"
 
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4293
 msgid "Undo the last change in the image"
 msgstr "Neo-dhèan an atharrachadh mu dheireadh air an dealbh"
 
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:4295
 msgid "Flip _Horizontal"
 msgstr "Dèan flip còm_hnard"
 
-#: ../src/xviewer-window.c:4213
+#: ../src/xviewer-window.c:4296
 msgid "Mirror the image horizontally"
 msgstr "Sgàthanaich an dealbh gu còmhnard"
 
-#: ../src/xviewer-window.c:4215
+#: ../src/xviewer-window.c:4298
 msgid "Flip _Vertical"
 msgstr "Dèan flip _inghearach"
 
-#: ../src/xviewer-window.c:4216
+#: ../src/xviewer-window.c:4299
 msgid "Mirror the image vertically"
 msgstr "Sgàthanaich an dealbh gu h-inghearach"
 
-#: ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4301
 msgid "_Rotate Clockwise"
 msgstr "Cuai_rtich deiseal"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4302
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Cuairtich an dealbh 90 ceum gu deas"
 
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4304
 msgid "Rotate Counterc_lockwise"
 msgstr "Cuairtich tuathai_l"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4305
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Cuairtich an dealbh 90 ceum gu clì"
 
-#: ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4307
 msgid "Set as Wa_llpaper"
 msgstr "Suidhich mar phàipear-balla"
 
-#: ../src/xviewer-window.c:4225
+#: ../src/xviewer-window.c:4308
 msgid "Set the selected image as the wallpaper"
 msgstr "Suidhich an dealbh a thagh thu mar phàipear-balla"
 
-#: ../src/xviewer-window.c:4228
+#: ../src/xviewer-window.c:4311
 msgid "Move the selected image to the trash folder"
 msgstr "Gluais an dealbh a thagh thu dhan sgudal"
 
-#: ../src/xviewer-window.c:4230
+#: ../src/xviewer-window.c:4313
 msgid "_Delete Image"
 msgstr "_Sguab às an dealbh"
 
-#: ../src/xviewer-window.c:4231
+#: ../src/xviewer-window.c:4314
 msgid "Delete the selected image"
 msgstr "Sguab às an dealbh a thagh thu"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4316
 msgid "_Copy"
 msgstr "Dèan _lethbhreac"
 
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-window.c:4317
 msgid "Copy the selected image to the clipboard"
 msgstr "Cuir lethbhreac dhen dhealbh a thagh thu dhan stòr-bhòrd"
 
-#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
-#: ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4319 ../src/xviewer-window.c:4337
+#: ../src/xviewer-window.c:4340
 msgid "_Zoom In"
 msgstr "_Sùm a-steach"
 
-#: ../src/xviewer-window.c:4237 ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:4320 ../src/xviewer-window.c:4338
 msgid "Enlarge the image"
 msgstr "Meudaich an dealbh"
 
-#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4254
+#: ../src/xviewer-window.c:4322 ../src/xviewer-window.c:4343
 msgid "Zoom _Out"
 msgstr "Sùm a-_mach"
 
-#: ../src/xviewer-window.c:4240 ../src/xviewer-window.c:4252
-#: ../src/xviewer-window.c:4255
+#: ../src/xviewer-window.c:4323 ../src/xviewer-window.c:4341
+#: ../src/xviewer-window.c:4344
 msgid "Shrink the image"
 msgstr "Lùghdaich an dealbh"
 
-#: ../src/xviewer-window.c:4242 ../src/xviewer-window.c:4257
+#: ../src/xviewer-window.c:4325 ../src/xviewer-window.c:4346
 msgid "_Normal Size"
 msgstr "Meud _abhàisteach"
 
-#: ../src/xviewer-window.c:4243 ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4326 ../src/xviewer-window.c:4347
 msgid "Show the image at its normal size"
 msgstr "Seall an dealbh air a mheud àbhaisteach"
 
-#: ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4328
+msgid "Fit to _Height"
+msgstr ""
+
+#: ../src/xviewer-window.c:4329
+msgid "Fit to height"
+msgstr ""
+
+#: ../src/xviewer-window.c:4331
+msgid "Fit to _Width"
+msgstr ""
+
+#: ../src/xviewer-window.c:4332
+msgid "Fit to width"
+msgstr ""
+
+#: ../src/xviewer-window.c:4335
 msgid "Reload the image"
 msgstr "Ath-luchdaich an dealbh"
 
-#: ../src/xviewer-window.c:4266
+#: ../src/xviewer-window.c:4355
 msgid "_Fullscreen"
 msgstr "_Làn-sgrìn"
 
-#: ../src/xviewer-window.c:4267
+#: ../src/xviewer-window.c:4356
 msgid "Show the current image in fullscreen mode"
 msgstr "Seall an dealbh làithreach sa mhodh làn-sgrìn"
 
-#: ../src/xviewer-window.c:4269
+#: ../src/xviewer-window.c:4358
 msgid "Pause Slideshow"
 msgstr "Cuir an taisbeanadh-shleamhnagan 'na stad"
 
-#: ../src/xviewer-window.c:4270
+#: ../src/xviewer-window.c:4359
 msgid "Pause or resume the slideshow"
 msgstr "Cuir 'na stad no ath-thòisich an taisbeanadh-shleamhnagan"
 
-#: ../src/xviewer-window.c:4272
+#: ../src/xviewer-window.c:4361
 msgid "_Best Fit"
 msgstr "Meud as _fhearr"
 
-#: ../src/xviewer-window.c:4273
+#: ../src/xviewer-window.c:4362
 msgid "Fit the image to the window"
 msgstr "Co-fhreagair an dealbh ris an uinneag"
 
-#: ../src/xviewer-window.c:4278 ../src/xviewer-window.c:4293
+#: ../src/xviewer-window.c:4367 ../src/xviewer-window.c:4382
 msgid "_Previous Image"
 msgstr "An dealbh _roimhe"
 
-#: ../src/xviewer-window.c:4279
+#: ../src/xviewer-window.c:4368
 msgid "Go to the previous image of the gallery"
 msgstr "Rach dhan dealbh roimhe sa ghailearaidh"
 
-#: ../src/xviewer-window.c:4281
+#: ../src/xviewer-window.c:4370
 msgid "_Next Image"
 msgstr "A_n ath dhealbh"
 
-#: ../src/xviewer-window.c:4282
+#: ../src/xviewer-window.c:4371
 msgid "Go to the next image of the gallery"
 msgstr "Rach dhan ath dhealbh sa ghailearaidh"
 
-#: ../src/xviewer-window.c:4284 ../src/xviewer-window.c:4296
+#: ../src/xviewer-window.c:4373 ../src/xviewer-window.c:4385
 msgid "_First Image"
 msgstr "A' _chiad dealbh"
 
-#: ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4374
 msgid "Go to the first image of the gallery"
 msgstr "Rach dhan chiad dealbh sa ghailearaidh"
 
-#: ../src/xviewer-window.c:4287 ../src/xviewer-window.c:4299
+#: ../src/xviewer-window.c:4376 ../src/xviewer-window.c:4388
 msgid "_Last Image"
 msgstr "An dealbh mu _dheireadh"
 
-#: ../src/xviewer-window.c:4288
+#: ../src/xviewer-window.c:4377
 msgid "Go to the last image of the gallery"
 msgstr "Rach dhan dealbh mu dheireadh sa ghailearaidh"
 
-#: ../src/xviewer-window.c:4290
+#: ../src/xviewer-window.c:4379
 msgid "_Random Image"
 msgstr "Dealbh air t_uaiream"
 
-#: ../src/xviewer-window.c:4291
+#: ../src/xviewer-window.c:4380
 msgid "Go to a random image of the gallery"
 msgstr "Rach gu dealbh air thuaiream sa ghailearaidh"
 
-#: ../src/xviewer-window.c:4449
+#: ../src/xviewer-window.c:4538
 msgid "S_lideshow"
 msgstr "Taisbeanadh-sh_leamhnagan"
 
-#: ../src/xviewer-window.c:4450
+#: ../src/xviewer-window.c:4539
 msgid "Start a slideshow view of the images"
 msgstr "Tòisich air taisbeanadh-shleamhnagan a shealltainn dhe na dealbhan"
 
-#: ../src/xviewer-window.c:4522
+#: ../src/xviewer-window.c:4611
 msgid "Previous"
 msgstr "Air ais"
 
-#: ../src/xviewer-window.c:4527
+#: ../src/xviewer-window.c:4616
 msgid "Next"
 msgstr "Air adhart"
 
-#: ../src/xviewer-window.c:4534
+#: ../src/xviewer-window.c:4623
 msgid "Right"
 msgstr "Deas"
 
-#: ../src/xviewer-window.c:4537
+#: ../src/xviewer-window.c:4626
 msgid "Left"
 msgstr "Clì"
 
-#: ../src/xviewer-window.c:4540
+#: ../src/xviewer-window.c:4629
 msgid "Show Folder"
 msgstr "Seall am pasgan"
 
-#: ../src/xviewer-window.c:4543
+#: ../src/xviewer-window.c:4632
 msgid "Out"
 msgstr "A-mach"
 
-#: ../src/xviewer-window.c:4546
+#: ../src/xviewer-window.c:4635
 msgid "In"
 msgstr "A-steach"
 
-#: ../src/xviewer-window.c:4549
+#: ../src/xviewer-window.c:4638
 msgid "Normal"
 msgstr "Àbhaisteach"
 
-#: ../src/xviewer-window.c:4552
+#: ../src/xviewer-window.c:4641
+msgid "Height"
+msgstr ""
+
+#: ../src/xviewer-window.c:4644
+msgid "Width"
+msgstr ""
+
+#: ../src/xviewer-window.c:4647
 msgid "Fit"
 msgstr "Co-fhreagair"
 
-#: ../src/xviewer-window.c:4555
+#: ../src/xviewer-window.c:4650
 msgid "Gallery"
 msgstr "Gailearaidh"
 
-#: ../src/xviewer-window.c:4572
+#: ../src/xviewer-window.c:4667
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Cuir dhan sgudal"

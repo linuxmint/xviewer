@@ -22,18 +22,18 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2021-06-01 13:03+0100\n"
-"PO-Revision-Date: 2021-01-13 16:32+0000\n"
+"POT-Creation-Date: 2021-11-29 10:03+0000\n"
+"PO-Revision-Date: 2021-11-30 07:36+0000\n"
 "Last-Translator: Vasilis Kosmidis <Unknown>\n"
 "Language-Team: team@gnome.gr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:40+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
-"X-Project-Style: gnome\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:04+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: el\n"
+"X-Project-Style: gnome\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -75,36 +75,36 @@ msgstr "Αφαίρεση της επιλεγμένης εργαλειοθήκη�
 msgid "Separator"
 msgstr "Διαχωριστικό"
 
-#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4151
+#: ../data/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4234
 msgid "_View"
 msgstr "_Προβολή"
 
-#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4176
+#: ../data/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4259
 msgid "_Toolbar"
 msgstr "Ερ_γαλειοθήκη"
 
-#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4179
+#: ../data/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4262
 msgid "_Statusbar"
 msgstr "_Γραμμή κατάστασης"
 
-#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4182
+#: ../data/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4265
 msgid "_Image Gallery"
 msgstr "Συ_λλογή εικόνων"
 
-#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4185
+#: ../data/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4268
 msgid "Side _Pane"
 msgstr "Πλευρικός _πίνακας"
 
-#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4164
+#: ../data/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4247
 msgid "Prefere_nces"
 msgstr "_Προτιμήσεις"
 
 #: ../data/xviewer-app-menu.xml.h:7 ../data/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4154
+#: ../src/xviewer-window.c:4237
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4170
+#: ../data/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4253
 msgid "_About"
 msgstr "Π_ερί"
 
@@ -146,7 +146,7 @@ msgid "Picture;Slideshow;Graphics;"
 msgstr "Εικόνα;Αλληλουχία εικόνων;Γραφικά;Picture;Slideshow;Graphics;"
 
 #
-#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5280
+#: ../data/xviewer-image-properties-dialog.ui.h:1 ../src/xviewer-window.c:5375
 msgid "Image Properties"
 msgstr "Ιδιότητες εικόνας"
 
@@ -159,7 +159,7 @@ msgid "_Next"
 msgstr "Επόμε_νο"
 
 #: ../data/xviewer-image-properties-dialog.ui.h:4
-#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4161
+#: ../data/xviewer-preferences-dialog.ui.h:3 ../src/xviewer-window.c:4244
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
@@ -281,8 +281,8 @@ msgstr "Αποθήκευση ως"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3463 ../src/xviewer-window.c:3467
-#: ../src/xviewer-window.c:3734
+#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3468
+#: ../src/xviewer-window.c:3735
 msgid "_Cancel"
 msgstr "_Ακύρωση"
 
@@ -420,11 +420,11 @@ msgstr "_Κυκλική επανάληψη"
 
 #: ../data/xviewer-preferences-dialog.ui.h:23
 msgid "Control"
-msgstr ""
+msgstr "Έλεγχος"
 
 #: ../data/xviewer-preferences-dialog.ui.h:24
 msgid "Pause and resume with the spacebar"
-msgstr ""
+msgstr "Παύση και ανάκτηση με το πλήκτρο κενού διαστήματος"
 
 #: ../data/xviewer-preferences-dialog.ui.h:25
 msgid "Slideshow"
@@ -491,7 +491,7 @@ msgid "Close _without Saving"
 msgstr "_Κλείσιμο χωρίς αποθήκευση"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4191
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4274
 msgid "_Save"
 msgstr "Απο_θήκευση"
 
@@ -529,12 +529,12 @@ msgstr "_Επιλέξτε τις εικόνες που θέλετε να απο�
 msgid "If you don't save, all your changes will be lost."
 msgstr "Αν δεν αποθηκεύσετε, όλες οι αλλαγές σας θα χαθούν."
 
-#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:881
-#: ../src/xviewer-window.c:4245
+#: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:882
+#: ../src/xviewer-window.c:4334
 msgid "_Reload"
 msgstr "Επανα_φόρτωση"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4197
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4280
 msgid "Save _As…"
 msgstr "Αποθήκευση _ως…"
 
@@ -760,7 +760,7 @@ msgid "File size:"
 msgstr "Μέγεθος αρχείου:"
 
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4201
+#: ../src/xviewer-window.c:4284
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 "Εμφάνιση του φακέλου που περιέχει αυτό το αρχείο στο διαχειριστή αρχείων"
@@ -907,21 +907,21 @@ msgstr " (άκυρο Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/xviewer-window.c:546
+#: ../src/xviewer-window.c:547
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i εικονοστοιχείο  %s    %i%%"
 msgstr[1] "%i × %i εικονοστοιχεία  %s    %i%%"
 
-#: ../src/xviewer-window.c:883 ../src/xviewer-window.c:2879
+#: ../src/xviewer-window.c:884 ../src/xviewer-window.c:2880
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Από_κρυψη"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:893
+#: ../src/xviewer-window.c:894
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -930,7 +930,7 @@ msgstr ""
 "Η εικόνα \"%s\" τροποποιήθηκε από μια εξωτερική εφαρμογή.\n"
 "Θα θέλατε να τη επαναφορτώσετε;"
 
-#: ../src/xviewer-window.c:1070
+#: ../src/xviewer-window.c:1071
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Χρήση \"%s\" για άνοιγμα της επιλεγμένης εικόνας"
@@ -941,23 +941,23 @@ msgstr "Χρήση \"%s\" για άνοιγμα της επιλεγμένης ε
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1226
+#: ../src/xviewer-window.c:1227
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Αποθήκευση εικόνας \"%s\" (%u/%u)"
 
 #
-#: ../src/xviewer-window.c:1621
+#: ../src/xviewer-window.c:1622
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Άνοιγμα εικόνας \"%s\""
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2207
+#: ../src/xviewer-window.c:2208
 msgid "Viewing a slideshow"
 msgstr "Εμφάνιση αλληλουχίας εικόνων"
 
-#: ../src/xviewer-window.c:2454
+#: ../src/xviewer-window.c:2455
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -966,19 +966,19 @@ msgstr ""
 "Σφάλμα κατά την εκτύπωση αρχείου:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2807 ../src/xviewer-window.c:2822
+#: ../src/xviewer-window.c:2808 ../src/xviewer-window.c:2823
 msgid "Error launching System Settings: "
 msgstr "Σφάλμα κατά την εκκίνηση των ρυθμίσεων συστήματος: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2877
+#: ../src/xviewer-window.c:2878
 msgid "_Open Background Preferences"
 msgstr "Άνοι_γμα προτιμήσεων παρασκηνίου"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2893
+#: ../src/xviewer-window.c:2894
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -987,11 +987,11 @@ msgstr ""
 "Η εικόνα \"%s\" ορίστηκε ως παρασκήνιο επιφάνειας εργασίας.\n"
 "Θα θέλατε να τροποποιήσετε την εμφάνισή της;"
 
-#: ../src/xviewer-window.c:3360
+#: ../src/xviewer-window.c:3361
 msgid "Saving image locally…"
 msgstr "Αποθήκευση εικόνας τοπικά…"
 
-#: ../src/xviewer-window.c:3439
+#: ../src/xviewer-window.c:3440
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1000,7 +1000,7 @@ msgstr ""
 "Είστε σίγουροι ότι θέλετε να διαγράψετε\n"
 "το \"%s\" μόνιμα;"
 
-#: ../src/xviewer-window.c:3442
+#: ../src/xviewer-window.c:3443
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -1015,41 +1015,41 @@ msgstr[1] ""
 "Είστε σίγουροι ότι θέλετε να διαγράψετε\n"
 "τις %d επιλεγμένες εικόνες μόνιμα;"
 
-#: ../src/xviewer-window.c:3464 ../src/xviewer-window.c:3745
+#: ../src/xviewer-window.c:3465 ../src/xviewer-window.c:3746
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
-#: ../src/xviewer-window.c:3468 ../src/xviewer-window.c:3747
+#: ../src/xviewer-window.c:3469 ../src/xviewer-window.c:3748
 msgid "_Yes"
 msgstr "_Ναι"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3739
+#: ../src/xviewer-window.c:3474 ../src/xviewer-window.c:3740
 msgid "Do _not ask again during this session"
 msgstr "Να _μη γίνει ερώτηση ξανά, κατά τη διάρκεια αυτής της συνεδρίας"
 
-#: ../src/xviewer-window.c:3518
+#: ../src/xviewer-window.c:3519
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Αδύνατη η ανάκτηση του αρχείου εικόνας"
 
-#: ../src/xviewer-window.c:3534
+#: ../src/xviewer-window.c:3535
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Αδύνατη η ανάκτηση πληροφοριών του αρχείου εικόνας"
 
-#: ../src/xviewer-window.c:3550 ../src/xviewer-window.c:3806
+#: ../src/xviewer-window.c:3551 ../src/xviewer-window.c:3807
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Αδυναμία διαγραφής αρχείου"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3600 ../src/xviewer-window.c:3902
+#: ../src/xviewer-window.c:3601 ../src/xviewer-window.c:3903
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Σφάλμα κατά τη διαγραφή της εικόνας %s"
 
-#: ../src/xviewer-window.c:3707
+#: ../src/xviewer-window.c:3708
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1058,7 +1058,7 @@ msgstr ""
 "Θέλετε να μετακινήσετε το\n"
 " \"%s\" στα απορρίμματα;"
 
-#: ../src/xviewer-window.c:3710
+#: ../src/xviewer-window.c:3711
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1067,7 +1067,7 @@ msgstr ""
 "Δε βρέθηκαν τα απόρριμματα για το \"%s\". Θέλετε να διαγράψετε μόνιμα αυτή "
 "την εικόνα;"
 
-#: ../src/xviewer-window.c:3715
+#: ../src/xviewer-window.c:3716
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1082,7 +1082,7 @@ msgstr[1] ""
 "Είστε σίγουροι για την μεταφορά των επιλεγμένων\n"
 "%d εικόνων στα απορρίμματα;"
 
-#: ../src/xviewer-window.c:3720
+#: ../src/xviewer-window.c:3721
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1090,334 +1090,358 @@ msgstr ""
 "Μερικές από τις επιλεγμένες εικόνες δε μπορούν να μετακινηθούν στα "
 "απορρίμματα και θα διαγραφούν μόνιμα. Σίγουρα θέλετε να προχωρήσετε;"
 
-#: ../src/xviewer-window.c:3737 ../src/xviewer-window.c:4227
-#: ../src/xviewer-window.c:4260
+#: ../src/xviewer-window.c:3738 ../src/xviewer-window.c:4310
+#: ../src/xviewer-window.c:4349
 msgid "Move to _Trash"
 msgstr "Μετακίνηση στα α_πορρίμματα"
 
-#: ../src/xviewer-window.c:3784 ../src/xviewer-window.c:3798
+#: ../src/xviewer-window.c:3785 ../src/xviewer-window.c:3799
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Αδυναμία πρόσβασης στα απορρίμματα."
 
-#: ../src/xviewer-window.c:4149
+#: ../src/xviewer-window.c:4232
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: ../src/xviewer-window.c:4150
+#: ../src/xviewer-window.c:4233
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../src/xviewer-window.c:4152
+#: ../src/xviewer-window.c:4235
 msgid "_Go"
 msgstr "_Μετάβαση"
 
-#: ../src/xviewer-window.c:4153
+#: ../src/xviewer-window.c:4236
 msgid "_Tools"
 msgstr "Εργα_λεία"
 
-#: ../src/xviewer-window.c:4155
+#: ../src/xviewer-window.c:4238
 msgid "_Favorites"
 msgstr "_Αγαπημένα"
 
-#: ../src/xviewer-window.c:4156
+#: ../src/xviewer-window.c:4239
 msgid "_Recents"
 msgstr "_Πρόσφατα"
 
-#: ../src/xviewer-window.c:4158
+#: ../src/xviewer-window.c:4241
 msgid "_Open…"
 msgstr "Άν_οιγμα…"
 
-#: ../src/xviewer-window.c:4159
+#: ../src/xviewer-window.c:4242
 msgid "Open a file"
 msgstr "Άνοιγμα αρχείου"
 
-#: ../src/xviewer-window.c:4162
+#: ../src/xviewer-window.c:4245
 msgid "Close window"
 msgstr "Κλείσιμο παραθύρου"
 
-#: ../src/xviewer-window.c:4165
+#: ../src/xviewer-window.c:4248
 msgid "Preferences for Image Viewer"
 msgstr "Προτιμήσεις για την εφαρμογή προβολής εικόνων"
 
-#: ../src/xviewer-window.c:4167
+#: ../src/xviewer-window.c:4250
 msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
-#: ../src/xviewer-window.c:4168
+#: ../src/xviewer-window.c:4251
 msgid "Help on this application"
 msgstr "Βοήθεια για αυτήν την εφαρμογή"
 
-#: ../src/xviewer-window.c:4171
+#: ../src/xviewer-window.c:4254
 msgid "About this application"
 msgstr "Περί αυτής της εφαρμογής"
 
-#: ../src/xviewer-window.c:4177
+#: ../src/xviewer-window.c:4260
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Αλλάζει την ορατότητα της εργαλειοθήκης στο τρέχον παράθυρο"
 
-#: ../src/xviewer-window.c:4180
+#: ../src/xviewer-window.c:4263
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Αλλάζει την ορατότητα της γραμμής κατάστασης στο τρέχον παράθυρο"
 
-#: ../src/xviewer-window.c:4183
+#: ../src/xviewer-window.c:4266
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr ""
 "Αλλάζει την ορατότητα του πλαισίου συλλογής εικόνων στο τρέχον παράθυρο"
 
-#: ../src/xviewer-window.c:4186
+#: ../src/xviewer-window.c:4269
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Αλλάζει την ορατότητα του πλευρικού πλαισίου στο τρέχον παράθυρο"
 
-#: ../src/xviewer-window.c:4192
+#: ../src/xviewer-window.c:4275
 msgid "Save changes in currently selected images"
 msgstr "Αποθήκευση αλλαγών στις επιλεγμένες εικόνες"
 
-#: ../src/xviewer-window.c:4194
+#: ../src/xviewer-window.c:4277
 msgid "Open _with"
 msgstr "Άνοιγμα _με"
 
-#: ../src/xviewer-window.c:4195
+#: ../src/xviewer-window.c:4278
 msgid "Open the selected image with a different application"
 msgstr "Άνοιγμα της επιλεγμένης εικόνας με διαφορετική εφαρμογή"
 
-#: ../src/xviewer-window.c:4198
+#: ../src/xviewer-window.c:4281
 msgid "Save the selected images with a different name"
 msgstr "Αποθήκευση των επιλεγμένων εικόνων με διαφορετικό όνομα"
 
-#: ../src/xviewer-window.c:4200
+#: ../src/xviewer-window.c:4283
 msgid "Show Containing _Folder"
 msgstr "Άνοιγμα _φακέλου που το περιέχει"
 
-#: ../src/xviewer-window.c:4203
+#: ../src/xviewer-window.c:4286
 msgid "_Print…"
 msgstr "Εκτύ_πωση…"
 
-#: ../src/xviewer-window.c:4204
+#: ../src/xviewer-window.c:4287
 msgid "Print the selected image"
 msgstr "Εκτύπωση της επιλεγμένης εικόνας"
 
-#: ../src/xviewer-window.c:4206
+#: ../src/xviewer-window.c:4289
 msgid "Prope_rties"
 msgstr "Ι_διότητες"
 
-#: ../src/xviewer-window.c:4207
+#: ../src/xviewer-window.c:4290
 msgid "Show the properties and metadata of the selected image"
 msgstr "Προβολή των ιδιοτήτων και των μεταδεδομένων της επιλεγμένης εικόνας"
 
-#: ../src/xviewer-window.c:4209
+#: ../src/xviewer-window.c:4292
 msgid "_Undo"
 msgstr "Α_ναίρεση"
 
-#: ../src/xviewer-window.c:4210
+#: ../src/xviewer-window.c:4293
 msgid "Undo the last change in the image"
 msgstr "Αναίρεση της τελευταίας αλλαγής στην εικόνα"
 
-#: ../src/xviewer-window.c:4212
+#: ../src/xviewer-window.c:4295
 msgid "Flip _Horizontal"
 msgstr "Ορι_ζόντια αναστροφή"
 
-#: ../src/xviewer-window.c:4213
+#: ../src/xviewer-window.c:4296
 msgid "Mirror the image horizontally"
 msgstr "Καθρεπτισμός της εικόνας οριζόντια"
 
-#: ../src/xviewer-window.c:4215
+#: ../src/xviewer-window.c:4298
 msgid "Flip _Vertical"
 msgstr "Κά_θετη αναστροφή"
 
-#: ../src/xviewer-window.c:4216
+#: ../src/xviewer-window.c:4299
 msgid "Mirror the image vertically"
 msgstr "Καθρεπτισμός της εικόνας κάθετα"
 
-#: ../src/xviewer-window.c:4218
+#: ../src/xviewer-window.c:4301
 msgid "_Rotate Clockwise"
 msgstr "Περιστροφή δε_ξιόστροφα"
 
-#: ../src/xviewer-window.c:4219
+#: ../src/xviewer-window.c:4302
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Περιστροφή εικόνας 90 μοίρες δεξιά"
 
-#: ../src/xviewer-window.c:4221
+#: ../src/xviewer-window.c:4304
 msgid "Rotate Counterc_lockwise"
 msgstr "Π_εριστροφή αριστερόστροφα"
 
-#: ../src/xviewer-window.c:4222
+#: ../src/xviewer-window.c:4305
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Περιστροφή εικόνας 90 μοίρες αριστερά"
 
-#: ../src/xviewer-window.c:4224
+#: ../src/xviewer-window.c:4307
 msgid "Set as Wa_llpaper"
 msgstr "Ορισμός ως τα_πετσαρίας"
 
-#: ../src/xviewer-window.c:4225
+#: ../src/xviewer-window.c:4308
 msgid "Set the selected image as the wallpaper"
 msgstr "Ορισμός της επιλεγμένης εικόνας ως ταπετσαρίας"
 
-#: ../src/xviewer-window.c:4228
+#: ../src/xviewer-window.c:4311
 msgid "Move the selected image to the trash folder"
 msgstr "Μετακίνηση της επιλεγμένης εικόνας στα απορρίμματα"
 
-#: ../src/xviewer-window.c:4230
+#: ../src/xviewer-window.c:4313
 msgid "_Delete Image"
 msgstr "_Διαγραφή εικόνας"
 
-#: ../src/xviewer-window.c:4231
+#: ../src/xviewer-window.c:4314
 msgid "Delete the selected image"
 msgstr "Διαγραφή της επιλεγμένης εικόνας"
 
-#: ../src/xviewer-window.c:4233
+#: ../src/xviewer-window.c:4316
 msgid "_Copy"
 msgstr "_Αντιγραφή"
 
-#: ../src/xviewer-window.c:4234
+#: ../src/xviewer-window.c:4317
 msgid "Copy the selected image to the clipboard"
 msgstr "Αντιγραφή της επιλεγμένης εικόνας στο πρόχειρο"
 
-#: ../src/xviewer-window.c:4236 ../src/xviewer-window.c:4248
-#: ../src/xviewer-window.c:4251
+#: ../src/xviewer-window.c:4319 ../src/xviewer-window.c:4337
+#: ../src/xviewer-window.c:4340
 msgid "_Zoom In"
 msgstr "Μεγέ_θυνση"
 
-#: ../src/xviewer-window.c:4237 ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:4320 ../src/xviewer-window.c:4338
 msgid "Enlarge the image"
 msgstr "Μεγέθυνση εικόνας"
 
-#: ../src/xviewer-window.c:4239 ../src/xviewer-window.c:4254
+#: ../src/xviewer-window.c:4322 ../src/xviewer-window.c:4343
 msgid "Zoom _Out"
 msgstr "Σ_μίκρυνση"
 
-#: ../src/xviewer-window.c:4240 ../src/xviewer-window.c:4252
-#: ../src/xviewer-window.c:4255
+#: ../src/xviewer-window.c:4323 ../src/xviewer-window.c:4341
+#: ../src/xviewer-window.c:4344
 msgid "Shrink the image"
 msgstr "Σμίκρυνση εικόνας"
 
-#: ../src/xviewer-window.c:4242 ../src/xviewer-window.c:4257
+#: ../src/xviewer-window.c:4325 ../src/xviewer-window.c:4346
 msgid "_Normal Size"
 msgstr "Κα_νονικό μέγεθος"
 
-#: ../src/xviewer-window.c:4243 ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4326 ../src/xviewer-window.c:4347
 msgid "Show the image at its normal size"
 msgstr "Εμφάνιση εικόνας στο κανονικό της μέγεθος"
 
-#: ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4328
+msgid "Fit to _Height"
+msgstr "Προσαρμογή στο _Ύψος"
+
+#: ../src/xviewer-window.c:4329
+msgid "Fit to height"
+msgstr "Προσαρμογή στο ύψος"
+
+#: ../src/xviewer-window.c:4331
+msgid "Fit to _Width"
+msgstr "Προσαρμογή στο _Πλάτος"
+
+#: ../src/xviewer-window.c:4332
+msgid "Fit to width"
+msgstr "Προσαρμογή στο πλάτος"
+
+#: ../src/xviewer-window.c:4335
 msgid "Reload the image"
 msgstr "Επαναφόρτωση της εικόνας"
 
-#: ../src/xviewer-window.c:4266
+#: ../src/xviewer-window.c:4355
 msgid "_Fullscreen"
 msgstr "_Πλήρης οθόνη"
 
-#: ../src/xviewer-window.c:4267
+#: ../src/xviewer-window.c:4356
 msgid "Show the current image in fullscreen mode"
 msgstr "Εμφάνιση της τρέχουσας εικόνας σε λειτουργία πλήρους οθόνης"
 
-#: ../src/xviewer-window.c:4269
+#: ../src/xviewer-window.c:4358
 msgid "Pause Slideshow"
 msgstr "Παύση αλληλουχίας εικόνων"
 
-#: ../src/xviewer-window.c:4270
+#: ../src/xviewer-window.c:4359
 msgid "Pause or resume the slideshow"
 msgstr "Παύση ή συνέχιση της αλληλουχίας εικόνων"
 
-#: ../src/xviewer-window.c:4272
+#: ../src/xviewer-window.c:4361
 msgid "_Best Fit"
 msgstr "_Καλύτερο ταίριασμα"
 
-#: ../src/xviewer-window.c:4273
+#: ../src/xviewer-window.c:4362
 msgid "Fit the image to the window"
 msgstr "Ταίριασμα της εικόνας στο παράθυρο"
 
-#: ../src/xviewer-window.c:4278 ../src/xviewer-window.c:4293
+#: ../src/xviewer-window.c:4367 ../src/xviewer-window.c:4382
 msgid "_Previous Image"
 msgstr "_Προηγούμενη εικόνα"
 
-#: ../src/xviewer-window.c:4279
+#: ../src/xviewer-window.c:4368
 msgid "Go to the previous image of the gallery"
 msgstr "Μετάβαση στην προηγούμενη εικόνα της συλλογής"
 
-#: ../src/xviewer-window.c:4281
+#: ../src/xviewer-window.c:4370
 msgid "_Next Image"
 msgstr "Επόμε_νη εικόνα"
 
-#: ../src/xviewer-window.c:4282
+#: ../src/xviewer-window.c:4371
 msgid "Go to the next image of the gallery"
 msgstr "Μετάβαση στην επόμενη εικόνα της συλλογής"
 
-#: ../src/xviewer-window.c:4284 ../src/xviewer-window.c:4296
+#: ../src/xviewer-window.c:4373 ../src/xviewer-window.c:4385
 msgid "_First Image"
 msgstr "Πρώ_τη εικόνα"
 
-#: ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4374
 msgid "Go to the first image of the gallery"
 msgstr "Μετάβαση στην πρώτη εικόνα της συλλογής"
 
-#: ../src/xviewer-window.c:4287 ../src/xviewer-window.c:4299
+#: ../src/xviewer-window.c:4376 ../src/xviewer-window.c:4388
 msgid "_Last Image"
 msgstr "Τε_λευταία εικόνα"
 
-#: ../src/xviewer-window.c:4288
+#: ../src/xviewer-window.c:4377
 msgid "Go to the last image of the gallery"
 msgstr "Μετάβαση στην τελευταία εικόνα της συλλογής"
 
-#: ../src/xviewer-window.c:4290
+#: ../src/xviewer-window.c:4379
 msgid "_Random Image"
 msgstr "_Τυχαία εικόνα"
 
-#: ../src/xviewer-window.c:4291
+#: ../src/xviewer-window.c:4380
 msgid "Go to a random image of the gallery"
 msgstr "Μετάβαση σε μια τυχαία εικόνα της συλλογής"
 
-#: ../src/xviewer-window.c:4449
+#: ../src/xviewer-window.c:4538
 msgid "S_lideshow"
 msgstr "_Αλληλουχία εικόνων"
 
-#: ../src/xviewer-window.c:4450
+#: ../src/xviewer-window.c:4539
 msgid "Start a slideshow view of the images"
 msgstr "Εκκίνηση προβολής των εικόνων σε αλληλουχία"
 
-#: ../src/xviewer-window.c:4522
+#: ../src/xviewer-window.c:4611
 msgid "Previous"
 msgstr "Προηγούμενο"
 
-#: ../src/xviewer-window.c:4527
+#: ../src/xviewer-window.c:4616
 msgid "Next"
 msgstr "Επόμενο"
 
-#: ../src/xviewer-window.c:4534
+#: ../src/xviewer-window.c:4623
 msgid "Right"
 msgstr "Δεξιά"
 
-#: ../src/xviewer-window.c:4537
+#: ../src/xviewer-window.c:4626
 msgid "Left"
 msgstr "Αριστερά"
 
 #
-#: ../src/xviewer-window.c:4540
+#: ../src/xviewer-window.c:4629
 msgid "Show Folder"
 msgstr "Εμφάνιση φακέλου"
 
-#: ../src/xviewer-window.c:4543
+#: ../src/xviewer-window.c:4632
 msgid "Out"
 msgstr "Έξω"
 
-#: ../src/xviewer-window.c:4546
+#: ../src/xviewer-window.c:4635
 msgid "In"
 msgstr "Μέσα"
 
-#: ../src/xviewer-window.c:4549
+#: ../src/xviewer-window.c:4638
 msgid "Normal"
 msgstr "Κανονικό"
 
-#: ../src/xviewer-window.c:4552
+#: ../src/xviewer-window.c:4641
+msgid "Height"
+msgstr "Ύψος"
+
+#: ../src/xviewer-window.c:4644
+msgid "Width"
+msgstr "Πλάτος"
+
+#: ../src/xviewer-window.c:4647
 msgid "Fit"
 msgstr "Ταίριασμα"
 
-#: ../src/xviewer-window.c:4555
+#: ../src/xviewer-window.c:4650
 msgid "Gallery"
 msgstr "Συλλογή"
 
-#: ../src/xviewer-window.c:4572
+#: ../src/xviewer-window.c:4667
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Απορρίμματα"
