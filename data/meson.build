@@ -1,21 +1,19 @@
-custom_target(
-    'appdata',
+i18n.merge_file(
     input: 'xviewer.appdata.xml.in',
     output: 'xviewer.appdata.xml',
-    command: [intltool_merge, '-x', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
+    po_dir: po_dir,
+    type: 'xml',
     install: true,
-    install_dir: join_paths(datadir, 'metainfo'),
-    build_by_default: true
+    install_dir: datadir / 'metainfo'
 )
 
-custom_target(
-    'desktop',
+i18n.merge_file(
     input: 'xviewer.desktop.in.in',
     output: 'xviewer.desktop',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
+    po_dir: po_dir,
+    type: 'desktop',
     install: true,
-    install_dir: join_paths(datadir, 'applications'),
-    build_by_default: true
+    install_dir: datadir / 'applications'
 )
 
 gschema_conf = configuration_data()
