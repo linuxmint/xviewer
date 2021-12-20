@@ -45,7 +45,6 @@ zlib = dependency('zlib')
 cinnamon_desktop = dependency('cinnamon-desktop', version: '>= 3.2.0')
 xapp = dependency('xapp', version: '>= 1.9.0')
 
-intltool_merge = find_program('intltool-merge')
 cc = meson.get_compiler('c')
 
 # on some systems we need to find the math lib to make sure it builds
