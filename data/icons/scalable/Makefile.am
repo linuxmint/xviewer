@@ -7,8 +7,6 @@ dist_appicons_DATA = \
 dist_actionicons_DATA = \
 	actions/xviewer-plugin.svg	  	\
 	actions/xviewer-image-gallery.svg  \
-    actions/view-fit-height-symbolic.svg \
-    actions/view-fit-width-symbolic.svg \
 	actions/slideshow-play.svg
 
 -include $(top_srcdir)/git.mk
