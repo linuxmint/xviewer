@@ -687,8 +687,8 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 		}
 	}
 
-    if (directory_list != NULL)
-        g_list_free_full(directory_list, g_free);
+	if (directory_list != NULL)
+		g_list_free_full(directory_list, g_free);
 
 	if (initial_file &&
 	    is_file_in_list_store_file (store, initial_file, &iter)) {
