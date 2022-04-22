@@ -1044,7 +1044,7 @@ xviewer_thumb_view_set_thumbnail_popup (XviewerThumbView *thumbview,
 	g_return_if_fail (XVIEWER_IS_THUMB_VIEW (thumbview));
 	g_return_if_fail (thumbview->priv->menu == NULL);
 
-	thumbview->priv->menu = g_object_ref (menu);
+	thumbview->priv->menu = GTK_WIDGET (g_object_ref (menu));
 
 	gtk_menu_attach_to_widget (GTK_MENU (thumbview->priv->menu),
 				   GTK_WIDGET (thumbview),

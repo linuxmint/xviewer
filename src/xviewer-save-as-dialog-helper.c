@@ -235,7 +235,7 @@ xviewer_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 	data->n_images = g_list_length (images);
 	data->nth_image = (int) ((float) data->n_images * rand() / (float) (RAND_MAX+1.0));
 	g_assert (data->nth_image >= 0 && data->nth_image < data->n_images);
-	data->image = g_object_ref (G_OBJECT (g_list_nth_data (images, data->nth_image)));
+	data->image = g_object_ref (g_list_nth_data (images, data->nth_image));
 	g_object_set_data_full (G_OBJECT (dlg), "data", data, destroy_data_cb);
 
 	g_signal_connect (G_OBJECT (data->format_combobox), "changed",

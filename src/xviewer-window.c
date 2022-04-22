@@ -828,7 +828,7 @@ on_button_pressed (GtkWidget *widget, GdkEventButton *event, XviewerWindow *wind
 			return FALSE;
 		}
 
-		if (!xviewer_scroll_view_event_is_over_image (window->priv->view, ev)) {
+		if (!xviewer_scroll_view_event_is_over_image (XVIEWER_SCROLL_VIEW (window->priv->view), ev)) {
 			return FALSE;
 		}
 
@@ -2025,7 +2025,7 @@ xviewer_window_create_fullscreen_popup (XviewerWindow *window)
 
 	toolbar = gtk_toolbar_new ();
 	gtk_container_add (GTK_CONTAINER (frame), toolbar);
-	tool_item = gtk_tool_item_new ();
+	tool_item = GTK_WIDGET (gtk_tool_item_new ());
 	gtk_tool_item_set_expand (GTK_TOOL_ITEM (tool_item), TRUE);
 	gtk_toolbar_insert (GTK_TOOLBAR (toolbar), GTK_TOOL_ITEM (tool_item), 0);
 
@@ -5207,7 +5207,7 @@ xviewer_window_construct_ui (XviewerWindow *window)
 				     			 GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
 	gtk_container_add (GTK_CONTAINER (priv->toolbar_revealer), priv->toolbar);
 
-	tool_item = gtk_tool_item_new ();
+	tool_item = GTK_WIDGET (gtk_tool_item_new ());
 	gtk_tool_item_set_expand (GTK_TOOL_ITEM (tool_item), TRUE);
 	gtk_toolbar_insert (GTK_TOOLBAR (priv->toolbar), GTK_TOOL_ITEM (tool_item), 0);
 
