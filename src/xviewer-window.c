@@ -5761,9 +5761,9 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 
 	modifiers = gtk_accelerator_get_default_mod_mask ();
 
-    if ((XVIEWER_WINDOW (widget)->priv->slideshow_spacebar_pause) && (event->keyval == GDK_KEY_space) &&
-        (XVIEWER_WINDOW (widget)->priv->slideshow_active))
-        event->keyval = GDK_KEY_P;              /* spacebar is configured to pause/resume slideshows */
+	if ((XVIEWER_WINDOW(widget)->priv->slideshow_spacebar_pause) && (event->keyval == GDK_KEY_space) &&
+	    (XVIEWER_WINDOW(widget)->priv->slideshow_active))
+		event->keyval = GDK_KEY_P; /* spacebar is configured to pause/resume slideshows */
 
 	switch (event->keyval) {
 	case GDK_KEY_space:
