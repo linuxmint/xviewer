@@ -3705,7 +3705,7 @@ xviewer_scroll_view_set_popup (XviewerScrollView *view,
 	g_return_if_fail (XVIEWER_IS_SCROLL_VIEW (view));
 	g_return_if_fail (view->priv->menu == NULL);
 
-	view->priv->menu = g_object_ref (menu);
+	view->priv->menu = GTK_WIDGET (g_object_ref (menu));
 
 	gtk_menu_attach_to_widget (GTK_MENU (view->priv->menu),
 				   GTK_WIDGET (view),
