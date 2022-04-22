@@ -320,7 +320,6 @@ compute_center_zoom_offsets (XviewerScrollView *view,
 	int old_scaled_width, old_scaled_height;
 	int new_scaled_width, new_scaled_height;
 	double view_cx, view_cy;
-	GtkRequisition req;
 
 	priv = view->priv;
 

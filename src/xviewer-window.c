@@ -2226,7 +2226,6 @@ xviewer_window_uninhibit_screensaver (XviewerWindow *window)
 static void
 xviewer_window_run_fullscreen (XviewerWindow *window, gboolean slideshow)
 {
-	static const GdkRGBA black = { 0., 0., 0., 1.};
 	XviewerWindowPrivate *priv;
 	GtkWidget *menubar;
 	gboolean upscale;
