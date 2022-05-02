@@ -129,6 +129,7 @@ endif
 include_dirs = [include_directories('src')]
 
 subdir('data')
+subdir('install-scripts')
 
 if jpeg.found()
     subdir('jpegutils')
