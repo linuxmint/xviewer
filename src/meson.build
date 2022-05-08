@@ -193,6 +193,8 @@ gnome.generate_gir(
     identifier_prefix: 'Xviewer',
     symbol_prefix: meson.project_name(),
     install: true,
+    install_dir_gir: xviewer_pkgdatadir / 'gir-1.0',
+    install_dir_typelib: xviewer_pkglibdir / 'girepository-1.0',
 )
 
 pkgconfig.generate(
