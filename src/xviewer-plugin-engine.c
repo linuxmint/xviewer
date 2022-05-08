@@ -81,6 +81,7 @@ xviewer_plugin_engine_new (void)
 {
 	XviewerPluginEngine *engine;
 	gchar *user_plugin_path;
+	gchar *typelib_path;
 	const gchar * const * system_data_dirs;
 	GError *error = NULL;
 
@@ -102,9 +103,10 @@ xviewer_plugin_engine_new (void)
 		g_clear_error (&error);
 	}
 
+	typelib_path = g_build_filename (LIBDIR, "xviewer", "girepository-1.0", NULL);
 
-	if (g_irepository_require (g_irepository_get_default (),
-				   "Xviewer", "3.0", 0, &error) == NULL)
+	if (g_irepository_require_private (g_irepository_get_default (), typelib_path,
+					   "Xviewer", "3.0", 0, &error) == NULL)
 	{
 		g_warning ("Error loading Xviewer typelib: %s\n",
 			   error->message);
