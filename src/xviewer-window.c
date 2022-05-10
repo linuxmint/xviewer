@@ -5758,6 +5758,17 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 	gint result = FALSE;
 	gboolean handle_selection = FALSE;
 	GdkModifierType modifiers;
+    static uint previous_key = GDK_KEY_VoidSymbol;
+    static uint last_key_time = 0;
+    #define IMAGE_CHANGE_DELAY  250                 /* delay in milliseconds between
+                                                       actioning next/prev image
+                                                       keypresses - to allow each image
+                                                       to be seen */
+    if (event->type == GDK_KEY_RELEASE) {
+        previous_key = GDK_KEY_VoidSymbol;          /* allow rapid single presses of the
+                                                       next/prev image keys to work */
+        return TRUE;
+    }
 
 	modifiers = gtk_accelerator_get_default_mod_mask ();
 
@@ -5816,24 +5827,34 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 	case GDK_KEY_Left:
 	case GDK_KEY_Up:
 		if ((event->state & modifiers) == 0) {
-			/* Left and Up move to previous image */
-			if (is_rtl) { /* move to next in RTL mode */
-				xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
-			} else {
-				xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
-			}
+            if ((previous_key != event->keyval)                     ||
+                (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
+                (event->time < last_key_time)) {            /* allow for roll-over */
+                /* Left and Up move to previous image */
+			    if (is_rtl) { /* move to next in RTL mode */
+				    xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
+			    } else {
+				    xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
+			    }
+                last_key_time = event->time;
+            }
 			result = TRUE;
 		}
 		break;
 	case GDK_KEY_Right:
 	case GDK_KEY_Down:
 		if ((event->state & modifiers) == 0) {
-			/* Right and Down move to next image */
-			if (is_rtl) { /* move to previous in RTL mode */
-				xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
-			} else {
-				xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
-			}
+            if ((previous_key != event->keyval)                     ||
+                (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
+                (event->time < last_key_time)) {            /* allow for roll-over */
+			    /* Right and Down move to next image */
+			    if (is_rtl) { /* move to previous in RTL mode */
+				    xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
+			    } else {
+				    xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
+			    }
+                last_key_time = event->time;
+            }
 			result = TRUE;
 		}
 		break;
@@ -5868,6 +5889,8 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 		}
 		break;
 	}
+
+    previous_key = event->keyval;
 
 	/* Update slideshow timeout */
 	if (result && (XVIEWER_WINDOW (widget)->priv->mode == XVIEWER_WINDOW_MODE_SLIDESHOW)) {
@@ -6069,6 +6092,7 @@ xviewer_window_class_init (XviewerWindowClass *class)
 
 	widget_class->delete_event = xviewer_window_delete;
 	widget_class->key_press_event = xviewer_window_key_press;
+	widget_class->key_release_event = xviewer_window_key_press;
 	widget_class->button_press_event = xviewer_window_button_press;
 	widget_class->drag_data_received = xviewer_window_drag_data_received;
 	widget_class->focus_out_event = xviewer_window_focus_out_event;
