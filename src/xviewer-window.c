@@ -5865,8 +5865,14 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 					/* If the iconview is not visible skip to the
 					 * previous image manually as it won't handle
 					 * the keypress then. */
-					xviewer_window_cmd_go_prev (NULL,
-								XVIEWER_WINDOW (widget));
+                    if ((previous_key != event->keyval)                     ||
+                        (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
+                        (event->time < last_key_time)) {            /* allow for roll-over */
+					    xviewer_window_cmd_go_prev (NULL,
+								    XVIEWER_WINDOW (widget));
+                        last_key_time = event->time;
+                    }
+
 					result = TRUE;
 				} else
 					handle_selection = TRUE;
@@ -5880,8 +5886,13 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 					/* If the iconview is not visible skip to the
 					 * next image manually as it won't handle
 					 * the keypress then. */
-					xviewer_window_cmd_go_next (NULL,
-								XVIEWER_WINDOW (widget));
+                    if ((previous_key != event->keyval)                     ||
+                        (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
+                        (event->time < last_key_time)) {            /* allow for roll-over */
+					    xviewer_window_cmd_go_next (NULL,
+								    XVIEWER_WINDOW (widget));
+                        last_key_time = event->time;
+                    }
 					result = TRUE;
 				} else
 					handle_selection = TRUE;
