@@ -1,3 +1,27 @@
+xviewer (3.2.5) vanessa; urgency=medium
+
+  [ okaestne ]
+  * Port to meson
+  * control: capitalize Xviewer in package desc
+  * fix lintian warnings
+  * update AppStream metadata
+  * Use meson's i18n.merge_file (gettext) ... instead of intltool-merge.
+  * Add README.md with general information and build steps
+
+  [ Oliver Kästner ]
+  * build: add install scripts for non-debian builds (#158)
+
+  [ okaestne ]
+  * remove unused variables
+  * fix misleading-indentation warnings
+  * fix/add checked type casts
+  * fix: move .typelib and .gir dirs into private dir
+
+  [ programmer-ceds ]
+  * Handle repeated prev and next keys (#164)
+
+ -- Clement Lefebvre <clem@macbook>  Sat, 11 Jun 2022 13:01:41 +0200
+
 xviewer (3.2.4) una; urgency=medium
 
   * l10n: Update translations
