@@ -35,6 +35,7 @@ i18n = import('i18n')
 pkgconfig = import('pkgconfig')
 
 # dependencies
+gio_unix = dependency('gio-unix-2.0', version: '>= 2.38.0')
 glib = dependency('glib-2.0', version: '>= 2.38.0')
 gtk = dependency('gtk+-3.0')
 libpeas = dependency('libpeas-1.0', version: '>= 0.7.4')

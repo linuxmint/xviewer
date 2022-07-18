@@ -131,6 +131,7 @@ xviewer_resources = gnome.compile_resources(
 
 xviewer_deps = [
     config_h,
+    gio_unix,
     glib,
     gtk,
     libpeas,
