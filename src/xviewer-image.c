@@ -368,61 +368,6 @@ xviewer_image_error_quark (void)
 }
 
 static void
-xviewer_image_update_exif_data (XviewerImage *image)
-{
-#ifdef HAVE_EXIF
-	XviewerImagePrivate *priv;
-	ExifEntry *entry;
-	ExifByteOrder bo;
-
-	xviewer_debug (DEBUG_IMAGE_DATA);
-
-	g_return_if_fail (XVIEWER_IS_IMAGE (image));
-
-	priv = image->priv;
-
-	if (priv->exif == NULL) return;
-
-	bo = exif_data_get_byte_order (priv->exif);
-
-	/* Update image width */
-	entry = exif_data_get_entry (priv->exif, EXIF_TAG_PIXEL_X_DIMENSION);
-	if (entry != NULL && (priv->width >= 0)) {
-		if (entry->format == EXIF_FORMAT_LONG)
-			exif_set_long (entry->data, bo, priv->width);
-		else if (entry->format == EXIF_FORMAT_SHORT)
-			exif_set_short (entry->data, bo, priv->width);
-		else
-			g_warning ("Exif entry has unsupported size");
-	}
-
-	/* Update image height */
-	entry = exif_data_get_entry (priv->exif, EXIF_TAG_PIXEL_Y_DIMENSION);
-	if (entry != NULL && (priv->height >= 0)) {
-		if (entry->format == EXIF_FORMAT_LONG)
-			exif_set_long (entry->data, bo, priv->height);
-		else if (entry->format == EXIF_FORMAT_SHORT)
-			exif_set_short (entry->data, bo, priv->height);
-		else
-			g_warning ("Exif entry has unsupported size");
-	}
-
-	/* Update image orientation */
-	entry = exif_data_get_entry (priv->exif, EXIF_TAG_ORIENTATION);
-	if (entry != NULL) {
-		if (entry->format == EXIF_FORMAT_LONG)
-			exif_set_long (entry->data, bo, 1);
-		else if (entry->format == EXIF_FORMAT_SHORT)
-			exif_set_short (entry->data, bo, 1);
-		else
-			g_warning ("Exif entry has unsupported size");
-
-		priv->orientation = 1;
-	}
-#endif
-}
-
-static void
 xviewer_image_real_transform (XviewerImage     *img,
 			  XviewerTransform *trans,
 			  gboolean      is_undo,
@@ -459,9 +404,14 @@ xviewer_image_real_transform (XviewerImage     *img,
 	}
 
 	if (modified) {
-		priv->modified = TRUE;
-		xviewer_image_update_exif_data (img);
-	}
+                                    /* the code used to update EXIF information here but there is little point
+                                       in doing so. If the user moves to the next image the EXIF data buffer is unreferenced
+                                       and the updates are therefore lost. This leads to a physically rotated image but
+                                       with the original orientation, width and height tags. Instead update the EXIF information
+                                       if/when the image is saved */
+        priv->modified = TRUE;
+        priv->orientation = 1;
+    }
 
 	if (priv->trans == NULL) {
 		g_object_ref (trans);
@@ -883,6 +833,11 @@ xviewer_image_set_orientation (XviewerImage *img)
 		ExifEntry *entry = exif_data_get_entry (exif,
 							EXIF_TAG_ORIENTATION);
 
+        if (priv->modified)
+        {
+            priv->orientation = 1;
+        }
+        else
 		if (entry && entry->data != NULL) {
 			priv->orientation = exif_get_short (entry->data, o);
 		}

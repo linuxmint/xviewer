@@ -33,6 +33,7 @@
 
 #include "xviewer-image-jpeg.h"
 #include "xviewer-image-private.h"
+#include "xviewer-debug.h"
 
 #if HAVE_JPEG
 
@@ -176,6 +177,61 @@ init_transform_info (XviewerImage *image, jpeg_transform_info *info)
 	g_object_unref (composition);
 }
 
+static void
+xviewer_image_jpeg_update_exif_data (XviewerImage *image)
+{
+#ifdef HAVE_EXIF
+	XviewerImagePrivate *priv;
+	ExifEntry *entry;
+	ExifByteOrder bo;
+
+	xviewer_debug (DEBUG_IMAGE_DATA);
+
+	g_return_if_fail (XVIEWER_IS_IMAGE (image));
+
+	priv = image->priv;
+
+	if (priv->exif == NULL) return;
+
+	bo = exif_data_get_byte_order (priv->exif);
+
+	/* Update image width */
+	entry = exif_data_get_entry (priv->exif, EXIF_TAG_PIXEL_X_DIMENSION);
+	if (entry != NULL && (priv->width >= 0)) {
+		if (entry->format == EXIF_FORMAT_LONG)
+			exif_set_long (entry->data, bo, priv->width);
+		else if (entry->format == EXIF_FORMAT_SHORT)
+			exif_set_short (entry->data, bo, priv->width);
+		else
+			g_warning ("Exif entry has unsupported size");
+	}
+
+	/* Update image height */
+	entry = exif_data_get_entry (priv->exif, EXIF_TAG_PIXEL_Y_DIMENSION);
+	if (entry != NULL && (priv->height >= 0)) {
+		if (entry->format == EXIF_FORMAT_LONG)
+			exif_set_long (entry->data, bo, priv->height);
+		else if (entry->format == EXIF_FORMAT_SHORT)
+			exif_set_short (entry->data, bo, priv->height);
+		else
+			g_warning ("Exif entry has unsupported size");
+	}
+
+	/* Update image orientation */
+	entry = exif_data_get_entry (priv->exif, EXIF_TAG_ORIENTATION);
+	if (entry != NULL) {
+		if (entry->format == EXIF_FORMAT_LONG)
+			exif_set_long (entry->data, bo, priv->orientation);
+		else if (entry->format == EXIF_FORMAT_SHORT)
+			exif_set_short (entry->data, bo, priv->orientation);
+		else
+			g_warning ("Exif entry has unsupported size");
+
+	}
+#endif
+}
+
+
 static gboolean
 _save_jpeg_as_jpeg (XviewerImage *image, const char *file, XviewerImageSaveInfo *source,
 		    XviewerImageSaveInfo *target, GError **error)
@@ -188,8 +244,8 @@ _save_jpeg_as_jpeg (XviewerImage *image, const char *file, XviewerImageSaveInfo 
 	jvirt_barray_ptr              *dst_coef_arrays;
 	FILE                          *output_file;
 	FILE                          *input_file;
-	XviewerImagePrivate               *priv;
-	gchar                          *infile_uri;
+	XviewerImagePrivate           *priv;
+	gchar                         *infile_uri;
 
 	g_return_val_if_fail (XVIEWER_IS_IMAGE (image), FALSE);
 	g_return_val_if_fail (XVIEWER_IMAGE (image)->priv->file != NULL, FALSE);
@@ -299,7 +355,7 @@ _save_jpeg_as_jpeg (XviewerImage *image, const char *file, XviewerImageSaveInfo 
 
 	/* handle EXIF/IPTC data explicitly */
 #if HAVE_EXIF
-	/* exif_chunk and exif are mutally exclusvie, this is what we assure here */
+	/* exif_chunk and exif are mutally exclusive, this is what we assure here */
 	g_assert (priv->exif_chunk == NULL);
 	if (priv->exif != NULL)
 	{
@@ -483,11 +539,15 @@ xviewer_image_jpeg_save_file (XviewerImage *image, const char *file,
 	XviewerJpegSaveMethod method = XVIEWER_SAVE_NONE;
 	gboolean source_is_jpeg = FALSE;
 	gboolean target_is_jpeg = FALSE;
-        gboolean result;
+    gboolean result;
 
 	g_return_val_if_fail (source != NULL, FALSE);
 
 	source_is_jpeg = !g_ascii_strcasecmp (source->format, XVIEWER_FILE_FORMAT_JPEG);
+
+    if (image->priv->modified)
+        xviewer_image_jpeg_update_exif_data (image);       /* delay updating the EXIF data to here otherwise any changes
+                                                              are lost if the user moves to anther image */
 
 	/* determine which method should be used for saving */
 	if (target == NULL) {
