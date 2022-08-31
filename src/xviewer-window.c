@@ -116,7 +116,10 @@ enum {
 	SIGNAL_LAST
 };
 
-static gint signals[SIGNAL_LAST];
+static gint     signals[SIGNAL_LAST];
+static guint32  images_loaded = 0;
+static gint     new_image_width = 0;
+static gint     new_image_height = 0;
 
 struct _XviewerWindowPrivate {
 	GSettings           *fullscreen_settings;
@@ -1397,6 +1400,9 @@ xviewer_job_load_cb (XviewerJobLoad *job, gpointer data)
 
 	priv->image = g_object_ref (job->image);
 
+    xviewer_image_get_size(priv->image, &new_image_width, &new_image_height);
+    images_loaded++;
+
 	if (XVIEWER_JOB (job)->error == NULL) {
 #ifdef HAVE_LCMS
 		xviewer_image_apply_display_profile (job->image,
@@ -1417,6 +1423,7 @@ xviewer_job_load_cb (XviewerJobLoad *job, gpointer data)
 		}
 
 		xviewer_window_display_image (window, job->image);
+
 	} else {
 		GtkWidget *message_area;
 
@@ -1614,7 +1621,6 @@ handle_image_selection_changed_cb (XviewerThumbView *thumbview, XviewerWindow *w
 			  "progress",
 			  G_CALLBACK (xviewer_job_progress_cb),
 			  window);
-
 	xviewer_job_scheduler_add_job (priv->load_job);
 
 	str_image = xviewer_image_get_uri_for_display (image);
@@ -5754,21 +5760,60 @@ xviewer_window_delete (GtkWidget *widget, GdkEventAny *event)
 static gint
 xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 {
-	GtkContainer *tbcontainer = GTK_CONTAINER ((XVIEWER_WINDOW (widget)->priv->toolbar));
-	gint result = FALSE;
-	gboolean handle_selection = FALSE;
+	GtkContainer   *tbcontainer = GTK_CONTAINER ((XVIEWER_WINDOW (widget)->priv->toolbar));
+	gint            result = FALSE;
+	gboolean        handle_selection = FALSE;
 	GdkModifierType modifiers;
-    static uint previous_key = GDK_KEY_VoidSymbol;
-    static uint last_key_time = 0;
-    #define IMAGE_CHANGE_DELAY  250                 /* delay in milliseconds between
-                                                       actioning next/prev image
-                                                       keypresses - to allow each image
-                                                       to be seen */
+    static uint     previous_key = GDK_KEY_VoidSymbol;
+    static uint     previous_time = 0;
+    static uint     current_time = 0;
+    static gboolean image_loaded = False;
+    static guint32  old_images_loaded = 0;
+    static guint32  next_image_time = 0;
+    static gboolean action_goto_next_prev_key = False;
+
+    #define IMAGE_CHANGE_DELAY  250                 /* minimum delay in milliseconds between the completion
+                                                       of the load of an image and actioning the next next/prev key
+                                                       (this time is in addition to the time calculated for displaying
+                                                       the image based on the number of pixels) */
     if (event->type == GDK_KEY_RELEASE) {
         previous_key = GDK_KEY_VoidSymbol;          /* allow rapid single presses of the
                                                        next/prev image keys to work */
         return TRUE;
     }
+
+    previous_time = current_time;
+    current_time = (g_get_monotonic_time() + 500) / 1000; /* use the current time in msec rather than the time that was
+                                                           assigned to the event when it was generated. This is
+                                                           because key press events can occur some time before they
+                                                           handled. In particular the timestamp of the key press event
+                                                           that is serviced following the job load callback can
+                                                           represent a time whilst the image is still being loaded - with
+                                                           the consequence that the move to the next image occurs too soon */
+    if (current_time < previous_time)
+        previous_key = GDK_KEY_VoidSymbol;                /* allow for roll-over of the timer */
+        
+
+    if ((old_images_loaded != images_loaded) &&
+        (!image_loaded))
+    {
+        old_images_loaded = images_loaded;
+        image_loaded = True;
+        next_image_time = current_time + IMAGE_CHANGE_DELAY  +
+                     (new_image_width * new_image_height) / 160000; /* allow approximately 6.5 msec per MPixel
+                                                                       for the actual display of the image to
+                                                                       complete now that the image has been
+                                                                       loaded. Note that loading of the next
+                                                                       image will begin at this time - the time
+                                                                       for which the current image is displayed
+                                                                       will be (automatically) extended by the
+                                                                       time taken to load and display the next image. */
+    }
+
+                                                                    /* Decide whether key repeats to move to the next or
+                                                                       previous image are far enough apart. */
+    action_goto_next_prev_key = ((previous_key != event->keyval) ||
+                                (image_loaded && (current_time >= next_image_time)));
 
 	modifiers = gtk_accelerator_get_default_mod_mask ();
 
@@ -5827,16 +5872,16 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 	case GDK_KEY_Left:
 	case GDK_KEY_Up:
 		if ((event->state & modifiers) == 0) {
-            if ((previous_key != event->keyval)                     ||
-                (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
-                (event->time < last_key_time)) {            /* allow for roll-over */
+            if (action_goto_next_prev_key) {
+
                 /* Left and Up move to previous image */
 			    if (is_rtl) { /* move to next in RTL mode */
 				    xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
 			    } else {
 				    xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
 			    }
-                last_key_time = event->time;
+                image_loaded = False;
+                old_images_loaded = images_loaded;
             }
 			result = TRUE;
 		}
@@ -5844,16 +5889,15 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 	case GDK_KEY_Right:
 	case GDK_KEY_Down:
 		if ((event->state & modifiers) == 0) {
-            if ((previous_key != event->keyval)                     ||
-                (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
-                (event->time < last_key_time)) {            /* allow for roll-over */
+            if (action_goto_next_prev_key) {
 			    /* Right and Down move to next image */
 			    if (is_rtl) { /* move to previous in RTL mode */
 				    xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
 			    } else {
 				    xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
 			    }
-                last_key_time = event->time;
+                image_loaded = False;
+                old_images_loaded = images_loaded;
             }
 			result = TRUE;
 		}
@@ -5865,12 +5909,11 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 					/* If the iconview is not visible skip to the
 					 * previous image manually as it won't handle
 					 * the keypress then. */
-                    if ((previous_key != event->keyval)                     ||
-                        (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
-                        (event->time < last_key_time)) {            /* allow for roll-over */
+                    if (action_goto_next_prev_key) {
 					    xviewer_window_cmd_go_prev (NULL,
 								    XVIEWER_WINDOW (widget));
-                        last_key_time = event->time;
+                        image_loaded = False;
+                        old_images_loaded = images_loaded;
                     }
 
 					result = TRUE;
@@ -5886,12 +5929,11 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 					/* If the iconview is not visible skip to the
 					 * next image manually as it won't handle
 					 * the keypress then. */
-                    if ((previous_key != event->keyval)                     ||
-                        (event->time - last_key_time >= IMAGE_CHANGE_DELAY) ||
-                        (event->time < last_key_time)) {            /* allow for roll-over */
+                    if (action_goto_next_prev_key) {
 					    xviewer_window_cmd_go_next (NULL,
 								    XVIEWER_WINDOW (widget));
-                        last_key_time = event->time;
+                        image_loaded = False;
+                        old_images_loaded = images_loaded;
                     }
 					result = TRUE;
 				} else
