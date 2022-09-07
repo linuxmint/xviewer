@@ -1,4 +1,5 @@
 # Xviewer - An Image Viewer
+![build](https://github.com/linuxmint/xviewer/actions/workflows/build.yml/badge.svg)
 
 Xviewer is a simple image viewer which uses the gdk-pixbuf library.
 It can deal with large images, and zoom and scroll with constant memory usage.
