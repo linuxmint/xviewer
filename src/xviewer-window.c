@@ -434,7 +434,7 @@ xviewer_window_get_display_profile (GtkWidget *window)
 				     icc_atom,
 				     0,
 				     G_MAXLONG,
-				     False,
+				     FALSE,
 				     XA_CARDINAL,
 				     &type,
 				     &format,
@@ -5767,10 +5767,10 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
     static uint     previous_key = GDK_KEY_VoidSymbol;
     static uint     previous_time = 0;
     static uint     current_time = 0;
-    static gboolean image_loaded = False;
+    static gboolean image_loaded = FALSE;
     static guint32  old_images_loaded = 0;
     static guint32  next_image_time = 0;
-    static gboolean action_goto_next_prev_key = False;
+    static gboolean action_goto_next_prev_key = FALSE;
 
     #define IMAGE_CHANGE_DELAY  250                 /* minimum delay in milliseconds between the completion
                                                        of the load of an image and actioning the next next/prev key
@@ -5798,7 +5798,7 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
         (!image_loaded))
     {
         old_images_loaded = images_loaded;
-        image_loaded = True;
+        image_loaded = TRUE;
         next_image_time = current_time + IMAGE_CHANGE_DELAY  +
                      (new_image_width * new_image_height) / 160000; /* allow approximately 6.5 msec per MPixel
                                                                        for the actual display of the image to
@@ -5880,7 +5880,7 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 			    } else {
 				    xviewer_window_cmd_go_prev (NULL, XVIEWER_WINDOW (widget));
 			    }
-                image_loaded = False;
+                image_loaded = FALSE;
                 old_images_loaded = images_loaded;
             }
 			result = TRUE;
@@ -5896,7 +5896,7 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
 			    } else {
 				    xviewer_window_cmd_go_next (NULL, XVIEWER_WINDOW (widget));
 			    }
-                image_loaded = False;
+                image_loaded = FALSE;
                 old_images_loaded = images_loaded;
             }
 			result = TRUE;
@@ -5912,7 +5912,7 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
                     if (action_goto_next_prev_key) {
 					    xviewer_window_cmd_go_prev (NULL,
 								    XVIEWER_WINDOW (widget));
-                        image_loaded = False;
+                        image_loaded = FALSE;
                         old_images_loaded = images_loaded;
                     }
 
@@ -5932,7 +5932,7 @@ xviewer_window_key_press (GtkWidget *widget, GdkEventKey *event)
                     if (action_goto_next_prev_key) {
 					    xviewer_window_cmd_go_next (NULL,
 								    XVIEWER_WINDOW (widget));
-                        image_loaded = False;
+                        image_loaded = FALSE;
                         old_images_loaded = images_loaded;
                     }
 					result = TRUE;
