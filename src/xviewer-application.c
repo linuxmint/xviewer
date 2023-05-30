@@ -44,6 +44,7 @@
 #include <glib/gstdio.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
+#include <libxapp/xapp-dark-mode-manager.h>
 
 #if HAVE_EXEMPI
 #include <exempi/xmp.h>
@@ -254,7 +255,6 @@ xviewer_application_startup (GApplication *application)
 	XviewerApplication *app = XVIEWER_APPLICATION (application);
 	GError *error = NULL;
 	GFile *css_file;
-	GtkSettings *settings;
 	GtkCssProvider *provider;
 	gboolean shows_app_menu;
 	gboolean shows_menubar;
@@ -291,14 +291,6 @@ xviewer_application_startup (GApplication *application)
 
 	gtk_window_set_default_icon_name ("xviewer");
 	g_set_application_name (_("Image Viewer"));
-
-	settings = gtk_settings_get_default ();
-
-	if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "XFCE") != 0) {
-		g_object_set (G_OBJECT (settings),
-	              "gtk-application-prefer-dark-theme", TRUE,
-	              NULL);
-	}
 
 	g_object_get (gtk_settings_get_default (),
 		      "gtk-shell-shows-app-menu", &shows_app_menu,
@@ -370,6 +362,10 @@ xviewer_application_finalize (GObject *object)
 	}
 
 	g_clear_object (&priv->ui_settings);
+
+	if (priv->dark_mode_manager) {
+        g_clear_object (&priv->dark_mode_manager);
+    }
 
 	xviewer_application_save_accelerators ();
 }
@@ -445,6 +441,13 @@ xviewer_application_init (XviewerApplication *xviewer_application)
 	priv->ui_settings = g_settings_new (XVIEWER_CONF_UI);
 
 	xviewer_application_load_accelerators ();
+
+	if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "XFCE") != 0) {
+        priv->dark_mode_manager = xapp_dark_mode_manager_new (TRUE);
+    }
+    else {
+        priv->dark_mode_manager = NULL;
+    }
 }
 
 /**

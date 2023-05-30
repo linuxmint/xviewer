@@ -29,6 +29,7 @@
 #include <glib-object.h>
 
 #include <libpeas/peas-extension-set.h>
+#include <libxapp/xapp-dark-mode-manager.h>
 
 #include "xviewer-application.h"
 #include "xviewer-plugin-engine.h"
@@ -42,6 +43,8 @@ struct _XviewerApplicationPrivate {
 	XviewerStartupFlags   flags;
 
 	GSettings        *ui_settings;
+
+    XAppDarkModeManager *dark_mode_manager;
 
 	PeasExtensionSet *extensions;
 };
