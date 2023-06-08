@@ -21,15 +21,15 @@ msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-29 10:03+0000\n"
-"PO-Revision-Date: 2021-11-29 18:04+0000\n"
+"PO-Revision-Date: 2023-02-22 19:18+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Dansk <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2022-07-24 09:40+0000\n"
-"X-Generator: Launchpad (build 025a39fd866a641b6ae33074cda0d02a2c712d38)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:21+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 "Language: da\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -500,7 +500,7 @@ msgstr "Hvis du ikke gemmer, vil dine ændringer gå tabt."
 #: ../src/xviewer-close-confirmation-dialog.c:437
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
-msgstr "Vil du gemme ændringer i billedet \"%s\" før programmet lukkes?"
+msgstr "Vil du gemme ændringer i billedet “%s” før programmet lukkes?"
 
 #: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
@@ -533,17 +533,17 @@ msgstr "Gem _som …"
 #: ../src/xviewer-error-message-area.c:171
 #, c-format
 msgid "Could not load image '%s'."
-msgstr "Kunne ikke indlæse billedet \"%s\"."
+msgstr "Kunne ikke indlæse billedet “%s”."
 
 #: ../src/xviewer-error-message-area.c:213
 #, c-format
 msgid "Could not save image '%s'."
-msgstr "Kunne ikke gemme billedet \"%s\"."
+msgstr "Kunne ikke gemme billedet “%s”."
 
 #: ../src/xviewer-error-message-area.c:256
 #, c-format
 msgid "No images found in '%s'."
-msgstr "Ingen billeder fundet i \"%s\"."
+msgstr "Ingen billeder fundet i “%s”."
 
 #: ../src/xviewer-error-message-area.c:263
 msgid "The given locations contain no images."
@@ -913,13 +913,13 @@ msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
-"Billedet \"%s\" er blevet ændret af et eksternt program.\n"
+"Billedet “%s” er blevet ændret af et eksternt program.\n"
 "Ønsker du at genindlæse det?"
 
 #: ../src/xviewer-window.c:1071
 #, c-format
 msgid "Use \"%s\" to open the selected image"
-msgstr "Brug \"%s\" til at åbne det valgte billede"
+msgstr "Brug “%s” til at åbne det valgte billede"
 
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
@@ -929,12 +929,12 @@ msgstr "Brug \"%s\" til at åbne det valgte billede"
 #: ../src/xviewer-window.c:1227
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
-msgstr "Gemmer billede \"%s\" (%u/%u)"
+msgstr "Gemmer billede “%s” (%u/%u)"
 
 #: ../src/xviewer-window.c:1622
 #, c-format
 msgid "Opening image \"%s\""
-msgstr "Åbner billede \"%s\""
+msgstr "Åbner billede “%s”"
 
 #. L10N: This the reason why the screensaver is inhibited.
 #: ../src/xviewer-window.c:2208
@@ -968,7 +968,7 @@ msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr ""
-"Billedet \"%s\" er blevet valgt som skrivebordsbaggrund.\n"
+"Billedet “%s” er blevet valgt som skrivebordsbaggrund.\n"
 "Ønsker du at ændre dets udseende?"
 
 #: ../src/xviewer-window.c:3361
@@ -982,7 +982,7 @@ msgid ""
 "\"%s\" permanently?"
 msgstr ""
 "Er du sikker på, du vil fjerne\n"
-"\"%s\" permanent?"
+"“%s” permanent?"
 
 #: ../src/xviewer-window.c:3443
 #, c-format
@@ -1040,7 +1040,7 @@ msgid ""
 "\"%s\" to the trash?"
 msgstr ""
 "Ønsker du at flytte\n"
-"\"%s\" til papirkurven?"
+"“%s” til papirkurven?"
 
 #: ../src/xviewer-window.c:3711
 #, c-format
@@ -1048,7 +1048,7 @@ msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr ""
-"Der kunne ikke findes en papirkurv for \"%s\". Ønsker du at slette dette "
+"Der kunne ikke findes en papirkurv for “%s”. Ønsker du at slette dette "
 "billede permanent?"
 
 #: ../src/xviewer-window.c:3716
@@ -1464,5 +1464,5 @@ msgstr "[FIL …]"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Kør \"%s --help\" for at se den fulde liste af tilgængelige "
+"Kør “%s --help” for at se den fulde liste af tilgængelige "
 "kommandolinjetilvalg."
