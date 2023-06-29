@@ -1,21 +1,23 @@
 #
-# Yuri Myasoedov <omerta13@yandex.ru>, 2012.
 #
+# Yuri Myasoedov <omerta13@yandex.ru>, 2012.
+# Sergey Kazorin <translation-team@basealt.ru>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: xviewer trunk\n"
 "POT-Creation-Date: 2012-09-05 18:38+0000\n"
-"PO-Revision-Date: 2012-10-03 21:48+0400\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
-"Language-Team: русский <gnome-cyr@gnome.org>\n"
+"PO-Revision-Date: 2023-06-29 13:51+0300\n"
+"Last-Translator: Sergey Kazorin <translation-team@basealt.ru>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -35,9 +37,11 @@ msgstr ""
 #: C/index.page:7(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/xviewer-trail.png' md5='e0d1ca1a72b992f34f2db77fdc176fb7'"
+"external ref='figures/xviewer-trail.png'"
+" md5='e0d1ca1a72b992f34f2db77fdc176fb7'"
 msgstr ""
-"external ref='figures/xviewer-trail.png' md5='e0d1ca1a72b992f34f2db77fdc176fb7'"
+"external ref='figures/xviewer-trail.png'"
+" md5='e0d1ca1a72b992f34f2db77fdc176fb7'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -57,17 +61,17 @@ msgstr ""
 
 #: C/index.page:6(info/desc)
 msgid "Help for the Xviewer Image Viewer."
-msgstr "Справка по Программе просмотра изображений «Глаз GNOME»."
+msgstr "Справка по программе просмотра изображений «Xviewer»."
 
 #: C/index.page:8(info/title)
 msgctxt "link"
 msgid "Xviewer Image Viewer"
-msgstr "Программа просмотра изображений «Глаз GNOME»"
+msgstr "Программа просмотра изображений «Xviewer»"
 
 #: C/index.page:9(info/title)
 msgctxt "text"
 msgid "Xviewer Image Viewer"
-msgstr "Программа просмотра изображений «Глаз GNOME»"
+msgstr "Программа просмотра изображений «Xviewer»"
 
 #: C/index.page:12(credit/name) C/bug-filing.page:11(credit/name)
 #: C/commandline.page:12(credit/name) C/copy-paste.page:14(credit/name)
@@ -103,7 +107,7 @@ msgid ""
 "Xviewer Image Viewer"
 msgstr ""
 "<media type=\"image\" src=\"figures/xviewer-logo.png\">Логотип Xviewer</"
-"media> Программа просмотра изображений «Глаз GNOME»"
+"media> Программа просмотра изображений «Xviewer»"
 
 #: C/index.page:22(section/title)
 msgid "View pictures"
@@ -206,14 +210,16 @@ msgstr ""
 #: C/bug-filing.page:30(page/p)
 msgid ""
 "Once you have an account, log in, and click <guiseq><gui>File a Bug</"
-"gui><gui>Core</gui><gui>xviewer</gui></guiseq>. Before reporting a bug, please "
+"gui><gui>Core</gui><gui>xviewer</gui></guiseq>. Before reporting a bug,"
+" please "
 "read the <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html"
 "\">bug writing guidelines</link>, and please <link href=\"https://bugzilla."
 "gnome.org/browse.cgi?product=xviewer\">browse</link> for the bug to see if it "
 "already exists."
 msgstr ""
 "Как только вы получите учётную запись, войдите под своей учётной записью и "
-"нажмите <guiseq><gui>File a Bug</gui><gui>Core</gui><gui>xviewer</gui></guiseq>. "
+"нажмите <guiseq><gui>File a Bug</gui><gui>Core</gui><gui>xviewer</gui><"
+"/guiseq>. "
 "Перед тем, как создать отчёт, прочтите <link href=\"https://bugzilla.gnome."
 "org/page.cgi?id=bug-writing.html\">руководство по созданию отчётов об "
 "ошибках</link>, а также <link href=\"https://bugzilla.gnome.org/browse.cgi?"
@@ -287,10 +293,12 @@ msgstr ""
 
 #: C/commandline.page:31(page/p)
 msgid ""
-"You can open a specific file by typing the filename after the <cmd>xviewer</cmd> "
+"You can open a specific file by typing the filename after the <cmd>xviewer<"
+"/cmd> "
 "command:"
 msgstr ""
-"Можно открыть определённый файл, указав его имя после команды <cmd>xviewer</cmd>:"
+"Можно открыть определённый файл, указав его имя после команды <cmd>xviewer<"
+"/cmd>:"
 
 #: C/commandline.page:34(page/screen)
 #, no-wrap
@@ -299,10 +307,12 @@ msgstr "xviewer image.jpeg"
 
 #: C/commandline.page:35(page/p)
 msgid ""
-"You can open a specific folder by typing the folder name after the <cmd>xviewer</"
+"You can open a specific folder by typing the folder name after the <cmd"
+">xviewer</"
 "cmd> command:"
 msgstr ""
-"Можно открыть определённую папку, набрав имя папки после команды <cmd>xviewer</"
+"Можно открыть определённую папку, набрав имя папки после команды <cmd"
+">xviewer</"
 "cmd>:"
 
 #: C/commandline.page:38(page/screen)
@@ -387,7 +397,8 @@ msgstr ""
 #: C/default.page:7(info/desc)
 msgid "Make image viewer the default application for viewing pictures."
 msgstr ""
-"Сделайте «Глаз GNOME» приложением для просмотра изображений по умолчанию."
+"Сделайте программу «Xviewer» приложением для просмотра изображений по"
+" умолчанию."
 
 #: C/default.page:24(page/title)
 msgid "Open pictures in the image viewer by default"
@@ -498,13 +509,15 @@ msgid ""
 "PlaceForNewIdeas\">help develop</link> the <app>Image Viewer</app>, you can "
 "get in touch with the developers using <link href=\"https://cbe005.chat."
 "mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fxviewer\">irc</link>, or via our "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/xviewer-list\">mailing list</"
+"<link href=\"http://mail.gnome.org/mailman/listinfo/xviewer-list\">mailing"
+" list</"
 "link>."
 msgstr ""
 "Если вы хотите <link href=\"https://live.gnome.org/Xviewer/"
 "PlaceForNewIdeas\">помочь в разработке</link> <app>программы просмотра "
 "изображений</app>, свяжитесь с разработчиками с помощью <link href=\"https://"
-"cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fxviewer\">IRC</link> или "
+"cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fxviewer\">IRC</link>"
+" или "
 "<link href=\"http://mail.gnome.org/mailman/listinfo/xviewer-list\">списка "
 "рассылки</link>."
 
@@ -980,7 +993,7 @@ msgstr ""
 #: C/introduction.page:7(info/desc)
 msgid "Welcome to the <app>Xviewer Image Viewer</app>."
 msgstr ""
-"Добро пожаловать в <app>Программу просмотра изображений «Глаз GNOME»</app>."
+"Добро пожаловать в <app>Программу просмотра изображений «Xviewer»</app>."
 
 #: C/introduction.page:20(page/title)
 msgid "Introduction"
@@ -996,7 +1009,7 @@ msgid ""
 "link> them, or <link xref=\"format-change\">converting them</link> to a "
 "different file format."
 msgstr ""
-"<app>Глаз GNOME</app> — это программа просмотра изображений. С её помощью "
+"<app>Xviewer</app> — это программа просмотра изображений. С её помощью "
 "можно просматривать изображения <link xref=\"formats-view\">почти любого "
 "типа</link>. Она может работать с <link xref=\"view#image-gallery\">большими "
 "коллекциями</link> изображений и показывать <link xref=\"slideshow\">слайд-"
@@ -1006,7 +1019,7 @@ msgstr ""
 
 #: C/legal.xml:4(p/link)
 msgid "Creative Commons Attribution-Share Alike 3.0 United States License"
-msgstr ""
+msgstr "Лицензия: Creative Commons Attribution-Share Alike 3.0 United States"
 
 #: C/legal.xml:3(license/p)
 msgid "This work is licensed under a <_:link-1/>."
@@ -1018,6 +1031,9 @@ msgid ""
 "modify, and distribute the example code contained in this document under the "
 "terms of your choosing, without restriction."
 msgstr ""
+"В качестве особого исключения, правообладатели предоставляют разрешение "
+"копировать, изменять и распространять примеры кода, содержащиеся в этом "
+"документе, на ваш выбор, без ограничения."
 
 #: C/license.page:8(info/desc)
 msgid "Legal information."
@@ -1032,28 +1048,29 @@ msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
-"Это руководство рапространяется под лицензией CreativeCommons Attribution-"
+"Это руководство распространяется на условиях лицензии CreativeCommons"
+" Attribution-"
 "Share Alike 3.0 Unported."
 
 #: C/license.page:20(page/p)
 msgid "You are free:"
-msgstr ""
+msgstr "Предоставляется право:"
 
 #: C/license.page:25(item/title)
 msgid "<em>To share</em>"
-msgstr ""
+msgstr "<em>Совместно использовать</em>"
 
 #: C/license.page:26(item/p)
 msgid "To copy, distribute and transmit the work."
-msgstr ""
+msgstr "Копировать, распространять и передавать работу."
 
 #: C/license.page:29(item/title)
 msgid "<em>To remix</em>"
-msgstr ""
+msgstr "<em>Перестраивать</em>"
 
 #: C/license.page:30(item/p)
 msgid "To adapt the work."
-msgstr ""
+msgstr "Адаптировать работу."
 
 #: C/license.page:33(page/p)
 msgid "Under the following conditions:"
@@ -1069,16 +1086,25 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
+"Необходимо указывать авторство работы в том виде, в котором его указал автор"
+" или "
+"лицензирующий орган (но не таким образом, который позволяет предположить "
+"наличие одобрения вас и ваших действий по отношению к этой работе)."
 
 #: C/license.page:46(item/title)
 msgid "<em>Share Alike</em>"
-msgstr ""
+msgstr "<em>Сохранение условий</em>"
 
 #: C/license.page:47(item/p)
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
+"При внесении изменений, преобразований, а также при взятии данной работы за"
+" основу,"
+"полученный результат можно распространять только на условиях такой же,"
+" похожей или "
+"совместимой лицензии."
 
 #: C/license.page:53(page/p)
 msgid ""
@@ -1087,6 +1113,11 @@ msgid ""
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
+"Полный текст лицензии можно посмотреть на <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">Веб-сайте CreativeCommons</"
+"link>, либо прочитать полный текст <link"
+" href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Краткого описания</link>."
 
 #: C/open.page:7(info/desc)
 msgid "Pictures open in a new window."
@@ -1227,7 +1258,8 @@ msgid ""
 "gui><gui>Preferences</gui></guiseq> and go to the <gui>Plugins</gui> tab. "
 "Then, check <gui>Exif display</gui> and click <gui>Close</gui>."
 msgstr ""
-"Если пакет <sys>xviewer-plugins</sys> установлен, нажмите <guiseq><gui>Правка</"
+"Если пакет <sys>xviewer-plugins</sys> установлен, нажмите <guiseq><gui"
+">Правка</"
 "gui><gui>Параметры</gui></guiseq> и перейдите на вкладку <gui>Модули</gui>. "
 "Затем отметьте флажком <gui>Данные EXIF</gui> и нажмите <gui>Закрыть</gui>."
 
@@ -1329,7 +1361,8 @@ msgid ""
 "Background</gui> and click <gui>Preferences</gui>. Choose the color you want "
 "in fullscreen mode and click <gui>Close</gui>"
 msgstr ""
-"Сначала убедитесь, что установлен пакет <link xref=\"plugins\">xviewer-plugins</"
+"Сначала убедитесь, что установлен пакет <link xref=\"plugins\""
+">xviewer-plugins</"
 "link>. Нажмите <guiseq><gui>Правка</gui><gui>Параметры</gui></guiseq> и "
 "перейдите на вкладку <gui>Модули</gui>. Затем выберите модуль <gui>Фон "
 "полного экрана</gui> и нажмите <gui>Параметры</gui>. Выберите цвет для "
@@ -1415,7 +1448,8 @@ msgid ""
 "guiseq>, go to the <gui>Plugins</gui> tab and check <gui>PicasaWeb Uploader</"
 "gui>."
 msgstr ""
-"Для этого сначала убедитесь, что установлен пакет <link xref=\"plugins\">xviewer-"
+"Для этого сначала убедитесь, что установлен пакет <link xref=\"plugins\""
+">xviewer-"
 "plugins</link>. Затем нажмите <guiseq><gui>Правка</gui><gui>Параметры</gui></"
 "guiseq>, перейдите на вкладку <gui>Модули</gui> и выберите <gui>Загрузчик "
 "PicasaWeb</gui>."
@@ -1512,7 +1546,8 @@ msgid ""
 "guiseq>, go to the <gui>Plugins</gui> tab and check <gui>Upload to Flickr</"
 "gui>."
 msgstr ""
-"Сначала убедитесь, что установлен пакет <link xref=\"plugins\">xviewer-plugins</"
+"Сначала убедитесь, что установлен пакет <link xref=\"plugins\""
+">xviewer-plugins</"
 "link>. Затем нажмите <guiseq><gui>Правка</gui><gui>Параметры</gui></guiseq>, "
 "перейдите на вкладку <gui>Модули</gui> и выберите модуль <gui>Загрузчик "
 "Flickr</gui>."
@@ -1674,7 +1709,8 @@ msgstr "Модули"
 
 #: C/plugins.page:28(page/p)
 msgid ""
-"You can install the <sys>xviewer-plugins</sys> package to get extra plugins for "
+"You can install the <sys>xviewer-plugins</sys> package to get extra plugins"
+" for "
 "the image viewer. Plugins add additional features, like the ones listed "
 "below."
 msgstr ""
@@ -1692,10 +1728,12 @@ msgstr ""
 
 #: C/plugins.page:37(when/p)
 msgid ""
-"<link action=\"install:xviewer-plugins\" href=\"http://ftp.gnome.org/pub/gnome/"
+"<link action=\"install:xviewer-plugins\""
+" href=\"http://ftp.gnome.org/pub/gnome/"
 "sources/xviewer-plugins\" style=\"button\">install xviewer-plugins</link>"
 msgstr ""
-"<link action=\"install:xviewer-plugins\" href=\"http://ftp.gnome.org/pub/gnome/"
+"<link action=\"install:xviewer-plugins\""
+" href=\"http://ftp.gnome.org/pub/gnome/"
 "sources/xviewer-plugins\" style=\"button\">установка xviewer-plugins</link>"
 
 #: C/plugins.page:42(page/p)
@@ -2047,13 +2085,15 @@ msgstr ""
 
 #: C/preferences.page:116(section/p)
 msgid ""
-"You may also wish to install the <link xref=\"plugins\">xviewer-plugins package</"
+"You may also wish to install the <link xref=\"plugins\">xviewer-plugins"
+" package</"
 "link>, which contains plugins providing a number of extra features. After "
 "installing it, you will be able to activate <link xref=\"index#plugins"
 "\">additional plugins</link>, like the ones shown in the picture on the "
 "right."
 msgstr ""
-"Вы можете также установить пакет <link xref=\"plugins\">xviewer-plugins</link>, "
+"Вы можете также установить пакет <link xref=\"plugins\">xviewer-plugins</link"
+">, "
 "содержащий модули, предоставляющие некоторые дополнительные возможности. "
 "После его установки можно будет активировать <link xref=\"index#plugins"
 "\">дополнительные модули</link>, подобные показанным на иллюстрации справа."
@@ -2726,7 +2766,8 @@ msgstr ""
 
 #: C/translate.page:27(page/p)
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/xviewer/\">many languages</"
+"There are <link href=\"http://l10n.gnome.org/module/xviewer/\">many"
+" languages</"
 "link> for which translations are still needed."
 msgstr ""
 "Есть <link href=\"http://l10n.gnome.org/module/xviewer/\">множество языков</"
