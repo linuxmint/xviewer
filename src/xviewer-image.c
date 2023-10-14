@@ -2513,9 +2513,10 @@ private_timeout (gpointer data)
 	if (xviewer_image_is_animation (img) &&
 	    !g_source_is_destroyed (g_main_current_source ()) &&
 	    priv->is_playing) {
-		while (xviewer_image_iter_advance (img) != TRUE) {}; /* cpu-sucking ? */
+		if (xviewer_image_iter_advance (img) && gdk_pixbuf_animation_iter_get_delay_time (priv->anim_iter) != -1) {
 			g_timeout_add (gdk_pixbuf_animation_iter_get_delay_time (priv->anim_iter), private_timeout, img);
 	 		return FALSE;
+		}
  	}
 	priv->is_playing = FALSE;
 	return FALSE; /* stop playing */
