@@ -22,11 +22,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2023-06-08 10:21+0000\n"
-"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:33+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
 "Language: fa\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -506,6 +506,8 @@ msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
 "%Id نوشتار با تغییرات ذخیره نشده موجود است. تغییرات پیش از بستن ذخیره شوند؟"
+msgstr[1] ""
+"%Id نوشتار با تغییرات ذخیره نشده موجود است. تغییرات پیش از بستن ذخیره شوند؟"
 
 #: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
@@ -671,6 +673,7 @@ msgstr "قالب پرونده‌های پشتیبانی شده"
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "نقطه"
+msgstr[1] "نقطه"
 
 #: ../src/xviewer-file-chooser.c:457 ../src/xviewer-file-chooser.c:473
 msgid "_Open"
@@ -751,6 +754,7 @@ msgstr "نمایش پوشه‌ای که محتوی این پرونده است د
 msgid "%lu second"
 msgid_plural "%lu seconds"
 msgstr[0] "%Ilu ثانیه"
+msgstr[1] "%Ilu ثانیه"
 
 #: ../src/xviewer-print.c:371
 msgid "Image Settings"
@@ -891,6 +895,7 @@ msgstr " (یونی‌کد نامعتبر)"
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%Ii × %Ii نقطه  %s    ٪%Ii"
+msgstr[1] "%Ii × %Ii نقطه  %s    ٪%Ii"
 
 #: ../src/xviewer-window.c:884 ../src/xviewer-window.c:2880
 msgctxt "MessageArea"
@@ -987,6 +992,9 @@ msgid_plural ""
 msgstr[0] ""
 "آیا واقعاً می‌خواهید تصویر انتخاب شده\n"
 "را برای همیشه در زباله‌دان بیندازید؟"
+msgstr[1] ""
+"آیا واقعاً می‌خواهید %Id تصویر انتخاب شده\n"
+"را برای همیشه در زباله‌دان بیندازید؟"
 
 #: ../src/xviewer-window.c:3465 ../src/xviewer-window.c:3746
 msgid "_Delete"
@@ -1050,6 +1058,9 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] ""
 "آیا واقعاً می‌خواهید تصویر انتخاب شده\n"
+"را در زباله‌دان بیندازید؟"
+msgstr[1] ""
+"آیا واقعاً می‌خواهید %Id تصویر انتخاب شده\n"
 "را در زباله‌دان بیندازید؟"
 
 #: ../src/xviewer-window.c:3721
