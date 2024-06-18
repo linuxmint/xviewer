@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: xviewer.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-29 10:03+0000\n"
-"PO-Revision-Date: 2023-04-01 14:25+0000\n"
+"PO-Revision-Date: 2024-06-06 17:08+0000\n"
 "Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2024-01-04 14:57+0000\n"
-"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
+"X-Launchpad-Export-Date: 2024-06-18 17:54+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 "Language: he\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
@@ -104,8 +104,8 @@ msgid ""
 "Xviewer is an image viewer which supports many formats. It can be used to "
 "view single images or images in a collection."
 msgstr ""
-"Xviewer הוא משקף תמונות שתומך במבנים רבים. ניתן להשתמש בו להצגת תמונה בודדת "
-"או להצגת תמונות מאוסף־תמונות."
+"Xviewer הוא משקף תמונות שתומך בתסדירים רבים. ניתן להשתמש בו להצגת תמונה "
+"בודדת או להצגת תמונות מאוסף־תמונות."
 
 #: ../data/xviewer.appdata.xml.in.h:2
 msgid ""
@@ -113,9 +113,9 @@ msgid ""
 "an image as the desktop wallpaper. It reads the camera tags to automatically "
 "rotate your images in the correct portrait or landscape orientation."
 msgstr ""
-"Xviewer מאפשר גם הצגת תמונות במצב מצגת מסך־מלא או הגדרת תמונה כרקע לשולחן "
-"העבודה. התוכנה קוראת את תגי המצלמה לאיטמוט כיוון סיבוב תמונות לאורך או רוחב "
-"הצג."
+"Xviewer מאפשר גם הצגת תמונות במצב מצגת מרקע־מלא או הגדרת תמונה כרקע לשולחן "
+"העבודה. התוכנה קוראת את תגי המצלמה לאיטמוט כיוון סיבוב תמונות, לאורך או רוחב "
+"המרקע."
 
 #: ../data/xviewer.desktop.in.in.h:1 ../src/xviewer-application.c:293
 msgid "Image Viewer"
@@ -286,7 +286,7 @@ msgstr "<b>%n:</b> מונה"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:8
 msgid "_Filename format:"
-msgstr "מבנה שם _קובץ:"
+msgstr ",xshr שם _קובץ:"
 
 #: ../data/xviewer-multiple-save-as-dialog.ui.h:9
 msgid "_Destination folder:"
@@ -386,7 +386,7 @@ msgstr "תקריב תמונה"
 
 #: ../data/xviewer-preferences-dialog.ui.h:18
 msgid "E_xpand images to fit screen"
-msgstr "פ_רישת תמונות להתאמה למסך"
+msgstr "ה_רחבת תמונות להתאמה למרקע"
 
 #: ../data/xviewer-preferences-dialog.ui.h:19
 msgid "Sequence"
@@ -629,14 +629,14 @@ msgstr "%.1f (סרט  35 מ״מ)"
 
 #: ../src/xviewer-file-chooser.c:119
 msgid "File format is unknown or unsupported"
-msgstr "מבנה קובץ לא ידוע או לא נתמך"
+msgstr ",xshr קובץ לא ידוע או לא נתמך"
 
 #: ../src/xviewer-file-chooser.c:124
 msgid ""
 "Image Viewer could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
-"משקף תמונות לא הצליח לקבוע בהתבסס על שם הקובץ, מבנה קובץ נתמך שניתן לכתיבה."
+"משקף תמונות לא הצליח לקבוע תסדיר קובץ נתמך שניתן לכתיבה, בהתבסס על שם הקובץ ."
 
 #: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
@@ -695,7 +695,7 @@ msgstr "התמרה כשלה."
 #: ../src/xviewer-image.c:1261
 #, c-format
 msgid "EXIF not supported for this file format."
-msgstr "EXIF לא נתמך במבנה קובץ זה."
+msgstr "EXIF לא נתמך בתסדיר קובץ זה."
 
 #: ../src/xviewer-image.c:1410
 #, c-format
@@ -738,7 +738,7 @@ msgstr "גודל קובץ:"
 #: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
 #: ../src/xviewer-window.c:4284
 msgid "Show the folder which contains this file in the file manager"
-msgstr "הצגת התיקייה שמכילה קובץ זה במנהל־קבצים"
+msgstr "הצגת התיקייה המכילה קובץ זה במנהל הקבצים"
 
 #: ../src/xviewer-preferences-dialog.c:134
 #, c-format
@@ -901,7 +901,7 @@ msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
-"התמונה \"%s\" הוסגלה בעמצאות  יישומון חיצוני.\n"
+"התמונה \"%s\" הוסגלה באמצעות  יישום חיצוני.\n"
 "האם לטעון את התמונה מחדש?"
 
 #: ../src/xviewer-window.c:1071
@@ -1111,11 +1111,11 @@ msgstr "_תכנים"
 
 #: ../src/xviewer-window.c:4251
 msgid "Help on this application"
-msgstr "עזרה ליישומון זה"
+msgstr "עזרה ליישום זה"
 
 #: ../src/xviewer-window.c:4254
 msgid "About this application"
-msgstr "על אודות יישומון זה"
+msgstr "על אודות יישום זה"
 
 #: ../src/xviewer-window.c:4260
 msgid "Changes the visibility of the toolbar in the current window"
@@ -1144,7 +1144,7 @@ msgstr "פתיחה _באמצעות"
 
 #: ../src/xviewer-window.c:4278
 msgid "Open the selected image with a different application"
-msgstr "פתיחת תמונה שנבחרה באמצעות יישומון אחר"
+msgstr "פתיחת תמונה שנבחרה באמצעות יישום אחר"
 
 #: ../src/xviewer-window.c:4281
 msgid "Save the selected images with a different name"
@@ -1286,11 +1286,11 @@ msgstr "טעינת תמונה מחדש"
 
 #: ../src/xviewer-window.c:4355
 msgid "_Fullscreen"
-msgstr "_מסך מלא"
+msgstr "_מרקע־מלא"
 
 #: ../src/xviewer-window.c:4356
 msgid "Show the current image in fullscreen mode"
-msgstr "הצגת התמונה הנוכחית במסך מלא"
+msgstr "הצגת התמונה הנוכחית במרקע־מלא"
 
 #: ../src/xviewer-window.c:4358
 msgid "Pause Slideshow"
@@ -1411,7 +1411,7 @@ msgstr "אשפה"
 
 #: ../src/main.c:63
 msgid "Open in fullscreen mode"
-msgstr "Open in fullscreen mode"
+msgstr "פתיחה במצב במרקע־מלא"
 
 #: ../src/main.c:64
 msgid "Disable image gallery"
@@ -1432,7 +1432,7 @@ msgstr "פתיחה בחלון בודד, אם מספר חלונות פתוחים,
 
 #: ../src/main.c:69
 msgid "Show the application's version"
-msgstr "הצגת גרסת היישומון"
+msgstr "הצגת גרסת היישום"
 
 #: ../src/main.c:99
 msgid "[FILE…]"
