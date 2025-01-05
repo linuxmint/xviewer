@@ -404,11 +404,17 @@ xviewer_thumbnail_add_frame (GdkPixbuf *thumbnail)
 	dest_width  = source_width  + 9;
 	dest_height = source_height + 9;
 
-	result_pixbuf = xviewer_thumbnail_stretch_frame_image (frame,
-							   3, 3, 6, 6,
-	                                	           dest_width,
-							   dest_height,
-							   FALSE);
+	// make sure a frame was found
+	if (frame) {
+		result_pixbuf = xviewer_thumbnail_stretch_frame_image (frame,
+								3, 3, 6, 6,
+								dest_width,
+								dest_height,
+								FALSE);
+	} else {
+		// frame was not found -> continue without a frame
+		result_pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
+	}
 
 	gdk_pixbuf_copy_area (thumbnail,
 			      0, 0,
@@ -545,5 +551,9 @@ xviewer_thumbnail_init (void)
 
 	if (frame == NULL) {
 		frame = gdk_pixbuf_new_from_file (XVIEWER_DATA_DIR "/pixmaps/thumbnail-frame.png", NULL);
+
+		if(!frame) {
+			g_critical (XVIEWER_DATA_DIR "/pixmaps/thumbnail-frame.png" " was not found");
+		}
 	}
 }
