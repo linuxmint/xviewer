@@ -74,7 +74,7 @@ Please note that we can't guarantee that the available library versions are comp
 ```bash
 # prepare build, options can be set with -Doption=value
 # Please check the output for errors and the effective build options.
-meson --prefix=/usr/local build
+meson setup --prefix=/usr/local build
 
 # compile and install
 sudo ninja -C build install
