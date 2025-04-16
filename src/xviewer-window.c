@@ -1405,8 +1405,11 @@ xviewer_job_load_cb (XviewerJobLoad *job, gpointer data)
 
 	if (XVIEWER_JOB (job)->error == NULL) {
 #ifdef HAVE_LCMS
-		xviewer_image_apply_display_profile (job->image,
-						 priv->display_profile);
+		if (g_settings_get_boolean (priv->view_settings,
+		 							XVIEWER_CONF_VIEW_DISPLAYPROFILE)) {
+			xviewer_image_apply_display_profile (job->image,
+		 				 			priv->display_profile);
+		}
 #endif
 
 		gtk_action_group_set_sensitive (priv->actions_image, TRUE);

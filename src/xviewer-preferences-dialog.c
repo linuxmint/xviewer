@@ -46,6 +46,7 @@ struct _XviewerPreferencesDialogPrivate {
 	GtkWidget     *interpolate_check;
 	GtkWidget     *extrapolate_check;
 	GtkWidget     *autorotate_check;
+	GtkWidget     *displayprofile_check;
 	GtkWidget     *bg_color_check;
 	GtkWidget     *bg_color_button;
 	GtkWidget     *color_radio;
@@ -170,6 +171,9 @@ xviewer_preferences_dialog_class_init (XviewerPreferencesDialogClass *klass)
 						      autorotate_check);
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      XviewerPreferencesDialog,
+						      displayprofile_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      XviewerPreferencesDialog,
 						      bg_color_check);
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      XviewerPreferencesDialog,
@@ -257,6 +261,9 @@ xviewer_preferences_dialog_init (XviewerPreferencesDialog *pref_dlg)
 			 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_AUTOROTATE,
 			 priv->autorotate_check, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_DISPLAYPROFILE,
+			 priv->displayprofile_check, "active",
 			 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (priv->view_settings, XVIEWER_CONF_VIEW_USE_BG_COLOR,
 			 priv->bg_color_check, "active",

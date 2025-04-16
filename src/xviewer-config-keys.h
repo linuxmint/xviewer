@@ -54,6 +54,7 @@
 
 #define XVIEWER_CONF_VIEW_ZOOM_MULTIPLIER		"zoom-multiplier"
 #define XVIEWER_CONF_VIEW_AUTOROTATE                "autorotate"
+#define XVIEWER_CONF_VIEW_DISPLAYPROFILE            "displayprofile"
 #define XVIEWER_CONF_VIEW_TRANSPARENCY		"transparency"
 #define XVIEWER_CONF_VIEW_TRANS_COLOR		"trans-color"
 #define XVIEWER_CONF_VIEW_USE_BG_COLOR		"use-background-color"
