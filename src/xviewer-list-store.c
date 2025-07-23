@@ -656,20 +656,14 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 				if (!is_file_in_list_store_file (store,
 								 initial_file,
 								 &iter)) {
-					g_mutex_lock (&store->priv->mutex);
 					xviewer_list_store_append_image_from_file (store, initial_file);
-					g_mutex_unlock (&store->priv->mutex);
 				}
 			} else {
-				g_mutex_lock (&store->priv->mutex);
 				xviewer_list_store_append_image_from_file (store, initial_file);
-				g_mutex_unlock (&store->priv->mutex);
 			}
 			g_object_unref (file);
 		} else if (file_type == G_FILE_TYPE_REGULAR && !singleton_list) {
-			g_mutex_lock (&store->priv->mutex);
 			xviewer_list_store_append_image_from_file (store, file);
-			g_mutex_unlock (&store->priv->mutex);
 
 
 			g_object_unref (file);
