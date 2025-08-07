@@ -50,8 +50,6 @@ xviewer_list_store_dispose (GObject *object)
 {
 	XviewerListStore *store = XVIEWER_LIST_STORE (object);
 
-	g_mutex_lock (&store->priv->mutex);
-
 	g_list_foreach (store->priv->monitors,
 			foreach_monitors_free, NULL);
 
@@ -68,8 +66,6 @@ xviewer_list_store_dispose (GObject *object)
 		g_object_unref (store->priv->missing_image);
 		store->priv->missing_image = NULL;
 	}
-
-	g_mutex_unlock (&store->priv->mutex);
 
 	G_OBJECT_CLASS (xviewer_list_store_parent_class)->dispose (object);
 }
@@ -207,9 +203,6 @@ is_file_in_list_store (XviewerListStore *store,
 	gchar *str;
 	GtkTreeIter iter;
 
-	// mutex is auto unlocked if this goes out of scope
-	g_autoptr(GMutexLocker) locker = g_mutex_locker_new (&store->priv->mutex);
-
 	if (!gtk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter)) {
 		return FALSE;
 	}
@@ -326,7 +319,6 @@ xviewer_list_store_remove (XviewerListStore *store, GtkTreeIter *iter)
 {
 	XviewerImage *image;
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
 			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 			    -1);
@@ -335,8 +327,6 @@ xviewer_list_store_remove (XviewerListStore *store, GtkTreeIter *iter)
 	g_object_unref (image);
 
 	gtk_list_store_remove (GTK_LIST_STORE (store), iter);
-
-	g_mutex_unlock (&store->priv->mutex);
 }
 
 /**
@@ -354,8 +344,8 @@ xviewer_list_store_append_image (XviewerListStore *store, XviewerImage *image)
 	GtkTreeIter iter;
 
 	g_signal_connect (image, "changed",
-			  G_CALLBACK (on_image_changed),
-			  store);
+ 			  G_CALLBACK (on_image_changed),
+ 			  store);
 
 	gtk_list_store_append (GTK_LIST_STORE (store), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (store), &iter,
@@ -375,9 +365,7 @@ xviewer_list_store_append_image_from_file (XviewerListStore *store,
 
 	image = xviewer_image_new_file (file);
 
-    g_mutex_lock (&store->priv->mutex);
 	xviewer_list_store_append_image (store, image);
-    g_mutex_unlock (&store->priv->mutex);
 }
 
 static void
@@ -512,7 +500,6 @@ xviewer_list_store_set_directory_callbacks  (XviewerListStore *store,
 						 0, NULL, NULL);
 
 	if (file_monitor != NULL) {
-		g_mutex_lock (&store->priv->mutex);
         if (g_list_find(store->priv->monitors, file_monitor) == NULL) {
 		    g_signal_connect (file_monitor, "changed",
 				     G_CALLBACK (file_monitor_changed_cb), store);
@@ -521,7 +508,6 @@ xviewer_list_store_set_directory_callbacks  (XviewerListStore *store,
 		        to be sorted */
 		    store->priv->monitors = g_list_prepend (store->priv->monitors, file_monitor);
         }
-		g_mutex_unlock (&store->priv->mutex);
 	}
 }
 
@@ -590,11 +576,9 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 		sort_id = GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID;
 	}
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
 					      sort_id,
 					      GTK_SORT_ASCENDING);
-	g_mutex_unlock (&store->priv->mutex);
 
 	for (it = file_list; it != NULL; it = it->next) {
 		GFile *file = (GFile *) it->data;
@@ -625,11 +609,9 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 			if (sort_id != GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID) {
 				// Given file order isn't conclusive, re-sort in default order.
 				sort_id = GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID;
-				g_mutex_lock (&store->priv->mutex);
 				gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
 					  sort_id,
 					  GTK_SORT_ASCENDING);
-				g_mutex_unlock (&store->priv->mutex);
 			}
 			xviewer_list_store_append_directory (store, file, file_type);
 		} else if (file_type == G_FILE_TYPE_REGULAR && singleton_list) {
@@ -662,6 +644,7 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 			g_object_unref (file);
 		} else if (file_type == G_FILE_TYPE_REGULAR && !singleton_list) {
 			xviewer_list_store_append_image_from_file (store, file);
+
 
 			g_object_unref (file);
 			file = g_file_get_parent (file);
@@ -756,7 +739,6 @@ xviewer_list_store_new_from_glist (GList *list)
 
 	GtkListStore *store = xviewer_list_store_new ();
 
-	// no mutex lock required, as this can not be accesed by another thread yet
 	for (it = list; it != NULL; it = it->next) {
 		xviewer_list_store_append_image (XVIEWER_LIST_STORE (store),
 					     XVIEWER_IMAGE (it->data));
@@ -814,13 +796,11 @@ xviewer_list_store_get_image_by_pos (XviewerListStore *store, gint pos)
 
 	g_return_val_if_fail (XVIEWER_IS_LIST_STORE (store), NULL);
 
-	g_mutex_lock (&store->priv->mutex);
 	if (gtk_tree_model_iter_nth_child (GTK_TREE_MODEL (store), &iter, NULL, pos)) {
 		gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
 				    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 				    -1);
 	}
-	g_mutex_unlock (&store->priv->mutex);
 
 	return image;
 }
@@ -842,12 +822,10 @@ xviewer_list_store_get_pos_by_iter (XviewerListStore *store,
 	GtkTreePath *path;
 	gint pos;
 
-	g_mutex_lock (&store->priv->mutex);
 	path = gtk_tree_model_get_path (GTK_TREE_MODEL (store), iter);
 	indices = gtk_tree_path_get_indices (path);
 	pos = indices [0];
 	gtk_tree_path_free (path);
-	g_mutex_unlock (&store->priv->mutex);
 
 	return pos;
 }
@@ -865,10 +843,7 @@ xviewer_list_store_length (XviewerListStore *store)
 {
 	g_return_val_if_fail (XVIEWER_IS_LIST_STORE (store), -1);
 
-	g_mutex_lock (&store->priv->mutex);
-	gint length = gtk_tree_model_iter_n_children (GTK_TREE_MODEL (store), NULL);
-	g_mutex_unlock (&store->priv->mutex);
-	return length;
+	return gtk_tree_model_iter_n_children (GTK_TREE_MODEL (store), NULL);
 }
 
 /**
@@ -895,18 +870,20 @@ xviewer_list_store_remove_thumbnail_job (XviewerListStore *store,
 {
 	XviewerJob *job;
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
 			    XVIEWER_LIST_STORE_XVIEWER_JOB, &job,
 			    -1);
 
 	if (job != NULL) {
+		g_mutex_lock (&store->priv->mutex);
 		xviewer_job_cancel (job);
 		gtk_list_store_set (GTK_LIST_STORE (store), iter,
 				    XVIEWER_LIST_STORE_XVIEWER_JOB, NULL,
 				    -1);
+		g_mutex_unlock (&store->priv->mutex);
 	}
-	g_mutex_unlock (&store->priv->mutex);
+
+
 }
 
 static void
@@ -915,12 +892,10 @@ xviewer_list_store_add_thumbnail_job (XviewerListStore *store, GtkTreeIter *iter
 	XviewerImage *image;
 	XviewerJob *job;
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
 			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 			    XVIEWER_LIST_STORE_XVIEWER_JOB, &job,
 			    -1);
-	g_mutex_unlock (&store->priv->mutex);
 
 	if (job != NULL) {
 		g_object_unref (image);
@@ -958,11 +933,9 @@ xviewer_list_store_thumbnail_set (XviewerListStore *store,
 {
 	gboolean thumb_set = FALSE;
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
 			    XVIEWER_LIST_STORE_THUMB_SET, &thumb_set,
 			    -1);
-	g_mutex_unlock (&store->priv->mutex);
 
 	if (thumb_set) {
 		return;
@@ -988,21 +961,16 @@ xviewer_list_store_thumbnail_unset (XviewerListStore *store,
 
 	xviewer_list_store_remove_thumbnail_job (store, iter);
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_tree_model_get (GTK_TREE_MODEL (store), iter,
 			    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
 			    -1);
-	g_mutex_unlock (&store->priv->mutex);
-
 	xviewer_image_set_thumbnail (image, NULL);
 	g_object_unref (image);
 
-	g_mutex_lock (&store->priv->mutex);
 	gtk_list_store_set (GTK_LIST_STORE (store), iter,
 			    XVIEWER_LIST_STORE_THUMBNAIL, store->priv->busy_image,
 			    XVIEWER_LIST_STORE_THUMB_SET, FALSE,
 			    -1);
-	g_mutex_unlock (&store->priv->mutex);
 }
 
 /**
