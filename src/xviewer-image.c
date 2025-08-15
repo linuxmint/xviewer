@@ -833,12 +833,9 @@ xviewer_image_set_orientation (XviewerImage *img)
 		ExifEntry *entry = exif_data_get_entry (exif,
 							EXIF_TAG_ORIENTATION);
 
-        if (priv->modified)
-        {
-            priv->orientation = 1;
-        }
-        else
-		if (entry && entry->data != NULL) {
+		if (priv->modified) {
+			priv->orientation = 1;
+		} else if (entry && entry->data != NULL) {
 			priv->orientation = exif_get_short (entry->data, o);
 		}
 
@@ -1269,8 +1266,8 @@ xviewer_image_real_load (XviewerImage *img,
 				 * images as well. */
 				g_clear_error (error);
 			}
-	        }
-        }
+		}
+	}
 
 	g_free (buffer);
 

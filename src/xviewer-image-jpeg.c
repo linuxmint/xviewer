@@ -539,14 +539,14 @@ xviewer_image_jpeg_save_file (XviewerImage *image, const char *file,
 	XviewerJpegSaveMethod method = XVIEWER_SAVE_NONE;
 	gboolean source_is_jpeg = FALSE;
 	gboolean target_is_jpeg = FALSE;
-    gboolean result;
+	gboolean result;
 
 	g_return_val_if_fail (source != NULL, FALSE);
 
 	source_is_jpeg = !g_ascii_strcasecmp (source->format, XVIEWER_FILE_FORMAT_JPEG);
 
-    if (image->priv->modified)
-        xviewer_image_jpeg_update_exif_data (image);       /* delay updating the EXIF data to here otherwise any changes
+	if (image->priv->modified)
+		xviewer_image_jpeg_update_exif_data (image);       /* delay updating the EXIF data to here otherwise any changes
                                                               are lost if the user moves to anther image */
 
 	/* determine which method should be used for saving */
