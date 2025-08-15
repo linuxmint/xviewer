@@ -22,7 +22,7 @@
  */
 
 #ifndef __XVIEWER_METADATA_SIDEBAR_H__
-#define __XVIEWER_METADATA_SIDEBAR_H_
+#define __XVIEWER_METADATA_SIDEBAR_H__
 
 #include <glib-object.h>
 #include <gtk/gtk.h>
