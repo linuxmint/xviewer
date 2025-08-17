@@ -1021,10 +1021,12 @@ xviewer_thumb_view_select_single (XviewerThumbView *thumbview,
 		}
 	}
 
-	gtk_icon_view_select_path (GTK_ICON_VIEW (thumbview), path);
-	gtk_icon_view_set_cursor (GTK_ICON_VIEW (thumbview), path, NULL, FALSE);
-	gtk_icon_view_scroll_to_path (GTK_ICON_VIEW (thumbview), path, FALSE, 0, 0);
-	gtk_tree_path_free (path);
+    if (path != NULL) {
+        gtk_icon_view_select_path (GTK_ICON_VIEW (thumbview), path);
+        gtk_icon_view_set_cursor (GTK_ICON_VIEW (thumbview), path, NULL, FALSE);
+        gtk_icon_view_scroll_to_path (GTK_ICON_VIEW (thumbview), path, FALSE, 0, 0);
+        gtk_tree_path_free (path);
+    }
 }
 
 

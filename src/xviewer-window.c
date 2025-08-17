@@ -495,7 +495,7 @@ update_image_pos (XviewerWindow *window)
 
 	n_images = xviewer_list_store_length (XVIEWER_LIST_STORE (priv->store));
 
-	if (n_images > 0) {
+	if (priv->image != NULL && n_images > 0) {
 		pos = xviewer_list_store_get_pos_by_image (XVIEWER_LIST_STORE (priv->store),
 						       priv->image);
 	}
