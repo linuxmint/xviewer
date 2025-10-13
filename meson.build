@@ -44,7 +44,7 @@ pixbuf = dependency('gdk-pixbuf-2.0', version: '>= 2.19.1')
 X11 = dependency('x11')
 zlib = dependency('zlib')
 cinnamon_desktop = dependency('cinnamon-desktop', version: '>= 3.2.0')
-xapp = dependency('xapp', version: '>= 2.5.0')
+xapp = dependency('xapp', version: '>= 3.0.0')
 
 cc = meson.get_compiler('c')
 
