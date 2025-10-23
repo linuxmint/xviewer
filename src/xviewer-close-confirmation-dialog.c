@@ -412,7 +412,7 @@ build_single_img_dialog (XviewerCloseConfirmationDialog *dlg)
 	img = XVIEWER_IMAGE (dlg->priv->unsaved_images->data);
 
 	/* Image */
-	image = gtk_image_new_from_icon_name ("xapp-dialog-warning-symbolic",
+	image = gtk_image_new_from_icon_name ("xsi-dialog-warning-symbolic",
 	                                      GTK_ICON_SIZE_DIALOG);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
@@ -629,7 +629,7 @@ build_multiple_imgs_dialog (XviewerCloseConfirmationDialog *dlg)
 			    hbox, TRUE, TRUE, 0);
 
 	/* Image */
-	image = gtk_image_new_from_icon_name ("xapp-dialog-warning-symbolic",
+	image = gtk_image_new_from_icon_name ("xsi-dialog-warning-symbolic",
 					      GTK_ICON_SIZE_DIALOG);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
