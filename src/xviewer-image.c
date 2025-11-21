@@ -1298,6 +1298,7 @@ xviewer_image_real_load (XviewerImage *img,
 		{
 
 		priv->anim = gdk_pixbuf_loader_get_animation (loader);
+		g_object_ref (priv->anim);
 
 		if (gdk_pixbuf_animation_is_static_image (priv->anim)) {
 			priv->image = gdk_pixbuf_animation_get_static_image (priv->anim);
