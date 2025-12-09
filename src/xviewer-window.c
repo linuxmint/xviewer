@@ -6235,6 +6235,7 @@ xviewer_window_new (XviewerStartupFlags flags)
 					   "startup-flags", flags,
 					   NULL));
 
+	gtk_window_set_focus_on_map (GTK_WINDOW (window), TRUE);
 	return GTK_WIDGET (window);
 }
 
