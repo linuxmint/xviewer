@@ -920,7 +920,6 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 {
 	XviewerWindowPrivate *priv;
 	GFile *file;
-    gboolean is_maximized;
 
 	g_return_if_fail (XVIEWER_IS_WINDOW (window));
 	g_return_if_fail (XVIEWER_IS_IMAGE (image));
@@ -957,17 +956,6 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 			 file,
 			 (GDestroyNotify) g_object_unref);
 
-    is_maximized = gtk_window_is_maximized (GTK_WINDOW (window));
-	if (g_settings_get_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED))
-    {
-        if (!is_maximized)
-            gtk_window_maximize (GTK_WINDOW (window));
-    }
-    else
-    {
-        if (is_maximized)
-            gtk_window_unmaximize (GTK_WINDOW (window));
-    }
 
 	xviewer_window_update_openwith_menu (window, image);
 }
@@ -6027,6 +6015,25 @@ xviewer_window_focus_out_event (GtkWidget *widget, GdkEventFocus *event)
 	return GTK_WIDGET_CLASS (xviewer_window_parent_class)->focus_out_event (widget, event);
 }
 
+static gboolean
+xviewer_window_map_event (GtkWidget *widget, GdkEventAny *event)
+{
+	XviewerWindow *window = XVIEWER_WINDOW (widget);
+
+	gboolean is_maximized = gtk_window_is_maximized (GTK_WINDOW (window));
+	if (g_settings_get_boolean (window->priv->window_settings, XVIEWER_CONF_WINDOW_MAXIMIZED))
+    {
+        if (!is_maximized)
+            gtk_window_maximize (GTK_WINDOW (window));
+    }
+    else
+    {
+        if (is_maximized)
+            gtk_window_unmaximize (GTK_WINDOW (window));
+    }
+	return FALSE;
+}
+
 static void
 xviewer_window_set_property (GObject      *object,
 			 guint         property_id,
@@ -6152,6 +6159,7 @@ xviewer_window_class_init (XviewerWindowClass *class)
 	widget_class->button_press_event = xviewer_window_button_press;
 	widget_class->drag_data_received = xviewer_window_drag_data_received;
 	widget_class->focus_out_event = xviewer_window_focus_out_event;
+	widget_class->map_event = xviewer_window_map_event;
 
 /**
  * XviewerWindow:gallery-position:
