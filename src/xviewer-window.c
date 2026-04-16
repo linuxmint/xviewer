@@ -556,9 +556,9 @@ update_status_bar (XviewerWindow *window)
 
 			g_free (size_string);
 		}
-
-		update_image_pos (window);
 	}
+
+	update_image_pos (window);
 
 	gtk_statusbar_pop (GTK_STATUSBAR (priv->statusbar),
 			   priv->image_info_message_cid);
