@@ -59,6 +59,7 @@ Section: libdevel
 Architecture: any
 Depends: gir1.2-xviewer-3.0 (= ${binary:Version}),
          libgtk-3-dev,
+         libjpeg-dev,
          xviewer (>= ${binary:Version}),
          ${misc:Depends}
 Description: Development files for Xviewer
