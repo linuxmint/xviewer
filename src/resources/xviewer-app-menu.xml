@@ -5,6 +5,10 @@
         <attribute name="label" translatable="yes">_View</attribute>
         <link name="submenu">
           <item>
+            <attribute name="action">app.menubar</attribute>
+            <attribute name="label" translatable="yes">_Menubar</attribute>
+          </item>
+          <item>
             <attribute name="action">app.toolbar</attribute>
             <attribute name="label" translatable="yes">_Toolbar</attribute>
           </item>

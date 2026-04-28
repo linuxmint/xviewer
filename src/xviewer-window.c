@@ -2731,7 +2731,10 @@ xviewer_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 
 	visible = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
 
-	if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewToolbar") == 0) {
+	if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewMenubar") == 0) {
+		GtkWidget* menubar = gtk_ui_manager_get_widget (priv->ui_mgr, "/MainMenu");
+		g_object_set (G_OBJECT (menubar), "visible", visible, NULL);
+	} else if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewToolbar") == 0) {
 		g_object_set (G_OBJECT (priv->toolbar_revealer), "reveal-child", visible, NULL);
 
 		if (priv->mode == XVIEWER_WINDOW_MODE_NORMAL)
@@ -4252,6 +4255,9 @@ static const GtkActionEntry action_entries_window[] = {
 };
 
 static const GtkToggleActionEntry toggle_entries_window[] = {
+	{ "ViewMenubar", NULL, N_("_Menubar"), "F8",
+	  N_("Changes the visibility of the menubar in the current window"),
+	  G_CALLBACK (xviewer_window_cmd_show_hide_bar), TRUE },
 	{ "ViewToolbar", NULL, N_("_Toolbar"), NULL,
 	  N_("Changes the visibility of the toolbar in the current window"),
 	  G_CALLBACK (xviewer_window_cmd_show_hide_bar), TRUE },
