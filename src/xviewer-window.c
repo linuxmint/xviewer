@@ -931,6 +931,13 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 	priv = window->priv;
 
 	if (image != NULL) {
+		g_signal_handlers_disconnect_by_func (image,
+						      image_thumb_changed_cb,
+						      window);
+		g_signal_handlers_disconnect_by_func (image,
+						      image_file_changed_cb,
+						      window);
+
 		g_signal_connect (image,
 				  "thumbnail_changed",
 				  G_CALLBACK (image_thumb_changed_cb),
@@ -1021,6 +1028,15 @@ xviewer_window_update_openwith_menu (XviewerWindow *window, XviewerImage *image)
 
         if (priv->actions_open_with != NULL) {
               gtk_ui_manager_remove_action_group (priv->ui_mgr, priv->actions_open_with);
+              /* gtk_ui_manager_insert_action_group() below takes its own
+               * reference; removing it only drops that one. The reference
+               * from gtk_action_group_new() (which this struct field has
+               * been implicitly holding) must be released here too,
+               * otherwise every action group -- and every GAppInfo/
+               * GKeyFile-backed action it holds for each installed
+               * "Open With" candidate app -- leaks on every single image
+               * display. */
+              g_object_unref (priv->actions_open_with);
               priv->actions_open_with = NULL;
         }
 
@@ -1150,8 +1166,25 @@ xviewer_window_clear_load_job (XviewerWindow *window)
 	XviewerWindowPrivate *priv = window->priv;
 
 	if (priv->load_job != NULL) {
-		if (!priv->load_job->finished)
+		if (!priv->load_job->finished) {
 			xviewer_job_cancel (priv->load_job);
+		} else {
+			/* The job already finished decoding the full image
+			 * before we got a chance to act on it: the "finished"
+			 * signal disconnected below never gets to run, so
+			 * xviewer_job_load_cb()/xviewer_window_display_image()
+			 * never see this image and never data-ref it. Without
+			 * this, the fully decoded pixel data would stay
+			 * resident forever. Force-release it. This is safe
+			 * even if this image happens to be on-screen already,
+			 * since data-ref/unref only frees when the count
+			 * would drop to zero. */
+			XviewerImage *load_image = XVIEWER_JOB_LOAD (priv->load_job)->image;
+			if (xviewer_image_has_data (load_image, XVIEWER_IMAGE_DATA_IMAGE)) {
+				xviewer_image_data_ref (load_image);
+				xviewer_image_data_unref (load_image);
+			}
+		}
 
 		g_signal_handlers_disconnect_by_func (priv->load_job,
 						      xviewer_job_progress_cb,
