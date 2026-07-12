@@ -1157,8 +1157,25 @@ xviewer_window_clear_load_job (XviewerWindow *window)
 	XviewerWindowPrivate *priv = window->priv;
 
 	if (priv->load_job != NULL) {
-		if (!priv->load_job->finished)
+		if (!priv->load_job->finished) {
 			xviewer_job_cancel (priv->load_job);
+		} else {
+			/* The job already finished decoding the full image
+			 * before we got a chance to act on it: the "finished"
+			 * signal disconnected below never gets to run, so
+			 * xviewer_job_load_cb()/xviewer_window_display_image()
+			 * never see this image and never data-ref it. Without
+			 * this, the fully decoded pixel data would stay
+			 * resident forever. Force-release it. This is safe
+			 * even if this image happens to be on-screen already,
+			 * since data-ref/unref only frees when the count
+			 * would drop to zero. */
+			XviewerImage *load_image = XVIEWER_JOB_LOAD (priv->load_job)->image;
+			if (xviewer_image_has_data (load_image, XVIEWER_IMAGE_DATA_IMAGE)) {
+				xviewer_image_data_ref (load_image);
+				xviewer_image_data_unref (load_image);
+			}
+		}
 
 		g_signal_handlers_disconnect_by_func (priv->load_job,
 						      xviewer_job_progress_cb,
