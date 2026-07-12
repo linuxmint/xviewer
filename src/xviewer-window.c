@@ -931,6 +931,13 @@ xviewer_window_display_image (XviewerWindow *window, XviewerImage *image)
 	priv = window->priv;
 
 	if (image != NULL) {
+		g_signal_handlers_disconnect_by_func (image,
+						      image_thumb_changed_cb,
+						      window);
+		g_signal_handlers_disconnect_by_func (image,
+						      image_file_changed_cb,
+						      window);
+
 		g_signal_connect (image,
 				  "thumbnail_changed",
 				  G_CALLBACK (image_thumb_changed_cb),

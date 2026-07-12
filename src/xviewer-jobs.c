@@ -1241,6 +1241,7 @@ xviewer_job_thumbnail_run (XviewerJob *job)
 
 	if (!job_thumbnail->thumbnail) {
 		job->finished = TRUE;
+		g_object_unref (job);
 		return;
 	}
 
