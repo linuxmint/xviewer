@@ -1028,6 +1028,15 @@ xviewer_window_update_openwith_menu (XviewerWindow *window, XviewerImage *image)
 
         if (priv->actions_open_with != NULL) {
               gtk_ui_manager_remove_action_group (priv->ui_mgr, priv->actions_open_with);
+              /* gtk_ui_manager_insert_action_group() below takes its own
+               * reference; removing it only drops that one. The reference
+               * from gtk_action_group_new() (which this struct field has
+               * been implicitly holding) must be released here too,
+               * otherwise every action group -- and every GAppInfo/
+               * GKeyFile-backed action it holds for each installed
+               * "Open With" candidate app -- leaks on every single image
+               * display. */
+              g_object_unref (priv->actions_open_with);
               priv->actions_open_with = NULL;
         }
 
