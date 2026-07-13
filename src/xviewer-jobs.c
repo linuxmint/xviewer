@@ -279,12 +279,16 @@ xviewer_job_cancel (XviewerJob *job)
 	g_object_ref (job);
 
 	/* check if job was cancelled previously */
-	if (job->cancelled)
+	if (job->cancelled) {
+		g_object_unref (job);
 		return;
+	}
 
 	/* check if job finished previously */
-        if (job->finished)
+        if (job->finished) {
+		g_object_unref (job);
 		return;
+	}
 
 	/* show info for debugging */
 	xviewer_debug_message (DEBUG_JOBS,
@@ -566,8 +570,21 @@ xviewer_job_load_run (XviewerJob *job)
 			&job->error);
 
 	/* check if the current job was previously cancelled */
-	if (xviewer_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job)) {
+		/* xviewer_image_load() above may have already finished
+		 * decoding the full image into memory before this
+		 * cancellation was noticed (e.g. small/cached files loading
+		 * faster than the user can browse past them). Since this
+		 * job's "finished" signal is never emitted, the image will
+		 * never be displayed or data-reffed, so its decoded pixel
+		 * data would otherwise leak forever. Force-release it. */
+		if (job_load->data & XVIEWER_IMAGE_DATA_IMAGE) {
+			xviewer_image_data_ref (job_load->image);
+			xviewer_image_data_unref (job_load->image);
+		}
+		g_object_unref (job);
 		return;
+	}
 
 	/* --- enter critical section --- */
 	g_mutex_lock (job->mutex);
@@ -857,8 +874,10 @@ xviewer_job_save_run (XviewerJob *job)
 	}
 
 	/* check if the current job was previously cancelled */
-	if (xviewer_job_is_cancelled (job))
+	if (xviewer_job_is_cancelled (job)) {
+		g_object_unref (job);
 		return;
+	}
 
 	save_job = XVIEWER_JOB_SAVE (job);
 
@@ -1233,6 +1252,7 @@ xviewer_job_thumbnail_run (XviewerJob *job)
 
 	if (!job_thumbnail->thumbnail) {
 		job->finished = TRUE;
+		g_object_unref (job);
 		return;
 	}
 

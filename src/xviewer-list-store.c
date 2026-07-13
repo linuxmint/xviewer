@@ -417,6 +417,7 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 					    -1);
 
 			xviewer_list_store_remove (store, &iter);
+			g_object_unref (image);
 		}
 		break;
 	case G_FILE_MONITOR_EVENT_CREATED:
