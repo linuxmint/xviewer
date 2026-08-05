@@ -727,8 +727,10 @@ xviewer_job_model_run (XviewerJob *job)
 	/* --- enter critical section --- */
 	g_mutex_lock (job->mutex);
 
-	/* create a list store */
-	job_model->store = XVIEWER_LIST_STORE (xviewer_list_store_new ());
+	/* create or reuse the list store */
+	if (job_model->store == NULL) {
+		job_model->store = XVIEWER_LIST_STORE (xviewer_list_store_new ());
+	}
 	xviewer_list_store_add_files (job_model->store, filtered_list);
 
 	/* --- leave critical section --- */
