@@ -602,6 +602,11 @@ update_action_groups_state (XviewerWindow *window)
 	GtkAction *action_fscreen;
 	GtkAction *action_sshow;
 	GtkAction *action_print;
+	GtkAction *action_prev;
+	GtkAction *action_next;
+	GtkAction *action_first;
+	GtkAction *action_last;
+	GtkAction *action_random;
 	gboolean print_disabled = FALSE;
 	gboolean show_image_gallery = FALSE;
 	gint n_images = 0;
@@ -631,12 +636,32 @@ update_action_groups_state (XviewerWindow *window)
 	action_print =
 		gtk_action_group_get_action (priv->actions_image,
 					     "ImagePrint");
+	action_prev =
+		gtk_action_group_get_action (priv->actions_gallery,
+					     "GoPrevious");
+	action_next =
+		gtk_action_group_get_action (priv->actions_gallery,
+					     "GoNext");
+	action_first =
+		gtk_action_group_get_action (priv->actions_gallery,
+					     "GoFirst");
+	action_last =
+		gtk_action_group_get_action (priv->actions_gallery,
+					     "GoLast");
+	action_random =
+		gtk_action_group_get_action (priv->actions_gallery,
+					     "GoRandom");
 
 	g_assert (action_gallery != NULL);
 	g_assert (action_sidebar != NULL);
 	g_assert (action_fscreen != NULL);
 	g_assert (action_sshow != NULL);
 	g_assert (action_print != NULL);
+	g_assert (action_prev != NULL);
+	g_assert (action_next != NULL);
+	g_assert (action_first != NULL);
+	g_assert (action_last != NULL);
+	g_assert (action_random != NULL);
 
 	if (priv->store != NULL) {
 		n_images = xviewer_list_store_length (XVIEWER_LIST_STORE (priv->store));
@@ -651,6 +676,11 @@ update_action_groups_state (XviewerWindow *window)
 
 		gtk_action_set_sensitive (action_fscreen, FALSE);
 		gtk_action_set_sensitive (action_sshow,   FALSE);
+		gtk_action_set_sensitive (action_prev, FALSE);
+		gtk_action_set_sensitive (action_next, FALSE);
+		gtk_action_set_sensitive (action_first, FALSE);
+		gtk_action_set_sensitive (action_last, FALSE);
+		gtk_action_set_sensitive (action_random, FALSE);
 
 		/* If there are no images on model, initialization
  		   stops here. */
@@ -686,6 +716,11 @@ update_action_groups_state (XviewerWindow *window)
 		gtk_action_group_set_sensitive (priv->actions_image,  TRUE);
 
 		gtk_action_set_sensitive (action_fscreen, TRUE);
+		gtk_action_set_sensitive (action_prev, n_images > 1);
+		gtk_action_set_sensitive (action_next, n_images > 1);
+		gtk_action_set_sensitive (action_first, n_images > 1);
+		gtk_action_set_sensitive (action_last, n_images > 1);
+		gtk_action_set_sensitive (action_random, n_images > 1);
 
 		if (n_images == 1) {
 			gtk_action_group_set_sensitive (priv->actions_gallery,
@@ -6288,12 +6323,9 @@ xviewer_job_model_cb (XviewerJobModel *job, gpointer data)
 	window = XVIEWER_WINDOW (data);
 	priv = window->priv;
 
-	if (priv->store != NULL) {
-		g_object_unref (priv->store);
-		priv->store = NULL;
+	if (priv->store == NULL) {
+		priv->store = g_object_ref (job->store);
 	}
-
-	priv->store = g_object_ref (job->store);
 
 	n_images = xviewer_list_store_length (XVIEWER_LIST_STORE (priv->store));
 
@@ -6306,18 +6338,6 @@ xviewer_job_model_cb (XviewerJobModel *job, gpointer data)
 		}
 	}
 #endif
-
-	xviewer_thumb_view_set_model (XVIEWER_THUMB_VIEW (priv->thumbview), priv->store);
-
-	g_signal_connect (G_OBJECT (priv->store),
-			  "row-inserted",
-			  G_CALLBACK (xviewer_window_list_store_image_added),
-			  window);
-
-	g_signal_connect (G_OBJECT (priv->store),
-			  "row-deleted",
-			  G_CALLBACK (xviewer_window_list_store_image_removed),
-			  window);
 
 	if (n_images == 0) {
 		gint n_files;
@@ -6359,6 +6379,8 @@ void
 xviewer_window_open_file_list (XviewerWindow *window, GSList *file_list)
 {
 	XviewerJob *job;
+	XviewerListStore *store;
+	GFile *initial_file = NULL;
 
 	xviewer_debug (DEBUG_WINDOW);
 
@@ -6367,7 +6389,34 @@ xviewer_window_open_file_list (XviewerWindow *window, GSList *file_list)
 	g_slist_foreach (file_list, (GFunc) g_object_ref, NULL);
 	window->priv->file_list = file_list;
 
+	store = XVIEWER_LIST_STORE (xviewer_list_store_new ());
+	window->priv->store = g_object_ref (store);
+
+	if (file_list != NULL) {
+		initial_file = G_FILE (file_list->data);
+		xviewer_list_store_append_file (store, initial_file);
+	}
+
+	xviewer_thumb_view_set_model (XVIEWER_THUMB_VIEW (window->priv->thumbview), store);
+
+	if (xviewer_list_store_length (store) > 0) {
+		GtkTreePath *path = gtk_tree_path_new_from_indices (0, -1);
+		gtk_icon_view_select_path (GTK_ICON_VIEW (window->priv->thumbview), path);
+		gtk_tree_path_free (path);
+	}
+
+	g_signal_connect (G_OBJECT (store),
+			  "row-inserted",
+			  G_CALLBACK (xviewer_window_list_store_image_added),
+			  window);
+
+	g_signal_connect (G_OBJECT (store),
+			  "row-deleted",
+			  G_CALLBACK (xviewer_window_list_store_image_removed),
+			  window);
+
 	job = xviewer_job_model_new (file_list);
+	XVIEWER_JOB_MODEL (job)->store = store;
 
 	g_signal_connect (job,
 			  "finished",
