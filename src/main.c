@@ -41,6 +41,7 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include <malloc.h>
 #include <glib/gi18n.h>
 
 static XviewerStartupFlags flags;
@@ -95,6 +96,17 @@ main (int argc, char **argv)
 {
 	GError *error = NULL;
 	GOptionContext *ctx;
+
+	/* Pin the mmap threshold so that large image buffers (which are
+	 * typically several MB and can vary a lot in size while browsing)
+	 * always go through mmap/munmap, guaranteeing their memory is
+	 * released back to the OS immediately on free. Without this,
+	 * glibc's malloc can grow its heap arena to fit a peak allocation
+	 * and never shrink it back, causing RSS to climb and plateau at
+	 * high-water marks that never come back down while browsing many
+	 * large images in succession. */
+	mallopt (M_MMAP_THRESHOLD, 128 * 1024);
+	mallopt (M_MMAP_MAX, 65536);
 
 	bindtextdomain (GETTEXT_PACKAGE, XVIEWER_LOCALE_DIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");

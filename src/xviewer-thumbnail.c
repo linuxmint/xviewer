@@ -494,6 +494,7 @@ xviewer_thumbnail_load (XviewerImage *image, GError **error)
 	    (data->failed_thumb_exists && gnome_desktop_thumbnail_factory_has_valid_failed_thumbnail (factory, data->uri_str, data->mtime))) {
 		xviewer_debug_message (DEBUG_THUMBNAIL, "%s: bad permissions or valid failed thumbnail present",data->uri_str);
 		set_thumb_error (error, XVIEWER_THUMB_ERROR_GENERIC, "Thumbnail creation failed");
+		xviewer_thumb_data_free (data);
 		return NULL;
 	}
 
