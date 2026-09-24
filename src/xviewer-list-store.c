@@ -375,84 +375,37 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 			 GFileMonitorEvent event,
 			 XviewerListStore *store)
 {
-	const char *mimetype;
-	GFileInfo *file_info;
-	GtkTreeIter iter;
-	XviewerImage *image;
+	if (event == G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT)
+	{
+		const char *mimetype;
+		GFileInfo *file_info;
+		GtkTreeIter iter;
+		XviewerImage *image;
 
-	switch (event) {
-	case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT:
 		file_info = g_file_query_info (file,
 					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
 					       0, NULL, NULL);
 		if (file_info == NULL) {
-			break;
+			return;
 		}
 		mimetype = g_file_info_get_content_type (file_info);
-
-		if (is_file_in_list_store_file (store, file, &iter)) {
-			if (xviewer_image_is_supported_mime_type (mimetype)) {
+		if (xviewer_image_is_supported_mime_type (mimetype)) {
+			gboolean found = is_file_in_list_store_file (store, file, &iter);
+			if (found) {
 				gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-						    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
-						    -1);
+							XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
+							-1);
 				xviewer_image_file_changed (image);
 				g_object_unref (image);
-				xviewer_list_store_thumbnail_refresh (store, &iter);
 			} else {
-				xviewer_list_store_remove (store, &iter);
-			}
-		} else {
-			if (xviewer_image_is_supported_mime_type (mimetype)) {
 				xviewer_list_store_append_image_from_file (store, file);
+				found = is_file_in_list_store_file (store, file, &iter);
 			}
+			
+			if (found)
+				xviewer_list_store_thumbnail_refresh (store, &iter);
 		}
 		g_object_unref (file_info);
-		break;
-	case G_FILE_MONITOR_EVENT_DELETED:
-		if (is_file_in_list_store_file (store, file, &iter)) {
-			XviewerImage *image;
-
-			gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
-					    XVIEWER_LIST_STORE_XVIEWER_IMAGE, &image,
-					    -1);
-
-			xviewer_list_store_remove (store, &iter);
-		}
-		break;
-	case G_FILE_MONITOR_EVENT_CREATED:
-		if (!is_file_in_list_store_file (store, file, NULL)) {
-			file_info = g_file_query_info (file,
-						       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
-						       0, NULL, NULL);
-			if (file_info == NULL) {
-				break;
-			}
-			mimetype = g_file_info_get_content_type (file_info);
-
-			if (xviewer_image_is_supported_mime_type (mimetype)) {
-				xviewer_list_store_append_image_from_file (store, file);
-			}
-			g_object_unref (file_info);
-		}
-		break;
-	case G_FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED:
-		file_info = g_file_query_info (file,
-					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
-					       0, NULL, NULL);
-		if (file_info == NULL) {
-			break;
-		}
-		mimetype = g_file_info_get_content_type (file_info);
-		if (is_file_in_list_store_file (store, file, &iter) &&
-		    xviewer_image_is_supported_mime_type (mimetype)) {
-			xviewer_list_store_thumbnail_refresh (store, &iter);
-		}
-		g_object_unref (file_info);
-		break;
-	case G_FILE_MONITOR_EVENT_PRE_UNMOUNT:
-	case G_FILE_MONITOR_EVENT_UNMOUNTED:
-	case G_FILE_MONITOR_EVENT_MOVED:
-		break;
 	}
 }
 

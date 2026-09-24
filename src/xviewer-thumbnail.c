@@ -192,14 +192,13 @@ xviewer_thumb_data_new (GFile *file, GError **error)
 			data->can_read = g_file_info_get_attribute_boolean (file_info,
 									    G_FILE_ATTRIBUTE_ACCESS_CAN_READ);
 		}
+		g_object_unref (file_info);
 	}
 	else {
 		xviewer_thumb_data_free (data);
 		data = NULL;
 		g_clear_error (&ioerror);
 	}
-
-	g_object_unref (file_info);
 
 	return data;
 }

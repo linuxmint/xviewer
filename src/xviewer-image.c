@@ -647,10 +647,13 @@ xviewer_image_get_file_info (XviewerImage *img,
 		if (mime_type)
 			*mime_type = NULL;
 
-		g_set_error (error,
-			     XVIEWER_IMAGE_ERROR,
-			     XVIEWER_IMAGE_ERROR_VFS,
-			     "Error in getting image file info");
+		if (error && *error == NULL)
+		{
+			g_set_error (error,
+					XVIEWER_IMAGE_ERROR,
+					XVIEWER_IMAGE_ERROR_VFS,
+					"Error in getting image file info");
+		}
 	} else {
 		if (bytes)
 			*bytes = g_file_info_get_size (file_info);
