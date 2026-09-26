@@ -80,6 +80,9 @@ GtkListStore   *xviewer_list_store_new_from_glist 	     (GList *list);
 void            xviewer_list_store_append_image 	     (XviewerListStore *store,
 						      XviewerImage     *image);
 
+void            xviewer_list_store_append_file 	     (XviewerListStore *store,
+						      GFile            *file);
+
 void            xviewer_list_store_add_files 	     (XviewerListStore *store,
 						      GList        *file_list);
 
