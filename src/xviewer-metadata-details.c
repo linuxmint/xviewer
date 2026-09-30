@@ -541,6 +541,77 @@ exif_content_cb (ExifContent *content, gpointer data)
 }
 #endif
 
+static void
+details_model_to_string (GtkTreeModel *model,
+			 GtkTreeIter  *parent,
+			 guint         depth,
+			 GString      *string)
+{
+	GtkTreeIter iter;
+	gboolean valid;
+
+	valid = gtk_tree_model_iter_children (model, &iter, parent);
+
+	while (valid) {
+		gchar *attribute = NULL;
+		gchar *value = NULL;
+		guint i;
+
+		gtk_tree_model_get (model, &iter,
+				    MODEL_COLUMN_ATTRIBUTE, &attribute,
+				    MODEL_COLUMN_VALUE, &value,
+				    -1);
+
+		/* Skip categories which hold no data for this image */
+		if ((value != NULL && *value != '\0') ||
+		    gtk_tree_model_iter_has_child (model, &iter)) {
+			for (i = 0; i < depth; i++)
+				g_string_append_c (string, '\t');
+
+			g_string_append (string,
+					 attribute != NULL ? attribute : "");
+
+			if (value != NULL && *value != '\0') {
+				g_string_append_c (string, '\t');
+				g_string_append (string, value);
+			}
+
+			g_string_append_c (string, '\n');
+
+			details_model_to_string (model, &iter, depth + 1,
+						 string);
+		}
+
+		g_free (attribute);
+		g_free (value);
+
+		valid = gtk_tree_model_iter_next (model, &iter);
+	}
+}
+
+/**
+ * xviewer_metadata_details_get_text:
+ * @details: a #XviewerMetadataDetails
+ *
+ * Builds a plain text representation of the tags currently displayed,
+ * one tag per line, with tag and value separated by a tab.
+ *
+ * Returns: (transfer full): a newly allocated string, free with g_free()
+ **/
+gchar *
+xviewer_metadata_details_get_text (XviewerMetadataDetails *details)
+{
+	GString *string;
+
+	g_return_val_if_fail (XVIEWER_IS_METADATA_DETAILS (details), NULL);
+
+	string = g_string_new (NULL);
+
+	details_model_to_string (details->priv->model, NULL, 0, string);
+
+	return g_string_free (string, FALSE);
+}
+
 GtkWidget *
 xviewer_metadata_details_new (void)
 {
