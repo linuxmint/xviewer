@@ -199,7 +199,7 @@ xviewer_thumb_data_new (GFile *file, GError **error)
 		g_clear_error (&ioerror);
 	}
 
-	g_object_unref (file_info);
+	g_clear_object (&file_info);
 
 	return data;
 }

@@ -6300,6 +6300,23 @@ xviewer_window_list_store_image_removed (GtkTreeModel *tree_model,
                                      gpointer      user_data)
 {
 	XviewerWindow *window = XVIEWER_WINDOW (user_data);
+	XviewerWindowPrivate *priv = window->priv;
+	gint n_images = xviewer_list_store_length (priv->store);
+
+	if (xviewer_thumb_view_get_n_selected (XVIEWER_THUMB_VIEW (priv->thumbview)) == 0
+	    && n_images > 0) {
+		gint pos = MIN (gtk_tree_path_get_indices (path)[0],
+				n_images - 1);
+		XviewerImage *image = xviewer_list_store_get_image_by_pos (priv->store, pos);
+
+		if (image != NULL) {
+			xviewer_thumb_view_set_current_image (XVIEWER_THUMB_VIEW (priv->thumbview),
+							      image, TRUE);
+			g_object_unref (image);
+		}
+	} else if (!n_images) {
+		xviewer_window_clear_load_job (window);
+	}
 
 	update_image_pos (window);
 	update_action_groups_state (window);
