@@ -38,6 +38,7 @@
 #include <glib-object.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 
 #if HAVE_EXEMPI
 #include <exempi/xmp.h>
@@ -67,6 +68,7 @@ struct _XviewerPropertiesDialogPrivate {
 
 	GtkWidget      *notebook;
 	GtkWidget      *close_button;
+	GtkWidget      *copy_button;
 	GtkWidget      *next_button;
 	GtkWidget      *previous_button;
 
@@ -403,6 +405,143 @@ pd_exif_details_activated_cb (GtkExpander *expander,
 #endif
 
 static void
+pd_append_property (GString     *str,
+		    const gchar *name,
+		    const gchar *value)
+{
+	if (value == NULL || *value == '\0')
+		return;
+
+	g_string_append_printf (str, "%s %s\n", name, value);
+}
+
+static void
+pd_append_label_property (GString     *str,
+			  const gchar *name,
+			  GtkWidget   *label)
+{
+	pd_append_property (str, name, gtk_label_get_text (GTK_LABEL (label)));
+}
+
+/* Builds a plain text representation of everything the dialog is
+ * currently displaying for the selected image. */
+static gchar *
+pd_get_properties_text (XviewerPropertiesDialog *prop_dlg)
+{
+	XviewerPropertiesDialogPrivate *priv = prop_dlg->priv;
+	GString *str;
+
+	str = g_string_new (NULL);
+
+	pd_append_label_property (str, _("Name:"), priv->name_label);
+	pd_append_label_property (str, _("Width:"), priv->width_label);
+	pd_append_label_property (str, _("Height:"), priv->height_label);
+	pd_append_label_property (str, _("Type:"), priv->type_label);
+	pd_append_label_property (str, _("Bytes:"), priv->bytes_label);
+	pd_append_property (str, _("Folder:"),
+			    gtk_button_get_label (GTK_BUTTON (priv->folder_button)));
+
+#if HAVE_METADATA
+	/* The metadata labels keep the values of the previously shown image
+	 * when the current one has no metadata at all, so only use them
+	 * while they are actually on display. */
+	if (gtk_widget_get_visible (priv->metadata_box)) {
+		gchar *details;
+
+		g_string_append_c (str, '\n');
+
+#if HAVE_EXIF
+		pd_append_label_property (str, _("Aperture Value:"),
+					  priv->exif_aperture_label);
+		pd_append_label_property (str, _("Exposure Time:"),
+					  priv->exif_exposure_label);
+		pd_append_label_property (str, _("Focal Length:"),
+					  priv->exif_focal_label);
+		pd_append_label_property (str, _("Flash:"),
+					  priv->exif_flash_label);
+		pd_append_label_property (str, _("ISO Speed Rating:"),
+					  priv->exif_iso_label);
+		pd_append_label_property (str, _("Metering Mode:"),
+					  priv->exif_metering_label);
+		pd_append_label_property (str, _("Camera Model:"),
+					  priv->exif_model_label);
+		pd_append_label_property (str, _("Date/Time:"),
+					  priv->exif_date_label);
+#endif
+#if HAVE_EXEMPI
+		pd_append_label_property (str, _("Description:"),
+					  priv->xmp_description_label);
+		pd_append_label_property (str, _("Location:"),
+					  priv->xmp_location_label);
+		pd_append_label_property (str, _("Keywords:"),
+					  priv->xmp_keywords_label);
+		pd_append_label_property (str, _("Author:"),
+					  priv->xmp_creator_label);
+		pd_append_label_property (str, _("Copyright:"),
+					  priv->xmp_rights_label);
+#endif
+
+		details = xviewer_metadata_details_get_text (XVIEWER_METADATA_DETAILS (priv->metadata_details));
+
+		if (details != NULL && *details != '\0') {
+			g_string_append_printf (str, "\n%s\n", _("Details"));
+			g_string_append (str, details);
+		}
+
+		g_free (details);
+	}
+#endif
+
+	return g_string_free (str, FALSE);
+}
+
+static void
+pd_copy_to_clipboard (XviewerPropertiesDialog *prop_dlg)
+{
+	GtkClipboard *clipboard;
+	gchar *text;
+
+	text = pd_get_properties_text (prop_dlg);
+
+	clipboard = gtk_widget_get_clipboard (GTK_WIDGET (prop_dlg),
+					      GDK_SELECTION_CLIPBOARD);
+	gtk_clipboard_set_text (clipboard, text, -1);
+
+	g_free (text);
+}
+
+static void
+pd_copy_button_clicked_cb (GtkButton *button, gpointer data)
+{
+	pd_copy_to_clipboard (XVIEWER_PROPERTIES_DIALOG (data));
+}
+
+static gboolean
+pd_key_press_event_cb (GtkWidget   *widget,
+		       GdkEventKey *event,
+		       gpointer     data)
+{
+	GtkWidget *focus;
+
+	if ((event->state & gtk_accelerator_get_default_mod_mask ()) != GDK_CONTROL_MASK)
+		return FALSE;
+
+	if (event->keyval != GDK_KEY_c && event->keyval != GDK_KEY_C)
+		return FALSE;
+
+	/* Let a label with a selection copy that selection instead */
+	focus = gtk_window_get_focus (GTK_WINDOW (widget));
+
+	if (GTK_IS_LABEL (focus) &&
+	    gtk_label_get_selection_bounds (GTK_LABEL (focus), NULL, NULL))
+		return FALSE;
+
+	pd_copy_to_clipboard (XVIEWER_PROPERTIES_DIALOG (widget));
+
+	return TRUE;
+}
+
+static void
 pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
 {
 	XviewerPropertiesDialogPrivate *priv = XVIEWER_PROPERTIES_DIALOG (data)->priv;
@@ -612,6 +751,9 @@ xviewer_properties_dialog_class_init (XviewerPropertiesDialogClass *klass)
 						     close_button);
 	gtk_widget_class_bind_template_child_private(wklass,
 						     XviewerPropertiesDialog,
+						     copy_button);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     XviewerPropertiesDialog,
 						     thumbnail_image);
 	gtk_widget_class_bind_template_child_private(wklass,
 						     XviewerPropertiesDialog,
@@ -703,6 +845,8 @@ xviewer_properties_dialog_class_init (XviewerPropertiesDialogClass *klass)
 						xviewer_properties_dialog_page_switch);
 	gtk_widget_class_bind_template_callback(wklass,
 						pd_folder_button_clicked_cb);
+	gtk_widget_class_bind_template_callback(wklass,
+						pd_copy_button_clicked_cb);
 
 }
 
@@ -732,6 +876,15 @@ xviewer_properties_dialog_init (XviewerPropertiesDialog *prop_dlg)
 				  "clicked",
 				  G_CALLBACK (gtk_widget_hide_on_delete),
 				  prop_dlg);
+
+	g_signal_connect (prop_dlg,
+			  "key-press-event",
+			  G_CALLBACK (pd_key_press_event_cb),
+			  NULL);
+
+	gtk_widget_set_tooltip_text (GTK_WIDGET (priv->copy_button),
+				     _("Copy the image properties to the "
+				       "clipboard"));
 
 	gtk_widget_set_tooltip_text (GTK_WIDGET (priv->folder_button),
 				     _("Show the folder which contains this "

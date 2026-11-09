@@ -62,6 +62,9 @@ GType               xviewer_metadata_details_get_type    (void) G_GNUC_CONST;
 G_GNUC_INTERNAL
 GtkWidget          *xviewer_metadata_details_new         (void);
 
+G_GNUC_INTERNAL
+gchar              *xviewer_metadata_details_get_text    (XviewerMetadataDetails *details);
+
 #if HAVE_EXIF
 G_GNUC_INTERNAL
 void                xviewer_metadata_details_update      (XviewerMetadataDetails *details,
