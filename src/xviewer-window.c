@@ -1415,6 +1415,9 @@ xviewer_job_load_cb (XviewerJobLoad *job, gpointer data)
 
 		xviewer_window_display_image (window, job->image);
 
+		if (priv->status == XVIEWER_WINDOW_STATUS_INIT)
+			update_action_groups_state (window);
+
 	} else {
 		GtkWidget *message_area;
 
