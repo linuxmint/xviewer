@@ -1580,7 +1580,7 @@ apply_transformation (XviewerWindow *window, XviewerTransform *trans)
 			  G_CALLBACK (xviewer_job_progress_cb),
 			  window);
 
-	xviewer_job_scheduler_add_job (priv->transform_job);
+    xviewer_job_scheduler_add_job_with_priority (priv->transform_job, XVIEWER_JOB_PRIORITY_MEDIUM);
 }
 
 static void
@@ -1648,7 +1648,7 @@ handle_image_selection_changed_cb (XviewerThumbView *thumbview, XviewerWindow *w
 			  "progress",
 			  G_CALLBACK (xviewer_job_progress_cb),
 			  window);
-	xviewer_job_scheduler_add_job (priv->load_job);
+    xviewer_job_scheduler_add_job_with_priority (priv->load_job, XVIEWER_JOB_PRIORITY_MEDIUM);
 
 	str_image = xviewer_image_get_uri_for_display (image);
 
