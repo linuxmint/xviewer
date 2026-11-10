@@ -1,4 +1,4 @@
-project('xviewer', 'c', version : '3.4.17', meson_version : '>= 0.49')
+project('xviewer', 'c', version : '3.4.18', meson_version : '>= 0.49')
 
 version = meson.project_version()
 

@@ -1,3 +1,29 @@
+xviewer (3.4.18) adrien; urgency=medium
+
+  [ Butterfly ]
+  * Update control: Added depends to Recommends for showing heif files (#248)
+  * Update control: Added libjpeg-dev to xviwer-dev depends (#239)
+
+  [ Balló György ]
+  * Update state after opening images (#238)
+
+  [ Michael Webster ]
+  * debian/control: Fix libgdk-pixbuf-2.0 depend
+  * Select the next image when the current one is removed externally
+  * xviewer-window.c: Queue image load and transform jobs ahead of thumbnails.
+
+  [ Alex Burger ]
+  * Fix various memory leaks when navigating files.
+  *  Image Properties: add a Copy button to copy image info to the clipboard (#247)
+
+  [ Matt ]
+  * xviewer-list-store.c: Defer sort until finished loading images.
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 10 Nov 2026 11:57:16 +0000
+
 xviewer (3.4.17) adrien; urgency=medium
 
   [ Michael Webster ]
