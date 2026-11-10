@@ -564,8 +564,8 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 	GFileType file_type;
 	GFile *initial_file = NULL;
 	GtkTreeIter iter;
-	gint sort_id = GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID;
 	gboolean singleton_list = FALSE;
+	gboolean default_sort_after_load = FALSE;
     GList *directory_list = NULL;
     GList *dir_iter;
  
@@ -574,11 +574,11 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 	}
 	if (file_list->next == NULL) {
 		singleton_list = TRUE;
-		sort_id = GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID;
+		default_sort_after_load = TRUE;
 	}
 
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
-					      sort_id,
+					      GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,
 					      GTK_SORT_ASCENDING);
 
 	for (it = file_list; it != NULL; it = it->next) {
@@ -607,13 +607,7 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 		g_object_unref (file_info);
 
 		if (file_type == G_FILE_TYPE_DIRECTORY) {
-			if (sort_id != GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID) {
-				// Given file order isn't conclusive, re-sort in default order.
-				sort_id = GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID;
-				gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
-					  sort_id,
-					  GTK_SORT_ASCENDING);
-			}
+			default_sort_after_load = TRUE;
 			xviewer_list_store_append_directory (store, file, file_type);
 		} else if (file_type == G_FILE_TYPE_REGULAR && singleton_list) {
 
@@ -686,6 +680,12 @@ xviewer_list_store_add_files (XviewerListStore *store, GList *file_list)
 			    g_object_unref (file);
            }
 		}
+	}
+
+	if (default_sort_after_load) {
+		gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
+					      GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,
+					      GTK_SORT_ASCENDING);
 	}
 
 	if (directory_list != NULL)
