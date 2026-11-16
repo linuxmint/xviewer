@@ -21,51 +21,51 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xviewer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2025-04-16 17:14+0100\n"
-"PO-Revision-Date: 2025-12-10 18:45+0000\n"
+"POT-Creation-Date: 2026-11-10 11:56+0000\n"
+"PO-Revision-Date: 2026-11-11 21:06+0000\n"
 "Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:41+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 11:57+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
 "X-Project-Style: gnome\n"
 "Language: eo\n"
 "X-DamnedLies-Scope: partial\n"
 
-#: ../src/resources/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4242
+#: ../src/resources/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4266
 msgid "_View"
 msgstr "_Vido"
 
-#: ../src/resources/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4267
+#: ../src/resources/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4291
 msgid "_Toolbar"
 msgstr "Ilobre_to"
 
-#: ../src/resources/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4270
+#: ../src/resources/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4294
 msgid "_Statusbar"
 msgstr "_Stata breto"
 
-#: ../src/resources/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4273
+#: ../src/resources/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4297
 msgid "_Image Gallery"
 msgstr "B_ildogalerio"
 
-#: ../src/resources/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4276
+#: ../src/resources/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4300
 msgid "Side _Pane"
 msgstr "Flank _panelo"
 
-#: ../src/resources/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4255
+#: ../src/resources/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4279
 msgid "Prefere_nces"
 msgstr "_Agordoj"
 
 #: ../src/resources/xviewer-app-menu.xml.h:7
 #: ../src/resources/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4245
+#: ../src/xviewer-window.c:4269
 msgid "_Help"
 msgstr "_Helpo"
 
-#: ../src/resources/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4261
+#: ../src/resources/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4285
 msgid "_About"
 msgstr "_Pri"
 
@@ -74,7 +74,7 @@ msgid "_Quit"
 msgstr "_Forlasi"
 
 #: ../src/resources/xviewer-image-properties-dialog.ui.h:1
-#: ../src/xviewer-window.c:5383
+#: ../src/xviewer-window.c:5407
 msgid "Image Properties"
 msgstr "Bildatributoj"
 
@@ -87,116 +87,121 @@ msgid "_Next"
 msgstr "_Sekva"
 
 #: ../src/resources/xviewer-image-properties-dialog.ui.h:4
+msgid "C_opy"
+msgstr "K_opii"
+
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:5
 #: ../src/resources/xviewer-preferences-dialog.ui.h:3
-#: ../src/xviewer-window.c:4252
+#: ../src/xviewer-window.c:4276
 msgid "_Close"
 msgstr "_Fermi"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:5
-#: ../src/xviewer-metadata-sidebar.c:497
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:497 ../src/xviewer-properties-dialog.c:436
 msgid "Name:"
 msgstr "Nomo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:6
-#: ../src/xviewer-metadata-sidebar.c:499
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:499 ../src/xviewer-properties-dialog.c:437
 msgid "Width:"
 msgstr "Larĝo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:7
-#: ../src/xviewer-metadata-sidebar.c:501
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:501 ../src/xviewer-properties-dialog.c:438
 msgid "Height:"
 msgstr "Alto:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:8
-#: ../src/xviewer-metadata-sidebar.c:503
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:9
+#: ../src/xviewer-metadata-sidebar.c:503 ../src/xviewer-properties-dialog.c:439
 msgid "Type:"
 msgstr "Tipo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:9
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-properties-dialog.c:440
 msgid "Bytes:"
 msgstr "Bajtoj:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:507
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:507 ../src/xviewer-properties-dialog.c:441
 msgid "Folder:"
 msgstr "Dosierujo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:11
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:12
 #: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "Ĝenerale"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:532
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:532 ../src/xviewer-properties-dialog.c:454
 msgid "Aperture Value:"
 msgstr "Apertura valoro:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:535
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:535 ../src/xviewer-properties-dialog.c:456
 msgid "Exposure Time:"
 msgstr "Ekspona daŭro:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:538
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:538 ../src/xviewer-properties-dialog.c:458
 msgid "Focal Length:"
 msgstr "Interfokusa distanco:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:540
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:540 ../src/xviewer-properties-dialog.c:460
 msgid "Flash:"
 msgstr "Fulmolumo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:544
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:544 ../src/xviewer-properties-dialog.c:462
 msgid "ISO Speed Rating:"
 msgstr "ISO-rapideca pritakso:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:547
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:547 ../src/xviewer-properties-dialog.c:464
 msgid "Metering Mode:"
 msgstr "Mezura reĝimo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:550
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:550 ../src/xviewer-properties-dialog.c:466
 msgid "Camera Model:"
 msgstr "Kameramodelo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:552
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:552 ../src/xviewer-properties-dialog.c:468
 msgid "Date/Time:"
 msgstr "Dato/tempo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:557
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:557 ../src/xviewer-properties-dialog.c:472
 msgid "Description:"
 msgstr "Priskribo:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:560
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:560 ../src/xviewer-properties-dialog.c:474
 msgid "Location:"
 msgstr "Loko:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:563
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:563 ../src/xviewer-properties-dialog.c:476
 msgid "Keywords:"
 msgstr "Ŝlosilvortoj:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:565
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:565 ../src/xviewer-properties-dialog.c:478
 msgid "Author:"
 msgstr "Aŭtoro:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:568
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:568 ../src/xviewer-properties-dialog.c:480
 msgid "Copyright:"
 msgstr "Kopirajto:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:571
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:571 ../src/xviewer-properties-dialog.c:487
 msgid "Details"
 msgstr "Detaloj"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:26
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:27
 #: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "Metadatumoj"
@@ -209,8 +214,8 @@ msgstr "Konservi kiel"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3472 ../src/xviewer-window.c:3476
-#: ../src/xviewer-window.c:3743
+#: ../src/xviewer-window.c:3496 ../src/xviewer-window.c:3500
+#: ../src/xviewer-window.c:3767
 msgid "_Cancel"
 msgstr "_Nuligi"
 
@@ -427,7 +432,7 @@ msgid "Close _without Saving"
 msgstr "_Fermi sen konservo"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4282
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4306
 msgid "_Save"
 msgstr "Kon_servi"
 
@@ -464,11 +469,11 @@ msgid "If you don't save, all your changes will be lost."
 msgstr "Se vi ne konservas, ĉiuj viaj ŝanĝoj perdiĝos."
 
 #: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:885
-#: ../src/xviewer-window.c:4342
+#: ../src/xviewer-window.c:4366
 msgid "_Reload"
 msgstr "_Reŝargi"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4288
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4312
 msgid "Save _As…"
 msgstr "Konservi _kiel…"
 
@@ -612,8 +617,8 @@ msgstr "Subtenataj bildodosieroj"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
-#: ../src/xviewer-metadata-sidebar.c:238 ../src/xviewer-properties-dialog.c:139
-#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+#: ../src/xviewer-metadata-sidebar.c:238 ../src/xviewer-properties-dialog.c:141
+#: ../src/xviewer-properties-dialog.c:143 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "bildero"
@@ -645,27 +650,27 @@ msgstr "Transformo sur malŝargita bildo."
 msgid "Transformation failed."
 msgstr "Transformo malsukcesis."
 
-#: ../src/xviewer-image.c:1216
+#: ../src/xviewer-image.c:1208
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF ne  subtenata por ĉi tiu dosierformo."
 
-#: ../src/xviewer-image.c:1365
+#: ../src/xviewer-image.c:1359
 #, c-format
 msgid "Image loading failed."
 msgstr "Malsukcesis ŝargi bildon."
 
-#: ../src/xviewer-image.c:1946 ../src/xviewer-image.c:2066
+#: ../src/xviewer-image.c:1940 ../src/xviewer-image.c:2060
 #, c-format
 msgid "No image loaded."
 msgstr "Neniu bildo ŝargita."
 
-#: ../src/xviewer-image.c:1954 ../src/xviewer-image.c:2075
+#: ../src/xviewer-image.c:1948 ../src/xviewer-image.c:2069
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "Vi ne havas la permesojn necesajn por konservi la dosieron."
 
-#: ../src/xviewer-image.c:1964 ../src/xviewer-image.c:2086
+#: ../src/xviewer-image.c:1958 ../src/xviewer-image.c:2080
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Malsukcesis krei provizoran dosieron."
@@ -680,7 +685,7 @@ msgstr "Ne eblas krei provizoran dosieron por konservi: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ne eblas asigni memoron por ŝargi JPEG-dosieron"
 
-#: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:156
+#: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:158
 msgid "Unknown"
 msgstr "Nekonate"
 
@@ -688,8 +693,8 @@ msgstr "Nekonate"
 msgid "File size:"
 msgstr "Dosiergrando:"
 
-#: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4292
+#: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:890
+#: ../src/xviewer-window.c:4316
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 "Montri la dosierujon, kiu enhavas ĉi tiun dosieron, en la dosiermastrumilo"
@@ -793,6 +798,10 @@ msgstr "Coloj"
 msgid "Preview"
 msgstr "Antaŭrigardo"
 
+#: ../src/xviewer-properties-dialog.c:886
+msgid "Copy the image properties to the clipboard"
+msgstr "Kopii la bildajn atributojn tondujen"
+
 #: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "kiel estas"
@@ -842,7 +851,7 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i x %i bildero  %s    %i%%"
 msgstr[1] "%i × %i bilderoj  %s    %i%%"
 
-#: ../src/xviewer-window.c:887 ../src/xviewer-window.c:2888
+#: ../src/xviewer-window.c:887 ../src/xviewer-window.c:2912
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "K_aŝi"
@@ -858,7 +867,7 @@ msgstr ""
 "La bildo \"%s\" estas modifita de ekstera aplikaĵo.\n"
 "Ĉu vi volas reŝargi ĝin?"
 
-#: ../src/xviewer-window.c:1074
+#: ../src/xviewer-window.c:1078
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Uzu \"%s\" por malfermi la elektitan bildon"
@@ -868,22 +877,22 @@ msgstr "Uzu \"%s\" por malfermi la elektitan bildon"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1230
+#: ../src/xviewer-window.c:1251
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Konservo de bildo \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1631
+#: ../src/xviewer-window.c:1655
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Malfermo de bildo \"%s\""
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2217
+#: ../src/xviewer-window.c:2241
 msgid "Viewing a slideshow"
 msgstr "Vidado de lumbildoprezento"
 
-#: ../src/xviewer-window.c:2463
+#: ../src/xviewer-window.c:2487
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -892,19 +901,19 @@ msgstr ""
 "Eraro ĉe preso de dosiero:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2816 ../src/xviewer-window.c:2831
+#: ../src/xviewer-window.c:2840 ../src/xviewer-window.c:2855
 msgid "Error launching System Settings: "
 msgstr "Eraro ĉe lanĉo de Sistemagordoj: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2886
+#: ../src/xviewer-window.c:2910
 msgid "_Open Background Preferences"
 msgstr "_Malfermi fonajn agordojn"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2902
+#: ../src/xviewer-window.c:2926
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -913,11 +922,11 @@ msgstr ""
 "La bildo \"%s\" estas agordita kiel labortabla fono.\n"
 "Ĉu vi volas modifi ĝian aspekton?"
 
-#: ../src/xviewer-window.c:3369
+#: ../src/xviewer-window.c:3393
 msgid "Saving image locally…"
 msgstr "Konservo de bildo loke…"
 
-#: ../src/xviewer-window.c:3448
+#: ../src/xviewer-window.c:3472
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -926,7 +935,7 @@ msgstr ""
 "Ĉu vi certas, ke vi volas forigi\n"
 "\"%s\" porĉiame?"
 
-#: ../src/xviewer-window.c:3451
+#: ../src/xviewer-window.c:3475
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -941,41 +950,41 @@ msgstr[1] ""
 "Ĉu vi certas, ke vi volas forigi\n"
 "la %d elektitajn bildojn porĉiame?"
 
-#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3754
+#: ../src/xviewer-window.c:3497 ../src/xviewer-window.c:3778
 msgid "_Delete"
 msgstr "_Forigi"
 
-#: ../src/xviewer-window.c:3477 ../src/xviewer-window.c:3756
+#: ../src/xviewer-window.c:3501 ../src/xviewer-window.c:3780
 msgid "_Yes"
 msgstr "_Jes"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3482 ../src/xviewer-window.c:3748
+#: ../src/xviewer-window.c:3506 ../src/xviewer-window.c:3772
 msgid "Do _not ask again during this session"
 msgstr "_Ne demandi denove dum ĉi tiu seanco"
 
-#: ../src/xviewer-window.c:3527
+#: ../src/xviewer-window.c:3551
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "Ne eblas ricevi bildodosieron"
 
-#: ../src/xviewer-window.c:3543
+#: ../src/xviewer-window.c:3567
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "Ne eblas ricevi bildodosieran informon"
 
-#: ../src/xviewer-window.c:3559 ../src/xviewer-window.c:3815
+#: ../src/xviewer-window.c:3583 ../src/xviewer-window.c:3839
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Ne eblas forigi dosieron"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3609 ../src/xviewer-window.c:3911
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:3935
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Eraro ĉe forigo de bildo %s"
 
-#: ../src/xviewer-window.c:3716
+#: ../src/xviewer-window.c:3740
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -984,7 +993,7 @@ msgstr ""
 "Ĉu vi certas, ke vi volas movi\n"
 "\"%s\" rubujen?"
 
-#: ../src/xviewer-window.c:3719
+#: ../src/xviewer-window.c:3743
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -993,7 +1002,7 @@ msgstr ""
 "Rubujon por \"%s\" ne eblas trovi. Ĉu vi volas forigi ĉi tiun bildon "
 "porĉiame?"
 
-#: ../src/xviewer-window.c:3724
+#: ../src/xviewer-window.c:3748
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1008,7 +1017,7 @@ msgstr[1] ""
 "Ĉu vi certas, ke vi volas movi\n"
 "la %d elektitajn bildojn rubujen?"
 
-#: ../src/xviewer-window.c:3729
+#: ../src/xviewer-window.c:3753
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1016,393 +1025,393 @@ msgstr ""
 "Kelkajn el la elektitaj bildoj ne eblas movi rubujen kaj ili estos forigitaj "
 "porĉiame. Ĉu vi certas, ke vi volas daŭrigi?"
 
-#: ../src/xviewer-window.c:3746 ../src/xviewer-window.c:4318
-#: ../src/xviewer-window.c:4357
+#: ../src/xviewer-window.c:3770 ../src/xviewer-window.c:4342
+#: ../src/xviewer-window.c:4381
 msgid "Move to _Trash"
 msgstr "Movi _rubujen"
 
-#: ../src/xviewer-window.c:3793 ../src/xviewer-window.c:3807
+#: ../src/xviewer-window.c:3817 ../src/xviewer-window.c:3831
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Ne eblas atingi rubujon."
 
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4264
 msgid "_File"
 msgstr "_Dosiero"
 
-#: ../src/xviewer-window.c:4241
+#: ../src/xviewer-window.c:4265
 msgid "_Edit"
 msgstr "R_edakti"
 
-#: ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4267
 msgid "_Go"
 msgstr "_Iri al"
 
-#: ../src/xviewer-window.c:4244
+#: ../src/xviewer-window.c:4268
 msgid "_Tools"
 msgstr "_Iloj"
 
-#: ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4270
 msgid "_Favorites"
 msgstr "_Plej ŝatataj"
 
-#: ../src/xviewer-window.c:4247
+#: ../src/xviewer-window.c:4271
 msgid "_Recents"
 msgstr "_Lastaj"
 
-#: ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:4273
 msgid "_Open…"
 msgstr "_Malfermi…"
 
-#: ../src/xviewer-window.c:4250
+#: ../src/xviewer-window.c:4274
 msgid "Open a file"
 msgstr "Malfermi dosieron"
 
-#: ../src/xviewer-window.c:4253
+#: ../src/xviewer-window.c:4277
 msgid "Close window"
 msgstr "Fermi fenestron"
 
-#: ../src/xviewer-window.c:4256
+#: ../src/xviewer-window.c:4280
 msgid "Preferences for Image Viewer"
 msgstr "Agordoj de Bildomontrilo"
 
-#: ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4282
 msgid "_Contents"
 msgstr "_Enhavo"
 
-#: ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4283
 msgid "Help on this application"
 msgstr "Helpo pri ĉi tiu aplikaĵo"
 
-#: ../src/xviewer-window.c:4262
+#: ../src/xviewer-window.c:4286
 msgid "About this application"
 msgstr "Pri ĉi tiu aplikaĵo"
 
-#: ../src/xviewer-window.c:4268
+#: ../src/xviewer-window.c:4292
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Ŝanĝas la videblon de la ilobreto en la nuna fenestro"
 
-#: ../src/xviewer-window.c:4271
+#: ../src/xviewer-window.c:4295
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Ŝanĝas la videblon de la stata breto en la nuna fenestro"
 
-#: ../src/xviewer-window.c:4274
+#: ../src/xviewer-window.c:4298
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "Ŝanĝas la videblon de la bildogaleria panelo en la nuna fenestro"
 
-#: ../src/xviewer-window.c:4277
+#: ../src/xviewer-window.c:4301
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Ŝanĝas la videblon de la flankpanelo en la nuna fenestro"
 
-#: ../src/xviewer-window.c:4283
+#: ../src/xviewer-window.c:4307
 msgid "Save changes in currently selected images"
 msgstr "Konservi ŝanĝojn en nun elektitaj bildoj"
 
-#: ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4309
 msgid "Open _with"
 msgstr "Malfermi _per"
 
-#: ../src/xviewer-window.c:4286
+#: ../src/xviewer-window.c:4310
 msgid "Open the selected image with a different application"
 msgstr "Malfermi la elektitan bildon per malsama aplikaĵo"
 
-#: ../src/xviewer-window.c:4289
+#: ../src/xviewer-window.c:4313
 msgid "Save the selected images with a different name"
 msgstr "Konservi la elektitan bildon kun malsama nomo"
 
-#: ../src/xviewer-window.c:4291
+#: ../src/xviewer-window.c:4315
 msgid "Show Containing _Folder"
 msgstr "Montri enhavantan _dosierujon"
 
-#: ../src/xviewer-window.c:4294
+#: ../src/xviewer-window.c:4318
 msgid "_Print…"
 msgstr "_Presi…"
 
-#: ../src/xviewer-window.c:4295
+#: ../src/xviewer-window.c:4319
 msgid "Print the selected image"
 msgstr "Presi la elektitan bildon"
 
-#: ../src/xviewer-window.c:4297
+#: ../src/xviewer-window.c:4321
 msgid "Prope_rties"
 msgstr "At_ributoj"
 
-#: ../src/xviewer-window.c:4298
+#: ../src/xviewer-window.c:4322
 msgid "Show the properties and metadata of the selected image"
 msgstr "Montri la atributojn kaj metadatumojn de la elektita bildo"
 
-#: ../src/xviewer-window.c:4300
+#: ../src/xviewer-window.c:4324
 msgid "_Undo"
 msgstr "_Malfari"
 
-#: ../src/xviewer-window.c:4301
+#: ../src/xviewer-window.c:4325
 msgid "Undo the last change in the image"
 msgstr "Malfari la lastan ŝanĝon en la bildo"
 
-#: ../src/xviewer-window.c:4303
+#: ../src/xviewer-window.c:4327
 msgid "Flip _Horizontal"
 msgstr "Inversigi _horizontale"
 
-#: ../src/xviewer-window.c:4304
+#: ../src/xviewer-window.c:4328
 msgid "Mirror the image horizontally"
 msgstr "Speguli la bildon horizontale"
 
-#: ../src/xviewer-window.c:4306
+#: ../src/xviewer-window.c:4330
 msgid "Flip _Vertical"
 msgstr "Inversigi _vertikale"
 
-#: ../src/xviewer-window.c:4307
+#: ../src/xviewer-window.c:4331
 msgid "Mirror the image vertically"
 msgstr "Speguli la bildon vertikale"
 
-#: ../src/xviewer-window.c:4309
+#: ../src/xviewer-window.c:4333
 msgid "_Rotate Clockwise"
 msgstr "Tu_rni dekstrume"
 
-#: ../src/xviewer-window.c:4310
+#: ../src/xviewer-window.c:4334
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Turni la bildon je 90 gradoj dekstrume"
 
-#: ../src/xviewer-window.c:4312
+#: ../src/xviewer-window.c:4336
 msgid "Rotate Counterc_lockwise"
 msgstr "Turni maldekstrume"
 
-#: ../src/xviewer-window.c:4313
+#: ../src/xviewer-window.c:4337
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Turni la bildon je 90 gradoj maldekstrume"
 
-#: ../src/xviewer-window.c:4315
+#: ../src/xviewer-window.c:4339
 msgid "Set as Wa_llpaper"
 msgstr "Agordi kiel _ekranfono"
 
-#: ../src/xviewer-window.c:4316
+#: ../src/xviewer-window.c:4340
 msgid "Set the selected image as the wallpaper"
 msgstr "Agordi la elektitan bildon kiel la ekranfonon"
 
-#: ../src/xviewer-window.c:4319
+#: ../src/xviewer-window.c:4343
 msgid "Move the selected image to the trash folder"
 msgstr "Movi la elektitan bildon rubujen"
 
-#: ../src/xviewer-window.c:4321
+#: ../src/xviewer-window.c:4345
 msgid "_Delete Image"
 msgstr "_Forigi bildon"
 
-#: ../src/xviewer-window.c:4322
+#: ../src/xviewer-window.c:4346
 msgid "Delete the selected image"
 msgstr "Forigi la elektitan bildon"
 
-#: ../src/xviewer-window.c:4324
+#: ../src/xviewer-window.c:4348
 msgid "_Copy"
 msgstr "_Kopii"
 
-#: ../src/xviewer-window.c:4325
+#: ../src/xviewer-window.c:4349
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopii la elektitan bildon tondujen"
 
-#: ../src/xviewer-window.c:4327 ../src/xviewer-window.c:4345
-#: ../src/xviewer-window.c:4348
+#: ../src/xviewer-window.c:4351 ../src/xviewer-window.c:4369
+#: ../src/xviewer-window.c:4372
 msgid "_Zoom In"
 msgstr "_Zomi"
 
-#: ../src/xviewer-window.c:4328 ../src/xviewer-window.c:4346
+#: ../src/xviewer-window.c:4352 ../src/xviewer-window.c:4370
 msgid "Enlarge the image"
 msgstr "Pligrandigi la bildon"
 
-#: ../src/xviewer-window.c:4330 ../src/xviewer-window.c:4351
+#: ../src/xviewer-window.c:4354 ../src/xviewer-window.c:4375
 msgid "Zoom _Out"
 msgstr "Malz_omi"
 
-#: ../src/xviewer-window.c:4331 ../src/xviewer-window.c:4349
-#: ../src/xviewer-window.c:4352
+#: ../src/xviewer-window.c:4355 ../src/xviewer-window.c:4373
+#: ../src/xviewer-window.c:4376
 msgid "Shrink the image"
 msgstr "Plietigi la bildon"
 
-#: ../src/xviewer-window.c:4333 ../src/xviewer-window.c:4354
+#: ../src/xviewer-window.c:4357 ../src/xviewer-window.c:4378
 msgid "_Normal Size"
 msgstr "_Normala grando"
 
-#: ../src/xviewer-window.c:4334 ../src/xviewer-window.c:4355
+#: ../src/xviewer-window.c:4358 ../src/xviewer-window.c:4379
 msgid "Show the image at its normal size"
 msgstr "Montri la bildon kun normala grando"
 
-#: ../src/xviewer-window.c:4336
+#: ../src/xviewer-window.c:4360
 msgid "Fit to _Height"
 msgstr "Adapti al _Alto"
 
-#: ../src/xviewer-window.c:4337
+#: ../src/xviewer-window.c:4361
 msgid "Fit to height"
 msgstr "Adapti al alto"
 
-#: ../src/xviewer-window.c:4339
+#: ../src/xviewer-window.c:4363
 msgid "Fit to _Width"
 msgstr "Adapti al _Larĝo"
 
-#: ../src/xviewer-window.c:4340
+#: ../src/xviewer-window.c:4364
 msgid "Fit to width"
 msgstr "Adapti al larĝo"
 
-#: ../src/xviewer-window.c:4343
+#: ../src/xviewer-window.c:4367
 msgid "Reload the image"
 msgstr "Reŝargi la bildon"
 
-#: ../src/xviewer-window.c:4363
+#: ../src/xviewer-window.c:4387
 msgid "_Fullscreen"
 msgstr "_Tutekrane"
 
-#: ../src/xviewer-window.c:4364
+#: ../src/xviewer-window.c:4388
 msgid "Show the current image in fullscreen mode"
 msgstr "Montri la nunan bildon tutekrane"
 
-#: ../src/xviewer-window.c:4366
+#: ../src/xviewer-window.c:4390
 msgid "Pause Slideshow"
 msgstr "Paŭzigi lumbildoprezenton"
 
-#: ../src/xviewer-window.c:4367
+#: ../src/xviewer-window.c:4391
 msgid "Pause or resume the slideshow"
 msgstr "Paŭzigi aŭ daŭrigi la lumbildoprezenton"
 
-#: ../src/xviewer-window.c:4369
+#: ../src/xviewer-window.c:4393
 msgid "_Best Fit"
 msgstr "_Plej bona konveno"
 
-#: ../src/xviewer-window.c:4370
+#: ../src/xviewer-window.c:4394
 msgid "Fit the image to the window"
 msgstr "Adapti la bildon al la fenestro"
 
-#: ../src/xviewer-window.c:4375 ../src/xviewer-window.c:4390
+#: ../src/xviewer-window.c:4399 ../src/xviewer-window.c:4414
 msgid "_Previous Image"
 msgstr "_Antaŭa bildo"
 
-#: ../src/xviewer-window.c:4376
+#: ../src/xviewer-window.c:4400
 msgid "Go to the previous image of the gallery"
 msgstr "Iri al la antaŭa bildo de la galerio"
 
-#: ../src/xviewer-window.c:4378
+#: ../src/xviewer-window.c:4402
 msgid "_Next Image"
 msgstr "_Sekva bildo"
 
-#: ../src/xviewer-window.c:4379
+#: ../src/xviewer-window.c:4403
 msgid "Go to the next image of the gallery"
 msgstr "Iri al la sekva bildo de la galerio"
 
-#: ../src/xviewer-window.c:4381 ../src/xviewer-window.c:4393
+#: ../src/xviewer-window.c:4405 ../src/xviewer-window.c:4417
 msgid "_First Image"
 msgstr "_Unua bildo"
 
-#: ../src/xviewer-window.c:4382
+#: ../src/xviewer-window.c:4406
 msgid "Go to the first image of the gallery"
 msgstr "Iri al la unua bildo de la galerio"
 
-#: ../src/xviewer-window.c:4384 ../src/xviewer-window.c:4396
+#: ../src/xviewer-window.c:4408 ../src/xviewer-window.c:4420
 msgid "_Last Image"
 msgstr "_Lasta bildo"
 
-#: ../src/xviewer-window.c:4385
+#: ../src/xviewer-window.c:4409
 msgid "Go to the last image of the gallery"
 msgstr "Iri al la lasta bildo de la galerio"
 
-#: ../src/xviewer-window.c:4387
+#: ../src/xviewer-window.c:4411
 msgid "_Random Image"
 msgstr "_Hazarda bildo"
 
-#: ../src/xviewer-window.c:4388
+#: ../src/xviewer-window.c:4412
 msgid "Go to a random image of the gallery"
 msgstr "Iri al hazarda bildo de la galerio"
 
-#: ../src/xviewer-window.c:4546
+#: ../src/xviewer-window.c:4570
 msgid "S_lideshow"
 msgstr "_Lumbildoprezento"
 
-#: ../src/xviewer-window.c:4547
+#: ../src/xviewer-window.c:4571
 msgid "Start a slideshow view of the images"
 msgstr "Lanĉi lumbildoprezenton de la bildoj"
 
-#: ../src/xviewer-window.c:4619
+#: ../src/xviewer-window.c:4643
 msgid "Previous"
 msgstr "Antaŭa"
 
-#: ../src/xviewer-window.c:4624
+#: ../src/xviewer-window.c:4648
 msgid "Next"
 msgstr "Sekva"
 
-#: ../src/xviewer-window.c:4631
+#: ../src/xviewer-window.c:4655
 msgid "Right"
 msgstr "Dekstre"
 
-#: ../src/xviewer-window.c:4634
+#: ../src/xviewer-window.c:4658
 msgid "Left"
 msgstr "Maldekstre"
 
-#: ../src/xviewer-window.c:4637
+#: ../src/xviewer-window.c:4661
 msgid "Show Folder"
 msgstr "Montri dosierujon"
 
-#: ../src/xviewer-window.c:4640
+#: ../src/xviewer-window.c:4664
 msgid "Out"
 msgstr "El"
 
-#: ../src/xviewer-window.c:4643
+#: ../src/xviewer-window.c:4667
 msgid "In"
 msgstr "En"
 
-#: ../src/xviewer-window.c:4646
+#: ../src/xviewer-window.c:4670
 msgid "Normal"
 msgstr "Normale"
 
-#: ../src/xviewer-window.c:4649
+#: ../src/xviewer-window.c:4673
 msgid "Height"
 msgstr "Alto"
 
-#: ../src/xviewer-window.c:4652
+#: ../src/xviewer-window.c:4676
 msgid "Width"
 msgstr "Larĝo"
 
-#: ../src/xviewer-window.c:4655
+#: ../src/xviewer-window.c:4679
 msgid "Fit"
 msgstr "Adapti"
 
-#: ../src/xviewer-window.c:4658
+#: ../src/xviewer-window.c:4682
 msgid "Gallery"
 msgstr "Galerio"
 
-#: ../src/xviewer-window.c:4675
+#: ../src/xviewer-window.c:4699
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Meti rubujen"
 
-#: ../src/main.c:63
+#: ../src/main.c:67
 msgid "Open in fullscreen mode"
 msgstr "Malfermi tutekrane"
 
-#: ../src/main.c:64
+#: ../src/main.c:68
 msgid "Disable image gallery"
 msgstr "Malebligi bildogalerion"
 
-#: ../src/main.c:65
+#: ../src/main.c:69
 msgid "Open in slideshow mode"
 msgstr "Malfermi laŭ lumbildoprezenta reĝimo"
 
-#: ../src/main.c:66
+#: ../src/main.c:70
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Lanĉi novan ekzemplon anstataŭ reuzi ekzistantan"
 
-#: ../src/main.c:67
+#: ../src/main.c:71
 msgid ""
 "Open in a single window, if multiple windows are open the first one is used"
 msgstr ""
 "Malfermi en unuopa fenestro. Se pluraj fenestroj estas malfermitaj, la unua "
 "estas uzita"
 
-#: ../src/main.c:69
+#: ../src/main.c:73
 msgid "Show the application's version"
 msgstr "Montri la version de la aplikaĵo"
 
-#: ../src/main.c:99
+#: ../src/main.c:103
 msgid "[FILE…]"
 msgstr "[DOSIERO…]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:112
+#: ../src/main.c:120
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""

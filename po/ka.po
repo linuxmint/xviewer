@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-16 17:14+0100\n"
+"POT-Creation-Date: 2026-11-10 11:56+0000\n"
 "PO-Revision-Date: 2025-12-23 10:15+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <gnome@inet.ge>\n"
@@ -15,41 +15,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:41+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 11:57+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
 "Language: ka\n"
 
-#: ../src/resources/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4242
+#: ../src/resources/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4266
 msgid "_View"
 msgstr "_ხედი"
 
-#: ../src/resources/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4267
+#: ../src/resources/xviewer-app-menu.xml.h:2 ../src/xviewer-window.c:4291
 msgid "_Toolbar"
 msgstr "ხელსაწყოთა _პანელი"
 
-#: ../src/resources/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4270
+#: ../src/resources/xviewer-app-menu.xml.h:3 ../src/xviewer-window.c:4294
 msgid "_Statusbar"
 msgstr "_სტატუსის ზოლი"
 
-#: ../src/resources/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4273
+#: ../src/resources/xviewer-app-menu.xml.h:4 ../src/xviewer-window.c:4297
 msgid "_Image Gallery"
 msgstr "სურათების გალერეა"
 
-#: ../src/resources/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4276
+#: ../src/resources/xviewer-app-menu.xml.h:5 ../src/xviewer-window.c:4300
 msgid "Side _Pane"
 msgstr "გვერდითა _პანელი"
 
-#: ../src/resources/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4255
+#: ../src/resources/xviewer-app-menu.xml.h:6 ../src/xviewer-window.c:4279
 msgid "Prefere_nces"
 msgstr "პა_რამეტრები"
 
 #: ../src/resources/xviewer-app-menu.xml.h:7
 #: ../src/resources/xviewer-preferences-dialog.ui.h:2
-#: ../src/xviewer-window.c:4245
+#: ../src/xviewer-window.c:4269
 msgid "_Help"
 msgstr "_დახმარება"
 
-#: ../src/resources/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4261
+#: ../src/resources/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4285
 msgid "_About"
 msgstr "_შესახებ"
 
@@ -58,7 +58,7 @@ msgid "_Quit"
 msgstr "გასვ_ლა"
 
 #: ../src/resources/xviewer-image-properties-dialog.ui.h:1
-#: ../src/xviewer-window.c:5383
+#: ../src/xviewer-window.c:5407
 msgid "Image Properties"
 msgstr "გამოსახულების თვისებები"
 
@@ -71,116 +71,121 @@ msgid "_Next"
 msgstr "_შემდეგი"
 
 #: ../src/resources/xviewer-image-properties-dialog.ui.h:4
+msgid "C_opy"
+msgstr ""
+
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:5
 #: ../src/resources/xviewer-preferences-dialog.ui.h:3
-#: ../src/xviewer-window.c:4252
+#: ../src/xviewer-window.c:4276
 msgid "_Close"
 msgstr "და_ხურვა"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:5
-#: ../src/xviewer-metadata-sidebar.c:497
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:6
+#: ../src/xviewer-metadata-sidebar.c:497 ../src/xviewer-properties-dialog.c:436
 msgid "Name:"
 msgstr "სახელი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:6
-#: ../src/xviewer-metadata-sidebar.c:499
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:7
+#: ../src/xviewer-metadata-sidebar.c:499 ../src/xviewer-properties-dialog.c:437
 msgid "Width:"
 msgstr "სიგანე:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:7
-#: ../src/xviewer-metadata-sidebar.c:501
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:8
+#: ../src/xviewer-metadata-sidebar.c:501 ../src/xviewer-properties-dialog.c:438
 msgid "Height:"
 msgstr "სიმაღლე:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:8
-#: ../src/xviewer-metadata-sidebar.c:503
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:9
+#: ../src/xviewer-metadata-sidebar.c:503 ../src/xviewer-properties-dialog.c:439
 msgid "Type:"
 msgstr "ტიპი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:9
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:10
+#: ../src/xviewer-properties-dialog.c:440
 msgid "Bytes:"
 msgstr "ბაიტი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:10
-#: ../src/xviewer-metadata-sidebar.c:507
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:11
+#: ../src/xviewer-metadata-sidebar.c:507 ../src/xviewer-properties-dialog.c:441
 msgid "Folder:"
 msgstr "საქაღალდე:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:11
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:12
 #: ../src/xviewer-metadata-sidebar.c:495
 msgid "General"
 msgstr "ზოგადი"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:12
-#: ../src/xviewer-metadata-sidebar.c:532
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:13
+#: ../src/xviewer-metadata-sidebar.c:532 ../src/xviewer-properties-dialog.c:454
 msgid "Aperture Value:"
 msgstr "დიაფრაგმის მნიშვნელობა:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:13
-#: ../src/xviewer-metadata-sidebar.c:535
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:14
+#: ../src/xviewer-metadata-sidebar.c:535 ../src/xviewer-properties-dialog.c:456
 msgid "Exposure Time:"
 msgstr "ექსპოზიციის დრო:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:14
-#: ../src/xviewer-metadata-sidebar.c:538
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:15
+#: ../src/xviewer-metadata-sidebar.c:538 ../src/xviewer-properties-dialog.c:458
 msgid "Focal Length:"
 msgstr "ფოკუსური მანძილი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:15
-#: ../src/xviewer-metadata-sidebar.c:540
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:16
+#: ../src/xviewer-metadata-sidebar.c:540 ../src/xviewer-properties-dialog.c:460
 msgid "Flash:"
 msgstr "განათება:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:16
-#: ../src/xviewer-metadata-sidebar.c:544
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:17
+#: ../src/xviewer-metadata-sidebar.c:544 ../src/xviewer-properties-dialog.c:462
 msgid "ISO Speed Rating:"
 msgstr "ISO სიჩქარის რეიტინგი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:17
-#: ../src/xviewer-metadata-sidebar.c:547
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:18
+#: ../src/xviewer-metadata-sidebar.c:547 ../src/xviewer-properties-dialog.c:464
 msgid "Metering Mode:"
 msgstr "გაზომვის რეჟიმი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:18
-#: ../src/xviewer-metadata-sidebar.c:550
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:19
+#: ../src/xviewer-metadata-sidebar.c:550 ../src/xviewer-properties-dialog.c:466
 msgid "Camera Model:"
 msgstr "კამერის მოდელი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:19
-#: ../src/xviewer-metadata-sidebar.c:552
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:20
+#: ../src/xviewer-metadata-sidebar.c:552 ../src/xviewer-properties-dialog.c:468
 msgid "Date/Time:"
 msgstr "თარიღი & დრო:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:20
-#: ../src/xviewer-metadata-sidebar.c:557
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:21
+#: ../src/xviewer-metadata-sidebar.c:557 ../src/xviewer-properties-dialog.c:472
 msgid "Description:"
 msgstr "აღწერა:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:21
-#: ../src/xviewer-metadata-sidebar.c:560
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:22
+#: ../src/xviewer-metadata-sidebar.c:560 ../src/xviewer-properties-dialog.c:474
 msgid "Location:"
 msgstr "მდებარეობა:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:22
-#: ../src/xviewer-metadata-sidebar.c:563
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:23
+#: ../src/xviewer-metadata-sidebar.c:563 ../src/xviewer-properties-dialog.c:476
 msgid "Keywords:"
 msgstr "საკვანძო სიტყვები:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:23
-#: ../src/xviewer-metadata-sidebar.c:565
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:24
+#: ../src/xviewer-metadata-sidebar.c:565 ../src/xviewer-properties-dialog.c:478
 msgid "Author:"
 msgstr "ავტორი:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:24
-#: ../src/xviewer-metadata-sidebar.c:568
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:25
+#: ../src/xviewer-metadata-sidebar.c:568 ../src/xviewer-properties-dialog.c:480
 msgid "Copyright:"
 msgstr "უფლებები:"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:25
-#: ../src/xviewer-metadata-sidebar.c:571
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:26
+#: ../src/xviewer-metadata-sidebar.c:571 ../src/xviewer-properties-dialog.c:487
 msgid "Details"
 msgstr "დეტალები"
 
-#: ../src/resources/xviewer-image-properties-dialog.ui.h:26
+#: ../src/resources/xviewer-image-properties-dialog.ui.h:27
 #: ../src/xviewer-metadata-sidebar.c:528
 msgid "Metadata"
 msgstr "მეტამონაცემები"
@@ -193,8 +198,8 @@ msgstr "შენახვა, როგორც"
 #: ../src/xviewer-close-confirmation-dialog.c:172
 #: ../src/xviewer-error-message-area.c:119 ../src/xviewer-file-chooser.c:456
 #: ../src/xviewer-file-chooser.c:464 ../src/xviewer-file-chooser.c:472
-#: ../src/xviewer-window.c:3472 ../src/xviewer-window.c:3476
-#: ../src/xviewer-window.c:3743
+#: ../src/xviewer-window.c:3496 ../src/xviewer-window.c:3500
+#: ../src/xviewer-window.c:3767
 msgid "_Cancel"
 msgstr "გაუ_ქმება"
 
@@ -411,7 +416,7 @@ msgid "Close _without Saving"
 msgstr "დახურვა _შენახვის გარეშე"
 
 #: ../src/xviewer-close-confirmation-dialog.c:178
-#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4282
+#: ../src/xviewer-file-chooser.c:465 ../src/xviewer-window.c:4306
 msgid "_Save"
 msgstr "_შენახვა"
 
@@ -445,11 +450,11 @@ msgid "If you don't save, all your changes will be lost."
 msgstr "თუ არ შეინახავთ, ცვლილებები სამუდამოდ დაიკარგება."
 
 #: ../src/xviewer-error-message-area.c:124 ../src/xviewer-window.c:885
-#: ../src/xviewer-window.c:4342
+#: ../src/xviewer-window.c:4366
 msgid "_Reload"
 msgstr "თავიდან ჩატვი_რთვა"
 
-#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4288
+#: ../src/xviewer-error-message-area.c:129 ../src/xviewer-window.c:4312
 msgid "Save _As…"
 msgstr "_შენახვა, როგორც…"
 
@@ -593,8 +598,8 @@ msgstr "გამოსახულების მხარდაჭერი�
 
 #. Pixel size of image: width x height in pixel
 #: ../src/xviewer-file-chooser.c:289 ../src/xviewer-metadata-sidebar.c:234
-#: ../src/xviewer-metadata-sidebar.c:238 ../src/xviewer-properties-dialog.c:139
-#: ../src/xviewer-properties-dialog.c:141 ../src/xviewer-thumb-view.c:516
+#: ../src/xviewer-metadata-sidebar.c:238 ../src/xviewer-properties-dialog.c:141
+#: ../src/xviewer-properties-dialog.c:143 ../src/xviewer-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "პიქსელი"
@@ -625,27 +630,27 @@ msgstr "ჩაუტვირთავი გამოსახულები�
 msgid "Transformation failed."
 msgstr "გარდაქმნის შეცდომა."
 
-#: ../src/xviewer-image.c:1216
+#: ../src/xviewer-image.c:1208
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF-ს ამ ფაილის ფორმატის მხარდაჭერა არ გააჩნია."
 
-#: ../src/xviewer-image.c:1365
+#: ../src/xviewer-image.c:1359
 #, c-format
 msgid "Image loading failed."
 msgstr "გამოსახულების ჩატვირთვის შეცდომა."
 
-#: ../src/xviewer-image.c:1946 ../src/xviewer-image.c:2066
+#: ../src/xviewer-image.c:1940 ../src/xviewer-image.c:2060
 #, c-format
 msgid "No image loaded."
 msgstr "გამოსახულება ჩატვირთული არაა."
 
-#: ../src/xviewer-image.c:1954 ../src/xviewer-image.c:2075
+#: ../src/xviewer-image.c:1948 ../src/xviewer-image.c:2069
 #, c-format
 msgid "You do not have the permissions necessary to save the file."
 msgstr "თქვენ არ გაგაჩნიათ საკმარისი უფლებები ფაილის ჩასაწერად."
 
-#: ../src/xviewer-image.c:1964 ../src/xviewer-image.c:2086
+#: ../src/xviewer-image.c:1958 ../src/xviewer-image.c:2080
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "დროებითი ფაილის შექმნა ჩავარდა."
@@ -660,7 +665,7 @@ msgstr "ვერ შევქმენი დროებითი ფაილ
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ფაილის ჩასატვირთად საჭირო მეხსიერების გამოყოფა შეუძლებელია"
 
-#: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:156
+#: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:158
 msgid "Unknown"
 msgstr "უცნობი"
 
@@ -668,8 +673,8 @@ msgstr "უცნობი"
 msgid "File size:"
 msgstr "ფაილის ზომა:"
 
-#: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:737
-#: ../src/xviewer-window.c:4292
+#: ../src/xviewer-metadata-sidebar.c:521 ../src/xviewer-properties-dialog.c:890
+#: ../src/xviewer-window.c:4316
 msgid "Show the folder which contains this file in the file manager"
 msgstr "ამ ფაილის შემცველი საქაღალდის ფაილების მმართველში გახსნა"
 
@@ -771,6 +776,10 @@ msgstr "დუიმი"
 msgid "Preview"
 msgstr "მინიატურა"
 
+#: ../src/xviewer-properties-dialog.c:886
+msgid "Copy the image properties to the clipboard"
+msgstr ""
+
 #: ../src/xviewer-save-as-dialog-helper.c:162
 msgid "as is"
 msgstr "როგორც არის"
@@ -819,7 +828,7 @@ msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i x %i პიქსელი  %s    %i%%"
 
-#: ../src/xviewer-window.c:887 ../src/xviewer-window.c:2888
+#: ../src/xviewer-window.c:887 ../src/xviewer-window.c:2912
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "დამალვა"
@@ -835,7 +844,7 @@ msgstr ""
 "გამოსახულება \"%s\" შეიცვალა გარე აპლიკაციის მიერ.\n"
 "გნებავთ მისი თავიდან ჩატვირთვა?"
 
-#: ../src/xviewer-window.c:1074
+#: ../src/xviewer-window.c:1078
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "\"%s\"-ის გამოყენება მონიშნული გამოსახულების გასახსნელად"
@@ -845,22 +854,22 @@ msgstr "\"%s\"-ის გამოყენება მონიშნული
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/xviewer-window.c:1230
+#: ../src/xviewer-window.c:1251
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "მიმდინარეობს გამოსახულების შენახვა \"%s\" (%u/%u)"
 
-#: ../src/xviewer-window.c:1631
+#: ../src/xviewer-window.c:1655
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "გამოსახულების გახსნა “%s”"
 
 #. L10N: This the reason why the screensaver is inhibited.
-#: ../src/xviewer-window.c:2217
+#: ../src/xviewer-window.c:2241
 msgid "Viewing a slideshow"
 msgstr "სლაიდშოუ"
 
-#: ../src/xviewer-window.c:2463
+#: ../src/xviewer-window.c:2487
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -869,19 +878,19 @@ msgstr ""
 "ფაილის დაბეჭდვის შეცდომა:\n"
 "%s"
 
-#: ../src/xviewer-window.c:2816 ../src/xviewer-window.c:2831
+#: ../src/xviewer-window.c:2840 ../src/xviewer-window.c:2855
 msgid "Error launching System Settings: "
 msgstr "სისტემური პარამეტრების გაშვების შეცდომა: "
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from xviewer's menubar
-#: ../src/xviewer-window.c:2886
+#: ../src/xviewer-window.c:2910
 msgid "_Open Background Preferences"
 msgstr "ფონის პარამეტრების გახსნა"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/xviewer-window.c:2902
+#: ../src/xviewer-window.c:2926
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -890,11 +899,11 @@ msgstr ""
 "გამოსახულება \"%s\" ფონის სურათად იქნება დაყენებული.\n"
 "გნებავთ მისი გარეგნობის შეცვლა?"
 
-#: ../src/xviewer-window.c:3369
+#: ../src/xviewer-window.c:3393
 msgid "Saving image locally…"
 msgstr "გამოსახულების ლოკალურად შენახვა…"
 
-#: ../src/xviewer-window.c:3448
+#: ../src/xviewer-window.c:3472
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -903,7 +912,7 @@ msgstr ""
 "დარწმუნებული ხარ რომ გნებავთ \n"
 "\"%s\" -ის სამუდამოდ წაშლა?"
 
-#: ../src/xviewer-window.c:3451
+#: ../src/xviewer-window.c:3475
 #, c-format
 msgid ""
 "Are you sure you want to remove\n"
@@ -915,41 +924,41 @@ msgstr[0] ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ \n"
 "\"%d\" გამოსახულების სამუდამოდ წაშლა?"
 
-#: ../src/xviewer-window.c:3473 ../src/xviewer-window.c:3754
+#: ../src/xviewer-window.c:3497 ../src/xviewer-window.c:3778
 msgid "_Delete"
 msgstr "_წაშლა"
 
-#: ../src/xviewer-window.c:3477 ../src/xviewer-window.c:3756
+#: ../src/xviewer-window.c:3501 ../src/xviewer-window.c:3780
 msgid "_Yes"
 msgstr "_დიახ"
 
 #. add 'dont ask again' button
-#: ../src/xviewer-window.c:3482 ../src/xviewer-window.c:3748
+#: ../src/xviewer-window.c:3506 ../src/xviewer-window.c:3772
 msgid "Do _not ask again during this session"
 msgstr "აღარ მკითხო ამ სესიის მიმდინარეობის დროს"
 
-#: ../src/xviewer-window.c:3527
+#: ../src/xviewer-window.c:3551
 #, c-format
 msgid "Couldn't retrieve image file"
 msgstr "გამოსახულების ფაილის მიღება შეუძლებელია"
 
-#: ../src/xviewer-window.c:3543
+#: ../src/xviewer-window.c:3567
 #, c-format
 msgid "Couldn't retrieve image file information"
 msgstr "გამოსახულების ფაილის ინფორმაციის მიღების შეცდომა"
 
-#: ../src/xviewer-window.c:3559 ../src/xviewer-window.c:3815
+#: ../src/xviewer-window.c:3583 ../src/xviewer-window.c:3839
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ფაილის წაშლა შეუძლებელია"
 
 #. set dialog error message
-#: ../src/xviewer-window.c:3609 ../src/xviewer-window.c:3911
+#: ../src/xviewer-window.c:3633 ../src/xviewer-window.c:3935
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "შეცდომა %s გამოსახულების წაშლისას"
 
-#: ../src/xviewer-window.c:3716
+#: ../src/xviewer-window.c:3740
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -958,7 +967,7 @@ msgstr ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ \n"
 "\"%s\" -ის გადატანა ნაგვის ყუთში?"
 
-#: ../src/xviewer-window.c:3719
+#: ../src/xviewer-window.c:3743
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -967,7 +976,7 @@ msgstr ""
 "\"%s\"-ისთვის ნაგვის ყუთის აღმოჩენა შეუძლებელია. გნებავთ ამ გამოსახულების "
 "სამუდამოდ წაშლა?"
 
-#: ../src/xviewer-window.c:3724
+#: ../src/xviewer-window.c:3748
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -979,7 +988,7 @@ msgstr[0] ""
 "დარწმუნებული ხარ რომ გნებავთ \n"
 "\"%d\" მონიშნული სურათის ნაგვის ყუთში გადატანა?"
 
-#: ../src/xviewer-window.c:3729
+#: ../src/xviewer-window.c:3753
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -987,392 +996,392 @@ msgstr ""
 "ზოგიერთი მონიშნული გამოსახულების ნაგვის ყუთში გადატანა შეუძლებელია და ისინი "
 "სამუდამოდ წაიშლება. გნებავთ გაგრძელება?"
 
-#: ../src/xviewer-window.c:3746 ../src/xviewer-window.c:4318
-#: ../src/xviewer-window.c:4357
+#: ../src/xviewer-window.c:3770 ../src/xviewer-window.c:4342
+#: ../src/xviewer-window.c:4381
 msgid "Move to _Trash"
 msgstr "_ნაგვის ყუთში გადატანა"
 
-#: ../src/xviewer-window.c:3793 ../src/xviewer-window.c:3807
+#: ../src/xviewer-window.c:3817 ../src/xviewer-window.c:3831
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ნაგვის ყუთთან წვდომა შეუძლებელია."
 
-#: ../src/xviewer-window.c:4240
+#: ../src/xviewer-window.c:4264
 msgid "_File"
 msgstr "_ფაილი"
 
-#: ../src/xviewer-window.c:4241
+#: ../src/xviewer-window.c:4265
 msgid "_Edit"
 msgstr "_ჩასწორება"
 
-#: ../src/xviewer-window.c:4243
+#: ../src/xviewer-window.c:4267
 msgid "_Go"
 msgstr "_წინ"
 
-#: ../src/xviewer-window.c:4244
+#: ../src/xviewer-window.c:4268
 msgid "_Tools"
 msgstr "_ხელსაწყოები"
 
-#: ../src/xviewer-window.c:4246
+#: ../src/xviewer-window.c:4270
 msgid "_Favorites"
 msgstr "სანიშ_ნეები"
 
-#: ../src/xviewer-window.c:4247
+#: ../src/xviewer-window.c:4271
 msgid "_Recents"
 msgstr "უა_ხლესები"
 
-#: ../src/xviewer-window.c:4249
+#: ../src/xviewer-window.c:4273
 msgid "_Open…"
 msgstr "_გახსნა…"
 
-#: ../src/xviewer-window.c:4250
+#: ../src/xviewer-window.c:4274
 msgid "Open a file"
 msgstr "ფაილის გახსნა"
 
-#: ../src/xviewer-window.c:4253
+#: ../src/xviewer-window.c:4277
 msgid "Close window"
 msgstr "ფანჯრის დახურვა"
 
-#: ../src/xviewer-window.c:4256
+#: ../src/xviewer-window.c:4280
 msgid "Preferences for Image Viewer"
 msgstr "პარამეტრები სურათების დამთვალიერებლისტვის"
 
-#: ../src/xviewer-window.c:4258
+#: ../src/xviewer-window.c:4282
 msgid "_Contents"
 msgstr "შემ_ცველობა"
 
-#: ../src/xviewer-window.c:4259
+#: ../src/xviewer-window.c:4283
 msgid "Help on this application"
 msgstr "პლიკაციის დახმარება"
 
-#: ../src/xviewer-window.c:4262
+#: ../src/xviewer-window.c:4286
 msgid "About this application"
 msgstr "ამ პროგრამის შესახებ"
 
-#: ../src/xviewer-window.c:4268
+#: ../src/xviewer-window.c:4292
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ცვლის ხელსაწყოთა პანელის ხილვადობას მიმდინარე ფანჯარაში"
 
-#: ../src/xviewer-window.c:4271
+#: ../src/xviewer-window.c:4295
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ცვლის სტატუსის პანელის ხილვადობას მიმდინარე ფანჯარაში"
 
-#: ../src/xviewer-window.c:4274
+#: ../src/xviewer-window.c:4298
 msgid ""
 "Changes the visibility of the image gallery pane in the current window"
 msgstr "ცვლის მიმდინარე ფანჯრაში გამოსახულების გალერეის პანელის ხილვადობას"
 
-#: ../src/xviewer-window.c:4277
+#: ../src/xviewer-window.c:4301
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "ცვლის მიმდინარე ფანჯრის გვერდითი პანელის ხილვადობას"
 
-#: ../src/xviewer-window.c:4283
+#: ../src/xviewer-window.c:4307
 msgid "Save changes in currently selected images"
 msgstr "ამჟამად მონიშნული გამოსახულებების ცვლილებების შენახვა"
 
-#: ../src/xviewer-window.c:4285
+#: ../src/xviewer-window.c:4309
 msgid "Open _with"
 msgstr "_გამხსნელი პროგრამა"
 
-#: ../src/xviewer-window.c:4286
+#: ../src/xviewer-window.c:4310
 msgid "Open the selected image with a different application"
 msgstr "მონიშნული გამოსახულების გახსნა სხვა აპლიკაციით"
 
-#: ../src/xviewer-window.c:4289
+#: ../src/xviewer-window.c:4313
 msgid "Save the selected images with a different name"
 msgstr "მონიშნული გამოსახულებების შენახვა სახელით"
 
-#: ../src/xviewer-window.c:4291
+#: ../src/xviewer-window.c:4315
 msgid "Show Containing _Folder"
 msgstr "შემცველი _საქაღალდის გახსნა"
 
-#: ../src/xviewer-window.c:4294
+#: ../src/xviewer-window.c:4318
 msgid "_Print…"
 msgstr "ბეჭდვა…"
 
-#: ../src/xviewer-window.c:4295
+#: ../src/xviewer-window.c:4319
 msgid "Print the selected image"
 msgstr "მონიშნული გამოსახულების დაბეჭდვა"
 
-#: ../src/xviewer-window.c:4297
+#: ../src/xviewer-window.c:4321
 msgid "Prope_rties"
 msgstr "თვისე_ბები"
 
-#: ../src/xviewer-window.c:4298
+#: ../src/xviewer-window.c:4322
 msgid "Show the properties and metadata of the selected image"
 msgstr "მონიშნული გამოსახულების თვისებებისა და მეტამონაცემების ჩვენება"
 
-#: ../src/xviewer-window.c:4300
+#: ../src/xviewer-window.c:4324
 msgid "_Undo"
 msgstr "გა_უქმება"
 
-#: ../src/xviewer-window.c:4301
+#: ../src/xviewer-window.c:4325
 msgid "Undo the last change in the image"
 msgstr "გამოსახულების ბოლო ცვლილების დაბრუნება"
 
-#: ../src/xviewer-window.c:4303
+#: ../src/xviewer-window.c:4327
 msgid "Flip _Horizontal"
 msgstr "_ჰორიზონტალურად გადაბრუნება"
 
-#: ../src/xviewer-window.c:4304
+#: ../src/xviewer-window.c:4328
 msgid "Mirror the image horizontally"
 msgstr "გამოსახულების ჰორიზონტალური ანარეკლი"
 
-#: ../src/xviewer-window.c:4306
+#: ../src/xviewer-window.c:4330
 msgid "Flip _Vertical"
 msgstr "_ვერტიკალურად გადაბრუნება"
 
-#: ../src/xviewer-window.c:4307
+#: ../src/xviewer-window.c:4331
 msgid "Mirror the image vertically"
 msgstr "გამოსახულების ვერტიკალური ანარეკლი"
 
-#: ../src/xviewer-window.c:4309
+#: ../src/xviewer-window.c:4333
 msgid "_Rotate Clockwise"
 msgstr "საათის ისრის _მიმართულებით"
 
-#: ../src/xviewer-window.c:4310
+#: ../src/xviewer-window.c:4334
 msgid "Rotate the image 90 degrees to the right"
 msgstr "გამოსახულების 90°-ით მარჯვნივ შებრუნება"
 
-#: ../src/xviewer-window.c:4312
+#: ../src/xviewer-window.c:4336
 msgid "Rotate Counterc_lockwise"
 msgstr "შებრუნება საათის ისრის საწინააღმდეგო_დ"
 
-#: ../src/xviewer-window.c:4313
+#: ../src/xviewer-window.c:4337
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ნახატის 90°-ით მარცხნივ შებრუნება"
 
-#: ../src/xviewer-window.c:4315
+#: ../src/xviewer-window.c:4339
 msgid "Set as Wa_llpaper"
 msgstr "_ფონად დაყენება"
 
-#: ../src/xviewer-window.c:4316
+#: ../src/xviewer-window.c:4340
 msgid "Set the selected image as the wallpaper"
 msgstr "მონიშნული სურათის ფონად დაყენება"
 
-#: ../src/xviewer-window.c:4319
+#: ../src/xviewer-window.c:4343
 msgid "Move the selected image to the trash folder"
 msgstr "მონიშნული გამოსახულების გადატანა ნაგვის ყუტში"
 
-#: ../src/xviewer-window.c:4321
+#: ../src/xviewer-window.c:4345
 msgid "_Delete Image"
 msgstr "_გამოსახულების წაშლა"
 
-#: ../src/xviewer-window.c:4322
+#: ../src/xviewer-window.c:4346
 msgid "Delete the selected image"
 msgstr "მონიშნული გამოსახულების წაშლა"
 
-#: ../src/xviewer-window.c:4324
+#: ../src/xviewer-window.c:4348
 msgid "_Copy"
 msgstr "_კოპირება"
 
-#: ../src/xviewer-window.c:4325
+#: ../src/xviewer-window.c:4349
 msgid "Copy the selected image to the clipboard"
 msgstr "გამოსახულების კოპირება ბუფერში"
 
-#: ../src/xviewer-window.c:4327 ../src/xviewer-window.c:4345
-#: ../src/xviewer-window.c:4348
+#: ../src/xviewer-window.c:4351 ../src/xviewer-window.c:4369
+#: ../src/xviewer-window.c:4372
 msgid "_Zoom In"
 msgstr "_გადიდება"
 
-#: ../src/xviewer-window.c:4328 ../src/xviewer-window.c:4346
+#: ../src/xviewer-window.c:4352 ../src/xviewer-window.c:4370
 msgid "Enlarge the image"
 msgstr "გამოსახულების გაფართოება"
 
-#: ../src/xviewer-window.c:4330 ../src/xviewer-window.c:4351
+#: ../src/xviewer-window.c:4354 ../src/xviewer-window.c:4375
 msgid "Zoom _Out"
 msgstr "და_პატარავება"
 
-#: ../src/xviewer-window.c:4331 ../src/xviewer-window.c:4349
-#: ../src/xviewer-window.c:4352
+#: ../src/xviewer-window.c:4355 ../src/xviewer-window.c:4373
+#: ../src/xviewer-window.c:4376
 msgid "Shrink the image"
 msgstr "გამოსახულების შემცირება"
 
-#: ../src/xviewer-window.c:4333 ../src/xviewer-window.c:4354
+#: ../src/xviewer-window.c:4357 ../src/xviewer-window.c:4378
 msgid "_Normal Size"
 msgstr "_ნორმალური ზომა"
 
-#: ../src/xviewer-window.c:4334 ../src/xviewer-window.c:4355
+#: ../src/xviewer-window.c:4358 ../src/xviewer-window.c:4379
 msgid "Show the image at its normal size"
 msgstr "გამოსახულების ნორმალური ზომით ჩვენება"
 
-#: ../src/xviewer-window.c:4336
+#: ../src/xviewer-window.c:4360
 msgid "Fit to _Height"
 msgstr "_სიმაღლეში ჩატევა"
 
-#: ../src/xviewer-window.c:4337
+#: ../src/xviewer-window.c:4361
 msgid "Fit to height"
 msgstr "სიმაღლეში ჩატევა"
 
-#: ../src/xviewer-window.c:4339
+#: ../src/xviewer-window.c:4363
 msgid "Fit to _Width"
 msgstr "ს_იგანეში ჩატევა"
 
-#: ../src/xviewer-window.c:4340
+#: ../src/xviewer-window.c:4364
 msgid "Fit to width"
 msgstr "სიგანეში ჩატევა"
 
-#: ../src/xviewer-window.c:4343
+#: ../src/xviewer-window.c:4367
 msgid "Reload the image"
 msgstr "გამოსახულების თავიდან ჩატვირთვა"
 
-#: ../src/xviewer-window.c:4363
+#: ../src/xviewer-window.c:4387
 msgid "_Fullscreen"
 msgstr "სრული ეკრანი"
 
-#: ../src/xviewer-window.c:4364
+#: ../src/xviewer-window.c:4388
 msgid "Show the current image in fullscreen mode"
 msgstr "მიმდინარე გამოსახულების მთელ ეკრანზე გახსნა"
 
-#: ../src/xviewer-window.c:4366
+#: ../src/xviewer-window.c:4390
 msgid "Pause Slideshow"
 msgstr "სლაიდშოუს შეჩერება"
 
-#: ../src/xviewer-window.c:4367
+#: ../src/xviewer-window.c:4391
 msgid "Pause or resume the slideshow"
 msgstr "სლაიდშოუს შეჩერება ან გაგრძელება"
 
-#: ../src/xviewer-window.c:4369
+#: ../src/xviewer-window.c:4393
 msgid "_Best Fit"
 msgstr "საუკეთესოდ _ჩატევა"
 
-#: ../src/xviewer-window.c:4370
+#: ../src/xviewer-window.c:4394
 msgid "Fit the image to the window"
 msgstr "გამოსახულების ფანჯარაში ჩატევა"
 
-#: ../src/xviewer-window.c:4375 ../src/xviewer-window.c:4390
+#: ../src/xviewer-window.c:4399 ../src/xviewer-window.c:4414
 msgid "_Previous Image"
 msgstr "_წინა გამოსახულება"
 
-#: ../src/xviewer-window.c:4376
+#: ../src/xviewer-window.c:4400
 msgid "Go to the previous image of the gallery"
 msgstr "გალერეის წინა გამოსახულებაზე გადასვლა"
 
-#: ../src/xviewer-window.c:4378
+#: ../src/xviewer-window.c:4402
 msgid "_Next Image"
 msgstr "შემდეგი გამოსახულებ_ა"
 
-#: ../src/xviewer-window.c:4379
+#: ../src/xviewer-window.c:4403
 msgid "Go to the next image of the gallery"
 msgstr "გალერეის შემდეგ გამოსახულებაზე გადასვლა"
 
-#: ../src/xviewer-window.c:4381 ../src/xviewer-window.c:4393
+#: ../src/xviewer-window.c:4405 ../src/xviewer-window.c:4417
 msgid "_First Image"
 msgstr "_პირველი გამოსახულება"
 
-#: ../src/xviewer-window.c:4382
+#: ../src/xviewer-window.c:4406
 msgid "Go to the first image of the gallery"
 msgstr "გალერეის პირველ გამოსახულებაზე გადასვლა"
 
-#: ../src/xviewer-window.c:4384 ../src/xviewer-window.c:4396
+#: ../src/xviewer-window.c:4408 ../src/xviewer-window.c:4420
 msgid "_Last Image"
 msgstr "ბო_ლო გამოსახულება"
 
-#: ../src/xviewer-window.c:4385
+#: ../src/xviewer-window.c:4409
 msgid "Go to the last image of the gallery"
 msgstr "გალერეის ბოლო გამოსახულებაზე გადასვლა"
 
-#: ../src/xviewer-window.c:4387
+#: ../src/xviewer-window.c:4411
 msgid "_Random Image"
 msgstr "შემთ_ხვევითი გამოსახულება"
 
-#: ../src/xviewer-window.c:4388
+#: ../src/xviewer-window.c:4412
 msgid "Go to a random image of the gallery"
 msgstr "შემთხვევით გამოსახულებაზე გადასვლა გალერეაში"
 
-#: ../src/xviewer-window.c:4546
+#: ../src/xviewer-window.c:4570
 msgid "S_lideshow"
 msgstr "ს_ლაიდშოუ"
 
-#: ../src/xviewer-window.c:4547
+#: ../src/xviewer-window.c:4571
 msgid "Start a slideshow view of the images"
 msgstr "გამოსახულებების სლაიდშოუს დაწყება"
 
-#: ../src/xviewer-window.c:4619
+#: ../src/xviewer-window.c:4643
 msgid "Previous"
 msgstr "წინა"
 
-#: ../src/xviewer-window.c:4624
+#: ../src/xviewer-window.c:4648
 msgid "Next"
 msgstr "შემდეგი"
 
-#: ../src/xviewer-window.c:4631
+#: ../src/xviewer-window.c:4655
 msgid "Right"
 msgstr "მარჯვენა"
 
-#: ../src/xviewer-window.c:4634
+#: ../src/xviewer-window.c:4658
 msgid "Left"
 msgstr "მარცხენა"
 
-#: ../src/xviewer-window.c:4637
+#: ../src/xviewer-window.c:4661
 msgid "Show Folder"
 msgstr "საქაღალდის ჩვენება"
 
-#: ../src/xviewer-window.c:4640
+#: ../src/xviewer-window.c:4664
 msgid "Out"
 msgstr "გამოტანა"
 
-#: ../src/xviewer-window.c:4643
+#: ../src/xviewer-window.c:4667
 msgid "In"
 msgstr "შეყვანა"
 
-#: ../src/xviewer-window.c:4646
+#: ../src/xviewer-window.c:4670
 msgid "Normal"
 msgstr "ნორმალური"
 
-#: ../src/xviewer-window.c:4649
+#: ../src/xviewer-window.c:4673
 msgid "Height"
 msgstr "სიმაღლე"
 
-#: ../src/xviewer-window.c:4652
+#: ../src/xviewer-window.c:4676
 msgid "Width"
 msgstr "სიგანე"
 
-#: ../src/xviewer-window.c:4655
+#: ../src/xviewer-window.c:4679
 msgid "Fit"
 msgstr "ჩატევა"
 
-#: ../src/xviewer-window.c:4658
+#: ../src/xviewer-window.c:4682
 msgid "Gallery"
 msgstr "გალერეა"
 
-#: ../src/xviewer-window.c:4675
+#: ../src/xviewer-window.c:4699
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ნაგვის ყუთში"
 
-#: ../src/main.c:63
+#: ../src/main.c:67
 msgid "Open in fullscreen mode"
 msgstr "მთელ ეკრანზე გახსნა"
 
-#: ../src/main.c:64
+#: ../src/main.c:68
 msgid "Disable image gallery"
 msgstr "სურათების გალერეის გამორთვა"
 
-#: ../src/main.c:65
+#: ../src/main.c:69
 msgid "Open in slideshow mode"
 msgstr "სლაიდშოუს სახით ჩვენება"
 
-#: ../src/main.c:66
+#: ../src/main.c:70
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "გაშვებული პროგრამის გამოყენების მაგიერ ახალი ფანჯრის გახსნა"
 
-#: ../src/main.c:67
+#: ../src/main.c:71
 msgid ""
 "Open in a single window, if multiple windows are open the first one is used"
 msgstr ""
 "ერთ ფანჯარაში გახსნა. თუ ღიაა ბევრი ფანჯარა, გამოყენებული იქნება პირველი"
 
-#: ../src/main.c:69
+#: ../src/main.c:73
 msgid "Show the application's version"
 msgstr "აპლიკაციის ვერსიის ჩვენება"
 
-#: ../src/main.c:99
+#: ../src/main.c:103
 msgid "[FILE…]"
 msgstr "[ფაილი...]"
 
 #. I18N: The '%s' is replaced with xviewer's command name.
-#: ../src/main.c:112
+#: ../src/main.c:120
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
