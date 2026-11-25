@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-10 11:56+0000\n"
-"PO-Revision-Date: 2026-11-10 15:33+0000\n"
+"PO-Revision-Date: 2026-11-24 09:30+0000\n"
 "Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2026-11-16 11:57+0000\n"
-"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+"X-Launchpad-Export-Date: 2026-11-24 11:58+0000\n"
+"X-Generator: Launchpad (build 012091084314157d19ae714f55ef4c582ff0feb5)\n"
 
 #: ../src/resources/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4266
 msgid "_View"
@@ -289,7 +289,7 @@ msgstr "Rèireplan"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:10
 msgid "As custom color:"
-msgstr "Color personalizada :"
+msgstr "Coma color personalizada :"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:11
 msgid "Background Color"
@@ -317,7 +317,7 @@ msgstr "Coma _rèireplan"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:17
 msgid "Image View"
-msgstr "Afichatge Imatge"
+msgstr "Afichatge de l'imatge"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:18
 msgid "Image Zoom"
@@ -325,7 +325,7 @@ msgstr "Zoom de l'imatge"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:19
 msgid "E_xpand images to fit screen"
-msgstr "Es_pandir los imatges per emplenar l'ecran"
+msgstr "Es_pandir los imatges per s’adapten a l'ecran"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:20
 msgid "Sequence"
@@ -398,7 +398,7 @@ msgstr "Majuscula + Contraròtle + Rodeta"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:38
 msgid "Tilt Wheel"
-msgstr "Ròda inclinabla"
+msgstr "Rodeta inclinabla"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:39
 msgid "Mouse"
@@ -434,7 +434,7 @@ msgstr "S'enregistratz pas, vòstras modificacions seràn perdudas."
 msgid "Save changes to image \"%s\" before closing?"
 msgstr ""
 "Volètz enregistrar las modificacions aportadas a l'imatge « %s » abans de "
-"tampar ?"
+"tampar ?"
 
 #: ../src/xviewer-close-confirmation-dialog.c:652
 #, c-format
@@ -442,11 +442,11 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-"I a %d imatge amb de modificacions pas enregistradas. Volètz enregistrar las "
-"modificacions abans de tampar ?"
+"I a %d imatge amb de modificacions non enregistradas. Volètz enregistrar las "
+"modificacions abans de tampar ?"
 msgstr[1] ""
-"I a %d imatges amb de modificacions pas enregistradas. Volètz enregistrar "
-"las modificacions abans de tampar ?"
+"I a %d imatges amb de modificacions non enregistradas. Volètz enregistrar "
+"las modificacions abans de tampar ?"
 
 #: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
@@ -668,7 +668,7 @@ msgstr "Impossible de crear un fichièr temporari."
 #: ../src/xviewer-image-jpeg.c:430
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
-msgstr "Impossible de crear un fichièr temporari per enregistrar : %s"
+msgstr "Impossible de crear un fichièr temporari per enregistrar : %s"
 
 #: ../src/xviewer-image-jpeg.c:449
 #, c-format
@@ -687,7 +687,7 @@ msgstr "Talha del fichièr :"
 #: ../src/xviewer-window.c:4316
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
-"Aficha lo dorsièr que conten aqueste fichièr dins lo gestionari de fichièrs"
+"Afichar lo dorsièr que conten aqueste fichièr dins lo gestionari de fichièrs"
 
 #: ../src/xviewer-preferences-dialog.c:135
 #, c-format
@@ -726,7 +726,7 @@ msgstr "_Esquèrra :"
 
 #: ../src/xviewer-print-image-setup.c:935
 msgid "_Right:"
-msgstr "_Dreita :"
+msgstr "_Drecha :"
 
 #: ../src/xviewer-print-image-setup.c:936
 msgid "_Top:"
@@ -762,7 +762,7 @@ msgstr "Talha"
 
 #: ../src/xviewer-print-image-setup.c:970
 msgid "_Width:"
-msgstr "Largor :"
+msgstr "_Largor :"
 
 #: ../src/xviewer-print-image-setup.c:972
 msgid "_Height:"
@@ -854,8 +854,8 @@ msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
-"L'imatge « %s » es estat definit coma rèireplan del burèu.\n"
-"Volètz modificar lo biais de l'afichar ?"
+"L’imatge « %s » es estat modificat per una autra aplicacion.\n"
+"La volètz recargar ?"
 
 #: ../src/xviewer-window.c:1078
 #, c-format
@@ -880,7 +880,7 @@ msgstr "Dobertura de l'imatge « %s »"
 #. L10N: This the reason why the screensaver is inhibited.
 #: ../src/xviewer-window.c:2241
 msgid "Viewing a slideshow"
-msgstr "Dobrir en mòde diaporama"
+msgstr "Visualizacion d’un diaporama"
 
 #: ../src/xviewer-window.c:2487
 #, c-format
@@ -888,7 +888,7 @@ msgid ""
 "Error printing file:\n"
 "%s"
 msgstr ""
-"Error al moment d'imprimir lo fichièr :\n"
+"Error al moment d'imprimir lo fichièr :\n"
 "%s"
 
 #: ../src/xviewer-window.c:2840 ../src/xviewer-window.c:2855
@@ -909,8 +909,8 @@ msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr ""
-"L'imatge « %s » es estat definit coma rèireplan del burèu.\n"
-"Volètz modificar lo biais de l'afichar ?"
+"L’imatge « %s » es estat definit coma rèireplan del burèu.\n"
+"Volètz modificar lo biais de l’afichar ?"
 
 #: ../src/xviewer-window.c:3393
 msgid "Saving image locally…"
@@ -922,8 +922,8 @@ msgid ""
 "Are you sure you want to remove\n"
 "\"%s\" permanently?"
 msgstr ""
-"Sètz segur que volètz suprimir\n"
-"« %s » definitivament ?"
+"Volètz vertadièrament suprimir\n"
+"« %s » definitivament ?"
 
 #: ../src/xviewer-window.c:3475
 #, c-format
@@ -934,8 +934,8 @@ msgid_plural ""
 "Are you sure you want to remove\n"
 "the %d selected images permanently?"
 msgstr[0] ""
-"Sètz segur que volètz suprimir l'imatge\n"
-"seleccionat definitivament ?"
+"Volètz vertadièrament suprimir l'imatge\n"
+"seleccionat definitivament ?"
 msgstr[1] ""
 "Sètz segur que volètz suprimir los\n"
 "imatges seleccionats definitivament ?"
@@ -980,8 +980,8 @@ msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr ""
-"Sètz segur que volètz metre\n"
-"« %s »  dins l'escobilhièr ?"
+"Volètz vertadièrament metre\n"
+"« %s »  dins l'escobilhièr ?"
 
 #: ../src/xviewer-window.c:3743
 #, c-format
@@ -990,7 +990,7 @@ msgid ""
 "permanently?"
 msgstr ""
 "Impossible de trobar un escobilhièr per « %s ». Volètz suprimir "
-"definitivament aqueste imatge ?"
+"definitivament aqueste imatge ?"
 
 #: ../src/xviewer-window.c:3748
 #, c-format
@@ -1001,8 +1001,8 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Sètz segur que volètz metre l'imatge\n"
-"seleccionat dins l'escobilhièr ?"
+"Volètz vertadièrament metre l'imatge\n"
+"seleccionat dins l'escobilhièr ?"
 msgstr[1] ""
 "Sètz segur que volètz metre los\n"
 "%d imatges seleccionats dins l'escobilhièr ?"
@@ -1013,13 +1013,13 @@ msgid ""
 "permanently. Are you sure you want to proceed?"
 msgstr ""
 "D'unes d'aqueles imatges seleccionats pòdon pas èsser meses dins "
-"l'escobilhièr e van èsser suprimits definitivament. Sètz segur que volètz "
-"contunhar ?"
+"l'escobilhièr e van èsser suprimits definitivament. Volètz vertadièrament "
+"contunhar ?"
 
 #: ../src/xviewer-window.c:3770 ../src/xviewer-window.c:4342
 #: ../src/xviewer-window.c:4381
 msgid "Move to _Trash"
-msgstr "_Metre dins l'esco_bilhièr"
+msgstr "_Metre dins l'escobilhièr"
 
 #: ../src/xviewer-window.c:3817 ../src/xviewer-window.c:3831
 #, c-format
@@ -1064,7 +1064,7 @@ msgstr "Tampar la fenèstra"
 
 #: ../src/xviewer-window.c:4280
 msgid "Preferences for Image Viewer"
-msgstr "Peferéncias del visionador d'imatges"
+msgstr "Preferéncias del visionador d'imatges"
 
 #: ../src/xviewer-window.c:4282
 msgid "_Contents"
@@ -1149,7 +1149,7 @@ msgstr "Miralh _orizontal"
 
 #: ../src/xviewer-window.c:4328
 msgid "Mirror the image horizontally"
-msgstr "Pivòta l'imatge a l'entorn d'un axe vertical"
+msgstr "Pivotar l'imatge a l'entorn d'un axe vertical"
 
 #: ../src/xviewer-window.c:4330
 msgid "Flip _Vertical"
@@ -1157,7 +1157,7 @@ msgstr "Miralh _vertical"
 
 #: ../src/xviewer-window.c:4331
 msgid "Mirror the image vertically"
-msgstr "Pivòta l'imatge a l'entorn d'un axe orizontal"
+msgstr "Pivotar l'imatge a l'entorn d'un axe orizontal"
 
 #: ../src/xviewer-window.c:4333
 msgid "_Rotate Clockwise"
@@ -1165,7 +1165,7 @@ msgstr "_Pivotar dins lo sens de las agulhas d'un relòtge"
 
 #: ../src/xviewer-window.c:4334
 msgid "Rotate the image 90 degrees to the right"
-msgstr "Pivotar l'imatge de 90 grases a dreita"
+msgstr "Pivotar l'imatge de 90 grases a drecha"
 
 #: ../src/xviewer-window.c:4336
 msgid "Rotate Counterc_lockwise"
@@ -1181,11 +1181,11 @@ msgstr "Definir coma _papièr pintrat"
 
 #: ../src/xviewer-window.c:4340
 msgid "Set the selected image as the wallpaper"
-msgstr "Definís l'imatge seleccionat coma papièr pintrat"
+msgstr "Definir l'imatge seleccionat coma papièr pintrat"
 
 #: ../src/xviewer-window.c:4343
 msgid "Move the selected image to the trash folder"
-msgstr "Met l'imatge seleccionat dins lo dorsièr de l'escobilhièr"
+msgstr "Desplaçar l'imatge seleccionat dins lo repertòri de l'escobilhièr"
 
 #: ../src/xviewer-window.c:4345
 msgid "_Delete Image"
@@ -1251,19 +1251,19 @@ msgstr "Recargar l'imatge"
 
 #: ../src/xviewer-window.c:4387
 msgid "_Fullscreen"
-msgstr "Ecran _complet"
+msgstr "Ecran _complèt"
 
 #: ../src/xviewer-window.c:4388
 msgid "Show the current image in fullscreen mode"
-msgstr "Aficha l'imatge actual en mòde ecran complet"
+msgstr "Afichar l'imatge actual en mòde ecran complèt"
 
 #: ../src/xviewer-window.c:4390
 msgid "Pause Slideshow"
-msgstr "Diaporama en pausa"
+msgstr "Metre en pausa lo diaporama"
 
 #: ../src/xviewer-window.c:4391
 msgid "Pause or resume the slideshow"
-msgstr "Met en pausa o repren lo diaporama"
+msgstr "Metre en pausa o reprendre lo diaporama"
 
 #: ../src/xviewer-window.c:4393
 msgid "_Best Fit"
@@ -1271,7 +1271,7 @@ msgstr "Talha _ideala"
 
 #: ../src/xviewer-window.c:4394
 msgid "Fit the image to the window"
-msgstr "Adapta la talha de l'imatge a la de la fenèstra"
+msgstr "Adaptar la talha de l'imatge a la de la fenèstra"
 
 #: ../src/xviewer-window.c:4399 ../src/xviewer-window.c:4414
 msgid "_Previous Image"
@@ -1279,7 +1279,7 @@ msgstr "Imatge _precedent"
 
 #: ../src/xviewer-window.c:4400
 msgid "Go to the previous image of the gallery"
-msgstr "Aficha l'imatge precedent de la galariá"
+msgstr "Afichar l'imatge precedent de la galariá"
 
 #: ../src/xviewer-window.c:4402
 msgid "_Next Image"
@@ -1287,7 +1287,7 @@ msgstr "Imatge _seguent"
 
 #: ../src/xviewer-window.c:4403
 msgid "Go to the next image of the gallery"
-msgstr "Aficha l'imatge venent de la galariá"
+msgstr "Afichar l'imatge venent de la galariá"
 
 #: ../src/xviewer-window.c:4405 ../src/xviewer-window.c:4417
 msgid "_First Image"
@@ -1295,7 +1295,7 @@ msgstr "_Primièr imatge"
 
 #: ../src/xviewer-window.c:4406
 msgid "Go to the first image of the gallery"
-msgstr "Aficha lo primièr imatge de la galariá"
+msgstr "Afichar lo primièr imatge de la galariá"
 
 #: ../src/xviewer-window.c:4408 ../src/xviewer-window.c:4420
 msgid "_Last Image"
@@ -1303,7 +1303,7 @@ msgstr "_Darrièr imatge"
 
 #: ../src/xviewer-window.c:4409
 msgid "Go to the last image of the gallery"
-msgstr "Aficha lo darrièr imatge de la galariá"
+msgstr "Afichar lo darrièr imatge de la galariá"
 
 #
 #: ../src/xviewer-window.c:4411
@@ -1312,7 +1312,7 @@ msgstr "Imatge _aleatòri"
 
 #: ../src/xviewer-window.c:4412
 msgid "Go to a random image of the gallery"
-msgstr "Aficha un imatge causit a l'azard dins la galariá"
+msgstr "Afichar un imatge causit a l'azard dins la galariá"
 
 #: ../src/xviewer-window.c:4570
 msgid "S_lideshow"
@@ -1332,7 +1332,7 @@ msgstr "Seguent"
 
 #: ../src/xviewer-window.c:4655
 msgid "Right"
-msgstr "Dreita"
+msgstr "Drecha"
 
 #: ../src/xviewer-window.c:4658
 msgid "Left"
@@ -1344,11 +1344,11 @@ msgstr "Afichar lo dorsièr"
 
 #: ../src/xviewer-window.c:4664
 msgid "Out"
-msgstr "Darrièr"
+msgstr "Zoom arrièr"
 
 #: ../src/xviewer-window.c:4667
 msgid "In"
-msgstr "Dins"
+msgstr "Zoom avant"
 
 #: ../src/xviewer-window.c:4670
 msgid "Normal"
@@ -1364,7 +1364,7 @@ msgstr "Largor"
 
 #: ../src/xviewer-window.c:4679
 msgid "Fit"
-msgstr "Filtre"
+msgstr "Adaptar"
 
 #: ../src/xviewer-window.c:4682
 msgid "Gallery"
@@ -1377,7 +1377,7 @@ msgstr "Escobilhièr"
 
 #: ../src/main.c:67
 msgid "Open in fullscreen mode"
-msgstr "Dobrir en mòde ecran complet"
+msgstr "Dobrir en mòde ecran complèt"
 
 #: ../src/main.c:68
 msgid "Disable image gallery"
@@ -1396,8 +1396,8 @@ msgstr ""
 msgid ""
 "Open in a single window, if multiple windows are open the first one is used"
 msgstr ""
-"Dobertura dins una fenèstra unica, se mantuna fenèstra son dobèrta la "
-"primièra es utilizada."
+"Dobrir dins una fenèstra unica, se mantuna fenèstra son dobèrtas la primièra "
+"es utilizada."
 
 #: ../src/main.c:73
 msgid "Show the application's version"
@@ -1412,5 +1412,5 @@ msgstr "[FICHIÈR…]"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Aviatz « %s --help » per veire la lista completa de las opcions disponiblas "
-"en linha de comanda."
+"Aviatz « %s --help » per veire la lista complèta de opcions disponiblas en "
+"linha de comanda"

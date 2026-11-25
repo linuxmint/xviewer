@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: xviewer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-10 11:56+0000\n"
-"PO-Revision-Date: 2026-11-10 12:08+0000\n"
+"PO-Revision-Date: 2026-11-19 23:25+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2026-11-16 11:57+0000\n"
-"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+"X-Launchpad-Export-Date: 2026-11-24 11:58+0000\n"
+"X-Generator: Launchpad (build 012091084314157d19ae714f55ef4c582ff0feb5)\n"
 "Language: nl\n"
 
 #: ../src/resources/xviewer-app-menu.xml.h:1 ../src/xviewer-window.c:4266
@@ -59,7 +59,7 @@ msgstr "_Hulp"
 
 #: ../src/resources/xviewer-app-menu.xml.h:8 ../src/xviewer-window.c:4285
 msgid "_About"
-msgstr "I_nfo"
+msgstr "_Over"
 
 #: ../src/resources/xviewer-app-menu.xml.h:9
 msgid "_Quit"
@@ -248,7 +248,7 @@ msgstr "_Start teller op:"
 
 #: ../src/resources/xviewer-multiple-save-as-dialog.ui.h:13
 msgid "_Replace spaces with underscores"
-msgstr "Spaties _vervangen door laag streepje"
+msgstr "Spaties _vervangen door laagliggende streepjes"
 
 #: ../src/resources/xviewer-multiple-save-as-dialog.ui.h:14
 msgid "Options"
@@ -369,7 +369,7 @@ msgstr "Wiel"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:29
 msgid "Zoom"
-msgstr "Vergroten"
+msgstr "Vergroten/verkleinen"
 
 #: ../src/resources/xviewer-preferences-dialog.ui.h:30
 msgid "Vertical Scrolling"
@@ -455,7 +455,7 @@ msgstr[1] ""
 
 #: ../src/xviewer-close-confirmation-dialog.c:669
 msgid "S_elect the images you want to save:"
-msgstr "S_electeer de afbeeldingen die u wilt opslaan:"
+msgstr "Ki_es de afbeeldingen die u wilt opslaan:"
 
 #. Secondary label
 #: ../src/xviewer-close-confirmation-dialog.c:688
@@ -475,7 +475,7 @@ msgstr "Opslaan _als…"
 #: ../src/xviewer-error-message-area.c:171
 #, c-format
 msgid "Could not load image '%s'."
-msgstr "K0n afbeelding '%s' niet openen."
+msgstr "Kon afbeelding '%s' niet openen."
 
 #: ../src/xviewer-error-message-area.c:213
 #, c-format
@@ -595,7 +595,7 @@ msgstr ""
 
 #: ../src/xviewer-file-chooser.c:125
 msgid "Please try a different file extension like .png or .jpg."
-msgstr "Probeer a.u.b. een andere bestandextensie zoals .png of .jpg ."
+msgstr "Probeer a.u.b. een ander bestandachtervoegsel zoals .png of .jpg."
 
 #. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
 #: ../src/xviewer-file-chooser.c:160
@@ -674,12 +674,12 @@ msgstr "Het aanmaken van een tijdelijk bestand is mislukt."
 #: ../src/xviewer-image-jpeg.c:430
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
-msgstr "Kon tijdelijk bestand voor opslaan van %s niet aanmaken."
+msgstr "Kon geen tijdelijk bestand maken voor opslaan van %s."
 
 #: ../src/xviewer-image-jpeg.c:449
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Toewijzing van geheugen voor laden van JPEG-bestand is mislukt"
+msgstr "Kon geen geheugen toewijzen voor laden van JPEG-bestand"
 
 #: ../src/xviewer-metadata-sidebar.c:247 ../src/xviewer-properties-dialog.c:158
 msgid "Unknown"
@@ -715,7 +715,7 @@ msgstr "De afbeelding waarvan de afdrukeigenschappen zullen worden ingesteld"
 
 #: ../src/xviewer-print-image-setup.c:902
 msgid "Page Setup"
-msgstr "Pagina-instelling"
+msgstr "Pagina-instellingen"
 
 #: ../src/xviewer-print-image-setup.c:903
 msgid "The information for the page where the image will be printed"
@@ -788,7 +788,7 @@ msgstr "Millimeters"
 
 #: ../src/xviewer-print-image-setup.c:993
 msgid "Inches"
-msgstr "Duim"
+msgstr "Inches"
 
 #: ../src/xviewer-print-image-setup.c:1022
 msgid "Preview"
@@ -828,7 +828,7 @@ msgstr "Tenminste twee bestandnamen zijn hetzelfde."
 
 #: ../src/xviewer-util.c:68
 msgid "Could not display help for Image Viewer"
-msgstr "Kon de hulptekst voor afbeeldingkijker niet weergeven"
+msgstr "Kon de hulptekst voor Afbeeldingkijker niet weergeven"
 
 #: ../src/xviewer-util.c:116
 msgid " (invalid Unicode)"
@@ -916,7 +916,7 @@ msgid ""
 "Would you like to modify its appearance?"
 msgstr ""
 "De afbeelding '%s' is als bureaubladachtergrond ingesteld.\n"
-"Wilt u de weergaveopties wijzigen?"
+"Wilt u diens uiterlijk wijzigen?"
 
 #: ../src/xviewer-window.c:3393
 msgid "Saving image locally…"
@@ -1085,11 +1085,11 @@ msgstr "Informatie over deze toepassing"
 
 #: ../src/xviewer-window.c:4292
 msgid "Changes the visibility of the toolbar in the current window"
-msgstr "Toont of verbergt de werkbalk van het huidige venster"
+msgstr "Toont of verbergt de werkbalk in het huidige venster"
 
 #: ../src/xviewer-window.c:4295
 msgid "Changes the visibility of the statusbar in the current window"
-msgstr "Toont of verbergt de statusbalk van het huidige venster"
+msgstr "Toont of verbergt de statusbalk in het huidige venster"
 
 #: ../src/xviewer-window.c:4298
 msgid ""
@@ -1202,7 +1202,7 @@ msgstr "_Kopiëren"
 
 #: ../src/xviewer-window.c:4349
 msgid "Copy the selected image to the clipboard"
-msgstr "Het gekozen element naar het klembord kopiëren"
+msgstr "De gekozen afbeelding naar het klembord kopiëren"
 
 #: ../src/xviewer-window.c:4351 ../src/xviewer-window.c:4369
 #: ../src/xviewer-window.c:4372
@@ -1248,7 +1248,7 @@ msgstr "Passend maken op breedte"
 
 #: ../src/xviewer-window.c:4367
 msgid "Reload the image"
-msgstr "Herlaad de afbeelding"
+msgstr "Afbeelding herladen"
 
 #: ../src/xviewer-window.c:4387
 msgid "_Fullscreen"
@@ -1256,7 +1256,7 @@ msgstr "Scherm_vullend"
 
 #: ../src/xviewer-window.c:4388
 msgid "Show the current image in fullscreen mode"
-msgstr "Huidige afbeelding weergeven in volledig scherm-modus"
+msgstr "Huidige afbeelding weergeven in schermvullende modus"
 
 #: ../src/xviewer-window.c:4390
 msgid "Pause Slideshow"
@@ -1390,18 +1390,18 @@ msgstr "Openen als diapresentatie"
 #: ../src/main.c:70
 msgid "Start a new instance instead of reusing an existing one"
 msgstr ""
-"Een nieuwe instantie opstarten in plaats van de bestaande te hergebruiken"
+"Start een nieuwe instantie in plaats van een bestaande te hergebruiken"
 
 #: ../src/main.c:71
 msgid ""
 "Open in a single window, if multiple windows are open the first one is used"
 msgstr ""
-"In een enkel venster openen. Indien er meerdere vensters geopend zijn, wordt "
+"Open in een enkel venster. Indien er meerdere vensters geopend zijn, wordt "
 "het eerste venster gebruikt."
 
 #: ../src/main.c:73
 msgid "Show the application's version"
-msgstr "De versie van de toepassing tonen"
+msgstr "Toon de versie van de toepassing"
 
 #: ../src/main.c:103
 msgid "[FILE…]"
